@@ -12,7 +12,7 @@
 <link rel="canonical" href="http://excript.com/python/como-instalar-o-python-windows.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python,download,instalação,windows,instalação no windows" />
+        <meta name="keywords" content="curso,python,download,instalação,windows,instalação no windows,blog" />
 		<meta name="description" content="Nesta aula estudaremos como fazer o download do Python, qual versão escolher, e como realizar a instalação do Python no Windows." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -29,6 +29,7 @@
             <meta property="article:tag" content="instalação" />
             <meta property="article:tag" content="windows" />
             <meta property="article:tag" content="instalação no windows" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
 
 
@@ -381,21 +382,63 @@ eXcript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+					<div class="section" id="maquina-virtual-python">
+<h2>MÁQUINA VIRTUAL PYTHON</h2>
+<p>O Python é constituido por um conjunto de bibliotecas e um arquivo executável que é o interpretador da linguagem Python. Quando instalamos o Python o que fazemos é instalar um programa que executa código Python.</p>
+<p>O programa executável do Python é chamado de Máquina Virtual Python . A expressão <a class="reference external" href="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual">Máquina Virtual</a> é decorrente do fato que o programa Python propriamente dito executa programas de maneira análoga a um computador.</p>
+</div>
+<div class="section" id="baixando-e-instalando-o-python">
+<h2>BAIXANDO E INSTALANDO O PYTHON</h2>
+<p>O Python é distribuido gratuitamente no site <cite>https://www.python.org/</cite>. Após acessar o site do Python, clique no menu <tt class="docutils literal">Downloads</tt>. Feito isso, a página de download será aberta, como na imagem a seguir:</p>
+<img alt="Imagem com o Download da instalação do Python" src="images/download-python.png" />
+<p>Para fazer o download do Python, você pode baixar do link a seguir:
+<a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+<p>É necessário que tenhas a atenção de baixar o pacote de instalação conforme o sistema operacional que estejas utilizando e também, escolhe entre a versão de 32 ou 64bits. Se estiveres utilizando o Windows 8 ou superior, você está numa arquitetura de 64 bits. Do contrário, terás que descobrir em qual arquitetura estás trabalhando.</p>
+<p>Em caso de dúvida, deixe um comentário ou então, leia o comentário do pessoal. Muito provavelmente alguém já teve um problema igual ou semelhante ao seu e assim, uma olhada rápida nos comentários dos nossos colegas pode lhe salvar algumas horas de dor de cabeça!</p>
+</div>
+<div class="section" id="usuarios-linux-outras-distros">
+<h2>USUÁRIOS LINUX / OUTRAS DISTROS</h2>
+<p>Nesta aula não foi contemplado a instalação do Python em outros sistemas operacionais. Usuários do MAC já possuem o Python e as maiores distros Linux também possuem o Python instalado de fábrica.</p>
+</div>
+<div class="section" id="qual-o-problema-entao">
+<h2>QUAL O PROBLEMA ENTÃO?</h2>
+<p>A versão do Python que está instalada. Nesse curso, trabalhamos com a versão 3 do Python, mas a maioria dos sistemas operacionais vem com o Python 2.7 de fábrica.</p>
+</div>
+<div class="section" id="qual-a-razao-de-haver-2-versoes-2-7-xxxx-e-3-xxx-xxx">
+<h2>QUAL A RAZÃO DE HAVER 2 VERSÕES 2.7.xxxx E 3.xxx.xxx?</h2>
+<p>A versão 3 do Python sofreu mudanças estruturais significantes, a mais simples, podemos dizer, que é o fato de você ser obrigado a utilizar parêntesis na função 'print()'. Porém, essa é uma única mudança, há diversas outras, principalmente na parte de orientação a objetos.</p>
+<p>Para que não houvesse um grande problema de incompatibilidades, optou-se por utilizar 2 versões do Python em paralelo, a versão 2.7 e a versão 3. O Python 2.7 suporta a maior parte das mudanças do Python 3, mas o contrário não é verdade. Ou seja, o Python 3 não suporta o Python 2.7.</p>
+</div>
+<div class="section" id="o-que-e-importante-saber">
+<h2>O QUE É IMPORTANTE SABER?</h2>
+<p>Existem 2 versões OFICIAIS: a versão 2.7 e a versão 3x do Python. A versão 2.7 é a que será descontinuada em 2022 e a mesma vem, gradativamente, sofrendo diversas modificações. Assim, o que acontece, é que não haverá uma mudança brusca, mas sim, a versão 2.7 se encontrara com a versão 3.x.x.</p>
+<p>A cada nova versão do Python 2.7, este traz novos recursos que já estão Python 3. Logo, o que acontece é que ambas versões caminham juntas e paralelas ao mesmo tempo. As mudanças a nível de código são implementadas nas duas versões, porém, como já dito, a versão 2.7 não funciona na versão 3.</p>
+</div>
+<div class="section" id="qual-a-minha-versao-do-python">
+<h2>QUAL A MINHA VERSÃO DO PYTHON?</h2>
+<p>Vá no prompt/shell/bash e digite:</p>
+<div class="highlight"><pre>... python
+</pre></div>
+<p>Se nada acontecer, tente digitar somente a palavra:</p>
+<div class="highlight"><pre>... py
+</pre></div>
+<p>O texto que você devera ver deveria ser semelhante ao que temos em seguida:</p>
+<div class="highlight"><pre>... python
+
+Python 3.4.3 <span class="o">(</span>default, Mar  - YYYY, hh:mm:ss<span class="o">)</span> <span class="o">[</span>MSC v.1600 <span class="m">64</span> bit <span class="o">(</span>AMD64<span class="o">)]</span> on win32
+Type <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license()&quot;</span> <span class="k">for</span> more information.
+</pre></div>
+<p>OU ENTÃO:</p>
+<div class="highlight"><pre>... python
+Python 3.4.3 <span class="p">|</span>Anaconda 2.2.0 <span class="o">(</span>64-bit<span class="o">)</span><span class="p">|</span> <span class="o">(</span>default, Mar  YYYY, hh:mm:ss<span class="o">)</span> <span class="o">[</span>MSC v.1600 <span class="m">64</span> bit <span class="o">(</span>AMD64<span class="o">)]</span> on win32
+Type <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license()&quot;</span> <span class="k">for</span> more information.
+</pre></div>
+</div>
+<div class="section" id="se-eu-tiver-o-python-instalado-e-nada-acontecer">
+<h2>SE EU TIVER O PYTHON INSTALADO E NADA ACONTECER?</h2>
+<p>Isso ocorre nas situações quando o local de instalação do Python não está nas variáveis do sistema. As variáveis do sistema apontam para diretórios onde o SO que estamos utilizando busca os programas que devem ser reconhecidos na linha de comando ou por outros softwares de maneira automática.</p>
+<p>Nos sistemas Linux raramente a instalação não é encontrada, mas nas versões do Windows isso ocorre muito mais facilmente, até porque, é possível, nas instalações do Python, pedir que o mesmo não adicione o PATH [caminho ou diretório] da instalação atual nas variáveis do sistema. Logo, você terá que ir em programas instalados e procurar por alguma instalação. Se nada for encontrado, e você não fez a instalação via compilação através do fontes, então o Python não está instalado.</p>
+</div>
 
 				</div>
 			</div>
@@ -423,7 +466,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/download.html">download</a>, 	<a href="http://excript.com/tag/instalacao.html">instalação</a>, 	<a href="http://excript.com/tag/windows.html">windows</a>, 	<a href="http://excript.com/tag/instalacao-no-windows.html">instalação no windows</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/download.html">download</a>, 	<a href="http://excript.com/tag/instalacao.html">instalação</a>, 	<a href="http://excript.com/tag/windows.html">windows</a>, 	<a href="http://excript.com/tag/instalacao-no-windows.html">instalação no windows</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
