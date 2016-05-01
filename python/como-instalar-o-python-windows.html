@@ -384,35 +384,35 @@ eXcript            </a>
 				<div class="row">
 					<div class="section" id="maquina-virtual-python">
 <h2>MÁQUINA VIRTUAL PYTHON</h2>
-<p>O Python é constituido por um conjunto de bibliotecas e um arquivo executável que é o interpretador da linguagem Python. Quando instalamos o Python o que fazemos é instalar um programa que executa código Python.</p>
-<p>O programa executável do Python é chamado de Máquina Virtual Python . A expressão <a class="reference external" href="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual">Máquina Virtual</a> é decorrente do fato que o programa Python propriamente dito executa programas de maneira análoga a um computador.</p>
+<p>O Python é composto por um conjunto de bibliotecas e um arquivo executável, no caso, o interpretador da linguagem Python. Quando instalamos o Python em nosso computador, o que fazemos de fato, é instalar um programa que executa código Python e adicionar, no Path do sistema, o local em que o interpretador da linguagem Python está contido.</p>
+<p>O programa executável do Python, isto é, o interpretador, é também chamado de <strong>Máquina Virtual do Python</strong> . A expressão <a class="reference external" href="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual">Máquina Virtual</a> é decorrente do fato que o programa Python propriamente dito, executa instruções que juntas, formam programas, e essas instruções são executadas pelo interpretador de maneira análoga as instruções de arquivos executáveis que são executadas pelo Computador.</p>
 </div>
 <div class="section" id="baixando-e-instalando-o-python">
 <h2>BAIXANDO E INSTALANDO O PYTHON</h2>
-<p>O Python é distribuido gratuitamente no site <cite>https://www.python.org/</cite>. Após acessar o site do Python, clique no menu <tt class="docutils literal">Downloads</tt>. Feito isso, a página de download será aberta, como pode ser visto na imagem a seguir:</p>
-<img alt="Imagem com o Download da instalação do Python" src="images/download-python.png" />
-<p>Para fazer o download do Python, você pode baixar o mesmo do link a seguir:
-<a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
-<p>É necessário que tenhas a atenção de baixar o pacote de instalação conforme o sistema operacional que estejas utilizando! Também é necessário escolher entre a versão de 32bits ou 64bits, conforme a arquitetura do seu computador! Se estiveres utilizando o Windows 8 ou superior, você está numa arquitetura de 64 bits. Do contrário, terás que descobrir em qual arquitetura estás trabalhando.</p>
+<p>O Python é distribuido gratuitamente e toda sua documentação pode ser encontrada no site da organização Python: <cite>https://www.python.org/</cite>. Para fazermos o download do Interpretador Python, temos que acessar o site, em seguida clicar no menu <tt class="docutils literal">Downloads</tt>. Feito isso, a página de download será aberta, como pode ser visto na imagem a seguir:</p>
+<img alt="Imagem com o Download da instalação do Python" src="images/curso-de-python/download-python.png" />
+<p>Caso queiras ir <a class="reference external" href="`https://www.python.org/downloads/`">direto à página de download do Python, utilize este link</a>.</p>
+<p>Baixe o instalador conforme o Sistema Operacional que estejas utilizando! Também é necessário escolher entre a versão de 32bits ou 64bits, conforme a arquitetura do seu processador! Se estiveres utilizando o Windows 8 ou superior, estaras, numa arquitetura de 64 bits. Do contrário, terás que descobrir em qual arquitetura estás trabalhando.</p>
 <p>Em caso de dúvida, deixe um comentário ou então, leia o comentário do pessoal. Muito provavelmente alguém já teve um problema igual ou semelhante ao seu, e assim, uma olhada rápida nos comentários dos nossos colegas pode lhe salvar algumas horas de dor de cabeça!</p>
 </div>
 <div class="section" id="usuarios-linux-outras-distros">
 <h2>USUÁRIOS LINUX / OUTRAS DISTROS</h2>
-<p>Nesta aula não foi contemplado a instalação do Python em outros sistemas operacionais. Usuários do MAC já possuem o Python e as maiores distros Linux também possuem o Python instalado de fábrica.</p>
+<p>Nesta aula não foi contemplado a instalação do Python em outros sistemas operacionais. Usuários do MacOS e do Ubuntu já possuem o Python instalado de fábrica, e também, as maiores e principais distros Linux, já vem com o Python instalado por padrão.</p>
 </div>
 <div class="section" id="qual-o-problema-entao">
 <h2>QUAL O PROBLEMA ENTÃO?</h2>
-<p>A versão do Python que está instalada. Nesse curso, trabalhamos com a versão 3 do Python, mas a maioria dos sistemas operacionais vem com o Python 2.7 de fábrica.</p>
+<p>A versão do Python que está instalada. Nesse curso, trabalhamos com a versão 3x do Python, mas a maioria dos sistemas operacionais vem com o Python 2.7 de fábrica.</p>
 </div>
 <div class="section" id="qual-a-razao-de-haver-2-versoes-2-7-xxxx-e-3-xxx-xxx">
 <h2>QUAL A RAZÃO DE HAVER 2 VERSÕES 2.7.xxxx E 3.xxx.xxx?</h2>
-<p>A versão 3 do Python sofreu mudanças estruturais significantes, a mais simples, podemos dizer, que é o fato de você ser obrigado a utilizar parêntesis na função 'print()'. Porém, essa é uma única mudança, há diversas outras, principalmente na parte de orientação a objetos.</p>
-<p>Para que não houvesse um grande problema de incompatibilidades, optou-se por utilizar 2 versões do Python em paralelo, a versão 2.7 e a versão 3. O Python 2.7 suporta a maior parte das mudanças do Python 3, mas o contrário não é verdade. Ou seja, o Python 3 não suporta o Python 2.7.</p>
+<p>A versão 3 do Python sofreu mudanças estruturais significantes, a mais simples, podemos dizer, num primeiro momento, é o fato de você ser obrigado a utilizar parêntesis na função <tt class="docutils literal">print()</tt>. Essa é uma única mudança, há diversas outras, principalmente na parte de Orientação a Objetos e a estrutura interna das classes.</p>
+<p>Com o objetivo de evitar o <strong>caos</strong> e o trauma de toda e qualquer mudança abrupta, optou-se, num primeiro momento, por utilizar 2 versões do Python em paralelo. Por isso é que temos a versão 2.7.x e a versão 3.x. O Python 2.7.x suporta a maior parte das mudanças do Python 3, mas o contrário não é verdade. Ou seja, o Python 3 não suporta o Python 2.7.</p>
+<p>Mas não se preocupe com isso nesse momento! Porém, não esqueça: <strong>vamos trabalhar com a versão 3.x do Python neste curso!</strong></p>
 </div>
 <div class="section" id="o-que-e-importante-saber">
 <h2>O QUE É IMPORTANTE SABER?</h2>
-<p>Existem 2 versões OFICIAIS: a versão 2.7 e a versão 3x do Python. A versão 2.7 é a que será descontinuada em 2022 e a mesma vem, gradativamente, sofrendo diversas modificações. Assim, o que acontece, é que não haverá uma mudança brusca, mas sim, a versão 2.7 se encontrara com a versão 3.x.x.</p>
-<p>A cada nova versão do Python 2.7, este traz novos recursos que já estão Python 3. Logo, o que acontece é que ambas versões caminham juntas e paralelas ao mesmo tempo. As mudanças a nível de código são implementadas nas duas versões, porém, como já dito, a versão 2.7 não funciona na versão 3.</p>
+<p>Existem 2 versões OFICIAIS: a versão 2.7 e a versão 3x do Python. A versão 2.7 é a que será descontinuada em 2022 e a mesma, vem, gradativamente, sofrendo diversas modificações. Assim, o que acontece, é que não haverá uma mudança abrupta, e sim, ocorrerá que a versão 2.7 se &quot;encontrara&quot; com a versão 3.x.x.</p>
+<p>A cada nova versão do Python 2.7, há mudanças que devem ser feitas em código legado a fim de manter a compatibilidade. Logo, o que acontece é, que ambas versões caminham juntas e paralelas. As mudanças a nível de código são implementadas nas duas versões, porém, como já dito, a versão 2.7 não funciona na versão 3.x.</p>
 </div>
 <div class="section" id="qual-a-minha-versao-do-python">
 <h2>QUAL A MINHA VERSÃO DO PYTHON?</h2>
@@ -422,22 +422,22 @@ eXcript            </a>
 <p>Se nada acontecer, tente digitar somente a palavra:</p>
 <div class="highlight"><pre>... py
 </pre></div>
-<p>O texto que você devera ver deveria ser semelhante ao que temos em seguida:</p>
+<p>O texto que impresso deverá ser semelhante ao ao texto a seguir:</p>
 <div class="highlight"><pre>... python
 
-Python 3.4.3 <span class="o">(</span>default, Mar  - YYYY, hh:mm:ss<span class="o">)</span> <span class="o">[</span>MSC v.1600 <span class="m">64</span> bit <span class="o">(</span>AMD64<span class="o">)]</span> on win32
+Python 3.5 <span class="o">(</span>default, Mar  - YYYY, hh:mm:ss<span class="o">)</span> <span class="o">[</span>MSC v.1600 <span class="m">64</span> bit <span class="o">(</span>AMD64<span class="o">)]</span> on win32
 Type <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license()&quot;</span> <span class="k">for</span> more information.
 </pre></div>
 <p>OU ENTÃO:</p>
 <div class="highlight"><pre>... python
-Python 3.4.3 <span class="p">|</span>Anaconda 2.2.0 <span class="o">(</span>64-bit<span class="o">)</span><span class="p">|</span> <span class="o">(</span>default, Mar  YYYY, hh:mm:ss<span class="o">)</span> <span class="o">[</span>MSC v.1600 <span class="m">64</span> bit <span class="o">(</span>AMD64<span class="o">)]</span> on win32
+Python 3.6 <span class="p">|</span>Anaconda 2.2.0 <span class="o">(</span>64-bit<span class="o">)</span><span class="p">|</span> <span class="o">(</span>default, Mar  YYYY, hh:mm:ss<span class="o">)</span> <span class="o">[</span>MSC v.1600 <span class="m">64</span> bit <span class="o">(</span>AMD64<span class="o">)]</span> on win32
 Type <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license()&quot;</span> <span class="k">for</span> more information.
 </pre></div>
 </div>
 <div class="section" id="se-eu-tiver-o-python-instalado-e-nada-acontecer">
 <h2>SE EU TIVER O PYTHON INSTALADO E NADA ACONTECER?</h2>
-<p>Isso ocorre nas situações quando o local de instalação do Python não está nas variáveis do sistema. As variáveis do sistema apontam para diretórios onde o SO que estamos utilizando busca os programas que devem ser reconhecidos na linha de comando ou por outros softwares de maneira automática.</p>
-<p>Nos sistemas Linux raramente a instalação não é encontrada, mas nas versões do Windows isso ocorre muito mais facilmente, até porque, é possível, nas instalações do Python, pedir que o mesmo não adicione o PATH [caminho ou diretório] da instalação atual nas variáveis do sistema. Logo, você terá que ir em programas instalados e procurar por alguma instalação. Se nada for encontrado, e você não fez a instalação via compilação através do fontes, então o Python não está instalado.</p>
+<p>Isso ocorre nas situações quando o local de instalação do Python não está nas variáveis do sistema. As variáveis do sistema apontam para diretórios onde o SO que estamos utilizando irá buscar os programas que devem ser reconhecidos na linha de comando ou por outros softwares de maneira automática.</p>
+<p>Nos sistemas Linux, raramente a instalação não é encontrada, mas nas versões do Windows, isso ocorre muito mais facilmente, até porque, é possível, nas instalações do Python, pedir que o mesmo não adicione o PATH [caminho ou diretório] da instalação atual, nas variáveis do sistema. Logo, você terá que ir nas opções do sistema, no caso, em Programas Instalados e procurar por alguma instalação do Python. Se nada for encontrado, e você não tiver feito a instalação via compilação através do fontes, então o Python não está instalado.</p>
 </div>
 
 				</div>
