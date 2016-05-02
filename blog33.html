@@ -72,6 +72,290 @@ eXcript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a  href="http://excript.com/php/definindo-incluindo-alterando-excluindo-elemento-php.html">Definindo, Incluindo, Alterando e Excluindo elementos em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/definindo-incluindo-alterando-excluindo-elemento-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/definindo-parametro-php.html">Definindo parâmetros em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">function soma($num1, $num2){</span>
+
+<span class="x">    $total = $num1 + $num2;</span>
+
+<span class="x">    echo $total;</span>
+
+<span class="x">}</span>
+
+<span class="x">soma(10, 20);</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/definindo-parametro-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/destrutores-php.html">Destrutores em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">#DESTRUTORES</span>
+
+<span class="x">class Pessoa{</span>
+
+<span class="x">    function __construct(){</span>
+<span class="x">        echo &quot;Função construtora invocada.&quot;;</span>
+<span class="x">    }</span>
+
+<span class="x">    function __destruct(){</span>
+<span class="x">        echo &quot;Função destrutora invocada.&quot;;</span>
+<span class="x">    }</span>
+
+<span class="x">}</span>
+
+<span class="x">$p1 = new Pessoa;</span>
+<span class="x">unset($p1);</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/destrutores-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/do-while-caso-de-uso-php.html">do-while - caso de uso com PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
+
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">    &lt;title&gt;Estrutura DO-WHILE - caso de uso - Curso PHP - eXcript&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
+
+<span class="x">&lt;body&gt;</span>
+
+<span class="x">    </span><span class="cp">&lt;?php</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$_REQUEST</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;dependentes&quot;</span><span class="p">])){</span>
+        <span class="nv">$dependentes</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;dependentes&quot;</span><span class="p">];</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">is_numeric</span><span class="p">(</span><span class="nv">$dependentes</span><span class="p">)){</span>
+            <span class="nv">$dependentes</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">echo</span> <span class="s2">&quot;não ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/do-while-caso-de-uso-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/elseif-php.html">A instrução <tt class="docutils literal">elseif</tt></a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
+
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">    &lt;title&gt;Estrutura elseif - Curso PHP - eXcript&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
+
+<span class="x">&lt;body&gt;</span>
+
+
+<span class="x">    </span><span class="cp">&lt;?php</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;idade&#39;</span><span class="p">])){</span>
+        <span class="nv">$idade</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;idade&#39;</span><span class="p">];</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="nv">$idade</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">){</span>
+            <span class="k">echo</span> <span class="s2">&quot;A idade � de uma crian�a ou de ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/elseif-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/encapsulamento-php.html">Encapsulamento em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x"># ENCAPSULAMENTO</span>
+
+<span class="x">class Pessoa{</span>
+
+<span class="x">    private $nome;</span>
+
+<span class="x">    function setNome($nome){</span>
+<span class="x">        $this -&gt; nome = $nome;</span>
+<span class="x">    }</span>
+<span class="x">    function getNome(){</span>
+<span class="x">        return $this -&gt; nome;</span>
+<span class="x">    }</span>
+
+<span class="x">}</span>
+
+<span class="x">$p1 = new Pessoa();</span>
+<span class="x">//$p1 -&gt; setNome(&quot;eXcript&quot;);</span>
+<span class="x">$p1 -&gt; nome = &quot;&quot;;</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/encapsulamento-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/encapsulamento-php-parte2.html">Encapsulamento em PHP (parte II)</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/encapsulamento-php-parte2.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/escopo-nome-funcao-anonima-php.html">Escopo de nomes das funções anônimas em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">#FUNÇÕES ANÔNIMAS - ESCOPO DE NOMES</span>
+
+<span class="x">$num = 100;</span>
+<span class="x">$num2 = 100;</span>
+
+<span class="x">$func = function() use(&amp;$num, $num2) {</span>
+<span class="x">//    echo &quot;Anônima: &quot; . $num;</span>
+<span class="x">    $num = 1500;</span>
+<span class="x">};</span>
+
+<span class="x">$func();</span>
+
+<span class="x">echo $num;</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/escopo-nome-funcao-anonima-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a  href="http://excript.com/php/estrutura-repeticao-for-php.html">Estrutura de Repetição <tt class="docutils literal">for</tt> do PHP</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line-11">
@@ -127,297 +411,6 @@ eXcript            </a>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/estrutura-repeticao-for-php-parte2.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/estrutura-selecao-multipla-switch-php.html">Estrutura de Seleção Múltipla <tt class="docutils literal">switch</tt> em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#INSTRUÇÃO SWITCH</span>
-
-<span class="x">$num = 1;</span>
-
-<span class="x">switch($num){</span>
-
-<span class="x">    case 1:</span>
-<span class="x">        echo &quot;O valor é igual a 1&quot;;</span>
-<span class="x">        break;</span>
-<span class="x">    case 2:</span>
-<span class="x">        echo &quot;O valor é igual a 2&quot;;</span>
-<span class="x">        break;</span>
-<span class="x">//    default:</span>
-<span class="x">//        echo &quot;Estrutura default executada&quot;;</span>
-
-<span class="x">}</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/estrutura-selecao-multipla-switch-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/estrutura-selecao-multipla-switch-php-parte2.html">Estrutura de Seleção Múltipla <tt class="docutils literal">switch</tt> em PHP (parte II)</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
-
-<span class="x">&lt;head&gt;</span>
-<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
-<span class="x">    &lt;title&gt;Instrução Switch na prática - Curso PHP - eXcript&lt;/title&gt;</span>
-<span class="x">&lt;/head&gt;</span>
-
-<span class="x">&lt;body&gt;</span>
-
-<span class="cp">&lt;?php</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;cbxMES&quot;</span><span class="p">])){</span>
-        <span class="nv">$mes</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;cbxMES&quot;</span><span class="p">];</span>
-        <span class="k">switch</span><span class="p">(</span><span class="nv">$mes</span><span class="p">){</span>
-            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-                <span class="k">echo</span> <span class="s2">&quot;Janeiro&quot;</span><span class="p">;</span>
-                <span class="k">break</span><span class="p">;</span>
-            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
-                <span class="k">echo ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/estrutura-selecao-multipla-switch-php-parte2.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/estruturas-de-repeticao-php.html">Introdução às Estruturas de Repetição em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">//ESTRUTURAS DE REPETIÇÃO</span>
-
-<span class="x">$x = 10;</span>
-<span class="x">while($x&lt;=20){</span>
-<span class="x">    $x = $x + 1;</span>
-<span class="x">    echo $x . &quot;\n&quot;;</span>
-<span class="x">//    echo &quot;O valor da variável x é menor do que zero.&quot;;</span>
-<span class="x">}</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/estruturas-de-repeticao-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/executar-script-php.html">Executando Scripts PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/executar-script-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/foreach-alterando-valores.html">Estrutura <tt class="docutils literal">foreach</tt> - alterando valores internos</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#ITERAÇÃO E ALTERAÇÃO DOS VALORES</span>
-
-<span class="x">$nums = range(0, 10);</span>
-<span class="x">//print_r($nums);</span>
-<span class="x">foreach($nums as $chave =&gt; &amp;$valor){</span>
-<span class="x">    $valor *= 10;</span>
-<span class="x">    echo $valor.&quot;\n&quot;;</span>
-<span class="x">}</span>
-<span class="x">print_r($nums);</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/foreach-alterando-valores.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/foreach-como-usar.html">O foreach em PHP - Como usar?</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#ESTRUTURA FOREACH II</span>
-
-<span class="x">$lista = [&quot;Domingo&quot;, &quot;Segunda&quot;, &quot;Terça&quot;, &quot;Quarta&quot;, &quot;Quinta&quot;, &quot;Sexta&quot;, &quot;Sabado&quot;];</span>
-
-<span class="x">foreach($lista as $chave =&gt; $valor){</span>
-<span class="x">    echo &quot;$chave: $valor \n&quot;;</span>
-<span class="x">}</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/foreach-como-usar.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/foreach-php.html">Estrutura <tt class="docutils literal">foreach</tt> em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#ESTRUTURA FOREACH</span>
-
-<span class="x">$lista = [&quot;Domingo&quot;, &quot;Segunda&quot;, &quot;Terça&quot;, &quot;Quarta&quot;, &quot;Quinta&quot;, &quot;Sexta&quot;, &quot;Sabado&quot;];</span>
-
-<span class="x">//for($x=0; $x&lt;count($lista); $x++){</span>
-<span class="x">//    echo &quot;$x: $lista[$x]\n&quot;;</span>
-<span class="x">//}</span>
-
-<span class="x">foreach($lista as $item){</span>
-<span class="x">    echo &quot;$item\n&quot;;</span>
-<span class="x">}</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/foreach-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/formulario-html-php.html">Formulários HTML e PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<p>formulario.php</p>
-<div class="highlight"><pre><span class="cp">&lt;?php</span>
-
-<span class="c1">#FORMULÁRIO HTML</span>
-
-<span class="cp">?&gt;</span><span class="x"></span>
-
-<span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
-
-<span class="x">&lt;head&gt;</span>
-<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
-<span class="x">    &lt;title&gt;Fomulário HTML - Curso PHP - eXcript&lt;/title&gt;</span>
-<span class="x">&lt;/head&gt;</span>
-<span class="x">&lt;body&gt;</span>
-
-<span class="x">&lt;form action=&quot;metodo_post.php?xget=50&quot; method=&quot;POST&quot;&gt;</span>
-
-<span class="x">    &lt;fieldset&gt;</span>
-<span class="x">        &lt;legend&gt;Formulário HTML&lt;/legend&gt;</span>
-
-<span class="x">        &lt;p&gt;</span>
-<span class="x">            &lt;label ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/formulario-html-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -527,6 +520,8 @@ eXcript            </a>
                             href="http://excript.com/blog50.html">50</a></li>
                     <li class=""><a
                             href="http://excript.com/blog51.html">51</a></li>
+                    <li class=""><a
+                            href="http://excript.com/blog52.html">52</a></li>
                 <li class="next"><a
                         href="http://excript.com/blog34.html">&raquo;</a></li>
         </ul>
