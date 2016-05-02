@@ -12,7 +12,7 @@
 <link rel="canonical" href="http://excript.com/python/idle-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,idle,ide,editor,blog" />
 		<meta name="description" content="Nesta aula estudaremos o aplicativo IDLE que é, a forma interativa para utilizarmos o Python e assim, sermos capazes de testar funções, classes e quaisquer classe de qualquer pacote instalado." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -21,10 +21,14 @@
         <meta property="og:url" content="http://excript.com/python/idle-python.html"/>
 			<meta property="og:description" content="Nesta aula estudaremos o aplicativo IDLE que é, a forma interativa para utilizarmos o Python e assim, sermos capazes de testar funções, classes e quaisquer classe de qualquer pacote instalado."/>
 
-        <meta property="article:published_time" content="2016-01-01" />
+        <meta property="article:published_time" content="2016-02-05" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="idle" />
+            <meta property="article:tag" content="ide" />
+            <meta property="article:tag" content="editor" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
 
 
@@ -108,7 +112,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01 January 2016</time>
+            <time datetime="2016-02-05T01:50:00-02:00"> Publicado em 05 February 2016</time>
         </span>
 
 
@@ -377,21 +381,94 @@ eXcript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+					<div class="section" id="idle-visao-geral">
+<h2>IDLE - VISÃO GERAL</h2>
+<img alt="Imagem que exibe o IDLE em execução." src="../images/curso-de-python/idle.png" />
+<p>O IDLE é um programa escrito em Python para ser utilizado como um ambiente de desenvolvimento integrado para execução de Script´s. A aplicação vem junto com a maioria das instalações do Python e está presente na distribuição oficial desde a versão 2.3.</p>
+<p>O editor está construido 100% em Python, logo, toda a parte gráfica foi desenvolvida utilizando a biblioteca Tkinter.</p>
+<p>De forma geral, podemos dizer que o objetivo do IDLE é proporcionar uma maneira rápida e fácil para o uso das funções e bibliotecas do Python, como também, proporcionar uma plataforma de estudo simples de ser utilizada, disponibilizando num único lugar, todos os recursos e bibliotecas do Python.</p>
+</div>
+<div class="section" id="code-complete">
+<h2>CODE COMPLETE</h2>
+<p>O IDLE vem evoluindo bastante nas últimas versões. Atualmente, o mesmo possui um <tt class="docutils literal">code complete</tt> bastante inteligente, que exibe os parâmetros das função, ou então, todas as funções que podem ser invocadas por determinada classe ou objeto.</p>
+<img alt="Imagem mostrando CodeComplete do IDLE" src="../images/curso-de-python/idle-code-complete.png" />
+<p>As teclas de atalho para chamar o CodeComplete são: Ctrl + Espaço. A forma como chamamos o CodeComplete do IDLE é igual a 99% das IDE´s.</p>
+</div>
+<div class="section" id="editor-de-scripts">
+<h2>EDITOR DE SCRIPTS</h2>
+<p>O IDLE também possui um editor de Script de várias linhas. Para utiliza-lo acesse o Menu <cite>File -&gt; New File</cite>, ou então, pressione as teclas de atalho Ctrl + N. Em seguida, será aberta uma janela semelhante ao que temos abaixo.</p>
+<img alt="Imagem mostrando CodeComplete do IDLE" src="../images/curso-de-python/idle-editor-scripts.png" />
+<p>Como podemos ver na imagem, nesta janela é possível criar scripts que contenham várias linhas e em seguida, executar todo o arquivo. Para executar o código, inicialmente, salve o Script e em seguida, vá no Menu <cite>Run -&gt; Run Module</cite>, ou então, pressione a tecla de atalho F5. Feito isso, o Script será executado, caso não haja erros.</p>
+</div>
+<div class="section" id="funcionamento-basico-do-idle">
+<h2>FUNCIONAMENTO BÁSICO DO IDLE</h2>
+<p>Para executar uma instrução no IDLE, basta digitarmos a mesma e pressionarmos a tecla Enter. Se a instrução enviada for válida, algo será impresso na tela ou então, nada acontecerá, salvo que o Cursor se posicionará numa nova linha.</p>
+<p>Se por exemplo, executarmos a soma entre 2 números inteiros, o resultado será impresso na linha seguinte a operação, como podemos ver na imagem a seguir:</p>
+<img alt="Imagem mostrando a utilização do IDLE como uma simples calculadora" src="../images/curso-de-python/idle-calculadora.png" />
+<p>Como podemos ver na imagem, se mandarmos somar 2 números o resultado é impresso na linha seguinte. O mesmo resultado pode ser obtido, passando a soma como parâmetro pela função <cite>print()</cite>.</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span>
+<span class="mi">20</span>
+</pre></div>
+<p>Após o resultado ser apresentado, o cursor é liberado para que seja possível entrar outra instrução.</p>
+</div>
+<div class="section" id="retornando-instrucao-anteriores">
+<h2>RETORNANDO INSTRUÇÃO ANTERIORES</h2>
+<p>A maior crítica sobre a utilização do IDLE, sem dúvidas, está no fato das teclas de atalho para voltar a última instrução enviada. Normalmente, para retornarmos a última instrução no Prompt de Comando ou então, no Shell do Linux, utilizamos as setas para cima e para baixo. Porém, no IDLE, se utilizarmos as teclas para cima e para baixo, ocorrerá que iremos posicionar o cursor na direção pressionada.</p>
+<p>Existe uma razão pela qual as teclas para cima e para baixo não foram utilizadas e também, rapidamente nos acostumamos com as teclas utilizadas por padrão pelo IDLE.</p>
+<p>Alt + P - para voltar a última instrução digitada. A letra 'P' vem de &quot;previous&quot;.
+Alt + N - para avançar. O 'N' vem de &quot;Next&quot;.</p>
+<p>Assim, temos a capacidade de avançar ou então retroceder nas instruções que digitamos.</p>
+<p>Caso as teclas de atalho para avançar e retroceder as instruções lhe for incomodo, é possível alterá-las acessando o Menu do IDLE, para isso, vá em <cite>Option -&gt; Configure IDLE -&gt; Keys</cite> e então, defina a tecla de atalho a ação que desejares.</p>
+<img alt="Imagem do IDLE exibindo a janela Options para a alteração das teclas de atalho para avançar e retroceder no histórico de instruções executadas." src="../images/curso-de-python/idle-keys-next-previous-history.png" />
+</div>
+<div class="section" id="utilizando-varias-secoes">
+<h2>UTILIZANDO VÁRIAS SEÇÕES</h2>
+<p>Quando inicializamos o IDLE é aberta uma janela que contém um editor e é inicializado uma seção do Python. Tudo que for feito numa janela, estará disponível só e somente só na seção do Python inicializada especialmente para essa janela. Se o IDLE for reiniciado, ou então, se você estiver trabalhando com várias janelas abertas, cada uma terá uma seção independente do Python, onde poderás importar bibliotecas, definir variáveis ou então, poderás fazer o que bem entender. Assim, temos que uma variável declarada na &quot;Janela A&quot;, não estará disponível na &quot;Janela B&quot;, da mesma forma que, uma variável declaradas na execução do &quot;Programa X&quot;, não estará disponível na execução do &quot;Programa Y&quot;.</p>
+<p>Muitas vezes, importamos diversas bibliotecas numa seção, ou então, alteramos algum funcionamento interno das bibliotecas do Python para estudarmos ou então, realizarmos testes.</p>
+<p>Sempre que desejares, é possível reiniciar a seção em que estamos trabalhando e assim, remover quaisquer alterações feitas ou então, remover qualquer objeto criado em memória. Para isso, vá no Menu <cite>Shell -&gt; Restart Shell</cite> ou então, pressione as teclas de atalho <cite>CTRL + F6</cite>. Em seguida, uma linha horizontal será traçada e será escrito no centro do vídeo <tt class="docutils literal">RESTART</tt>, como pode ser visto na imagem abaixo:</p>
+<img alt="Imagem do IDLE reiniciado com uso da tecla de atalho Ctrl + F6" src="../images/curso-de-python/idle-restart.png" />
+<p>Como a imagem acima esta mostrando, a variável que foi declarada antes da reinicialização do IDLE não está mais disponível, até porque, a seção que estava sendo utilizada foi destruida e em seguida, uma nova seção do Python foi inicializada.</p>
+</div>
+<div class="section" id="teclas-de-atalho-do-idle">
+<h2>TECLAS DE ATALHO DO IDLE</h2>
+<p>A seguir, temos as teclas de atalho que estudamos nessa aula e também, os atalhos que podem ser considerados os principais da utilização básica do IDLE.</p>
+<blockquote>
+<ol class="arabic simple">
+<li>Alt + P -&gt; retorna a última instrução</li>
+<li>Alt + N -&gt; retorna a instrução seguinte</li>
+<li>Ctrl + F6 -&gt; Reinicia o IDLE</li>
+<li>Ctrl + N -&gt; Abre o editor de Script´s de várias linhas</li>
+</ol>
+</blockquote>
+</div>
+<div class="section" id="personalizando-o-idle">
+<h2>PERSONALIZANDO O IDLE</h2>
+<p>Como vimos, o IDLE é construído só e somente só com a linguagem Python, e toda a parte gráfica está escrita utilizando a biblioteca nativa Tkinter. Porém, é possível personalizarmos o IDLE das mais diversas maneiras e inclusive, somos capazes de criar nossos próprios temas e até, distribuí-los.</p>
+<p>Para personalizar o IDLE, vá no Menu <cite>Option -&gt; Configure IDLE...</cite>. Em seguida, será aberta uma janela semelhante a que temos abaixo:</p>
+<img alt="Janela inicial do IDLE Preferences" src="../images/curso-de-python/idle-preferences-1.png" />
+<p>Como podemos ver na imagem acima, a primeira aba do menu de preferências do IDLE é <cite>Fonts/Tabs</cite>. Nesta, podemos escolher qual a fonte a ser utilizada pelo editor na lista contida dentro do GroupBox <cite>Base Editor Font</cite>. Abaixo da listagem de fontes disponíveis, há a opção <cite>Size</cite>, onde é possível definir o tamanho da fonte do editor e ao lado de <cite>Size</cite>, há um CheckBox de nome <cite>Bold</cite> que define se o texto deve ou não estar em Negrito.</p>
+<img alt="Janela IDLE Preferences com a aba Highlighting selecionada" src="../images/curso-de-python/idle-preferences-2.png" />
+<p>A aba Highlighting do IDLE permite-nos definir o sistema de cor a ser utilizado. Inicialmente, observe a caixa ao lado direito da janela de nome <cite>Highlighting Theme</cite>. Nesta, podemos selecionar inicialmente se a alteração das cores será feita no tema que está sendo exibido no caso, a opção a <cite>Built-in Theme</cite>, ou então, podemos definir a opção <cite>a Custom Theme</cite> que habilitará os controles abaixo.</p>
+<p>No primeiro Controle habilitado, há algumas opções de temas que estão instalados. Quando você seleciona outro tema, no mesmo momento, o editor ao lado esquerdo é alterado conforme as cores definidas no tema selecionado.</p>
+<p>Agora, no GroupBox a esquerda de nome <cite>Custom Highlighting</cite>, temos a disposição todas as definições da linguagem Python. Logo, podemos alterar a cor de Background ou então, do Foreground de cada opção.</p>
+<p>Se você for com o mouse em cima do Editor, poderás clicar em qual definição desejas alterar e assim, bastará selecionar a cor deseja.</p>
+<img alt="Janela IDLE Preferences com a aba Keys selecionada" src="../images/curso-de-python/idle-preferences-3.png" />
+<p>A aba Keys já foi vista anteriormente, nesta, temos a definição de todas as teclas de atalho do IDLE e assim, podemos selecionar e em seguida, alterar a definição de tecla de atalho que desejamos.</p>
+<img alt="Janela IDLE Preferences com a aba General selecionada" src="../images/curso-de-python/idle-preferences-4.png" />
+<p>A última aba é de nome <cite>General</cite>. Nesta, há opções configurações diversas. Inicialmente, temos o GroupBox <cite>Startup Preferences</cite>. Neste, podemos definir se ao abrirmos o IDLE o mesmo será aberto no mode <cite>Shell Window</cite>, isto é, o modo padrão, onde digitamos a instrução, pressionamos a tecla Enter e a mesma é executada.</p>
+<p>Se definirmos a opção de abertura como sendo <cite>Open Edit Window</cite>, o IDLE será aberto com a tela de Edição de Scripts que estudamos anteriormente.</p>
+<p>A opção a seguir é <cite>Autosave Preferences</cite>. Nesta, podemos definir se ao executarmos o Script na janela de Edição de Scripts será perguntado se desejamos salvar ou então, se o código será salvo automaticamente. É importante observar que inicialmente será perguntado onde desejamos salvar o arquivo de Script e somente em seguida, é que o salvamento será realizado automaticamente.</p>
+<p>Em seguida temos a opção <cite>Initial Window Size (in character)</cite>. Está opção permite-nos definir a largura e a altura do editor. É importante observar que as dimensões são calculadas pela quantidade de caracteres e não em pixels. Quando estudarmos a biblioteca Tkinter iremos entender o porque dessa especificação!</p>
+</div>
+<div class="section" id="consideracoes-finais">
+<h2>CONSIDERAÇÕES FINAIS</h2>
+<p>Nesse artigo estudamos o mínimo sobre o IDLE e aprendemos somente as teclas de atalho essenciais para que possamos utilizar o o ambiente para testes e estudos disponibilizado nas principais versões do Python, no caso, o IDLE!</p>
+<p>É possível que seja feito muito mais do que o demonstrado e podemos explorar diversos outros recursos acessando o Menu do próprio editor.</p>
+</div>
 
 				</div>
 			</div>
@@ -419,7 +496,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/idle.html">idle</a>, 	<a href="http://excript.com/tag/ide.html">ide</a>, 	<a href="http://excript.com/tag/editor.html">editor</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

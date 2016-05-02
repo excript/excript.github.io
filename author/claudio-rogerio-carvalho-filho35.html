@@ -72,6 +72,49 @@ eXcript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a  href="http://excript.com/php/funcao-anonima-pratica-php.html">Funções Anônimas na Prática com PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">#PRÁTICA - FUNÇÕES ANÔNIMAS</span>
+
+<span class="x">$quadrado = function($item){</span>
+<span class="x">    return $item * $item;</span>
+<span class="x">};</span>
+<span class="x">$cubo = function($item)use($quadrado){</span>
+<span class="x">    return $quadrado($item) * $item;</span>
+<span class="x">};</span>
+<span class="x">$soma = function($item){</span>
+<span class="x">    return $item + $item;</span>
+<span class="x">};</span>
+
+<span class="x">function processa_lista($lista, $func){</span>
+<span class="x">    foreach($lista as &amp;$item){</span>
+<span class="x">        $item = $func($item);</span>
+<span class="x">    }</span>
+<span class="x">    return $lista;</span>
+<span class="x">}</span>
+
+<span class="x">echo ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/funcao-anonima-pratica-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a  href="http://excript.com/php/funcao-escopo-de-variaveis-php.html">Funções e Escopo de Variáveis em PHP</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line-11">
@@ -403,44 +446,6 @@ eXcript            </a>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/heranca-php-ii.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/implementando-funcionalidades-classe-php.html">Implementando Funcionalidades em Classe no PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#IMPLEMENTANDO FUNÇÕES I</span>
-
-<span class="x">class Teste{</span>
-
-<span class="x">    public function imprimeTeste(){</span>
-<span class="x">        echo &quot;Função imprimeTeste() da classe de nome Teste&quot;;</span>
-<span class="x">    }</span>
-
-<span class="x">}</span>
-
-<span class="x">$t1 = new Teste();</span>
-<span class="x">$t1 -&gt; imprimeTeste();</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/implementando-funcionalidades-classe-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
