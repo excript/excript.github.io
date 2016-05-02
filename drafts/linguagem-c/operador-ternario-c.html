@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Operador Ternário do C - eXcript</title>
+    <title>Operador Ternário em C - excript.com</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!--<link href="https://plus.google.com/" rel="publisher">	-->
+
 
 
 <link rel="canonical" href="http://excript.com/drafts/linguagem-c/operador-ternario-c.html">
 
+
+
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
         <meta name="keywords" content="curso,c" />
-		<meta name="description" content="Nesta aula estudaremos o Operador Ternário e aprenderemos como podemos escolher uma dentre 2 opções de forma menos verbosa, utilizando uma notação inline, isto é, uma notação onde toda a expressão será definida numa única linha." />
+    <meta name="description" content="Nesta aula estudaremos o Operador Ternário e aprenderemos como podemos escolher uma dentre 2 opções de forma menos verbosa, utilizando uma notação inline, isto é, uma notação onde toda a expressão será definida numa única linha." />
 
-        <meta property="og:site_name" content="eXcript" />
+
+        <meta property="og:site_name" content="excript.com" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Operador Ternário do C"/>
+        <meta property="og:title" content="Operador Ternário em C"/>
         <meta property="og:url" content="http://excript.com/drafts/linguagem-c/operador-ternario-c.html"/>
-			<meta property="og:description" content="Nesta aula estudaremos o Operador Ternário e aprenderemos como podemos escolher uma dentre 2 opções de forma menos verbosa, utilizando uma notação inline, isto é, uma notação onde toda a expressão será definida numa única linha."/>
+
+        <meta property="og:description" content=""/>
 
         <meta property="article:published_time" content="2016-01-01" />
             <meta property="article:section" content="curso c" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="c" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
+            <meta property="og:image"
+                  content="http://excript.com/images/logo-excript.svg"/>
 
 
     <link rel="stylesheet" href="http://excript.com/theme/css/asciidoctor-default.css" type="text/css"/>
@@ -38,14 +46,14 @@
     <link rel="stylesheet" href="http://excript.com/theme/css/style.css" type="text/css"/>
 
         <link href="http://excript.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="eXcript ATOM Feed"/>
+              title="excript.com ATOM Feed"/>
 
         <link href="http://excript.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
-              title="eXcript RSS Feed"/>
+              title="excript.com RSS Feed"/>
 
 
         <link href="http://excript.com/feeds/curso-c.atom.xml" type="application/atom+xml" rel="alternate"
-              title="eXcript curso c ATOM Feed"/>
+              title="excript.com curso c ATOM Feed"/>
 
 </head>
 <body>
@@ -60,7 +68,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="http://excript.com/" class="navbar-brand">
-eXcript            </a>
+excript.com            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
@@ -87,15 +95,15 @@ eXcript            </a>
                 <h1>
                     <a href="http://excript.com/drafts/linguagem-c/operador-ternario-c.html"
                        rel="bookmark"
-                       title="Permalink to Operador Ternário do C">
-                        OPERADOR TERNÁRIO DO C
+                       title="Permalink to Operador Ternário em C">
+                        OPERADOR TERNÁRIO EM C
                     </a>
                 </h1>
 
                     <h3 class="h3curso">
 	                    <a href="http://excript.com/drafts/linguagem-c/operador-ternario-c.html"
 	                       rel="bookmark"
-	                       title="Permalink to Operador Ternário do C">
+	                       title="Permalink to Operador Ternário em C">
 	                        CURSO C
 	                    </a>
                     </h3>
@@ -277,28 +285,28 @@ eXcript            </a>
 				<div class="row">
 					<div class="section" id="operador-ternario">
 <h2>OPERADOR TERNÁRIO</h2>
-<p>O <strong>Operador Ternário</strong> verifica uma condição e retorna um dentre dois valores definidos em sua estrutura. Esta é uma notação <tt class="docutils literal">inline</tt> para as vezes em que seja necessário avaliar expressões e decidir por um dentre 2 valores.</p>
-<p>Então, a principal razão da existência do operador ternário, é servidor como uma atalho linguístico. Ao invés de utilizarmos o <strong>Operador Ternário</strong> podemos escrever o código utilizando a conhecida <strong>Tomada de Decisão</strong>, ou seja, a instrução <tt class="docutils literal">if</tt>. Porém, com a instrução <tt class="docutils literal">if</tt>, utilizamos 4 linhas de código pra escolher uma dentre 2 opções, enquanto que com o operador ternário, sendo o mesmo um operador <tt class="docutils literal">inline</tt>, obtermos o mesmo resultado utilizando uma única linha.</p>
+<p>O <strong>Operador Ternário</strong> verifica uma condição e retorna um dentre dois valores pré-definidos em sua estrutura. Esta é uma notação chamada <tt class="docutils literal">inline</tt> para as vezes em que seja necessário avaliar expressões e decidir por um dentre 2 valores.</p>
+<p>A principal razão da existência do Operador Ternário, é servir como uma atalho linguístico. Até porque, tudo que é feito com o Operador Ternário pode ser escrito utilizando a <strong>Tomada de Decisão</strong>, ou seja, a instrução <tt class="docutils literal">if</tt>. Porém, com a instrução <tt class="docutils literal">if</tt>, utilizamos 4 linhas de código pra escolher uma dentre 2 opções, enquanto que com o operador ternário, sendo o mesmo um operador <tt class="docutils literal">inline</tt>, obtemos o mesmo resultado utilizando uma única linha.</p>
 </div>
 <div class="section" id="situacao-pratica">
 <h2>SITUAÇÃO PRÁTICA</h2>
-<p>O operador ternário se justifica em situações, como por exemplo, 10 situações onde é necessário escolher um valor dentre 2 opções. Se, trabalharmos com a instrução <tt class="docutils literal">if</tt>, utilizaremos, no mínimo, 40 linhas de código, enquanto que com o Operador Ternário, conseguimos o mesmo resultado,utilizando apenas 10 linhas.</p>
+<p>O <strong>Operador Ternário</strong> se justifica em situações onde, por exemplo, temos 10 condições a serem verificadas e é necessário em todas, escolher um valor dentre 2 opções. Se, trabalharmos com a instrução <tt class="docutils literal">if</tt>, utilizaremos, no mínimo, 40 linhas de código. Porém, com a Operação Ternária, conseguimos o mesmo resultado, utilizando apenas 10 linhas.</p>
 <p>É verdade que a instrução <tt class="docutils literal">if</tt> pode ser trabalhada de maneira <tt class="docutils literal">inline</tt>, ou seja, escrever toda a expressão numa única linha. Porém, ainda que seja funcional, a leitura é prejudicada e novamente, o <strong>Operador Ternário</strong> se justifica.</p>
 <p>A seguir, temos um exemplo onde inicialmente escolhemos um valor dentre 2 opções com a instrução <tt class="docutils literal">if</tt> e em seguida, vamos escrever a mesma expressão, porém, utilizando o <strong>Operador Ternário</strong>.</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="p">(</span><span class="n">caractere</span><span class="p">==</span><span class="sc">&#39;a&#39;</span><span class="p">)</span> <span class="p">?</span>   <span class="m">65</span>   <span class="p">:</span>   <span class="m">66</span><span class="p">;</span>
-<span class="p">&lt;</span><span class="n">valor</span><span class="p">&gt;</span> <span class="p">=</span>        <span class="p">&lt;</span> <span class="n">x</span> <span class="p">&gt;</span>     <span class="p">?</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span> <span class="p">:</span> <span class="p">(</span><span class="n">False</span><span class="p">)</span>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;a&#39;</span><span class="p">)</span> <span class="o">?</span>   <span class="mi">65</span>   <span class="o">:</span>   <span class="mi">66</span><span class="p">;</span>
+<span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span> <span class="o">=</span>        <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&gt;</span>     <span class="o">?</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span> <span class="o">:</span> <span class="p">(</span><span class="n">False</span><span class="p">)</span>
 </pre></div>
 <p>Inicialmente, estamos declarando uma variável de nome <tt class="docutils literal">num</tt> do tipo <tt class="docutils literal">int</tt> e estamos adicionando a mesma o valor resultante da resolução da estrutura do <strong>Operador Ternário</strong>.</p>
 <p>O sinal de interrogação deve ser lido como: &quot;A expressão é verdadeira?&quot;, ou seja, como o sinal denota, de fato estamos questionando o resultado da expressão lógica. Se o <strong>Valor Lógico</strong> for <tt class="docutils literal">True</tt> o número 65 será retornado, senão, ou seja, o sinal de dois pontos <tt class="docutils literal">:</tt> está substituíndo a instrução <tt class="docutils literal">else</tt>. Logo, devemos ler &quot;senão&quot;, retorna o segundo valor definido na estrutura da <strong>Operação Ternária</strong>.</p>
 <p>Por fim, temos que ler a expressão da seguinte maneira: O <strong>Valor Lógico</strong> da expressão é verdadeiro? Se sim, retorna o primeiro valor <tt class="docutils literal">:</tt> senão, retorna o segundo valor. A seguir, vamos temos dois códigos que estão realizando a mesma tarefa, porém, um está escrito com a instrução <tt class="docutils literal">if</tt>, enquanto o segundo, com o <strong>Operador Ternário</strong>.</p>
 <div class="highlight"><pre><span class="c1">//utilizando o Operador Ternário</span>
-<span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="p">(</span><span class="n">caractere</span><span class="p">==</span><span class="sc">&#39;a&#39;</span><span class="p">)</span> <span class="p">?</span> <span class="m">65</span> <span class="p">:</span> <span class="m">66</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;a&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">65</span> <span class="o">:</span> <span class="mi">66</span><span class="p">;</span>
 
 <span class="c1">//utilizando a instrução &quot;if&quot;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">caractere</span><span class="p">==</span><span class="sc">&#39;a&#39;</span><span class="p">)</span>
-    <span class="n">num</span> <span class="p">=</span> <span class="m">65</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;a&#39;</span><span class="p">)</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">65</span>
 <span class="k">else</span>
-    <span class="n">num</span> <span class="p">=</span> <span class="m">66</span><span class="p">;</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">66</span><span class="p">;</span>
 </pre></div>
 <p>Por fim, se você compreendeu o uso da Tomada de Decisão, ou seja, da instrução <tt class="docutils literal">if</tt>, conseguirás assimilar rapidamente essa notação. Até porque, a lógica de funcionamento é a mesma, a diferença está no &quot;esquema&quot; de cada estrutura.</p>
 </div>
@@ -309,20 +317,27 @@ eXcript            </a>
 </div>
 <div class="section" id="implementando-com-a-instrucao-if">
 <h2>IMPLEMENTANDO COM A INSTRUÇÃO <tt class="docutils literal">if</tt></h2>
+<p>Vamos escrever um código onde é necessário verificar se o número que o usuário informou é menor do que 0. Caso o valor informado seja menor, iremos resetar o valor atribuindo zero para a variável, do contrário, não faremos nada.</p>
+<p>Então, o nosso objetivo é definir 0 caso o valor seja menor do que 0.</p>
+<p>Inicialmente, vamos desenvolver um código utilizando a estrutura de Tomada de Decisão if e em seguida, vamos alterar o nosso código utilizando o Operador Ternário.</p>
 <div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
 <span class="cp">#include &lt;stdlib.h&gt;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="n">num2</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;A&#39;</span><span class="p">)</span>
-      <span class="n">num</span> <span class="o">=</span> <span class="mi">65</span><span class="p">;</span>
-    <span class="k">else</span>
-      <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Informe um numero: &quot;</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">num2</span> <span class="o">=</span>  <span class="mi">0</span><span class="p">;</span>
+  <span class="k">else</span>
+    <span class="n">num2</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;O valor de num2 eh: %d </span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -331,88 +346,20 @@ eXcript            </a>
 <div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
 <span class="cp">#include &lt;stdlib.h&gt;</span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(</span><span class="kt">void</span> <span class="p">)</span>
 <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
 
-    <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;A&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">65</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Informe um numero: &quot;</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<div class="section" id="operador-ternario-vs-instrucao-switch">
-<h2>OPERADOR TERNÁRIO vs INSTRUÇÃO <tt class="docutils literal">switch</tt></h2>
-<p>Agora, vamos desenvolver um exemplo onde encadearemos várias <strong>Operações Ternárias</strong> e produziremos um código semelhante a <strong>Estrutura de Seleção Múltipla</strong> <tt class="docutils literal">switch</tt>.</p>
-<p>O exemplo que faremos tem por objetivo só e somente o estudo do <strong>Operação Ternário</strong>, até porque, na prática, a instrução <tt class="docutils literal">switch</tt> proporciona uma melhor leitura.</p>
-<p>Porém, não há qualquer erro conceitual ou prático implementar com a estrutura que aqui será apresentada, salvo que não é comum esse tipo de implementação.</p>
-<p>O programa que desenvolveremos irá solicitar que o usuário informe uma letra entre <tt class="docutils literal">A</tt> à <tt class="docutils literal">G</tt>. Feito isso, iremos imprimir na tela o código ASCII do caractere.</p>
-<p>O código ASCII é um código numérico que cada letra possui. A tabela ASCII foi substituída pelo sistema <tt class="docutils literal"><span class="pre">UTF-8</span></tt>.</p>
-<p>O primeiro código que implementaremos, utilizará a <strong>Estrutura de Seleção Múltipla</strong> <tt class="docutils literal">switch</tt>. Em seguida, implementaremos a mesma aplicação utilizando o <strong>Operador Ternário</strong>.</p>
-<p>Como dito, o principal objetivo nesse momento é estudarmos o potencial do <strong>Operador Ternário</strong> e as variações que podemos obter com o mesmo.</p>
-</div>
-<div class="section" id="implementando-utilizando-a-instrucao-switch">
-<h2>IMPLEMENTANDO UTILIZANDO A INSTRUÇÃO <tt class="docutils literal">switch</tt></h2>
-<div class="highlight"><pre><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Digite uma letra: &quot;</span><span class="p">);</span>
-<span class="kt">char</span> <span class="n">caractere</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="n">scanf</span><span class="p">(</span> <span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">caractere</span> <span class="p">);</span>
-<span class="kt">int</span> <span class="n">codigo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">num2</span><span class="p">;</span>
+  <span class="n">num2</span> <span class="o">=</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">num</span><span class="p">;</span>
+  <span class="c1">//num &gt;= 0 ? num++ : num--;</span>
 
-<span class="k">switch</span><span class="p">(</span><span class="n">caractere</span><span class="p">){</span>
-    <span class="k">case</span> <span class="sc">&#39;A&#39;</span><span class="o">:</span>
-        <span class="n">codigo</span> <span class="o">=</span> <span class="mi">65</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="sc">&#39;B&#39;</span><span class="o">:</span>
-        <span class="n">codigo</span> <span class="o">=</span> <span class="mi">66</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="sc">&#39;C&#39;</span><span class="o">:</span>
-        <span class="n">codigo</span> <span class="o">=</span> <span class="mi">67</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="sc">&#39;D&#39;</span><span class="o">:</span>
-        <span class="n">codigo</span> <span class="o">=</span> <span class="mi">68</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="sc">&#39;E&#39;</span><span class="o">:</span>
-        <span class="n">codigo</span> <span class="o">=</span> <span class="mi">69</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="sc">&#39;F&#39;</span><span class="o">:</span>
-        <span class="n">codigo</span> <span class="o">=</span> <span class="mi">70</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">case</span> <span class="sc">&#39;G&#39;</span><span class="o">:</span>
-        <span class="n">codigo</span> <span class="o">=</span> <span class="mi">71</span><span class="p">;</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="k">default</span><span class="o">:</span>
-        <span class="n">codigo</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;O valor de num2 e: %d </span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
 
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;O códino ASCII da letra digitada é: %i&quot;</span><span class="p">,</span> <span class="n">codigo</span><span class="p">);</span>
-
-<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-</div>
-<div class="section" id="implementando-utilizando-o-operador-ternario">
-<h2>IMPLEMENTANDO UTILIZANDO O OPERADOR TERNÁRIO</h2>
-<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
-<span class="cp">#include &lt;stdlib.h&gt;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Digite uma letra: &quot;</span><span class="p">);</span>
-    <span class="kt">char</span> <span class="n">caractere</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">scanf</span><span class="p">(</span> <span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">caractere</span> <span class="p">);</span>
-
-
-    <span class="kt">int</span> <span class="n">codigo</span> <span class="o">=</span> <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;A&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">65</span> <span class="o">:</span>
-                 <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;B&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">66</span> <span class="o">:</span>
-                 <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;C&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">67</span> <span class="o">:</span>
-                 <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;D&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">68</span> <span class="o">:</span>
-                 <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;E&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">69</span> <span class="o">:</span>
-                 <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;F&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">70</span> <span class="o">:</span>
-                 <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;G&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">71</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;O códino ASCII da letra digitada é: %i&quot;</span><span class="p">,</span> <span class="n">codigo</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>

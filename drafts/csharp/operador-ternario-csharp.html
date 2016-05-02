@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Operação Ternária em C# - eXcript</title>
+    <title>Operação Ternária em C# - excript.com</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!--<link href="https://plus.google.com/" rel="publisher">	-->
+
 
 
 <link rel="canonical" href="http://excript.com/drafts/csharp/operador-ternario-csharp.html">
 
+
+
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
         <meta name="keywords" content="curso,csharp" />
-		<meta name="description" content="Nesta aula estudaremos o Operador Ternário e aprenderemos como podemos escolher uma dentre 2 opções de forma menos verbosa, utilizando uma notação inline, isto é, uma notação onde toda a expressão será definida numa única linha." />
+    <meta name="description" content="Nesta aula estudaremos o Operador Ternário e aprenderemos como podemos escolher uma dentre 2 opções de forma menos verbosa, utilizando uma notação inline, isto é, uma notação onde toda a expressão será definida numa única linha." />
 
-        <meta property="og:site_name" content="eXcript" />
+
+        <meta property="og:site_name" content="excript.com" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Operação Ternária em C#"/>
         <meta property="og:url" content="http://excript.com/drafts/csharp/operador-ternario-csharp.html"/>
-			<meta property="og:description" content="Nesta aula estudaremos o Operador Ternário e aprenderemos como podemos escolher uma dentre 2 opções de forma menos verbosa, utilizando uma notação inline, isto é, uma notação onde toda a expressão será definida numa única linha."/>
+
+        <meta property="og:description" content=""/>
 
         <meta property="article:published_time" content="2016-01-01" />
             <meta property="article:section" content="curso csharp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="csharp" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
+            <meta property="og:image"
+                  content="http://excript.com/images/logo-excript.svg"/>
 
 
     <link rel="stylesheet" href="http://excript.com/theme/css/asciidoctor-default.css" type="text/css"/>
@@ -38,14 +46,14 @@
     <link rel="stylesheet" href="http://excript.com/theme/css/style.css" type="text/css"/>
 
         <link href="http://excript.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="eXcript ATOM Feed"/>
+              title="excript.com ATOM Feed"/>
 
         <link href="http://excript.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
-              title="eXcript RSS Feed"/>
+              title="excript.com RSS Feed"/>
 
 
         <link href="http://excript.com/feeds/curso-csharp.atom.xml" type="application/atom+xml" rel="alternate"
-              title="eXcript curso csharp ATOM Feed"/>
+              title="excript.com curso csharp ATOM Feed"/>
 
 </head>
 <body>
@@ -60,7 +68,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="http://excript.com/" class="navbar-brand">
-eXcript            </a>
+excript.com            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
@@ -206,8 +214,8 @@ eXcript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<div class="section" id="oepracao-ternaria">
-<h2>OEPRAÇÃO TERNÁRIA</h2>
+					<div class="section" id="operacao-ternaria">
+<h2>OPERAÇÃO TERNÁRIA</h2>
 <p>O <strong>Operador Ternário</strong> verifica uma condição e retorna um dentre dois valores definidos em sua estrutura. Esta é uma notação <tt class="docutils literal">inline</tt> para as vezes em que seja necessário avaliar expressões e decidir por um dentre 2 valores.</p>
 <p>Então, a principal razão da existência do operador ternário, é servidor como uma atalho linguístico. Ao invés de utilizarmos o <strong>Operador Ternário</strong> podemos escrever o código utilizando a conhecida <strong>Tomada de Decisão</strong>, ou seja, a instrução <tt class="docutils literal">if</tt>. Porém, com a instrução <tt class="docutils literal">if</tt>, utilizamos 4 linhas de código pra escolher uma dentre 2 opções, enquanto que com o operador ternário, sendo o mesmo um operador <tt class="docutils literal">inline</tt>, obtermos o mesmo resultado utilizando uma única linha.</p>
 <div class="highlight"><pre><span class="err">#</span><span class="n">include</span> <span class="p">&lt;</span><span class="n">stdio</span><span class="p">.</span><span class="n">h</span><span class="p">&gt;</span>
@@ -250,38 +258,38 @@ eXcript            </a>
 <p>Agora, vamos desenvolver 2 códigos que realizam a mesma tarefa, porém, utilizando estruturas diferentes. Inicialmente, vamos trabalhar com a instrução <tt class="docutils literal">if</tt> e em seguida, escreveremos o mesmo programa, porém, utilizando o <strong>Operador Ternário</strong>.</p>
 <p>O programa que faremos, definirá uma variável do tipo char e inicializará a mesma com o caractere 'A' (maiúsculo). Em seguida, utilizando a instrução <tt class="docutils literal">if</tt> e o <strong>Operador Ternário</strong>, avaliaremos uma expressão e retornaremos um valor.</p>
 </div>
-<div class="section" id="utilizando-a-instrucao-if">
-<h2>UTILIZANDO A INSTRUÇÃO <tt class="docutils literal">if</tt></h2>
-<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
-<span class="cp">#include &lt;stdlib.h&gt;</span>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<p>Vamos escrever um código onde é necessário verificar se o número que o usuário informou é menor do que 0. Caso o valor informado seja menor, atribuir o texto &quot;menor&quot; a uma variável, senão, atribuiremos o texto maior.</p>
+<p>Inicialmente, vamos desenvolver um código utilizando a estrutura de Tomada de Decisão if e em seguida, vamos alterar o nosso código utilizando o Operador Ternário.</p>
+<div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="k">namespace</span> <span class="nn">Aula</span>
 <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">//=========== eXcript.com ===========</span>
+            <span class="c1">//======== NetCoders.com.br  ========</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;A&#39;</span><span class="p">)</span>
-      <span class="n">num</span> <span class="o">=</span> <span class="mi">65</span><span class="p">;</span>
-    <span class="k">else</span>
-      <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Informe um número: &quot;</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<div class="section" id="utilizando-o-operador-ternario">
-<h2>UTILIZANDO O OPERADOR TERNÁRIO</h2>
-<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
-<span class="cp">#include &lt;stdlib.h&gt;</span>
+            <span class="n">String</span> <span class="n">texto</span> <span class="p">=</span> <span class="p">(</span><span class="n">num</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">?</span> <span class="s">&quot;menor&quot;</span> <span class="p">:</span> <span class="s">&quot;maior&quot;</span><span class="p">;</span>
+<span class="c1">//            String texto = &quot;&quot;;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+                <span class="n">texto</span> <span class="p">=</span> <span class="s">&quot;maior&quot;</span><span class="p">;</span>
+            <span class="k">else</span>
+                <span class="n">texto</span> <span class="p">=</span> <span class="s">&quot;menor&quot;</span><span class="p">;</span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
-
-    <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;A&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">65</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;O número é &quot;</span> <span class="p">+</span> <span class="n">texto</span> <span class="p">+</span> <span class="s">&quot; do que 0.&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>

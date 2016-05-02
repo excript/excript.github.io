@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>eXcript</title>
+    <title>excript.com</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--<link href="https://plus.google.com/" rel="publisher">	-->
 
 
 
@@ -13,11 +15,18 @@
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
 
     <!-- Open Graph tags -->
-        <meta property="og:site_name" content="eXcript" />
+        <meta property="og:site_name" content="excript.com" />
         <meta property="og:type" content="website"/>
-        <meta property="og:title" content="eXcript"/>
-        <meta property="og:url" content="http://excript.com"/>
-        <meta property="og:description" content="eXcript"/>
+        <meta property="og:title" content="excript.com"/>
+
+
+			<meta property="og:url" content="http://excript.com"/>
+
+
+        <meta name="og:description" content="" />
+
+            <meta property="og:image"
+                  content="http://excript.com/images/logo-excript.svg"/>
 
 
     <link rel="stylesheet" href="http://excript.com/theme/css/asciidoctor-default.css" type="text/css"/>
@@ -30,10 +39,10 @@
     <link rel="stylesheet" href="http://excript.com/theme/css/style.css" type="text/css"/>
 
         <link href="http://excript.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="eXcript ATOM Feed"/>
+              title="excript.com ATOM Feed"/>
 
         <link href="http://excript.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
-              title="eXcript RSS Feed"/>
+              title="excript.com RSS Feed"/>
 
 
 
@@ -50,7 +59,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="http://excript.com/" class="navbar-brand">
-eXcript            </a>
+excript.com            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
@@ -71,39 +80,6 @@ eXcript            </a>
 <div class="container container-content">
     <div class="row">
         <div class="col-sm-9">
-            <article>
-                <h2><a  href="http://excript.com/php/operador-incremento-decremento-php.html">Operadores de Incremento e Decremento em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">//Operadores de Atribuição Compostos</span>
-
-<span class="x">$num = 10;</span>
-<span class="x">while($num &gt; 0){</span>
-<span class="x">    $num -= 1;//$num = $num - 10;</span>
-<span class="x">    echo $num . &quot;\n&quot;;</span>
-<span class="x">}</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/operador-incremento-decremento-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/operador-logico-php.html">Operadores Lógicos em PHP</a></h2>
                 <div class="summary"><br>
@@ -432,6 +408,47 @@ eXcript            </a>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/primeira-classe-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/pseudo-variavel-this-php.html">Pseudo-variável <tt class="docutils literal">$this</tt> em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">#IMPLEMENTANDO FUNÇÕES</span>
+
+<span class="x">class Pessoa{</span>
+
+<span class="x">    public $idade = 6;</span>
+
+<span class="x">    public function get_idade(){</span>
+
+<span class="x">        return $this -&gt; idade;</span>
+<span class="x">    }</span>
+
+<span class="x">}</span>
+
+<span class="x">$p1 = new Pessoa();</span>
+<span class="x">echo $p1 -&gt; get_idade();</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/pseudo-variavel-this-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
