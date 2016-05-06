@@ -16,7 +16,7 @@
 
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,comentários,blog" />
     <meta name="description" content="Nesta aula estudaremos a utilização de comentários em Python, onde e o que devemos comentar e diversas outras questões pertinentes ao uso de comentários junto ao código fonte." />
 
 
@@ -27,10 +27,12 @@
 
         <meta property="og:description" content=""/>
 
-        <meta property="article:published_time" content="2016-01-01" />
+        <meta property="article:published_time" content="2016-06-05" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="comentários" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"
                   content="http://www.excript.com/images/logo-excript.png"/>
@@ -116,7 +118,7 @@ excript.com            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01 janeiro 2016</time>
+            <time datetime="2016-06-05T17:40:00-03:00"> Publicado em 05 junho 2016</time>
         </span>
 
 
@@ -385,21 +387,65 @@ excript.com            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+					<div class="section" id="comentarios">
+<h2>COMENTÁRIOS</h2>
+<p>O uso de comentários é uma prática normal na programação. O objetivo é poder adicionar descrições em partes especificas do código, seja para documentá-lo, seja para adicionar uma descrição, ou mesmo, para marcar que uma determinada linha, ou um conjunto de linhas, não devem ser executados.</p>
+<p>Para adicionarmos comentários, utilizamos uma notação especial, a fim de informar ao interpretador que, determinado trecho de caracteres, possui a finalidade de descrever ou documentar algo e assim, o compilador ou interpretador, não deve interpretar os caracteres contidos na notação que demarca trechos de comentários.</p>
+</div>
+<div class="section" id="a-notacao-definida-pelo-python">
+<h2>A NOTAÇÃO DEFINIDA PELO PYTHON</h2>
+<p>Em Python, temos 3 notações utilizadas para definir blocos de comentários. A primeira e mais simples, é para definirmos que uma única linha deve ser ignorada, e as 2 outras, para delimitarmos um conjunto de linhas.</p>
+<div class="section" id="notacao-inline">
+<h3>NOTAÇÃO INLINE</h3>
+<p>Utilizamos o caractere cerquilha <cite>#</cite> para demarcarmos que tudo que estiver <strong>a frente</strong> desse caractere, deve ser ignorado pelo interpretador do Python, por exemplo:</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="c">#tudo que estiver a frente da cerquilha será ignorado</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;teste&quot;</span><span class="p">)</span> <span class="c">#a instrução atrás da cerquilha será interpretada</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="notacao-multi-lines-varias-linhas">
+<h2>NOTAÇÃO MULTI-LINES (VÁRIAS LINHAS)</h2>
+<p>A linguagem Python também disponibiliza uma notação para demarcarmos que um conjunto de linhas deve ser ignorado pelo interpretador. Essa notação se dá pelo uso de 3 aspas simples, ou entao, 3 aspas duplas. Nestes casos, tudo que estiver delimitado pelas aspas não será interpretado, por exemplo:</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">toda informações contida entre 3 aspas SIMPLES</span>
+<span class="sd">é considerada como caracteres que devem ser ignorados.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">toda informações contida entre 3 aspas DUPLAS</span>
+<span class="sd">é considerado texto que deve ser ignorado.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+<p>No código acima, definimos 2 blocos de códigos que serão ignorados pelo interpretador do Python ou então, podemos dizer que, serão interpretados como se fossem comentários e que dispensam qualquer avaliação por parte do interpretador.</p>
+</div>
+<div class="section" id="para-que-utilizamos-comentarios">
+<h2>PARA QUE UTILIZAMOS COMENTÁRIOS?</h2>
+<p>A utilização de comentários da-se tanto para inserirmos uma informações que não podemos esquecer, ou então, algo que desejamos que outros programadores saibam no momento em que estiverem lendo determinadas linhas de código.</p>
+<p>A primeira utilização dos comentário é fazer o que o próprio nome sugere: comentar os nosso códigos informando ao interpretador que essas linhas não devem ser executadas.</p>
+</div>
+<div class="section" id="documentacao-de-programas">
+<h2>DOCUMENTAÇÃO DE PROGRAMAS</h2>
+<p>Utilizamos a marcação de comentários para documentarmos programas, classes, funções, variáveis, constantes ou seja lá o que for. Quando criamos uma biblioteca e essa será utilizada por terceiros, é importante que o código possua uma documentação para que os outros programadores entendam a nossa biblioteca e, saibam como invocar as funções corretamente, ou mesmo, para entenderem o que elas se propõem.</p>
+<p>Para a documentação de código, há um conjunto de parâmetros a serem definidos dentro do bloco de comentário a fim de instruir o programa que irá tornar nossos comentários em documentação propriamente dita.</p>
+<p>Quando documentamos partes internas do nosso programa, temos que, ao mesmo tempos em que documentamos o que estamos fazendo, também geramos documentação que será posteriormente extraída nosso código e será então, gerada a documentação propriamente dita. Dessa forma, não temos o problema de ter num diretório onde há arquivos que documentam classes e funções, e noutro diretório, as classes e funções documentadas.</p>
+<p>Assim, tudo estará junto num mesmo arquivo, feito num mesmo editor! Essa forma de trabalhar, faz com que a documentação sempre esteja atualizada e acelera o desenvolvimento de maneira geral. Até porque, no mesmo momento em que alteramos o código fonte, já podemos alterar a documentação.</p>
+<p>É recomendável nos acostumarmos a documentar nosso código. Isso não somente faz de nós melhores programadores como também, ajuda-nos na definir qual a razão que determinado trecho de código está se propondo a realizar.</p>
+</div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<p>A seguir, temos o exemplo feito durante aula sobre a utilização de comentários.</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;Aprendendo como utilizar comentários.&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;segunda linha&quot;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;terceira linha&quot;</span><span class="p">)</span><span class="o">-</span><span class="n">aqui</span> <span class="err">é</span> <span class="n">um</span> <span class="n">comentário</span> <span class="n">que</span> <span class="n">não</span> <span class="n">será</span> <span class="n">interpretado</span>
+</pre></div>
+</div>
 
 				</div>
 			</div>
@@ -427,7 +473,7 @@ excript.com            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>            </div>
+	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>, 	<a href="http://www.excript.com/tag/comentarios.html">comentários</a>, 	<a href="http://www.excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
