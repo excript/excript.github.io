@@ -16,8 +16,8 @@
 
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
-    <meta name="description" content="Nesta aula estudaremos a nomenclatura de variáveis, isto é, quais as regras que a linguagem Python tem definido para defirmos nomes de variáveis" />
+        <meta name="keywords" content="curso,python,variavel,nomenclatura,blog" />
+    <meta name="description" content="Nesta aula estudaremos a nomenclatura de variáveis, isto é, quais as regras que a linguagem Python tem definido para definirmos nomes de variáveis" />
 
 
         <meta property="og:site_name" content="excript.com" />
@@ -27,10 +27,13 @@
 
         <meta property="og:description" content=""/>
 
-        <meta property="article:published_time" content="2016-01-01" />
+        <meta property="article:published_time" content="2016-06-05" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="variavel" />
+            <meta property="article:tag" content="nomenclatura" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"
                   content="http://www.excript.com/images/logo-excript.png"/>
@@ -116,7 +119,7 @@ excript.com            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01 janeiro 2016</time>
+            <time datetime="2016-06-05T19:10:00-03:00"> Publicado em 05 junho 2016</time>
         </span>
 
 
@@ -385,23 +388,107 @@ excript.com            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+					<div class="section" id="nomenclatura">
+<h2>NOMENCLATURA</h2>
+<p>As variáveis possuem obrigatoriamente um nome que as identificam e as distinguem. Esse nome, ou referência, deve seguir algumas regras, para evitar, por exemplo, colisões de nomes e também, para não &quot;confundir&quot; o interpretador.</p>
+<p>Se utilizamos uam IDE para o desenvolvimento, está marcará todos os nomes inválidos que por ventura tentarmos utilizar. Porém, se trabalharmos com editores simples, como por exemplo, o Bloco de Notas do Windows, tudo que for digitado é aceito e nenhuma mensagem é exibida.</p>
+<p>As regras que aqui estudaremos também servirão para a definição de nomes de todas as demais estruturas, isto é, as regras aqui estudadas podem ser utilizadas na definição de funções, nomes de classes, nome de pacotes e etc.</p>
+</div>
+<div class="section" id="nome">
+<h2>NOME</h2>
+<p>Na construção de referências, pode-se utilizar, quaisquer letras, sejam elas maiúsculas ou minúsculas. Variáveis não devem utilizar nomes de classes ou pacotes, ou seja, não devemos declarar uma variável de nome &quot;str&quot;, ou então, &quot;int&quot;, até porque, esses são nomes de classes definidas por padrão pela linguagem Python. Porém, a linguagem não proibe-nos a utilização de referências que sejam iguais a nomes de classes, porém, se assim o fizermos, poderemos &quot;bagunçar&quot; o ambiente de execução da nossa aplicação.</p>
+<p>De maneira geral, temos a disposição todo o alfabeto para definirmos o nome de variáveis. Também podemos, por exemplo, compor o nome da variável utilizando números, o que estudaremos nos tópicos a seguir.</p>
+<p>Desde já é importante dizer que em nenhuma situação será permitida a utilização de caracteres especiais na composição de nomes, isto é, não podemos utilizar a lista de caracteres a seguir quando estivermos definindo o nome de variáveis:</p>
+</div>
+<div class="section" id="caracteres-numericos">
+<h2>CARACTERES NUMÉRICOS</h2>
+<p>Uma referência pode conter números, desde que este não seja o primeiro caractere. Assim, referências como por exemplo, <cite>9num</cite>, ou então, <cite>1var</cite>, não são permitidos, até porque, o interpretador, não conseguirá distinguir se estamos definindo uma referências ou então, estamos trabalhando com números.</p>
+<p>Então, a utilização de números é permitida só e somente só após o primeiro caractere, como podemos ver nos exemplos a seguir:</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">caractere</span> <span class="o">=</span> <span class="s">&#39;x&#39;</span>
+<span class="n">flag</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">a2b3</span> <span class="o">=</span> <span class="s">&quot;qualquer texto... &quot;</span>
+</pre></div>
+<p>A seguir, temos uma breve lista contendo os caracteres numéricos que não podem ser utilizados, nem na primeira ou segunda posição, por exemplo:</p>
+</div>
+<div class="section" id="caracteres-especiais">
+<h2>CARACTERES ESPECIAIS</h2>
+<p>Caracteres especiais, como por exemplo, os caracteres latinos, como o c-cedilha <tt class="docutils literal">ç</tt>, o tio <tt class="docutils literal">~</tt> e etc, não são permitidos na composição de nomes de variáveis. O único caractere tido como especial e que pode ser utilizado é o underline <cite>_</cite>. A seguir, temos uma lista com os caracteres que não podem ser utilizados na composição de referências:</p>
+<blockquote>
+<ul class="simple">
+<li>ç</li>
+<li><ul class="first">
+<li></li>
+</ul>
+</li>
+<li><ul class="first">
+<li></li>
+</ul>
+</li>
+<li><ul class="first">
+<li></li>
+</ul>
+</li>
+<li>/</li>
+<li>=</li>
+<li>!</li>
+<li>&#64;</li>
+<li>#</li>
+<li>$</li>
+<li>%</li>
+<li>&amp;</li>
+<li>/</li>
+<li>( )</li>
+<li>[ ]</li>
+<li>^</li>
+<li>~</li>
+<li>´</li>
+</ul>
+</blockquote>
+<p>Novamente, é importante dizer que caracteres especiais não podem ser utilizados, seja qual for a posição em que estes aparecerem na definição da referência!</p>
+<p>A seguir, temos mais um exemplo dos caracteres que não podem estar na primeira posição de um nome de variável.</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="mi">4</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">3</span> <span class="o">=</span> <span class="s">&quot;informe seu nome&quot;</span>
+<span class="mi">2</span><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+<p>As referências utilizadas no código acima são todas invalidas, e a razão, deve-se ao fato das mesmas iniciarem com caracteres numéricos. Como já dito, o primeiro caractere deve, obrigatoriamente, ser um letra.</p>
+<p>Podemos concluir também, que uma variável <strong>JAMAIS</strong> será composta por somente números, haja vista que o primeiro caractere precisa ser uma letra.</p>
+<p>Para definirmos o nome de variáveis, temos que iniciar utilizando um caractere que esteja no intervalo de <cite>a</cite> à <cite>z</cite> ou <cite>A</cite> à <cite>Z</cite>. A única exceção a esta regra é o caractere underline <cite>_</cite>. A seguir, temos alguns nomes de variáveis <strong>válidos</strong>:</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="n">vvar</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">_vVar</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<span class="n">__________idade</span> <span class="o">=</span> <span class="mi">19</span>
+</pre></div>
+</div>
+<div class="section" id="unica-excecao">
+<h2>ÚNICA EXCEÇÃO</h2>
+<p>O único caractere especial, que pode ser utilizado na composição de nomes, e que também pode estar situando em qualquer posição, é o caractere underline <tt class="docutils literal">_</tt>.</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="n">_minhaVar</span> <span class="o">=</span> <span class="mi">55</span>
+<span class="n">____texto</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="macete">
+<h2>MACETE</h2>
+<p>Na dúvida sobre quais caracteres são permitidos, utilize somente letras sem acentuação e sem espaços, até porque, todas as letras são permitidas.</p>
+<p>Agora, se você quer decorar o que pode e o que não pode, pense da seguinte maneira:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>números só se for o segundo caractere</li>
+<li>letras que não estejam no alfabeto Inglês não permitidos</li>
+<li>caracteres que não são letras e não são número não podem ser utilizados!</li>
+</ol>
+</blockquote>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
+<p>A seguir, temos o código-fonte feito na aula de Python.</p>
 <div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="c">#===================================================</span>
@@ -417,7 +504,7 @@ excript.com            </a>
 <span class="k">print</span><span class="p">(</span><span class="s">&quot;o valor é: </span><span class="si">%i</span><span class="s">&quot;</span> <span class="o">%</span><span class="n">num_int</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">&quot;o valor é: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_int</span><span class="p">))</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;Contatendo decimal:&quot;</span><span class="p">,</span> <span class="n">num_dec</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;Concatendo decimal:&quot;</span><span class="p">,</span> <span class="n">num_dec</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">&quot;Concatendo decimal: </span><span class="si">%.10f</span><span class="s">&quot;</span> <span class="o">%</span><span class="n">num_dec</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">&quot;Concatendo decimal: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_dec</span><span class="p">))</span>
 
@@ -453,7 +540,7 @@ excript.com            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>            </div>
+	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>, 	<a href="http://www.excript.com/tag/variavel.html">variavel</a>, 	<a href="http://www.excript.com/tag/nomenclatura.html">nomenclatura</a>, 	<a href="http://www.excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

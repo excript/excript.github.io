@@ -16,8 +16,8 @@
 
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python,tipos,tipo de dados,int,float,string,date" />
-    <meta name="description" content="Nessa aula vamos estudar o tipo das informações, as diferenças entre si, e a diferença entre um o tipo do dado e o dado propriamente dito." />
+        <meta name="keywords" content="curso,python,tipos,tipo de dados,int,float,string,date,bool,str,blog" />
+    <meta name="description" content="Nessa aula estudaremos os tipos de dados definidos pela linguagem Python, como também, as diferenças entre diferentes tipos. Por fim, veremos a diferença entre um o tipo do dado e o dado propriamente dito." />
 
 
         <meta property="og:site_name" content="excript.com" />
@@ -37,6 +37,9 @@
             <meta property="article:tag" content="float" />
             <meta property="article:tag" content="string" />
             <meta property="article:tag" content="date" />
+            <meta property="article:tag" content="bool" />
+            <meta property="article:tag" content="str" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"
                   content="http://www.excript.com/images/logo-excript.png"/>
@@ -391,21 +394,78 @@ excript.com            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+					<div class="section" id="tipos">
+<h2>TIPOS</h2>
+<p>O <strong>tipo de dado</strong> funciona como uma classificação da informação. A informação, pode ser qualquer uma, como por exemplo, Nome, Idade, Endereço, uma Música, um Arquivo, o valor da conta bancária e etc.</p>
+<p>As informações, de forma geral, seguem regras que possibilitam uma classificação, por exemplo, o valor das contas bancárias, geralmente, será composta por números. O nome das pessoas, normalmente, é constituído somente por letras. A idade das pessoas é representado por números inteiros. Datas são a junção de números com alguns caracteres especiais e assim por diante.</p>
+<p>Devido aos diferentes tipos de informações existente, existe, na programação, os tipos de dados. Os tipos são, basicamente, as formas diferentes de representar diferentes informações e essa classificação, faz com que consigamos, por exemplo, definir que o operador de soma entre 2 números resultará na resolução da expressão matemática, porém, o sinal de adição entre 2 variáveis do tipo String, resultará na concatenação de ambos valores e assim por diante.</p>
+</div>
+<div class="section" id="tipos-primitivos">
+<h2>TIPOS PRIMITIVOS</h2>
+<p>Tipo primitivo são os tipos de dados mais simples, isto é, a informação em sua forma mais primitiva. Bons exemplos de valores primitivos são os caractere, os número, o valor True e False e etc. A documentação do Python não trata os tipos de dados elementares com a nomenclatura de <strong>Tipo Primitivo</strong>, mas sim <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html">chama-os de tipos built-ins</a>, isto é, classes que estão definidas por padrão dentro da Máquina Virtual do Python e que representam determinado tipo de informação.</p>
+<p>Nesse momento, chamaremos de Tipos Primitivos as informações em sua forma mais simples, porém, é importante saber que para o Python, não há tipo primitivos, mas sim, estruturas de dados que estão definidas, muitas vezes, dentro da própria Máquina Virtual do Python.</p>
+<p>É normal que as linguagens de programação tenham um conjunto de tipos chamados de: <strong>tipos primitivos</strong>. Devemos pensar nessa classificação como sendo os tipos primários de informações, como por exemplo, o tipo numérico. Como sabemos, todo número é constituído por números. Dessa forma, o tipo numérico pode ser qualquer valor que seja composto por 1 ou mais caracteres numéricos. Dessa forma, isto é, tendo a certeza de que uma variável declarada como sendo do tipo numérico inteiro sempre terá um valor numérico válido, somos capazes de desenvolver funções especificas que manipulam esse tipo de dado de maneira muito mais eficiente e sem a necessidade de verificação se o tipo da informação contida em determinada variável é válido.</p>
+<p>Da mesma forma, temos o tipo de dado que representa conjuntos de caracteres, que na programação, é comumente chamado de <cite>String</cite> e o Python o chama de <cite>str</cite>. As <cite>String</cite> são capazes de armazenar conjuntos de caracteres que estão dispostos numa determinada ordem. Todas as vezes que estivermos manipulando dados que contenha caracteres - o tipo mais primitivo, isto é, a maneira mais abstrata para representarmos caracteres - estaremos utilizando uma variável definida como sendo do tipo <cite>str</cite>.</p>
+<p>O fato de o Python não trabalhar com tipo primitivos diretamente, deve-se ao fato de que em Python, <strong>tudo são objetos</strong>. Dessa forma, o que chamaríamos de primitivo é, em Python, representado como uma e toda informação será, um objeto propriamente dito. A seguir, temos a lista dos principais tipos built-ins da linguagem Python:</p>
+<blockquote>
+<ul class="simple">
+<li>int - para números inteiros</li>
+<li>str - para conjunto de caracteres</li>
+<li>bool - armazena True ou False</li>
+<li>list - para agrupar um conjunto de elementos</li>
+<li>tupla - igual ao tipo <cite>list</cite>, porém, imutável</li>
+<li>dic - para agrupar elementos que serão recuperados por uma <cite>chave</cite></li>
+</ul>
+</blockquote>
+<p>O Python fornece um conjunto de tipos básicos bastante amplo e que normalmente, atendem a maioria das necessidades. Cada tipo citado, possui um conjunto de funções e métodos que permitem manipularmos as informações, contidas na variável, de maneira bastante eficiente.</p>
+<p>Sempre que formos criar um novo <strong>tipo de dados</strong>, acabaremos utilizando os tipos básicos da linguagem, como por exemplo, o tipo <cite>int</cite>, ou então, o tipo <cite>str</cite> e assim por diante.</p>
+</div>
+<div class="section" id="diferenca-entre-tipo-e-valor">
+<h2>DIFERENÇA ENTRE TIPO E VALOR</h2>
+<p>O <strong>valor</strong> é qualquer informação, seja um número, texto, música, vídeo e etc. O <strong>tipo</strong> por sua vez, é a estrutura da informação e a forma de classificarmos os dados.</p>
+<p>Todo valor numérico deve ser capaz de ser somado a outro valor, ou então, subtraido. Da mesma forma que todo texto, deve ser capaz de ser concatenado a outro, isto é, ser juntado a outro conjunto de caracteres.</p>
+<p>O <strong>tipo</strong> da informação deve ser pensado como uma forma de classificarmos as diferentes informações e assim, termos a disposição um conjunto de funções para tratarmos e modificarmos os valores.</p>
+<p>É importante saber que somos capazes de criar novos tipos de dados a qualquer momento, e a programação orientada a objetos é, em sua definição mais primitiva, uma maneira de criarmos novos tipos abstratos e definirmos, na estrutura da classe, funções, métodos, verificações que busquem tratar valores que tenham uma mesma estrutura.</p>
+</div>
+<div class="section" id="conversao-de-dados-ou-coercao-de-tipos">
+<h2>CONVERSÃO DE DADOS OU COERÇÃO DE TIPOS</h2>
+<p>Se as informações possuem tipos, logo, temos de ser capazes em converter um tipo de informação num outro tipo de dado. Essa ação de conversão é comumente chamada de <strong>Coerção de Tipos</strong>.</p>
+<p>Linguagem tipada é aquela que permite a classificação das informações pelo uso de tipos de dados, por exemplo, o Python trata um conjunto de caracteres como sendo do tipo <cite>String</cite>, logo, o Python é uma linguagem tipada, no caso, uma linguagem dinamicamente tipada.</p>
+<p>Se existem diferentes tipos de informação, temos de ser capazes de converter, por exemplo, um número para o tipo texto. Ou seja, a conversão de valores é essencial para que possamos trabalhar com informações tipadas, até porque, há diversas situações onde desejaremos manipular um número como sendo um texto.</p>
+<p>Essa conversão é comumente chamada de <strong>Conversão de Dados</strong> ou então, <strong>Coerção de Tipos</strong>. É importante observar, que uma informação do tipo texto, pode ser constituida de letras e números, ou seja, o grupo de caracteres alfanuméricos. Então, um número pode ser representado como um texto, mas o contrário, nem sempre será possível.</p>
+<p>Pra convertermos, por exemplo, um texto para o tipo numérico, devemos especificar o tipo a ser convertido e passarmos o valor através de parêntesis, como podemos ver a seguir:</p>
+<div class="highlight"><pre><span class="n">tipo_a_ser_convertido</span><span class="p">(</span> <span class="n">informação</span> <span class="p">)</span>
+</pre></div>
+<p>A seguir, declaramos uma variável de nome <cite>texto</cite> e atribuimos um valor numérico a mesma. Em seguida, declaramos outra variável, de nome <cite>num</cite> e atribuimos a esta o resultado da Coerção de Tipos. Isto é, dissemos que o valor da variável <cite>texto</cite> deve ser convertido num tipo numérico <cite>num = int(texto)</cite>.</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="n">texto</span> <span class="o">=</span> <span class="s">&quot;10&quot;</span>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span> <span class="n">texto</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">)</span><span class="c">#o sinal de + concatena duas informações</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">10</span> <span class="p">)</span><span class="c">#o sinal de + soma dois números</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">1010</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">20</span>
+</pre></div>
+<p>No exemplo acima, podemos observar que a utilização do operador <cite>+</cite> funciona de maneira diferente conforme o tipo de dado que esteja sendo utilizado. Quando o sinal de adição estiver entre dois valores numéricos, estes serão somados. Quando o sinal adição estiver entre dois valores do tipo <cite>String</cite>, estes serão concatenados (juntados) e quando o sinal de adição estiver entre um valor do tipo numérico e do tipo <cite>String</cite>, uma exceção será levantada dizendo que não é possível utilizar o operador de adição entre tipos distintos.</p>
+</div>
+<div class="section" id="para-refletir">
+<h2>PARA REFLETIR</h2>
+<p>Em Python, tudo é tratado como sendo um objeto, inclusive, o próprio código por nós escrito!</p>
+<p>Linguagens como Java e C# também são fortemente orientada a objetos, porém, ambas possuem por exemplo, tipos de dados primitivos, o que não existe no Python.</p>
+<p>O Python trata todo e qualquer valor como sendo um objeto. Se tivermos 2 variáveis que contenham o número 10, para o Python, ambas variáveis estarão apontando para um objeto na memória, cujo valor é 10. Dizer que uma variável contém um valor, é por definição da linguagem, um erro, até porque, os valores não estão armazenados numa posição determinada pela variável. Em Python, os dados são associados a variáveis, logo, variáveis que contenham um mesmo valor, na verdade, internamente o que haverá, é uma informação associadas a várias variáveis. Há um excelente <a class="reference external" href="http://pythonclub.com.br/tuplas-mutantes-em-python.html">artigo falando sobre a forma que o Python trata os tipos e as informações publicado pelo Luciano Ramalho</a>.</p>
+<p>Por fim, temos 4 tipos para classificação para os tipos de informações.</p>
+<blockquote>
+<ul class="simple">
+<li><tt class="docutils literal">Tipos simples</tt>  - constituidos por simples blocos, como <tt class="docutils literal">int()</tt> e <tt class="docutils literal">float()</tt></li>
+<li><tt class="docutils literal">Tipos de contêiner</tt> - objetos capazes de conter outros objetos</li>
+<li><tt class="docutils literal">Tipos de código</tt> - objetos encapsuladores de elementos dos nosso programas</li>
+<li><tt class="docutils literal">Tipos internos</tt> - tipos que serão utilizados durante a execução do nosso programa</li>
+</ul>
+</blockquote>
+<p>No <a class="reference external" href="http://www.ibm.com/developerworks/br/library/os-python1/">link a seguir há mais informações sobre os tipos de dados do Python</a>.</p>
+</div>
 
 				</div>
 			</div>
@@ -433,7 +493,7 @@ excript.com            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>, 	<a href="http://www.excript.com/tag/tipos.html">tipos</a>, 	<a href="http://www.excript.com/tag/tipo-de-dados.html">tipo de dados</a>, 	<a href="http://www.excript.com/tag/int.html">int</a>, 	<a href="http://www.excript.com/tag/float.html">float</a>, 	<a href="http://www.excript.com/tag/string.html">string</a>, 	<a href="http://www.excript.com/tag/date.html">date</a>            </div>
+	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>, 	<a href="http://www.excript.com/tag/tipos.html">tipos</a>, 	<a href="http://www.excript.com/tag/tipo-de-dados.html">tipo de dados</a>, 	<a href="http://www.excript.com/tag/int.html">int</a>, 	<a href="http://www.excript.com/tag/float.html">float</a>, 	<a href="http://www.excript.com/tag/string.html">string</a>, 	<a href="http://www.excript.com/tag/date.html">date</a>, 	<a href="http://www.excript.com/tag/bool.html">bool</a>, 	<a href="http://www.excript.com/tag/str.html">str</a>, 	<a href="http://www.excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
