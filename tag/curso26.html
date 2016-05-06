@@ -82,6 +82,50 @@ excript.com            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a  href="http://www.excript.com/php/funcao-anonima-array-php.html">Funções Anônimas e Arrays com PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">#FUNÇÕES ANÔNIMAS E ARRAYS</span>
+
+<span class="x">#array_map(&lt;f.anonima&gt;, &lt;array&gt;)</span>
+
+<span class="x">$lista = [1,2,3,4,5];</span>
+
+<span class="x">$f = function($x){</span>
+<span class="x">    return $x  * $x;</span>
+<span class="x">};</span>
+
+<span class="x">$lista_proc = array_map($f, $lista);</span>
+<span class="x">print_r($lista_proc);</span>
+
+
+<span class="x">#array_filter(&lt;array&gt;, &lt;f.anonima&gt;)</span>
+
+<span class="x">$filtro = function($x){</span>
+<span class="x">    return $x &lt; 3;</span>
+<span class="x">};</span>
+
+<span class="x">$lista_filtro = array_filter ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/funcao-anonima-array-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a  href="http://www.excript.com/php/funcao-anonima-pratica-php.html">Funções Anônimas na Prática com PHP</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line-11">
@@ -405,57 +449,6 @@ excript.com            </a>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://www.excript.com/php/heranca-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/php/heranca-php-ii.html">Herança com PHP II</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<!-- Como a subclasse implementa suas próprias funcionalidades? -->
-<div class="highlight"><pre><span class="x">class SuperClasse {</span>
-
-<span class="x">    public $a = 0;</span>
-
-<span class="x">    public function super()</span>
-<span class="x">    {</span>
-<span class="x">        echo $a;</span>
-<span class="x">    }</span>
-<span class="x">}</span>
-
-<span class="x">class SubClasse extends SuperClasse {</span>
-
-<span class="x">    public $a;</span>
-
-<span class="x">    public function sub()</span>
-<span class="x">    {</span>
-<span class="x">        this-&gt;$a = 10;</span>
-<span class="x">    }</span>
-<span class="x">}</span>
-
-
-<span class="x">$sub = new SubClasse();</span>
-<span class="x">$sub-&gt;sub();</span>
-<span class="x">$sub-&gt;super();</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/heranca-php-ii.html">more ...</a>
                 </div>
             </article>
             <hr/>

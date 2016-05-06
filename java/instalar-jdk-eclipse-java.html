@@ -16,8 +16,8 @@
 
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="instalar,jdk,eclipse,sdk,vm,jvm,java se,bytecode,curso,java,aula de java,eXcript" />
-    <meta name="description" content="Como instalar o JDK e o Eclipse no Windows e o que significa SDK, JDK, VM, JVM, Java SE, Bytecode" />
+        <meta name="keywords" content="instalar,jdk,eclipse,sdk,vm,jvm,java se,bytecode,curso,java,aula de java,eXcript,blog" />
+    <meta name="description" content="Nesta aula vamos estudar diversos conceitos iniciais sobre a linguagem Java e diversas siglas relacionados a linguagem." />
 
 
         <meta property="og:site_name" content="excript.com" />
@@ -27,7 +27,7 @@
 
         <meta property="og:description" content=""/>
 
-        <meta property="article:published_time" content="2014-04-06" />
+        <meta property="article:published_time" content="2016-06-05" />
             <meta property="article:section" content="curso de java" />
             <meta property="article:tag" content="instalar" />
             <meta property="article:tag" content="jdk" />
@@ -41,6 +41,7 @@
             <meta property="article:tag" content="java" />
             <meta property="article:tag" content="aula de java" />
             <meta property="article:tag" content="eXcript" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"
                   content="http://www.excript.com/images/logo-excript.png"/>
@@ -126,7 +127,7 @@ excript.com            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2014-04-06T00:00:00-03:00"> Publicado em 06 abril 2014</time>
+            <time datetime="2016-06-05T00:00:00-03:00"> Publicado em 05 junho 2016</time>
         </span>
 
 
@@ -220,7 +221,7 @@ excript.com            </a>
                             <td><a href="http://www.excript.com/java/estrutura-repeticao-java.html" >Estrutura de Repetição em Java</a></td>
                             <td><a href="http://www.excript.com/java/estrutura-repeticao-java.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://www.excript.com/java/estrutura-while-java.html" >Estrutra <tt class="docutils literal">while</tt> do Java</a></td>
+                            <td><a href="http://www.excript.com/java/estrutura-while-java.html" >Estrutura <tt class="docutils literal">while</tt> do Java</a></td>
                             <td><a href="http://www.excript.com/java/estrutura-while-java.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://www.excript.com/java/problema-estrutura-repeticao-java.html" >O problema das Estruturas de Repetição em Java</a></td>
@@ -338,21 +339,73 @@ excript.com            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+					<div class="section" id="o-que-e-java">
+<h2>O QUE É JAVA?</h2>
+<p>O Java, em computação, pode ser tanto uma linguagem de programação, como também, o programa que interpreta códigos escritos em Java, ou melhor, bytecodes. Assim, se você ler que o Java é uma linguagem de programação, está correto e também, se você ler que o Java é um interpretador, também estará correto!</p>
+<div class="section" id="java-como-um-programa">
+<h3>JAVA COMO UM PROGRAMA</h3>
+<p>O Java é um programa como qualquer outro, onde o propósito é interpretar códigos Java. Podemos também dizer que o Java é uma maquina virtual (VM), até porque, o Java é por si só um arquitetura de computador, porém, uma arquitetura projetada para ser executada sobre outra arquitetura.</p>
+</div>
+<div class="section" id="java-como-linguagem">
+<h3>JAVA COMO LINGUAGEM</h3>
+<p>O Java é uma linguagem de programação, isto é, uma definição de regras a serem interpretadas por uma Máquina Virtual especializada.</p>
+</div>
+</div>
+<div class="section" id="instalando-o-jdk-java-development-kit">
+<h2>INSTALANDO O JDK (Java Development Kit)</h2>
+<p>O <strong>JDK</strong> é o acrônimo de <strong>K</strong> it de <strong>D</strong> esenvolvimento <strong>J</strong> ava. Esse é o <a class="reference external" href="http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html">kit de desenvolvimento que temos de baixar e instalar</a> no nosso computador para que possamos escrever programas em Java e em seguida, executa-los.</p>
+<p>Devemos pensar no <strong>JDK</strong> como um conjunto de programas contidos num mesmo arquivo executável (instalador) e que contém todas as ferramentas necessárias para o desenvolvimento Java.</p>
+</div>
+<div class="section" id="sdk-ou-devkit">
+<h2>SDK ou devkit</h2>
+<p>A sigla <strong>SDK</strong> é um acrônimo de <strong>S</strong> oftware <strong>D</strong> evelopment <strong>K</strong> it, ou seja, <tt class="docutils literal">Kit de Desenvolvimento de Software</tt>.</p>
+<p>Existem centenas de SDK, por exemplo, temos o SDK para desenvolvimento Java, Android, iOS, Windows e etc. Um <strong>SDK</strong> deve ser pensado como o conjunto de ferramentas contidas geralmente num único instalador e disponibilizado por algum fabricante de software. Para desenvolvermos em Java, temos que baixar o SDK, que é desenvolvido e disponibilizado gratuitamente pela <a class="reference external" href="http://www.oracle.com/">Oracle</a>.</p>
+<p>Tudo que é necessário para o desenvolvimento está contido no SDK, inclusive a Máquina Virtual do Java (JVM), que é o programa que interpreta código Java.</p>
+<p>O <strong>devkit</strong> para desenvolvimento em Java possui o nome de JDK.</p>
+</div>
+<div class="section" id="o-que-e-vm-e-jvm">
+<h2>O QUE É VM e JVM?</h2>
+<p><strong>VM</strong> é o acrônimo de <strong>V</strong> irtual <strong>M</strong> achine, isto é, Máquina Virtual.</p>
+<p>Existem dezenas de <strong>VM</strong>'s como por exemplo, a VM que executa programas escritos em Python ou então a Java VM, que executa programas escritos em Java.</p>
+<p>A sigla <strong>JVM</strong> é o acrônimo de <strong>J</strong> ava <strong>V</strong> irtual <strong>M</strong> achine, que numa tradução livre significa: <strong>Máquina Virtual do Java</strong>.</p>
+<p>A <strong>JVM</strong> é um programa de computador escrito na linguagem de programação <strong>C_</strong> e <strong>C++_</strong>. A função da JVM é <strong>interpretar</strong> códigos Java.</p>
+<p>Um programa escrito na linguagem Java não é convertido para um executável, <tt class="docutils literal">*.exe</tt> ou <tt class="docutils literal">*.com</tt>. Programas escritos em Java, quando compilados, produzem um outro arquivo de mesmo nome mas com outra extensão e este contém, uma série de instruções otimizadas para serem posteriormente executados/interpretados pela JVM.</p>
+<p>Então, todos os programas feitos com a linguagem Java serão interpretados por um outro programa chamado de JVM. Por essa razão é que temos que instalar o JDK antes de iniciarmos o desenvolvimento em Java, e também, será por essa razão que os nossos usuários precisarão instalar o Java para que seja possível executar nossos programas.</p>
+<p>É possível gerar um arquivo *.exe através de código Java, porém, essa ferramenta não está contida no pacote de desenvolvimento oficial do Java.</p>
+</div>
+<div class="section" id="o-que-e-j2se-e-java-se">
+<h2>O QUE É J2SE E JAVA SE?</h2>
+<p>O termos <strong>J2SE</strong>, <strong>Java SE</strong> são acrônimos de <strong>Java Standard Edition</strong>, que numa tradução livre, significa, <strong>Edição Padrão do Java</strong>.</p>
+<p>O acrônimo J2SE vem de <a class="reference external" href="http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html">Java 2 Standard Edition</a> e o número 2 que está contido no meio do nome não possui qualquer significado. Essa é uma maneira de montar alguns tipos de expressões no idioma Inglês. Então, não podemos confundir esse número 2 como sendo um número que possui alguma representatividade. Este número no meio das palavras não passa de uma mera convenção e uma forma de expressão idiomática Inglêsa.</p>
+<p>O <strong>Java SE</strong> é um pacote que contém <strong>todas as ferramentas</strong> que são necessárias para o desenvolvimento de programas em Java. Neste pacote nós encontramos o interpretador de códigos Java <strong>JVM</strong>. O compilador de código Java para <strong>bytecode</strong>, o <cite>javac</cite>, as <cite>API</cite> para o desenvolvimento de programas Java, e mais uma centenas de ferramentas e bibliotecas que serão utilizadas no processo de escrita, desenvolvimento e execução de aplicações Java.</p>
+<p>Atualmente o <strong>JDK</strong> e o <strong>Java SE</strong> são sinônimos como também, motivo de grande confusão. Inclusive, a Oracle chama o <strong>JDK</strong> e o <strong>Java SE</strong> atualmente de <strong>Java SE Development Kit</strong></p>
+</div>
+<div class="section" id="o-que-e-jre">
+<h2>O QUE É JRE?</h2>
+<p>O termo <strong>JRE</strong> é um acrônimo de <strong>J</strong> ava <strong>R</strong> untime <strong>E</strong> nvironment que numa tradução livre significa, &quot;Ambiente de Execução Java.</p>
+<p>Podemos dizer que o JRE é o Java propriamente dito, ou seja, esse é o programa que deve estar instalado num computador para que o mesmo possas executar programas escritos em java.</p>
+<p>O <strong>JRE</strong> é composto pela <strong>Java Virtual Machine (JVM)</strong>, pelas classes do núcleo da plataforma Java e com as bibliotecas que compõem a plataforma Java propriamente dita.</p>
+<p>É importante observar que o <strong>JRE</strong> não é um pacote de desenvolvimento Java, porém, todo computador que desenvolve programas Java terá instalado uma versão do JRE. Normalmente, o JRE é instalado na máquina de um desenvolvedor junto com o <strong>JDK</strong> / <strong>Java SE</strong></p>
+</div>
+<div class="section" id="o-que-e-bytecode">
+<h2>O QUE É BYTECODE?</h2>
+<p>O termo <cite>bytecode</cite> é utilizado para se referir a uma linguagem intermediária. No caso, temos que bytecode é um conjunto de instruções otimizadas que a JVM interpreta nativamente. É normal dizer que os <cite>bytecodes</cite> são códigos intermediários, isso porque, esse é o código gerado a partir de um código Java.</p>
+<p>Pense em bytecodes como sendo um código gerado a partir do código Java que você escreveu. Logo, a JVM não interpreta as instruções Java propriamente dita, mas sim, um código otimizado que foi gerado a partir das nossas instruções Java.</p>
+</div>
+<div class="section" id="o-que-e-orientacao-a-objetos">
+<h2>O QUE É ORIENTAÇÃO A OBJETOS?</h2>
+<p><strong>Orientação a objetos</strong> é uma paradigma de programação, uma técnica de desenvolvimento de software, ou então, uma forma de projetar e desenvolver programas estruturados.</p>
+<p>Diz-se que uma linguagem é <strong>Orientada a Objetos</strong> se essa manipular informações como sendo entidades representativas. Onde cada entidade é chamada de <strong>objeto</strong> e cada <strong>objeto</strong> é construido através de uma <strong>classe</strong>.</p>
+<p>O Java é considerado uma linguagem altamente orientada a objetos e essa é a sua principal característica.</p>
+<p><strong>Em Java tudo são classes!</strong></p>
+<p>No decorrer deste curso, falaremos, diversas vezes sobre orientação a objetos e, desde o primeiro programa que fizermos, no caso, o famoso <tt class="docutils literal">Hello World</tt> já estaremos trabalhando diretamente com conceitos de <tt class="docutils literal">Orientação a Objetos</tt>, mesmo que não saibamos.</p>
+</div>
+<div class="section" id="conclusao">
+<h2>CONCLUSÃO</h2>
+<p>É comum nos assustarmos com a quantidade de siglas e nomes quando iniciamos o estudo de uma linguagem de programação, e isso ocorrerá mesmo quando o estudante já possui noções de programação.</p>
+<p>Não vale a pena perder tempo se preocupando em decorar ou tentar memorizar essas siglas &quot;a força&quot;. Com vamos assimilando e gravando tanto as nomenclaturas como também os conceitos envolvidos. É interessante ir anotando essas nomenclaturas num papel para de vez em quando revisar rapidamente.</p>
+<p>Se você preferir, inicie um blog e vá anotando os conceitos em postagens diferentes e não somente isso, explique os conceitos com suas próprias palavras. Esse é um exercício que nos faz compreender e memorizar rapidamente e também, acaba por ajudar outras pessoas que estão iniciando na programação em Java!</p>
+</div>
 
 				</div>
 			</div>
@@ -380,7 +433,7 @@ excript.com            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://www.excript.com/tag/instalar.html">instalar</a>, 	<a href="http://www.excript.com/tag/jdk.html">jdk</a>, 	<a href="http://www.excript.com/tag/eclipse.html">eclipse</a>, 	<a href="http://www.excript.com/tag/sdk.html">sdk</a>, 	<a href="http://www.excript.com/tag/vm.html">vm</a>, 	<a href="http://www.excript.com/tag/jvm.html">jvm</a>, 	<a href="http://www.excript.com/tag/java-se.html">java se</a>, 	<a href="http://www.excript.com/tag/bytecode.html">bytecode</a>, 	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/java.html">java</a>, 	<a href="http://www.excript.com/tag/aula-de-java.html">aula de java</a>, 	<a href="http://www.excript.com/tag/excript.html">eXcript</a>            </div>
+	<a href="http://www.excript.com/tag/instalar.html">instalar</a>, 	<a href="http://www.excript.com/tag/jdk.html">jdk</a>, 	<a href="http://www.excript.com/tag/eclipse.html">eclipse</a>, 	<a href="http://www.excript.com/tag/sdk.html">sdk</a>, 	<a href="http://www.excript.com/tag/vm.html">vm</a>, 	<a href="http://www.excript.com/tag/jvm.html">jvm</a>, 	<a href="http://www.excript.com/tag/java-se.html">java se</a>, 	<a href="http://www.excript.com/tag/bytecode.html">bytecode</a>, 	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/java.html">java</a>, 	<a href="http://www.excript.com/tag/aula-de-java.html">aula de java</a>, 	<a href="http://www.excript.com/tag/excript.html">eXcript</a>, 	<a href="http://www.excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
