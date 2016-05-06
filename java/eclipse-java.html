@@ -17,7 +17,7 @@
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
         <meta name="keywords" content="java,eclipse,instalação,download,blog" />
-    <meta name="description" content="Como instalar o Eclipse e o Java no Windows" />
+    <meta name="description" content="Nesta aula vamos aprender a como instalar o Eclipse e o Java no Windows e também." />
 
 
         <meta property="og:site_name" content="excript.com" />
@@ -27,7 +27,7 @@
 
         <meta property="og:description" content=""/>
 
-        <meta property="article:published_time" content="2016-01-01" />
+        <meta property="article:published_time" content="2016-06-05" />
             <meta property="article:section" content="curso de java" />
             <meta property="article:tag" content="java" />
             <meta property="article:tag" content="eclipse" />
@@ -119,7 +119,7 @@ excript.com            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01 janeiro 2016</time>
+            <time datetime="2016-06-05T15:00:00-03:00"> Publicado em 05 junho 2016</time>
         </span>
 
 
@@ -331,21 +331,76 @@ excript.com            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+					<div class="section" id="eclipse">
+<h2>ECLIPSE</h2>
+<p>O programa Eclipse é uma ferramenta para auxiliar o desenvolvimento de programas. Podemos utiliza-lo para programarmos em várias linguagens, como por exemplo Java, PHP, JavaScript, C, C++ e etc.</p>
+<p>Para desenvolver programas em Java, podemos utilizar qualquer editor de texto básico, como por exemplo, o Notepad do Windows. Isso porque, o único programa que realmente é necessário no desenvolvimento é a JVM que é instalada junto com o JDK e utilizada para executar os programas escritos em Java.</p>
+<p>Então, podemos criar arquivos com extensão <cite>*.java</cite> e em seguida ir no prompt de comando, compilar e em seguida, executar o código gerado. Então, é <strong>super importante que saibamos que a utilização da ferramenta Eclipse é opcional</strong>, e a finalidade de utilizarmos a mesma é para tornar o nosso trabalho de codificação mais simples e rápido.</p>
+<p>É importante entender que o <cite>Eclipse</cite> é um programa, ou melhor, um editor de texto e pode ser substituido por qualquer outro editor.</p>
+<p>O Eclipse é um software escrito em Java, gratuito, possui o seu código-fonte disponibilizado e é desenvolvido pela organização sem fins lucrativos <a class="reference external" href="https://eclipse.org/org/">Eclipse Foundation</a>.</p>
+<p>Devido ao fato do Eclipse ser totalmente desenvolvido em Java, o mesmo pode ser executado em qualquer dispositivo que tenha instalado a JVM.</p>
+<p>O Eclipse não possui um instalador, então, iremos baixar um arquivo compactado, que conterá um executável e também, todas as bibliotecas necessárias para a sua execução e também, um executável.</p>
+</div>
+<div class="section" id="instalando-o-eclipse">
+<h2>INSTALANDO O ECLIPSE</h2>
+<p>Antes de instalarmos o Eclipse, é necessário que tenhamos instalado o Java em nosso computador, do contrário o Eclipse não funcionará, até porque, o mesmo foi desenvolvido em Java.</p>
+</div>
+<div class="section" id="passo-a-passo">
+<h2>PASSO-A-PASSO</h2>
+<blockquote>
+<ol class="arabic simple">
+<li>Ir no site da Oracle e baixar o <a class="reference external" href="http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html[SDK">http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html[SDK</a>]</li>
+<li>Instalar o SDK</li>
+<li>Ir no site do de <a class="reference external" href="https://eclipse.org/downloads/">download do Eclipse</a> e baixar a instalação para Windows ou Mac</li>
+<li>Descompactar o arquivo baixado</li>
+<li>Entrar na pasta Eclipse e executar o Eclipse</li>
+</ol>
+</blockquote>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">O Eclipse não possui um instalador! Basta somente fazer o download, descompactar e começar a trabalhar!</p>
+</div>
+<p>Link para <a class="reference external" href="https://eclipse.org/downloads/">download do Eclipse</a>:</p>
+</div>
+<div class="section" id="mensagens-de-erros-na-execucao-do-eclipse">
+<h2>MENSAGENS DE ERROS NA EXECUÇÃO DO ECLIPSE</h2>
+<p>Não é comum a ocorrência de problemas na execução do Eclipse, até porque, o mesmo é desenvolvido em Java e assim, quem executa o programa é a máquina virtual e não o sistema operacional. Porém, alguns computadores possuem mais de uma instalação da máquina virtual do Java e assim, pode acontecer de que ao tentarmos executar o Eclipse, apareça alguma mensagem de erro.</p>
+<p>A maior parte dos problemas que ocorrem quando estamos começando a programar em Java, se deve ao fato de que o nosso computador possui versões antigas da JVM. Caso você execute o Eclipse e ao invés de abrir o programa seja exibido alguma mensagem de erro, a <strong>primeira</strong> coisa a ser feita para tentar resolver o problema é, averiguar se existem versões antigas da JVM instalada. Se houver, desinsta-le a(s) versão(ões) antiga(s) e também, a versão da JVM (Java SE) que você instalou recentemente.</p>
+<p>Em seguida, <a class="reference external" href="http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html">baixe a última versão do Java SE</a> e reinsta-le-a.</p>
+</div>
+<div class="section" id="caso-os-problemas-persistam">
+<h2>CASO OS PROBLEMAS PERSISTAM</h2>
+<p>Se por alguma razão você não conseguir executar o Eclipse, a melhor opção é desinstalar tudo que for referente ao Java. Feito isso, baixe a última versão do JDK e instale tudo novamente.</p>
+<p>Após a desinstalação, vá até a pasta <cite>Program Files</cite>, <cite>Arquivos de Programas</cite> e certifique-se de que a pasta do Java foi excluída. Entre nos 2 diretórios a seguir e certifique-se de que a pasta Java não exista ou então, que a mesma esta vazia.</p>
+<blockquote>
+<ul class="simple">
+<li><cite>C:Program FilesJava</cite></li>
+<li><cite>C:Program Files (x86)Java</cite></li>
+</ul>
+</blockquote>
+<p>Caso exista alguma pasta dentro de um dos diretórios acima, <strong>não delete-os</strong> !! Vá no desinstalador de programas do Windows e então, faça a desinstalação da maneira correta.</p>
+<p>Para acessar o desinstalador do Windows, acesse o diretório a seguir:</p>
+<blockquote>
+<ul class="simple">
+<li><cite>Painel de ControleProgramasProgramas e Recursos</cite></li>
+</ul>
+</blockquote>
+<p>Se ainda assim você tiver problemas, coloque a mensagem de erro no Google e veja se outras pessoas estão recebendo a mesma mensagem.</p>
+</div>
+<div class="section" id="desinstalador-de-programas-do-windows">
+<h2>DESINSTALADOR DE PROGRAMAS DO WINDOWS</h2>
+<p>Na janela de instalação e desinstalação de programas do Windows, você encontrará um lista de todos os programas que estão instalados no seu computador. Procure nessa lista todos os nome de programas que comecem com a palavra &quot;Java&quot; e desinsta-le-os. Por exemplo, você pode encontrar alguns programas com os seguintes nomes ou então, com nomes semelhantes:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>Java 7</li>
+<li>Java 8</li>
+<li>Java SE</li>
+<li>Java SDK</li>
+</ol>
+</blockquote>
+<p>Após certificar-se de ter desinstalado todas as versões antigas da JVM, faça o download [caso ainda não tenhas feito] do <a class="reference external" href="http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html">JDK</a> e instale o mesmo em seu computador.</p>
+<p>Em seguida, tente executar novamente o Eclipse e averigue se ainda está ocorrendo algum erro.</p>
+</div>
 
 				</div>
 			</div>
