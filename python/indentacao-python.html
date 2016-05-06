@@ -16,7 +16,7 @@
 
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,indentação,blog" />
     <meta name="description" content="Nesta aula estudaremos a utilização da indentação e a sua importância para a correta interpretação do código pelo interpretador." />
 
 
@@ -27,10 +27,12 @@
 
         <meta property="og:description" content=""/>
 
-        <meta property="article:published_time" content="2016-01-01" />
+        <meta property="article:published_time" content="2016-06-05" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="indentação" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"
                   content="http://www.excript.com/images/logo-excript.png"/>
@@ -116,7 +118,7 @@ excript.com            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01 janeiro 2016</time>
+            <time datetime="2016-06-05T18:00:00-03:00"> Publicado em 05 junho 2016</time>
         </span>
 
 
@@ -385,21 +387,40 @@ excript.com            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+					<div class="section" id="indentacao">
+<h2>INDENTAÇÃO</h2>
+<p>Indentar é o recuo do texto em relação a sua margem, ou seja, se antes de escrevermos uma instrução, utilizamo 4 espaçamentos da margem esquerda até a instrução propriamente dita, podemos dizer que a indentação utilizada possui 4 espaços.</p>
+<p>A palavra indentação, vem do inglês &quot;indentation&quot; e é normal a sua utilização no código-fonte de um programa, indiferente da linguagem utilizada.</p>
+<p>Em Python, a indentação possui função bastante especial, até porque, os blocos de instrução são delimitados pela profundidade da indentação, isto é, os códigos que estiverem rente a margem esquerda, farão parte do primeiro nível hierárquico. Já, os códigos que estiverem a 4 espaços da margem esquerda, estarão no segundo nível hierárquico e aqueles que estiverem a 8 espaços, estarão no terceiro nível e assim por diante.</p>
+<p>Todos os blocos são delimitados pela profundidade da indentação e por isso, a sua importância, é vital para um programa em Python. O mau uso, isto é, utilizar 4 espaçamentos enquanto deveríamos estar utilizando 8, acarretará na não execução, ou então, no mal funcionamento em geral.</p>
+</div>
+<div class="section" id="blocos">
+<h2>BLOCOS</h2>
+<p>Os <strong>blocos</strong> são uma ou mais instruções que devem ser executadas uma após a outra, de cima para baixo da esquerda para a direita.</p>
+<p>Existem vários tipos de blocos, os mais comuns, são os blocos de códigos, isto é, blocos que contenham instruções Python.</p>
+<p>Outro tipo comum de bloco são os blocos de comentários, isto é, um conjunto de caracteres, que ocupam uma ou mais linha de código e estão delimitados por uma notação que a linguagem de programação definiu.</p>
+</div>
+<div class="section" id="blocos-de-codigo">
+<h2>BLOCOS DE CÓDIGO</h2>
+<p>Bloco de código é uma ou um conjunto de instrução que estejam numa mesma distância da margem esquerda. A seguir, temos um trecho de código Python que mostra a utilização de 2 blocos. Estes foram definidos pela quantidade de espaços, isto é, pela distância da margem esquerda.</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;nivel 1&quot;</span><span class="p">)</span><span class="c">#primeiro nível hierárquico</span>
+
+<span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;nível 2&quot;</span><span class="p">)</span><span class="c">#segundo nível hierárquico</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Este é um bloco de comentários e essa é a primeira linha</span>
+<span class="sd">agora, estamos na segunda linha de comentário(s)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+<p>É comum utilizarmos 2 espaços ou então, 4 espaços, ou mesmo 1 tabulação ao lado esquerdo da instrução para assim definir, em qual bloco a instrução está contida. O primeiro nível é o nível 0, ou seja, o nível que não contém espaçamento. A linguagem não nos obriga a utilizar uma determinada quantidade de espaçamentos, ou então, tabulações. Porém, se utilizarmos 4 espaços para definir o primeiro blocos, o interpretador assumirá que as próximas instruções estão indentadas com uso de múltiplos de 4.</p>
+<p>A recomendação é que utilizemos, ou 1 tabulação, ou então, 4 espaços.</p>
+<p>Ao invés de trabalharmos com quantidades de espaços, podemos utilizar uma determinada quantidade de tabulações. O primeiro nível hierárquico seria o nível 0, isto é, instruções que não possuem tabulações a sua esquerda. O segundo nível utilizaria uma única tabulação, o terceiro nível utilizaria 2 tabulações e assim sucessivamente.</p>
+<p>O mais importante é sabermos que em Python, o espaçamento não é facultativos, isto é, não o colocamos se assim desejarmos, mas sim, somos obrigados a trabalharmos com algum sistema de espaçamento a fim de definirmos blocos isolados de códigos.</p>
+<p>Os benefícios do uso da tabulação são percebidos rapidamente, isso porque, um código em Python sempre estará organizado, do contrário o mesmo não funcionará. E não somente isso, código indentados tornam-se mais legíveis e é um padrão utilizado por praticamente todos os programadores, indiferente da linguagem em que estes estejam trabalhando.</p>
+</div>
 
 				</div>
 			</div>
@@ -427,7 +448,7 @@ excript.com            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>            </div>
+	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>, 	<a href="http://www.excript.com/tag/indentacao.html">indentação</a>, 	<a href="http://www.excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

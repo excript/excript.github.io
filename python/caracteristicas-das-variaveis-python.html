@@ -16,8 +16,8 @@
 
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python,variáveis,caracteristicas das variáveis" />
-    <meta name="description" content="Nesta aulas continuaremos o estudo sobre as variáveis em Python, suas características, ciclo de vidas e como podemos explorar as funcionalidades que a linguagem Python nos oferece." />
+        <meta name="keywords" content="curso,python,variáveis,caracteristicas das variáveis,tipos,blog" />
+    <meta name="description" content="Nesta aulas continuaremos o estudo sobre as variáveis em Python. Estudaremos, especificamente, as características, ciclo de vidas e como podemos explorar as funcionalidades que a linguagem Python nos oferece na manipulação de variáveis." />
 
 
         <meta property="og:site_name" content="excript.com" />
@@ -27,12 +27,14 @@
 
         <meta property="og:description" content=""/>
 
-        <meta property="article:published_time" content="2016-01-01" />
+        <meta property="article:published_time" content="2016-06-05" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="variáveis" />
             <meta property="article:tag" content="caracteristicas das variáveis" />
+            <meta property="article:tag" content="tipos" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"
                   content="http://www.excript.com/images/logo-excript.png"/>
@@ -118,7 +120,7 @@ excript.com            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01 janeiro 2016</time>
+            <time datetime="2016-06-05T18:40:00-03:00"> Publicado em 05 junho 2016</time>
         </span>
 
 
@@ -387,21 +389,43 @@ excript.com            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+					<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>O conceito de variável em programação é semelhante ao conceito de variável na matemática. As variáveis, de maneira geral, possuem um grupo de características que as definem e as tornam entidades única. As características, ou então, as propriedades que todas as variáveis possuem, determinam um aspecto do funcionamento e também, especificam o seu ciclo de vida, a maneira como as informação são gerenciadas e manipuladas pela <a class="reference external" href="https://pt.wikipedia.org/wiki/M%C3%A1quina_virtual">Máquina Virtual</a> do Python.</p>
+</div>
+<div class="section" id="caracteristicas-das-variaveis">
+<h2>CARACTERÍSTICAS DAS VARIÁVEIS</h2>
+<p>Há 4 características elementares referentes a todas as variáveis, são elas:</p>
+<blockquote>
+<ol class="arabic simple">
+<li><strong>NOME:</strong> toda variável possui <strong>nome</strong></li>
+<li><strong>TIPO:</strong> toda variável possui <strong>tipo</strong> (inferido pela VM)</li>
+<li><strong>ESPAÇO:</strong> toda variável ocupará um <strong>espaço de memória</strong> único</li>
+<li><strong>VALOR:</strong> toda variável possui <strong>valor</strong></li>
+</ol>
+</blockquote>
+<p>Ainda que não declaramos explicitamente o tipo das variáveis em Python, temos que uma variável inferida pela VM como sendo do tipo inteiro, não poderá, durante o tempo de execução, ter uma String ou então, qualquer outro valor atribuido. Por isso dizemos que o Python é uma linguagem fortemente tipada, isto é, as variáveis serão do mesmo tipo do inferido inicialmente.</p>
+</div>
+<div class="section" id="nome-referencia">
+<h2>NOME (REFERÊNCIA)</h2>
+<p>O <strong>nome da variável</strong> ou então, a referência, é como iremos nos referir a um determinado espaço de memória durante o tempo de desenvolvimento. Toda vez que utilizarmos o nome de uma variável, poderemos, ler o valor contido, ou então, atribuir quaisquer outro valor, desde que o tipo seja o mesmo.</p>
+<p>É importante entender que o nome, também chamado de referência, é uma ponte entre o endereço de memória e o nosso código. Assim, não precisamos manipular números (endereços de memória) durante o desenvolvimento, o que torna nossos códigos mais legíveis e fáceis de serem implementados.</p>
+</div>
+<div class="section" id="tipo">
+<h2>TIPO</h2>
+<p>O <strong>Tipo de Variável</strong> funciona como uma espécie de classificação das informações, ou seja, o tipo informa com antecedência qual informação podemos esperar de determinada variável. Toda variável declarada será, obrigatoriamente, de algum tipo. O tipo da variável será armazenado junto com o valor que esta estará armazenando.</p>
+<p>A linguagem tem definido algumas operações para alguns tipos de dados, por exemplo, quando utilizamos o operador (adição) entre 2 variáveis que contenham números inteiros, o interpretador, somará os valores. Porém, se utilizarmos o sinal de adição com 2 variáveis do tipo String, o interpretador fará uma concatenação.</p>
+<p>A operação que ocorrerá mediante ao tipo da variável é, definido em código e, podemos, se desejarmos, alterar o funcionamento. Aprendemos como por exemplo, alterar a maneira como 2 números inteiros são somados, quando estudarmos a Orientação a Objetos em Python.</p>
+</div>
+<div class="section" id="espaco">
+<h2>ESPAÇO</h2>
+<p>As informações precisam ser armazenada em alguma mídia, e as variáveis, são armazenadas na memória RAM do nosso computador. A memória RAM é formada por centenas de milhares de pequenos blocos, onde, cada bloco, possui um número que o identifica e o distingue dos demais. Assim, uma informação sempre estará armazenada numa determinada posição física de memória.</p>
+</div>
+<div class="section" id="valor">
+<h2>VALOR</h2>
+<p>O valor, ou então, a informação contida na variável, isto é, o dado propriamente dito, é, a parte principal de qualquer variável.</p>
+<p>Toda variável será capaz de ter o seu valor alterado durante o tempo de execução, bastando para isso, somente, a atribuição de outro valor. A única regra definida para a atribuição de valores é que o tipo do valor a ser atribuído, seja do mesmo tipo da variável. Assim, para variáveis inteiras, só poderemos atribuir números. Para variáveis do tipo String, só poderemos atribuir texto. Para variáveis do tipo Boolean, só podemos atribuir números entre 0 à 1, ou então, True ou False.</p>
+</div>
 
 				</div>
 			</div>
@@ -429,7 +453,7 @@ excript.com            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>, 	<a href="http://www.excript.com/tag/variaveis.html">variáveis</a>, 	<a href="http://www.excript.com/tag/caracteristicas-das-variaveis.html">caracteristicas das variáveis</a>            </div>
+	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>, 	<a href="http://www.excript.com/tag/variaveis.html">variáveis</a>, 	<a href="http://www.excript.com/tag/caracteristicas-das-variaveis.html">caracteristicas das variáveis</a>, 	<a href="http://www.excript.com/tag/tipos.html">tipos</a>, 	<a href="http://www.excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

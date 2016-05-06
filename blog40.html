@@ -81,6 +81,128 @@ excript.com            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a  href="http://www.excript.com/php/operadores-relacionais-php-algoritmo.html">Operadores Relacionais Parte II</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">//aprofundando o estudo dos operadores relacionais</span>
+
+<span class="x">echo &quot;igualdade\n&quot;;</span>
+<span class="x">var_dump(10==10);</span>
+<span class="x">var_dump(10==11);</span>
+<span class="x">var_dump(11==&quot;11&quot;);</span>
+
+<span class="x">echo &quot;\ndiferente\n&quot;;</span>
+<span class="x">var_dump(10 != 10);</span>
+<span class="x">var_dump(10 != 11);</span>
+
+<span class="x">var_dump(10 &lt;&gt; 10);</span>
+<span class="x">var_dump((10 &lt;&gt; 10)and(10!=10));</span>
+
+<span class="x">echo &quot;\n ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/operadores-relacionais-php-algoritmo.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/php/parametro-por-referencia-php-ii.html">Parâmetros por Referência em PHP II</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="c1">#====================</span>
+<span class="c1">#  == eXcript.com ==</span>
+<span class="c1">#====================</span>
+
+
+<span class="k">function</span> <span class="o">&amp;</span><span class="nf">func</span><span class="p">(){</span>
+    <span class="nv">$a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nv">$a</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$valor</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nx">func</span><span class="p">();</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$valor</span><span class="p">);</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/parametro-por-referencia-php-ii.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/php/parametro-tipado-php.html">Parâmetros Tipados em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">declare(strict_types=1);</span>
+
+<span class="x">#FUNÇÕES COM PARÂMETROS TIPADOS</span>
+
+<span class="x">function getArea(int $x, int $y){</span>
+
+<span class="x">    return $x * $y;</span>
+<span class="x">}</span>
+
+<span class="x">function getSum(int ...$valores){</span>
+
+<span class="x">    return array_sum($valores);</span>
+<span class="x">}</span>
+
+<span class="x">echo getArea(10, 5) . &quot;\n&quot;;</span>
+<span class="x">echo getSum(1,2,3,4,5,6,&quot;100&quot;);</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/parametro-tipado-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a  href="http://www.excript.com/php/parametros-default-php.html">Parâmetros default com PHP</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line-11">
@@ -293,140 +415,6 @@ excript.com            </a>
     </div>
 
                     <a class="btn btn-default btn-xs" href="http://www.excript.com/php/servidor-web-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/php/sobrescrita-funcao-php.html">Sobrescrita de Funções em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x"># FUNÇÕES DE ACESSO</span>
-
-<span class="x">class Pessoa{</span>
-
-<span class="x">    private $nome;</span>
-<span class="x">    private $sobrenome;</span>
-
-<span class="x">    public function getNome() : string</span>
-<span class="x">    {</span>
-<span class="x">        return $this-&gt;nome;</span>
-<span class="x">    }</span>
-<span class="x">    public function setNome(string $nome)</span>
-<span class="x">    {</span>
-<span class="x">        $this-&gt;nome = $nome;</span>
-<span class="x">    }</span>
-<span class="x">    public function getSobrenome() : string</span>
-<span class="x">    {</span>
-<span class="x">        return $this-&gt;sobrenome;</span>
-<span class="x">    }</span>
-<span class="x">    public function setSobrenome(string $sobrenome)</span>
-<span class="x">    {</span>
-<span class="x">        $this-&gt;sobrenome ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/sobrescrita-funcao-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/php/string-aspas-duplas-php.html">String Aspas Duplas em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#STRING DOUBLE-QUOTED</span>
-
-<span class="x">#concatenar a + b</span>
-<span class="x">#interpolar</span>
-
-<span class="x">$num = 55;</span>
-
-<span class="x">echo &quot;O valor da variável num é: &quot; . $num . &quot;\n&quot;;</span>
-<span class="x">echo &quot;O valor da variável num é: $num \n&quot;;</span>
-
-<span class="x">$arr = [&quot;Preto&quot;, &quot;Azul&quot;, &quot;Amarelo&quot;];</span>
-<span class="x">echo &quot;A cor da bola é: $arr[1 ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/string-aspas-duplas-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/php/string-heredoc-nowdoc-php.html">String heredoc e nowdoc em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#HEREDOC E NOWDOC</span>
-
-<span class="x"># HEREDOC == &quot;&quot;</span>
-<span class="x">$x = 50;</span>
-
-<span class="x">$heredoc =</span>
-<span class="x">&lt;&lt;&lt;TESTE</span>
-
-<span class="x">    &lt;div&gt;O valor da variável x é: $x&lt;/div&gt;</span>
-
-<span class="x">TESTE;</span>
-
-<span class="x">echo $heredoc;</span>
-
-
-<span class="x">#NOWDOC  == &#39;&#39;</span>
-
-<span class="x">$nowdoc = &lt;&lt;&lt;&#39;EOT&#39;</span>
-
-<span class="x">    class NowDoc{</span>
-
-<span class="x">        function __construct(){}</span>
-
-<span class="x">    }</span>
-
-<span class="x">EOT;</span>
-
-<span class="x">echo $nowdoc;</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/string-heredoc-nowdoc-php.html">more ...</a>
                 </div>
             </article>
             <hr/>

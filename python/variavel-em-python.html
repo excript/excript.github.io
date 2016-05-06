@@ -16,8 +16,8 @@
 
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
-    <meta name="description" content="Nesta aula iniciaremos o estudo das variáveis em Python e aprenderemos os princípais conceitos da declaração e respectivo uso das variáveis previamente declaradas." />
+        <meta name="keywords" content="curso,python,variavel,blog" />
+    <meta name="description" content="Nesta aula iniciaremos o estudo das variáveis em Python e aprenderemos os principais conceitos da declaração e respectivo uso das variáveis previamente declaradas." />
 
 
         <meta property="og:site_name" content="excript.com" />
@@ -27,10 +27,12 @@
 
         <meta property="og:description" content=""/>
 
-        <meta property="article:published_time" content="2016-01-01" />
+        <meta property="article:published_time" content="2016-06-05" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="variavel" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"
                   content="http://www.excript.com/images/logo-excript.png"/>
@@ -116,7 +118,7 @@ excript.com            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01 janeiro 2016</time>
+            <time datetime="2016-06-05T18:30:00-03:00"> Publicado em 05 junho 2016</time>
         </span>
 
 
@@ -385,21 +387,27 @@ excript.com            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+					<div class="section" id="definicao-de-variavel">
+<h2>DEFINIÇÃO DE VARIÁVEL</h2>
+<p><strong>Variável</strong> é um espaço de memória que reservamos para armazenar valores temporários que estão sendo processados ou manipulados. Toda variável possui um tipo e este será inferido conforme a informação inicial que atribuirmos para a variável. Uma variável pode ter o seu valor alterado a qualquer momento, porém, não é possível alterar o seu tipo durante a execução.</p>
+<p>Toda variável irá armazenar o valor na memória RAM (Random Access Memory) e a mesma estará disponível enquanto houver eletricidade, ou o computador não seja reiniciado. Todo armazenamento feito na memória RAM é considerado como um armazenamento temporário, e trabalhamos dessa maneira, devido a velocidade de entrega que memória RAM proporciona se comparada a outras mídias, como por exemplo, o disco rígido, PenDrive, CD-Room e etc.</p>
+<p>Podemos declarar quantas variáveis desejarmos. O Python administrará (reservará espaço) para cada uma individualmente e associará o nome que definirmos ao espaço de memória. Temos então, que a localização do espaço de memória será feito por intermédio da referência (nome da variável) definida pelo programador. A partir do momento em que não fizermos mais uso de determinada variável, a máquina virtual do Python desalocará o espaço reservado, devolvendo-o ao sistema operacional.</p>
+<p>A melhor maneira para manipularmos informações seja num <tt class="docutils literal">programa</tt>, como também num <tt class="docutils literal">Script</tt>, é através da utilização de variáveis. Isso porque, variáveis possuem uma estrutura simples e rápida para utilização.</p>
+</div>
+<div class="section" id="como-funcionam-as-variaveis">
+<h2>COMO FUNCIONAM AS VARIÁVEIS?</h2>
+<p>Devemos pensar nas variáveis como sendo um espaço físico. Este espaço é administrado pelo hardware, pela placa-mãe, processador e sistema operacional. Cada pedaço do espaço físico possui um número que o identifica (número identificador) e assim, ao declararmos uma variável, estaremos, reservamos um espaço físico para guardar informações temporariamente e vinculando esse espaço ao nome da variável (referência).</p>
+<p>As informações que serão armazenadas são temporárias, até porque, o funcionamento da memória RAM necessita, obrigatoriamente, de eletricidade para seu funcionamento. Não existe limites pré-definidos da quantidade de variáveis, ou quantidade de informações que é possível utilizar. Essas quantias sempre serão definidas pela quantidade de memória física que houver no sistema, e a quantidade de variáveis que podemos declarar, também estará, diretamente relacionada com a quantidade de espaço físico disponível, isto é, a quantidade de memória RAM existente.</p>
+</div>
+<div class="section" id="o-que-e-uma-referencia">
+<h2>O QUE É UMA REFERÊNCIA?</h2>
+<p>Referência é o nome que damos às nossas variáveis e é a forma como a VM do Python vinculará as informações entre o nosso programa e a memória do computador.</p>
+</div>
+<div class="section" id="quantas-variaveis-podemos-declarar">
+<h2>QUANTAS VARIÁVEIS PODEMOS DECLARAR?</h2>
+<p>Quando iniciamos o estudo da programação, gostamos de conhecer os limites, quantidades e capacidades de tudo. Mensurar a quantidade de variáveis que um programa Python pode ter é bastante difícil. Isso porque, vamos supor, um simples número inteiro para o Python, não possuirá somente o valor da sua informação e sim, haverá um conjunto de dados que estarão vinculado ao número internamente. Junto a cada referência declarada, haverá também, muitas outras informações vinculadas, informações estas conhecidas como metadadops, e estas, serão armazenadas para tanto uso intero no Python, ou então, para melhorar a performance em alguma situação.</p>
+<p>A linguagem Python não define quantidades até porque, os limites sempre estarão diretamente relacionadas com a capacidade do computador onde o programa for executado.</p>
+</div>
 
 				</div>
 			</div>
@@ -427,7 +435,7 @@ excript.com            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>            </div>
+	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>, 	<a href="http://www.excript.com/tag/variavel.html">variavel</a>, 	<a href="http://www.excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

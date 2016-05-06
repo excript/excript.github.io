@@ -81,6 +81,113 @@ excript.com            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a  href="http://www.excript.com/php/instrucao-continue-php.html">Instrução <tt class="docutils literal">continue</tt> em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">//INSTRUÇÃO CONTINUE</span>
+
+<span class="x">//NÚMEROS PARES DE 0 ATÉ 100</span>
+
+<span class="x">for($i=0; $i&lt;100; $i++){</span>
+
+<span class="x">    if($i % 2 == 1){</span>
+<span class="x">        continue;</span>
+<span class="x">    }</span>
+
+<span class="x">    echo $i . &quot;\n&quot;;</span>
+
+<span class="x">}</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/instrucao-continue-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/php/instrucao-while-php.html">Instrução While em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">//ESTRUTURA DE REPETIÇÃO WHILE</span>
+
+<span class="x">//$num = 100;</span>
+<span class="x">//while($num &gt; 0){</span>
+<span class="x">//    echo $num  . &quot;\n&quot;;</span>
+<span class="x">//    $num = ($num - 5);</span>
+<span class="x">//}</span>
+
+<span class="x">$num = 0;</span>
+<span class="x">while($num &lt; 100){</span>
+<span class="x">    echo ($num * 255)  . &quot;\n&quot;;</span>
+<span class="x">    $num = ($num + 5);</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/instrucao-while-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/php/introducao-array-php.html">Introdução aos Arrays em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">$a = array(1,2,3);</span>
+
+<span class="x">print_r($a);</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/introducao-array-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a  href="http://www.excript.com/php/introducao-as-funcoes-php.html">Introdução às Funções em PHP</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line-11">
@@ -311,112 +418,6 @@ excript.com            </a>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://www.excript.com/php/lista-parametro-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/php/lista-parametro-php-ii.html">Lista de Parâmetros em PHP II</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">function somaTudo(){</span>
-
-<span class="x">    $lista = func_get_args();</span>
-<span class="x">    $qntd = func_num_args();</span>
-<span class="x">    $total = 0;</span>
-
-<span class="x">//    for($x = 0; $x&lt;$qntd; $x++)</span>
-<span class="x">    foreach($lista as $item)</span>
-<span class="x">    {</span>
-<span class="x">        $total += $item;</span>
-<span class="x">    }</span>
-
-<span class="x">    echo &quot;A soma de todos parâmetros é: &quot; . $total;</span>
-
-<span class="x">}</span>
-
-<span class="x">somaTudo(1,2,3,4,5,6);</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/lista-parametro-php-ii.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/php/manipulação-arrays-php.html">Manipulação de Arrays em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#VERIFICA SE A ESTRUTURA É UMA ARRAY</span>
-
-<span class="x">echo &quot;FUNÇÃO: is_array() - &quot; . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = [] - &quot; . is_array( [] ) . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = array() - &quot; . is_array( array() ) . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = [1,2,3] - &quot; . is_array( [1,2,3] ) . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = 1 - &quot; . is_array( 1 ) . &quot;\n&quot;;</span>
-<span class="x">echo ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/manipulação-arrays-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/php/membro-de-classe-php.html">Membros de Classe em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">class Pessoa{</span>
-<span class="x">    public $nome;</span>
-<span class="x">    public $idade;</span>
-
-<span class="x">    var $teste;</span>
-<span class="x">}</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/membro-de-classe-php.html">more ...</a>
                 </div>
             </article>
             <hr/>

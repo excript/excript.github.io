@@ -81,6 +81,121 @@ excript.com            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a  href="http://www.excript.com/php/null-coalescing-operator-php.html">Null Coalescing Operator em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">$quadrado = function($num){</span>
+<span class="x">    return $num * $num;</span>
+<span class="x">};</span>
+<span class="x">$cubo = function($num) use ($quadrado){</span>
+<span class="x">    return $quadrado($num) * $num;</span>
+<span class="x">};</span>
+<span class="x">$soma = function($num){</span>
+<span class="x">    return $num + $num;</span>
+<span class="x">};</span>
+
+<span class="x">function processa_lista($lista, $func){</span>
+<span class="x">    foreach($lista as &amp;$item)</span>
+<span class="x">        $item = $func($item);</span>
+<span class="x">    return $lista;</span>
+<span class="x">}</span>
+
+<span class="x">print_r(processa_lista(range(1 ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/null-coalescing-operator-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/php/numeros-pares-impares-php.html">Números Pares e Ímpares em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
+
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">    &lt;title&gt;Número Pares e Ímpares - Curso PHP - eXcript&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
+
+<span class="x">&lt;body&gt;</span>
+
+<span class="x">    </span><span class="cp">&lt;?php</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">])){</span>
+        <span class="k">echo</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">];</span>
+        <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+
+        <span class="nv">$num</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">];</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="nv">$num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="k">echo ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/numeros-pares-impares-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/php/operacao-ternaria-php.html">Operação Ternária em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line-11">
+    <table>
+    <tbody><tr>
+    <td class="icon">
+    <i class="fa icon-note" title="Nota"></i>
+    </td>
+    <td class="content">
+    <div class="paragraph data-line-12">
+    <p>O texto desta aula ainda não está disponível.</p>
+    </div>
+    </td>
+    </tr>
+    </tbody></table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">//OPERAÇÃO TERNÁRIA</span>
+
+<span class="x">$opcao = False;</span>
+
+<span class="x">$str = ($opcao) ? &quot;true&quot; : &quot;false&quot;;</span>
+
+<span class="x">echo $str;</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/operacao-ternaria-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a  href="http://www.excript.com/php/operacao-ternaria-php-parte2.html">Operação Ternária em PHP (parte II)</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line-11">
@@ -318,128 +433,6 @@ excript.com            </a>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://www.excript.com/php/operador-spaceshift-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/php/operadores-relacionais-php-algoritmo.html">Operadores Relacionais Parte II</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">//aprofundando o estudo dos operadores relacionais</span>
-
-<span class="x">echo &quot;igualdade\n&quot;;</span>
-<span class="x">var_dump(10==10);</span>
-<span class="x">var_dump(10==11);</span>
-<span class="x">var_dump(11==&quot;11&quot;);</span>
-
-<span class="x">echo &quot;\ndiferente\n&quot;;</span>
-<span class="x">var_dump(10 != 10);</span>
-<span class="x">var_dump(10 != 11);</span>
-
-<span class="x">var_dump(10 &lt;&gt; 10);</span>
-<span class="x">var_dump((10 &lt;&gt; 10)and(10!=10));</span>
-
-<span class="x">echo &quot;\n ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/operadores-relacionais-php-algoritmo.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/php/parametro-por-referencia-php-ii.html">Parâmetros por Referência em PHP II</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="cp">&lt;?php</span>
-
-<span class="c1">#====================</span>
-<span class="c1">#  == eXcript.com ==</span>
-<span class="c1">#====================</span>
-
-
-<span class="k">function</span> <span class="o">&amp;</span><span class="nf">func</span><span class="p">(){</span>
-    <span class="nv">$a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
-    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="nv">$a</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nv">$valor</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nx">func</span><span class="p">();</span>
-<span class="nb">print_r</span><span class="p">(</span><span class="nv">$valor</span><span class="p">);</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/parametro-por-referencia-php-ii.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/php/parametro-tipado-php.html">Parâmetros Tipados em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
-    </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">declare(strict_types=1);</span>
-
-<span class="x">#FUNÇÕES COM PARÂMETROS TIPADOS</span>
-
-<span class="x">function getArea(int $x, int $y){</span>
-
-<span class="x">    return $x * $y;</span>
-<span class="x">}</span>
-
-<span class="x">function getSum(int ...$valores){</span>
-
-<span class="x">    return array_sum($valores);</span>
-<span class="x">}</span>
-
-<span class="x">echo getArea(10, 5) . &quot;\n&quot;;</span>
-<span class="x">echo getSum(1,2,3,4,5,6,&quot;100&quot;);</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/php/parametro-tipado-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
