@@ -16,7 +16,7 @@
 
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,entrada padrão,entrada de dados,input,blog" />
     <meta name="description" content="Nesta aula estudaremos a entrada de dados numa aplicação e como o Python trata nativamente." />
 
 
@@ -27,10 +27,14 @@
 
         <meta property="og:description" content=""/>
 
-        <meta property="article:published_time" content="2016-01-01" />
+        <meta property="article:published_time" content="2016-06-05" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="entrada padrão" />
+            <meta property="article:tag" content="entrada de dados" />
+            <meta property="article:tag" content="input" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"
                   content="http://www.excript.com/images/logo-excript.png"/>
@@ -115,7 +119,7 @@ excript.com            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01 janeiro 2016</time>
+            <time datetime="2016-06-05T23:45:00-03:00"> Publicado em 05 junho 2016</time>
         </span>
 
 
@@ -384,23 +388,51 @@ excript.com            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line-11">
-    <table>
-    <tbody><tr>
-    <td class="icon">
-    <i class="fa icon-note" title="Nota"></i>
-    </td>
-    <td class="content">
-    <div class="paragraph data-line-12">
-    <p>O texto desta aula ainda não está disponível.</p>
+					<div class="section" id="entrada-de-dados">
+<h2>ENTRADA DE DADOS</h2>
+<p>Entrada de Dados é a forma como enviamos informações para dentro de aplicações escritas em Python. A forma mais primitiva de enviar dados para uma aplicação é pelo Prompt de Comando, isto é, pelo Console propriamente dito.</p>
+<img alt="Imagem do Console para a entrada de dados em programa Python" src="../images/curso-de-python/console-python.png" />
+<p>Uma aplicação pode, a qualquer momento, pedir que o usuário informe uma determinada informação, para isto, basta invocar a função <cite>input()</cite>.</p>
+<p>A partir da versão 3 do Python, a função <cite>input()</cite>, tem por objetivo de escrever a String passada como parâmetro e em seguida, ativar o modo de digitação, isto é, colocar o Console de uma determinada forma em que seja possível a digitação (entrada de dados). É importante observar que versões anteriores do Python funcionavam de maneira distinta, e também, que a função <cite>input()</cite> nas versões 2x era utilizado para outro finalidade!</p>
+<p>A seguir, temos um exemplo onde imprimimos uma frase na tela e em seguida, é aberto para o usuário, a capacidade para digitação de letras e números.</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="nb">input</span><span class="p">(</span><span class="s">&quot;Escreva entre aspas alguma informação a ser impressa no Console &quot;</span><span class="p">)</span>
+</pre></div>
+<p>O código acima, quando executado, irá imprimir o que está entre parêntesis no Console e em seguida, permitira ao usuário a digitação de qualquer tipo de dado alfanumérico. O conjunto de caracteres digitado pelo usuário, será retornado pela função <cite>input()</cite>. É responsabilidade do programador armazenar esses caracteres numa variável, como fazemos no exemplo a seguir:</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Digite um número:&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</pre></div>
+<p>No exemplo acima, será impresso a frase definida entre aspas e então, o console entrará num modo que permitirá o usuário digitar texto e números. Após o usuário digitar o que desejar e pressionar a tecla Enter, os dados digitados serão retornados pela função <cite>input()</cite>. No exemplo acima, estamos atribuindo o retorno da função para a variável num, logo, a mesma receberá aquilo que o usuário digitou no Console antes de pressionar a tecla Enter.</p>
+<p>Por fim, imprimimos na tela os caracteres digitados pelo nosso usuário através da função <tt class="docutils literal">print()</tt>.</p>
+</div>
+<div class="section" id="outras-formas-para-entrada-de-dados">
+<h2>OUTRAS FORMAS PARA ENTRADA DE DADOS</h2>
+<p>Uma aplicação pode receber dados através das mais distintas formas, como por exemplo, pela leitura de um arquivo, através dos protocolos TCP/IP, pelo uso de janelas gráficas, como por exemplo, a biblioteca TkInter, que é a forma nativa para a construção de Janelas Gráficas no Python e etc.</p>
+<p>Há diversas maneiras para recebermos informações, porém, o princípio de como trataremos esses dados será, na maior parte da vezes o mesmo.</p>
+
+    <div class="admonitionblock important data-line-21">
+        <table>
+            <tbody>
+                <tr>
+                <td class="icon">
+                    <i class="fa icon-important" title="Importante!"></i>
+                </td>
+                <td class="content">
+                    <div class="paragraph data-line-22">
+                        <p>Certifique-se estar utilizando a versão 3.x do Python, do contrário, a função `input()` terá funcionamento anomalo e a sua aplicação não executará da maneira correta!</p>
+                    </div>
+                </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    </td>
-    </tr>
-    </tbody></table>
-    </div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
+<p>A seguir, temos o exemplo feito na vídeo aulas do Curso de Python da eXcript:</p>
 <div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 
@@ -437,7 +469,7 @@ excript.com            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>            </div>
+	<a href="http://www.excript.com/tag/curso.html">curso</a>, 	<a href="http://www.excript.com/tag/python.html">python</a>, 	<a href="http://www.excript.com/tag/entrada-padrao.html">entrada padrão</a>, 	<a href="http://www.excript.com/tag/entrada-de-dados.html">entrada de dados</a>, 	<a href="http://www.excript.com/tag/input.html">input</a>, 	<a href="http://www.excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
