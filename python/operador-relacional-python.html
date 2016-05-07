@@ -397,23 +397,94 @@ excript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="operadores-relacionais-ou-operadores-comparativos">
+<h2>OPERADORES RELACIONAIS ou OPERADORES COMPARATIVOS</h2>
+<p>Operador Relacional é todo operador que obtém a relação do membro a esquerda com o membro a sua direita.</p>
+<p>É comum na programação é necessidade de conhecer a relação entre diversos operandos para que então, o nosso programa assuma determinada característica. A linguagem Python trabalha com os operadores relacionais, também chamados de operadores comparativos, da mesma forma que a maioria das outras linguagens, tais como C, C++, Java, C# e etc.</p>
+</div>
+<div class="section" id="operadores-relacionais-simples">
+<h2>OPERADORES RELACIONAIS SIMPLES</h2>
+<p>Existem 3 relações possíveis entre 2 operandos, são elas:</p>
+<blockquote>
+<ul class="simple">
+<li>Maior que <strong>&gt;</strong></li>
+<li>Menor que <strong>&lt;</strong></li>
+<li>Igual que <strong>==</strong></li>
+</ul>
+</blockquote>
+<p>Para obtermos a relação entre 2 membros, temos que utilizar a seguinte estrutura:</p>
+<blockquote>
+&lt;<tt class="docutils literal">membro a esquerda</tt>&gt; <strong>OPERADOR</strong> &lt;<tt class="docutils literal">membro a direita</tt>&gt;</blockquote>
+<p>É importante observar que inversão dos membros ocasiona na inversão do resultado da expressão, isto é, se o membro que estiver a esquerda for para a direita e vice-e-versa, a relação entre eles será o contrário.</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="k">print</span><span class="p">(</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="s">&quot;a&quot;</span> <span class="o">&gt;</span> <span class="s">&quot;b&quot;</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="mi">200</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">)</span>
+</pre></div>
+<p>No código acima, realizamos algumas operações entre números e caracteres, sempre utilizando as 3 comparações simples. Assim, temos que ou o operador a esquerda será maior, ou menor, ou então, igual ao operador a sua direita.</p>
+</div>
+<div class="section" id="operadores-relacionais-compostos">
+<h2>OPERADORES RELACIONAIS COMPOSTOS</h2>
+<p>A linguagem Python disponibiliza mais 2 operadores relacionais que verificam 2 relações entre os membros. É importante observar que essas relações podem ser obtidas com o uso de conectores lógicos, isto é, com a utilização dos conectores <tt class="docutils literal">and</tt> e <tt class="docutils literal">or</tt>.</p>
+<blockquote>
+<ul class="simple">
+<li>Maior ou igual a <tt class="docutils literal">&gt;=</tt></li>
+<li>Menor ou igual a <tt class="docutils literal">&lt;=</tt></li>
+</ul>
+</blockquote>
+<p>Podemos verificar com os operadores relacionais compostos se um membro é maior ou menor do que outro, ou então, se o membro é igual ao outros. Dessa forma, realizamos 2 operações numa mesma expressão o que acaba por simplificar e muito nossos programas.</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="k">print</span><span class="p">(</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="s">&quot;x&quot;</span> <span class="o">&lt;=</span> <span class="s">&quot;y&quot;</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="s">&quot;10&quot;</span> <span class="o">==</span> <span class="s">&quot;10&quot;</span> <span class="p">)</span>
+</pre></div>
+<p>No trecho de código acima, estamos verificando se os membros a esquerda são maiores, menores ou iguais aos membros a sua direita.</p>
+</div>
+<div class="section" id="relacoes-interessantes-do-python">
+<h2>RELAÇÕES INTERESSANTES DO PYTHON</h2>
+</div>
+<div class="section" id="primeira-relacao">
+<h2>PRIMEIRA RELAÇÃO</h2>
+<p>A primeira relação interessante, não é bem uma relação, mas sim, uma maneira de verificarmos se uma expressão é ou não verdadeira. Temos que ter em mente que o Python, SEMPRE verifica se determinada expressão é verdadeira e por consequência disso, podemos omitir a comparação com True.</p>
+<p>Por exemplo, se quisermos saber se 2 membros são iguais, não precisamos compará-los a True, veja a expressão a seguir:</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="k">print</span><span class="p">(</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span><span class="c">#essa expressão equivale a expressão seguinte</span>
+<span class="k">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span> <span class="p">)</span>
+</pre></div>
+<p>Na primeira operação, estamos verificando se o número 1 é igual a ele mesmo, logo, será impresso no Console, <tt class="docutils literal">True</tt> ou <tt class="docutils literal">False</tt>. Em seguida, repetimos a linha anterior, porém, comparamos o resultado da expressão <tt class="docutils literal">1 == 1</tt> com o valor <tt class="docutils literal">True</tt>. Ainda que não haja problema na forma que trabalhamos na segundo operação, estamos trabalhando de maneira redundante, haja vista que <strong>toda expressão</strong> será automaticamente comparada a <tt class="docutils literal">True</tt> e por isso, devemos omitir esse tipo de comparação!</p>
+</div>
+<div class="section" id="segunda-relacao">
+<h2>SEGUNDA RELAÇÃO</h2>
+<p>Uma expressão é verdadeira quando o resultado da expressão for igual a <tt class="docutils literal">True</tt> ou então, igual a número inteiro <tt class="docutils literal">1</tt>. Logo, podemos, ambas expressões no bloco de código a seguir, estão, realizando a mesma comparação:</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="k">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="bp">False</span> <span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span> <span class="mi">1</span> <span class="o">==</span> <span class="bp">True</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="mi">0</span> <span class="o">==</span> <span class="bp">False</span> <span class="p">)</span>
+</pre></div>
+<p>Todas expressões imprimirão no Console o valor <tt class="docutils literal">True</tt>, então, é importante que saibamos que as palavras-chaves <tt class="docutils literal">True</tt> e <tt class="docutils literal">False</tt> na verdade, são constantes que armazenam os número 1 e 0 respectivamente.</p>
+</div>
+<div class="section" id="terceira-relacao">
+<h2>TERCEIRA RELAÇÃO</h2>
+<p>Se verificarmos se uma <tt class="docutils literal">String</tt> que não contém caracteres é verdadeiro ou falso, teremos que o valor retornado será falso. Caso não haja muita lógica, pense que podemos, ao invés de comparar se a quantidade de caracteres contidos numa String é maior do que zero, podemos simplesmente verificar se a String em questão é verdadeira, por exemplo:</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;O valor de x é igual a vazio&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;A variável &#39;x&#39; contém caracteres &quot;</span><span class="p">)</span>
+</pre></div>
+<p>No código acima, declaramos a variável de nome <tt class="docutils literal">x</tt> e em seguida, utilizamos a variável &quot;x&quot; isoladamente numa tomada de decisão. Caso a variável <tt class="docutils literal">x</tt> contenha um ou mais caracteres, o bloco de código da estrutura <tt class="docutils literal">if</tt> será executada, do contrário, isto é, caso <tt class="docutils literal">x</tt> não possua caracteres, seja uma String vazia, o bloco de instrução da estrutura <tt class="docutils literal">else</tt> é que será executado.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span class="c">#coding: utf-8</span>
@@ -497,19 +568,6 @@ Tags
 
 <section class="well well-sm">
     <ul class="list-group list-group-flush">
-        <!--<li class="list-group-item">-->
-
-			<!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-			<!--&lt;!&ndash; horizontal &ndash;&gt;-->
-			<!--<ins class="adsbygoogle"-->
-			     <!--style="display:inline-block;width:728px;height:90px"-->
-			     <!--data-ad-client="ca-pub-5466436161806566"-->
-			     <!--data-ad-slot="6378227138"></ins>-->
-			<!--<script>-->
-			<!--(adsbygoogle = window.adsbygoogle || []).push({});-->
-			<!--</script>-->
-
-        <!--</li>-->
 	    <li class="li-sidebar">
 			<div class="fb-page" data-href="https://www.facebook.com/excript/" data-width="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/excript/"><a href="https://www.facebook.com/excript/">eXcript</a></blockquote></div></div>
 	    </li>
