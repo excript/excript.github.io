@@ -81,7 +81,7 @@ excript.com            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a  href="http://www.excript.com/python/operador-relacional-python-parte2.html">Operadores Relacionais do Python (parte 2)</a></h2>
+                <h2><a  href="http://www.excript.com/cpp/calcular-media-aritmetica-array-cpp.html">Calculando a Média Aritmética com Arrays em C++</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line">
         <table>
@@ -101,46 +101,28 @@ excript.com            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
 
-<span class="c">#=====================================</span>
-<span class="c">#========== www.eXcript.com ==========</span>
-<span class="c">#=====================================</span>
-<span class="n">idade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">&quot;Informe a sua idade:&quot;</span><span class="p">))</span>
-<span class="k">if</span><span class="p">(</span><span class="n">idade</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;A sua idade não pode ser 0 ou menor do que 0!&quot;</span><span class="p">)</span>
-<span class="k">elif</span><span class="p">(</span><span class="n">idade</span><span class="o">&gt;</span><span class="mi">150</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;A sua idade não pode ser ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/python/operador-relacional-python-parte2.html">more ...</a>
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kt">double</span> <span class="n">val</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+    <span class="c1">//1) entrada de valores (5 números)</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Informe o &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; valor: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">val</span><span class="p">[</span><span class="n">i ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/cpp/calcular-media-aritmetica-array-cpp.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://www.excript.com/python/operadores-and-or-in-python.html">Operadores <tt class="docutils literal">and</tt>, <tt class="docutils literal">or</tt> e <tt class="docutils literal">in</tt> do Python</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/python/operadores-and-or-in-python.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/python/operadores-de-atribuicao-compostos-python.html">Operadores de Atribuição Compostos do Python</a></h2>
+                <h2><a  href="http://www.excript.com/cpp/caracteristica-variavel-cpp.html">Características das Variáveis em C++</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line">
         <table>
@@ -160,24 +142,240 @@ excript.com            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
 
-<span class="c">#=====================================</span>
-<span class="c">#========== www.eXcript.com ==========</span>
-<span class="c">#=====================================</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span>
-<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span>
-<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/python/operadores-de-atribuicao-compostos-python.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/cpp/caracteristica-variavel-cpp.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://www.excript.com/python/operadores-in-not-in-python.html">Operadores <tt class="docutils literal">in</tt> e <tt class="docutils literal">not in</tt> do Python</a></h2>
+                <h2><a  href="http://www.excript.com/cpp/comentario-cpp.html">Comentários em C++</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
+
+<span class="cm">/*</span>
+<span class="cm">* sdafasd asdfasdfasf asdfas</span>
+<span class="cm">* asfasdfasd asdfasd sdfasdf asdfasdf sf</span>
+<span class="cm">* asdfasd asdfasd</span>
+<span class="cm">*</span>
+<span class="cm">*</span>
+<span class="cm">* cout &lt;&lt; &quot;ola&quot;;</span>
+<span class="cm">*/</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;dfsa&quot;</span><span class="p">;</span><span class="c1">//A mensagem que está entre aspas é o que será impresso na ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/cpp/comentario-cpp.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/cpp/declarar-array-cpp.html">Declaração de Arrays em C++</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kt">int</span> <span class="n">nums</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+
+    <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="n">nums</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span><span class="p">;</span>
+    <span class="n">nums</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+    <span class="n">nums</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+    <span class="n">nums</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="n">nums</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="n">nums</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
+    <span class="n">nums</span><span class="p">[</span><span class="mi">7 ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/cpp/declarar-array-cpp.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/cpp/depuracao-codigo-cpp.html">Depuração de Código C++</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
+
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/cpp/depuracao-codigo-cpp.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/cpp/depuracao-codigo-cpp-parte2.html">Depuração de Código C++ (parte II)</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
+
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Digite um numero entre 1 ate 3.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5 ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/cpp/depuracao-codigo-cpp-parte2.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/cpp/depurar-clion-cpp.html">Depurando com o Clion Código C++</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
+
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Digite um numero entre 1 ate 3.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5 ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/cpp/depurar-clion-cpp.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://www.excript.com/cpp/depurar-codeblock-cpp.html">Depurando com o Code::Block Código C++</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line">
         <table>
@@ -196,12 +394,12 @@ excript.com            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/python/operadores-in-not-in-python.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/cpp/depurar-codeblock-cpp.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://www.excript.com/python/operadores-logicos-python.html">Operadores Lógicos em Python</a></h2>
+                <h2><a  href="http://www.excript.com/cpp/estrutura-repeticao-do-while-cpp.html">Estrutura de Repetição <tt class="docutils literal"><span class="pre">do-while</span></tt> do C++</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line">
         <table>
@@ -219,13 +417,32 @@ excript.com            </a>
             </tbody>
         </table>
     </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
 
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/python/operadores-logicos-python.html">more ...</a>
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Looping DO-WHILE&quot;</span><span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">do</span><span class="p">{</span>
+        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O valor da variavel i eh: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">10</span> <span class="o">&amp;&amp;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">20 ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/cpp/estrutura-repeticao-do-while-cpp.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://www.excript.com/python/ordenamento-lista-python.html">Ordenamento de Listas em Python</a></h2>
+                <h2><a  href="http://www.excript.com/cpp/estrutura-repeticao-for-cpp.html">Estrutura de Repetição <tt class="docutils literal">for</tt> do C++</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line">
         <table>
@@ -243,104 +460,26 @@ excript.com            </a>
             </tbody>
         </table>
     </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
 
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/python/ordenamento-lista-python.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/python/palavra-chave-global-python.html">Palavra-chave <tt class="docutils literal">global</tt> em Python</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
 
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/python/palavra-chave-global-python.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/python/parametro-de-funcao-python.html">Parâmetros de Função em Python</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/python/parametro-de-funcao-python.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/python/parametro-default-python.html">Parâmeros default em Python</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/python/parametro-default-python.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://www.excript.com/python/quantidade-de-itens-lista-python.html">Quantidade de Itens em Python</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-                    <a class="btn btn-default btn-xs" href="http://www.excript.com/python/quantidade-de-itens-lista-python.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://www.excript.com/cpp/estrutura-repeticao-for-cpp.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -364,6 +503,70 @@ excript.com            </a>
                             href="http://www.excript.com/tag/curso7.html">7</a></li>
                     <li class=""><a
                             href="http://www.excript.com/tag/curso8.html">8</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso9.html">9</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso10.html">10</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso11.html">11</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso12.html">12</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso13.html">13</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso14.html">14</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso15.html">15</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso16.html">16</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso17.html">17</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso18.html">18</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso19.html">19</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso20.html">20</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso21.html">21</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso22.html">22</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso23.html">23</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso24.html">24</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso25.html">25</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso26.html">26</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso27.html">27</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso28.html">28</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso29.html">29</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso30.html">30</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso31.html">31</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso32.html">32</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso33.html">33</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso34.html">34</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso35.html">35</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso36.html">36</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso37.html">37</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso38.html">38</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso39.html">39</a></li>
+                    <li class=""><a
+                            href="http://www.excript.com/tag/curso40.html">40</a></li>
                 <li class="next"><a
                         href="http://www.excript.com/tag/curso8.html">&raquo;</a></li>
         </ul>
