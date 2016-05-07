@@ -1,5 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>excript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/claudio-rogerio-carvalho-filho.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-05T03:20:00-03:00</updated><entry><title>Potenciação e Radiciação em Python</title><link href="http://excript.com/python/potenciacao-radiciacao-python.html" rel="alternate"></link><updated>2016-07-05T03:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-05:python/potenciacao-radiciacao-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>excript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/claudio-rogerio-carvalho-filho.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-05T11:30:00-03:00</updated><entry><title>Operadores Relacionais do Python</title><link href="http://excript.com/python/operador-relacional-python.html" rel="alternate"></link><updated>2016-07-05T11:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-05:python/operador-relacional-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos os operadores relacionais em Python, isto é, os operadores utilizados para a obtenção da relação entre dois operados&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="operadores-relacionais-ou-operadores-comparativos"&gt;
+&lt;h2&gt;OPERADORES RELACIONAIS ou OPERADORES COMPARATIVOS&lt;/h2&gt;
+&lt;p&gt;Operador Relacional é todo operador que obtém a relação do membro a esquerda com o membro a sua direita.&lt;/p&gt;
+&lt;p&gt;É comum na programação A necessidade de conhecer a relação entre diversos operandos para que então, o nosso programa assuma determinada característica, ou invoque alguma funcionalidade. A linguagem Python trabalha com os operadores relacionais, também chamados de operadores comparativos, da mesma forma que a maioria das outras linguagens, tais como C, C++, Java, C# e etc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tabela-dos-operadores-relacionais"&gt;
+&lt;h2&gt;TABELA DOS OPERADORES RELACIONAIS&lt;/h2&gt;
+&lt;p&gt;Na tabela abaixo, temos os operadores relacionais disponibilizados pelo Python. Na continuação deste artigo, estudaremos cada operador isoladamente.&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="67%" /&gt;
+&lt;col width="33%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Descrição&lt;/td&gt;
+&lt;td&gt;Operador&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Maior que&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;&amp;gt;&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Menor que&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;&amp;lt;&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Igual a&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;==&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Maior ou igual a&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;&amp;gt;=&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Menor ou igual a&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;&amp;lt;=&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="operadores-relacionais-simples"&gt;
+&lt;h2&gt;OPERADORES RELACIONAIS SIMPLES&lt;/h2&gt;
+&lt;p&gt;Existem 3 relações possíveis entre 2 operandos, são elas:&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="67%" /&gt;
+&lt;col width="33%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Descrição&lt;/td&gt;
+&lt;td&gt;Operador&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Maior que&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;&amp;gt;&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Menor que&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;&amp;lt;&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Igual a&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;==&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Para obtermos a relação entre 2 membros, temos que utilizar a seguinte estrutura:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;membro&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;esquerda&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;OPERADOR&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;membro&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;direita&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;É importante observar que a inversão dos membros ocasiona na inversão do resultado da expressão, isto é, se o membro que estiver a esquerda for para a direita e vice-e-versa, a relação entre eles será o contrário.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;a&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;b&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, realizamos algumas operações entre números e caracteres, sempre utilizando as 3 comparações simples. Temos que, ou o operador a esquerda será maior, ou menor, ou então, igual ao operador a sua direita.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="operadores-relacionais-compostos"&gt;
+&lt;h2&gt;OPERADORES RELACIONAIS COMPOSTOS&lt;/h2&gt;
+&lt;p&gt;A linguagem Python disponibiliza mais 2 operadores relacionais que verificam 2 relações entre os membros. É importante observar que essas relações podem ser obtidas com o uso de conectores lógicos, isto é, com a utilização dos conectores &lt;tt class="docutils literal"&gt;and&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;or&lt;/tt&gt;.&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="67%" /&gt;
+&lt;col width="33%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Descrição&lt;/td&gt;
+&lt;td&gt;Operador&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Maior ou igual a&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;&amp;gt;=&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Menor ou igual a&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;&amp;lt;=&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Podemos verificar com os &lt;strong&gt;operadores relacionais compostos&lt;/strong&gt; se um membro é maior ou menor do que outro, ou então, se o membro é igual ao outros. Dessa forma, realizamos 2 operações numa mesma expressão o que acaba por simplificar e muito nossos programas.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;x&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;y&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No trecho de código acima, estamos verificando se os membros a esquerda são maiores, menores ou iguais aos membros a sua direita.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="relacoes-interessantes-do-python"&gt;
+&lt;h2&gt;RELAÇÕES INTERESSANTES DO PYTHON&lt;/h2&gt;
+&lt;div class="section" id="primeira-relacao"&gt;
+&lt;h3&gt;PRIMEIRA RELAÇÃO&lt;/h3&gt;
+&lt;p&gt;A primeira relação interessante, não é bem uma relação, mas sim, uma maneira de verificarmos se uma expressão é ou não verdadeira. Temos que ter em mente que o Python, SEMPRE verifica se determinada expressão é verdadeira e por consequência disso, podemos omitir a comparação com &lt;cite&gt;True&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;Por exemplo, se quisermos saber se 2 membros são iguais, não precisamos compará-los a True, veja a expressão a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c"&gt;#essa expressão equivale a expressão seguinte&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Na primeira operação, estamos verificando se o número 1 é igual a ele mesmo, logo, será impresso no Console, &lt;cite&gt;True&lt;/cite&gt; ou &lt;cite&gt;False&lt;/cite&gt;. Em seguida, repetimos a linha anterior, porém, comparamos o resultado da expressão &lt;cite&gt;1 == 1&lt;/cite&gt; com o valor &lt;cite&gt;True&lt;/cite&gt;. Ainda que não haja problema na forma que trabalhamos na segundo operação, estamos sendo redundantes, haja vista que &lt;strong&gt;toda expressão&lt;/strong&gt; será automaticamente comparada a &lt;cite&gt;True&lt;/cite&gt; e por isso, podemos omitir essa comparação.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="segunda-relacao"&gt;
+&lt;h3&gt;SEGUNDA RELAÇÃO&lt;/h3&gt;
+&lt;p&gt;Uma expressão é verdadeira quando o resultado da expressão for igual a &lt;cite&gt;True&lt;/cite&gt; ou então, igual a número inteiro &lt;cite&gt;1&lt;/cite&gt;. Logo, temos que as expressões no bloco de código a seguir, estão, realizando a mesma comparação:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Todas expressões imprimirão no Console o valor &lt;cite&gt;True&lt;/cite&gt;, então, é importante que saibamos que as palavras-chaves &lt;cite&gt;True&lt;/cite&gt; e &lt;cite&gt;False&lt;/cite&gt; na verdade, são constantes que armazenam os número 1 e 0 respectivamente.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="terceira-relacao"&gt;
+&lt;h3&gt;TERCEIRA RELAÇÃO&lt;/h3&gt;
+&lt;p&gt;Se verificarmos uma expressão composta por uma String, temos que o valor retornado será &lt;cite&gt;True&lt;/cite&gt;, caso a mesma contenha 1 ou mais caracteres, do contrário, o valor retornado será &lt;cite&gt;False&lt;/cite&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O valor de x é igual a vazio&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;A variável &amp;#39;x&amp;#39; contém caracteres &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, declaramos a variável de nome &lt;cite&gt;x&lt;/cite&gt; e em seguida utilizamos a variável &amp;quot;x&amp;quot; isoladamente numa tomada de decisão. Caso a variável &lt;cite&gt;x&lt;/cite&gt; contenha um ou mais caracteres, o bloco de código da estrutura &lt;cite&gt;if&lt;/cite&gt; será executado. Do contrário, o bloco da estrutura &lt;cite&gt;else&lt;/cite&gt; será executado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="c"&gt;#=================================&lt;/span&gt;
+&lt;span class="c"&gt;#========== eXcript.com ==========&lt;/span&gt;
+&lt;span class="c"&gt;#=================================&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;dd&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="operadores"></category><category term="relacional"></category><category term="operadores relacionais"></category><category term="blog"></category></entry><entry><title>Potenciação e Radiciação em Python</title><link href="http://excript.com/python/potenciacao-radiciacao-python.html" rel="alternate"></link><updated>2016-07-05T03:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-05:python/potenciacao-radiciacao-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1074,8 +1246,8 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Após o resultado ser apresentado, o cursor é liberado para que seja possível entrar outra instrução.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="retornando-instrucao-anteriores"&gt;
-&lt;h2&gt;RETORNANDO INSTRUÇÃO ANTERIORES&lt;/h2&gt;
+&lt;div class="section" id="retornando-instrucoes-anteriores"&gt;
+&lt;h2&gt;RETORNANDO INSTRUÇÕES ANTERIORES&lt;/h2&gt;
 &lt;p&gt;A maior crítica sobre a utilização do IDLE, sem dúvidas, está no fato das teclas de atalho para voltar a última instrução enviada. Normalmente, para retornarmos a última instrução no Prompt de Comando ou então, no Shell do Linux, utilizamos as setas para cima e para baixo. Porém, no IDLE, se utilizarmos as teclas para cima e para baixo, ocorrerá que iremos posicionar o cursor na direção pressionada.&lt;/p&gt;
 &lt;p&gt;Existe uma razão pela qual as teclas para cima e para baixo não foram utilizadas e também, rapidamente nos acostumamos com as teclas utilizadas por padrão pelo IDLE.&lt;/p&gt;
 &lt;p&gt;Alt + P - para voltar a última instrução digitada. A letra 'P' vem de &amp;quot;previous&amp;quot;.
@@ -1961,7 +2133,16 @@ Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span
 &lt;div class="section" id="qual-ano-o-python-foi-desenvolvido"&gt;
 &lt;h3&gt;QUAL ANO O PYTHON FOI DESENVOLVIDO?&lt;/h3&gt;
 &lt;p&gt;A Linguagem de Programação &lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt;, vem sendo desenvolvida desde 1991. Novas versões sempre são lançadas e estas trazem correções, alterações na sintaxe, implementações, utilitários e etc.&lt;/p&gt;
-&lt;!-- Quais as características que definem o Python_?
+
+&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+&lt;!-- Teste1 --&gt;
+&lt;ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-5466436161806566"
+     data-ad-slot="9148172734"&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;&lt;!-- Quais as características que definem o Python_?
 O Python_ realmente é uma boa linguagem?
 Quais os recursos do Python?
 O que faz da linguagem Python_ ser especial? --&gt;
@@ -1991,7 +2172,16 @@ O que faz da linguagem Python_ ser especial? --&gt;
 &lt;/div&gt;
 &lt;div class="section" id="lista-das-aulas"&gt;
 &lt;h2&gt;LISTA DAS AULAS&lt;/h2&gt;
-&lt;/div&gt;
+
+&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+&lt;!-- Teste1 --&gt;
+&lt;ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-5466436161806566"
+     data-ad-slot="9148172734"&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;&lt;/div&gt;
 </summary><category term="python"></category><category term="curso"></category><category term="aula"></category><category term="curso de python"></category><category term="aula de python"></category><category term="eXcript"></category><category term="eXcript Brasil"></category><category term="blog"></category></entry><entry><title>Curso de Java</title><link href="http://excript.com/curso-de-java.html" rel="alternate"></link><updated>2016-01-05T16:50:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-05:curso-de-java.html</id><summary type="html">&lt;div class="section" id="sobre-o-curso"&gt;
 &lt;h2&gt;SOBRE O CURSO&lt;/h2&gt;
 &lt;p&gt;O &lt;a class="reference internal" href="#curso-de-java"&gt;Curso de Java&lt;/a&gt; da &lt;a class="reference external" href="http://www.excript.com/"&gt;eXcript&lt;/a&gt; parte do princípio que o aluno está iniciando na programação e assim, todos os passos iniciais são descritos detalhadamente a fim de contemplar a todos os níveis.&lt;/p&gt;
@@ -17074,125 +17264,7 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category></entry><entry><title>Operadores Relacionais do Python</title><link href="http://excript.com/python/operador-relacional-python.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/operador-relacional-python.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos os operadores relacionais em Python, isto é, como podemos verificar a relação entre 2 operandos numa expressão.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="operadores-relacionais-ou-operadores-comparativos"&gt;
-&lt;h2&gt;OPERADORES RELACIONAIS ou OPERADORES COMPARATIVOS&lt;/h2&gt;
-&lt;p&gt;Operador Relacional é todo operador que obtém a relação do membro a esquerda com o membro a sua direita.&lt;/p&gt;
-&lt;p&gt;É comum na programação é necessidade de conhecer a relação entre diversos operandos para que então, o nosso programa assuma determinada característica. A linguagem Python trabalha com os operadores relacionais, também chamados de operadores comparativos, da mesma forma que a maioria das outras linguagens, tais como C, C++, Java, C# e etc.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="operadores-relacionais-simples"&gt;
-&lt;h2&gt;OPERADORES RELACIONAIS SIMPLES&lt;/h2&gt;
-&lt;p&gt;Existem 3 relações possíveis entre 2 operandos, são elas:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Maior que &lt;strong&gt;&amp;gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Menor que &lt;strong&gt;&amp;lt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Igual que &lt;strong&gt;==&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Para obtermos a relação entre 2 membros, temos que utilizar a seguinte estrutura:&lt;/p&gt;
-&lt;blockquote&gt;
-&amp;lt;&lt;tt class="docutils literal"&gt;membro a esquerda&lt;/tt&gt;&amp;gt; &lt;strong&gt;OPERADOR&lt;/strong&gt; &amp;lt;&lt;tt class="docutils literal"&gt;membro a direita&lt;/tt&gt;&amp;gt;&lt;/blockquote&gt;
-&lt;p&gt;É importante observar que inversão dos membros ocasiona na inversão do resultado da expressão, isto é, se o membro que estiver a esquerda for para a direita e vice-e-versa, a relação entre eles será o contrário.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;a&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;b&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, realizamos algumas operações entre números e caracteres, sempre utilizando as 3 comparações simples. Assim, temos que ou o operador a esquerda será maior, ou menor, ou então, igual ao operador a sua direita.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="operadores-relacionais-compostos"&gt;
-&lt;h2&gt;OPERADORES RELACIONAIS COMPOSTOS&lt;/h2&gt;
-&lt;p&gt;A linguagem Python disponibiliza mais 2 operadores relacionais que verificam 2 relações entre os membros. É importante observar que essas relações podem ser obtidas com o uso de conectores lógicos, isto é, com a utilização dos conectores &lt;tt class="docutils literal"&gt;and&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;or&lt;/tt&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Maior ou igual a &lt;tt class="docutils literal"&gt;&amp;gt;=&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;Menor ou igual a &lt;tt class="docutils literal"&gt;&amp;lt;=&lt;/tt&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Podemos verificar com os operadores relacionais compostos se um membro é maior ou menor do que outro, ou então, se o membro é igual ao outros. Dessa forma, realizamos 2 operações numa mesma expressão o que acaba por simplificar e muito nossos programas.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;x&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;y&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No trecho de código acima, estamos verificando se os membros a esquerda são maiores, menores ou iguais aos membros a sua direita.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="relacoes-interessantes-do-python"&gt;
-&lt;h2&gt;RELAÇÕES INTERESSANTES DO PYTHON&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div class="section" id="primeira-relacao"&gt;
-&lt;h2&gt;PRIMEIRA RELAÇÃO&lt;/h2&gt;
-&lt;p&gt;A primeira relação interessante, não é bem uma relação, mas sim, uma maneira de verificarmos se uma expressão é ou não verdadeira. Temos que ter em mente que o Python, SEMPRE verifica se determinada expressão é verdadeira e por consequência disso, podemos omitir a comparação com True.&lt;/p&gt;
-&lt;p&gt;Por exemplo, se quisermos saber se 2 membros são iguais, não precisamos compará-los a True, veja a expressão a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c"&gt;#essa expressão equivale a expressão seguinte&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Na primeira operação, estamos verificando se o número 1 é igual a ele mesmo, logo, será impresso no Console, &lt;tt class="docutils literal"&gt;True&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;False&lt;/tt&gt;. Em seguida, repetimos a linha anterior, porém, comparamos o resultado da expressão &lt;tt class="docutils literal"&gt;1 == 1&lt;/tt&gt; com o valor &lt;tt class="docutils literal"&gt;True&lt;/tt&gt;. Ainda que não haja problema na forma que trabalhamos na segundo operação, estamos trabalhando de maneira redundante, haja vista que &lt;strong&gt;toda expressão&lt;/strong&gt; será automaticamente comparada a &lt;tt class="docutils literal"&gt;True&lt;/tt&gt; e por isso, devemos omitir esse tipo de comparação!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="segunda-relacao"&gt;
-&lt;h2&gt;SEGUNDA RELAÇÃO&lt;/h2&gt;
-&lt;p&gt;Uma expressão é verdadeira quando o resultado da expressão for igual a &lt;tt class="docutils literal"&gt;True&lt;/tt&gt; ou então, igual a número inteiro &lt;tt class="docutils literal"&gt;1&lt;/tt&gt;. Logo, podemos, ambas expressões no bloco de código a seguir, estão, realizando a mesma comparação:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Todas expressões imprimirão no Console o valor &lt;tt class="docutils literal"&gt;True&lt;/tt&gt;, então, é importante que saibamos que as palavras-chaves &lt;tt class="docutils literal"&gt;True&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;False&lt;/tt&gt; na verdade, são constantes que armazenam os número 1 e 0 respectivamente.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="terceira-relacao"&gt;
-&lt;h2&gt;TERCEIRA RELAÇÃO&lt;/h2&gt;
-&lt;p&gt;Se verificarmos se uma &lt;tt class="docutils literal"&gt;String&lt;/tt&gt; que não contém caracteres é verdadeiro ou falso, teremos que o valor retornado será falso. Caso não haja muita lógica, pense que podemos, ao invés de comparar se a quantidade de caracteres contidos numa String é maior do que zero, podemos simplesmente verificar se a String em questão é verdadeira, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O valor de x é igual a vazio&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;A variável &amp;#39;x&amp;#39; contém caracteres &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, declaramos a variável de nome &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; e em seguida, utilizamos a variável &amp;quot;x&amp;quot; isoladamente numa tomada de decisão. Caso a variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; contenha um ou mais caracteres, o bloco de código da estrutura &lt;tt class="docutils literal"&gt;if&lt;/tt&gt; será executada, do contrário, isto é, caso &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; não possua caracteres, seja uma String vazia, o bloco de instrução da estrutura &lt;tt class="docutils literal"&gt;else&lt;/tt&gt; é que será executado.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="c"&gt;#=================================&lt;/span&gt;
-&lt;span class="c"&gt;#========== eXcript.com ==========&lt;/span&gt;
-&lt;span class="c"&gt;#=================================&lt;/span&gt;
-&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
-&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;elif&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;dd&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="operadores"></category><category term="relacional"></category><category term="operadores relacionais"></category></entry><entry><title>Operadores Relacionais do Python (parte 2)</title><link href="http://excript.com/python/operador-relacional-python-parte2.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/operador-relacional-python-parte2.html</id><summary type="html">&lt;br&gt;
+</summary><category term="curso"></category><category term="python"></category></entry><entry><title>Operadores Relacionais do Python (parte 2)</title><link href="http://excript.com/python/operador-relacional-python-parte2.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/operador-relacional-python-parte2.html</id><summary type="html">&lt;br&gt;
     &lt;div class="admonitionblock note data-line"&gt;
         &lt;table&gt;
             &lt;tbody&gt;

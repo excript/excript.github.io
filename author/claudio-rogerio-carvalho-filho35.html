@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ptb" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+
+<html lang="pt-br"  xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" >
 <head>
     <title>Articles by Cláudio Rogério Carvalho Filho - excript</title>
     <!-- Using the latest rendering mode for IE -->
@@ -79,6 +80,52 @@ excript            </a>
 <div class="container container-content">
     <div class="row">
         <div class="col-sm-9">
+            <article>
+                <h2><a  href="http://excript.com/php/encapsulamento-php.html">Encapsulamento em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x"># ENCAPSULAMENTO</span>
+
+<span class="x">class Pessoa{</span>
+
+<span class="x">    private $nome;</span>
+
+<span class="x">    function setNome($nome){</span>
+<span class="x">        $this -&gt; nome = $nome;</span>
+<span class="x">    }</span>
+<span class="x">    function getNome(){</span>
+<span class="x">        return $this -&gt; nome;</span>
+<span class="x">    }</span>
+
+<span class="x">}</span>
+
+<span class="x">$p1 = new Pessoa();</span>
+<span class="x">//$p1 -&gt; setNome(&quot;eXcript&quot;);</span>
+<span class="x">$p1 -&gt; nome = &quot;&quot;;</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/encapsulamento-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/encapsulamento-php-parte2.html">Encapsulamento em PHP (parte II)</a></h2>
                 <div class="summary"><br>
@@ -389,41 +436,6 @@ excript            </a>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/foreach-alterando-valores.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/foreach-como-usar.html">O foreach em PHP - Como usar?</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#ESTRUTURA FOREACH II</span>
-
-<span class="x">$lista = [&quot;Domingo&quot;, &quot;Segunda&quot;, &quot;Terça&quot;, &quot;Quarta&quot;, &quot;Quinta&quot;, &quot;Sexta&quot;, &quot;Sabado&quot;];</span>
-
-<span class="x">foreach($lista as $chave =&gt; $valor){</span>
-<span class="x">    echo &quot;$chave: $valor \n&quot;;</span>
-<span class="x">}</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/foreach-como-usar.html">more ...</a>
                 </div>
             </article>
             <hr/>
