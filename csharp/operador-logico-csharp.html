@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"  xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head>
+    <title>Operadores Lógicos em C# - excript</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="Vi7WdSsBR9oK2RjK_6E8OrtAfzA_mVlNrhlDjt7LXZ0" />
+	<!--<link href="https://plus.google.com/" rel="publisher">	-->
+
+
+
+<link rel="canonical" href="http://excript.com/csharp/operador-logico-csharp.html">
+
+        <meta name="author" content="Cláudio Rogério Carvalho Filho" />
+        <meta name="keywords" content="curso,csharp" />
+    <meta name="description" content="Nesta aula estudaremos os operadores lógicos do C#, como também, as suas utilizações, significados e a maneira como devemos utilizá-los. Também desenvolveremos exemplos demonstrando o funcionamento dos Conectivos Lógicos, ligando expressões que possuem Operadores Relacionais." />
+
+        <meta property="og:site_name" content="excript" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Operadores Lógicos em C#"/>
+        <meta property="og:url" content="http://excript.com/csharp/operador-logico-csharp.html"/>
+
+        <meta property="og:description" content="Nesta aula estudaremos os operadores lógicos do C#, como também, as suas utilizações, significados e a maneira como devemos utilizá-los. Também desenvolveremos exemplos demonstrando o funcionamento dos Conectivos Lógicos, ligando expressões que possuem Operadores Relacionais."/>
+
+        <meta property="article:published_time" content="2016-01-01" />
+            <meta property="article:section" content="curso csharp" />
+            <meta property="article:tag" content="curso" />
+            <meta property="article:tag" content="csharp" />
+            <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
+            <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
+
+
+    <link rel="stylesheet" href="http://excript.com/theme/css/asciidoctor-default.css" type="text/css"/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://excript.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://excript.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://excript.com/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://excript.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://excript.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="excript ATOM Feed"/>
+
+        <link href="http://excript.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="excript RSS Feed"/>
+
+
+        <link href="http://excript.com/feeds/curso-csharp.atom.xml" type="application/atom+xml" rel="alternate"
+              title="excript curso csharp ATOM Feed"/>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://excript.com/" class="navbar-brand">
+excript            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/tag/blog.html">blog</a></li>
+                    <li><a href="/cursos.html">cursos</a></li>
+                    <li><a href="/pages/about.html">quem somos</a></li>
+                    <li><a href="/pages/contato.html">contato</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://excript.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container container-content">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://excript.com/csharp/operador-logico-csharp.html"
+                       rel="bookmark"
+                       title="Permalink to Operadores Lógicos em C#">
+                        OPERADORES LÓGICOS EM C#
+                    </a>
+                </h1>
+
+                    <h3 class="h3curso">
+	                    <a href="http://excript.com/csharp/operador-logico-csharp.html"
+	                       rel="bookmark"
+	                       title="Permalink to Operadores Lógicos em C#">
+	                        CURSO C#
+	                    </a>
+                    </h3>
+            </header>
+            <div class="entry-content">
+
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+
+        <span class="label label-default"></span>
+        <span class="published">
+            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01 janeiro 2016</time>
+        </span>
+
+
+
+	            <span class="label label-default"></span>
+	            por <a href="http://excript.com/author/claudio-rogerio-carvalho-filho.html">Cláudio Rogério Carvalho Filho</a>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" ><a data-toggle="tab" href="#indice">ÍNDICE</a></li>
+			<li role="presentation" class="active"><a data-toggle="tab" href="#artigo">ARTIGO</a></li>
+			<li role="presentation"><a data-toggle="tab" href="#videoaula">VIDEOAULA</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane" id="indice">
+
+
+<table class="table table-hover">
+        <thead>
+        <tr>
+            <th>NOME</th>
+            <th>DURAÇÃO</th>
+        </tr>
+        </thead>
+        <tbody><tr>
+                            <td><a href="http://excript.com/curso-csharp.html" >Curso de C#</a></td>
+                            <td><a href="http://excript.com/curso-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/introducao-csharp.html" >Introdução à Linguagem C#</a></td>
+                            <td><a href="http://excript.com/csharp/introducao-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/console-application-csharp.html" >Console Application em C#</a></td>
+                            <td><a href="http://excript.com/csharp/console-application-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/csharp-project.html" >C# Project</a></td>
+                            <td><a href="http://excript.com/csharp/csharp-project.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/comentario-csharp.html" >Comentários em C#</a></td>
+                            <td><a href="http://excript.com/csharp/comentario-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/variavel-csharp.html" >Variáveis em C#</a></td>
+                            <td><a href="http://excript.com/csharp/variavel-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/tipo-dados-csharp.html" >Tipos de Dados em C#</a></td>
+                            <td><a href="http://excript.com/csharp/tipo-dados-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/caracteristica-variavel-csharp.html" >Características das Variáveis em C#</a></td>
+                            <td><a href="http://excript.com/csharp/caracteristica-variavel-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/entrada-de-dados-csharp.html" >Entrada de Dados em C#</a></td>
+                            <td><a href="http://excript.com/csharp/entrada-de-dados-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/conversao-dados-csharp.html" >Conversão de Dados em C#</a></td>
+                            <td><a href="http://excript.com/csharp/conversao-dados-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/calculadora-csharp.html" >Calculadora em C#</a></td>
+                            <td><a href="http://excript.com/csharp/calculadora-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/definicao-linguagem-csharp.html" >Definições da Linguagem C#</a></td>
+                            <td><a href="http://excript.com/csharp/definicao-linguagem-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/tomada-de-decisao-csharp.html" >Tomada de Decisão em C#</a></td>
+                            <td><a href="http://excript.com/csharp/tomada-de-decisao-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/tomada-decisao-csharp-parte2.html" >Tomada de Decisão em C# (Parte II)</a></td>
+                            <td><a href="http://excript.com/csharp/tomada-decisao-csharp-parte2.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/estrutura-else-senao-csharp.html" >Estrutura <tt class="docutils literal">else</tt> senão</a></td>
+                            <td><a href="http://excript.com/csharp/estrutura-else-senao-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/operador-aritmetico-csharp.html" >Operadores Aritméticos do C#</a></td>
+                            <td><a href="http://excript.com/csharp/operador-aritmetico-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/operador-relacional-csharp.html" >Operadores Relacionais do C#</a></td>
+                            <td><a href="http://excript.com/csharp/operador-relacional-csharp.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/operadores-relacionais-csharp-parte2.html" >Operadores Relacionais do C# (parte 2)</a></td>
+                            <td><a href="http://excript.com/csharp/operadores-relacionais-csharp-parte2.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/csharp/operador-logico-csharp.html" >Operadores Lógicos em C#</a></td>
+                            <td><a href="http://excript.com/csharp/operador-logico-csharp.html" ></a></td>
+                        </tr>        </tbody>
+            </table>
+        
+
+			</div>
+
+			<div class="tab-pane active" id="artigo">
+				<div class="row">
+					<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>Os <strong>Operadores Lógicos</strong>, também chamados de <strong>Conectivos Lógicos</strong> são, junto com os <strong>Operadores Relacionais</strong>, a base lógica da filosofia, matemática e programação. Por isso, estes conceitos são as ferramentas que utilizaremos na construção de praticamente todas condições. Compreender e saber aplicar ambos conceitos, significa, ter domínio da lógica, e por conseguinte, o entendimento da programação.</p>
+<p>Enquanto os <strong>Operadors Relacionais</strong> estabelecem as relações, os <strong>Conectivos</strong> ligam os <strong>Valores Lógicos</strong> das relações dando origem a novas expressões, isto é, expressões que contém sub-expressões.</p>
+<p>Programar é dizer ao computador o que deve ser feito, e os <strong>Conectivos Lógicos</strong> e os <strong>Operadores Relacionais</strong> são os que decidem, analisando valores, quais blocos devem ser executados.</p>
+</div>
+<div class="section" id="conectivos-logicos">
+<h2>CONECTIVOS LÓGICOS</h2>
+<p>Os <strong>operadores lógicos</strong> unem 2 ou mais expressões, dando origem a uma nova expressão que será avaliada independentemente. O resultado lógico será a avaliação de cada subexpressão. Toda expressão lógica avaliada resulta num valor chamado de valor lógico.</p>
+<p>Com os operadores relacionais verificamos relações entre o operando a esquerda com o operando a direita do operador relacional. Como resposta a cada expressão avaliada, teremos um valor Booleano, isto é, verdadeiro (True) ou falos (False).</p>
+<p>Os <strong>conectivos lógicos</strong> permitem a união de 2 ou mais expressões, e assim, temos uma nova expressão e seu valor lógico será o resultado das sub-expressões juntas.</p>
+</div>
+<div class="section" id="valor-logico">
+<h2>VALOR LÓGICO</h2>
+<p>O <strong>valor lógico</strong> é a base de toda a computação. Há 2 valores lógicos possíveis: verdadeiro ou falso, também chamado de ligado ou desligado. Os 2 valores lógicos possíveis são representados matematicamente pelos números 0 (falso) e 1 (true).</p>
+<p>Toda expressão avaliada na computação de maneira geral, resulta num <strong>valor lógico</strong>, isto é, ou a expressão é verdadeira, ou a expressão é falsa.</p>
+</div>
+<div class="section" id="id1">
+<h2>CONECTIVOS LÓGICOS</h2>
+<p>As linguagens de programação, utilizam os <strong>conectivos lógicos</strong> da lógica formal, ou melhor da lógica Aristotélica para a construção de expressões. Existem 2 conectivos e mesmo que não os conheçamos como <strong>conectivos lógicos</strong>, utilizamo-os constantemente.</p>
+<ol class="arabic simple">
+<li>Conectivo de conjunção</li>
+<li>Conectivo de disjunção</li>
+</ol>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="31%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Expressão</td>
+<td>Português</td>
+<td>C#</td>
+</tr>
+<tr><td>conjunção</td>
+<td><tt class="docutils literal">E</tt></td>
+<td><tt class="docutils literal">&amp;&amp;</tt></td>
+</tr>
+<tr><td>disjunção</td>
+<td><tt class="docutils literal">OU</tt></td>
+<td><tt class="docutils literal">||</tt></td>
+</tr>
+</tbody>
+</table>
+<p>Por exemplo, a simples frase <tt class="docutils literal">A e B são caracteres iguais</tt> implica numa expressão lógica que foi representada textualmente. Porém, está pode ser facilmente escrita matemáticamente, ou então, com o uso qualquer linguagem de programação.</p>
+<p>É por isso que temos que olhar para as Linguagens de Programação, como sendo formas ou estilos de <strong>Notação</strong>, que utilizamos para representar e em seguida executar expressões numa sequência determinada.</p>
+<p>A notação matemática não é diferente, porém, a mesma é comumente utilizada para representar <strong>sentenças matemáticas</strong>, logo, é uma notação que possui um objetivo diferente e que tem um propósito diferente. A linguagem C# não permite não contempla a notação matemática, por isso, temos que utilizar a notação aqui estudada.</p>
+<p>Por fim, os <strong>conectivos lógicos</strong> devem ser entendidos como ferramentas notacionais utilizadas para unir expressões.</p>
+</div>
+<div class="section" id="avaliacao-de-expressoes">
+<h2>AVALIAÇÃO DE EXPRESSÕES</h2>
+<p>O interpretador .NET avalia cada proposição (expressão) isoladamente e atribui a esta um dos 2 valores lógicos.</p>
+<p>Por padrão, <strong>todas as expressão são avaliadas</strong> se são ou não verdadeiras.</p>
+</div>
+<div class="section" id="tabela-de-valores-logicos">
+<h2>TABELA DE VALORES LÓGICOS</h2>
+<p>A <strong>Tabela de Valores Lógicos</strong> é uma tabela que mostra o resultado da avaliação de 2 valores lógicos. É imporante observar que <strong>essa tabela NÃO uma convenção</strong>, mas sim, o resultado da dedução lógica e que você pode facilmente comprovar cada resultado através da analise de cada proposições.</p>
+<div class="section" id="tabela-com-o-conectivo-de-conjuncao-e">
+<h3>TABELA COM O CONECTIVO DE CONJUNÇÃO <tt class="docutils literal">E</tt></h3>
+<p>Na tabela a seguir está sendo comparado 2 valores lógicos unidos pelo conectivo <tt class="docutils literal">E</tt>. Devemos ler cada linha da seguinte maneira:</p>
+<p>O valor lógico de (<strong>X</strong> e <strong>Y</strong>) é <strong>Z</strong>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="60%" />
+<col width="40%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Expressão</td>
+<td>Resultado</td>
+</tr>
+<tr><td>True <strong>E</strong> True</td>
+<td><strong>True</strong></td>
+</tr>
+<tr><td>True <strong>E</strong> False</td>
+<td><strong>False</strong></td>
+</tr>
+<tr><td>False <strong>E</strong> True</td>
+<td><strong>False</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tabela-com-o-conectivo-de-disjuncao-ou">
+<h3>TABELA COM O CONECTIVO DE DISJUNÇÃO <tt class="docutils literal">OU</tt></h3>
+<p>Na tabela a seguir está sendo comparado 2 valores lógicos unidos pelo conectivo <tt class="docutils literal">OU</tt>. Devemos ler cada linha da seguinte maneira:</p>
+<p>O valor lógico de (<strong>X</strong> ou <strong>Y</strong>) é <strong>Z</strong>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="60%" />
+<col width="40%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Expressão</td>
+<td>Resultado</td>
+</tr>
+<tr><td>True <strong>OU</strong> False</td>
+<td><strong>True</strong></td>
+</tr>
+<tr><td>False <strong>OU</strong> True</td>
+<td><strong>True</strong></td>
+</tr>
+<tr><td>True <strong>OU</strong> True</td>
+<td><strong>True</strong></td>
+</tr>
+<tr><td>False <strong>OU</strong> False</td>
+<td><strong>False</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="o-conectivo-de-conjuncao-e">
+<h2>O CONECTIVO DE CONJUNÇÃO <tt class="docutils literal">E</tt></h2>
+<p>O <strong>Conectivo Lógico de Conjunção</strong> <tt class="docutils literal">||</tt> une a expressão a sua esquerda com a expressão a sua direita. Expressões com o uso do <strong>Conectivo de Conjunção</strong> dão origem a frases em Português, mais ou menos assim: <strong>X</strong> é verdadeiro e <strong>Y</strong> é verdadeiro?</p>
+<p>Nas situações em que <strong>A</strong> for verdadeiro e <strong>B</strong> também, o resultado, segundo a tabela lógica, será também verdadeiro.</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span> <span class="p">);</span>
+</pre></div>
+<p>No exemplo acima, temos uma <tt class="docutils literal">expressão lógica composta</tt> constituida por 2 expressões lógicas simples e ligadas pelo <tt class="docutils literal">conectivo de conjunção</tt>.</p>
+<p>Primeira expressão simples : (var1 == 0)
+Segunda expressão simples: (var1 == 0)
+Conectivo lógico de conjunção: <strong>&amp;&amp;</strong></p>
+<p>Para analisarmos uma <tt class="docutils literal">expressão lógica composta</tt>, precisamos antes, analisar suas <tt class="docutils literal">expressões lógicas simples</tt>.</p>
+<p>A primeira expressão, está perguntando se o valor da variável <tt class="docutils literal">x</tt> é maior do que zero. A variável <tt class="docutils literal">x</tt> está declarada na linha acima e inicializada com o valor 1, por isso, a primeira expressão é verdadeira.</p>
+<p>A segunda expressão, pergunta se o valor da variável <tt class="docutils literal">x</tt> é menor do que 100. O valor da variável <tt class="docutils literal">x</tt> é igual a 1 e por isso é menor do que 100. Analisado ambas expressões,acabamos por ter uma nova expressão, como pode ser visto abaixo.</p>
+<div class="highlight"><pre><span class="p">(</span><span class="n">True</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span>
+</pre></div>
+<p>No código acima, temos a mesma expressão do exemplo anterior, porém, substituírmos as duas <strong>expressões lógicas simples</strong> pelos seus respectivos <strong>valores lógicos</strong>, isto é, o valor decorrente da <strong>análise lógica</strong>.</p>
+<p>A expressão <tt class="docutils literal">(True) &amp;&amp; (True)</tt> se comparada com a <strong>Tabela Lógica de Valores</strong>, tem-se que o valor decorrente dessa segunda análise, constituida por 2 valores lógicos ligados pelo <strong>conectivo de ligação E</strong>, será o <strong>valor lógico</strong> <tt class="docutils literal">True</tt>.</p>
+</div>
+<div class="section" id="conectivo-ou">
+<h2>CONECTIVO ( OU )</h2>
+<p>O <strong>conectivo lógico de disjunção</strong> <strong>OU</strong> liga a expressão a sua esquerda a expressão a sua direita. Expressões com o uso do <strong>conectivo de disjunção</strong> dão origem a frases em Português, mais ou menos assim: <strong>X</strong> é verdadeiro ou <strong>Y</strong> é verdadeiro?</p>
+<p>O <strong>operador lógico OU</strong> sempre precisará que uma das 2 <strong>expressões simples</strong> avaliadas sejam verdadeiras para que avaliação seja verdadeira. No caso onde ambas <strong>expressões simples</strong> forem verdadeiras, o resultado também será verdadeiro, porém, se ambas expressões forem falsas, o resultado lógico será falso.</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">10</span><span class="p">)</span> <span class="p">||</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span>
+</pre></div>
+<p>A <strong>expressão lógica composta</strong> que temos no código acima, será desmembrada como estudado anteriormente, e agora, para que a avaliação seja verdadeira, uma das 2 expressões precisam ser verdadeiras.</p>
+<p>A primeira expressão verifica se <tt class="docutils literal">(x &gt; 10)</tt>. A variável``x`` está declarada na linha acima e inicializada com o valor igual a 1, logo, essa expressão é falsa, até porque, o valor de <tt class="docutils literal">x</tt> <strong>não é maior</strong> do que 10.</p>
+<p>A segunda expressão <tt class="docutils literal">(x &lt; 100)</tt> está perguntando se o valor da variável <tt class="docutils literal">x</tt> <strong>é menor</strong> do que o número 100. Essa expressão é verdadeira, até porque, o número 1 <strong>é menor</strong> do que o número 100.</p>
+<p>No código a seguir, temos a expressão que será originda a partir do código anterior.</p>
+<div class="highlight"><pre><span class="p">(</span><span class="n">False</span><span class="p">)</span> <span class="p">||</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span>
+</pre></div>
+<p>Agora, temos que o primeiro <strong>valor lógico</strong> é falso, enquanto o segundo é verdadeiro. Esses valores estão ligados pelo <strong>conectivo de disjunção</strong> utilizado para avaliar se uma das expressões é verdadeira. Como o segundo valor lógico é verdadeiro, o valor decorrente dessa <strong>análise lógica</strong> será verdadeiro.</p>
+</div>
+<div class="section" id="expressoes-simples-e-compostas">
+<h2>EXPRESSÕES SIMPLES E COMPOSTAS</h2>
+<p>Os <strong>operadores relacionais</strong> obtém a relação entre os operandos e por isso, podemos chamar esse tipo de expressão como sendo, <strong>expressões simples</strong>.</p>
+<p>As <strong>expressões compostas</strong>, por sua vez, são a união de 2 ou mais expressões simples e ligadas por um <strong>conectivo lógico</strong>. A seguir, temos um exemplo utilizando o <strong>conectivo lógico de conjunção</strong> unindo assim, 2 expressões e dando origem a uma nova <strong>expressão lógica</strong>.</p>
+<div class="highlight"><pre>//  EXEMPLO
+(isso) E (isso)
+
+// A EXPRESSAO ACIMA ORIGIOU:
+x E y
+</pre></div>
+<p>Como podemos ver, em ambos exemplos, estamos unindo 2 membros, mas não estamos perguntando nada. Porém, a frase correta e que é utilizada pela grande maioria das linguagens de programação, senão todas, é a seguinte:</p>
+<p><tt class="docutils literal">&quot;A&quot; é verdadeiro e &quot;B&quot; é verdadeiro</tt>. Chamamos isso de <tt class="docutils literal">expressão lógica</tt> ou melhor, <tt class="docutils literal">expressão lógica composta</tt> até porque, a expressão se origina de duas outras expressões.</p>
+</div>
+<div class="section" id="construindo-expressoes">
+<h2>CONSTRUÍNDO EXPRESSÕES</h2>
+<p>A linguagem C# possui algumas regras sintáticas para uso dos <strong>Conectivos Lógicos</strong>.
+Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com parentêsis, por exemplo:</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="p">&gt;=</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">num</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>No código acima, no cabeçalho da tomada de decisão, definimos 2 expressões. A primeira <tt class="docutils literal">num &gt;= 0</tt> e a segunda <tt class="docutils literal">num &lt;= 10</tt>. Devido ao fato que ambas expressões foram ligadas com um <strong>Conectivo Lógico</strong>, foi necessário envolver a expressão originada com parentêsis.</p>
+<p>Da mesma forma, não é permitido isolar cada expressão sem não envolver ambas com parentêsis. O código a seguir não compila, até porque, as expressões que estão sendo ligadas pelo operador <tt class="docutils literal">&amp;&amp;</tt> não estão agrupadas com parentêsis.</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">num</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>O código a seguir, corrige o problema do código acima, isolando cada expressão com parentêsis e delimitando a expressão resultante também.</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">num</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">num</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">)</span> <span class="p">)</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Aula</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">//=========== eXcript.com ===========</span>
+            <span class="c1">//======== NetCoders.com.br  ========</span>
+
+            <span class="c1">//CONECTIVOS LÓGICOS</span>
+
+            <span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Informe um número no intervalo de 20 à 30.&quot;</span><span class="p">);</span>
+            <span class="n">num</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">()</span> <span class="p">);</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">num</span> <span class="p">&gt;</span> <span class="m">20</span> <span class="p">&amp;&amp;</span> <span class="n">num</span> <span class="p">&lt;</span> <span class="m">30</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;O número está no intervalo.&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Número incorreto!&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+
+				</div>
+			</div>
+
+
+			<div class="tab-pane" id="videoaula">
+				<div class="panel panel-default panel-aulas">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe
+								class=class="embed-responsive-item"
+								src="https://www.youtube.com/embed/"
+								frameborder="0"
+								allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+<br>
+<br>
+<span class="label label-default"></span>
+Tags
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/csharp.html">csharp</a>            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comentários</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'csharp/operador-logico-csharp';
+                var disqus_url = 'http://excript.com/csharp/operador-logico-csharp.html';
+
+            var disqus_config = function () {
+                this.language = "ptb";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Por favor, ative o JavaScript para visualizar os comentários <a href="http://disqus.com/?ref_noscript"> disponibilizado por Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+	    <li class="li-sidebar">
+			<div class="fb-page" data-href="https://www.facebook.com/excript/" data-width="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/excript/"><a href="https://www.facebook.com/excript/">eXcript</a></blockquote></div></div>
+	    </li>
+
+	    <li class="li-sidebar">
+			<script src="https://apis.google.com/js/platform.js"></script>
+
+			<script>
+			  function onYtEvent(payload) {
+			    if (payload.eventType == 'subscribe') {
+			      // Add code to handle subscribe event.
+			    } else if (payload.eventType == 'unsubscribe') {
+			      // Add code to handle unsubscribe event.
+			    }
+			    if (window.console) { // for debugging only
+			      window.console.log('YT event: ', payload);
+			    }
+			  }
+			</script>
+
+			<div class="g-ytsubscribe" data-channel="excriptvideo" data-layout="full" data-count="default" data-onytevent="onYtEvent"></div>
+	    </li>
+
+	    <li class="li-sidebar">
+
+		    <!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+			<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'pt-BR'}
+			</script>
+
+			<!-- Posicione esta tag onde você deseja que o widget apareça. -->
+			<div class="g-page" data-width="200" data-href="//plus.google.com/u/0/102371115481264098253" data-rel="publisher"></div>
+
+	    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+	<div class="container">
+		
+
+		<div class="row">
+			<p class="site-info text-center">
+
+			</p><div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h5>eXcript</h5>
+						<p>
+							A eXcript é um projeto de produção audiovisual de conteúdo técnico com foco no autodidatismo.
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>CURSOS</h5>
+						<ul>
+							<li><a href="curso-de-python.html">PYTHON</a></li>
+							<li><a href="curso-de-java.html">JAVA</a></li>
+							<li><a href="curso-php.html">PHP</a></li>
+							<li><a href="curso-cpp.html">C++</a></li>
+							<li><a href="curso-c.html">C</a></li>
+							<li><a href="curso-de-android.html">ANDROID</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>SOCIAL</h5>
+						<ul>
+							<li><a href="http://plus.google.com/+excriptvideo">GOOGLE+</a></li>
+							<li><a href="http://www.facebook.com/excript">FACEBOOK</a></li>
+							<li><a href="http://twitter.com/eXcriptBrasil">TWITTER</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<p></p>
+		</div>
+	</div>
+</footer>
+<script src="http://excript.com/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://excript.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://excript.com/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-72583776-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1684671528414521";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>

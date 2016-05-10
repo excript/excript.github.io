@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"  xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head>
+    <title>Arrays em C - excript</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="Vi7WdSsBR9oK2RjK_6E8OrtAfzA_mVlNrhlDjt7LXZ0" />
+	<!--<link href="https://plus.google.com/" rel="publisher">	-->
+
+
+
+<link rel="canonical" href="http://excript.com/drafts/linguagem-c/array-c.html">
+
+        <meta name="author" content="Cláudio Rogério Carvalho Filho" />
+        <meta name="keywords" content="curso,c" />
+    <meta name="description" content="Nesta aula estudaremos a estrutura de dados Array. Teremos os conceitos iniciais sobre os Arrays, em seguida, aprenderemos onde e o porque devemos trabalhar com essa estrutura e por fim, aprenderemos a declaração de Arrays e a definir o tipo dos elementos." />
+
+        <meta property="og:site_name" content="excript" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Arrays em C"/>
+        <meta property="og:url" content="http://excript.com/drafts/linguagem-c/array-c.html"/>
+
+        <meta property="og:description" content="Nesta aula estudaremos a estrutura de dados Array. Teremos os conceitos iniciais sobre os Arrays, em seguida, aprenderemos onde e o porque devemos trabalhar com essa estrutura e por fim, aprenderemos a declaração de Arrays e a definir o tipo dos elementos."/>
+
+        <meta property="article:published_time" content="2016-01-01" />
+            <meta property="article:section" content="curso c" />
+            <meta property="article:tag" content="curso" />
+            <meta property="article:tag" content="c" />
+            <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
+            <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
+
+
+    <link rel="stylesheet" href="http://excript.com/theme/css/asciidoctor-default.css" type="text/css"/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://excript.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://excript.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://excript.com/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://excript.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://excript.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="excript ATOM Feed"/>
+
+        <link href="http://excript.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="excript RSS Feed"/>
+
+
+        <link href="http://excript.com/feeds/curso-c.atom.xml" type="application/atom+xml" rel="alternate"
+              title="excript curso c ATOM Feed"/>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://excript.com/" class="navbar-brand">
+excript            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/tag/blog.html">blog</a></li>
+                    <li><a href="/cursos.html">cursos</a></li>
+                    <li><a href="/pages/about.html">quem somos</a></li>
+                    <li><a href="/pages/contato.html">contato</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://excript.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container container-content">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://excript.com/drafts/linguagem-c/array-c.html"
+                       rel="bookmark"
+                       title="Permalink to Arrays em C">
+                        ARRAYS EM C
+                    </a>
+                </h1>
+
+                    <h3 class="h3curso">
+	                    <a href="http://excript.com/drafts/linguagem-c/array-c.html"
+	                       rel="bookmark"
+	                       title="Permalink to Arrays em C">
+	                        CURSO C
+	                    </a>
+                    </h3>
+            </header>
+            <div class="entry-content">
+
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+
+        <span class="label label-default"></span>
+        <span class="published">
+            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01 janeiro 2016</time>
+        </span>
+
+
+
+	            <span class="label label-default"></span>
+	            por <a href="http://excript.com/author/claudio-rogerio-carvalho-filho.html">Cláudio Rogério Carvalho Filho</a>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" ><a data-toggle="tab" href="#indice">ÍNDICE</a></li>
+			<li role="presentation" class="active"><a data-toggle="tab" href="#artigo">ARTIGO</a></li>
+			<li role="presentation"><a data-toggle="tab" href="#videoaula">VIDEOAULA</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane" id="indice">
+
+
+<table class="table table-hover">
+        <thead>
+        <tr>
+            <th>NOME</th>
+            <th>DURAÇÃO</th>
+        </tr>
+        </thead>
+        <tbody><tr>
+                            <td><a href="http://excript.com/linguagem-c/abertura-curso-c.html" >Abertura do Curso de C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/abertura-curso-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/code-block-linguagem-c.html" >Code::Block e Desenvolvimento em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/code-block-linguagem-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/primeiro-programa-c.html" >Primeiro Programa em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/primeiro-programa-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/hello-world-c.html" >Hello World em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/hello-world-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/code-block-workspace-c.html" >Code::Block - Workspace para desenvolvimento em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/code-block-workspace-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/indentacao-comentario-c.html" >Indentação e Comentários em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/indentacao-comentario-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/caracteristica-variavel-c.html" >Características da Variáveis em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/caracteristica-variavel-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/nomenclatura-variavel-c.html" >Nomenclatura de Variáveis em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/nomenclatura-variavel-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/tipos-primitivos-c.html" >Variáveis e Tipos Primitivos do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/tipos-primitivos-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/valores-formatados-c.html" >Valores Formatados em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/valores-formatados-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/operador-aritmetico-c.html" >Operadores Aritméticos do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/operador-aritmetico-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/entrada-dados-c.html" >Entrada de Dados com C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/entrada-dados-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/calculadora-c.html" >Calculadora em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/calculadora-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/caracter-escape-c.html" >Caracteres de Escape em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/caracter-escape-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/modulo-divisao-c.html" >Módulo da Divisão com C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/modulo-divisao-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/tomada-decisao-c.html" >Tomada de Decisão em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/tomada-decisao-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/tomada-decisao-operador-logico-c.html" >Tomada de Decisão e Operadores Lógicos em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/tomada-decisao-operador-logico-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/media-notas-escolares-c.html" >Média das Notas Escolares em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/media-notas-escolares-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/operador-relacional-c.html" >Operadores relacionais do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/operador-relacional-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/operador-logico-c.html" >Operadores Lógicos do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/operador-logico-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/modificador-tipo-c.html" >Modificadores de Tipo em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/modificador-tipo-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-repeticao-while-c.html" >Estrutura de Repetição <tt class="docutils literal">while</tt> do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-repeticao-while-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-repeticao-while-c-parte2.html" >Estrutura de Repetição <tt class="docutils literal">while</tt> do C (parte II)</a></td>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-repeticao-while-c-parte2.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/operador-atribuicao-c.html" >Operadores de Atribuição do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/operador-atribuicao-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/depuracao-codeblock-c.html" >Depuração com o Code::Block em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/depuracao-codeblock-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/depuracao_ii.html" >Depuração com o Code::Block em C (parte II)</a></td>
+                            <td><a href="http://excript.com/linguagem-c/depuracao_ii.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-repeticao-do-while-c.html" >Estrutura de Repetição <tt class="docutils literal"><span class="pre">do-while</span></tt> do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-repeticao-do-while-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/calculadora-c-v2.html" >Calculadora em C (versão 2.0)</a></td>
+                            <td><a href="http://excript.com/linguagem-c/calculadora-c-v2.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/laco-condinal-c.html" >Laços Condicionais do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/laco-condinal-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/depurar-calculadora-c.html" >Depurando a Calculadora Desenvolvida em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/depurar-calculadora-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-selecao-multipla-c.html" >Estrutura de Seleção Múltipla <tt class="docutils literal">switch</tt> em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-selecao-multipla-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-selecao-multipla-c-parte2.html" >Estrutura de Seleção Múltipla <tt class="docutils literal">switch</tt> em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-selecao-multipla-c-parte2.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/operador-incremento-decremento-c.html" >Operadores de Incremento e Decremento do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/operador-incremento-decremento-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-repeticao-for-c.html" >Estrutura de Repetição <tt class="docutils literal">for</tt> do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-repeticao-for-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-repeticao-for-c-parte2.html" >Estrutura de Repetição <tt class="docutils literal">for</tt> do C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/estrutura-repeticao-for-c-parte2.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/tabuada-c.html" >Tabuada em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/tabuada-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/associatividade-operador-c.html" >Associatividade de Operadores em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/associatividade-operador-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/precedencia-operador-c.html" >Precedência de Operadores em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/precedencia-operador-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/instrucao-break-continue-c.html" >Instrução <tt class="docutils literal">break</tt> e <tt class="docutils literal">continue</tt> em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/instrucao-break-continue-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/constante-c.html" >Constantes em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/constante-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/bloco-instrucao-c.html" >Blocos de Instrução em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/bloco-instrucao-c.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/bloco-instrucao-c-2.html" >Blocos de Instrução em C (parte II)</a></td>
+                            <td><a href="http://excript.com/linguagem-c/bloco-instrucao-c-2.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/linguagem-c/operador-ternario-c.html" >Operador Ternário em C</a></td>
+                            <td><a href="http://excript.com/linguagem-c/operador-ternario-c.html" ></a></td>
+                        </tr>        </tbody>
+            </table>
+        
+
+			</div>
+
+			<div class="tab-pane active" id="artigo">
+				<div class="row">
+					<div class="section" id="introducao-aos-arrays">
+<h2>INTRODUÇÃO AOS ARRAYS</h2>
+<p>Um <tt class="docutils literal">Array</tt> é uma estrutura utilizada para representar e manipular uma coleção de dados, ou melhor, de variáveis.</p>
+<p>Podemos dizer também, que um <tt class="docutils literal">Array</tt> é um conjunto de variáveis, dispostos de forma sequêncial, onde cada elemento está vinculado a um número inteiro positivo, onde o primeiro elemento possui índice igual a 0, e o último, índice igual a quantidade de elementos menos 1.</p>
+<p>Podemos declarar <tt class="docutils literal">Array</tt> de qualquer tipo, seja primitivo ou algum tipo definido pelo programador. Todo <tt class="docutils literal">Array</tt> pode conter a quantidade de elementos que a memória do computador suportar. A quantidade de elementos em um <tt class="docutils literal">Array</tt> é estático, ou seja, antes de criarmos um <tt class="docutils literal">Array</tt> devemos informar a quantidade de elementos que desejamos. Após a definição e instanciação da estrutura não é possível redimensionar o <tt class="docutils literal">Array</tt>. Ou seja, um <tt class="docutils literal">Array</tt> que foi criado com 30 elementos não poderá adicionar e nem remover elementos durante o tempo de execução.</p>
+<p>Cada posição do Array é um espaço de memória reservado do tamanho do tipo definido.</p>
+</div>
+<div class="section" id="utilidade-dos-arrays">
+<h2>UTILIDADE DOS ARRAYS</h2>
+<p>Os Arrays são amplamente utilizados para manipularmos listas estáticas. Os Arrays são estrutura estáticas, isto é, não é possível adicionarmos ou excluírmos elementos. Em decorrência dessa característica, não utilizaremos os <tt class="docutils literal">Arrays</tt> para por exemplo, desenvolvermos Cadastros. Até porque, cadastros precisam ser capazes de incluir e excluir dados, logo, os Arrays normamente não são as melhores estruturas de dados.</p>
+<p>Quando estudarmos Ponteiros e Alocação Dinâmica de Memória, conseguiremos compreender melhor o poder dos <tt class="docutils literal">Arrays</tt> e também, conseguiremos compreender o seu funcionameto interno.</p>
+</div>
+<div class="section" id="a-razao-pela-qual-os-arrays-sao-estaticos">
+<h2>A RAZÃO PELA QUAL OS ARRAYS SÃO ESTÁTICOS</h2>
+<p>A principal caracteristica dos <tt class="docutils literal">Arrays</tt> é a capacidade de declarmos um conjunto de variáveis, de maneira rápida e simples e em seguida, poder acessar os elementos através de um índice. Dessa forma, conseguimos, através das <strong>Estruturas de Repetição</strong>, percorrer todos os elementos de um <tt class="docutils literal">Array</tt>.</p>
+<p>Por exemplo. Vamos declarar um Array que tenha 5 elementos numéricos do tipo <tt class="docutils literal">int</tt>.</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">nums</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+<p>A declaração acima, é equivalente a:</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">nums0</span><span class="p">,</span> <span class="n">nums1</span><span class="p">,</span> <span class="n">nums2</span><span class="p">,</span> <span class="n">nums3</span><span class="p">,</span> <span class="n">nums4</span><span class="p">;</span>
+</pre></div>
+<p>A diferença entre as 2 declarações, é que na primeira, conseguimos acessar os elementos através de um índice, enquanto que na segunda notação, só podemos acessar o valor armazenado se utilizarmos a refência propriamente dita.</p>
+</div>
+<div class="section" id="os-arrays-e-a-memoria-ram">
+<h2>OS ARRAYS E A MEMÓRIA RAM</h2>
+<p>Os <tt class="docutils literal">Arrays</tt> só existem na memória RAM do computador, e os elementos estão alocados linearmente. Se declararmos um <tt class="docutils literal">Array</tt> com 3 elementos, e cada elemento ocupar 4 bytes de memória, temos que internamente, o primeiro elemento estará, por exemplo, na posição de memória 1001, 1002, 1003 e 1004, ou seja, cada elemento ocupará 4 segmentos sequênciais.</p>
+<p>O segundo elemento, <strong>obrigatoriamente</strong>, estará nas posições 1005, 1006, 1007 e 1008 e o terceiro elemento, estará nas posições, 1009, 1010, 1011 e 1012.</p>
+<p>Dessa forma, temos que um <tt class="docutils literal">Array</tt> é uma estrutura linear, onde cada elemento estará nos <tt class="docutils literal">byte</tt> após o último e assim sucessivamente.</p>
+<p>Quando instanciamos um <tt class="docutils literal">Array</tt> estamos de fato, reservando um espaço de memória sequêncial para todos os elementos. Assim, o Sistema Operacional não armazenará nada no espaço reservado, porém, a frente o anteriormente o espaço reservado, será armazenado quaisquer outras informações. Então, se quiséssemos por exemplo, adiciornar mais um elemento a estrutura, teríamos que adicionar esse elemento, após o último <tt class="docutils literal">byte</tt> do último elemento da estrutura previamente instanciada. Porém, se o Sistema Operacional colocou outras informações na região logo após a estrutura, temos que teríamos que mover todos os elementos para outro segmento de memória e então reservar um espaço que contemple também, o último elemento que estamos adicionando.</p>
+</div>
+<div class="section" id="esquema-para-a-declaracao">
+<h2>ESQUEMA PARA A DECLARAÇÃO</h2>
+<div class="highlight"><pre><span class="o">&lt;</span><span class="n">tipo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">nome</span><span class="o">&gt;</span><span class="p">[</span> <span class="o">&lt;</span><span class="n">quantidade</span><span class="o">-</span><span class="n">de</span><span class="o">-</span><span class="n">itens</span><span class="o">&gt;</span> <span class="p">];</span>
+</pre></div>
+<p>Por exemplo:</p>
+<div class="highlight"><pre><span class="c1">// &lt;tipo&gt;   &lt;nome&gt;   [ &lt;quantidade-de-itens&gt; ];</span>
+    <span class="kt">int</span>     <span class="n">valores</span>  <span class="p">[</span>            <span class="mi">5</span>          <span class="p">]</span> <span class="p">;</span>
+</pre></div>
+</div>
+<div class="section" id="declaracao-de-arrays">
+<h2>DECLARAÇÃO DE ARRAYS</h2>
+<p>Declaramos <tt class="docutils literal">Arrays</tt> de forma semelhante a declaração de qualquer variável. Igual ocorre com as váriáveis, temos que, só teremos um <tt class="docutils literal">Array</tt> após instanciarmos a definição. A característica que diferencia a declaração de <tt class="docutils literal">Arrays</tt> da declaração de variáveis, é que com <tt class="docutils literal">Arrays</tt>, iremos declarar explicitamente a quantidade de elementos que desejamos que a estrutura tenha.</p>
+<p>Um <tt class="docutils literal">Array</tt> ocupa uma quantidade de memória memória conforme a quantidade de elementos multiplicado pelo tamanho do tipo declarado. Então, se declararmos um <tt class="docutils literal">Array</tt> com 10 elementos do tipo <tt class="docutils literal">int</tt> em um computador e <tt class="docutils literal">32 bits</tt>, temos que cada elementos ocupará <tt class="docutils literal">2 bytes</tt> e toda a estrutura utilizará, estará utilizando, <tt class="docutils literal">20 bytes</tt> de memória RAM.</p>
+<p>A seguir, temos um exemplo da estrutura de declaração de <tt class="docutils literal">Arrays</tt>.</p>
+<div class="highlight"><pre><span class="n">tipo</span> <span class="n">nomeArray</span><span class="p">[</span><span class="n">numeroDeElementos</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="n">numeros</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+</pre></div>
+<p>A declaração acima, faz com que o compilador reserve a quantidade de memória para alocar todos os elementos que foram especificados entre colchetes.</p>
+<p>Como já dito, o primeiro elemento possui índice igual a 0, logo, ao declararmos uma estrutura, estaremos definindo que queremos a quantidade de elementos que estejam no intervalo de 0 até o valor que estiver entre colchetes, por exemplo. <tt class="docutils literal">meu_array[10]</tt>. O exemplo anterior, irá definir um <tt class="docutils literal">Array</tt> que tenha 11 elementos, onde o primeiro possui índice igual a 0 e o último, índice igual a 11.</p>
+</div>
+<div class="section" id="array-matriz-vetor-tabela">
+<h2>ARRAY, MATRIZ, VETOR, TABELA</h2>
+<p>Em português, <tt class="docutils literal">Array</tt> significa arranjo. Na programação, um <tt class="docutils literal">Array</tt> representa tanto um arranjo, como também, uma lista ou então, uma tabela. É comum você ouvir alguém chamando os <tt class="docutils literal">Arrays Bidimensionais</tt> de Matrizes ou Tabelas.</p>
+<p>Não há nomenclatura correta, porém, dependendo da nomenclatura, conseguimos por exemplo, saber a quantidade de dimensões que o <tt class="docutils literal">Array</tt> possui.</p>
+<p>Vetor - <tt class="docutils literal">Array</tt> de uma dimensão
+Matriz - <tt class="docutils literal">Array</tt> com 2 dimensões
+Tabela - <tt class="docutils literal">Array</tt> com 2 dimensões</p>
+<p>Quando o Array for bidimensional, ou seja, possuir 2 dimensões, essas estruturas serão chamadas de <tt class="docutils literal">Matrizes</tt> ou então, <tt class="docutils literal">Tabelas</tt>. Se nós analisarmos uma <strong>Planilha de Texto</strong>, veremos que esta é formada constituida por linhas e colunas. Também podemos observar, que cada coluna da Planilha, estará representando um tipo de informação e assim, todos os valores de uma coluna serão de uma mesmo tipo.</p>
+<p>Essa mesma lógica é utilizada em bancos de dados, onde cada coluna possui um tipo e cada registro é uma linha da tabela.</p>
+<p><tt class="docutils literal">Arrays bidimensionais</tt> também são utilizados em imagens planas. Assim, temos os dois eixos cartesianos, o eixo <tt class="docutils literal">x</tt> e o <tt class="docutils literal">y</tt>. Quando trabalhamos com gráficos comum fazermos uso dos eixos <tt class="docutils literal">x</tt> e <tt class="docutils literal">y</tt>, para acessarmos e manipularmos, por exemplo, os pixels diretamente. Na produção de jogos 2D ocorre a mesma coisa, isso porque, todo movimento ou o posicionamento de das imagens estão sob um plano de 2 dimensões, que é internamente representando por uma Array Bidimensional.</p>
+<p>Arrays com 3 dimensões são comumente chamados de <tt class="docutils literal">Estruturas Tridimensionais</tt> ou então, estruturas 3D. Quando trabalhamos com imagens em 3D, manipulamos os eixos <tt class="docutils literal">x</tt>, <tt class="docutils literal">y</tt> e <tt class="docutils literal">z</tt>. Porém, as imagens que nós desenhamos, muitas vezes são compostas por centenas de outros Array que estão dispostos em vários sentidos e assim, representam diversos planos numa estrutura tridimensional.</p>
+<p>Por fim, temos que a forma como um <tt class="docutils literal">Array</tt> é chamado pouco importa, até porque, o funcionamento e as propriedades são as mesmas. O que precisamos saber é como acessar elementos e manipularmosas suas informações. Isso porque, o princípio e o funcionamento das estruturas sempre será, basicamente o mesmo.</p>
+</div>
+<div class="section" id="inicializando-um-array">
+<h2>INICIALIZANDO UM ARRAY</h2>
+<p>Da mesma forma quando declaramos uma variável, nós temos que o valor contido será um valor aleatória, comumente chamado de sujeira. Quando trabalhamos com <tt class="docutils literal">Array</tt> ocorre a mesma situação, logo, temos que atribuir um valor para começarmos a fazer uso da estrutura declarada.</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">valor</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+
+<span class="n">valor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">900</span><span class="p">;</span>
+<span class="n">valor</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+<span class="n">valor</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1100</span><span class="p">;</span>
+</pre></div>
+<p>No código acima, declaramos um Array que contém 3 elementos e em seguida, atribuímos alguns valores para cada elemento.</p>
+</div>
+<div class="section" id="inicializando-arrays-com-listas-de-valores">
+<h2>INICIALIZANDO ARRAYS COM LISTAS DE VALORES</h2>
+<p>Para definirmos valores iniciais para os elementos de uma estrutura Arrays, utilizar um par de chaves, e dentro deste, definir os valores às posições da estrutura Array. Essa é uma forma pratica para declararmos um Array e definirmos os valores a cada posição.</p>
+<div class="highlight"><pre><span class="kt">char</span> <span class="n">dias_da_semana</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="s">&quot;d&quot;</span><span class="p">,</span> <span class="s">&quot;e&quot;</span><span class="p">,</span> <span class="s">&quot;f&quot;</span><span class="p">,</span> <span class="s">&quot;g&quot;</span><span class="p">}</span>
+</pre></div>
+<p>No código a seguir, utilizaremos uma forma diferente de definição, porém, que possui o mesmo significado que acabamos de estudar.</p>
+<div class="highlight"><pre><span class="k">const</span> <span class="kt">int</span> <span class="n">DOMINGO</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">SEGUNDO</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">TERCA</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">QUARTA</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">QUINTA</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">SEXTA</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">SABADO</span><span class="o">=</span><span class="mi">7</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">dias_da_semana</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="n">DOMINGO</span><span class="p">,</span> <span class="n">SEGUNDA</span><span class="p">,</span> <span class="n">TERCA</span><span class="p">,</span> <span class="n">QUARTA</span><span class="p">,</span> <span class="n">QUINTA</span><span class="p">,</span> <span class="n">SEXTA</span><span class="p">,</span> <span class="n">SABADO</span><span class="p">}</span>
+</pre></div>
+<p>Então, como acabamos de estudar, temos que os <tt class="docutils literal">Array</tt> podem ser inicializado através de uma lista de valores. Dessa maneira, atribuímos valores para cada elemento da estrutura, ainda na declaração, por exemplo.</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">primos</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">4</span><span class="p">};</span>
+
+<span class="c1">//Estrutura com 3 elementos do tipo ponto flutuante.</span>
+<span class="kt">float</span> <span class="n">salario</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mf">2.55</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span><span class="mi">987</span><span class="p">,</span> <span class="mf">1.99</span><span class="p">}</span>
+
+<span class="c1">//Estrutura do tipo char utilizado para armazenar cadeias de caracteres.</span>
+<span class="kt">char</span> <span class="n">c</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="sc">&#39;X&#39;</span><span class="p">,</span><span class="sc">&#39;c&#39;</span><span class="p">,</span><span class="sc">&#39;r&#39;</span><span class="p">,</span> <span class="err">‘</span><span class="n">i</span><span class="err">’</span><span class="p">,</span> <span class="err">‘</span><span class="n">p</span><span class="err">’</span><span class="p">,</span> <span class="err">‘</span><span class="n">t</span><span class="err">’</span><span class="p">};</span>
+</pre></div>
+<p>No primeiro Array, declaramos que cada elemento sera do tipo <tt class="docutils literal">inteiro</tt> e especificamos que a estrutura deve ter 7 elementos. Nessa declaração utilizamos a forma explicita, ou seja, nós informamos quantos elementos desejávamos.</p>
+<p>Na segunda declaração, definimos outro Array, cujo nome é <tt class="docutils literal">salario</tt>, os elementos são do tipo Ponto Flutuante <tt class="docutils literal">float</tt>. Em seguida, atribuímos 3 valores para a estrutura, porém, é importante observar que não estamos definindo a quantidade de elementos que o Array possuirá. Logo, o C entenderá que a quantidade de elementos e a quantidade de valores iniciamente definido.</p>
+<p>Por fim, definimos um terceiro Array, onde cada elemento será do tipo <tt class="docutils literal">char</tt> e atribuímos as letras da palavra eXcript. Essa definição é análoga a definição anterior, a diferença está no tipo de dado dos elementos.</p>
+</div>
+<div class="section" id="definindo-valores-para-elementos">
+<h2>DEFININDO VALORES PARA ELEMENTOS</h2>
+<p>Para atribuírmos um valor para um Array, temos que inicialmente especificar a sua referência, em seguida, abrirmos e fecharmos colchetes e dentro deste, definir o índice do elemento que queremos atribuir algum valor.</p>
+<p>Valos declarar um <tt class="docutils literal">Array</tt> e em seguida, atribuir um valor para alguns elementos.</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">meu_array</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+<span class="n">meu_array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">meu_array</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="mi">90</span><span class="p">;</span>
+</pre></div>
+<p>No código acima, definimos um Array com 10 elementos, do tipo <tt class="docutils literal">int</tt>, onde o primeiro elemento possui índice igual a 0 e o último, índice igual a 9.</p>
+<p>Em seguida, atribuímos o valor inteiro 0 para o elemento de índice igual a 0. Na linha seguinte, atribuímos o valor 90 para o elemento de índice igual a 9.</p>
+</div>
+<div class="section" id="alteracao-de-valores">
+<h2>ALTERAÇÃO DE VALORES</h2>
+<p>Para alterarmos valores, devemos proceder de maneira análoga a atribuíção de valores, ou seja, devemos especificar a referência, em seguida, abrir e fechar colchetes e dentro deste, especificar o índice do elemento que desejamos alterar o valor, por exemplo:</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">meu_array</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+<span class="n">meu_array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">meu_array</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+</pre></div>
+<p>No código acima, declaramos um Array com 5 elementos do tipo <tt class="docutils literal">int</tt> e inicializamos cada elemento com um valor inteiro. Em seguida, alteramos o valor do elemento de índice 0 e definimos o novo valor como sendo 10. Feito isso, alteramos o valor do elemento de índice 4 a atribuímos o valor 50.</p>
+</div>
+<div class="section" id="lendo-os-valores-dos-elementos">
+<h2>LENDO OS VALORES DOS ELEMENTOS</h2>
+<p>Para lermos qual o valor que determinado elemento possui, temos que definir a referência, em seguida, abrir e fechar colchetes e dentro deste, definir o índice do elemento que desejamos ler, por exemplo:</p>
+<p>Se desejarmos, podemos imprimir o valor de um elemento do nosso Array:</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">meu_array</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+<span class="n">printf</span><span class="p">(</span> <span class="n">meu_array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span>
+</pre></div>
+<p>No código acima, declaramos um <tt class="docutils literal">Array</tt> e em seguida, imprimimos na saída padrão, o valor do elemento de índice igual a 0.</p>
+</div>
+<div class="section" id="consideracoes-finais">
+<h2>CONSIDERAÇÕES FINAIS</h2>
+<p>O C sempre verifica se o elemento que estamos tentando acessando está no limite do Array. Assim, se tentarmos acessar um valor cujo índice não esteja definido, será levantado uma exceção e a execução do programa será interrompida.</p>
+<p>É importante observar, que ao acessarmos um elemento de índice superior ao existente, o que estaremos fazendo, é tentando acessar uma área de memória quaisquer.</p>
+</div>
+<div class="section" id="tamanho-de-um-array">
+<h2>TAMANHO DE UM ARRAY</h2>
+<p>Quando declaramos um <tt class="docutils literal">Array</tt>, temos que informar inicialmente, o tipo dos elementos e também, a quantidade de itens a estrutura terá.</p>
+<p>Podemos modificar o svalores de cada posição como bem entendermos, porém, a quantidade de itens sempre será constante, isso porque, não podemos adicionar ou remover elementos.</p>
+<p>Podemos, por exemplo, ter um Array com 10 posições e então, criarmos um Array com 11 elementos e então, copiarmos item a item os elementos de um <tt class="docutils literal">Array</tt> o outro. Isso é possível, porém, possui um custo elevado de processamento. Com estruturas pequenas, que tenham por 10, 50 ou 100 elementos, a cópia dos valores de cada elemento para uma nova estrutura, ocorre quase que instantaneamente. Porém, se tivermos uma estrutura que contenha, por exemplo, 100.000 itens, a cópia levará alguns segundos, senão minutos;.</p>
+<p>Então, se precisarmos de uma lista que seja redimensionável, somos obrigados a utilizar outras estruturas. Os <tt class="docutils literal">Arrays</tt> não esão projetados para seremos utilizados como listas dinâmicas.</p>
+</div>
+<div class="section" id="indice-dos-arrays">
+<h2>ÍNDICE DOS ARRAYS</h2>
+<p>O primeiro elemento de todo <tt class="docutils literal">Array</tt>, sempre terá índicen igual a 0, enquanto que o último elemento, terá sua posição igual a quantidade de elementos, menos uma únidade. Ou seja, o acesso ao último elemento não é a quantidade de posições que a estrutura possui, mas sim, a quantidade menos 1.</p>
+<p>Essa propriedade é a consequencia do primeiro elemento ter índice igual a zero. É comum num primeiro momento, nos confundirmos sobre a quantidade real que desejamos, porém, com o tempo, percebemos que não somente os Arrays funcionam dessa maneira mas sim, quase todas as estruturas possuem essa propriedade.</p>
+<p>Então, para não esquecer, podemos pensar da seguinte forma:</p>
+<p>&quot;Os humanos contam a partir do número 1, o computador, a partir do número 0.&quot;.</p>
+<p>E qual a razão para isso?</p>
+<p>A verdade é que as primeiras linguagem implementaram dessa maneira. As linguagem que vieram depois, acabaram por utilizar a mesma propriedade. Porém, talvez a explicação que veremos nos ajude a entender a definição.</p>
+<pre class="literal-block">
+-3
+-2
+-1
+0
+1
+2
+3
+</pre>
+<p>Se as listas não começassem a partir do número 0, seria muito complicado o trabalho com números negativos. Até porque, numa reta numérica, a posição zero existe, ou seja, o ponto de partida normalmente existe e assim, esse talvez seja o pensamento lógico utilizado quando essa definição foi adotada.</p>
+<p>Na última pesquisa que fiz acerca da razão pela qual a primeira posição dos <tt class="docutils literal">Array</tt> é o 0, encontrei bastante teoria acerca do tema e também, vi vários matemáticos  discutindo o tema. Observei que a lógica por detrás dessa definição é imensa, até porque, esse conceito acaba se misturando com a explicação do porque existe o número zero e etc.</p>
+<p>Por fim, temos que o índice dos Array sempre será um número inteiro não negativo. Não há como definir elementos de índice igual -1 ou -10. Conseguimos esse tipo de manipulação através de adaptações, mas o princípio sempre será a definição estudada.</p>
+</div>
+<div class="section" id="percorrendo-os-elementos-de-um-array">
+<h2>PERCORRENDO OS ELEMENTOS DE UM ARRAY</h2>
+<p>A capacidade de percorrer os elementos de um Array é, sem dúvida, a principal característica dos <tt class="docutils literal">Array</tt>. Conseguimos efetuar operações em cada elemento como também, conseguimos efetuar operações diferentes, baseando-se na informação contida em cada posição.</p>
+<p>No código a seguir, declaramos um Array com 10 elementos e em seguida, percorremos toda a estrutura imprimindo o valor associado a cada índice.</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">meu_array</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">};</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="n">meu_array</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>No código acima, declaramos um <tt class="docutils literal">Array</tt> que possui 10 elementos, e inicializamos o Array, atribuíndo um número inteiro para cada elemento.</p>
+<p>Em seguida, utilizamos a Estrutura de Repetição <tt class="docutils literal">for</tt> para percorrer todos os elementos do Array e a cada ciclo, imprimimos o valor de cada elemento na saída padrão.</p>
+<p>Ainda que simples o exemplo, é dessa forma que iremos trabalhar na maior parte do tempo.</p>
+<p>Também poderíamos, percorrer os elementos de trás para frente, como temos no código a seguir:</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">meu_array</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">};</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="n">meu_array</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>O código é praticamente igual ao anterior, porém, agora, alteramos os valores e a lógica da Estrutura de Repetição <tt class="docutils literal">for</tt>.</p>
+</div>
+<div class="section" id="declarando-array-s-dinamicamente">
+<h2>DECLARANDO ARRAY´s DINAMICAMENTE</h2>
+<p>Podemos definir uma lógica onde pedimos ao usuário a quantidade de elementos que o Array deve conter e então, declararmos a estrutura. Também podemos, na sequência, perguntar qual o valor que o usuário deseja atribuir para cada elemento da estrutura, como temos no exemplo a seguir:</p>
+<div class="highlight"><pre><span class="cp">#include &lt;iostream &gt;</span>
+
+<span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">NUM</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">nums</span><span class="p">[</span><span class="n">NUM</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">NUM</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Digite um número: &quot;</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+  <span class="p">}</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O total de números é: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">total</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="caso-de-uso-media-aritmetica-flexivel">
+<h2>CASO DE USO - MÉDIA ARITMÉTICA FLEXÍVEL</h2>
+<p>Em aulas passadas, desenvolvemos um exemplos que pedia 4 notas e em seguida, calculava a média aritmética e dizia para o usuário se o mesmo foi aprovado ou reprovado.</p>
+<p>Pra construirmos essa aplicação, declaramos 4 variáveis e na sequência, somamos todas e dividimos por 4. Agora, vamos fazer um exemplo semelhante, porém, ao invés de definirmos a quantidade de notas, deixaremos que o usuário defina quantas atividades e notas houveram no semestre. Assim, teremos uma aplicação flexível que pode por exemplos, receber 2 notas ou então, 20 e assim mesmo será realizado a média aritmética e informaremos se o usuário está ou não aprovado.</p>
+</div>
+<div class="section" id="caso-de-uso-quantidade-de-elementos-desconhecido">
+<h2>CASO DE USO - QUANTIDADE DE ELEMENTOS DESCONHECIDO</h2>
+<p>Existe uma forma para reconhecermos quando estamos no último elemento do Array. Para isso, definimos que o último elemento terá um determinado valor e assim, iremos percorrer os elementos da estrutura e quando o valor do elemento for igual a constante que definimos, saberemos que chegamos no último elemento da estrutura.</p>
+</div>
+<div class="section" id="checando-limites">
+<h2>CHECANDO LIMITES</h2>
+<p>A nossa matriz foi di1nensionada e1n 50 e este número permite a entrada de até
+50 notas. Suponha, agora, que o usuário decida inserir mais de 50 notas. Como
+expulsar os dados excedentes?</p>
+<p>A linguagem C++ não realiza verificação de limites em matrizes, por isso nada impede que você vá alé1n do fim de uma matriz.
+Se você tra11spuser o fim da matriz durante uma operação de atribuição, então os valores sobressalentes irão sobrepor outros dados da memória. Estes valores serão armazenados em seqüência, seguindo os elementos da matriz na memória. Como não foi reservado espaço para guardá-los, eles sobreporão outras variáveis ou até mesmo u1na parte do código do próprio programa que por acaso esteja nesta memória. Isto acarretará resultados imprevisíveis, e nenhuma mensagem de erro do compilador avisará o que está ocorrendo.</p>
+<pre class="literal-block">
+C++ não avisa a você quando o limite de uma matriz foi excedido.
+</pre>
+<p>Providenciar a verificação do limite de uma 1natriz é de responsabilidade do programador. A solução é não permitir que o usuário digite dados, para elementos da matriz, acima do limite. Para isso, modificaremos o laço do-while, do programa anterior, como segue:</p>
+<div class="highlight"><pre><span class="k">do</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">TAMANHO</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;BUFFER LOTADO.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+        <span class="n">J</span><span class="p">.</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span> <span class="c1">//Sai do laço do-wrhile</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Digite a nota do aluno &quot;</span> <span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">l</span><span class="p">)</span><span class="o">&lt;&lt;</span> <span class="s">&quot;: &quot;</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">notas</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">notas</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="err">©</span><span class="p">);</span>
+</pre></div>
+<p>Com esta modificação, quando i atingir 50, que é um aci1na do último índice da matriz, a mensagem &quot;BUFFER LOTADO.&quot; será impressa e o comando break fará com que o controle saia do laço do-while e passe para a segt1nda parte do programa.</p>
+</div>
+
+				</div>
+			</div>
+
+
+			<div class="tab-pane" id="videoaula">
+				<div class="panel panel-default panel-aulas">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe
+								class=class="embed-responsive-item"
+								src="https://www.youtube.com/embed/"
+								frameborder="0"
+								allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+<br>
+<br>
+<span class="label label-default"></span>
+Tags
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/c.html">c</a>            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comentários</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'linguagem-c/array-c';
+                var disqus_url = 'http://excript.com/drafts/linguagem-c/array-c.html';
+
+            var disqus_config = function () {
+                this.language = "ptb";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Por favor, ative o JavaScript para visualizar os comentários <a href="http://disqus.com/?ref_noscript"> disponibilizado por Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+	    <li class="li-sidebar">
+			<div class="fb-page" data-href="https://www.facebook.com/excript/" data-width="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/excript/"><a href="https://www.facebook.com/excript/">eXcript</a></blockquote></div></div>
+	    </li>
+
+	    <li class="li-sidebar">
+			<script src="https://apis.google.com/js/platform.js"></script>
+
+			<script>
+			  function onYtEvent(payload) {
+			    if (payload.eventType == 'subscribe') {
+			      // Add code to handle subscribe event.
+			    } else if (payload.eventType == 'unsubscribe') {
+			      // Add code to handle unsubscribe event.
+			    }
+			    if (window.console) { // for debugging only
+			      window.console.log('YT event: ', payload);
+			    }
+			  }
+			</script>
+
+			<div class="g-ytsubscribe" data-channel="excriptvideo" data-layout="full" data-count="default" data-onytevent="onYtEvent"></div>
+	    </li>
+
+	    <li class="li-sidebar">
+
+		    <!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+			<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'pt-BR'}
+			</script>
+
+			<!-- Posicione esta tag onde você deseja que o widget apareça. -->
+			<div class="g-page" data-width="200" data-href="//plus.google.com/u/0/102371115481264098253" data-rel="publisher"></div>
+
+	    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+	<div class="container">
+		
+
+		<div class="row">
+			<p class="site-info text-center">
+
+			</p><div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h5>eXcript</h5>
+						<p>
+							A eXcript é um projeto de produção audiovisual de conteúdo técnico com foco no autodidatismo.
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>CURSOS</h5>
+						<ul>
+							<li><a href="curso-de-python.html">PYTHON</a></li>
+							<li><a href="curso-de-java.html">JAVA</a></li>
+							<li><a href="curso-php.html">PHP</a></li>
+							<li><a href="curso-cpp.html">C++</a></li>
+							<li><a href="curso-c.html">C</a></li>
+							<li><a href="curso-de-android.html">ANDROID</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>SOCIAL</h5>
+						<ul>
+							<li><a href="http://plus.google.com/+excriptvideo">GOOGLE+</a></li>
+							<li><a href="http://www.facebook.com/excript">FACEBOOK</a></li>
+							<li><a href="http://twitter.com/eXcriptBrasil">TWITTER</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<p></p>
+		</div>
+	</div>
+</footer>
+<script src="http://excript.com/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://excript.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://excript.com/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-72583776-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1684671528414521";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>
