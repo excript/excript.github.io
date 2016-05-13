@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>excript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-de-python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-05T11:30:00-03:00</updated><entry><title>Operadores Relacionais do Python</title><link href="http://excript.com/python/operador-relacional-python.html" rel="alternate"></link><updated>2016-07-05T11:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-05:python/operador-relacional-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>excript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-de-python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-05-07T23:45:00-03:00</updated><entry><title>Entrada de Dados em Python</title><link href="http://excript.com/python/entrada-dados-python.html" rel="alternate"></link><updated>2016-05-07T23:45:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-07:python/entrada-dados-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a entrada de dados numa aplicação e como o Python trata nativamente.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="entrada-de-dados"&gt;
+&lt;h2&gt;ENTRADA DE DADOS&lt;/h2&gt;
+&lt;p&gt;Entrada de Dados é a forma como enviamos informações para dentro de aplicações escritas em Python. A forma mais primitiva de enviar dados para uma aplicação é pelo Prompt de Comando, isto é, pelo Console propriamente dito.&lt;/p&gt;
+&lt;img alt="Imagem do Console para a entrada de dados em programa Python" src="../images/curso-de-python/console-python.png" /&gt;
+&lt;p&gt;Uma aplicação pode, a qualquer momento, pedir que o usuário informe uma determinada informação, para isto, basta invocar a função &lt;cite&gt;input()&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;A partir da versão 3 do Python, a função &lt;cite&gt;input()&lt;/cite&gt;, tem por objetivo de escrever a String passada como parâmetro e em seguida, ativar o modo de digitação, isto é, colocar o Console de uma determinada forma em que seja possível a digitação (entrada de dados). É importante observar que versões anteriores do Python funcionavam de maneira distinta, e também, que a função &lt;cite&gt;input()&lt;/cite&gt; nas versões 2x era utilizado para outro finalidade!&lt;/p&gt;
+&lt;p&gt;A seguir, temos um exemplo onde imprimimos uma frase na tela e em seguida, é aberto para o usuário, a capacidade para digitação de letras e números.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Escreva entre aspas alguma informação a ser impressa no Console &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O código acima, quando executado, irá imprimir o que está entre parêntesis no Console e em seguida, permitira ao usuário a digitação de qualquer tipo de dado alfanumérico. O conjunto de caracteres digitado pelo usuário, será retornado pela função &lt;cite&gt;input()&lt;/cite&gt;. É responsabilidade do programador armazenar esses caracteres numa variável, como fazemos no exemplo a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, será impresso a frase definida entre aspas e então, o console entrará num modo que permitirá o usuário digitar texto e números. Após o usuário digitar o que desejar e pressionar a tecla Enter, os dados digitados serão retornados pela função &lt;cite&gt;input()&lt;/cite&gt;. No exemplo acima, estamos atribuindo o retorno da função para a variável num, logo, a mesma receberá aquilo que o usuário digitou no Console antes de pressionar a tecla Enter.&lt;/p&gt;
+&lt;p&gt;Por fim, imprimimos na tela os caracteres digitados pelo nosso usuário através da função &lt;cite&gt;print()&lt;/cite&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="outras-formas-para-entrada-de-dados"&gt;
+&lt;h2&gt;OUTRAS FORMAS PARA ENTRADA DE DADOS&lt;/h2&gt;
+&lt;p&gt;Uma aplicação pode receber dados através das mais distintas formas, como por exemplo, pela leitura de um arquivo, através dos protocolos TCP/IP, pelo uso de janelas gráficas, como por exemplo, a biblioteca TkInter, que é a forma nativa para a construção de Janelas Gráficas no Python e etc.&lt;/p&gt;
+&lt;p&gt;Há diversas maneiras para recebermos informações, porém, o princípio de como trataremos esses dados será, na maior parte da vezes o mesmo.&lt;/p&gt;
+
+    &lt;div class="admonitionblock important data-line-21"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                &lt;td class="icon"&gt;
+                    &lt;i class="fa icon-important" title="Importante!"&gt;&lt;/i&gt;
+                &lt;/td&gt;
+                &lt;td class="content"&gt;
+                    &lt;div class="paragraph data-line-22"&gt;
+                        &lt;p&gt;Certifique-se estar utilizando a versão 3.x do Python, do contrário, a função input() terá funcionamento anomalo e a sua aplicação não será executada da maneira correta! Por isso lembre-se: se você estiver tendo problemas, averigue a versão do Python instalada em seu computador!&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;p&gt;A seguir, temos o exemplo feito na vídeo aulas do Curso de Python da eXcript:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
+
+
+&lt;span class="n"&gt;login&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Login:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;senha&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Senha:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O usuário informado foi: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;, e a senha digitada foi: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;senha&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="entrada padrão"></category><category term="entrada de dados"></category><category term="input"></category><category term="blog"></category></entry><entry><title>Operadores Relacionais do Python</title><link href="http://excript.com/python/operador-relacional-python.html" rel="alternate"></link><updated>2016-05-07T11:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-07:python/operador-relacional-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -171,7 +239,7 @@
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="operadores"></category><category term="relacional"></category><category term="operadores relacionais"></category><category term="blog"></category></entry><entry><title>Potenciação e Radiciação em Python</title><link href="http://excript.com/python/potenciacao-radiciacao-python.html" rel="alternate"></link><updated>2016-07-05T03:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-05:python/potenciacao-radiciacao-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="operadores"></category><category term="relacional"></category><category term="operadores relacionais"></category><category term="blog"></category></entry><entry><title>Potenciação e Radiciação em Python</title><link href="http://excript.com/python/potenciacao-radiciacao-python.html" rel="alternate"></link><updated>2016-05-07T03:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-07:python/potenciacao-radiciacao-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -217,7 +285,7 @@
 &lt;p&gt;Na primeira operação, estamos elevando o número 9 a sua segunda potência, isto é, &lt;cite&gt;9 * 9&lt;/cite&gt;. Em seguida, elevamos o número 9 a sua inversa, isto é, &lt;cite&gt;1/2&lt;/cite&gt;. Por fim, na terceira operação, estamos fazendo a mesma coisa que fizemos na segunda operação, porém, utilizando a divisão de &lt;cite&gt;1&lt;/cite&gt; por &lt;cite&gt;2&lt;/cite&gt; diretamente.&lt;/p&gt;
 &lt;p&gt;O operador de potenciação é mais um recursos especiais da linguagem Python. Sua utilização é bastante simples e possui uma notação semelhante a outros operadores que já estudamos, como por exemplo, &lt;a class="reference external" href="http://excript.com/python/modulo-da-divisao-python.html"&gt;o operador módulo.&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="operador"></category><category term="potenciação"></category><category term="radiciação"></category><category term="operador binário"></category><category term="blog"></category></entry><entry><title>Módulo da Divisão em Python</title><link href="http://excript.com/python/modulo-da-divisao-python.html" rel="alternate"></link><updated>2016-07-05T03:10:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-05:python/modulo-da-divisao-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="operador"></category><category term="potenciação"></category><category term="radiciação"></category><category term="operador binário"></category><category term="blog"></category></entry><entry><title>Módulo da Divisão em Python</title><link href="http://excript.com/python/modulo-da-divisao-python.html" rel="alternate"></link><updated>2016-05-07T03:10:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-07:python/modulo-da-divisao-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -294,7 +362,7 @@
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O resto da divisão entre&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;e&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; é igual a:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resto&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="módulo"></category><category term="operação módulo"></category><category term="módulo da divisão"></category><category term="divisão"></category><category term="número par"></category><category term="número primo"></category><category term="blog"></category></entry><entry><title>Operadores Aritméticos do Python</title><link href="http://excript.com/python/operador-aritmetico-em-python.html" rel="alternate"></link><updated>2016-07-05T02:50:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-05:python/operador-aritmetico-em-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="módulo"></category><category term="operação módulo"></category><category term="módulo da divisão"></category><category term="divisão"></category><category term="número par"></category><category term="número primo"></category><category term="blog"></category></entry><entry><title>Operadores Aritméticos do Python</title><link href="http://excript.com/python/operador-aritmetico-em-python.html" rel="alternate"></link><updated>2016-05-07T02:50:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-07:python/operador-aritmetico-em-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -408,75 +476,7 @@
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="operações matemáticas"></category><category term="operações aritméticas"></category><category term="soma"></category><category term="subtração"></category><category term="multiplicação"></category><category term="divisão"></category><category term="divisão inteira"></category><category term="módulo"></category><category term="blog"></category></entry><entry><title>Entrada de Dados em Python</title><link href="http://excript.com/python/entrada-dados-python.html" rel="alternate"></link><updated>2016-06-05T23:45:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-05:python/entrada-dados-python.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a entrada de dados numa aplicação e como o Python trata nativamente.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="entrada-de-dados"&gt;
-&lt;h2&gt;ENTRADA DE DADOS&lt;/h2&gt;
-&lt;p&gt;Entrada de Dados é a forma como enviamos informações para dentro de aplicações escritas em Python. A forma mais primitiva de enviar dados para uma aplicação é pelo Prompt de Comando, isto é, pelo Console propriamente dito.&lt;/p&gt;
-&lt;img alt="Imagem do Console para a entrada de dados em programa Python" src="../images/curso-de-python/console-python.png" /&gt;
-&lt;p&gt;Uma aplicação pode, a qualquer momento, pedir que o usuário informe uma determinada informação, para isto, basta invocar a função &lt;cite&gt;input()&lt;/cite&gt;.&lt;/p&gt;
-&lt;p&gt;A partir da versão 3 do Python, a função &lt;cite&gt;input()&lt;/cite&gt;, tem por objetivo de escrever a String passada como parâmetro e em seguida, ativar o modo de digitação, isto é, colocar o Console de uma determinada forma em que seja possível a digitação (entrada de dados). É importante observar que versões anteriores do Python funcionavam de maneira distinta, e também, que a função &lt;cite&gt;input()&lt;/cite&gt; nas versões 2x era utilizado para outro finalidade!&lt;/p&gt;
-&lt;p&gt;A seguir, temos um exemplo onde imprimimos uma frase na tela e em seguida, é aberto para o usuário, a capacidade para digitação de letras e números.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Escreva entre aspas alguma informação a ser impressa no Console &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;O código acima, quando executado, irá imprimir o que está entre parêntesis no Console e em seguida, permitira ao usuário a digitação de qualquer tipo de dado alfanumérico. O conjunto de caracteres digitado pelo usuário, será retornado pela função &lt;cite&gt;input()&lt;/cite&gt;. É responsabilidade do programador armazenar esses caracteres numa variável, como fazemos no exemplo a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No exemplo acima, será impresso a frase definida entre aspas e então, o console entrará num modo que permitirá o usuário digitar texto e números. Após o usuário digitar o que desejar e pressionar a tecla Enter, os dados digitados serão retornados pela função &lt;cite&gt;input()&lt;/cite&gt;. No exemplo acima, estamos atribuindo o retorno da função para a variável num, logo, a mesma receberá aquilo que o usuário digitou no Console antes de pressionar a tecla Enter.&lt;/p&gt;
-&lt;p&gt;Por fim, imprimimos na tela os caracteres digitados pelo nosso usuário através da função &lt;cite&gt;print()&lt;/cite&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="outras-formas-para-entrada-de-dados"&gt;
-&lt;h2&gt;OUTRAS FORMAS PARA ENTRADA DE DADOS&lt;/h2&gt;
-&lt;p&gt;Uma aplicação pode receber dados através das mais distintas formas, como por exemplo, pela leitura de um arquivo, através dos protocolos TCP/IP, pelo uso de janelas gráficas, como por exemplo, a biblioteca TkInter, que é a forma nativa para a construção de Janelas Gráficas no Python e etc.&lt;/p&gt;
-&lt;p&gt;Há diversas maneiras para recebermos informações, porém, o princípio de como trataremos esses dados será, na maior parte da vezes o mesmo.&lt;/p&gt;
-
-    &lt;div class="admonitionblock important data-line-21"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                &lt;td class="icon"&gt;
-                    &lt;i class="fa icon-important" title="Importante!"&gt;&lt;/i&gt;
-                &lt;/td&gt;
-                &lt;td class="content"&gt;
-                    &lt;div class="paragraph data-line-22"&gt;
-                        &lt;p&gt;Certifique-se estar utilizando a versão 3.x do Python, do contrário, a função input() terá funcionamento anomalo e a sua aplicação não será executada da maneira correta! Por isso lembre-se: se você estiver tendo problemas, averigue a versão do Python instalada em seu computador!&lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;p&gt;A seguir, temos o exemplo feito na vídeo aulas do Curso de Python da eXcript:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding: utf-8&lt;/span&gt;
-
-
-&lt;span class="n"&gt;login&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Login:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;senha&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Senha:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O usuário informado foi: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;, e a senha digitada foi: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;senha&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="entrada padrão"></category><category term="entrada de dados"></category><category term="input"></category><category term="blog"></category></entry><entry><title>Variáveis do tipo Ponto Flutuante do Python</title><link href="http://excript.com/python/ponto-flutuante-python.html" rel="alternate"></link><updated>2016-06-05T23:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-05:python/ponto-flutuante-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="operações matemáticas"></category><category term="operações aritméticas"></category><category term="soma"></category><category term="subtração"></category><category term="multiplicação"></category><category term="divisão"></category><category term="divisão inteira"></category><category term="módulo"></category><category term="blog"></category></entry><entry><title>Variáveis do tipo Ponto Flutuante do Python</title><link href="http://excript.com/python/ponto-flutuante-python.html" rel="alternate"></link><updated>2016-05-06T23:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/ponto-flutuante-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -515,7 +515,7 @@
 &lt;p&gt;No código acima, é possível ver que para o Python, o número &lt;cite&gt;1.1&lt;/cite&gt; é um número do tipo &lt;cite&gt;float&lt;/cite&gt;, isto é, do tipo ponto flutuante. Já, o número &lt;cite&gt;1&lt;/cite&gt; é, para o Python, um número inteiro. O número &lt;cite&gt;1j&lt;/cite&gt; é um número complexo e o resultado da expressão, 10 elevado a 1000, será também um número inteiro.&lt;/p&gt;
 &lt;p&gt;Atualmente, o Python trata qualquer número que não possua casas decimais como sendo um inteiro, mesmo números que tenham centenas de dígitos, serão para o Python, números inteiros.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="tipos de dados"></category><category term="tipos"></category><category term="ponto flutuante"></category><category term="double"></category><category term="float"></category><category term="blog"></category></entry><entry><title>Tipos de dados em Python</title><link href="http://excript.com/python/tipos-de-dados-python.html" rel="alternate"></link><updated>2016-06-05T20:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-05:python/tipos-de-dados-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="tipos de dados"></category><category term="tipos"></category><category term="ponto flutuante"></category><category term="double"></category><category term="float"></category><category term="blog"></category></entry><entry><title>Tipos de dados em Python</title><link href="http://excript.com/python/tipos-de-dados-python.html" rel="alternate"></link><updated>2016-05-06T20:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/tipos-de-dados-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -601,7 +601,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;No &lt;a class="reference external" href="http://www.ibm.com/developerworks/br/library/os-python1/"&gt;link a seguir há mais informações sobre os tipos de dados do Python&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="tipos"></category><category term="tipo de dados"></category><category term="int"></category><category term="float"></category><category term="string"></category><category term="date"></category><category term="bool"></category><category term="str"></category><category term="blog"></category></entry><entry><title>Nomenclatura das Variáveis em Python</title><link href="http://excript.com/python/nomenclatura-variaveis-python.html" rel="alternate"></link><updated>2016-06-05T19:10:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-05:python/nomenclatura-variaveis-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="tipos"></category><category term="tipo de dados"></category><category term="int"></category><category term="float"></category><category term="string"></category><category term="date"></category><category term="bool"></category><category term="str"></category><category term="blog"></category></entry><entry><title>Nomenclatura das Variáveis em Python</title><link href="http://excript.com/python/nomenclatura-variaveis-python.html" rel="alternate"></link><updated>2016-05-06T19:10:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/nomenclatura-variaveis-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1034,7 +1034,7 @@ Muito obrigado e até mais. Tchau!&lt;/p&gt;
 00:05:10,850 --&amp;gt; 00:05:18,409
 Como nós podemos ver aqui nos exemplos:&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="variavel"></category><category term="nomenclatura"></category><category term="blog"></category></entry><entry><title>Características das Variáveis em Python</title><link href="http://excript.com/python/caracteristicas-das-variaveis-python.html" rel="alternate"></link><updated>2016-06-05T18:40:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-05:python/caracteristicas-das-variaveis-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="variavel"></category><category term="nomenclatura"></category><category term="blog"></category></entry><entry><title>Características das Variáveis em Python</title><link href="http://excript.com/python/caracteristicas-das-variaveis-python.html" rel="alternate"></link><updated>2016-05-06T18:40:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/caracteristicas-das-variaveis-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1370,7 +1370,7 @@ Vejo vocês na nossa próxima aula. Muito&lt;/p&gt;
 00:04:53,270 --&amp;gt; 00:05:00,270
 obrigado e até mais. Tchau!&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="variáveis"></category><category term="caracteristicas das variáveis"></category><category term="tipos"></category><category term="blog"></category></entry><entry><title>Variáveis em Python</title><link href="http://excript.com/python/variavel-em-python.html" rel="alternate"></link><updated>2016-06-05T18:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-05:python/variavel-em-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="variáveis"></category><category term="caracteristicas das variáveis"></category><category term="tipos"></category><category term="blog"></category></entry><entry><title>Variáveis em Python</title><link href="http://excript.com/python/variavel-em-python.html" rel="alternate"></link><updated>2016-05-06T18:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/variavel-em-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1405,7 +1405,7 @@ obrigado e até mais. Tchau!&lt;/p&gt;
 &lt;p&gt;Quando iniciamos o estudo da programação, gostamos de conhecer os limites, quantidades e capacidades de tudo. Mensurar a quantidade de variáveis que um programa Python pode ter é bastante difícil. Isso porque, vamos supor, um simples número inteiro para o Python, não possuirá somente o valor da sua informação e sim, haverá um conjunto de dados que estarão vinculado ao número internamente. Junto a cada referência declarada, haverá também, muitas outras informações vinculadas, informações estas conhecidas como metadadops, e estas, serão armazenadas para tanto uso intero no Python, ou então, para melhorar a performance em alguma situação.&lt;/p&gt;
 &lt;p&gt;A linguagem Python não define quantidades até porque, os limites sempre estarão diretamente relacionadas com a capacidade do computador onde o programa for executado.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="variavel"></category><category term="blog"></category></entry><entry><title>Indentação do código Python</title><link href="http://excript.com/python/indentacao-python.html" rel="alternate"></link><updated>2016-06-05T18:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-05:python/indentacao-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="variavel"></category><category term="blog"></category></entry><entry><title>Indentação do código Python</title><link href="http://excript.com/python/indentacao-python.html" rel="alternate"></link><updated>2016-05-06T18:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/indentacao-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1774,7 +1774,7 @@ Vejo vocês na nossa próxima aula. Muito&lt;/p&gt;
 00:05:08,810 --&amp;gt; 00:05:15,810
 obrigado e até mais. Tchau!&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="indentação"></category><category term="blog"></category></entry><entry><title>Comentários em Python</title><link href="http://excript.com/python/comentarios-em-python.html" rel="alternate"></link><updated>2016-06-05T17:40:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-05:python/comentarios-em-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="indentação"></category><category term="blog"></category></entry><entry><title>Comentários em Python</title><link href="http://excript.com/python/comentarios-em-python.html" rel="alternate"></link><updated>2016-05-06T17:40:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/comentarios-em-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2182,7 +2182,7 @@ Vejo vocês na nossa próxima aula. Muito&lt;/p&gt;
 00:05:19,060 --&amp;gt; 00:05:26,060
 obrigado e até mais. Tchau!&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="comentários"></category><category term="blog"></category></entry><entry><title>Primeiro programa em Python</title><link href="http://excript.com/python/primeiro-programa-em-python.html" rel="alternate"></link><updated>2016-06-05T17:15:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-05:python/primeiro-programa-em-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="comentários"></category><category term="blog"></category></entry><entry><title>Primeiro programa em Python</title><link href="http://excript.com/python/primeiro-programa-em-python.html" rel="alternate"></link><updated>2016-05-06T17:15:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/primeiro-programa-em-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2604,7 +2604,7 @@ Vejo vocês na nossa próxima aula. Muito&lt;/p&gt;
 00:06:22,009 --&amp;gt; 00:06:29,009
 obrigado e até mais. Tchau!&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="primeiro programa"></category><category term="hello world"></category><category term="blog"></category><category term="print"></category></entry><entry><title>Instalando o PyCharm no Windows</title><link href="http://excript.com/python/instalando-o-pycharm-windows.html" rel="alternate"></link><updated>2016-06-05T17:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-05:python/instalando-o-pycharm-windows.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="primeiro programa"></category><category term="hello world"></category><category term="blog"></category><category term="print"></category></entry><entry><title>Instalando o PyCharm no Windows</title><link href="http://excript.com/python/instalando-o-pycharm-windows.html" rel="alternate"></link><updated>2016-05-06T17:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/instalando-o-pycharm-windows.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2827,7 +2827,7 @@ nessa aula nós aprendemos a instalar a nossa IDE, que no caso foi o PyCharm. En
 00:03:50,470 --&amp;gt; 00:04:02,879
 vejo você na nossa próxima aula, muito obrigado e até mais. Tchau!&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="pycharm"></category><category term="jetbrains"></category><category term="ide"></category><category term="blog"></category></entry><entry><title>IDLE - Modo Interativo do Python</title><link href="http://excript.com/python/idle-python.html" rel="alternate"></link><updated>2016-02-05T01:50:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-02-05:python/idle-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="pycharm"></category><category term="jetbrains"></category><category term="ide"></category><category term="blog"></category></entry><entry><title>IDLE - Modo Interativo do Python</title><link href="http://excript.com/python/idle-python.html" rel="alternate"></link><updated>2016-05-02T01:50:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-02:python/idle-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2929,7 +2929,7 @@ Alt + N - para avançar. O 'N' vem de &amp;quot;Next&amp;quot;.&lt;/p&gt;
 &lt;p&gt;Nesse artigo estudamos o mínimo sobre o IDLE e aprendemos somente as teclas de atalho essenciais para que possamos utilizar o o ambiente para testes e estudos disponibilizado nas principais versões do Python, no caso, o IDLE!&lt;/p&gt;
 &lt;p&gt;É possível que seja feito muito mais do que o demonstrado e podemos explorar diversos outros recursos acessando o Menu do próprio editor.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="idle"></category><category term="ide"></category><category term="editor"></category><category term="blog"></category></entry><entry><title>Recursos do Python</title><link href="http://excript.com/python/recursos-python.html" rel="alternate"></link><updated>2016-01-05T21:20:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-05:python/recursos-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="idle"></category><category term="ide"></category><category term="editor"></category><category term="blog"></category></entry><entry><title>Recursos do Python</title><link href="http://excript.com/python/recursos-python.html" rel="alternate"></link><updated>2016-05-01T21:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:python/recursos-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2985,7 +2985,7 @@ Alt + N - para avançar. O 'N' vem de &amp;quot;Next&amp;quot;.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Nesse momento, finalizamos nosso estudo sobre as principais características e recurso da linguagem Python! Poderíamos enumerar muitos outros recursos, porém, nesse momento, citamos os principais e as mais importantes características da linguagem.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="caracteristica do python"></category><category term="recursos do python"></category><category term="blog"></category></entry><entry><title>Características do Python</title><link href="http://excript.com/python/caracteristica-python.html" rel="alternate"></link><updated>2016-01-05T21:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-05:python/caracteristica-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="caracteristica do python"></category><category term="recursos do python"></category><category term="blog"></category></entry><entry><title>Características do Python</title><link href="http://excript.com/python/caracteristica-python.html" rel="alternate"></link><updated>2016-05-01T21:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:python/caracteristica-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -3036,7 +3036,7 @@ Alt + N - para avançar. O 'N' vem de &amp;quot;Next&amp;quot;.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Os tópicos aqui elucidados estão longe de esgotar os recursos do Python! Por essa razão, continuaremos o nosso estudo sobre as principais características e recursos da linguagem na próxima aula.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="caracteristica do python"></category><category term="recursos do python"></category><category term="blog"></category></entry><entry><title>Como Instalar o Python no Windows</title><link href="http://excript.com/python/como-instalar-o-python-windows.html" rel="alternate"></link><updated>2016-01-05T18:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-05:python/como-instalar-o-python-windows.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="caracteristica do python"></category><category term="recursos do python"></category><category term="blog"></category></entry><entry><title>Como Instalar o Python no Windows</title><link href="http://excript.com/python/como-instalar-o-python-windows.html" rel="alternate"></link><updated>2016-05-01T18:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:python/como-instalar-o-python-windows.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -3107,7 +3107,7 @@ Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span
 &lt;p&gt;Isso ocorre nas situações quando o local de instalação do Python não está nas variáveis do sistema. As variáveis do sistema apontam para diretórios onde o SO que estamos utilizando irá buscar os programas que devem ser reconhecidos na linha de comando ou por outros softwares de maneira automática.&lt;/p&gt;
 &lt;p&gt;Nos sistemas Linux, raramente a instalação não é encontrada, mas nas versões do Windows, isso ocorre muito mais facilmente, até porque, é possível, nas instalações do Python, pedir que o mesmo não adicione o PATH [caminho ou diretório] da instalação atual, nas variáveis do sistema. Logo, você terá que ir nas opções do sistema, no caso, em Programas Instalados e procurar por alguma instalação do Python. Se nada for encontrado, e você não tiver feito a instalação via compilação através do fontes, então o Python não está instalado.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="download"></category><category term="instalação"></category><category term="windows"></category><category term="instalação no windows"></category><category term="blog"></category></entry><entry><title>Primeira Aula de Python</title><link href="http://excript.com/python/primeira-aula-python.html" rel="alternate"></link><updated>2016-01-05T17:50:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-05:python/primeira-aula-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="download"></category><category term="instalação"></category><category term="windows"></category><category term="instalação no windows"></category><category term="blog"></category></entry><entry><title>Primeira Aula de Python</title><link href="http://excript.com/python/primeira-aula-python.html" rel="alternate"></link><updated>2016-05-01T17:50:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:python/primeira-aula-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -3169,7 +3169,7 @@ Quais os recursos do Python?
 O que faz da linguagem Python_ ser especial? --&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="curso de python"></category><category term="eXcript"></category><category term="eXcript Brasil"></category><category term="blog"></category></entry><entry><title>Curso de Python</title><link href="http://excript.com/curso-de-python.html" rel="alternate"></link><updated>2016-01-05T17:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-05:curso-de-python.html</id><summary type="html">&lt;div class="section" id="sobre-o-curso"&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="curso de python"></category><category term="eXcript"></category><category term="eXcript Brasil"></category><category term="blog"></category></entry><entry><title>Curso de Python</title><link href="http://excript.com/curso-de-python.html" rel="alternate"></link><updated>2016-05-01T17:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:curso-de-python.html</id><summary type="html">&lt;div class="section" id="sobre-o-curso"&gt;
 &lt;h2&gt;SOBRE O CURSO&lt;/h2&gt;
 &lt;p&gt;O &lt;tt class="docutils literal"&gt;Curso de Python&lt;/tt&gt; da eXcript é a forma mais fácil para iniciar os estudos na linguagem de programação &lt;strong&gt;Python&lt;/strong&gt;. As aulas partem do princípio que o aluno nunca programou e por isso, é ensinado o básico da programação, como por exemplo, a lógica, bem como a linguagem &lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt;, até a execução de lógicas complexas para a manipulação do fluxo de controle das aplicações.&lt;/p&gt;
 &lt;p&gt;Vamos aprender ainda nas primeiras aulas a como instalar o Python, como instalar um programa para programarmos em Python [ IDE (editor de código) ], como executar código Python e tudo que você precisa conhecer.&lt;/p&gt;

@@ -82,6 +82,51 @@ excript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a  href="http://excript.com/php/lista-parametro-php-ii.html">Lista de Parâmetros em PHP II</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">function somaTudo(){</span>
+
+<span class="x">    $lista = func_get_args();</span>
+<span class="x">    $qntd = func_num_args();</span>
+<span class="x">    $total = 0;</span>
+
+<span class="x">//    for($x = 0; $x&lt;$qntd; $x++)</span>
+<span class="x">    foreach($lista as $item)</span>
+<span class="x">    {</span>
+<span class="x">        $total += $item;</span>
+<span class="x">    }</span>
+
+<span class="x">    echo &quot;A soma de todos parâmetros é: &quot; . $total;</span>
+
+<span class="x">}</span>
+
+<span class="x">somaTudo(1,2,3,4,5,6);</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/lista-parametro-php-ii.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a  href="http://excript.com/php/manipulação-arrays-php.html">Manipulação de Arrays em PHP</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line">
@@ -383,48 +428,6 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &quot;&lt;br&gt;&quot;;</p>
     </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/nomenclatura-variavel-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/null-coalescing-operator-php.html">Null Coalescing Operator em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">$quadrado = function($num){</span>
-<span class="x">    return $num * $num;</span>
-<span class="x">};</span>
-<span class="x">$cubo = function($num) use ($quadrado){</span>
-<span class="x">    return $quadrado($num) * $num;</span>
-<span class="x">};</span>
-<span class="x">$soma = function($num){</span>
-<span class="x">    return $num + $num;</span>
-<span class="x">};</span>
-
-<span class="x">function processa_lista($lista, $func){</span>
-<span class="x">    foreach($lista as &amp;$item)</span>
-<span class="x">        $item = $func($item);</span>
-<span class="x">    return $lista;</span>
-<span class="x">}</span>
-
-<span class="x">print_r(processa_lista(range(1 ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/null-coalescing-operator-php.html">more ...</a>
                 </div>
             </article>
             <hr/>

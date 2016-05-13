@@ -81,6 +81,45 @@ excript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a  href="http://excript.com/php/constante-php.html">Constantes em PHP</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="x">define(&quot;TESTE&quot;, 10);</span>
+<span class="x">echo TESTE . &quot;\n&quot;;</span>
+
+<span class="x">for($x=0; $x&lt;5; $x++)</span>
+<span class="x">    define(&quot;CONSTANTE&quot;.$x, $x);</span>
+
+<span class="x">echo CONSTANTE0 . &quot;\n&quot;;</span>
+<span class="x">echo CONSTANTE4 . &quot;\n&quot;;</span>
+
+<span class="x">const VALOR = 1000;</span>
+<span class="x">echo VALOR . &quot;\n&quot;;</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/constante-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a  href="http://excript.com/php/construtor-personalizado-php.html">Construtores Personalizados em PHP</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line">
@@ -441,52 +480,6 @@ excript            </a>
         <span class="k">if</span><span class="p">(</span><span class="nv">$idade</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">){</span>
             <span class="k">echo</span> <span class="s2">&quot;A idade � de uma crian�a ou de ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/elseif-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/encapsulamento-php.html">Encapsulamento em PHP</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x"># ENCAPSULAMENTO</span>
-
-<span class="x">class Pessoa{</span>
-
-<span class="x">    private $nome;</span>
-
-<span class="x">    function setNome($nome){</span>
-<span class="x">        $this -&gt; nome = $nome;</span>
-<span class="x">    }</span>
-<span class="x">    function getNome(){</span>
-<span class="x">        return $this -&gt; nome;</span>
-<span class="x">    }</span>
-
-<span class="x">}</span>
-
-<span class="x">$p1 = new Pessoa();</span>
-<span class="x">//$p1 -&gt; setNome(&quot;eXcript&quot;);</span>
-<span class="x">$p1 -&gt; nome = &quot;&quot;;</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/encapsulamento-php.html">more ...</a>
                 </div>
             </article>
             <hr/>

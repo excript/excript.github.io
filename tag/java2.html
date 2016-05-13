@@ -82,35 +82,120 @@ excript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a  href="http://excript.com/curso-java-orientado-a-objetos.html">Curso de Java Orientado a Objetos</a></h2>
-                <div class="summary"><div class="section" id="sobre-o-curso">
-<h2>SOBRE O CURSO</h2>
-<p>Neste curso, estudaremos a parte de orientação a objetos do Java.</p>
-</div>
+                <h2><a  href="http://excript.com/android/definindo-quem-inicia-com-x-e-com-o.html">Definindo quem inicia com X e com O</a></h2>
+                <div class="summary"><p>Acrecentando RadioButton</p>
+<div class="highlight"><pre><span class="nt">&lt;RadioGroup</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span> <span class="nt">&gt;</span>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/curso-java-orientado-a-objetos.html">more ...</a>
+    <span class="nt">&lt;RadioButton</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/rbX&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:text=</span><span class="s">&quot;X&quot;</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;RadioButton</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/rbO&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:text=</span><span class="s">&quot;O&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/RadioGroup&gt;</span>
+</pre></div>
+<div class="highlight"><pre><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/definindo-quem-inicia-com-x-e-com-o.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/exercicios-resolvidos-de-java.html">Exercícios Resolvidos de Java</a></h2>
-                <div class="summary"><div class="section" id="sobre-o-curso">
-<h2>SOBRE O CURSO</h2>
-<p>Neste curso resolveremos alguns exercícios de Java.</p>
-</div>
+                <h2><a  href="http://excript.com/android/configuracao-final-jogo.html">Configurações após a Finalização do Jogo</a></h2>
+                <div class="summary"><p>Acrescentar nop arquivo <tt class="docutils literal">color.xml</tt></p>
+<div class="highlight"><pre><span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;black&quot;</span><span class="nt">&gt;</span>#0000<span class="nt">&lt;/color&gt;</span>
+</pre></div>
+<div class="highlight"><pre><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/exercicios-resolvidos-de-java.html">more ...</a>
+
+<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Button</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
+
+    <span class="c1">//CONST DE CADA BOTAO</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">QUADRADO</span> <span class="o">=</span> <span class="s">&quot;quadrado&quot;</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/configuracao-final-jogo.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/java8-lambda.html">Java8 - Lambda</a></h2>
-                <div class="summary"><div class="section" id="sobre-o-curso">
-<h2>SOBRE O CURSO</h2>
-<p>Neste curso estudaremos a versão 8 do Java que dentre as novidades, trouxe as expressões Lambdas.</p>
-</div>
+                <h2><a  href="http://excript.com/android/tracando-linha-final-jogo.html">Traçando linha no final do jogo</a></h2>
+                <div class="summary"><p>Foi criado um arquivo na pasta <tt class="docutils literal">value</tt> com o nome <tt class="docutils literal">color.xml</tt>.</p>
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;resources&gt;</span>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/java8-lambda.html">more ...</a>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;red&quot;</span><span class="nt">&gt;</span>#FF0000<span class="nt">&lt;/color&gt;</span>
+
+<span class="nt">&lt;/resources&gt;</span>
+</pre></div>
+<div class="highlight"><pre><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Button</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
+
+<span class="kd">public ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/tracando-linha-final-jogo.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/android/definir-array-contera-jogadas.html">Definindo um array que conterá as jogadas</a></h2>
+                <div class="summary"><div class="highlight"><pre><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Button</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
+
+    <span class="c1">//CONST DE CADA BOTAO</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">QUADRADO</span> <span class="o">=</span> <span class="s">&quot;quadrado&quot;</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">BOLA</span> <span class="o">=</span> <span class="s">&quot;O&quot;</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">XIS</span> <span class="o">=</span> <span class="s">&quot;X&quot;</span><span class="o">;</span>
+
+    <span class="kd">private</span> <span class="n">String ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/definir-array-contera-jogadas.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/android/definindo-botoes-ja-jogados.html">Definindo os Botões já Jogados</a></h2>
+                <div class="summary"><div class="highlight"><pre><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Button</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
+
+    <span class="c1">//CONST DE CADA BOTAO</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">QUADRADO</span> <span class="o">=</span> <span class="s">&quot;quadrado&quot;</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">BOLA</span> <span class="o">=</span> <span class="s">&quot;O&quot;</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">XIS</span> <span class="o">=</span> <span class="s">&quot;X&quot;</span><span class="o">;</span>
+
+    <span class="kd">private</span> <span class="n">String ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/definindo-botoes-ja-jogados.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -186,20 +271,6 @@ excript            </a>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android-jogo-da-velha.html">Jogo da Velha com Java para Android</a></h2>
-                <div class="summary"><div class="section" id="sobre">
-<h2>SOBRE</h2>
-<p>Nesta série de 11 aulas, desenvolveremos um Jogo da Velha com a linguagem Java voltado a ser executado na plataforma Android. A cada aula evoluiremos nosso código e estudaremos a razão existente para cada linha de código.</p>
-</div>
-<div class="section" id="lista-das-aulas">
-<h2>LISTA DAS AULAS</h2>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android-jogo-da-velha.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
                 <h2><a  href="http://excript.com/android/abertura-jogo-da-velha-android.html">Abertura do Jogo da Venha para Android com Java</a></h2>
                 <div class="summary"><div class="section" id="jogo-da-velha-no-android">
 <h2>JOGO DA VELHA NO ANDROID</h2>
@@ -215,33 +286,6 @@ excript            </a>
                 <h2><a  href="http://excript.com/cursos.html">Lista de cursos da eXcript</a></h2>
                 <div class="summary">
                     <a class="btn btn-default btn-xs" href="http://excript.com/cursos.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/java/abertura-curso-java-orientado-objetos.html">Abertura do Curso de Java Orientado a Objetos</a></h2>
-                <div class="summary"><div class="section" id="abertura">
-<h2>ABERTURA</h2>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/java/abertura-curso-java-orientado-objetos.html">more ...</a>
                 </div>
             </article>
             <hr/>
