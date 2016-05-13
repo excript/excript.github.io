@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"  xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head>
+    <title>SQLite Internamente - excript</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="Vi7WdSsBR9oK2RjK_6E8OrtAfzA_mVlNrhlDjt7LXZ0" />
+	<!--<link href="https://plus.google.com/" rel="publisher">	-->
+
+
+
+<link rel="canonical" href="http://excript.com/python/sqlite-internamente.html">
+
+        <meta name="author" content="Cláudio Rogério Carvalho Filho" />
+        <meta name="keywords" content="python,sqlite,sqlite3,sql,query,banco de dados,base" />
+    <meta name="description" content="Nesta aula estudaremos as entranhas do SQLite e aprenderemos como o mesmo analisa nossas Querys SQL. Veremos também, comos uma Query é processada e por fim, como as informações são retornadas para o agente que fez a requisição." />
+
+        <meta property="og:site_name" content="excript" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="SQLite Internamente"/>
+        <meta property="og:url" content="http://excript.com/python/sqlite-internamente.html"/>
+
+        <meta property="og:description" content="Nesta aula estudaremos as entranhas do SQLite e aprenderemos como o mesmo analisa nossas Querys SQL. Veremos também, comos uma Query é processada e por fim, como as informações são retornadas para o agente que fez a requisição."/>
+
+        <meta property="article:published_time" content="13-05-2016" />
+            <meta property="article:section" content="python" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="sqlite" />
+            <meta property="article:tag" content="sqlite3" />
+            <meta property="article:tag" content="sql" />
+            <meta property="article:tag" content="query" />
+            <meta property="article:tag" content="banco de dados" />
+            <meta property="article:tag" content="base" />
+            <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
+            <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
+
+
+    <link rel="stylesheet" href="http://excript.com/theme/css/asciidoctor-default.css" type="text/css"/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://excript.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://excript.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://excript.com/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://excript.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://excript.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="excript ATOM Feed"/>
+
+        <link href="http://excript.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="excript RSS Feed"/>
+
+
+        <link href="http://excript.com/feeds/python.atom.xml" type="application/atom+xml" rel="alternate"
+              title="excript python ATOM Feed"/>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://excript.com/" class="navbar-brand">
+excript            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="/tag/blog.html">blog</a></li>
+                    <li><a href="/cursos.html">cursos</a></li>
+                    <li><a href="/pages/about.html">quem somos</a></li>
+                    <li><a href="/pages/contato.html">contato</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://excript.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container container-content">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://excript.com/python/sqlite-internamente.html"
+                       rel="bookmark"
+                       title="Permalink to SQLite Internamente">
+                        SQLITE INTERNAMENTE
+                    </a>
+                </h1>
+
+                    <h3 class="h3curso">
+	                    <a href="http://excript.com/python/sqlite-internamente.html"
+	                       rel="bookmark"
+	                       title="Permalink to SQLite Internamente">
+	                        CURSO DE PYTHON COM SQLITE
+	                    </a>
+                    </h3>
+            </header>
+            <div class="entry-content">
+
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+
+        <span class="label label-default"></span>
+        <span class="published">
+            <time datetime="2016-05-13T12:00:00-03:00"> Publicado em 13-05-2016</time>
+        </span>
+
+
+
+	            <span class="label label-default"></span>
+	            por <a href="http://excript.com/author/claudio-rogerio-carvalho-filho.html">Cláudio Rogério Carvalho Filho</a>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" ><a data-toggle="tab" href="#indice">ÍNDICE</a></li>
+			<li role="presentation" class="active"><a data-toggle="tab" href="#artigo">ARTIGO</a></li>
+			<li role="presentation"><a data-toggle="tab" href="#videoaula">VIDEOAULA</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane" id="indice">
+
+
+<table class="table table-hover">
+        <thead>
+        <tr>
+            <th>NOME</th>
+            <th>DURAÇÃO</th>
+        </tr>
+        </thead>
+        <tbody><tr>
+                            <td><a href="http://excript.com/curso-python-sqlite.html" >Curso de Python com SQLite</a></td>
+                            <td><a href="http://excript.com/curso-python-sqlite.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/python/abertura-curso-python-sqlite.html" >Abertura do curso de Python com SQLite</a></td>
+                            <td><a href="http://excript.com/python/abertura-curso-python-sqlite.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/python/como-instalar-sqlite.html" >Como instalar o SQLite</a></td>
+                            <td><a href="http://excript.com/python/como-instalar-sqlite.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/python/caracteristicas-sqlite.html" >Características do SQLite</a></td>
+                            <td><a href="http://excript.com/python/caracteristicas-sqlite.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/python/o-que-e-banco-de-dados-sqlite.html" >O que é banco de dados</a></td>
+                            <td><a href="http://excript.com/python/o-que-e-banco-de-dados-sqlite.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/python/criando-primeiro-bd-sqlite.html" >Criando o Primeiro BD com SQLite</a></td>
+                            <td><a href="http://excript.com/python/criando-primeiro-bd-sqlite.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/python/introducao-sql-sqlite.html" >Introdução ao SQL do SQLite</a></td>
+                            <td><a href="http://excript.com/python/introducao-sql-sqlite.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/python/sqlite-internamente.html" >SQLite Internamente</a></td>
+                            <td><a href="http://excript.com/python/sqlite-internamente.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/python/tabela-sqlite.html" >Tabela no SQLite</a></td>
+                            <td><a href="http://excript.com/python/tabela-sqlite.html" ></a></td>
+                        </tr>        </tbody>
+            </table>
+        
+
+			</div>
+
+			<div class="tab-pane active" id="artigo">
+				<div class="row">
+					
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos as entranhas do SQLite e aprenderemos como o mesmo analisa nossas Querys SQL. Veremos também, comos uma Query é processada e por fim, como as informações são retornadas para o agente que fez a requisição.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="id1">
+<h2>SQLITE INTERNAMENTE</h2>
+<p>Antes de iniciarmos a análise interna do SQLite é importante ressaltar que que não é necessário o estudo do funcionamento interno do banco de dados para trabalhar com o mesmo. Desta forma, o entendimento dos conceitos aqui descritos não se faz, teoricamente necessários. Fato é que está aula é resultante de um estudo pessoal qu eu Cláudio realizei, logo, decidi produzir este material, haja vista que informações e conhecimento nunca é demais!</p>
+<p>O banco de dados SQLite, além de armazenar informações, gerenciar os relacionamentos, armazenar procedimentos, gerenciar os índices e etc, ainda possui um interpretador de código SQL que, tem por objetivo, gerar código para a máquina virtual interna do SQLite. Desta forma, ao manipularmos informações, nossas queries são convertidas para uma linguagem própria e posteriormente, interpretada pela máquina virtual do banco de dados.</p>
+<p>Ainda que o executável do SQLite possua um tamanho ínfimo e, para o seu funcionamento não existe a necessidade de manter uma instância em execução, a quantidade de processos que ocorrem desde recebimento de uma Query até o retorno de um conjunto de registro é impressionante!</p>
+<p>Um banco de dados SQLite administra tudo utilizando um único arquivo. Logo, para enviar toda a base de dados para outro dispositivo, precisamos só e somente só, mover um único arquivo e assim, todo que for referente a determinada base de dados também será movido. O SQLite até gera um arquivo de paginação, porém, este arquivo contém informações temporárias e não é necessário que façamos backup ou então, move-lo junto com o arquivo que contém as informações.</p>
+<p>Algumas vezes, não é possível reconhecer se o arquivo é uma base de dados, até porque, o SQLite não obriga a utilização de uma extensão própria. Logo, é comum a utilização das extensões *.db ou então, *.sqlite, *.sqlite3 e etc.</p>
+<p>A seguir, estudaremos em detalhes alguns processo que ocorrem internamente e antes de qualquer Query ser executada.</p>
+</div>
+<div class="section" id="o-que-e-a-interface">
+<h2>O QUE É A INTERFACE?</h2>
+<p>Podemos dizer que é a API que utilizamos para integrar o nosso programa em Python, com a biblioteca do SQLite em C.</p>
+<p>O SQLite possui uma interface de acesso público para bibliotecas que terceiros consigam acessar de forma simples e segura. Por padrão, todas as funções e métodos da interface de integração iniciam como o nome sqlite3. Assim, consegue-se distinguir facilmente qual a versão do banco de dados e da biblioteca de acesso.
+Tokenizer</p>
+</div>
+<div class="section" id="o-que-e-o-tokenizer">
+<h2>O QUE É O TOKENIZER?</h2>
+<p>Converte a nossa query em simbolos de forma a facilitar os processor de interpretação da query enviada.</p>
+<p>Ao enviar uma string com códigos SQL para as bibliotecas SQLite, a interface de acesso recebe a string e na sequência passa a mesma para o Tokenizer.</p>
+<p>O trabalho do tokenizador será quebrar a string de código SQL em tokens (simbolo) para que então, estes sejam enviados para ao parser (analisador).</p>
+<p>O interessante aq'o tokenizer é quem chama o analisador, ao contrario do que normalmente temos com outras linguagens.</p>
+<p>O trabalho realizado pelo Tokenizer é chamado de análise léxica, que em resumo, é converter um código para símbolos, ou seja, simbolo léxicos (Lexical tokens). A análise léxica geralmente está entre as primeiras análises feitas pelos compiladores e interpretadores e o objetivo é começar a preparar o código para a sua conversão em código de máquina ou então, em um código que possa ser executado mais rapidamente. Assim, os erros de digitação ou então, a utilização de outras simbologias ou o uso errado de alguma instrução será detectado pelo analisador léxico.</p>
+</div>
+<div class="section" id="parsing-analisador">
+<h2>PARSING (ANALISADOR)</h2>
+<p>O analisado irá receber um conjunto de tokens e então irá a atribuir a estes  um significado, conforme a função que o token devera desempenhar.
+O parser do SQLite é gerado utilizando um sofisticado motor de parsing de nome Lemon.</p>
+<p>Parsing ou análise sintática pode-se resumida no processo de transformar e organizar os tokens numa estrutura hierárquica para que assim, seja mais fácil executa-los em ordem. Então, podemos dizer que os tokens gerados na análise léxica, agora serão organizados numa estrutura semelhante a uma arvore.</p>
+</div>
+<div class="section" id="code-generator">
+<h2>CODE GENERATOR</h2>
+<p>Depois que o parser montar os comandos SQL em totens, a estrutura resultante da análise léxica e da análise sintática é enviado para o Code Generator. Este, ira produzir o código de máquina, ou então, o código que o motor do SQLite entende e sabe quais procedimentos devem ser executados.
+Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gerado pelo Code Generator é a interpretação do SQL e que produz um código imperativo. Assim, enquanto o paradigma declarativo tem como objetivo informar a máquina o que se quer fazer, o paradigma imperativo, diz como deve ser feito. Assim, nós temos que o motor do SQLite recebe código declarativo e converte-o em código imperativo.</p>
+</div>
+<div class="section" id="maquina-virtual">
+<h2>MÁQUINA VIRTUAL</h2>
+<p>O Code Generator irá produzir uma espécie de programinha ou então, uma espécie de script. Então, esse código gerado, é um algoritmo especializado produzido atráves de instruções SQL. Então, após o processo de conversão e de geração do algoritmo a ser executado, este será enviado à Maquina virtual e então as operações serão executadas nos respectivos arquivos.</p>
+<p>A Máquina Virtual do SQLite é uma implementação de um mecanismo computacional abstrato, projetado especificamente para manipular os arquivos que compõem o nosso banco de dados. Ou seja, o SQLite possui uma estrutura de dados especifica para guardar as informações.  Então, para manipular essa informações, criou-se uma linguagem de programação especifica como também, sua respectiva maquina virtual que sabe como executa-la. Assim, ao enviarmos um código SQL para o motor do SQLite, este convertera o nosso código para uma linguagem especializada na manipulação de informações e graças a isso, hoje somos poupados de ter que aprender uma linguagem complicada e altamente especializada só para manipular grande quantidades de informações.</p>
+<p>Se nós formos analisar o que cada query realmente faz e também, todos os algoritmos que ela faz uso, veremos como o SQL é simples antes tudo que uma simples expressão do mesmo pode ocasionar.</p>
+</div>
+<div class="section" id="b-tree">
+<h2>B-TREE</h2>
+<p>Bem como o mesmo é responsável por criar a estrutura que será utilizada na organização do conjunto de registro pertencentes a uma tabela.</p>
+<p>O SQLite armazena as informações  informações através de uma implementação B-Tree (Arvore B). Assim, cada tabela é uma estrutura B-tree, como também, cada índice das nossas tabelas será uma outra arvore B-tree.  O SQLite mantém uma arvore B-Tree para cada lista, porém, todas as estruturas são salvas juntas, isto é, estão contidas num único arquivo.</p>
+</div>
+<div class="section" id="pagina-cache-arquivo-de-paginacao">
+<h2>PÁGINA CACHE (ARQUIVO DE PAGINAÇÃO)</h2>
+<p>Um módulo B-tree lê as estruturas armazenadas no disco em pequenos pedaços sempre de mesmo tamanho. Por padrão, o tamanho de cada bloco é de 1024 bytes, porém, há situações onde pode ser utilizado um bloco com 512 bytes ou então 65.536 bytes.</p>
+<p>O page cache é o responsável por garantir todo o gerenciamento e controle na manipulação das estruturas em uma base. Isso porque, o mesmo é o responsável pela leitura, escrita e através dele alguns desses pedaços são armazenados.</p>
+<p>O Page Cache também tem papel importante no processo de rollback, bloquear um registro ou então uma tabela como também, como também, através dele ocorrem o Commit atômico.</p>
+<p>O gerenciador da estrutura B-tree pede ao Page Cache uma determinada  informação do banco, como também notifica quando deseja fazer uma alteração ou o que precisa ser alterado.</p>
+<p>A maior parte das ações que complexas e perigosas realizadas dentro do banco faz em alguma parte do processo a utilização do Cache de Página.</p>
+</div>
+<div class="section" id="limites-do-sqlite">
+<h2>LIMITES DO SQLITE</h2>
+<p>A seguir, temos alguns números que definem as capacidades hipotéticas que cada base de dados pode possuir. A maioria das &quot;limitações&quot; do SQLite são artificiais, isto é, como tudo precisa ter um limite, foi definido um número improvável, porém, que não é impossível.</p>
+<div class="section" id="tabelas">
+<h3>TABELAS</h3>
+<p>O máximo de tabelas que podemos ter em um banco de dados é de 2 bilhões.</p>
+</div>
+<div class="section" id="colunas">
+<h3>COLUNAS</h3>
+<p>As colunas possuem uma limitação artificial, ou seja, o limite é uma constante que pode ser alterada, sendo necessário que a biblioteca seja re-compilada.</p>
+</div>
+<div class="section" id="registros">
+<h3>REGISTROS</h3>
+<p>A quantidade máxima de registro está avaliada em: 18446744073709551616 (1.8e+19).</p>
+</div>
+<div class="section" id="banco-de-dados">
+<h3>BANCO DE DADOS</h3>
+<p>O tamanho máximo aproximado que uma base de dados pode ter é de aproximadamente 140.000 gigabytes.</p>
+</div>
+</div>
+
+				</div>
+			</div>
+
+
+			<div class="tab-pane" id="videoaula">
+				<div class="panel panel-default panel-aulas">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe
+								class=class="embed-responsive-item"
+								src="https://www.youtube.com/embed/oYQGo25voPs"
+								frameborder="0"
+								allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+<br>
+<br>
+<span class="label label-default"></span>
+Tags
+	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/sqlite.html">sqlite</a>, 	<a href="http://excript.com/tag/sqlite3.html">sqlite3</a>, 	<a href="http://excript.com/tag/sql.html">sql</a>, 	<a href="http://excript.com/tag/query.html">query</a>, 	<a href="http://excript.com/tag/banco-de-dados.html">banco de dados</a>, 	<a href="http://excript.com/tag/base.html">base</a>            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comentários</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'python/sqlite-internamente';
+                var disqus_url = 'http://excript.com/python/sqlite-internamente.html';
+
+            var disqus_config = function () {
+                this.language = "ptb";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Por favor, ative o JavaScript para visualizar os comentários <a href="http://disqus.com/?ref_noscript"> disponibilizado por Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+	    <li class="li-sidebar">
+			<div class="fb-page" data-href="https://www.facebook.com/excript/" data-width="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/excript/"><a href="https://www.facebook.com/excript/">eXcript</a></blockquote></div></div>
+	    </li>
+
+	    <li class="li-sidebar">
+			<script src="https://apis.google.com/js/platform.js"></script>
+
+			<script>
+			  function onYtEvent(payload) {
+			    if (payload.eventType == 'subscribe') {
+			      // Add code to handle subscribe event.
+			    } else if (payload.eventType == 'unsubscribe') {
+			      // Add code to handle unsubscribe event.
+			    }
+			    if (window.console) { // for debugging only
+			      window.console.log('YT event: ', payload);
+			    }
+			  }
+			</script>
+
+			<div class="g-ytsubscribe" data-channel="excriptvideo" data-layout="full" data-count="default" data-onytevent="onYtEvent"></div>
+	    </li>
+
+	    <li class="li-sidebar">
+
+		    <!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+			<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'pt-BR'}
+			</script>
+
+			<!-- Posicione esta tag onde você deseja que o widget apareça. -->
+			<div class="g-page" data-width="200" data-href="//plus.google.com/u/0/102371115481264098253" data-rel="publisher"></div>
+
+	    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+	<div class="container">
+		
+
+		<div class="row">
+			<p class="site-info text-center">
+
+			</p><div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h5>eXcript</h5>
+						<p>
+							A eXcript é um projeto de produção audiovisual de conteúdo técnico com foco no autodidatismo.
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>CURSOS</h5>
+						<ul>
+							<li><a href="curso-de-python.html">PYTHON</a></li>
+							<li><a href="curso-de-java.html">JAVA</a></li>
+							<li><a href="curso-php.html">PHP</a></li>
+							<li><a href="curso-cpp.html">C++</a></li>
+							<li><a href="curso-c.html">C</a></li>
+							<li><a href="curso-de-android.html">ANDROID</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>SOCIAL</h5>
+						<ul>
+							<li><a href="http://plus.google.com/+excriptvideo">GOOGLE+</a></li>
+							<li><a href="http://www.facebook.com/excript">FACEBOOK</a></li>
+							<li><a href="http://twitter.com/eXcriptBrasil">TWITTER</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<p></p>
+		</div>
+	</div>
+</footer>
+<script src="http://excript.com/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://excript.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://excript.com/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-72583776-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1684671528414521";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>
