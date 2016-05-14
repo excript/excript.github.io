@@ -1,5 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>excript</title><link>http://excript.com/</link><description></description><atom:link href="http://excript.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 12 May 2016 21:00:00 -0300</lastBuildDate><item><title>SQLite Internamente</title><link>http://excript.com/python/sqlite-internamente.html</link><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>excript</title><link>http://excript.com/</link><description></description><atom:link href="http://excript.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 14 May 2016 02:00:00 -0300</lastBuildDate><item><title>Nomenclatura das Variáveis em Java</title><link>http://excript.com/java/caracteristica-variavel-java.html</link><description>
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos as regras para a nomenclatura de variáveis, isto é, as regras que o Java tem definido para para composição de nomes.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="nomenclatura"&gt;
+&lt;h2&gt;NOMENCLATURA&lt;/h2&gt;
+&lt;p&gt;As variáveis são representadas, geralmente, por uma palavra simples ou composta que a identifica e a torna única em seu escopo. Podemos definir quaisquer nomes a uma variável, porém, existem algumas poucas regras que devemos seguir, do contrário, nossos códigos não funcionaram.&lt;/p&gt;
+&lt;p&gt;Se você está utilizando nesse momento uma IDE, como por exemplo, Eclipse, Netbeans, IntelliJ IDEA, ao digitar um nome inválido, o editor já acusará um problema na linha e facilmente você perceberá. No entanto, se estiveres estudando com um editor simples, terás manter a atenção redobrada, até porque, só saberás que o nome é invalido quando o compilador imprimir a mensagem de erro na saída.&lt;/p&gt;
+&lt;p&gt;As regras que aqui estudaremos também servirão para a definição de nomes de todas as demais estruturas do Java, isto é, existe, basicamente um padrão que serve para a composição de nomes de maneira geral e, as regras que aqui estudaremos servirão futuramente quando formos definir nomes de outras estruturas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="composicao-do-nome"&gt;
+&lt;h2&gt;COMPOSIÇÃO DO NOME&lt;/h2&gt;
+&lt;p&gt;Na construção de referências, pode-se utilizar, quaisquer letras, sejam elas maiúsculas ou minúsculas. Variáveis não devem utilizar nomes de classes ou pacotes, ou seja, não devemos declarar uma variável de nome &amp;quot;int&amp;quot;, ou então, &amp;quot;String&amp;quot;, até porque, esses são nomes de tipos primitivos do Java e não pode ser utilizado. Porém, como veremos, há soluções para esse tipos de situações, isto é, não podemos utilizar a palavra &amp;quot;int&amp;quot;, porém, se precedermos a referência com por exemplo um underline, temos o nome torna-se válido, por exemplo: &amp;quot;_int&amp;quot; ou &amp;quot;int_&amp;quot;.&lt;/p&gt;
+&lt;p&gt;De maneira geral, temos a disposição todo o alfabeto para definirmos o nome de variáveis. Também podemos, por exemplo, compor o nome da variável utilizando números, o que estudaremos nos tópicos a seguir.&lt;/p&gt;
+&lt;p&gt;Desde já é importante dizer que em nenhuma situação será permitida a utilização de caracteres especiais na composição de nomes, isto é, não podemos utilizar a lista de caracteres a seguir quando estivermos definindo o nome de variáveis:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="caracteres-numericos"&gt;
+&lt;h2&gt;CARACTERES NUMÉRICOS&lt;/h2&gt;
+&lt;p&gt;Uma referência pode ser composta por letras e números, desde que este não o nome não inicie com um dos 10 algarismos. Ou seja, podemos utilizar quaisquer número na formação do nome da variável, desde que este não esteja a frente do como, como por exemplo: &lt;cite&gt;9num&lt;/cite&gt;, ou então, &lt;cite&gt;1var&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;Se precedermos o nome com números ocorre uma situação em que o interpretador não consegue distinguir se estamos trabalhando com um número, como por exemplo, um número complexo, ou então, se este nome é de fato uma variável.&lt;/p&gt;
+&lt;p&gt;Assim, temos que a utilização de números é permitida só e somente só após o primeiro caractere, como podemos ver nos exemplos a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;caractere&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="n"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;flag&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;a2b3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;qualquer texto... &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+     &lt;span class="o"&gt;}&lt;/span&gt;
+ &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A seguir, temos uma breve lista contendo os caracteres especiais que não podem ser utilizados, nem na primeira ou segunda posição, por exemplo:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="caracteres-especiais"&gt;
+&lt;h2&gt;CARACTERES ESPECIAIS&lt;/h2&gt;
+&lt;p&gt;Caracteres especiais, como por exemplo, os caracteres latinos, como o c-cedilha &lt;tt class="docutils literal"&gt;ç&lt;/tt&gt;, o tio &lt;tt class="docutils literal"&gt;~&lt;/tt&gt; e etc, não são permitidos na composição de nomes de variáveis. O único caractere tido como especial e que pode ser utilizado é o underline &lt;cite&gt;_&lt;/cite&gt;. A seguir, temos uma lista com os caracteres que não podem ser utilizados na composição de referências e entenderemos a razão nas aulas seguintes, haja vista que os mesmos desempenham funções especificas na linguagem.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;ç&lt;/li&gt;
+&lt;li&gt;&lt;ul class="first"&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ul class="first"&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ul class="first"&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;/&lt;/li&gt;
+&lt;li&gt;=&lt;/li&gt;
+&lt;li&gt;!&lt;/li&gt;
+&lt;li&gt;&amp;#64;&lt;/li&gt;
+&lt;li&gt;#&lt;/li&gt;
+&lt;li&gt;$&lt;/li&gt;
+&lt;li&gt;%&lt;/li&gt;
+&lt;li&gt;&amp;amp;&lt;/li&gt;
+&lt;li&gt;/&lt;/li&gt;
+&lt;li&gt;( )&lt;/li&gt;
+&lt;li&gt;[ ]&lt;/li&gt;
+&lt;li&gt;^&lt;/li&gt;
+&lt;li&gt;~&lt;/li&gt;
+&lt;li&gt;´&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Novamente, é importante dizer que caracteres especiais não podem ser utilizados, seja qual for a posição em que estes aparecerem na definição da referência!&lt;/p&gt;
+&lt;p&gt;A seguir, temos mais um exemplo dos caracteres que não podem estar na primeira posição de um nome de variável.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//ERRO&lt;/span&gt;
+         &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;informe seu nome&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//ERRO&lt;/span&gt;
+         &lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="c1"&gt;//ERRO&lt;/span&gt;
+
+     &lt;span class="o"&gt;}&lt;/span&gt;
+ &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As referências utilizadas no código acima são &lt;strong&gt;TODAS invalidas&lt;/strong&gt;, e a razão, deve-se ao fato destas iniciarem com caracteres numéricos. Como já dito, o primeiro caractere deve, obrigatoriamente, ser um letra do alfabeto.&lt;/p&gt;
+&lt;p&gt;Podemos concluir também, que uma variável &lt;strong&gt;JAMAIS&lt;/strong&gt; será composta por somente números, haja vista que o primeiro caractere precisa ser uma letra.&lt;/p&gt;
+&lt;p&gt;Para definirmos o nome de variáveis, temos que iniciar utilizando um caractere que esteja no intervalo de &lt;cite&gt;a&lt;/cite&gt; à &lt;cite&gt;z&lt;/cite&gt; ou &lt;cite&gt;A&lt;/cite&gt; à &lt;cite&gt;Z&lt;/cite&gt; e a única exceção a esta regra é o caractere underline &lt;cite&gt;_&lt;/cite&gt;. A seguir, temos alguns nomes de variáveis &lt;strong&gt;válidos&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i8nt&lt;/span&gt; &lt;span class="n"&gt;vvar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;_vVar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;__________idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+     &lt;span class="o"&gt;}&lt;/span&gt;
+ &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="palavras-reservadas-keyword"&gt;
+&lt;h2&gt;PALAVRAS RESERVADAS (KEYWORD)&lt;/h2&gt;
+&lt;p&gt;A linguagem Java tem definido um conjunto de palavras reservadas que possuem uso especifico na linguagem. Estes nomes não poderão ser utilizados como nomes de variáveis, até porque se assim form, haverá conflito e o interpretador não conseguirá distinguir se a palavra é uma instrução ou então uma variável.&lt;/p&gt;
+&lt;p&gt;Nesse momento não precisamos nos preocupar com as palavras reservada e também, estas serão estudadas em detalhes nas aulas futuras.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-excecao-a-regra"&gt;
+&lt;h2&gt;A EXCEÇÃO A REGRA&lt;/h2&gt;
+&lt;p&gt;Como já foi dito, porém, para formalizar a regra temos que o único caractere especial, que pode ser utilizado na composição de nomes, e que também pode estar situando em qualquer posição, é o caractere underline &lt;tt class="docutils literal"&gt;_&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;_minhaVar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;55&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;____texto&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+     &lt;span class="o"&gt;}&lt;/span&gt;
+ &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="macetezinho"&gt;
+&lt;h2&gt;MACETEZINHO&lt;/h2&gt;
+&lt;p&gt;Na dúvida sobre quais caracteres são permitidos, utilize só e somente só letras sem acentuação,sem espaços em branco, e pra garantir, não utilize nomes em Inglês. Por isso, na dúvida quanto a validade da referência, utilize somente letras que terás, com certeza absoluta, um nome de variável válido.&lt;/p&gt;
+&lt;p&gt;Se você quer decorar o que pode e o que não pode, pense da seguinte maneira:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;números só se for o segundo caractere&lt;/li&gt;
+&lt;li&gt;letras que não estejam no alfabeto Inglês NÃO permitidos&lt;/li&gt;
+&lt;li&gt;caracteres que não são letras e não são número não podem ser utilizados!&lt;/li&gt;
+&lt;li&gt;há 50 palavras reservadas, porém, todas são em Inglês, logo, evite termos em Inglês num primeiro momento.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula0005&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;inteiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;Inteiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;intEiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;int_iro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;fracao&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="kt"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;bool&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;texto&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt; &lt;span class="n"&gt;inteiro&lt;/span&gt; &lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="c1"&gt;//        int 3soma;&lt;/span&gt;
+        &lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;         * tipo nome_da_variável = null;&lt;/span&gt;
+&lt;span class="cm"&gt;         * CaseSensitive&lt;/span&gt;
+&lt;span class="cm"&gt;         */&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Sat, 14 May 2016 02:00:00 -0300</pubDate><guid>tag:excript.com,2016-05-14:java/caracteristica-variavel-java.html</guid><category>curso</category><category>java</category></item><item><title>Variáveis em Java</title><link>http://excript.com/java/variavel-java.html</link><description>&lt;div class="section" id="definicao-de-variavel"&gt;
+&lt;h2&gt;DEFINIÇÃO DE VARIÁVEL&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Variável&lt;/strong&gt; é uma região de memória reservada para armazenar valores de modo temporário. Carregamos para a memórias as informações que estamos trabalhando em determinado momento porém, sem remove-las do local de origem.&lt;/p&gt;
+&lt;p&gt;Em Java, todas as variáveis possuiram um tipo e este será definido ainda na declaração. Podemos alterar o valor armazenado numa variável a qualquer momento, porém, o tipo declarado não poderá ser alterado durante o tempo de execução.
+Mais precisamente, as variáveis são carregadas para a memória RAM (Random Access Memory) devido a alta velocidade na leitura e gravação dessa mídia. Como já dito, variáveis armazenam valores temporários, no caso, os valores que está sendo manipulando em determinado momento. A memória RAM possui alto desempenho na leitura e gravação, por isso definimos as variáveis ali, no entanto, quando o computador for desligado ou então, houver interrupção no fornecimento de energia, todo valor alocado na memória RAM é perdido de maneira irreversível.&lt;/p&gt;
+&lt;p&gt;Não há limites na declaração de variáveis, logo, somos livres para definirmos a quantidade necessário, no entanto, devemos ser cautelosos, até porque, cada variável declarada irá consumir recursos do dispositivo e pode prejudicar o desempenho de outras aplicações.&lt;/p&gt;
+&lt;p&gt;O Java reservará espaço a cada variável individualmente e, associa a esta região de memória o nome que definido, ou seja, a referência. Temos assim que, a localização do espaço de memória será feito por intermédio da referência (nome da variável) definida em nossos códigos. A partir do momento em que não fizermos mais uso de determinada variável, a JVM desalocará o espaço utilizado pela variável devolvendo-o ao sistema operacional.&lt;/p&gt;
+&lt;p&gt;A melhor maneira para manipularmos informações seja num &lt;tt class="docutils literal"&gt;programa&lt;/tt&gt;, como também num &lt;tt class="docutils literal"&gt;Script&lt;/tt&gt;, é através da utilização de variáveis. Variáveis possuem uma estrutura simples e rápida para utilização e o seu conceito vem desde os primórdios da computação.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="funcionamento-das-variaveis"&gt;
+&lt;h2&gt;FUNCIONAMENTO DAS VARIÁVEIS&lt;/h2&gt;
+&lt;p&gt;As variáveis são, de fato, regiões físicas numeradas. Cada segmento possui um número inteiro que o identifica e o distingue. Este espaço, ou melhor, essa região de memória é administrado pelo hardware, pela placa-mãe, processador e sistema operacional. Quando declaramos variáveis, estamos de fato, reservando um espaço físico para o armazenamento temporário de informações que serão utilizadas no trecho de código em que a variável está sendo definida.&lt;/p&gt;
+&lt;p&gt;Os pentes de memória RAM possuem, obviamente, um limite, porém, atualmente, raríssimas vezes iremos ocupar todo espaço do dispositivo, salvo nas vezes em que nossas aplicações apresentarem problemas. Por isso, diz-se que não limites de variáveis que podemos declarar, até porque a quantidade é, de fato, um número bastante elevado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="definicao-de-referencia"&gt;
+&lt;h2&gt;DEFINIÇÃO DE REFERÊNCIA&lt;/h2&gt;
+&lt;p&gt;Nome de variável e referência são sinônimos no desenvolvimento de aplicações. Como estudamos, as variáveis são identificadas por números e estão num espaço físico de memória, logo, a expressão referência, indica que temos uma entidade que está referenciando aquela região que é, em suma, o local reservado de determinada variável.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="declaracao-e-uso-de-uma-variavel-inteira"&gt;
+&lt;h2&gt;DECLARAÇÃO E USO DE UMA VARIÁVEL INTEIRA:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Variaveis&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+        &lt;span class="c1"&gt;//declarando uma variável numérica inteira&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="c1"&gt;//atribuindo o valor 100 para a variável&lt;/span&gt;
+        &lt;span class="n"&gt;valor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="c1"&gt;//imprimindo o valor da variável na saída padrão&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima declaramos uma variável do tipo &lt;code&gt;int&lt;/code&gt;, de nome &lt;code&gt;valor&lt;/code&gt;. Na linha seguinte atribuimos o número inteiro &lt;code&gt;100&lt;/code&gt; a variável &lt;code&gt;valor&lt;/code&gt;. Por fim, utilizamos a função &lt;code&gt;println()&lt;/code&gt; para imprimirmos na tela o valor contido na variável &lt;code&gt;valor&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;No exemplo acima, utilizamos alguns conceitos ainda não estudas, porém, é o tema das próximas aulas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-de-uso-de-variaveis"&gt;
+&lt;h2&gt;EXEMPLO DE USO DE VARIÁVEIS&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;VarEstudo&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
+
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;minhaVariavel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;minhaVariavel&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+        &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;dinheiro&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.55&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dinheiro&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula0004&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;        * 1) um nome&lt;/span&gt;
+&lt;span class="cm"&gt;        * 2) um tipo&lt;/span&gt;
+&lt;span class="cm"&gt;        * 3) um tamanho&lt;/span&gt;
+&lt;span class="cm"&gt;        * 4) um valor&lt;/span&gt;
+&lt;span class="cm"&gt;        * */&lt;/span&gt;
+        &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;        * 1) é temporário&lt;/span&gt;
+&lt;span class="cm"&gt;        * 2) os dados são removidos da memória&lt;/span&gt;
+&lt;span class="cm"&gt;        * quando o PC é desligado&lt;/span&gt;
+&lt;span class="cm"&gt;        * 3) volatil&lt;/span&gt;
+&lt;span class="cm"&gt;        * 4) o valor antigo sempre é perdido (para sempre)&lt;/span&gt;
+&lt;span class="cm"&gt;        * 5) o Java, desaloca a memória&lt;/span&gt;
+&lt;span class="cm"&gt;        * */&lt;/span&gt;
+     &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Sat, 14 May 2016 01:00:00 -0300</pubDate><guid>tag:excript.com,2016-05-14:java/variavel-java.html</guid><category>variável</category><category>java</category><category>curso</category><category>int</category></item><item><title>SQLite Internamente</title><link>http://excript.com/python/sqlite-internamente.html</link><description>
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -868,6 +1110,10 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A seguir, temos uma breve lista contendo os caracteres numéricos que não podem ser utilizados, nem na primeira ou segunda posição, por exemplo:&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class="section" id="palavras-reservadas"&gt;
+&lt;h2&gt;PALAVRAS RESERVADAS&lt;/h2&gt;
+&lt;p&gt;É importante observar que o Python possui um conjunto de palavras reservadas e essas, também não poderão ser utilizadas na composição de nomes.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="caracteres-especiais"&gt;
 &lt;h2&gt;CARACTERES ESPECIAIS&lt;/h2&gt;
 &lt;p&gt;Caracteres especiais, como por exemplo, os caracteres latinos, como o c-cedilha &lt;tt class="docutils literal"&gt;ç&lt;/tt&gt;, o tio &lt;tt class="docutils literal"&gt;~&lt;/tt&gt; e etc, não são permitidos na composição de nomes de variáveis. O único caractere tido como especial e que pode ser utilizado é o underline &lt;cite&gt;_&lt;/cite&gt;. A seguir, temos uma lista com os caracteres que não podem ser utilizados na composição de referências:&lt;/p&gt;
@@ -967,300 +1213,6 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Concatendo strings &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;val_str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Concatendo strings &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;val_str&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;1
-00:00:17,100 --&amp;gt; 00:00:20,770
-Fala galera!
-Sejam todos bem-vindos a mais um episódio&lt;/p&gt;
-&lt;p&gt;2
-00:00:20,770 --&amp;gt; 00:00:22,220
-do nosso curso de Phyton.&lt;/p&gt;
-&lt;p&gt;3
-00:00:22,220 --&amp;gt; 00:00:27,010
-Nesta aula, nós estudaremos a nomenclatura
-dos nossos objetos. Ou seja, a todo o momento&lt;/p&gt;
-&lt;p&gt;4
-00:00:27,010 --&amp;gt; 00:00:31,060
-nós teremos que dar nome para nossas variáveis,
-para nossas classes, para os nossos métodos,&lt;/p&gt;
-&lt;p&gt;5
-00:00:31,060 --&amp;gt; 00:00:34,820
-para os nossos pacotes e essas nomenclaturas
-devem seguir algumas regras.&lt;/p&gt;
-&lt;p&gt;6
-00:00:34,820 --&amp;gt; 00:00:40,320
-A comunidade Python utiliza diversas conversões
-para atribuir nome as variáveis, métodos,&lt;/p&gt;
-&lt;p&gt;7
-00:00:40,320 --&amp;gt; 00:00:42,620
-pacotes e a tudo mais que precisar ter nome.&lt;/p&gt;
-&lt;p&gt;8
-00:00:42,620 --&amp;gt; 00:00:47,820
-Quando nós formos atribuir um nome composto
-a uma variável, por exemplo: minha_variável&lt;/p&gt;
-&lt;p&gt;9
-00:00:47,820 --&amp;gt; 00:00:52,460
-ou valor_total. A regra fundamental e aconselhável
-é nós utilizarmos caracteres só com letras&lt;/p&gt;
-&lt;p&gt;10
-00:00:52,460 --&amp;gt; 00:00:55,780
-minúsculas. Em algumas exceções, quando
-nós formos utilizar pacotes de terceiros,&lt;/p&gt;
-&lt;p&gt;11
-00:00:55,780 --&amp;gt; 00:00:58,830
-acontecerá desse pacote seguir uma determinada
-nomenclatura.&lt;/p&gt;
-&lt;p&gt;12
-00:00:58,830 --&amp;gt; 00:01:02,790
-Por exemplo, em nomes compostos, a primeira
-letra está como minúscula e a segunda está&lt;/p&gt;
-&lt;p&gt;13
-00:01:02,790 --&amp;gt; 00:01:07,790
-como maiúscula. Esse não é um padrão recomendado
-pela comunidade Python. Porém, se a biblioteca&lt;/p&gt;
-&lt;p&gt;14
-00:01:07,790 --&amp;gt; 00:01:12,979
-faz uso dessa metodologia, neste caso, é
-aconselhável seguir a metodologia da biblioteca.&lt;/p&gt;
-&lt;p&gt;15
-00:01:12,979 --&amp;gt; 00:01:18,140
-O nome de um objeto pode começar com qualquer
-letra, mas não pode começar com número.&lt;/p&gt;
-&lt;p&gt;16
-00:01:18,140 --&amp;gt; 00:01:22,140
-Nós até podemos utilizar números do nome
-dos nossos objetos, mas nós não podemos&lt;/p&gt;
-&lt;p&gt;17
-00:01:22,140 --&amp;gt; 00:01:24,369
-iniciar o nome desse objeto com número.&lt;/p&gt;
-&lt;p&gt;18
-00:01:24,369 --&amp;gt; 00:01:29,060
-E uma outra regra: nós temos que o nome não
-pode conter espaços em branco. Essa regra&lt;/p&gt;
-&lt;p&gt;19
-00:01:29,060 --&amp;gt; 00:01:32,100
-não é uma convenção, mas sim um erro de
-sintaxe.&lt;/p&gt;
-&lt;p&gt;20
-00:01:32,100 --&amp;gt; 00:01:35,979
-Neste caso aqui, onde nós temos um nome composto
-por duas palavras, existe um espaço entre&lt;/p&gt;
-&lt;p&gt;21
-00:01:35,979 --&amp;gt; 00:01:40,430
-a primeira e a segunda palavra. Neste caso
-aqui o nosso interpretador verificará esse&lt;/p&gt;
-&lt;p&gt;22
-00:01:40,430 --&amp;gt; 00:01:45,119
-espaço e pensará que aqui é uma instrução
-e na sequência nós temos uma outra instrução.&lt;/p&gt;
-&lt;p&gt;23
-00:01:45,119 --&amp;gt; 00:01:49,320
-Ou seja, muito provavelmente nós esquecemos
-de dar um &amp;quot;enter&amp;quot;. Logo, o interpretador do&lt;/p&gt;
-&lt;p&gt;24
-00:01:49,320 --&amp;gt; 00:01:53,640
-Python levantará uma exceção dizendo que
-existe um erro de sintaxe no nosso código.&lt;/p&gt;
-&lt;p&gt;25
-00:01:53,640 --&amp;gt; 00:01:58,159
-Então, nós temos que ter como uma regra
-fundamental, que o nome das nossas variáveis,&lt;/p&gt;
-&lt;p&gt;26
-00:01:58,159 --&amp;gt; 00:02:02,649
-métodos, pacotes, ou então qualquer outro
-objeto, deverá sempre começar com alguma&lt;/p&gt;
-&lt;p&gt;27
-00:02:02,649 --&amp;gt; 00:02:05,539
-letra, ou então caracter especial &amp;quot;underline&amp;quot;.&lt;/p&gt;
-&lt;p&gt;28
-00:02:05,539 --&amp;gt; 00:02:10,310
-Já o nome do nosso objeto pode conter qualquer
-caracter alfa númerico. Ou seja, nós podemos&lt;/p&gt;
-&lt;p&gt;29
-00:02:10,310 --&amp;gt; 00:02:15,400
-dar o nome para o nosso objeto como: minha_classe.
-Inclusive, utilizar o caracter especial &amp;quot;underline&amp;quot;.&lt;/p&gt;
-&lt;p&gt;30
-00:02:15,400 --&amp;gt; 00:02:20,900
-O único caracter especial que pode ser utilizado
-para dar nome a objetos do Python é o caracter&lt;/p&gt;
-&lt;p&gt;31
-00:02:20,900 --&amp;gt; 00:02:25,110
-&amp;quot;underline&amp;quot;. Salvo este, nós não temos mais
-nenhuma exceção. Isso porque, todos os outros&lt;/p&gt;
-&lt;p&gt;32
-00:02:25,110 --&amp;gt; 00:02:29,550
-caracteres especiais tem determinadas utilidades
-para as várias expressões que nós temos&lt;/p&gt;
-&lt;p&gt;33
-00:02:29,550 --&amp;gt; 00:02:30,550
-aqui no Python.&lt;/p&gt;
-&lt;p&gt;34
-00:02:30,550 --&amp;gt; 00:02:35,220
-No documento de convenções do Python também
-é pedido para se evitar o uso de dois caracteres,&lt;/p&gt;
-&lt;p&gt;35
-00:02:35,220 --&amp;gt; 00:02:40,030
-que no caso é o caracter &amp;quot;I&amp;quot; e o caracter
-&amp;quot;O&amp;quot;. Isso porque, nós temos algumas fontes&lt;/p&gt;
-&lt;p&gt;36
-00:02:40,030 --&amp;gt; 00:02:45,600
-que não distinguem muito bem entre os caracteres
-&amp;quot;I&amp;quot; e o número &amp;quot;1&amp;quot; e o caracter &amp;quot;O&amp;quot; e o número&lt;/p&gt;
-&lt;p&gt;37
-00:02:45,600 --&amp;gt; 00:02:46,110
-&amp;quot;0&amp;quot;.&lt;/p&gt;
-&lt;p&gt;38
-00:02:46,110 --&amp;gt; 00:02:50,120
-Ou seja, se nós estivermos trabalhando com
-uma fonte aonde não realça diferença entre&lt;/p&gt;
-&lt;p&gt;39
-00:02:50,120 --&amp;gt; 00:02:54,990
-estes dois caracteres, ocorre que nós não
-conseguiremos distinguir qual o caracter que&lt;/p&gt;
-&lt;p&gt;40
-00:02:54,990 --&amp;gt; 00:02:55,710
-está sendo usado.&lt;/p&gt;
-&lt;p&gt;41
-00:02:55,710 --&amp;gt; 00:03:00,020
-Este documento de convenções do Python também
-trás uma série de outras convenções. Por&lt;/p&gt;
-&lt;p&gt;42
-00:03:00,020 --&amp;gt; 00:03:03,650
-exemplo, quando nós vamos atribuir o nome
-a um pacote ou então o nome a um módulo.&lt;/p&gt;
-&lt;p&gt;43
-00:03:03,650 --&amp;gt; 00:03:08,230
-É recomendado que nós sempre utilizamos
-nomes pequenos, isso porque ajuda tanto na&lt;/p&gt;
-&lt;p&gt;44
-00:03:08,230 --&amp;gt; 00:03:12,590
-memorização como também evita que a pessoa
-fique digitando um monte de código.&lt;/p&gt;
-&lt;p&gt;45
-00:03:12,590 --&amp;gt; 00:03:16,730
-É recomendado sempre atribuir nomes pequenos
-aos nossos pacotes e aos nossos módulos.&lt;/p&gt;
-&lt;p&gt;46
-00:03:16,730 --&amp;gt; 00:03:20,120
-Isso se dá por uma série de razões que
-com a prática a gente percebe. Quando nós&lt;/p&gt;
-&lt;p&gt;47
-00:03:20,120 --&amp;gt; 00:03:25,100
-formos atribuir nome a pacotes e módulos
-é recomendado sempre utilizar nomes pequenos.&lt;/p&gt;
-&lt;p&gt;48
-00:03:25,100 --&amp;gt; 00:03:28,930
-Também consta na recomendação para sempre
-utilizar caracteres minúsculos.&lt;/p&gt;
-&lt;p&gt;49
-00:03:28,930 --&amp;gt; 00:03:33,100
-Como nós podemos ver aqui nos exempos: nós
-temos o pacote &amp;quot;os&amp;quot;, e nós temos o pacote&lt;/p&gt;
-&lt;p&gt;50
-00:03:33,100 --&amp;gt; 00:03:37,260
-&amp;quot;package&amp;quot;. Quando nós formos dar nome a nossas
-classes é recomendado nós iniciarmos o nome&lt;/p&gt;
-&lt;p&gt;51
-00:03:37,260 --&amp;gt; 00:03:41,200
-da classe com letra maiúscula. Uma outra
-recomendação é que quando o nome da nossa&lt;/p&gt;
-&lt;p&gt;52
-00:03:41,200 --&amp;gt; 00:03:46,170
-classe for composto por mais de uma palavra,
-utilizar as duas palavras em letra maiúscula.&lt;/p&gt;
-&lt;p&gt;53
-00:03:46,170 --&amp;gt; 00:03:48,920
-Fica mais fácil para conseguir ler as duas
-palavras.&lt;/p&gt;
-&lt;p&gt;54
-00:03:48,920 --&amp;gt; 00:03:52,620
-Quando nós formos dar nome para nossas funções
-e para nossos métodos é recomendado nós&lt;/p&gt;
-&lt;p&gt;55
-00:03:52,620 --&amp;gt; 00:03:57,420
-sempre utilizar letras minúsculas. Já quando
-nós tivermos nomes compostos é recomendado&lt;/p&gt;
-&lt;p&gt;56
-00:03:57,420 --&amp;gt; 00:04:00,590
-nós utilizarmos o &amp;quot;underline&amp;quot; para juntar
-as duas palavras.&lt;/p&gt;
-&lt;p&gt;57
-00:04:00,590 --&amp;gt; 00:04:04,150
-Como nós podemos ver aqui no exemplo, nós
-temos essa função composta. Como nós podemos&lt;/p&gt;
-&lt;p&gt;58
-00:04:04,150 --&amp;gt; 00:04:07,790
-observar o nome dessas duas funções. Na
-primeira função nós temos: utilizar_underscore.&lt;/p&gt;
-&lt;p&gt;59
-00:04:07,790 --&amp;gt; 00:04:12,880
-E como a gente pode ver foi utilizado um caracter
-&amp;quot;underline&amp;quot;. E na nossa segunda função:&lt;/p&gt;
-&lt;p&gt;60
-00:04:12,880 --&amp;gt; 00:04:15,510
-enviar_email. Nós também utilizamos o caracter
-&amp;quot;underscore&amp;quot;.&lt;/p&gt;
-&lt;p&gt;61
-00:04:15,510 --&amp;gt; 00:04:18,820
-Quando nós formos dar o nome para nossas
-constantes, o padrão é nós atribuirmos&lt;/p&gt;
-&lt;p&gt;62
-00:04:18,820 --&amp;gt; 00:04:23,340
-o nome para nossa constante utilizando somente
-caracteres maiúsculos. Quando nós tivermos&lt;/p&gt;
-&lt;p&gt;63
-00:04:23,340 --&amp;gt; 00:04:27,750
-um nome composto, como por exemplo: VALOR_MAXIMO.
-É recomendado o uso do &amp;quot;underline&amp;quot; entre&lt;/p&gt;
-&lt;p&gt;64
-00:04:27,750 --&amp;gt; 00:04:28,820
-as duas palavras.&lt;/p&gt;
-&lt;p&gt;65
-00:04:28,820 --&amp;gt; 00:04:33,160
-Quando nós formos definir nomes para os parâmetros
-de funções, é recomendado o uso de letras&lt;/p&gt;
-&lt;p&gt;66
-00:04:33,160 --&amp;gt; 00:04:38,250
-minúsculas e também é recomendado o uso
-de nomes compostos unidos pelo &amp;quot;underscore&amp;quot;.&lt;/p&gt;
-&lt;p&gt;67
-00:04:38,250 --&amp;gt; 00:04:42,040
-Ou seja, aqui nós temos uma função que
-recebe um parâmetro. O nome do nosso parâmetro&lt;/p&gt;
-&lt;p&gt;68
-00:04:42,040 --&amp;gt; 00:04:46,180
-a gente dá basicamente da mesma forma como
-a gente dá o nome para as nossas variáveis.&lt;/p&gt;
-&lt;p&gt;69
-00:04:46,180 --&amp;gt; 00:04:50,850
-Isto é: todos os caracteres com letra minúscula
-e quando nós temos um nome composto por mais&lt;/p&gt;
-&lt;p&gt;70
-00:04:50,850 --&amp;gt; 00:04:53,970
-de uma palavra, nós devemos utilizar o caracter
-&amp;quot;underline&amp;quot;.&lt;/p&gt;
-&lt;p&gt;71
-00:04:53,970 --&amp;gt; 00:04:57,410
-Então é isso aí pessoal. Nessa aula nós
-aprendemos um pouco da teoria da nomenclatura&lt;/p&gt;
-&lt;p&gt;72
-00:04:57,410 --&amp;gt; 00:05:01,870
-aqui no Python. E agora nós já estamos prontos
-para criar as nossas classes, criar os nossos&lt;/p&gt;
-&lt;p&gt;73
-00:05:01,870 --&amp;gt; 00:05:05,290
-métodos, as nossas variáveis e atribuir
-o nome de forma correta.&lt;/p&gt;
-&lt;p&gt;74
-00:05:05,290 --&amp;gt; 00:05:07,540
-Então é isso aí!
-Vejo vocês na nossa próxima aula.&lt;/p&gt;
-&lt;p&gt;75
-00:05:07,540 --&amp;gt; 00:05:10,850
-Muito obrigado e até mais. Tchau!&lt;/p&gt;
-&lt;p&gt;76
-00:05:10,850 --&amp;gt; 00:05:18,409
-Como nós podemos ver aqui nos exemplos:&lt;/p&gt;
 &lt;/div&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Fri, 06 May 2016 19:10:00 -0300</pubDate><guid>tag:excript.com,2016-05-06:python/nomenclatura-variaveis-python.html</guid><category>curso</category><category>python</category><category>variavel</category><category>nomenclatura</category><category>blog</category></item><item><title>Características das Variáveis em Python</title><link>http://excript.com/python/caracteristicas-das-variaveis-python.html</link><description>
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -1312,291 +1264,6 @@ Como nós podemos ver aqui nos exemplos:&lt;/p&gt;
 &lt;h2&gt;VALOR&lt;/h2&gt;
 &lt;p&gt;O valor, ou então, a informação contida na variável, isto é, o dado propriamente dito, é, a parte principal de qualquer variável.&lt;/p&gt;
 &lt;p&gt;Toda variável será capaz de ter o seu valor alterado durante o tempo de execução, bastando para isso, somente, a atribuição de outro valor. A única regra definida para a atribuição de valores é que o tipo do valor a ser atribuído, seja do mesmo tipo da variável. Assim, para variáveis inteiras, só poderemos atribuir números. Para variáveis do tipo String, só poderemos atribuir texto. Para variáveis do tipo Boolean, só podemos atribuir números entre 0 à 1, ou então, True ou False.&lt;/p&gt;
-&lt;p&gt;1
-00:00:17,240 --&amp;gt; 00:00:20,789
-Fala galera!
-Sejam todos bem-vindos a mais um episódio&lt;/p&gt;
-&lt;p&gt;2
-00:00:20,789 --&amp;gt; 00:00:22,860
-do nosso curso de programação Python.&lt;/p&gt;
-&lt;p&gt;3
-00:00:22,860 --&amp;gt; 00:00:27,790
-Nesta aula, nós daremos continuidade ao estudo
-das variáveis. Para nós revisarmos, na última&lt;/p&gt;
-&lt;p&gt;4
-00:00:27,790 --&amp;gt; 00:00:32,070
-aula nós aprendemos que nós podemos declarar
-uma variável, simplesmente atribuindo um&lt;/p&gt;
-&lt;p&gt;5
-00:00:32,070 --&amp;gt; 00:00:32,800
-valor, ou um nome.&lt;/p&gt;
-&lt;p&gt;6
-00:00:32,800 --&amp;gt; 00:00:36,230
-Então, nós podemos dizer que nós queremos
-uma variável &amp;quot;texto&amp;quot;. E que essa variável&lt;/p&gt;
-&lt;p&gt;7
-00:00:36,230 --&amp;gt; 00:00:40,480
-deve receber a &amp;quot;string&amp;quot; que contém o texto,
-&amp;quot;valor&amp;quot;. Pressionamos &amp;quot;enter&amp;quot;, e o que nós&lt;/p&gt;
-&lt;p&gt;8
-00:00:40,480 --&amp;gt; 00:00:41,040
-temos?&lt;/p&gt;
-&lt;p&gt;9
-00:00:41,040 --&amp;gt; 00:00:44,890
-Se nós digitarmos &amp;quot;texto&amp;quot;, nós temos que
-o valor que está armazenado dentro da nossa&lt;/p&gt;
-&lt;p&gt;10
-00:00:44,890 --&amp;gt; 00:00:46,809
-variável &amp;quot;texto&amp;quot; é uma &amp;quot;string&amp;quot;, &amp;quot;valor&amp;quot;.&lt;/p&gt;
-&lt;p&gt;11
-00:00:46,809 --&amp;gt; 00:00:51,220
-Agora, se nós dermos um &amp;quot;type&amp;quot; na nossa variável
-&amp;quot;texto&amp;quot;, o nosso interpretador disse que nós&lt;/p&gt;
-&lt;p&gt;12
-00:00:51,220 --&amp;gt; 00:00:55,540
-temos uma instância de &amp;quot;string&amp;quot;. Nessa instância
-de &amp;quot;string&amp;quot; nós temos o texto armazenado,&lt;/p&gt;
-&lt;p&gt;13
-00:00:55,540 --&amp;gt; 00:00:55,720
-&amp;quot;valor&amp;quot;.&lt;/p&gt;
-&lt;p&gt;14
-00:00:55,720 --&amp;gt; 00:00:59,570
-Então, como nós já vimos, no Python tudo
-são objetos, e toda vez que nós quisermos&lt;/p&gt;
-&lt;p&gt;15
-00:00:59,570 --&amp;gt; 00:01:03,890
-saber o tipo de um objeto, nós temos que
-usar a nossa instrução &amp;quot;type&amp;quot; para retornar&lt;/p&gt;
-&lt;p&gt;16
-00:01:03,890 --&amp;gt; 00:01:05,570
-qual é a classe que foi instanciada.&lt;/p&gt;
-&lt;p&gt;17
-00:01:05,570 --&amp;gt; 00:01:09,840
-Na programação, todos os dados precisam
-ser armazenados na memória antes de serem&lt;/p&gt;
-&lt;p&gt;18
-00:01:09,840 --&amp;gt; 00:01:14,380
-utilizados. A prática mais comum para nós
-colocarmos um dado na memória é declarando&lt;/p&gt;
-&lt;p&gt;19
-00:01:14,380 --&amp;gt; 00:01:16,549
-uma variável e atribuíndo à ela um valor.&lt;/p&gt;
-&lt;p&gt;20
-00:01:16,549 --&amp;gt; 00:01:21,010
-Essa foi a forma comum de programação durante
-muitos anos. Porém, aqui no Python, como&lt;/p&gt;
-&lt;p&gt;21
-00:01:21,010 --&amp;gt; 00:01:25,590
-nós já vimos, nós não precisamos dizer,
-explicitamente, qual é o tipo da nossa variável.&lt;/p&gt;
-&lt;p&gt;22
-00:01:25,590 --&amp;gt; 00:01:30,020
-A partir do momento que nós atribuímos um
-valor ao nome da nossa variável, nós temos&lt;/p&gt;
-&lt;p&gt;23
-00:01:30,020 --&amp;gt; 00:01:34,799
-que o valor da nossa variável está implicito.
-Ou seja, se nós atribuírmos um número,&lt;/p&gt;
-&lt;p&gt;24
-00:01:34,799 --&amp;gt; 00:01:38,799
-a nossa variável vai ser do tipo numérico.
-Se nós atribuirmos um texto, a nossa variável&lt;/p&gt;
-&lt;p&gt;25
-00:01:38,799 --&amp;gt; 00:01:40,249
-vai ser do tipo string.&lt;/p&gt;
-&lt;p&gt;26
-00:01:40,249 --&amp;gt; 00:01:43,780
-Então, ainda que aqui no Python nós não
-precisamos definir qual é o tipo da variável,&lt;/p&gt;
-&lt;p&gt;27
-00:01:43,780 --&amp;gt; 00:01:46,609
-nós temos que ter em mente que toda variável
-possui um tipo.&lt;/p&gt;
-&lt;p&gt;28
-00:01:46,609 --&amp;gt; 00:01:52,219
-Então, nós temos que toda variável sempre
-vai possuir, obrigatóriamente, quatro características.&lt;/p&gt;
-&lt;p&gt;29
-00:01:52,219 --&amp;gt; 00:01:57,450
-A primeira, é que toda variável possui um
-nome. A segunda característica, é que toda&lt;/p&gt;
-&lt;p&gt;30
-00:01:57,450 --&amp;gt; 00:02:01,789
-variável possui um tipo. A nossa terceira
-característica, é que toda variável possui&lt;/p&gt;
-&lt;p&gt;31
-00:02:01,789 --&amp;gt; 00:02:06,319
-um tamanho. E a nossa quarta característica,
-é que toda variável possui um valor.&lt;/p&gt;
-&lt;p&gt;32
-00:02:06,319 --&amp;gt; 00:02:11,230
-Então, se nós temos um valor e esse valor
-vai ser armazenado numa variável, nós precisamos&lt;/p&gt;
-&lt;p&gt;33
-00:02:11,230 --&amp;gt; 00:02:16,470
-ter uma forma de nos referirmos a essa variável.
-Por isso, que nós temos um nome. Assim, a&lt;/p&gt;
-&lt;p&gt;34
-00:02:16,470 --&amp;gt; 00:02:20,610
-partir do momento que nós atribuímos um
-valor a um nome, nós estamos criando um objeto&lt;/p&gt;
-&lt;p&gt;35
-00:02:20,610 --&amp;gt; 00:02:25,050
-que é do tipo do valor que está sendo atribuído.
-Desta forma, nós temos que todo o objeto&lt;/p&gt;
-&lt;p&gt;36
-00:02:25,050 --&amp;gt; 00:02:28,400
-possui um tamanho, ou seja, quantos bites
-ele ocupa de memória.&lt;/p&gt;
-&lt;p&gt;37
-00:02:28,400 --&amp;gt; 00:02:31,000
-Então, por fim nós temos o tamanho da nossa
-variável.&lt;/p&gt;
-&lt;p&gt;38
-00:02:31,000 --&amp;gt; 00:02:34,080
-Se nesse momento ainda está um pouco confuso,
-nós já vamos entender melhor.&lt;/p&gt;
-&lt;p&gt;39
-00:02:34,080 --&amp;gt; 00:02:38,140
-Então, nós temos que toda vez que nós formos
-declarar uma variável, nós temos que seguir&lt;/p&gt;
-&lt;p&gt;40
-00:02:38,140 --&amp;gt; 00:02:43,330
-uma estrutura de declaração. Então, a estrutura
-de declaração de uma variável aqui no Python,&lt;/p&gt;
-&lt;p&gt;41
-00:02:43,330 --&amp;gt; 00:02:45,060
-sempre vai se dar da mesma forma.&lt;/p&gt;
-&lt;p&gt;42
-00:02:45,060 --&amp;gt; 00:02:49,580
-Do lado esquerdo do nosso operador de atribuição,
-nós vamos ter o nome de nossa variável.&lt;/p&gt;
-&lt;p&gt;43
-00:02:49,580 --&amp;gt; 00:02:53,800
-Então, para nós declararmos uma variável,
-nós temos que especificar o nome da variável.&lt;/p&gt;
-&lt;p&gt;44
-00:02:53,800 --&amp;gt; 00:02:58,160
-Em seguida, nós temos que atribuir um valor
-a nossa variável. E por fim nós teremos&lt;/p&gt;
-&lt;p&gt;45
-00:02:58,160 --&amp;gt; 00:03:01,030
-que a nossa variável &amp;quot;nome&amp;quot;, irá possuir
-um tipo.&lt;/p&gt;
-&lt;p&gt;46
-00:03:01,030 --&amp;gt; 00:03:05,290
-Nesse primeiro momento do nosso curso, nós
-iremos trabalhar basicamente com três tipos&lt;/p&gt;
-&lt;p&gt;47
-00:03:05,290 --&amp;gt; 00:03:10,520
-de dados. O primeiro tipo de dado que nós
-iremos trabalhar serão os números inteiros.&lt;/p&gt;
-&lt;p&gt;48
-00:03:10,520 --&amp;gt; 00:03:13,540
-Então, vamos declarar uma variável inteira.
-Então, seguindo a estrutura que nós acabamos&lt;/p&gt;
-&lt;p&gt;49
-00:03:13,540 --&amp;gt; 00:03:16,690
-de estudar. Nós temos que dar o nome a nossa
-variável. Então, vamos dizer que o nome&lt;/p&gt;
-&lt;p&gt;50
-00:03:16,690 --&amp;gt; 00:03:20,980
-será, &amp;quot;num&amp;quot;. E agora nós temos que atribuir
-um valor a essa variável. Vamos dizer que&lt;/p&gt;
-&lt;p&gt;51
-00:03:20,980 --&amp;gt; 00:03:25,140
-o valor será, &amp;quot;20&amp;quot;. Feito isso, se nós dermos
-um &amp;quot;type&amp;quot; na nossa variável &amp;quot;num&amp;quot;, nós teremos&lt;/p&gt;
-&lt;p&gt;52
-00:03:25,140 --&amp;gt; 00:03:28,590
-que a nossa variável &amp;quot;num&amp;quot;, contém uma instância
-da classe inteira.&lt;/p&gt;
-&lt;p&gt;53
-00:03:28,590 --&amp;gt; 00:03:32,850
-A uma variável inteira nós vamos atribuir
-números que não possuem casas decimais,&lt;/p&gt;
-&lt;p&gt;54
-00:03:32,850 --&amp;gt; 00:03:39,850
-ou seja: - 100, - 200, 3000, 4000, 5000, 1,
-2, 3, 4, enfim. Todos os números que não&lt;/p&gt;
-&lt;p&gt;55
-00:03:40,290 --&amp;gt; 00:03:44,110
-possuirem casas decimais nós vamos armazenar
-em variáveis do tipo inteiro.&lt;/p&gt;
-&lt;p&gt;56
-00:03:44,110 --&amp;gt; 00:03:48,210
-Agora, quando nós formos armazenar um valor
-que possui casas decimais. Vamos dizer que&lt;/p&gt;
-&lt;p&gt;57
-00:03:48,210 --&amp;gt; 00:03:54,040
-nós queremos uma variável, &amp;quot;dinheiro&amp;quot;. E
-a essa variável vamos atribuir o valor: 15.55.&lt;/p&gt;
-&lt;p&gt;58
-00:03:54,040 --&amp;gt; 00:03:58,120
-Agora, vamos dizer para o nosso modo interativo
-imprimir o que tem contido dentro da nossa&lt;/p&gt;
-&lt;p&gt;59
-00:03:58,120 --&amp;gt; 00:04:00,650
-variável, &amp;quot;dinheiro&amp;quot;. Ele imprimiu para gente:
-15.55.&lt;/p&gt;
-&lt;p&gt;60
-00:04:00,650 --&amp;gt; 00:04:03,400
-E vamos ver qual é o tipo da nossa variável,
-&amp;quot;dinheiro&amp;quot;.&lt;/p&gt;
-&lt;p&gt;61
-00:04:03,400 --&amp;gt; 00:04:08,210
-Agora, nós temos que a nossa variável &amp;quot;dinheiro&amp;quot;
-possui uma instância da nossa classe &amp;quot;float&amp;quot;.&lt;/p&gt;
-&lt;p&gt;62
-00:04:08,210 --&amp;gt; 00:04:13,060
-Isto é, com a classe &amp;quot;float&amp;quot;, nós podemos
-trabalhar com números que contém casas decimais.&lt;/p&gt;
-&lt;p&gt;63
-00:04:13,060 --&amp;gt; 00:04:16,840
-Agora, a parte mais importante que nós temos
-que entender, é que as nossas variáveis&lt;/p&gt;
-&lt;p&gt;64
-00:04:16,840 --&amp;gt; 00:04:20,709
-aqui no Python, elas serão do tipo do primeiro
-valor atribuído.&lt;/p&gt;
-&lt;p&gt;65
-00:04:20,709 --&amp;gt; 00:04:25,180
-Ou seja, a nossa variável &amp;quot;dinheiro&amp;quot;, é
-do tipo &amp;quot;float&amp;quot;. Isto acontece porque o primeiro&lt;/p&gt;
-&lt;p&gt;66
-00:04:25,180 --&amp;gt; 00:04:28,900
-valor que nós atribuímos para &amp;quot;dinheiro&amp;quot;,
-foi o valor: 15.55.&lt;/p&gt;
-&lt;p&gt;67
-00:04:28,900 --&amp;gt; 00:04:33,530
-Porém, a nossa variável &amp;quot;num&amp;quot;, como a gente
-viu, ela é do tipo inteiro. E isso acontece&lt;/p&gt;
-&lt;p&gt;68
-00:04:33,530 --&amp;gt; 00:04:37,729
-porque o primeiro valor que nós atribuímos
-para &amp;quot;num&amp;quot;, foi o número, &amp;quot;20&amp;quot;. E como &amp;quot;20&amp;quot;&lt;/p&gt;
-&lt;p&gt;69
-00:04:37,729 --&amp;gt; 00:04:42,120
-é um número inteiro, ou seja, o número
-&amp;quot;20&amp;quot; não possui casas decimais, nós temos&lt;/p&gt;
-&lt;p&gt;70
-00:04:42,120 --&amp;gt; 00:04:44,069
-que o tipo da variável é inteiro.&lt;/p&gt;
-&lt;p&gt;71
-00:04:44,069 --&amp;gt; 00:04:47,319
-Então, é aí pessoal.
-Nessa aula nós aprendemos um pouco mais sobre&lt;/p&gt;
-&lt;p&gt;72
-00:04:47,319 --&amp;gt; 00:04:50,229
-variável, um pouco mais sobre valores, os
-tipos aqui no Python.&lt;/p&gt;
-&lt;p&gt;73
-00:04:50,229 --&amp;gt; 00:04:53,270
-Então, é isso aí!
-Vejo vocês na nossa próxima aula. Muito&lt;/p&gt;
-&lt;p&gt;74
-00:04:53,270 --&amp;gt; 00:05:00,270
-obrigado e até mais. Tchau!&lt;/p&gt;
 &lt;/div&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Fri, 06 May 2016 18:40:00 -0300</pubDate><guid>tag:excript.com,2016-05-06:python/caracteristicas-das-variaveis-python.html</guid><category>curso</category><category>python</category><category>variáveis</category><category>caracteristicas das variáveis</category><category>tipos</category><category>blog</category></item><item><title>Variáveis em Python</title><link>http://excript.com/python/variavel-em-python.html</link><description>
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -1630,7 +1297,7 @@ obrigado e até mais. Tchau!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="quantas-variaveis-podemos-declarar"&gt;
 &lt;h2&gt;QUANTAS VARIÁVEIS PODEMOS DECLARAR?&lt;/h2&gt;
-&lt;p&gt;Quando iniciamos o estudo da programação, gostamos de conhecer os limites, quantidades e capacidades de tudo. Mensurar a quantidade de variáveis que um programa Python pode ter é bastante difícil. Isso porque, vamos supor, um simples número inteiro para o Python, não possuirá somente o valor da sua informação e sim, haverá um conjunto de dados que estarão vinculado ao número internamente. Junto a cada referência declarada, haverá também, muitas outras informações vinculadas, informações estas conhecidas como metadadops, e estas, serão armazenadas para tanto uso intero no Python, ou então, para melhorar a performance em alguma situação.&lt;/p&gt;
+&lt;p&gt;Quando iniciamos o estudo da programação, gostamos de conhecer os limites, quantidades e capacidades de tudo. Mensurar a quantidade de variáveis que um programa Python pode ter é bastante difícil. Isso porque, vamos supor, um simples número inteiro para o Python, não possuirá somente o valor da sua informação e sim, haverá um conjunto de dados que estarão vinculado ao número internamente. Junto a cada referência declarada, haverá também, muitas outras informações vinculadas, informações estas conhecidas como metadados, e estas, serão armazenadas para tanto uso intero no Python, ou então, para melhorar a performance em alguma situação.&lt;/p&gt;
 &lt;p&gt;A linguagem Python não define quantidades até porque, os limites sempre estarão diretamente relacionadas com a capacidade do computador onde o programa for executado.&lt;/p&gt;
 &lt;/div&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Fri, 06 May 2016 18:30:00 -0300</pubDate><guid>tag:excript.com,2016-05-06:python/variavel-em-python.html</guid><category>curso</category><category>python</category><category>variavel</category><category>blog</category></item><item><title>Indentação do código Python</title><link>http://excript.com/python/indentacao-python.html</link><description>
@@ -9603,49 +9270,7 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Fri, 01 Jan 2016 00:00:00 -0200</pubDate><guid>tag:excript.com,2016-01-01:java/caracteristica-array-java.html</guid><category>curso</category><category>java</category></item><item><title>Característica das Variáveis em Java</title><link>http://excript.com/java/caracteristica-variavel-java.html</link><description>&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula0005&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;inteiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;Inteiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;intEiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;int_iro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;fracao&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="kt"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;bool&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;texto&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt; &lt;span class="n"&gt;inteiro&lt;/span&gt; &lt;span class="o"&gt;);&lt;/span&gt;
-&lt;span class="c1"&gt;//        int 3soma;&lt;/span&gt;
-        &lt;span class="cm"&gt;/*&lt;/span&gt;
-&lt;span class="cm"&gt;         * tipo nome_da_variável = null;&lt;/span&gt;
-&lt;span class="cm"&gt;         * CaseSensitive&lt;/span&gt;
-&lt;span class="cm"&gt;         */&lt;/span&gt;
-    &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Fri, 01 Jan 2016 00:00:00 -0200</pubDate><guid>tag:excript.com,2016-01-01:java/caracteristica-variavel-java.html</guid><category>curso</category><category>java</category></item><item><title>Classes em Java</title><link>http://excript.com/java/classes-java.html</link><description>&lt;br&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Fri, 01 Jan 2016 00:00:00 -0200</pubDate><guid>tag:excript.com,2016-01-01:java/caracteristica-array-java.html</guid><category>curso</category><category>java</category></item><item><title>Classes em Java</title><link>http://excript.com/java/classes-java.html</link><description>&lt;br&gt;
     &lt;div class="admonitionblock note data-line"&gt;
         &lt;table&gt;
             &lt;tbody&gt;
@@ -12447,51 +12072,7 @@ Exemplos:&lt;/p&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Fri, 01 Jan 2016 00:00:00 -0200</pubDate><guid>tag:excript.com,2016-01-01:java/v2_soma_de_todos_algarismos_com_recursividade_j1004b.html</guid><category>exercício</category><category>resolvidos</category><category>em</category><category>java</category></item><item><title>Variáveis em Java</title><link>http://excript.com/java/variavel-java.html</link><description>&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula0004&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-
-        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-        &lt;span class="cm"&gt;/*&lt;/span&gt;
-&lt;span class="cm"&gt;        * 1) um nome&lt;/span&gt;
-&lt;span class="cm"&gt;        * 2) um tipo&lt;/span&gt;
-&lt;span class="cm"&gt;        * 3) um tamanho&lt;/span&gt;
-&lt;span class="cm"&gt;        * 4) um valor&lt;/span&gt;
-&lt;span class="cm"&gt;        * */&lt;/span&gt;
-        &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="cm"&gt;/*&lt;/span&gt;
-&lt;span class="cm"&gt;        * 1) é temporário&lt;/span&gt;
-&lt;span class="cm"&gt;        * 2) os dados são removidos da memória&lt;/span&gt;
-&lt;span class="cm"&gt;        * quando o PC é desligado&lt;/span&gt;
-&lt;span class="cm"&gt;        * 3) volatil&lt;/span&gt;
-&lt;span class="cm"&gt;        * 4) o valor antigo sempre é perdido (para sempre)&lt;/span&gt;
-&lt;span class="cm"&gt;        * 5) o Java, desaloca a memória&lt;/span&gt;
-&lt;span class="cm"&gt;        * */&lt;/span&gt;
-     &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Fri, 01 Jan 2016 00:00:00 -0200</pubDate><guid>tag:excript.com,2016-01-01:java/variavel-java.html</guid><category>variável</category><category>java</category><category>curso</category><category>int</category></item><item><title>Abertura do Curso de C</title><link>http://excript.com/linguagem-c/abertura-curso-c.html</link><description>&lt;p&gt;Assista a essa primeira aula e comece a aprender desde já! Então, seja bem-vindo à primeira aula do nosso Curso C! Estamos, gradativamente, disponibilizando um curso completo de programação à linguagem C. Nosso objetivo é ensinar-lhe detalhadamente, sem enrolações e sem investir muito tempo com aspectos da linguagem, considerados irrelevantes.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Fri, 01 Jan 2016 00:00:00 -0200</pubDate><guid>tag:excript.com,2016-01-01:java/v2_soma_de_todos_algarismos_com_recursividade_j1004b.html</guid><category>exercício</category><category>resolvidos</category><category>em</category><category>java</category></item><item><title>Abertura do Curso de C</title><link>http://excript.com/linguagem-c/abertura-curso-c.html</link><description>&lt;p&gt;Assista a essa primeira aula e comece a aprender desde já! Então, seja bem-vindo à primeira aula do nosso Curso C! Estamos, gradativamente, disponibilizando um curso completo de programação à linguagem C. Nosso objetivo é ensinar-lhe detalhadamente, sem enrolações e sem investir muito tempo com aspectos da linguagem, considerados irrelevantes.&lt;/p&gt;
 &lt;p&gt;Esse curso foi projetado para auxiliar (ou servir como guia) a estudantes que não conheçam absolutamente nada de programação, como também, a estudantes que já possuem alguma noção de lógica.&lt;/p&gt;
 &lt;p&gt;A lógica de programação é abordada durante o curso, então, não há necessidade de qualquer conhecimento prévio para poder iniciar os estudos!!&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;

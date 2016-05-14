@@ -1,5 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>excript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-de-java.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-05-06T15:00:00-03:00</updated><entry><title>Ambiente de Desenvolvimento Eclipse</title><link href="http://excript.com/java/eclipse-java.html" rel="alternate"></link><updated>2016-05-06T15:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:java/eclipse-java.html</id><summary type="html">&lt;div class="section" id="eclipse"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>excript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-de-java.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-05-14T02:00:00-03:00</updated><entry><title>Nomenclatura das Variáveis em Java</title><link href="http://excript.com/java/caracteristica-variavel-java.html" rel="alternate"></link><updated>2016-05-14T02:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-14:java/caracteristica-variavel-java.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos as regras para a nomenclatura de variáveis, isto é, as regras que o Java tem definido para para composição de nomes.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="nomenclatura"&gt;
+&lt;h2&gt;NOMENCLATURA&lt;/h2&gt;
+&lt;p&gt;As variáveis são representadas, geralmente, por uma palavra simples ou composta que a identifica e a torna única em seu escopo. Podemos definir quaisquer nomes a uma variável, porém, existem algumas poucas regras que devemos seguir, do contrário, nossos códigos não funcionaram.&lt;/p&gt;
+&lt;p&gt;Se você está utilizando nesse momento uma IDE, como por exemplo, Eclipse, Netbeans, IntelliJ IDEA, ao digitar um nome inválido, o editor já acusará um problema na linha e facilmente você perceberá. No entanto, se estiveres estudando com um editor simples, terás manter a atenção redobrada, até porque, só saberás que o nome é invalido quando o compilador imprimir a mensagem de erro na saída.&lt;/p&gt;
+&lt;p&gt;As regras que aqui estudaremos também servirão para a definição de nomes de todas as demais estruturas do Java, isto é, existe, basicamente um padrão que serve para a composição de nomes de maneira geral e, as regras que aqui estudaremos servirão futuramente quando formos definir nomes de outras estruturas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="composicao-do-nome"&gt;
+&lt;h2&gt;COMPOSIÇÃO DO NOME&lt;/h2&gt;
+&lt;p&gt;Na construção de referências, pode-se utilizar, quaisquer letras, sejam elas maiúsculas ou minúsculas. Variáveis não devem utilizar nomes de classes ou pacotes, ou seja, não devemos declarar uma variável de nome &amp;quot;int&amp;quot;, ou então, &amp;quot;String&amp;quot;, até porque, esses são nomes de tipos primitivos do Java e não pode ser utilizado. Porém, como veremos, há soluções para esse tipos de situações, isto é, não podemos utilizar a palavra &amp;quot;int&amp;quot;, porém, se precedermos a referência com por exemplo um underline, temos o nome torna-se válido, por exemplo: &amp;quot;_int&amp;quot; ou &amp;quot;int_&amp;quot;.&lt;/p&gt;
+&lt;p&gt;De maneira geral, temos a disposição todo o alfabeto para definirmos o nome de variáveis. Também podemos, por exemplo, compor o nome da variável utilizando números, o que estudaremos nos tópicos a seguir.&lt;/p&gt;
+&lt;p&gt;Desde já é importante dizer que em nenhuma situação será permitida a utilização de caracteres especiais na composição de nomes, isto é, não podemos utilizar a lista de caracteres a seguir quando estivermos definindo o nome de variáveis:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="caracteres-numericos"&gt;
+&lt;h2&gt;CARACTERES NUMÉRICOS&lt;/h2&gt;
+&lt;p&gt;Uma referência pode ser composta por letras e números, desde que este não o nome não inicie com um dos 10 algarismos. Ou seja, podemos utilizar quaisquer número na formação do nome da variável, desde que este não esteja a frente do como, como por exemplo: &lt;cite&gt;9num&lt;/cite&gt;, ou então, &lt;cite&gt;1var&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;Se precedermos o nome com números ocorre uma situação em que o interpretador não consegue distinguir se estamos trabalhando com um número, como por exemplo, um número complexo, ou então, se este nome é de fato uma variável.&lt;/p&gt;
+&lt;p&gt;Assim, temos que a utilização de números é permitida só e somente só após o primeiro caractere, como podemos ver nos exemplos a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;caractere&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="n"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;flag&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;a2b3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;qualquer texto... &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+     &lt;span class="o"&gt;}&lt;/span&gt;
+ &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A seguir, temos uma breve lista contendo os caracteres especiais que não podem ser utilizados, nem na primeira ou segunda posição, por exemplo:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="caracteres-especiais"&gt;
+&lt;h2&gt;CARACTERES ESPECIAIS&lt;/h2&gt;
+&lt;p&gt;Caracteres especiais, como por exemplo, os caracteres latinos, como o c-cedilha &lt;tt class="docutils literal"&gt;ç&lt;/tt&gt;, o tio &lt;tt class="docutils literal"&gt;~&lt;/tt&gt; e etc, não são permitidos na composição de nomes de variáveis. O único caractere tido como especial e que pode ser utilizado é o underline &lt;cite&gt;_&lt;/cite&gt;. A seguir, temos uma lista com os caracteres que não podem ser utilizados na composição de referências e entenderemos a razão nas aulas seguintes, haja vista que os mesmos desempenham funções especificas na linguagem.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;ç&lt;/li&gt;
+&lt;li&gt;&lt;ul class="first"&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ul class="first"&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ul class="first"&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;/&lt;/li&gt;
+&lt;li&gt;=&lt;/li&gt;
+&lt;li&gt;!&lt;/li&gt;
+&lt;li&gt;&amp;#64;&lt;/li&gt;
+&lt;li&gt;#&lt;/li&gt;
+&lt;li&gt;$&lt;/li&gt;
+&lt;li&gt;%&lt;/li&gt;
+&lt;li&gt;&amp;amp;&lt;/li&gt;
+&lt;li&gt;/&lt;/li&gt;
+&lt;li&gt;( )&lt;/li&gt;
+&lt;li&gt;[ ]&lt;/li&gt;
+&lt;li&gt;^&lt;/li&gt;
+&lt;li&gt;~&lt;/li&gt;
+&lt;li&gt;´&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Novamente, é importante dizer que caracteres especiais não podem ser utilizados, seja qual for a posição em que estes aparecerem na definição da referência!&lt;/p&gt;
+&lt;p&gt;A seguir, temos mais um exemplo dos caracteres que não podem estar na primeira posição de um nome de variável.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//ERRO&lt;/span&gt;
+         &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;informe seu nome&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//ERRO&lt;/span&gt;
+         &lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="c1"&gt;//ERRO&lt;/span&gt;
+
+     &lt;span class="o"&gt;}&lt;/span&gt;
+ &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As referências utilizadas no código acima são &lt;strong&gt;TODAS invalidas&lt;/strong&gt;, e a razão, deve-se ao fato destas iniciarem com caracteres numéricos. Como já dito, o primeiro caractere deve, obrigatoriamente, ser um letra do alfabeto.&lt;/p&gt;
+&lt;p&gt;Podemos concluir também, que uma variável &lt;strong&gt;JAMAIS&lt;/strong&gt; será composta por somente números, haja vista que o primeiro caractere precisa ser uma letra.&lt;/p&gt;
+&lt;p&gt;Para definirmos o nome de variáveis, temos que iniciar utilizando um caractere que esteja no intervalo de &lt;cite&gt;a&lt;/cite&gt; à &lt;cite&gt;z&lt;/cite&gt; ou &lt;cite&gt;A&lt;/cite&gt; à &lt;cite&gt;Z&lt;/cite&gt; e a única exceção a esta regra é o caractere underline &lt;cite&gt;_&lt;/cite&gt;. A seguir, temos alguns nomes de variáveis &lt;strong&gt;válidos&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i8nt&lt;/span&gt; &lt;span class="n"&gt;vvar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;_vVar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;__________idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+     &lt;span class="o"&gt;}&lt;/span&gt;
+ &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="palavras-reservadas-keyword"&gt;
+&lt;h2&gt;PALAVRAS RESERVADAS (KEYWORD)&lt;/h2&gt;
+&lt;p&gt;A linguagem Java tem definido um conjunto de palavras reservadas que possuem uso especifico na linguagem. Estes nomes não poderão ser utilizados como nomes de variáveis, até porque se assim form, haverá conflito e o interpretador não conseguirá distinguir se a palavra é uma instrução ou então uma variável.&lt;/p&gt;
+&lt;p&gt;Nesse momento não precisamos nos preocupar com as palavras reservada e também, estas serão estudadas em detalhes nas aulas futuras.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-excecao-a-regra"&gt;
+&lt;h2&gt;A EXCEÇÃO A REGRA&lt;/h2&gt;
+&lt;p&gt;Como já foi dito, porém, para formalizar a regra temos que o único caractere especial, que pode ser utilizado na composição de nomes, e que também pode estar situando em qualquer posição, é o caractere underline &lt;tt class="docutils literal"&gt;_&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;_minhaVar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;55&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+         &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;____texto&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+     &lt;span class="o"&gt;}&lt;/span&gt;
+ &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="macetezinho"&gt;
+&lt;h2&gt;MACETEZINHO&lt;/h2&gt;
+&lt;p&gt;Na dúvida sobre quais caracteres são permitidos, utilize só e somente só letras sem acentuação,sem espaços em branco, e pra garantir, não utilize nomes em Inglês. Por isso, na dúvida quanto a validade da referência, utilize somente letras que terás, com certeza absoluta, um nome de variável válido.&lt;/p&gt;
+&lt;p&gt;Se você quer decorar o que pode e o que não pode, pense da seguinte maneira:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;números só se for o segundo caractere&lt;/li&gt;
+&lt;li&gt;letras que não estejam no alfabeto Inglês NÃO permitidos&lt;/li&gt;
+&lt;li&gt;caracteres que não são letras e não são número não podem ser utilizados!&lt;/li&gt;
+&lt;li&gt;há 50 palavras reservadas, porém, todas são em Inglês, logo, evite termos em Inglês num primeiro momento.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula0005&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;inteiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;Inteiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;intEiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;int_iro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;fracao&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="kt"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;bool&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;texto&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt; &lt;span class="n"&gt;inteiro&lt;/span&gt; &lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="c1"&gt;//        int 3soma;&lt;/span&gt;
+        &lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;         * tipo nome_da_variável = null;&lt;/span&gt;
+&lt;span class="cm"&gt;         * CaseSensitive&lt;/span&gt;
+&lt;span class="cm"&gt;         */&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="java"></category></entry><entry><title>Variáveis em Java</title><link href="http://excript.com/java/variavel-java.html" rel="alternate"></link><updated>2016-05-14T01:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-14:java/variavel-java.html</id><summary type="html">&lt;div class="section" id="definicao-de-variavel"&gt;
+&lt;h2&gt;DEFINIÇÃO DE VARIÁVEL&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Variável&lt;/strong&gt; é uma região de memória reservada para armazenar valores de modo temporário. Carregamos para a memórias as informações que estamos trabalhando em determinado momento porém, sem remove-las do local de origem.&lt;/p&gt;
+&lt;p&gt;Em Java, todas as variáveis possuiram um tipo e este será definido ainda na declaração. Podemos alterar o valor armazenado numa variável a qualquer momento, porém, o tipo declarado não poderá ser alterado durante o tempo de execução.
+Mais precisamente, as variáveis são carregadas para a memória RAM (Random Access Memory) devido a alta velocidade na leitura e gravação dessa mídia. Como já dito, variáveis armazenam valores temporários, no caso, os valores que está sendo manipulando em determinado momento. A memória RAM possui alto desempenho na leitura e gravação, por isso definimos as variáveis ali, no entanto, quando o computador for desligado ou então, houver interrupção no fornecimento de energia, todo valor alocado na memória RAM é perdido de maneira irreversível.&lt;/p&gt;
+&lt;p&gt;Não há limites na declaração de variáveis, logo, somos livres para definirmos a quantidade necessário, no entanto, devemos ser cautelosos, até porque, cada variável declarada irá consumir recursos do dispositivo e pode prejudicar o desempenho de outras aplicações.&lt;/p&gt;
+&lt;p&gt;O Java reservará espaço a cada variável individualmente e, associa a esta região de memória o nome que definido, ou seja, a referência. Temos assim que, a localização do espaço de memória será feito por intermédio da referência (nome da variável) definida em nossos códigos. A partir do momento em que não fizermos mais uso de determinada variável, a JVM desalocará o espaço utilizado pela variável devolvendo-o ao sistema operacional.&lt;/p&gt;
+&lt;p&gt;A melhor maneira para manipularmos informações seja num &lt;tt class="docutils literal"&gt;programa&lt;/tt&gt;, como também num &lt;tt class="docutils literal"&gt;Script&lt;/tt&gt;, é através da utilização de variáveis. Variáveis possuem uma estrutura simples e rápida para utilização e o seu conceito vem desde os primórdios da computação.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="funcionamento-das-variaveis"&gt;
+&lt;h2&gt;FUNCIONAMENTO DAS VARIÁVEIS&lt;/h2&gt;
+&lt;p&gt;As variáveis são, de fato, regiões físicas numeradas. Cada segmento possui um número inteiro que o identifica e o distingue. Este espaço, ou melhor, essa região de memória é administrado pelo hardware, pela placa-mãe, processador e sistema operacional. Quando declaramos variáveis, estamos de fato, reservando um espaço físico para o armazenamento temporário de informações que serão utilizadas no trecho de código em que a variável está sendo definida.&lt;/p&gt;
+&lt;p&gt;Os pentes de memória RAM possuem, obviamente, um limite, porém, atualmente, raríssimas vezes iremos ocupar todo espaço do dispositivo, salvo nas vezes em que nossas aplicações apresentarem problemas. Por isso, diz-se que não limites de variáveis que podemos declarar, até porque a quantidade é, de fato, um número bastante elevado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="definicao-de-referencia"&gt;
+&lt;h2&gt;DEFINIÇÃO DE REFERÊNCIA&lt;/h2&gt;
+&lt;p&gt;Nome de variável e referência são sinônimos no desenvolvimento de aplicações. Como estudamos, as variáveis são identificadas por números e estão num espaço físico de memória, logo, a expressão referência, indica que temos uma entidade que está referenciando aquela região que é, em suma, o local reservado de determinada variável.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="declaracao-e-uso-de-uma-variavel-inteira"&gt;
+&lt;h2&gt;DECLARAÇÃO E USO DE UMA VARIÁVEL INTEIRA:&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Variaveis&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+        &lt;span class="c1"&gt;//declarando uma variável numérica inteira&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="c1"&gt;//atribuindo o valor 100 para a variável&lt;/span&gt;
+        &lt;span class="n"&gt;valor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="c1"&gt;//imprimindo o valor da variável na saída padrão&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima declaramos uma variável do tipo &lt;code&gt;int&lt;/code&gt;, de nome &lt;code&gt;valor&lt;/code&gt;. Na linha seguinte atribuimos o número inteiro &lt;code&gt;100&lt;/code&gt; a variável &lt;code&gt;valor&lt;/code&gt;. Por fim, utilizamos a função &lt;code&gt;println()&lt;/code&gt; para imprimirmos na tela o valor contido na variável &lt;code&gt;valor&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;No exemplo acima, utilizamos alguns conceitos ainda não estudas, porém, é o tema das próximas aulas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-de-uso-de-variaveis"&gt;
+&lt;h2&gt;EXEMPLO DE USO DE VARIÁVEIS&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;VarEstudo&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
+
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;minhaVariavel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;minhaVariavel&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+        &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;dinheiro&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.55&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dinheiro&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula0004&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;        * 1) um nome&lt;/span&gt;
+&lt;span class="cm"&gt;        * 2) um tipo&lt;/span&gt;
+&lt;span class="cm"&gt;        * 3) um tamanho&lt;/span&gt;
+&lt;span class="cm"&gt;        * 4) um valor&lt;/span&gt;
+&lt;span class="cm"&gt;        * */&lt;/span&gt;
+        &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;        * 1) é temporário&lt;/span&gt;
+&lt;span class="cm"&gt;        * 2) os dados são removidos da memória&lt;/span&gt;
+&lt;span class="cm"&gt;        * quando o PC é desligado&lt;/span&gt;
+&lt;span class="cm"&gt;        * 3) volatil&lt;/span&gt;
+&lt;span class="cm"&gt;        * 4) o valor antigo sempre é perdido (para sempre)&lt;/span&gt;
+&lt;span class="cm"&gt;        * 5) o Java, desaloca a memória&lt;/span&gt;
+&lt;span class="cm"&gt;        * */&lt;/span&gt;
+     &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="variável"></category><category term="java"></category><category term="curso"></category><category term="int"></category></entry><entry><title>Ambiente de Desenvolvimento Eclipse</title><link href="http://excript.com/java/eclipse-java.html" rel="alternate"></link><updated>2016-05-06T15:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:java/eclipse-java.html</id><summary type="html">&lt;div class="section" id="eclipse"&gt;
 &lt;h2&gt;ECLIPSE&lt;/h2&gt;
 &lt;p&gt;O programa Eclipse é uma ferramenta para auxiliar o desenvolvimento de programas. Podemos utiliza-lo para programarmos em várias linguagens, como por exemplo Java, PHP, JavaScript, C, C++ e etc.&lt;/p&gt;
 &lt;p&gt;Para desenvolver programas em Java, podemos utilizar qualquer editor de texto básico, como por exemplo, o Notepad do Windows. Isso porque, o único programa que realmente é necessário no desenvolvimento é a JVM que é instalada junto com o JDK e utilizada para executar os programas escritos em Java.&lt;/p&gt;
@@ -819,48 +1061,6 @@
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;]);&lt;/span&gt;
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;]);&lt;/span&gt;
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;]);&lt;/span&gt;
-    &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="java"></category></entry><entry><title>Característica das Variáveis em Java</title><link href="http://excript.com/java/caracteristica-variavel-java.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:java/caracteristica-variavel-java.html</id><summary type="html">&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula0005&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;inteiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;Inteiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;intEiro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;int_iro&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;fracao&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="kt"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;bool&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;texto&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt; &lt;span class="n"&gt;inteiro&lt;/span&gt; &lt;span class="o"&gt;);&lt;/span&gt;
-&lt;span class="c1"&gt;//        int 3soma;&lt;/span&gt;
-        &lt;span class="cm"&gt;/*&lt;/span&gt;
-&lt;span class="cm"&gt;         * tipo nome_da_variável = null;&lt;/span&gt;
-&lt;span class="cm"&gt;         * CaseSensitive&lt;/span&gt;
-&lt;span class="cm"&gt;         */&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -2412,48 +2612,4 @@ boolean&lt;/blockquote&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="java"></category></entry><entry><title>Variáveis em Java</title><link href="http://excript.com/java/variavel-java.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:java/variavel-java.html</id><summary type="html">&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Aula0004&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-
-        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-        &lt;span class="cm"&gt;/*&lt;/span&gt;
-&lt;span class="cm"&gt;        * 1) um nome&lt;/span&gt;
-&lt;span class="cm"&gt;        * 2) um tipo&lt;/span&gt;
-&lt;span class="cm"&gt;        * 3) um tamanho&lt;/span&gt;
-&lt;span class="cm"&gt;        * 4) um valor&lt;/span&gt;
-&lt;span class="cm"&gt;        * */&lt;/span&gt;
-        &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="cm"&gt;/*&lt;/span&gt;
-&lt;span class="cm"&gt;        * 1) é temporário&lt;/span&gt;
-&lt;span class="cm"&gt;        * 2) os dados são removidos da memória&lt;/span&gt;
-&lt;span class="cm"&gt;        * quando o PC é desligado&lt;/span&gt;
-&lt;span class="cm"&gt;        * 3) volatil&lt;/span&gt;
-&lt;span class="cm"&gt;        * 4) o valor antigo sempre é perdido (para sempre)&lt;/span&gt;
-&lt;span class="cm"&gt;        * 5) o Java, desaloca a memória&lt;/span&gt;
-&lt;span class="cm"&gt;        * */&lt;/span&gt;
-     &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="variável"></category><category term="java"></category><category term="curso"></category><category term="int"></category></entry></feed>
+</summary><category term="curso"></category><category term="java"></category></entry></feed>

@@ -82,7 +82,7 @@ excript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a  href="http://excript.com/java/caracteristica-variavel-java.html">Característica das Variáveis em Java</a></h2>
+                <h2><a  href="http://excript.com/java/calculadora-java-v2.html">Calculadora em Java (versão 2.0)</a></h2>
                 <div class="summary"><br>
     <div class="admonitionblock note data-line">
         <table>
@@ -102,31 +102,55 @@ excript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0005</span> <span class="o">{</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0013</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kt">int</span> <span class="n">inteiro</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">Inteiro</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">intEiro</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">int_iro</span><span class="o">;</span>
+        <span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
 
-        <span class="kt">double</span> <span class="n">fracao</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Digite 1 para somar&quot;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Digite 2 para subtrair&quot;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Digite 3 ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/java/calculadora-java-v2.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/java/caracteristica-array-java.html">Características dos Arrays em Java</a></h2>
+                <div class="summary"><br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0047</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
-        <span class="kt">boolean</span> <span class="n">bool</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
 
-        <span class="n">String</span> <span class="n">t</span> <span class="o">=</span> <span class="s">&quot;texto&quot;</span><span class="o">;</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">111</span><span class="o">;</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">222</span><span class="o">;</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">333</span><span class="o">;</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="mi">444</span><span class="o">;</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">;</span>
 
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="n">inteiro</span> <span class="o">);</span>
-<span class="c1">//        int 3soma;</span>
-        <span class="cm">/*</span>
-<span class="cm">         * tipo nome_da_variável = null;</span>
-<span class="cm">         * CaseSensitive</span>
-<span class="cm">         */</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/java/caracteristica-variavel-java.html">more ...</a>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="mi">4</span><span class="o">]);</span>
+        <span class="n">System ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/java/caracteristica-array-java.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -406,43 +430,6 @@ excript            </a>
     </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/estrutura-repeticao-for-each-java.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/java/estrutura-repeticao-for-java.html">Estrutura de Repetição <tt class="docutils literal">for</tt> em Java</a></h2>
-                <div class="summary"><br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0029</span> <span class="o">{</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">//Looping FOR I</span>
-
-        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">){</span>
-            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="n">i</span> <span class="o">);</span>
-
-        <span class="cm">/*</span>
-<span class="cm">        * for(parte1; parte2; parte3)</span>
-<span class="cm">        * parte1: é onde nós declaramos uma variável</span>
-<span class="cm">        * parte2: é onde nós ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/java/estrutura-repeticao-for-java.html">more ...</a>
                 </div>
             </article>
             <hr/>
