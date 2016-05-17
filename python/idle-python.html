@@ -222,8 +222,8 @@ excript            </a>
                             <td><a href="http://excript.com/python/operador-relacional-composto-python.html" >Operadores Relacionais Compostos do Python</a></td>
                             <td><a href="http://excript.com/python/operador-relacional-composto-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/relacao-entre-operandos-python.html" >Relação entre Operandos em Python</a></td>
-                            <td><a href="http://excript.com/python/relacao-entre-operandos-python.html" ></a></td>
+                            <td><a href="http://excript.com/python/operadores-relacionais-na-pratica-python.html" >Operadores Relacionais na Prática em Python</a></td>
+                            <td><a href="http://excript.com/python/operadores-relacionais-na-pratica-python.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/python/operadores-logicos-python.html" >Operadores Lógicos em Python</a></td>
                             <td><a href="http://excript.com/python/operadores-logicos-python.html" ></a></td>
@@ -353,30 +353,6 @@ excript            </a>
                         </tr><tr>
                             <td><a href="http://excript.com/python/argumentos-nomeados-posicionais-python.html" >Argumento de Função Nomeado vs Posicional em Python</a></td>
                             <td><a href="http://excript.com/python/argumentos-nomeados-posicionais-python.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/python/funcao-variadica.rst.html" >Função Variádica em Python</a></td>
-                            <td><a href="http://excript.com/python/funcao-variadica.rst.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/python/funcao-lista-parametro-python.html" >Funções que Recebem Lista de Parâmetros em Python</a></td>
-                            <td><a href="http://excript.com/python/funcao-lista-parametro-python.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/python/desempacotamento-tupla-python.html" >Desempacotamento  de Tuplas em Python</a></td>
-                            <td><a href="http://excript.com/python/desempacotamento-tupla-python.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/python/desempacotamento-dicionario-python.html" >Desempacotamento de Dicionários em Python</a></td>
-                            <td><a href="http://excript.com/python/desempacotamento-dicionario-python.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/python/retornar-valor-python.html" >Retornando Valores pelas Funções em Python</a></td>
-                            <td><a href="http://excript.com/python/retornar-valor-python.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/python/retornar-lista-valor-python.html" >Retornando Listas de Valores em Python</a></td>
-                            <td><a href="http://excript.com/python/retornar-lista-valor-python.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/python/funcao-escopo-variavel-python.html" >Funções e o Escopo de Variáveis em Python</a></td>
-                            <td><a href="http://excript.com/python/funcao-escopo-variavel-python.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/python/palavra-chave-global-python.html" >Palavra-chave <tt class="docutils literal">global</tt> em Python</a></td>
-                            <td><a href="http://excript.com/python/palavra-chave-global-python.html" ></a></td>
                         </tr>        </tbody>
             </table>
         
@@ -450,6 +426,18 @@ Alt + N - para avançar. O 'N' vem de &quot;Next&quot;.</p>
 <p>Sempre que desejares, é possível reiniciar a seção em que estamos trabalhando e assim, remover quaisquer alterações feitas ou então, remover qualquer objeto criado em memória. Para isso, vá no Menu <cite>Shell -&gt; Restart Shell</cite> ou então, pressione as teclas de atalho <cite>CTRL + F6</cite>. Em seguida, uma linha horizontal será traçada e será escrito no centro do vídeo <tt class="docutils literal">RESTART</tt>, como pode ser visto na imagem abaixo:</p>
 <img alt="Imagem do IDLE reiniciado com uso da tecla de atalho Ctrl + F6" src="../images/curso-de-python/idle-restart.png" />
 <p>Como a imagem acima esta mostrando, a variável que foi declarada antes da reinicialização do IDLE não está mais disponível, até porque, a seção que estava sendo utilizada foi destruida e em seguida, uma nova seção do Python foi inicializada.</p>
+</div>
+<div class="section" id="utilizando-o-ultimo-resultado">
+<h2>UTILIZANDO O ÚLTIMO RESULTADO</h2>
+<p>É comum que precisarmos utilizar o último valor que foi retornado pelo IDLE, isto é, vamos supor que nós estejamos fazendo um cálculo, logo, é comum precisarmos do último resultado. Pra isso, podemos utilizar o caractere de underline ( _ ) para assim acessarmos a instância do último valor, por exemplo:</p>
+<div class="highlight"><pre><span class="c">#realizamos uma simples soma entre 2 valores</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="mi">20</span>
+<span class="c">#utilizamos o último resultado e somamos mais 10 unidades ao mesmo</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="mi">30</span>
+</pre></div>
+<p>Como pode ser visto no código acima, inicialmente realizamos a soma de 2 operandos. Na sequência, utilizamos o caractere de underline para assim somarmos mais 10 unidades ao resultado da primeira expressão.</p>
 </div>
 <div class="section" id="teclas-de-atalho-do-idle">
 <h2>TECLAS DE ATALHO DO IDLE</h2>
