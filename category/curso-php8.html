@@ -85,7 +85,21 @@ excript            </a>
         <div class="col-sm-9">
             <article>
                 <h2><a  href="http://excript.com/php/nomenclatura-variavel-php.html">Nomenclatura de Variáveis em PHP</a></h2>
-                <div class="summary"><br>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos quais as regras quando estamos definindo o nome de variáveis, métodos, classes e etc. Aprenderemos quais caracteres podem ser utilizados, e o que devemos evitar.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -109,7 +123,21 @@ excript            </a>
             <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/null-coalescing-operator-php.html">Null Coalescing Operator em PHP</a></h2>
-                <div class="summary"><br>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula aprenderemos a utilizar o Null Coalescing Operador, isto é, um novo operador implementado na versão 7 do PHP que nos proporciona uma maneira ágil de verificar valores nulos.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -131,27 +159,28 @@ excript            </a>
 <div class="highlight"><pre><span class="x">$quadrado = function($num){</span>
 <span class="x">    return $num * $num;</span>
 <span class="x">};</span>
-<span class="x">$cubo = function($num) use ($quadrado){</span>
-<span class="x">    return $quadrado($num) * $num;</span>
-<span class="x">};</span>
-<span class="x">$soma = function($num){</span>
-<span class="x">    return $num + $num;</span>
-<span class="x">};</span>
-
-<span class="x">function processa_lista($lista, $func){</span>
-<span class="x">    foreach($lista as &amp;$item)</span>
-<span class="x">        $item = $func($item);</span>
-<span class="x">    return $lista;</span>
-<span class="x">}</span>
-
-<span class="x">print_r(processa_lista(range(1 ...</span></pre></div></div>
+<span class="x">$cubo = function ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/null-coalescing-operator-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/numeros-pares-impares-php.html">Números Pares e Ímpares em PHP</a></h2>
-                <div class="summary"><br>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula aprenderemos a analisar se um número é par ou então é impar. Estudaremos as várias maneiras existentes para a obtenção dessa propriedade matemática e escreveremos uma aplicação que pede ao usuário um número e retorna se o mesmo é par ou então ímpar.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -161,41 +190,28 @@ excript            </a>
                     </td>
                     <td class="content">
                         <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
-
-<span class="x">&lt;head&gt;</span>
-<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
-<span class="x">    &lt;title&gt;Número Pares e Ímpares - Curso PHP - eXcript&lt;/title&gt;</span>
-<span class="x">&lt;/head&gt;</span>
-
-<span class="x">&lt;body&gt;</span>
-
-<span class="x">    </span><span class="cp">&lt;?php</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">])){</span>
-        <span class="k">echo</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">];</span>
-        <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
-
-        <span class="nv">$num</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">];</span>
-
-        <span class="k">if</span><span class="p">(</span><span class="nv">$num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
-            <span class="k">echo ...</span></pre></div></div>
+                            <p>O texto desta aula ainda ...</p></div></td></tr></tbody></table></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/numeros-pares-impares-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/operacao-ternaria-php.html">Operação Ternária em PHP</a></h2>
-                <div class="summary"><br>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos a operação ternária, também chamada de Operador Ternário. Aprenderemos quando devemos utilizar essa definição, quais as suas características e quais beneficios em sua utilização.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -230,7 +246,21 @@ excript            </a>
             <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/operacao-ternaria-php-parte2.html">Operação Ternária em PHP (parte II)</a></h2>
-                <div class="summary"><br>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta segunda aula sobre a operação ternária, desenvolveremos um exemplo onde aprenderemos uma forma de utilizar essa estrutura para substituir a estrutura de seleção múltipla switch.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -259,7 +289,21 @@ excript            </a>
             <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/operador-aritmeticos-php.html">Operadores Aritméticos em PHP</a></h2>
-                <div class="summary"><br>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos os operadores aritméticos da linguagem, bem como a construção e utilização dos fundamentos da matemática através do PHP.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -285,19 +329,28 @@ excript            </a>
 
 <span class="nv">$soma</span> <span class="o">=</span> <span class="nv">$num1</span> <span class="o">+</span> <span class="nv">$num2</span><span class="p">;</span>
 
-<span class="k">echo</span> <span class="s2">&quot;A soma entre num1 e num2 é: &quot;</span> <span class="o">.</span> <span class="nv">$soma</span><span class="p">;</span>
-
-<span class="k">echo</span> <span class="s2">&quot;A divisão entre num1 e num2 é: &quot;</span> <span class="o">.</span> <span class="p">(</span><span class="nv">$num1</span> <span class="o">/</span> <span class="nv">$num2</span><span class="p">);</span>
-</pre></div>
-</div>
-
+<span class="k">echo</span> <span class="s2">&quot;A soma entre num1 e num2 é: &quot;</span> <span class="o">.</span> <span class="nv">$soma ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/operador-aritmeticos-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/operador-atribuicao-composto-php.html">Operadores de Atribuição Compostos em PHP</a></h2>
-                <div class="summary"><br>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos o conjunto de operados de atribuição compostos, isto é, os operadores que são formados pela junção do operador de atribuição e um operador aritmético.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -321,7 +374,21 @@ excript            </a>
             <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/operador-incremento-decremento-php.html">Operadores de Incremento e Decremento em PHP</a></h2>
-                <div class="summary"><br>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos a utilização e os beneficios dos operadores de incremento e decremento. Também estudaremos o pré-incremento, pós-incremento, pré-decremento e pós-decremento.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -345,18 +412,28 @@ excript            </a>
 <span class="x">$num = 10;</span>
 <span class="x">while($num &gt; 0){</span>
 <span class="x">    $num -= 1;//$num = $num - 10;</span>
-<span class="x">    echo $num . &quot;\n&quot;;</span>
-<span class="x">}</span>
-</pre></div>
-</div>
-
+<span class="x">    echo $num ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/operador-incremento-decremento-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/operador-logico-php.html">Operadores Lógicos em PHP</a></h2>
-                <div class="summary"><br>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos os operadores lógicos do PHP. Também aprenderemos a construir expressões compostas de sub-expressões. Logo, formaremos novas expressões com o uso de sub-expressões ligadas pelo operadores lógicos.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -378,30 +455,28 @@ excript            </a>
 <div class="highlight"><pre><span class="x">$num = 50;</span>
 
 <span class="x">if(($num &gt; 10)&amp;&amp;($num &lt; 100)){</span>
-<span class="x">    echo &quot;eh verdadeiro&quot;;</span>
-<span class="x">}</span>
-
-
-
-<span class="x">var_dump(10 == 10);</span>
-<span class="x">var_dump((10 == 10) == True);</span>
-<span class="x">echo &quot;\n&quot;;</span>
-<span class="x">echo &quot;\n&quot;;</span>
-
-<span class="x">var_dump((10 == 10) == (7 == 7));</span>
-<span class="x">var_dump(True == True);</span>
-<span class="x">var_dump(True);</span>
-<span class="x">echo &quot;\n&quot;;</span>
-<span class="x">echo &quot;\n&quot;;</span>
-
-<span class="x">var_dump((10 == 10 ...</span></pre></div></div>
+<span class="x">    echo &quot;eh ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/operador-logico-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a  href="http://excript.com/php/operador-relacional-php.html">Operadores Relacionais em PHP</a></h2>
-                <div class="summary"><br>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos os operadores relacionais do PHP. Inicialmente estudaremos os Operadores Relacionais Simples e em seguida, aprenderemos as suas formas compostas. Agora, aprenderemos a analisar se um operando é, maior que, menor que ou igual a outro operando.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -419,28 +494,7 @@ excript            </a>
         </table>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">/*</span>
-<span class="x"> * 1) APRESENTAR OS SLIDES</span>
-<span class="x"> * 2) ESTUDAR ALGUMAS CONDI��ES</span>
-<span class="x"> * */</span>
-
-<span class="x">var_dump( 10 == 10 );</span>
-<span class="x">print_r( 10 == 10 );</span>
-<span class="x">echo &quot;\n&quot;;</span>
-<span class="x">echo &quot;\n&quot;;</span>
-
-<span class="x">echo &quot;igualdade \n&quot;;</span>
-<span class="x">var_dump( 10 == 10 );</span>
-<span class="x">var_dump( 10 == 11 );</span>
-<span class="x">echo &quot;\n&quot;;</span>
-
-
-<span class="x">//diferente</span>
-<span class="x">var_dump( 10 != 10 );</span>
-<span class="x">var_dump( 10 != 10 );</span>
-
-<span class="x">//diferente ...</span></pre></div></div>
+<h2>EXEMPLO FEITO EM ...</h2></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/operador-relacional-php.html">more ...</a>
                 </div>
             </article>
