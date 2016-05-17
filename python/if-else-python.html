@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/if-else-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,if,tomada de decisão,se,senão,blog" />
     <meta name="description" content="Nesta aula estudaremos a instrução "if" junto com a instrução "else" que é uma ferramenta para definirmos o que deve acontecer nas situações em que a expressão avaliada não for verdadeira." />
 
         <meta property="og:site_name" content="excript" />
@@ -25,10 +25,15 @@
 
         <meta property="og:description" content="Nesta aula estudaremos a instrução "if" junto com a instrução "else" que é uma ferramenta para definirmos o que deve acontecer nas situações em que a expressão avaliada não for verdadeira."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="16-05-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="if" />
+            <meta property="article:tag" content="tomada de decisão" />
+            <meta property="article:tag" content="se" />
+            <meta property="article:tag" content="senão" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -112,7 +117,7 @@ excript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-05-16T23:30:00-03:00"> Publicado em 16-05-2016</time>
         </span>
 
 
@@ -381,23 +386,61 @@ excript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<br>
-    <div class="admonitionblock note data-line">
-        <table>
+					
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
             <tbody>
                 <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
+                    <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
+                            <p> Nesta aula estudaremos a instrução "if" junto com a instrução "else" que é uma ferramenta para definirmos o que deve acontecer nas situações em que a expressão avaliada não for verdadeira.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
+<div class="section" id="introducao-a-estrutura-else">
+<h2>INTRODUÇÃO À ESTRUTURA <tt class="docutils literal">else</tt></h2>
+<p>A <strong>Tomada de Decisão</strong> é composta por uma expressão a ser avaliada e o que deve acontecer caso a expressão seja verdadeira ou então, caso a expressão seja falsa. Por padrão, o bloco de instrução que estiver abaixo da instrução <tt class="docutils literal">if</tt> será executado quando a expressão contida na estrutura <tt class="docutils literal">if</tt> for verdadeira.</p>
+<p>A estrutura <tt class="docutils literal">else</tt> por sua vez, é uma instrução complementar da estrutura <tt class="docutils literal">if</tt>. A palavra <tt class="docutils literal">else</tt> do Inglês, significa <tt class="docutils literal">SENÃO</tt> e com esta, definiremos o bloco de instrução a ser executado todas as vezes que a expressão definida for igual a falso.</p>
+<p>O bloco que estiver na linha seguinte a instrução <tt class="docutils literal">if</tt> será o bloco de instrução a ser executados todas as vezes que a condição for verdadeira, enquanto que o bloco que estiver na linha seguinte a instrução <tt class="docutils literal">else</tt> será executado todas as vezes que a expressão for falsa.</p>
+</div>
+<div class="section" id="analise-grafica">
+<h2>ANÁLISE GRÁFICA</h2>
+<p>Na imagem a seguir temos a representação gráfica da tomada de decisão em que é definido o bloco de instrução que é executado caso o valor da expressão seja verdadeiro, ou então, o bloco de instrução que será executado caso o valor da expressão seja igual a falso.</p>
+<p>O gráfico a seguir é bastante semelhante ao estudado na aula anterior, no caso, quando estudamos a tomada de decisão a utilização do bloco de instrução a ser executado caso o valor da expressão seja igual a falso.</p>
+<img alt="Tomada de decisão em Python utilizando a instrução else" src="../images/curso-de-python/tomada-de-decisao-else.png" />
+<p>Na imagem acima assumimos que a execução do programa ocorre da esquerda para a direita. Assim, temos no extremo esquerdo um círculo preto que representa o início, ou então, as instruções que foram executadas anteriormente.</p>
+<p>Feito isso, chegamos na tomada de decisão, que é representado por um losango. O losango representa as 2 situações possíveis na avaliação de quaisquer expressão, isto é, o resultado por ser verdadeiro ou falso.</p>
+<p>Caso seja verdadeiro, a execução está demonstrada na parte superior, onde temos a execução de um bloco de instrução e na sequência, o programa continua sua execução normalmente.</p>
+<p>Na parte inferior, temos a execução do bloco de instrução para caso o valor da expressão seja falso. Como pode ser visto, um outro bloco de instrução é executado a a execução do nosso programa continua normalmente.</p>
+</div>
+<div class="section" id="a-estrutura-else">
+<h2>A ESTRUTURA <tt class="docutils literal">else</tt></h2>
+<p>A instrução <tt class="docutils literal">else</tt> é uma instrução dependente, isto é, uma instrução que não pode ser utilizada sozinha. A seguir, temos um exemplo, utilizando a instrução <tt class="docutils literal">if</tt> junto a instrução <tt class="docutils literal">else</tt>, porém, com as instruções traduzidas para o Português.</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="n">SE</span><span class="p">(</span> <span class="n">verdadeiro</span> <span class="p">)</span>
+    <span class="n">faça_isso</span><span class="p">()</span>
+<span class="n">SENÃO</span>
+    <span class="n">faça_aquilo</span><span class="p">()</span>
+</pre></div>
+<p>No código acima, estamos verificando uma condição e, caso o resultado seja verdadeiro, o bloco de instrução na linha seguinte a instrução <tt class="docutils literal">SE</tt> é executado. Senão, caso o valor da expressão definida no cabeçalho da instrução <tt class="docutils literal">if</tt> não seja verdadeiro, o bloco de instrução definido na linha seguinte a instrução <tt class="docutils literal">SENÃO</tt> é o que executado.</p>
+</div>
+<div class="section" id="um-exemplo-pratico">
+<h2>UM EXEMPLO PRÁTICO</h2>
+<p>Agora, vamos fazer um exemplo para estudarmos a utilização da estrutura de decisão <tt class="docutils literal">if</tt> junto a instrução <tt class="docutils literal">else</tt>.</p>
+<p>O exemplo que faremos pedirá para o usuário digitar um número par. Em em seguida, com uso da instrução <tt class="docutils literal">if</tt>, verificaremos se o número digitado realmente é ou não é par. Caso seja, imprimiremos na tela a frase &quot;O número digitado é par.&quot; do contrário, imprimiremos, &quot;O número digitado é ímpar.&quot;</p>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">&quot;Digite um número par: &quot;</span><span class="p">))</span>
+<span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;O número digitado é par.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;O número digitado é ímpar.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span class="c">#coding: utf-8</span>
@@ -439,7 +482,7 @@ excript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/if.html">if</a>, 	<a href="http://excript.com/tag/tomada-de-decisao.html">tomada de decisão</a>, 	<a href="http://excript.com/tag/se.html">se</a>, 	<a href="http://excript.com/tag/senao.html">senão</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

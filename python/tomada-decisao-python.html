@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/tomada-decisao-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,if,tomada de decisão,se,blog" />
     <meta name="description" content="Nesta aula estudaremos a Tomada de Decisão, isto é, a execução de uma bloco de instrução conforme o resultado de uma expressão lógica." />
 
         <meta property="og:site_name" content="excript" />
@@ -25,10 +25,14 @@
 
         <meta property="og:description" content="Nesta aula estudaremos a Tomada de Decisão, isto é, a execução de uma bloco de instrução conforme o resultado de uma expressão lógica."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="16-05-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="if" />
+            <meta property="article:tag" content="tomada de decisão" />
+            <meta property="article:tag" content="se" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -112,7 +116,7 @@ excript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-05-16T23:00:00-03:00"> Publicado em 16-05-2016</time>
         </span>
 
 
@@ -397,14 +401,22 @@ excript            </a>
     </div>
 <div class="section" id="introducao-para-a-tomada-de-decisao">
 <h2>INTRODUÇÃO PARA A TOMADA DE DECISÃO</h2>
-<p>A <strong>Tomada de Decisão</strong> também chamado de <strong>Desvio Condicional</strong> ou então, a verificação de expressões é, uma prática comum no desenvolvimento de software. Essa é a estrutura que verificaremos expressões e decidiremos, qual <strong>Bloco de Instrução</strong> deve ser executado.</p>
-<p>As expressões definidas no cabeçalho da estrutura <tt class="docutils literal">if</tt>, sempre utilizarão, operadores relacionais, seja de maneira implicita ou explicita.</p>
-<p>É importante observar que outras estruturas da linguagem trabalham de maneira similar ao que temos com as <strong>Tomadas de Decisão</strong>. Ou seja, há algumas estruturas em que uma situação será verificada e, em seguida, mediante ao valor retornado na avaliação, é que será definido o bloco que a ser executado. O entendimento da tomada de decisão é necessário para o bom estudo de toda a linguagem, até porque, essa é talvez, a estrutura mais importante na construção de softwares.</p>
+<p>A <strong>Tomada de Decisão</strong> também chamado de <strong>Desvio Condicional</strong> ou então, a verificação de expressões é, uma prática comum no desenvolvimento de software. Com essa estrutura somos capazes de verificar expressões e assim, decidir qual <strong>Bloco de Instrução</strong> deve ser executado.</p>
+<p>As expressões definidas no cabeçalho da estrutura <tt class="docutils literal">if</tt> utilizam os operadores relacionais na construção das expressões, seja de maneira implicita ou explicita.</p>
+<p>É importante observar que outras estruturas da linguagem trabalham de maneira similar ao que temos com as <strong>Tomadas de Decisão</strong>. Ou seja, há algumas estruturas em que uma situação será verificada e, em seguida, mediante ao valor retornado na avaliação, será definido o bloco de código a ser executado. O entendimento da tomada de decisão é necessário para o bom estudo de toda a linguagem, até porque, essa é, a estrutura mais importante na construção de softwares.</p>
+</div>
+<div class="section" id="grafico-da-estrutura">
+<h2>GRÁFICO DA ESTRUTURA</h2>
+<p>Na imagem a seguir, temos uma representação do caso de uso da estrutura de tomada de decisão.</p>
+<img alt="Tomada de decisão em Python" src="../images/curso-de-python/tomada-de-decisao.png" />
+<p>Na imagem acima, estamos, inicialmente, supondo que a execução do programação ocorra no sentido da esquerda para a direita. Assim, representamos com um círculo preto o início da execução.</p>
+<p>Feito isso, chegamos na tomada de decisão propriamente dita. Nesta, será verificado a expressão contida no cabeçalho da estrutura <tt class="docutils literal">if</tt> e, caso o valor avaliado seja verdadeiro, o bloco de instrução é executado e na sequência o programa continua sua execução normalmente.</p>
+<p>Do contrário, ou seja, caso o valor avaliado no cabeçalho da estrutura if for false, nada ocorrerá, como está representado na imagem por uma linha que liga a estrutura <tt class="docutils literal">if</tt> com a parte em que ocorre a continuação da execução normal das instruções definidas.</p>
 </div>
 <div class="section" id="a-instrucao-if">
 <h2>A INSTRUÇÃO <tt class="docutils literal">if</tt></h2>
-<p>A palavra <tt class="docutils literal">if</tt>, do inglês, significa <tt class="docutils literal">SE</tt>. Com a estrutura <tt class="docutils literal">if</tt> podemos determinar o que deve acontecer mediante o valor lógico definido, isto é, SE for verdadeiro, faça isso, SE for falso, faça aquilo.</p>
-<p>Por exemplo, vamos verificar uma situação, porém, utilizando a Lingua Portuguesa:</p>
+<p>A palavra <tt class="docutils literal">if</tt>, do Inglês, significa <tt class="docutils literal">SE</tt>. Com a estrutura <tt class="docutils literal">if</tt> podemos determinar o que deve acontecer mediante o valor lógico retornado, isto é, <strong>SE</strong> for verdadeiro [<strong>True</strong>], faça isso, <strong>SE</strong> for falso [<strong>False</strong>], faça aquilo.</p>
+<p>Analisemos o exemplo a seguir em que utilizamos o formato da instrução <tt class="docutils literal">if</tt>, porém, utilizando a Lingua Portuguesa:</p>
 <div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">SE</span><span class="p">(</span> <span class="n">verdadeiro</span> <span class="p">):</span>
@@ -412,21 +424,22 @@ excript            </a>
     <span class="n">faça_e_mais_isso</span><span class="p">()</span>
     <span class="n">faça_aquilo</span><span class="p">()</span>
 </pre></div>
-<p>No código acima, estamos verificando se a expressão entre parêntesis é verdadeira. Em seguida, colocamos o sinal de 2 pontos, dizendo para o Python que ali finaliza o cabeçalho da estrutura <tt class="docutils literal">if</tt>. A linha seguinte é o início do bloco de instrução para as situações em que a expressão for verdadeira, e é por isso que as instruções estão indentadas mais a direita.</p>
-<p>Nesse primeiro momento, temos que entender que na situação em que a expressão definida no cabeçalho da estrutura <tt class="docutils literal">SE</tt>, isto é, entre parêntesis, for verdadeira, tudo que estiver nas linhas seguintes e com a indentação avançada será executado. A instrução <tt class="docutils literal">faça_isso()</tt> é a primeira instrução do <strong>bloco de instrução</strong> que é executado todas as vezes que a expressão definida e avaliada no cabeçalho da estrutura <tt class="docutils literal">if</tt> for verdadeira.</p>
-<p>Caso a expressão contida entre parêntesis não seja verdadeiro, na situação acima, nada acontecerá e a execução das linhas seguintes a <tt class="docutils literal">tomada de decisão</tt> ocorrerá normalmente. Entenda por <strong>linhas seguintes</strong> todas instruções com o nível de indentação igual ao da instrução <tt class="docutils literal">if</tt>.</p>
+<p>No código acima, estamos verificando se a expressão entre parêntesis é verdadeira. Em seguida, colocamos o sinal de 2 pontos, dizendo para o Python que ali finaliza o cabeçalho da estrutura <tt class="docutils literal">if</tt>. A linha seguinte é o início do <strong>Bloco de Instrução</strong> e será executado nas situações em que a expressão for verdadeira. Todo bloco de instrução que está subordinado a uma estrutura, estará, obrigatoriamente, indentado um nível a frente da estrutura subordinada.</p>
+<p>Nesse primeiro momento, temos que entender que se a expressão definida no cabeçalho da estrutura <tt class="docutils literal">if</tt> [entre parêntesis], for verdadeira, tudo que estiver nas linhas seguintes e com a indentação avançada será executado. A instrução <tt class="docutils literal">faça_isso()</tt> é a primeira instrução do <strong>bloco de instrução</strong> que é executado todas as vezes que a expressão definida e avaliada no cabeçalho da estrutura <tt class="docutils literal">if</tt> é verdadeira.</p>
+<p>Caso a expressão contida entre parêntesis não seja verdadeiro, na situação acima, nada acontecerá e a execução das linhas seguintes a <tt class="docutils literal">tomada de decisão</tt> e que estão com a indentação avançada, não será executado. Entenda por <strong>linhas seguintes</strong> todas as instruções com o nível de indentação igual ao da instrução <tt class="docutils literal">if</tt>.</p>
 </div>
 <div class="section" id="um-caso-real-utilizando-a-estrutura-if">
 <h2>UM CASO REAL UTILIZANDO A ESTRUTURA <tt class="docutils literal">if</tt></h2>
-<p>Agora, vamos fazer uma exemplo onde verificaremos se o número digitado por um usuário é maior do que zero. Caso seja, o bloco de instrução a seguir da estrutura será executado.</p>
+<p>Agora, vamos fazer uma exemplo onde verificaremos se o número digitado por um usuário é maior do que zero. Caso seja, o bloco de instrução [verdadeiro] a seguir da estrutura será executado.</p>
 <div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">&quot;Digite um número: &quot;</span><span class="p">)</span>
 <span class="k">if</span><span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="s">&quot;O número digitado é maior do que &quot;</span><span class="p">)</span>
 </pre></div>
-<p>No exemplo acima, utilizamos a função <tt class="docutils literal">input()</tt> para imprimirmos uma mensagem na tela e em seguida colocar o Console no modo de edição, isto é, fazer com que seja possível que o nosso usuário digite um valor. Após o usuário digitar um valor e pressionar a tecla Enter, o valor  será passado para a variável <tt class="docutils literal">num</tt> e em seguida, a variável <tt class="docutils literal">num</tt> será comparada ao número 0. Caso o valor de <tt class="docutils literal">num</tt> seja maior do que zero, o bloco de instrução verdadeiro será executado, do contrário, nada acontecerá.</p>
-<p>É importante observar que caso nada seja digitado, ou então, não seja digitado um número, uma exceção será levantada e a execução do nosso programa será interrompido.</p>
+<p>No exemplo acima, utilizamos a função <tt class="docutils literal">input()</tt> para imprimirmos uma mensagem na tela e em seguida colocar o Console no modo de edição, isto é, colocar o Console de tal forma que seja  possível ao nosso usuário digitar e pressionar Enter.</p>
+<p>Após o usuário digitar um valor e pressionar a tecla Enter, o valor digitado é passado para a variável <tt class="docutils literal">num</tt>. Em seguida, o valor contido na variável <tt class="docutils literal">num</tt> é comparada ao número 0. Caso o valor de <tt class="docutils literal">num</tt> seja maior do que zero, o bloco de instrução verdadeiro será executado, do contrário, nada acontecerá.</p>
+<p>É importante observar que caso nada seja digitado, ou então, não seja digitado um número válido, uma exceção é levantada e a execução do programa é interrompida.</p>
 </div>
 
 				</div>
@@ -455,7 +468,7 @@ excript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/if.html">if</a>, 	<a href="http://excript.com/tag/tomada-de-decisao.html">tomada de decisão</a>, 	<a href="http://excript.com/tag/se.html">se</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
