@@ -212,76 +212,23 @@ excript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<div class="section" id="continue">
-<h2><tt class="docutils literal">continue</tt></h2>
-<p>A instruçao <tt class="docutils literal">continue</tt> interrompe a execução do ciclo, mas sem interromper o <strong>Estrutura de Repetição</strong>. A instrução <tt class="docutils literal">break</tt> e a instrução <tt class="docutils literal">continue</tt> são ferramentas das <strong>Estruturas de Repetição</strong> permitindo assim, a interrupção de um único <strong>Ciclo</strong> ou de todo <strong>Laço de Repetição</strong>.</p>
-<p>É importante observar que somente o <strong>Ciclo</strong> que está sendo executado será interrompido, logo, o cursor de execução retorna ao cabeçalho da <strong>Estrutura de Repetição</strong> e inicia-se a execução do ciclo seguinte.</p>
-<p>No código abaixo, construímos um simples exemplo com o propósito de demonstrar a interrupção da execução de um único ciclo.</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-<span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">x</span> <span class="p">+=</span> <span class="m">1</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="p">%</span> <span class="m">2</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">continue</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-<p>No código acima, declaramos a variável <tt class="docutils literal">x</tt> e inicializamo-a com o valor 0. Em seguida, implementamos um laço de repetição <tt class="docutils literal">while</tt> e definimos a expressao para a execução do <strong>Bloco de Instrução</strong> que <tt class="docutils literal">x</tt> deve ser menor ou igual a 10.</p>
-<p>Na linha seguinte, incrementamos uma únidade em <tt class="docutils literal">x</tt>, em seguida, utilizamo a instrução <tt class="docutils literal">if</tt> definindo cuja expressão diz que nas situações em que o módulo de <tt class="docutils literal">x</tt> por 2 for igual a 0, o bloco será executado e neste, haverá uma interrupção do <strong>Ciclo</strong> pelo uso da instruçãop <tt class="docutils literal">continue</tt>.</p>
-<p>Em decorrência da lógica implementada, a última instrução do ciclo, <tt class="docutils literal">Console.WriteLine(x);</tt>, não é executada quando o módulo for diferente de 0, até porque, a execução é interrompida com o uso da  instrução <tt class="docutils literal">continue</tt>.</p>
-<p>A seguir, temos o resultado obtido com a execução do código anterior.</p>
-<pre class="literal-block">
-2
-4
-6
-8
-10
-</pre>
-<p>Por fim, temos 2 situações que precisam ser entendidas:</p>
-<blockquote>
-<ol class="arabic simple">
-<li>a instrução <tt class="docutils literal">break</tt> interrompe toda a execução da estrutura de repetição</li>
-<li>a instrução <tt class="docutils literal">continue</tt> interrompe só e somente só, o ciclo que está sendo executado.</li>
-</ol>
-</blockquote>
-</div>
-<div class="section" id="uma-linda-historia-com-break-e-continue">
-<h2>Uma linda história com <tt class="docutils literal">break</tt> e <tt class="docutils literal">continue</tt></h2>
-<p>Imagine-se numa situação em que o Gasparzinho lhe peça para caminhares ao redor de um quarteirão por 10 vezes. A origem é onde estás, e então, inicias a jornada de caminha 10 voltas ao redor do quarteirão. Ao invés falarmos volta, falaremos ciclo. Então, inicias a execução do primeiro ciclo de 10.</p>
-<p>Na metade da terceira volta, o Gasparzinho lhe aborda dizendo que algo aconteceu e ele não quer que você continue a execução do <strong>terceiro ciclo</strong> e assim, fostes magicamente levado a origem da jornada e então, dás continuidade a caminhada.</p>
-<p>SITUAÇÃO 1: na terceira volta, por alguma razão, a caminha foi interrompida e você foi levado magicamente para o ponto inicial do trajeto. Temos que o terceiro ciclo foi interrompido, MAS A JORNADA e a meta de caminhar 10 vezes ao redor do quarteirão continua.</p>
-<p>Ciclo 4 caminhado com sucesso...
-Ciclo 5 caminhado com sucesso...
-Ciclo 6 caminhado com sucesso...</p>
-<p>No ciclo 7, ou seja, na sétima vez que estavas caminhando ao redor do quarteirão, o Gasparzinho reaparece e lhe diz que a jornada deve ser interrompida, estás liberado para caminhares por onde quiseres, salvo ao redor do quarteirão.</p>
-<p>SITUAÇÃO 2: no ciclo 7, por alguma razão, o Gasparzinho resolveu interromper a jornada.</p>
-<p>CONCLUSÃO: No terceiro ciclo, por alguma razão, houve uma interrupção e não finalizastes o ciclo, onde fostes magicamente levado ao ponto inicial a joranda continua... é isso que a instrução <tt class="docutils literal">continue</tt> desempenha: ela interrompe a execução do ciclo, e inicia a execução do ciclo seguinte.</p>
-<p>No sétimo ciclo também houve uma interrupção onde a jornada cancelada, isto é, não precisas e não deves continuar caminhando ao redor do quarteirão, a meta foi quebrada... por isso a instrução <tt class="docutils literal">break</tt>: a mesma finaliza a estrutura de repetição totalmente.</p>
-<p><tt class="docutils literal">CONTINUE</tt>: interrompe o ciclo
-<tt class="docutils literal">BREAK</tt>: interrompe toda a execução</p>
-</div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
-
-<span class="n">print</span><span class="p">()</span>
-<span class="n">print</span><span class="p">(</span><span class="s">&quot;inicio&quot;</span><span class="p">)</span>
-<span class="n">i</span> <span class="p">=</span> <span class="m">0</span>
-<span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="p">&lt;</span><span class="m">10</span><span class="p">):</span>
-    <span class="n">i</span> <span class="p">+=</span> <span class="m">1</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="p">%</span><span class="m">2</span><span class="p">==</span><span class="m">0</span><span class="p">):</span>
-        <span class="k">continue</span>
-    <span class="nf">if</span><span class="p">(</span><span class="n">i</span><span class="p">&gt;</span><span class="m">5</span><span class="p">):</span>
-        <span class="k">break</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">print</span><span class="p">(</span><span class="s">&quot;else&quot;</span><span class="p">)</span>
-<span class="n">print</span><span class="p">(</span><span class="s">&quot;fim&quot;</span><span class="p">)</span>
-<span class="n">print</span><span class="p">()</span>
-</pre></div>
-</div>
+					<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 				</div>
 			</div>

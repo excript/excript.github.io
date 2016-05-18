@@ -210,12 +210,26 @@ excript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<div class="section" id="a-atribuicao">
+					
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos a Operação de Atribuição e os operadores utilizados para Atribuir Valores a Variáveis na linguagem C#. Estudaremos também, a forma como as expressões a esquerda e a direita são avaliadas antes que a operação seja propriamente concluida.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="a-atribuicao">
 <h2>A ATRIBUIÇÃO</h2>
 <p>A <tt class="docutils literal">Atribuição de Valores</tt> é a alocação de algum dado num espaço de memória que é acessada por alguma referência. Toda variável, ou melhor, toda referência, por definição, pode receber valores ou então, pode ter o seu valor alterado.</p>
 <p>Para atribuirmos valores, utilizamos o <strong>Operador de Atribuição</strong>, isto é, o caractere que na matemática significa igualdade, o sinal de igual <tt class="docutils literal">=</tt>.</p>
 <p>A notação para atribuição de valores define que a variável que receberá o valor estará do lado esquerdo do sinal de atribuição <tt class="docutils literal">=</tt>, enquanto o valor a ser atribuido, estara do lado direito. Assim, a atribuição de valores sempre seguira o sentido da direita para a esquerda e também, toda atribuição seguirá as regras de precedência estabelecidas.</p>
-<p>No código abaixo, faremos um simples exemplo onde declararemos uma variável e atriuirémos um valor à mesma.</p>
+<p>No código abaixo, faremos um simples exemplo onde declararemos uma variável e atribuiremos um valor à mesma.</p>
 <div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
@@ -234,10 +248,10 @@ excript            </a>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-<p>No código acima, declaramos uma variávelo inteira de nome <tt class="docutils literal">num</tt>. Em seguida, atribuímos a mesma o valor literal inteiro <tt class="docutils literal">10</tt>. É importante observar que a variável está ao lado esquedo do sinal de atribuição, enquanto que o valor a ser atribuído, está ao lado direito.</p>
+<p>No código acima, declaramos uma variável inteira de nome <tt class="docutils literal">num</tt>. Em seguida, atribuímos a mesma o valor literal inteiro <tt class="docutils literal">10</tt>. É importante observar que a variável está ao lado esquerdo do sinal de atribuição, enquanto que o valor a ser atribuído, está ao lado direito.</p>
 </div>
 <div class="section" id="atribuindo-expressoes">
-<h2>ATRIBUÍNDO EXPRESSÕES</h2>
+<h2>ATRIBUINDO EXPRESSÕES</h2>
 <p>Variáveis armazenam valores. Um valor, pode ser, o resultado de um expressão, como por exemplo, a avaliação de uma expressão matemática que resulta num número que será então atribuido. Por isso, o lado direito do sinal, inicialmente é avaliado, e o resultado decorrente será então, atribuido a referência que está ao lado esquerdo.</p>
 <p>Nesse primeiro momento, vamos assumir que somente valores podem ser atribuidos, até porque, esse é o padrão.</p>
 <p>Existem alguma maneiras distintas, porém similares de atribuição. No código a seguir, temos alguns exemplos que encontramos em diversos códigos.</p>

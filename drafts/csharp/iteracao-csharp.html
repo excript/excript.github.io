@@ -215,110 +215,23 @@ excript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<div class="section" id="introducao-a-iteracao">
-<h2>INTRODUÇÃO À ITERAÇÃO</h2>
-<p>A <strong>Iteração</strong>, <strong>Estrutura de Repetição</strong>, <strong>Looping</strong>, <strong>Laço de Repetição</strong>, <strong>Laços Condicionais</strong> ou mesmo, <strong>repetição</strong> são os vários nomes da estrutura que repete a execução de um mesmo bloco de codigo.</p>
-<p>Há 2 tipos de estrutura de repetição. A <strong>Estrutura de Repetição Condicional</strong> e a <strong>Estrutura de Repetição Finita</strong>.</p>
-</div>
-<div class="section" id="estrutura-de-repeticao-condicional">
-<h2>ESTRUTURA DE REPETIÇÃO CONDICIONAL</h2>
-<p>A <strong>Estrutura de Repetição Condicional</strong> funciona de maneira análoga à <strong>Tomada de Decisão</strong>. Definine-se uma condição e estabelece um Bloco de Instrução. O bloco de instrução será executado, caso a condição seja verdadeira, em ambas estruturas. Assim, o que as diferenciam, é que a <strong>Tomada de Decisão</strong> repetirá uma unica vez o <strong>Bloco de Instrução</strong>, enquanto que a <strong>Estrutura de Repetição Condicional</strong>, executará o bloco até que a condição deixe de ser verdadeira.</p>
-<p>No código a seguir, temos um exemplo utilizando a estrutura de repetição <tt class="docutils literal">while</tt>, que numa tradução livre, seria, <tt class="docutils literal">enquanto</tt>.</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-<span class="k">while</span><span class="p">(</span><span class="n">num</span> <span class="p">&lt;</span> <span class="m">10</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
-    <span class="n">num</span> <span class="p">+=</span> <span class="m">1</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-<p>Inicialmente foi declarado uma variável inteira, de nome <tt class="docutils literal">num</tt> e inicializa com o literal <tt class="docutils literal">0</tt>. Em seguida, com a instrução <tt class="docutils literal">while</tt> foi definido a <strong>Estrutura de Repetição Condicional</strong>. Essa será repetida <strong>ENQUANTO</strong> a condição definida entre parentêsis, no cabeçalho da estrutura <tt class="docutils literal">while</tt> for verdadeiro.</p>
-<p>É importante observar, que a condição definida no cabeçalho da estrutura <tt class="docutils literal">while</tt> só deixará de ser verdadeiro, porque o valor da variável <tt class="docutils literal">num</tt> é incrementado toda vez que o bloco de instrução é executado. Do contrário, teríamos um laço de repetição infinito e que faria o nosso programar travar, congelar.</p>
-</div>
-<div class="section" id="a-forma-primitiva-de-repeticao">
-<h2>A FORMA PRIMITIVA DE REPETIÇÃO</h2>
-<p>As <strong>Estruturas de Repetição</strong> são evoluções das linguagens em que era definido para qual linha o cursor deveria saltar e iniciar a execução sequencial.</p>
-<p>A forma mais primitiva que as linguagens de programação disponibilizam para a repetição de um mesmo bloco, era com o uso das instruções <tt class="docutils literal">goto</tt>, que numa tradução livre, seria algo como <tt class="docutils literal">vá para</tt>.</p>
-<p>As linguagens obrigavamo-nos a definir o número da linha para qual desejamos saltar, outras, permitiam a definição de <tt class="docutils literal">labels</tt>, isto é, nomes. Dessa foram, passávamos o nome do <tt class="docutils literal">label</tt> pela instrução <tt class="docutils literal">goto</tt> e o cursor de execuçao pulava para a linha em que o <tt class="docutils literal">label</tt> havia sido definido.</p>
-<p>Desta forma, se desejassemos repetir um bloco, era necessá &quot;saltar&quot; sempre para um mesmo <tt class="docutils literal">label</tt> enquanto necessário. A seguir, temos um exemplo em Português que exemplifica essa situação.</p>
-<div class="highlight"><pre><span class="n">label</span> <span class="n">REPETIÇÃO</span>
-<span class="p">{</span>
-    <span class="n">linha1</span><span class="p">;</span>
-    <span class="n">linha2</span><span class="p">;</span>
-    <span class="n">linha3</span><span class="p">;</span>
-
-    <span class="n">SE</span> <span class="p">(</span><span class="n">TRUE</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">goto</span> <span class="n">REPETICAO</span><span class="p">;</span>
-    <span class="p">}</span><span class="n">SENÃO</span>
-    <span class="p">{</span>
-        <span class="n">label</span> <span class="n">CONTINUA_A_EXECUÇÃO</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="n">label</span> <span class="n">CONTINUA_A_EXECUÇÃO</span><span class="p">;</span>
-</pre></div>
-<p>No código acima, é verificado uma condição, se esta for verdadeiro, entao, o cursor de execução, saltará para a linha em que está defindo o <tt class="docutils literal">label REPETIÇÃO</tt>. Esse ciclo será executado até que a condição definida dentro desse bloco deixe de ser verdadeira e o cursos salte para o <tt class="docutils literal">label CONTINUA_A_EXECUÇÃO;</tt>.</p>
-</div>
-<div class="section" id="a-recursividade-como-laco-de-repeticao">
-<h2>A RECURSIVIDADE COMO LAÇO DE REPETIÇÃO</h2>
-<p>Recursividade é a invocação de uma função por ela mesma, ou seja, a função invoca a si mesmo. Essa é uma prática perigosa de trabalho, que pode facilmente travar nossos programas, ou então, <strong>Estourar a Pilha</strong>. O Estouro da Pilha é um limite definido explicitamente que define a quantidade de vezes que uma função pode chamar a si mesma. Quando o limite é ultrapssado, temos o famoso erro <tt class="docutils literal">stack overflow error</tt>, que nada mais é, do que o limite máximo de vezes que uma função pode chamar a si mesma.</p>
-<p>A seguir, temos um exemplo em Português, onde trabalhamos com o conceito de recursividade.</p>
-<div class="highlight"><pre><span class="n">func</span> <span class="nf">minhaFunção</span><span class="p">(</span><span class="kt">int</span> <span class="n">valor</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">valor</span> <span class="p">+=</span> <span class="m">1</span><span class="p">;</span>
-
-    <span class="n">SE</span><span class="p">(</span> <span class="n">valor</span> <span class="p">&lt;</span> <span class="m">10</span> <span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">minhaFunção</span><span class="p">(</span> <span class="n">valor</span> <span class="p">);</span>
-    <span class="p">}</span>
-    <span class="n">SENÃO</span><span class="p">{</span>
-        <span class="n">exit</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="n">minhaFunção</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
-</pre></div>
-<p>No código acima, definimos uma função de nome <tt class="docutils literal">minhaFunção()</tt> e estamos invocando-a na última linha do código, ou seja, estamos invocando a função após a sua definição.</p>
-<p>A partir do momento em que invocamos a função <tt class="docutils literal">minhaFunção()</tt>, estamos também, enviando como argumento 0. Esse valor é recebido como parâmetro pela referência <tt class="docutils literal">valor</tt>.</p>
-<p>Inicialmente, incrementamos a variável <tt class="docutils literal">valor</tt>, até porque, essa será enviada como argumento caso a função seja invocada novamente.</p>
-<p>Feito isso, uma condição é verificada, e caso o valor da variável <tt class="docutils literal">valor</tt> seja menor do que o numero inteiro 10, então, o bloco de instrução verdadeiro será executado.</p>
-<p>Este bloco contém uma única instrução, onde a função que está sendo executada invoca a si mesma, passando como argumento o valor contido na variável <tt class="docutils literal">valor</tt>.</p>
-<p>Do contrário, isto é, caso o valor da variável <tt class="docutils literal">valor</tt> seja igual ou maior do que 10, então, é executado a instrução <tt class="docutils literal">exit()</tt> e a função que esta sendo executada é finalizada, dando início a finalização da <tt class="docutils literal">Pilha</tt> de funções que se formou.</p>
-<p>Neste exemplo, podemos ver como um mesmo bloco é executado por diversas vezes e somente quando a condição definida dentro do próprio bloco deixa de ser verdadeira, é que a execução é interrompida. Do contrário, o ciclo continuara sua execução, de maneira indefinida, ate que a memória acabe ou ocorra o <strong>Estou da Pilha</strong>.</p>
-</div>
-<div class="section" id="bloco-de-instrucao">
-<h2>BLOCO DE INSTRUÇÃO</h2>
-<p>O <strong>Bloco de Instrução</strong> é o conjunto de instruções delimitado por um par de chaves <tt class="docutils literal">{</tt> <tt class="docutils literal">}</tt>.</p>
-</div>
-<div class="section" id="ciclo-ou-laco">
-<h2>CICLO OU LAÇO</h2>
-<p>O <strong>ciclo</strong> é a <strong>repetição</strong> do <tt class="docutils literal">Bloco de Instrução</tt>.</p>
-<p>Do dicionárioa Aurélio, temos que ciclo é: &quot;Série de fenômenos que se sucedem numa ordem determinada&quot;.</p>
-<p>O <strong>Bloco de Instrução</strong> executado por definição, sempre será o mesmo. Então, devemos pensar no ciclo, das linguagens de programação, como a execução de um mesmo bloco de instrução. Talvez, o bloco tenha condições que determinem, conforme a expressão definida, blocos de instruções diferentes, porém, esse bloco sempre estará contido dentro do <strong>Bloco de Instrução</strong> da <strong>Estrutura de Repetição</strong>.</p>
-</div>
-<div class="section" id="estruturas-de-repeticao">
-<h2>ESTRUTURAS DE REPETIÇÃO</h2>
-<p>As linguagens de programação atuais, fornecem meios para a repetição de um <strong>Bloco de Instrução</strong> de forma mais simples e menos verbosa. Essa são, tecnicamente chamadas, de <strong>Iteradores</strong>, isto é, repetidores.</p>
-<p>Normalmente, as linguagens disponiblizam <strong>Iterador</strong> que repetirão uma quantia finita de vezes, e outro que repetirá, enquanto uma condição seja verdadeira, ou seja, um repetidor condicional.</p>
-</div>
-<div class="section" id="iteradores-em-c">
-<h2>ITERADORES EM C#</h2>
-<p>O C# disponibiliza 3 Iteradores. Destas, temos que 2 são  <strong>Estrutura de Repetição Condicional</strong>, e uma <strong>Estrutura de Repetição Finita</strong>.</p>
-</div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
-
-<span class="err">#</span><span class="p">=====================================</span>
-<span class="err">#</span><span class="p">==========</span> <span class="n">www</span><span class="p">.</span><span class="n">eXcript</span><span class="p">.</span><span class="n">com</span> <span class="p">==========</span>
-<span class="err">#</span><span class="p">=====================================</span>
-
-<span class="n">x</span> <span class="p">=</span> <span class="m">0</span>
-<span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="p">&lt;=</span><span class="m">10</span><span class="p">):</span>
-    <span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">x</span> <span class="p">+=</span> <span class="m">1</span>
-</pre></div>
-</div>
+					<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 				</div>
 			</div>

@@ -210,55 +210,23 @@ excript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<div class="section" id="escopo">
-<h2>ESCOPO</h2>
-<p>O <strong>Escopo de Nome</strong> tem a função de classificar quais nome de variáveis, funções, classes estão acessíveis em cada bloco de instrução dos programas. O escopo também é responsável por inutilizar variáveis declaradas e que não serão mais utilizadas, podendo assim, serem removidas da memória pela Máquina Virtual do Python.</p>
-<p>Temos que enxergar o escopo de nomes como mini-programas onde todas as variáveis declaradas são globais e restritas ao seu bloco. Um bloco de código que possua outros blocos de código definirá um escopo de nomes para cada novo bloco definido e restringira os nomes definidos a bloco onde foram declarados.</p>
-<p>A seguir, temos um código bastante simples e que o Python não executa, isso porque, colocamos funções em blocos de instrução diferentes sem utilizarmos para isso alguma estrutura que permitisse a utilização de diversos blocos.</p>
-<div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
-
-<span class="n">print</span><span class="p">()</span>
-    <span class="n">print</span><span class="p">()</span>
-        <span class="n">print</span><span class="p">()</span>
-</pre></div>
-<p>Cada instrução <tt class="docutils literal">print()</tt> foi utilizada num bloco de instrução novo e por isso, possui seu escopo restrito. Se tivéssemos declarações de variáveis em cada bloco de instrução, estes seriam liberados quando o cursor de execução retornasse ao nívei hierarquico anterior.</p>
-<p>A seguir, temos outro código para demonstração que também não será executado, porém, que nos ajudará a entender melhor o escopo de nomes.</p>
-<div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
-
-<span class="n">a</span> <span class="p">=</span> <span class="m">1</span>
-    <span class="n">b</span> <span class="p">=</span> <span class="m">2</span>
-    <span class="n">c</span> <span class="p">=</span> <span class="m">3</span>
-        <span class="n">d</span> <span class="p">=</span> <span class="m">4</span>
-    <span class="n">d</span> <span class="p">=</span> <span class="m">0</span>
-    <span class="n">e</span> <span class="p">=</span> <span class="m">5</span>
-<span class="n">f</span> <span class="p">=</span> <span class="m">6</span>
-</pre></div>
-<p>No código acima, declaramos várias variáveis em blocos de instrução diferentes. Caso o código compilasse sem problema, temos que todas as variáveis declaradas em escopos hierarquicamente a frente, seriam desalocadas quando o cursor de execução voltasse ao nível anterior. Assim, temos que todo escopo consegue enxergar os nomes declarados no escopo onde está contido, porém o contrário não é verdadeiro.</p>
-<div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
-
-<span class="n">a</span> <span class="p">=</span> <span class="m">10</span>
-    <span class="n">b</span> <span class="p">=</span> <span class="m">20</span>
-        <span class="n">c</span> <span class="p">=</span> <span class="m">30</span>
-    <span class="n">d</span> <span class="p">=</span> <span class="n">b</span> <span class="p">+</span> <span class="n">c</span> <span class="err">#</span><span class="n">erro</span> <span class="n">a</span> <span class="n">variável</span> <span class="n">c</span> <span class="n">já</span> <span class="n">foi</span> <span class="n">liberada</span> <span class="n">pelo</span> <span class="n">Garbage</span> <span class="n">Collector</span> <span class="n">da</span> <span class="n">VM</span> <span class="k">do</span> <span class="n">Python</span>
-</pre></div>
-<p>No exemplo acima, caso fosse possível executar, haveria um erro a soma de <tt class="docutils literal">b + c</tt>, isso porque, a variável <tt class="docutils literal">c</tt> foi desalocada quando o cursor de execução voltou para o segundo nível hierarquico.</p>
-</div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
-
-<span class="err">#</span><span class="p">=====================================</span>
-<span class="err">#</span><span class="p">==========</span> <span class="n">www</span><span class="p">.</span><span class="n">eXcript</span><span class="p">.</span><span class="n">com</span> <span class="p">==========</span>
-<span class="err">#</span><span class="p">=====================================</span>
-
-<span class="n">a</span> <span class="p">=</span> <span class="m">25</span>
-<span class="k">if</span><span class="p">(</span><span class="n">True</span><span class="p">):</span>
-    <span class="n">a</span> <span class="p">=</span> <span class="m">50</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">False</span><span class="p">):</span>
-        <span class="n">b</span> <span class="p">=</span> <span class="m">50</span>
-    <span class="n">a</span> <span class="p">=</span> <span class="m">40</span>
-</pre></div>
-</div>
+					<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 				</div>
 			</div>

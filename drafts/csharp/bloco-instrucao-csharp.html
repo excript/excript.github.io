@@ -210,64 +210,23 @@ excript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<div class="section" id="bloco">
-<h2>BLOCO</h2>
-<p>Um programa em Python pode ter uma ou centenas de linhas. É comum a construção de blocos de códigos, isto é, um conjunto de linhas que quando executadas, irão desempenhar uma determinada tarefa.</p>
-<p>A linguagem Python oferece algumas notações para delimitarmos o que chamamos de blocos de instrução ou então, blocos. Um conjuto de linhas marcadas como comentários formam um bloco de comentário e quando executado o Script, essas linhas serão ignoradas. Da mesma forma que um conjunto de linhas que estejam identadas a frente das linhas iniciais, também estarão formando um bloco e serão executadas juntas.</p>
-<p>A principal características dos blocos, é que estes sempre serão executados por inteiro, salvo nas vezes em que usarmos uma instrução para a interrupção da execução.</p>
-<p>O Python diferencia um bloco de instrução de outro através da indentação, isto é, do espaçamento a contar da margem esquerda do vídeo. Por isso temos que a linguagem Python, nos obriga a trabarmos de maneira organizada, organizando os blocos em níveis hierarquicos diferentes o que melhora a legibilidade e diminui a quantidade de linhas e caracteres utilizados.</p>
-</div>
-<div class="section" id="definindo-blocos">
-<h2>DEFININDO BLOCOS</h2>
-<p>Agora, vamos fazer um exemplo utilizando 2 blocos de instrução. O primeiro bloco estará rente a margem esquerda do vídeo, enquanto o segundo, estará 4 espaçamentos do vídeo.</p>
-<div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
-
-<span class="n">print</span><span class="p">(</span><span class="s">&quot;Nível 0. Este código está rente a margem do vídeo.&quot;</span><span class="p">)</span>
-
-<span class="kt">var</span> <span class="p">=</span> <span class="m">10</span>
-<span class="k">if</span><span class="p">(</span><span class="kt">var</span> <span class="p">==</span> <span class="m">10</span><span class="p">):</span>
-    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Estamos no bloco 1, isto é, a 4 espaçamentos da margem.&quot;</span><span class="p">)</span>
-    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Essa é a segunda linha do bloco &#39;if&#39;. &quot;</span><span class="p">)</span>
-
-<span class="n">print</span><span class="p">(</span><span class="s">&quot;Agora, voltamos para o bloco principal do programa.&quot;</span><span class="p">)</span>
-</pre></div>
-<p>No exemplo acima utilizamos 2 blocos de instrução. O primeiro bloco, que podemos dizer o bloco de instrução principal, é a indentação rente a margem esquerda, ou melhor, corresponde as linhas que não possuem indentação.</p>
-<p>O segundo bloco de instrução, é o bloco que está a 4 espaços da margem esquerda e este só será executado nas situações em que a instrução <tt class="docutils literal">if</tt> for verdadeira.</p>
-</div>
-<div class="section" id="nomes">
-<h2>NOMES</h2>
-<p>É comum chamarmos de <tt class="docutils literal">nome</tt> toda e qualquer variável declaração, seja ela uma instrução, classe, variável, constante e etc.</p>
-<p>Todo nome pertencerá, por definição, ao escopo onde foi declarado, podendo ser acessada somente, em níveis superiores, mas nunca em níveis inferiores, até porque, quando o cursor de execução volta a algum nível inferior, todos os nomes declarados serão desalocados da memória e por conseguinte, não mais poderão ser acessados e os valores ali definidos serão perdidos.</p>
-</div>
-<div class="section" id="hierarquia">
-<h2>HIERARQUIA</h2>
-<p>Os blocos de instrução constrõem hierarquias e estas podem ser reconhecidas visualmente, até porque, níveis hierarquicos diferentes, estarão a distâncias diferentes da margem esquerda do vídeo.</p>
-<p>Todo bloco é único e será executado plenamente após o cursor iniciar sua execução. Nomes declarados dentro de blocos, serão desalocados da memória quando estes tiverem sua execução finalizada e todo bloco contido dentro de outro, terá visibilidade a todos os nomes definidos no bloco onde está contido.</p>
-<p>A seguir, temos um código que exemplifica o uso de vários blocos de instrução.</p>
-<div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
-
-<span class="err">#</span><span class="n">bloco</span> <span class="m">1</span>
-<span class="err">#</span><span class="n">bloco</span> <span class="m">1</span>
-<span class="err">#</span><span class="n">bloco</span> <span class="m">1</span>
-    <span class="err">#</span><span class="n">bloco</span> <span class="m">2</span>
-    <span class="err">#</span><span class="n">bloco</span> <span class="m">2</span>
-    <span class="err">#</span><span class="n">bloco</span> <span class="m">2</span>
-        <span class="err">#</span><span class="n">bloco</span> <span class="m">3</span>
-        <span class="err">#</span><span class="n">bloco</span> <span class="m">3</span>
-        <span class="err">#</span><span class="n">bloco</span> <span class="m">3</span>
-        <span class="err">#</span><span class="n">bloco</span> <span class="m">3</span>
-    <span class="err">#</span><span class="n">bloco</span> <span class="m">4</span>
-    <span class="err">#</span><span class="n">bloco</span> <span class="m">4</span>
-    <span class="err">#</span><span class="n">bloco</span> <span class="m">4</span>
-    <span class="err">#</span><span class="n">bloco</span> <span class="m">4</span>
-<span class="err">#</span><span class="n">bloco</span> <span class="m">1</span>
-<span class="err">#</span><span class="n">bloco</span> <span class="m">1</span>
-<span class="err">#</span><span class="n">bloco</span> <span class="m">1</span>
-</pre></div>
-<p>No código acima, utilizamos 3 níveis hierarquicos, porém, utilizamos 4 blocos diferentes, mesmo que hierarquicamente, temos 3 níveis.</p>
-<p>O <strong>bloco 2</strong> e o <strong>bloco 4</strong> estão hierarquicamente no mesmo nível, porém, após a execução do <strong>bloco 2</strong>, todos os <strong>nomes</strong> utilizados dentro deste serão desalocados da memória e assim, quando o <strong>bloco 4</strong> for executado, não será possível enxergar nomes utilizados no <strong>bloco 2</strong>!</p>
-<p>Todas as vezes que o cursor de execução do programa retorna um nível, ou seja, volta para o bloco de instrução anterior, o bloco que estava sendo executado é desalocado, junto a todos os nome ali declarados.</p>
-</div>
+					<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>

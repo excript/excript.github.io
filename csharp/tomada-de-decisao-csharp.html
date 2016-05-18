@@ -16,14 +16,14 @@
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
         <meta name="keywords" content="curso,csharp" />
-    <meta name="description" content="INTRODUÇÃO À TOMADA DE DECISÃO A Tomada de Decisão é uma estrutura que verifica uma expressão e decide qual Bloco de Instrução deve ser executado, mediante valor avaliado. Tomar uma decisão, ou então, utilizar um Desvio Condicional, é uma prática comum no Desenvolvimento de Software e será com essa estrutura ..." />
+    <meta name="description" content="Nesta aula estudaremos a Tomada de Decisão na linguagem C#. Aprenderemos a utilizar a instrução if para analisar expressões e definir qual bloco de código deve ser executado caso o valor lógica seja verdadeiro, e caso o valor lógica seja falso." />
 
         <meta property="og:site_name" content="excript" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Tomada de Decisão em C#"/>
         <meta property="og:url" content="http://excript.com/csharp/tomada-de-decisao-csharp.html"/>
 
-        <meta property="og:description" content="INTRODUÇÃO À TOMADA DE DECISÃO A Tomada de Decisão é uma estrutura que verifica uma expressão e decide qual Bloco de Instrução deve ser executado, mediante valor avaliado. Tomar uma decisão, ou então, utilizar um Desvio Condicional, é uma prática comum no Desenvolvimento de Software e será com essa estrutura ..."/>
+        <meta property="og:description" content="Nesta aula estudaremos a Tomada de Decisão na linguagem C#. Aprenderemos a utilizar a instrução if para analisar expressões e definir qual bloco de código deve ser executado caso o valor lógica seja verdadeiro, e caso o valor lógica seja falso."/>
 
         <meta property="article:published_time" content="01-01-2016" />
             <meta property="article:section" content="curso csharp" />
@@ -210,7 +210,21 @@ excript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<div class="section" id="introducao-a-tomada-de-decisao">
+					
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos a Tomada de Decisão na linguagem C#. Aprenderemos a utilizar a instrução if para analisar expressões e definir qual bloco de código deve ser executado caso o valor lógica seja verdadeiro, e caso o valor lógica seja falso.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="introducao-a-tomada-de-decisao">
 <h2>INTRODUÇÃO À TOMADA DE DECISÃO</h2>
 <p>A <strong>Tomada de Decisão</strong> é uma estrutura que verifica uma expressão e decide qual Bloco de Instrução deve ser executado, mediante valor avaliado.</p>
 <p>Tomar uma decisão, ou então, utilizar um <strong>Desvio Condicional</strong>, é uma prática comum no Desenvolvimento de Software e será com essa estrutura que verificaremos expressões e decidiremos, qual <strong>Bloco de Instrução</strong> que deve ser executado..</p>
@@ -227,7 +241,7 @@ excript            </a>
 <span class="p">}</span>
 </pre></div>
 <p>No código acima, estamos verificando se a expressão entre parêntesis é verdadeira. É comum chamarmos a expressão entre parêntesis de <strong>Cabeçalho da Estrutura</strong>.</p>
-<p>Em seguida, com um par de chaves, definimos o bloco de instrução que será executado, caso o valor lógico da exprssão seja verdadeiro.</p>
+<p>Em seguida, com um par de chaves, definimos o bloco de instrução que será executado, caso o valor lógico da expressão seja verdadeiro.</p>
 <p>Nesse primeiro momento, temos que entender que na situação em que a expressão definida no cabeçalho da estrutura <tt class="docutils literal">SE</tt>, isto é, entre parêntesis, for verdadeira, tudo que estiver nas linhas seguintes, entre chaves, normalmente com a indentação avançada, é que será executado. A instrução <tt class="docutils literal">faça_isso()</tt>, é a primeira instrução do <strong>Bloco de Instrução</strong> que será executado todas as vezes que a expressão definida no cabeçalho da estrutura <tt class="docutils literal">if</tt> for verdadeira.</p>
 <p>Caso a expressão contida entre parêntesis não seja verdadeira, nada acontecerá, e a execução das linhas após a estrutura de <tt class="docutils literal">Tomada de Decisão</tt> ocorrerá normalmente.</p>
 </div>
@@ -242,7 +256,7 @@ excript            </a>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;O número digitado é maior do que &quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-<p>No exemplo acima, utilizamos a função <tt class="docutils literal">Console.WriteLine</tt> para imprimirmos uma mensagem na tela, ou seja, no <tt class="docutils literal">Console</tt> do usuário. Em seguida, colocamos o <tt class="docutils literal">Console</tt> no modo de edição, isto é, fazendo com que seja possível que o usuário digite valores. Após o usuário digitar um número e pressionar a tecla Enter, o valor  será passado para a variável <tt class="docutils literal">string</tt> de nome <tt class="docutils literal">str</tt>. Em seguida, converteremos de <tt class="docutils literal">String</tt> para número e atribuiremos o valor para a variavél inteira <tt class="docutils literal">num</tt>. Por fim, comparamos o valor da variável <tt class="docutils literal">num</tt> e, caso o valor seja maior do que zero, o bloco de instrução verdadeiro será executado, do contrário, nada acontecerá.</p>
+<p>No exemplo acima, utilizamos a função <tt class="docutils literal">Console.WriteLine</tt> para imprimirmos uma mensagem na tela, ou seja, no <tt class="docutils literal">Console</tt> do usuário. Em seguida, colocamos o <tt class="docutils literal">Console</tt> no modo de edição, isto é, fazendo com que seja possível que o usuário digite valores. Após o usuário digitar um número e pressionar a tecla Enter, o valor  será passado para a variável <tt class="docutils literal">string</tt> de nome <tt class="docutils literal">str</tt>. Em seguida, converteremos de <tt class="docutils literal">String</tt> para número e atribuiremos o valor para a variável inteira <tt class="docutils literal">num</tt>. Por fim, comparamos o valor da variável <tt class="docutils literal">num</tt> e, caso o valor seja maior do que zero, o bloco de instrução verdadeiro será executado, do contrário, nada acontecerá.</p>
 <p>É importante observar que caso nada seja digitado, ou então, não seja digitado um número, uma exceção será levantada e a execução do nosso programa será interrompido. Isso ocorre porque não estamos tratando os valores digitados pelo nosso usuário.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
