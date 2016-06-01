@@ -2,7 +2,7 @@
 
 <html lang="pt-br"  xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" >
 <head>
-    <title>Operadores de Atribuição do Python - eXcript</title>
+    <title>Estrutura de Atribuição Simples do Python - eXcript</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -16,16 +16,16 @@
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
         <meta name="keywords" content="curso,python" />
-    <meta name="description" content="Nesta aula estudaremos o Operador de Atribuição do Python bem como a relação entre o operando a direita e o operando a esquerda do operador de atribuição" />
+    <meta name="description" content="Nesta aula estudaremos o Operador de Atribuição do Python bem como a relação entre a parte esquerda e direita que formam a estrutura de atribuição do Python." />
 
         <meta property="og:site_name" content="eXcript" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Operadores de Atribuição do Python"/>
+        <meta property="og:title" content="Estrutura de Atribuição Simples do Python"/>
         <meta property="og:url" content="http://excript.com/python/operador-de-atribuicao-python.html"/>
 
-        <meta property="og:description" content="Nesta aula estudaremos o Operador de Atribuição do Python bem como a relação entre o operando a direita e o operando a esquerda do operador de atribuição"/>
+        <meta property="og:description" content="Nesta aula estudaremos o Operador de Atribuição do Python bem como a relação entre a parte esquerda e direita que formam a estrutura de atribuição do Python."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="01-06-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -91,15 +91,15 @@ eXcript            </a>
                 <h1>
                     <a href="http://excript.com/python/operador-de-atribuicao-python.html"
                        rel="bookmark"
-                       title="Permalink to Operadores de Atribuição do Python">
-                        OPERADORES DE ATRIBUIÇÃO DO PYTHON
+                       title="Permalink to Estrutura de Atribuição Simples do Python">
+                        ESTRUTURA DE ATRIBUIÇÃO SIMPLES DO PYTHON
                     </a>
                 </h1>
 
                     <h3 class="h3curso">
 	                    <a href="http://excript.com/python/operador-de-atribuicao-python.html"
 	                       rel="bookmark"
-	                       title="Permalink to Operadores de Atribuição do Python">
+	                       title="Permalink to Estrutura de Atribuição Simples do Python">
 	                        CURSO DE PYTHON
 	                    </a>
                     </h3>
@@ -112,7 +112,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-01T01:00:00-03:00"> Publicado em 01-06-2016</time>
         </span>
 
 
@@ -236,7 +236,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/escopo-de-nome-python.html" >Escopo de Nomes em Python</a></td>
                             <td><a href="http://excript.com/python/escopo-de-nome-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/operador-de-atribuicao-python.html" >Operadores de Atribuição do Python</a></td>
+                            <td><a href="http://excript.com/python/operador-de-atribuicao-python.html" >Estrutura de Atribuição Simples do Python</a></td>
                             <td><a href="http://excript.com/python/operador-de-atribuicao-python.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/python/atribuicao-multipla-python.html" >Atribuição Múltipla em Python</a></td>
@@ -364,30 +364,47 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos o Operador de Atribuição do Python bem como a relação entre o operando a direita e o operando a esquerda do operador de atribuição</p>
+                            <p> Nesta aula estudaremos o Operador de Atribuição do Python bem como a relação entre a parte esquerda e direita que formam a estrutura de atribuição do Python.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="a-atribuicao-de-valores">
+<h2>A ATRIBUIÇÃO DE VALORES</h2>
+<img alt="Atribuição Simples em Python" src="../images/curso-de-python/op-atribuicao-simples1.png" />
+<p>A <tt class="docutils literal">Atribuição de Valores</tt> é a passagem de informação a determinada variável. Toda variável, por sua definição, pode receber valores ou então, pode ter seu valor alterado, como estudado anteriormente nas aulas <a class="reference external" href="http://excript.com/python/variavel-em-python.html">Variáveis em Python</a> e <a class="reference external" href="http://excript.com/python/caracteristicas-das-variaveis-python.html">Características das Variáveis em Python</a> . Nesse primeiro momento, estudaremos a atribuição simples, isto é, a forma comum de atribuição.</p>
+<p>A linguagem Python tem definido que o sinal que conhecemos pelo nome de igual ( <strong>=</strong> ) será o operador de atribuição. Desta forma, iremos construir expressões compostas de 2 partes, ou melhor que estarão em um dos dois lados do operador de atribuição: do lado esquerdo e do lado direito.</p>
+<p>A parte ao lado esquerdo do operador de atribuição <strong>sempre</strong> receberá o valor definido no lado direito do operador. Assim, é uma norma da linguagem que o lado esquerdo possua uma referência que possa ter seu valor alterado, enquanto que do lado direito, haja algum valor a ser atribuido à referência ao lado esquerdo.</p>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">variável</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">operador</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">variável</span><span class="o">&gt;</span>      <span class="o">=</span>     <span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span>
+<span class="n">numero</span>          <span class="o">=</span>     <span class="mi">10</span>
+</pre></div>
+<p>No trecho de código acima podemos ver como ocorre a passagem de valores e o uso do operador de atribuição na prática.</p>
+<p>A notação para atribuição de valores define que a variável que receberá o valor estará do lado esquerdo do sinal de atribuição <tt class="docutils literal">=</tt>, enquanto o valor a ser atribuido, estara do lado direito. Assim, <strong>é correto afirmar</strong> que a atribuição de valores sempre seguira o sentido da direita para a esquerda.</p>
+<p>No código a seguir, temos mais um exemplo onde declaramos variáveis e já atribuimos um valor às mesmas.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="s2">&quot;texto&quot;</span>
+</pre></div>
+<p>No código acima, declaramos 2 variáveis, a primeira de nome <tt class="docutils literal">num</tt> e a segunda de nome <tt class="docutils literal">txt</tt>. Ambas foram declaradas e receberam um valor inicial. O valor inicialmente atribuido irá definir o <tt class="docutils literal">tipo</tt> da variável, de modo a impedir que a mesma receba valores de outro tipo durante toda a execução do Script.</p>
+</div>
+<div class="section" id="atribuicao-simples-a-varias-variaveis">
+<h2>ATRIBUIÇÃO SIMPLES A VÁRIAS VARIÁVEIS</h2>
+<img alt="Atribuição Simples a várias variáveis em Python" src="../images/curso-de-python/op-atribuicao-simples2.png" />
+<p>A notação de atribuição simples do Python nos permite atribuir a várias variáveis um mesmo valor numa mesma expressão. Para isso, devemos separar as variáveis que receberam o mesmo valor com vírgulas.</p>
+<p>No geral, as regras da atribuição estudas funcionam da mesma forma.</p>
+<p>No código abaixo, estamos realizando outra atribuição simples, porém, utilizando um notação diferente.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+<p>No código acima, declaramos 3 variáveis. A primeira, chamamos de <tt class="docutils literal">a</tt> e atribuimos o valor 1. A segunda e a terceira, chamamos de <tt class="docutils literal">b</tt> e <tt class="docutils literal">c</tt>, separando-as por vírgula e iniciando-as com o valor igual a 2.</p>
+<p>Podemos iniciar mais de uma variável numa mesma atribuição, ou então, em outras palavras, podemos atribuir valores a várias variáveis ao mesmo tempo e a notação utilizada nessas 2 situações foi a mesma, salvo o uso da vírgula na separação da primeira e da segunda variável que receberão um novo valor.</p>
+</div>
 
 				</div>
 			</div>

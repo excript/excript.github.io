@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/operadores-de-atribuicao-compostos-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python,operadores,operadores de atribuição,operadores de atribuíção compostos" />
+        <meta name="keywords" content="curso,python,operadores,operadores de atribuição,operadores de atribuição compostos,blog" />
     <meta name="description" content="Nesta aula estudaremos os Operadores de Atribuição Compostos da linguagem Python que, além de adicionarem o valor a direita do operador de atribuição, realizar uma determinada operação antes da atribuição propriamente dita" />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,13 +25,14 @@
 
         <meta property="og:description" content="Nesta aula estudaremos os Operadores de Atribuição Compostos da linguagem Python que, além de adicionarem o valor a direita do operador de atribuição, realizar uma determinada operação antes da atribuição propriamente dita"/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="01-06-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="operadores" />
             <meta property="article:tag" content="operadores de atribuição" />
-            <meta property="article:tag" content="operadores de atribuíção compostos" />
+            <meta property="article:tag" content="operadores de atribuição compostos" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -115,7 +116,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-01T02:00:00-03:00"> Publicado em 01-06-2016</time>
         </span>
 
 
@@ -239,7 +240,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/escopo-de-nome-python.html" >Escopo de Nomes em Python</a></td>
                             <td><a href="http://excript.com/python/escopo-de-nome-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/operador-de-atribuicao-python.html" >Operadores de Atribuição do Python</a></td>
+                            <td><a href="http://excript.com/python/operador-de-atribuicao-python.html" >Estrutura de Atribuição Simples do Python</a></td>
                             <td><a href="http://excript.com/python/operador-de-atribuicao-python.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/python/atribuicao-multipla-python.html" >Atribuição Múltipla em Python</a></td>
@@ -374,23 +375,56 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="operadores-compostos">
+<h2>OPERADORES COMPOSTOS</h2>
+<p>Os <strong>Operadores de Atribuição Compostos</strong> realizam uma operação e em seguida, atribuem o resultado da operação para a variável que está a esquerda do operador de atribuição.</p>
+<p>Estudamos a <a class="reference external" href="http://excript.com/python/operador-de-atribuicao-python.html">atribuição simples</a> em aulas passadas e aprendemos as 2 partes que constituem a estrutura de atribuição da linguagem, bem como o seu funcionamento de maneira geral.</p>
+<p>Nesta aula continuaremos o estudo da atribuição, porém, estudaremos os operadores de atribuição compostos, isto é, os operadores que além de atribuirem o valor a sua direita à variável a sua esquerda, realizam antes alguma operação.</p>
+<p>É comum precisarmos realizar alguma operação, geralmente matemática, e atribuir o resultado a alguma variável. Podemos resolver esse problema realizando a operação sobre determinado valor e em seguida, atribuir o resultado a alguma variável. No entanto, essa é uma situação tão corriqueira que, criou-se operadores que, primeiro, realizam uma operação e em seguida, atribuem o resultado à variável a esquerda.</p>
+<p>Atualmente há 5 operadores compostos disponibilizados pela linguagem Python. Os 4 primeiros para as operações matemáticas fundamentais, soma, subtração, multiplicação e divisão. O quinto e último é para a <a class="reference external" href="_`MódulodaDivisãoemPython`">operação módulo, isto é, o operador que retorna o resto de uma divisão</a>.</p>
+</div>
+<div class="section" id="id3">
+<h2>OPERADORES COMPOSTOS</h2>
+<p>A seguir, temos a lista com os 5 operadores compostos do Python:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>OPERADOR</td>
+<td>NOME</td>
+</tr>
+<tr><td><tt class="docutils literal">+=</tt></td>
+<td>mais igual</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">-=</span></tt></td>
+<td>menos igual</td>
+</tr>
+<tr><td><tt class="docutils literal">*=</tt></td>
+<td>vezes igual</td>
+</tr>
+<tr><td><tt class="docutils literal">/=</tt></td>
+<td>dividido igual</td>
+</tr>
+<tr><td><tt class="docutils literal">%=</tt></td>
+<td>módulo igual</td>
+</tr>
+</tbody>
+</table>
+<p>Como podemos ver na tabela acima, os operadores compostos são formados pela junção do operador de atribuição com o <a class="reference external" href="http://excript.com/python/operador-aritmetico-em-python.html">operadores aritméticos</a>, onde o operador matemático precede o operador de atribuição.</p>
+<p>Uma maneira de facilitar o entendimento e memorização dos operadores compostos, é saber lê-los corretamente, por exemplo: o operador que soma e atribui é chamado de <tt class="docutils literal">Mais Igual</tt>, isto é, o valor a esquerda do sinal de atribuição será somado com o valor a direita e o resultado dessa operação, será atribuido à variável a esquerda do sinal de atribuição.</p>
+<p>A seguir, um trecho de código em que é feito uma operação com cada um dos 5 operadores de atribuição compostos. A direita de cada operação há o respectivo resultado.</p>
+<div class="highlight"><pre><span></span><span class="n">maisIgual</span><span class="p">,</span> <span class="n">menosIgual</span><span class="p">,</span> <span class="n">vezesIgual</span><span class="p">,</span> <span class="n">divididoIgual</span><span class="p">,</span> <span class="n">moduloIgual</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="n">maisIgual</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#resultado 10</span>
+<span class="n">menosIgual</span> <span class="o">-=</span> <span class="mi">1</span> <span class="c1">#resultado 8</span>
+<span class="n">vezesIgual</span> <span class="o">*=</span> <span class="mi">1</span> <span class="c1">#resultado 9</span>
+<span class="n">divididoIgual</span> <span class="o">/=</span> <span class="mi">1</span> <span class="c1">#resultado 9</span>
+<span class="n">moduloIgual</span> <span class="o">%=</span> <span class="mi">2</span> <span class="c1">#resultado 3</span>
+</pre></div>
+<p>O mais importante a saber dessa aula, talvez seja, como ler cada operador e sempre lembrar, que antes de qualquer valor ser atribuído, é necessário resolver a operação a direita do sinal de atribuição.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
@@ -399,9 +433,9 @@ eXcript            </a>
 <span class="c1">#========== www.eXcript.com ==========</span>
 <span class="c1">#=====================================</span>
 
-<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span>
-<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span>
-<span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span>
 </pre></div>
 </div>
 
@@ -431,7 +465,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/operadores.html">operadores</a>, 	<a href="http://excript.com/tag/operadores-de-atribuicao.html">operadores de atribuição</a>, 	<a href="http://excript.com/tag/operadores-de-atribuicao-compostos.html">operadores de atribuíção compostos</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/operadores.html">operadores</a>, 	<a href="http://excript.com/tag/operadores-de-atribuicao.html">operadores de atribuição</a>, 	<a href="http://excript.com/tag/operadores-de-atribuicao-compostos.html">operadores de atribuição compostos</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

@@ -25,7 +25,7 @@
 
         <meta property="og:description" content="Nesta aula estudaremos a atribuição múltipla, uma ferramenta da linguagem Python para atribuirmos vários valores a várias variáveis numa única expressão."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="01-06-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -114,7 +114,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-01T01:30:00-03:00"> Publicado em 01-06-2016</time>
         </span>
 
 
@@ -238,7 +238,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/escopo-de-nome-python.html" >Escopo de Nomes em Python</a></td>
                             <td><a href="http://excript.com/python/escopo-de-nome-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/operador-de-atribuicao-python.html" >Operadores de Atribuição do Python</a></td>
+                            <td><a href="http://excript.com/python/operador-de-atribuicao-python.html" >Estrutura de Atribuição Simples do Python</a></td>
                             <td><a href="http://excript.com/python/operador-de-atribuicao-python.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/python/atribuicao-multipla-python.html" >Atribuição Múltipla em Python</a></td>
@@ -373,7 +373,26 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<img alt="Atribuição múltipla" src="../images/curso-de-python/atribuicao-multipla.png" />
+<p>A atribuição de valores é uma tarefa corriqueira e essencial no desenvolvimento de software. Algumas linguagens como o Python, definem notações diferente para atribuição, permitindo assim, por exemplo, inicializar várias variáveis ou então, atribuir valores diferentes para diferentes variáveis numa mesma expressão.</p>
+<p>Nosso objetivo nessa aula é o estudo da atribuição múltipla, isto é, a atribuição de vários valores a várias variáveis numa mesma expressão. Dessa forma, teremos em ambos lados do operador de atribuição um conjunto de variáveis e de valores.</p>
+</div>
+<div class="section" id="atribuicao-multipla">
+<h2>ATRIBUIÇÃO MULTIPLA</h2>
+<p>A atribuição múltipla é a capacidade de atribuir um conjunto de valores a um conjunto de variáveis. Ambos conjuntos precisam, obrigatoriamente, possuir a mesma quantidade de elementos, isto é, a quantidade de variáveis a esquerda deve ter a mesma quantidade de valores a direita, como pode ser visto no código a seguir.</p>
+<div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
+</pre></div>
+<p>No código acima, estamos declarando e atribuindo valores a 2 variáveis. A primeira variável de nome <tt class="docutils literal">a</tt>, está sendo atribuido o valor 1, e a segundo variável de nome <tt class="docutils literal">b</tt>, esta sendo atribuido o valor 2.</p>
+<p>A ordem em que as variáveis estão dispostas a esquerda, receberá, na mesma ordem, os respectivos valores a direita.</p>
+<p>Assim, sendo a variável <tt class="docutils literal">a</tt> a primeira, e a variável <tt class="docutils literal">b</tt> a segunda, estas receberam, respectivamente, o primeiro valor, e o segundo valor, respectivamente, definido no lado direito do operador de atribuição.</p>
+</div>
+<div class="section" id="funcionamento-da-atribuicao-multipla">
+<h2>FUNCIONAMENTO DA ATRIBUIÇÃO MÚLTIPLA</h2>
+<p>A atribuição múltipla é a atribuição de uma tupla a outra, onde os valores da tupla a direita do sinal de atribuição, serão atribuídos, para as respectivas variáveis, na dupla do lado esquerdo do sinal de atribuição.</p>
+<p>Não estudamos ainda as tuplas, porém, pense nas mesmas como sendo estruturas de valores em que cada valor é separado dos demais pelo uso de vírgulas. <a class="reference external" href="_`TuplasemPython`">Segue o link onde estudaremos as estruturas de Tuplas do Python</a>.</p>
+
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -383,13 +402,39 @@ eXcript            </a>
                     </td>
                     <td class="content">
                         <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
+                            <p>A atribuição múltipla é um recurso da linguagem Python que acaba sendo, uma consequência da definição da linguagem. Isso porque, a notação para definição de tuplas se dá pelo uso de vírgula, assim, todas as vezes em que tivermos um conjunto de objetos dispostos em ordem e separados por vírgulas, está disposição, será reconhecida pela linguagem, como sendo uma tupla e a funcionalidade da atribuição múltipla, acaba sendo, uma consequência da definição de tupla e não um recurso da linguagem</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
+<p>No código abaixo, declaramos 3 variáveis e estamos inicializando-as com os números 1, 2 e 3 respectivamente. Como podemos observar, a notação de tupla está sendo utilizada em ambos os lados da atribuição! Assim, podemos dizer que, estamos atribuindo, uma tupla a outra, onde a primeira tupla é composta pelos elementos <tt class="docutils literal">a, b, c</tt> e a segunda tupla, pelos elementos, <tt class="docutils literal">1, 2, 3</tt>.</p>
+<div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+</pre></div>
+<p>Da mesma forma, temos que a notação a seguir, que torna explicito o uso de tupla, é totalmente válida e funcional.</p>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+<p>No código acima, declaramos 2 variáveis, respectivamente, <tt class="docutils literal">x</tt> e <tt class="docutils literal">y</tt> e delimitamo-as por parêntesis, o que diz ao Python que estamos trabalhando com Tuplas. Ainda assim, ambas variáveis, <tt class="docutils literal">a</tt> e <tt class="docutils literal">b</tt> foram declaradas no escopo local e inicializadas com os valores 1 e 2 respectivamente.</p>
+<p>Essa é uma notação ambigua e funcional e que torna toda a linguagem muito mais coesa. Como veremos, há outras situações onde o Python possui ambiguidades funcionais e que são, muito úteis.</p>
+
+    <div class="admonitionblock important data-line-21">
+        <table>
+            <tbody>
+                <tr>
+                <td class="icon">
+                    <i class="fa icon-important" title="Importante!"></i>
+                </td>
+                <td class="content">
+                    <div class="paragraph data-line-22">
+                        <p>Essa é uma das raras ocasiões em que a linguagem possui ambiguidades, até porque, uma das características do Python é não repetir a si mesmo. Novamente, o que possibilita 2 definições para uso da atribuição múltipla decorre da notação utilizada para a definição de tuplas!</p>
+                    </div>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 				</div>
 			</div>
