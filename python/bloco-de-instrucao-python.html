@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/bloco-de-instrucao-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python,blocos,instrução,blocos de instrução" />
+        <meta name="keywords" content="curso,python,blocos,instrução,blocos de instrução,blog" />
     <meta name="description" content="Os blocos de instrução fazem parte de qualquer código Python como também, organizando o escopo de variáveis de funções." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,13 +25,14 @@
 
         <meta property="og:description" content="Os blocos de instrução fazem parte de qualquer código Python como também, organizando o escopo de variáveis de funções."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="21-05-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="blocos" />
             <meta property="article:tag" content="instrução" />
             <meta property="article:tag" content="blocos de instrução" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -115,7 +116,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-05-21T03:00:00-03:00"> Publicado em 21-05-2016</time>
         </span>
 
 
@@ -374,40 +375,82 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="bloco-de-instrucao">
+<h2>BLOCO DE INSTRUÇÃO</h2>
+<p>Bloco de instrução é o conjunto das instrução qu estejam num mesmo nível de indentação.</p>
+<p>Programas em Python podem conter centenas de linhas. É comum em toda aplicação que, códigos que desempenham determinada ação possuam a mesma quantidade de espaços, isto é, tenham a mesma indentação.</p>
+<p>A linguagem Python oferece algumas notações para delimitarmos, ou melhor, definirmos, o que chamamos de blocos de instrução ou somente: <strong>blocos</strong>. Um conjunto de linhas marcadas com comentários também formam blocos, porém, blocos de de comentário. Como estudamos, nossa aplicação quando executada, ignora qualquer linhas marcada como sendo comentários. Do contrário, todo conjunto de linhas que estejam indentadas estarão formando um bloco - um bloco de instrução e que será executado linha-a-linha.</p>
+<p>A principal características dos blocos, é que estes serão executados por inteiro, salvo nas vezes em que usarmos uma instrução para a interromper o fluxo normal.</p>
+<p>O Python diferencia um bloco de instrução de outro através da indentação, isto é, do espaçamento a contar da margem esquerda do vídeo. Por isso temos que a linguagem Python, nos obriga a trabalharmos de maneira organizada - organizando os blocos em níveis hierarquicos diferentes, o que melhora a legibilidade e diminui a quantidade de linhas e caracteres utilizados.</p>
+</div>
+<div class="section" id="definindo-blocos">
+<h2>DEFININDO BLOCOS</h2>
+<p>Vamos fazer um exemplo utilizando 2 blocos de instrução. O primeiro bloco estará rente a margem esquerda do vídeo, enquanto o segundo, estará 4 espaçamentos da margem.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Nível 0. Este código está rente a margem do vídeo.&quot;</span><span class="p">)</span>
+
+<span class="n">var</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">if</span><span class="p">(</span><span class="n">var</span> <span class="o">==</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Estamos no bloco 1, isto é, a 4 espaçamentos da margem.&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Essa é a segunda linha do bloco &#39;if&#39;. &quot;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Agora, voltamos para o bloco principal do programa.&quot;</span><span class="p">)</span>
+</pre></div>
+<p>No exemplo acima, utilizamos 2 blocos de instrução. O primeiro bloco, que podemos dizer, o bloco de instrução principal, é a indentação rente a margem esquerda, ou melhor, corresponde as linhas que não possuem indentação.</p>
+<p>O segundo bloco de instrução, é o bloco que está a 4 espaços da margem esquerda e este só será executado nas situações em que a instrução <tt class="docutils literal">if</tt> for verdadeira.</p>
+</div>
+<div class="section" id="nomes">
+<h2>NOMES</h2>
+<p>É comum chamarmos de <tt class="docutils literal">nome</tt> toda e qualquer declaração de variável, seja ela uma instrução, classe, variável, constante e etc.</p>
+<p>Todo nome pertencerá, por definição, ao escopo onde foi declarado, podendo ser acessada somente, em níveis superiores, mas nunca em níveis inferiores da hierarquia formada com a indentação. Até porque, quando o cursor de execução volta ao nível inferior, todos os nomes declarados nas hierarquias acima, serão desalocados da memória e por conseguinte, não poderão ser acessados e todos valores ali definidos serão removidos da memória.</p>
+</div>
+<div class="section" id="hierarquia">
+<h2>HIERARQUIA</h2>
+<p>Os blocos de instrução constroem hierarquias e estas, podem ser reconhecidas visualmente, até porque, níveis hierarquicos diferentes, estarão a distâncias diferentes da margem esquerda do editor.</p>
+<p>Todo bloco é único e será executado plenamente após o cursor iniciar sua execução. Nomes declarados dentro de blocos, serão desalocados da memória quando estes tiverem sua execução finalizada e, todo bloco contido dentro de outro, terá visibilidade restrita a todos os nomes ali definidos.</p>
+<p>A seguir, temos um código que exemplifica o uso de vários blocos de instrução.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="c1">#bloco 1</span>
+<span class="c1">#bloco 1</span>
+<span class="c1">#bloco 1</span>
+    <span class="c1">#bloco 2</span>
+    <span class="c1">#bloco 2</span>
+    <span class="c1">#bloco 2</span>
+        <span class="c1">#bloco 3</span>
+        <span class="c1">#bloco 3</span>
+        <span class="c1">#bloco 3</span>
+        <span class="c1">#bloco 3</span>
+    <span class="c1">#bloco 4</span>
+    <span class="c1">#bloco 4</span>
+    <span class="c1">#bloco 4</span>
+    <span class="c1">#bloco 4</span>
+<span class="c1">#bloco 1</span>
+<span class="c1">#bloco 1</span>
+<span class="c1">#bloco 1</span>
+</pre></div>
+<p>No código acima, utilizamos 3 níveis hierarquicos, porém, utilizamos 4 blocos diferentes, mesmo que hierarquicamente, temos somente 3 níveis.</p>
+<p>O <strong>bloco 2</strong> e o <strong>bloco 4</strong> estão, hierarquicamente, no mesmo nível. Porém, após a execução do <strong>bloco 2</strong>, todos os <strong>nomes</strong> utilizados dentro deste serão desalocados da memória e assim, quando o <strong>bloco 4</strong> for executado, não será possível enxergar nomes utilizados no <strong>bloco 2</strong>!</p>
+<p>Todas as vezes que o cursor de execução do programa retorna um nível da hierarquia, ou seja, volta para o bloco de instrução que contém as instruções que estava sendo executadas, o bloco que estava sendo executado é desalocado, junto a todos os nome ali declarados.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 <span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">&quot;Imprime um texto&quot;</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Imprime um texto&quot;</span><span class="p">)</span>
 
-  <span class="k">print</span><span class="p">(</span><span class="s">&quot;Imprime um texto&quot;</span><span class="p">)</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">&quot;Imprime um texto&quot;</span><span class="p">)</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">&quot;Imprime um texto&quot;</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Imprime um texto&quot;</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Imprime um texto&quot;</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Imprime um texto&quot;</span><span class="p">)</span>
 
 
 <span class="k">if</span><span class="p">(</span><span class="bp">False</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -437,7 +480,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/blocos.html">blocos</a>, 	<a href="http://excript.com/tag/instrucao.html">instrução</a>, 	<a href="http://excript.com/tag/blocos-de-instrucao.html">blocos de instrução</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/blocos.html">blocos</a>, 	<a href="http://excript.com/tag/instrucao.html">instrução</a>, 	<a href="http://excript.com/tag/blocos-de-instrucao.html">blocos de instrução</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

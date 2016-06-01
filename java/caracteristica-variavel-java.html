@@ -319,6 +319,15 @@ eXcript            </a>
                         </tr><tr>
                             <td><a href="http://excript.com/java/for_each_ii.html" >Estrutura de Repetição <tt class="docutils literal">for each</tt> (parte II)</a></td>
                             <td><a href="http://excript.com/java/for_each_ii.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/java/ciclos-aninhados.html" >Ciclos aninhados em Java</a></td>
+                            <td><a href="http://excript.com/java/ciclos-aninhados.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/java/funcao-matricial.html" >Função matricial em Java</a></td>
+                            <td><a href="http://excript.com/java/funcao-matricial.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/java/manipulando-planilha.html" >Manipulando Planilha em Java</a></td>
+                            <td><a href="http://excript.com/java/manipulando-planilha.html" ></a></td>
                         </tr>        </tbody>
             </table>
         
@@ -358,7 +367,7 @@ eXcript            </a>
 <p>Uma referência pode ser composta por letras e números, desde que este não o nome não inicie com um dos 10 algarismos. Ou seja, podemos utilizar quaisquer número na formação do nome da variável, desde que este não esteja a frente do como, como por exemplo: <cite>9num</cite>, ou então, <cite>1var</cite>.</p>
 <p>Se precedermos o nome com números ocorre uma situação em que o interpretador não consegue distinguir se estamos trabalhando com um número, como por exemplo, um número complexo, ou então, se este nome é de fato uma variável.</p>
 <p>Assim, temos que a utilização de números é permitida só e somente só após o primeiro caractere, como podemos ver nos exemplos a seguir:</p>
-<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula</span> <span class="o">{</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula</span> <span class="o">{</span>
      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
          <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
@@ -407,12 +416,12 @@ eXcript            </a>
 </blockquote>
 <p>Novamente, é importante dizer que caracteres especiais não podem ser utilizados, seja qual for a posição em que estes aparecerem na definição da referência!</p>
 <p>A seguir, temos mais um exemplo dos caracteres que não podem estar na primeira posição de um nome de variável.</p>
-<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula</span> <span class="o">{</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula</span> <span class="o">{</span>
      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
          <span class="kt">int</span> <span class="mi">4</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">//ERRO</span>
          <span class="n">String</span> <span class="mi">3</span> <span class="o">=</span> <span class="s">&quot;informe seu nome&quot;</span><span class="o">;</span> <span class="c1">//ERRO</span>
-         <span class="kt">float</span> <span class="mi">2</span><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1">//ERRO</span>
+         <span class="kt">float</span> <span class="mf">2d</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1">//ERRO</span>
 
      <span class="o">}</span>
  <span class="o">}</span>
@@ -420,7 +429,7 @@ eXcript            </a>
 <p>As referências utilizadas no código acima são <strong>TODAS invalidas</strong>, e a razão, deve-se ao fato destas iniciarem com caracteres numéricos. Como já dito, o primeiro caractere deve, obrigatoriamente, ser um letra do alfabeto.</p>
 <p>Podemos concluir também, que uma variável <strong>JAMAIS</strong> será composta por somente números, haja vista que o primeiro caractere precisa ser uma letra.</p>
 <p>Para definirmos o nome de variáveis, temos que iniciar utilizando um caractere que esteja no intervalo de <cite>a</cite> à <cite>z</cite> ou <cite>A</cite> à <cite>Z</cite> e a única exceção a esta regra é o caractere underline <cite>_</cite>. A seguir, temos alguns nomes de variáveis <strong>válidos</strong>:</p>
-<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula</span> <span class="o">{</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula</span> <span class="o">{</span>
      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
          <span class="kt">int</span> <span class="n">i8nt</span> <span class="n">vvar</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
@@ -439,7 +448,7 @@ eXcript            </a>
 <div class="section" id="a-excecao-a-regra">
 <h2>A EXCEÇÃO A REGRA</h2>
 <p>Como já foi dito, porém, para formalizar a regra temos que o único caractere especial, que pode ser utilizado na composição de nomes, e que também pode estar situando em qualquer posição, é o caractere underline <tt class="docutils literal">_</tt>.</p>
-<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula</span> <span class="o">{</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula</span> <span class="o">{</span>
      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
          <span class="kt">int</span> <span class="n">_minhaVar</span> <span class="o">=</span> <span class="mi">55</span><span class="o">;</span>
@@ -464,7 +473,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0005</span> <span class="o">{</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0005</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="kt">int</span> <span class="n">inteiro</span><span class="o">;</span>
         <span class="kt">int</span> <span class="n">Inteiro</span><span class="o">;</span>

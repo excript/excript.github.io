@@ -207,7 +207,7 @@ eXcript            </a>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <p>Para que você consiga acompanhar a primeira aula, será necessário a criação de um novo banco de dados, a criação da tabela de nome &quot;estados&quot; e os respectivos registros correspondentes a cada estado da federação brasileira. O código SQL para você executar todas essas tarefas está a seguir:</p>
-<div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">estados</span><span class="o">`</span> <span class="p">(</span>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">estados</span><span class="o">`</span> <span class="p">(</span>
     <span class="o">`</span><span class="n">id</span><span class="o">`</span>    <span class="nb">INTEGER</span><span class="p">,</span>
     <span class="o">`</span><span class="n">uf</span><span class="o">`</span>    <span class="nb">TEXT</span><span class="p">,</span>
     <span class="o">`</span><span class="n">estado</span><span class="o">`</span>        <span class="nb">TEXT</span><span class="p">,</span>
@@ -245,15 +245,15 @@ eXcript            </a>
 </pre></div>
 <div class="section" id="codigo-do-primeira-exemplo">
 <h3>CÓDIGO DO PRIMEIRA EXEMPLO</h3>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&quot;c:/sqlite/aula/bd_estudo.db&quot;</span><span class="p">)</span>
-<span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;select * from estados&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;c:/sqlite/aula/bd_estudo.db&quot;</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;select * from estados&#39;</span><span class="p">)</span>
 <span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="section" id="codigo-do-segundo-exemplo">
 <h3>CÓDIGO DO SEGUNDO EXEMPLO</h3>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </pre></div>
 <p>.</p>

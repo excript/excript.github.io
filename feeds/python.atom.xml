@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-05-12T21:00:00-03:00</updated><entry><title>SQLite Internamente</title><link href="http://excript.com/python/sqlite-internamente.html" rel="alternate"></link><updated>2016-05-12T21:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-12:python/sqlite-internamente.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-05-12T21:00:00-03:00</updated><entry><title>SQLite Internamente</title><link href="http://excript.com/python/sqlite-internamente.html" rel="alternate"></link><published>2016-05-12T21:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-12:python/sqlite-internamente.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -86,7 +86,7 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
 &lt;p&gt;O tamanho máximo aproximado que uma base de dados pode ter é de aproximadamente 140.000 gigabytes.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category><category term="sqlite3"></category><category term="sql"></category><category term="query"></category><category term="banco de dados"></category><category term="base"></category><category term="blog"></category></entry><entry><title>Abertura do curso de Python com SQLite</title><link href="http://excript.com/python/abertura-curso-python-sqlite.html" rel="alternate"></link><updated>2016-05-12T20:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-12:python/abertura-curso-python-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="sqlite3"></category><category term="sql"></category><category term="query"></category><category term="banco de dados"></category><category term="base"></category><category term="blog"></category></entry><entry><title>Abertura do curso de Python com SQLite</title><link href="http://excript.com/python/abertura-curso-python-sqlite.html" rel="alternate"></link><published>2016-05-12T20:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-12:python/abertura-curso-python-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -109,7 +109,7 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;p&gt;Para que você consiga acompanhar a primeira aula, será necessário a criação de um novo banco de dados, a criação da tabela de nome &amp;quot;estados&amp;quot; e os respectivos registros correspondentes a cada estado da federação brasileira. O código SQL para você executar todas essas tarefas está a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;estados&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;estados&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;    &lt;span class="nb"&gt;INTEGER&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;uf&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;    &lt;span class="nb"&gt;TEXT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;estado&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;        &lt;span class="nb"&gt;TEXT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -147,21 +147,21 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
 &lt;/pre&gt;&lt;/div&gt;
 &lt;div class="section" id="codigo-do-primeira-exemplo"&gt;
 &lt;h3&gt;CÓDIGO DO PRIMEIRA EXEMPLO&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sqlite3&lt;/span&gt;
-&lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sqlite3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;c:/sqlite/aula/bd_estudo.db&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;cursor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;select * from estados&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sqlite3&lt;/span&gt;
+&lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sqlite3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;c:/sqlite/aula/bd_estudo.db&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;cursor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;conn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;select * from estados&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;rows&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetchall&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="codigo-do-segundo-exemplo"&gt;
 &lt;h3&gt;CÓDIGO DO SEGUNDO EXEMPLO&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category><category term="sqlite3"></category><category term="SQL"></category><category term="banco de dados"></category><category term="blog"></category></entry><entry><title>Curso de Python com SQLite</title><link href="http://excript.com/curso-python-sqlite.html" rel="alternate"></link><updated>2016-05-01T00:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:curso-python-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="sqlite3"></category><category term="SQL"></category><category term="banco de dados"></category><category term="blog"></category></entry><entry><title>Curso de Python com SQLite</title><link href="http://excript.com/curso-python-sqlite.html" rel="alternate"></link><published>2016-05-01T00:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:curso-python-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -180,7 +180,7 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
 &lt;p&gt;Neste curso teremos uma abordagem sobre banco de dados. Em seguida, utilizaremos a linguagem Python para praticarmos os conceitos estudados.&lt;/p&gt;
 &lt;p&gt;A linguagem universal para manipulação de tabelas relacionais é o SQL. É comum que os programas tenham código SQL internamente, assim, o sistema é desenvolvido, por exemplo, com o Python, porém, o acesso aos dados ocorre com o uso de códigos SQL que estão contidos dentro do código Python na forma de Strings.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category><category term="sqlite3"></category><category term="sql"></category><category term="banco de dados"></category><category term="blog"></category></entry><entry><title>Características do SQLite</title><link href="http://excript.com/python/caracteristicas-sqlite.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/caracteristicas-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="sqlite3"></category><category term="sql"></category><category term="banco de dados"></category><category term="blog"></category></entry><entry><title>Características do SQLite</title><link href="http://excript.com/python/caracteristicas-sqlite.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/caracteristicas-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -211,7 +211,7 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Como instalar o SQLite</title><link href="http://excript.com/python/como-instalar-sqlite.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/como-instalar-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Como instalar o SQLite</title><link href="http://excript.com/python/como-instalar-sqlite.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/como-instalar-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -242,7 +242,7 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Criando o Primeiro BD com SQLite</title><link href="http://excript.com/python/criando-primeiro-bd-sqlite.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/criando-primeiro-bd-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Criando o Primeiro BD com SQLite</title><link href="http://excript.com/python/criando-primeiro-bd-sqlite.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/criando-primeiro-bd-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -273,7 +273,7 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Introdução ao SQL do SQLite</title><link href="http://excript.com/python/introducao-sql-sqlite.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/introducao-sql-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Introdução ao SQL do SQLite</title><link href="http://excript.com/python/introducao-sql-sqlite.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/introducao-sql-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -304,7 +304,7 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>O que é banco de dados</title><link href="http://excript.com/python/o-que-e-banco-de-dados-sqlite.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/o-que-e-banco-de-dados-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>O que é banco de dados</title><link href="http://excript.com/python/o-que-e-banco-de-dados-sqlite.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/o-que-e-banco-de-dados-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -335,7 +335,7 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Tabela no SQLite</title><link href="http://excript.com/python/tabela-sqlite.html" rel="alternate"></link><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/tabela-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Tabela no SQLite</title><link href="http://excript.com/python/tabela-sqlite.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/tabela-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;

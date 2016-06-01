@@ -390,12 +390,12 @@ eXcript            </a>
 <h2>CARACTERES NUMÉRICOS</h2>
 <p>Uma referência pode conter números, desde que este não seja o primeiro caractere. Assim, referências como por exemplo, <cite>9num</cite>, ou então, <cite>1var</cite>, não são permitidos, até porque, o interpretador, não conseguirá distinguir se estamos definindo uma referências ou então, estamos trabalhando com números.</p>
 <p>Então, a utilização de números é permitida só e somente só após o primeiro caractere, como podemos ver nos exemplos a seguir:</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">caractere</span> <span class="o">=</span> <span class="s">&#39;x&#39;</span>
+<span class="n">caractere</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span>
 <span class="n">flag</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="n">a2b3</span> <span class="o">=</span> <span class="s">&quot;qualquer texto... &quot;</span>
+<span class="n">a2b3</span> <span class="o">=</span> <span class="s2">&quot;qualquer texto... &quot;</span>
 </pre></div>
 <p>A seguir, temos uma breve lista contendo os caracteres numéricos que não podem ser utilizados, nem na primeira ou segunda posição, por exemplo:</p>
 </div>
@@ -439,29 +439,29 @@ eXcript            </a>
 </blockquote>
 <p>Novamente, é importante dizer que caracteres especiais não podem ser utilizados, seja qual for a posição em que estes aparecerem na definição da referência!</p>
 <p>A seguir, temos mais um exemplo dos caracteres que não podem estar na primeira posição de um nome de variável.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="mi">4</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="mi">3</span> <span class="o">=</span> <span class="s">&quot;informe seu nome&quot;</span>
+<span class="mi">3</span> <span class="o">=</span> <span class="s2">&quot;informe seu nome&quot;</span>
 <span class="mi">2</span><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
 </pre></div>
 <p>As referências utilizadas no código acima são todas invalidas, e a razão, deve-se ao fato das mesmas iniciarem com caracteres numéricos. Como já dito, o primeiro caractere deve, obrigatoriamente, ser um letra.</p>
 <p>Podemos concluir também, que uma variável <strong>JAMAIS</strong> será composta por somente números, haja vista que o primeiro caractere precisa ser uma letra.</p>
 <p>Para definirmos o nome de variáveis, temos que iniciar utilizando um caractere que esteja no intervalo de <cite>a</cite> à <cite>z</cite> ou <cite>A</cite> à <cite>Z</cite>. A única exceção a esta regra é o caractere underline <cite>_</cite>. A seguir, temos alguns nomes de variáveis <strong>válidos</strong>:</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="n">vvar</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">_vVar</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<span class="n">_vVar</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="n">__________idade</span> <span class="o">=</span> <span class="mi">19</span>
 </pre></div>
 </div>
 <div class="section" id="unica-excecao">
 <h2>ÚNICA EXCEÇÃO</h2>
 <p>O único caractere especial, que pode ser utilizado na composição de nomes, e que também pode estar situando em qualquer posição, é o caractere underline <tt class="docutils literal">_</tt>.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="n">_minhaVar</span> <span class="o">=</span> <span class="mi">55</span>
-<span class="n">____texto</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<span class="n">____texto</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 </pre></div>
 </div>
 <div class="section" id="macete">
@@ -479,28 +479,28 @@ eXcript            </a>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <p>A seguir, temos o código-fonte feito na aula de Python.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="c">#===================================================</span>
-<span class="c">#=================== eXcript.com ===================</span>
-<span class="c">#========== youtube.com/user/excriptvideo ==========</span>
-<span class="c">#===================================================</span>
+<span class="c1">#===================================================</span>
+<span class="c1">#=================== eXcript.com ===================</span>
+<span class="c1">#========== youtube.com/user/excriptvideo ==========</span>
+<span class="c1">#===================================================</span>
 
 <span class="n">num_int</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">num_dec</span> <span class="o">=</span> <span class="mf">7.3</span>
-<span class="n">val_str</span> <span class="o">=</span> <span class="s">&quot;qualquer texto&quot;</span>
+<span class="n">val_str</span> <span class="o">=</span> <span class="s2">&quot;qualquer texto&quot;</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;o valor é:&quot;</span><span class="p">,</span> <span class="n">num_int</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;o valor é: </span><span class="si">%i</span><span class="s">&quot;</span> <span class="o">%</span><span class="n">num_int</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;o valor é: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_int</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;o valor é:&quot;</span><span class="p">,</span> <span class="n">num_int</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;o valor é: </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span><span class="n">num_int</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;o valor é: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_int</span><span class="p">))</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;Concatendo decimal:&quot;</span><span class="p">,</span> <span class="n">num_dec</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;Concatendo decimal: </span><span class="si">%.10f</span><span class="s">&quot;</span> <span class="o">%</span><span class="n">num_dec</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;Concatendo decimal: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_dec</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo decimal:&quot;</span><span class="p">,</span> <span class="n">num_dec</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo decimal: </span><span class="si">%.10f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="n">num_dec</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo decimal: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_dec</span><span class="p">))</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;Concatendo strings&quot;</span><span class="p">,</span> <span class="n">val_str</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;Concatendo strings </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span><span class="n">val_str</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;Concatendo strings &quot;</span> <span class="o">+</span> <span class="n">val_str</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo strings&quot;</span><span class="p">,</span> <span class="n">val_str</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo strings </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="n">val_str</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo strings &quot;</span> <span class="o">+</span> <span class="n">val_str</span><span class="p">)</span>
 </pre></div>
 </div>
 

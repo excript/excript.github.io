@@ -381,23 +381,23 @@ eXcript            </a>
 <h2>PONTO FLUTUANTE</h2>
 <p>Valor de tipo <strong>Ponto Flutuante</strong> é qualquer número decimal, isto é, números que contenham casas decimais. Números decimais em Python, são representados pelo tipo de dado <cite>float</cite>.</p>
 <p>No código a seguir, utilizamos a função <tt class="docutils literal">type()</tt> para obter o tipo de dado que o Python definiu para vários números diferente.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="mf">1.1</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">float</span><span class="s">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">float</span><span class="s1">&#39;&gt;</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="mi">1j</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">complex</span><span class="s">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">complex</span><span class="s1">&#39;&gt;</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
 
 <span class="n">num_int</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">num_dec</span> <span class="o">=</span> <span class="mf">7.3</span>
-<span class="n">val_str</span> <span class="o">=</span> <span class="s">&quot;qualquer texto&quot;</span>
+<span class="n">val_str</span> <span class="o">=</span> <span class="s2">&quot;qualquer texto&quot;</span>
 </pre></div>
 <p>No código acima, é possível ver que para o Python, o número <cite>1.1</cite> é um número do tipo <cite>float</cite>, isto é, do tipo ponto flutuante. Já, o número <cite>1</cite> é, para o Python, um número inteiro. O número <cite>1j</cite> é um número complexo e o resultado da expressão, 10 elevado a 1000, será também um número inteiro.</p>
 <p>Atualmente, o Python trata qualquer número que não possua casas decimais como sendo um inteiro, mesmo números que tenham centenas de dígitos, serão para o Python, números inteiros.</p>

@@ -84,7 +84,7 @@ eXcript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a  href="http://excript.com/php/lista-parametro-php.html">Lista de Parâmetros em PHP</a></h2>
+                <h2><a  href="http://excript.com/php/iterando-array-php.html">Iterando Arrays em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -92,7 +92,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula aprenderemos a definir listas de parâmetros a serem enviados a uma função, bem como o seu recebimento e manipulação.</p>
+                            <p> Nesta aula aprenderemos a percorrer todos elementos dos Arrays utilizando as estruturas de repetição estudadas nas aulas anteriores.</p>
                         </div>
                     </td>
                 </tr>
@@ -118,19 +118,14 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">function soma(){</span>
+<div class="highlight"><pre><span></span><span class="x">#ITERANDO ARRAYS</span>
 
-<span class="x">    $total = func_get_arg(0) + func_get_arg(1);</span>
+<span class="x">$lista = [&quot;Domingo&quot;, &quot;Segunda&quot;, &quot;Terça&quot;, &quot;Quarta&quot;, &quot;Quinta&quot;, &quot;Sexta&quot;, &quot;Sabado&quot;];</span>
+<span class="x">$qnt = count($lista);</span>
+<span class="x">echo $qnt . &quot;\n&quot;;</span>
 
-<span class="x">    echo $total;</span>
-
-<span class="x">}</span>
-
-<span class="x">soma(10, 2);</span>
-</pre></div>
-</div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/lista-parametro-php.html">more ...</a>
+<span class="x">for($x=0; $x ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/iterando-array-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -150,38 +145,16 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="lista-de-parametros-ii">
+<h2>LISTA DE PARÂMETROS II</h2>
+<p>Essa aula é a continuação da aula anterior, logo, <a class="reference external" href="http://excript.com/php/lista-parametro-php.html">o texto de apoio da aula anterior serve a esta também</a> .</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">function somaTudo(){</span>
+<div class="highlight"><pre><span></span><span class="x">function somaTudo(){</span>
 
 <span class="x">    $lista = func_get_args();</span>
-<span class="x">    $qntd = func_num_args();</span>
-<span class="x">    $total = 0;</span>
-
-<span class="x">//    for($x = 0; $x&lt;$qntd; $x++)</span>
-<span class="x">    foreach($lista as $item)</span>
-<span class="x">    {</span>
-<span class="x">        $total += $item;</span>
-<span class="x">    }</span>
-
-<span class="x">    echo &quot;A ...</span></pre></div></div>
+<span class="x">    $qntd = func_num_args ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/lista-parametro-php-ii.html">more ...</a>
                 </div>
             </article>
@@ -221,7 +194,7 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#VERIFICA SE A ESTRUTURA É UMA ARRAY</span>
+<div class="highlight"><pre><span></span><span class="x">#VERIFICA SE A ESTRUTURA É UMA ARRAY</span>
 
 <span class="x">echo &quot;FUNÇÃO: is_array() - &quot; . &quot;\n&quot;;</span>
 <span class="x">echo &quot;Valor = [] - &quot; . is_array( [] ) . &quot;\n&quot;;</span>
@@ -265,7 +238,7 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">class Pessoa{</span>
+<div class="highlight"><pre><span></span><span class="x">class Pessoa{</span>
 <span class="x">    public $nome;</span>
 <span class="x">    public $idade;</span>
 
@@ -313,7 +286,7 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#METODO GET</span>
+<div class="highlight"><pre><span></span><span class="x">#METODO GET</span>
 
 <span class="x">var_dump($_GET);</span>
 
@@ -445,7 +418,7 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">$num1 = 9;</span>
+<div class="highlight"><pre><span></span><span class="x">$num1 = 9;</span>
 <span class="x">$num2 ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/modulo-divisao-php.html">more ...</a>
                 </div>
@@ -524,7 +497,7 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
 <span class="k">echo</span> <span class="s2">&quot;Ola ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/montagem-html-php.html">more ...</a>

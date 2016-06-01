@@ -420,16 +420,16 @@ eXcript            </a>
 <p>Se existem diferentes tipos de informação, temos de ser capazes de converter, por exemplo, um número para o tipo texto. Ou seja, a conversão de valores é essencial para que possamos trabalhar com informações tipadas, até porque, há diversas situações onde desejaremos manipular um número como sendo um texto.</p>
 <p>Essa conversão é comumente chamada de <strong>Conversão de Dados</strong> ou então, <strong>Coerção de Tipos</strong>. É importante observar, que uma informação do tipo texto, pode ser constituida de letras e números, ou seja, o grupo de caracteres alfanuméricos. Então, um número pode ser representado como um texto, mas o contrário, nem sempre será possível.</p>
 <p>Pra convertermos, por exemplo, um texto para o tipo numérico, devemos especificar o tipo a ser convertido e passarmos o valor através de parêntesis, como podemos ver a seguir:</p>
-<div class="highlight"><pre><span class="n">tipo_a_ser_convertido</span><span class="p">(</span> <span class="n">informação</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">tipo_a_ser_convertido</span><span class="p">(</span> <span class="n">informação</span> <span class="p">)</span>
 </pre></div>
 <p>A seguir, declaramos uma variável de nome <cite>texto</cite> e atribuimos um valor numérico a mesma. Em seguida, declaramos outra variável, de nome <cite>num</cite> e atribuimos a esta o resultado da Coerção de Tipos. Isto é, dissemos que o valor da variável <cite>texto</cite> deve ser convertido num tipo numérico <cite>num = int(texto)</cite>.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="n">texto</span> <span class="o">=</span> <span class="s">&quot;10&quot;</span>
+<span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;10&quot;</span>
 <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span> <span class="n">texto</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">)</span><span class="c">#o sinal de + concatena duas informações</span>
-<span class="k">print</span><span class="p">(</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">10</span> <span class="p">)</span><span class="c">#o sinal de + soma dois números</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">texto</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">)</span><span class="c1">#o sinal de + concatena duas informações</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">10</span> <span class="p">)</span><span class="c1">#o sinal de + soma dois números</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">1010</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">20</span>
