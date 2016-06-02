@@ -1,5 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-php.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-01T00:30:00-03:00</updated><entry><title>Abertura do Curso de PHP</title><link href="http://excript.com/abertura-curso-php.html" rel="alternate"></link><published>2016-06-01T00:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-01:abertura-curso-php.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-php.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-01T03:45:00-03:00</updated><entry><title>Primeira Classe em PHP</title><link href="http://excript.com/php/primeira-classe-php.html" rel="alternate"></link><published>2016-06-01T03:45:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-01:php/primeira-classe-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula implementaremos a nossa primeira classe em PHP. Também estudaremos alguns conceitos sobre a programação orientada a objetos e os seus beneficios.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="programacao-orientada-a-objetos"&gt;
+&lt;h2&gt;PROGRAMAÇÃO ORIENTADA A OBJETOS&lt;/h2&gt;
+&lt;p&gt;Nesta aula iniciaremos o estudo da Orientação a Objetos utilizando a linguagem PHP.&lt;/p&gt;
+&lt;p&gt;Inicialmente temos de saber que o PHP incorporou os conceitos da orientação a objetos e não o contrário. Ou seja, POO é uma definição para o desenvolvimento de software e que é utilizado por várias linguagens de programação de computadores. A verdade é que POO não é uma linguagem e não possui nenhuma sintaxe definida. A mesma é um conceito em que utiliza a definição de objetos do mundo real para a construção de entidades representativas que contenham informações e um conjunto de funções e métodos para a sua manipulação dessa informações.&lt;/p&gt;
+&lt;p&gt;Inicialmente, o PHP dispunha somente do paradigma de programação procedural, onde as aplicações eram construídas pela definição de funções em um ou diversos arquivos e conforme necessário as funções iam sendo invocadas.&lt;/p&gt;
+&lt;p&gt;Esse paradigma de programação continua sendo válido na construção de códigos e geralmente, é a porta de entrada de todos os programadores. Até porque, num primeiro momento, a literatura e os professores de PHP ensinam a utilizar funções sem nem ao menos declararmos uma função. Ou seja, colocamos todas as funções no corpo do arquivo que possui extensão *.php e executamos no browser.&lt;/p&gt;
+&lt;p&gt;Assim, é comum em PHP utilizarmos os 2 paradigmas de programação e mais um terceiro, o paradigma de programação funcional. Logo, temos que o PHP suporta, basicamente, 3 paradigmas para o desenvolvimento de Scripts e aplicativos, são eles:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Paradigma de programação procedural&lt;/li&gt;
+&lt;li&gt;Paradigma de programação Orientado a Objetos&lt;/li&gt;
+&lt;li&gt;Paradigma de programação funcional&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A verdade é que não existe paradigma melhor ou pior, cada um busca servir a um propósito bem especifico e, mesmo sendo possível fazer em qualquer paradigma o que é feito em outro, a estrutura e a organização do código possui grande diferença, seja na leitura, seja na performance de sua execução.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="primeira-classe"&gt;
+&lt;h2&gt;PRIMEIRA CLASSE&lt;/h2&gt;
+&lt;p&gt;Nesta aula iremos criar a nossa primeira classe em PHP. Para isso, faremos uso da palavra-chave &lt;tt class="docutils literal"&gt;class&lt;/tt&gt; que, do Inglês significa classe. Após o uso da instrução &lt;tt class="docutils literal"&gt;class&lt;/tt&gt;, temos que abrir e fechar chaves, definindo assim, o escopo da nossa classe.&lt;/p&gt;
+&lt;p&gt;Isso quer dizer que todas as variáveis e funções deverão, obrigatoriamente, serem definidas no escopo da classe.&lt;/p&gt;
+&lt;p&gt;Toda classe em POO deverá, obrigatoriamente, possuir um nome. &lt;a class="reference external" href="_`NomenclaturadeVariáveisemPHP`"&gt;A composição de nomes segue as mesmas regras estudadas na definição de nomes de variáveis em PHP&lt;/a&gt; .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="nomenclatura-convencional"&gt;
+&lt;h2&gt;NOMENCLATURA CONVENCIONAL&lt;/h2&gt;
+&lt;p&gt;É comum a composição de nome de classe seguindo o padrão CamelCase, isto é, a primeira letra de cada palavra deve estar em letra maiúscula. Por exemplo, &lt;tt class="docutils literal"&gt;ClasseTeste&lt;/tt&gt;. Como podemos ver, o nome fictício que definimos está composto por 2 palavras: clase e teste. Logo, para compormos um nome de classe com esses 2 termos, colaríamos as iniciais e maiúsculas e os uniriamos diretamente &lt;tt class="docutils literal"&gt;ClasseTeste&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Obviamente que, sendo você o programador, a nomenclatura que seguirás é aquela que desejares, porém, quando outro programador for ler o seu código, o nível de dificuldade se acentuará caso não estejas utilizando algum padrão. E, se por ventura, vieres a distribuir o seu código, será importante seguir as convenções já estabelecidas, até porque, é dessa forma que a comunidade está acostumada a ler e a estudar códigos PHP.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="peculiaridade-na-nomenclatura-de-classe"&gt;
+&lt;h2&gt;PECULIARIDADE NA NOMENCLATURA DE CLASSE&lt;/h2&gt;
+&lt;p&gt;Aprendemos em aulas anteriores que o PHP é uma linguagem Case Sensitive, isto é, referências constituidas por letras maiúsculas e minúsculas são nomes diferentes de e fazem referência a entidades diferentes. Por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$nome_a = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$nome_A = 20;&lt;/span&gt;
+
+&lt;span class="x"&gt;if ($nome_a == $nome_A)&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;1&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;if ($nome_A == $nome_A)&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;2&amp;quot;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#PRIMEIRA CLASSE EM PHP&lt;/span&gt;
+
+&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="blog"></category></entry><entry><title>Membros de Classe em PHP</title><link href="http://excript.com/php/membro-de-classe-php.html" rel="alternate"></link><published>2016-06-01T03:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-01:php/membro-de-classe-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula o que são membros de classe, como defini-los e quais as características de melhores formas para defini-los e utiliza-los pelas nossas classes.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="adicionando-membros-a-nossa-classe-pessoa"&gt;
+&lt;h2&gt;ADICIONANDO MEMBROS À NOSSA CLASSE &lt;tt class="docutils literal"&gt;PESSOA&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;Estudamos que uma classe é um projeto e que quando executada se tornará num objeto. Assim, ao criarmos uma instância da classe, teremos um objeto construido a partir do código implementado nessa classe. Todo objeto, virtual ou físico, possui por definição do termo &amp;quot;objeto&amp;quot; atributos, ou seja, um objeto físico sempre possui uma cor, um peso, um formato e etc, já, uma objeto virtual pode ter esses atributos ou então, qualquer outro.&lt;/p&gt;
+&lt;p&gt;Como estudamos, podemos definir variáveis em quaisquer parte do nosso código e utilizar estas para armazenarmos o que bem entendermos. O conceito por detrás da definição de variáveis dentro do escopo de classe é fazer com que a informação dessa variável esteja relacionada a outras informação de determinado objeto. Por isso a definição de propriedades e por isso a utilização de variáveis.&lt;/p&gt;
+&lt;p&gt;Cada instância terá todas as variáveis definidas em seu projeto, isto é, em sua classe. Logo, a alteração de uma variável na instância A não implica na alteração da variável de mesmo nome na instância B. Ambas instâncias forma criadas de um mesmo projeto, no entanto, são objetos distintos e a unica relação entre ambos é o projeto de sua construção.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Pessoa {&lt;/span&gt;
+&lt;span class="x"&gt;    var $nome;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Toda variável contida em nossa classe é chamada de membro de classe, ou então, de propriedade ou atributo. Assim, temos que um objeto possui propriedades e estas são armazenadas nas variáveis que foram declaradas no escopo da classe da sua origem.&lt;/p&gt;
+&lt;p&gt;Cada nova instância irá possuir as suas proprias propriedades e essas só poderão ser acessadas através da instância em que estão contidas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="palavra-chave-var-e-public"&gt;
+&lt;h2&gt;PALAVRA-CHAVE &lt;tt class="docutils literal"&gt;var&lt;/tt&gt; E &lt;tt class="docutils literal"&gt;public&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;A declaração de variáveis numa classe ocorre de maneira um pouco diferente daquela que estudamos anteriormente, no início do nosso Curso de PHP. Aprendemos que basta definirmos um nome a atribuirmos a este um valor que já teremos uma variável. O que na declaração de variáveis dentro de classe é que a mesma deve ser precedida pelo seu nível de visibilidade. Inicialmente, estudaremos que as variáveis dentro de classe devem ser precedidas com a palavra-chave &lt;tt class="docutils literal"&gt;public&lt;/tt&gt;. No caso, estudaremos dessa forma pois estamos dizendo que todas as variáveis podem ser acessadas externamente, bastando somente a utilização de seu nome.&lt;/p&gt;
+&lt;p&gt;Ainda é bastante comum encontrarmos código legado utilizando a palavra-chave para declaração de variáveis &lt;tt class="docutils literal"&gt;var&lt;/tt&gt;. Porém, essa é uma forma de declaração que entrou em desuso e o correto, atualmente, é utilizar uma das 3 opções:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;public&lt;/li&gt;
+&lt;li&gt;private&lt;/li&gt;
+&lt;li&gt;protected&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Estas 3 palavra-chaves, como pode ser deduzido, definem o nível de visibilidade que cada membro de classe terá. Nesse momento não estudaremos a visibilidade dos membros, então, utilizaremos em todos os exemplos a palavra-chave &lt;tt class="docutils literal"&gt;public&lt;/tt&gt;. Neste curso teremos, no mínimo, uma aulas para estudarmos a visibilidade dos membros de classe.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
+&lt;span class="x"&gt;    public $nome;&lt;/span&gt;
+&lt;span class="x"&gt;    public $idade;&lt;/span&gt;
+
+&lt;span class="x"&gt;    var $teste;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima que foi feito na vídeo-aula, estamos definindo 3 variáveis públicas. As 2 primeiras estão precedidas pela palavra-chave &lt;tt class="docutils literal"&gt;public&lt;/tt&gt; e a última pela palavra-chave &lt;tt class="docutils literal"&gt;var&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Como já dito, a declaração de variáveis com o uso da palavra-chave &lt;tt class="docutils literal"&gt;var&lt;/tt&gt; não deve ser utilizada e só estamos demonstrando seu uso pois, ainda existe códigos definidos dessa maneira.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="blog"></category></entry><entry><title>Abertura do Curso de PHP</title><link href="http://excript.com/abertura-curso-php.html" rel="alternate"></link><published>2016-06-01T00:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-01:abertura-curso-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -241,7 +350,7 @@
 &lt;span class="x"&gt;echo $p2 -&amp;gt; idade;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Ambiente de Desenvolvimento PHP</title><link href="http://excript.com/php/ambiente-desenvolvimento-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/ambiente-desenvolvimento-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="membro de classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Ambiente de Desenvolvimento PHP</title><link href="http://excript.com/php/ambiente-desenvolvimento-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/ambiente-desenvolvimento-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -744,7 +853,7 @@
 &lt;span class="x"&gt;var_dump($p1);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Construtores em PHP</title><link href="http://excript.com/php/construtor-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/construtor-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="construtor"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Construtores em PHP</title><link href="http://excript.com/php/construtor-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/construtor-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -802,7 +911,7 @@
 &lt;span class="x"&gt;$p2 = new Pessoa();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Criação de Objetos em PHP</title><link href="http://excript.com/php/criacao-objetos-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/criacao-objetos-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="construtor"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Criação de Objetos em PHP</title><link href="http://excript.com/php/criacao-objetos-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/criacao-objetos-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -855,7 +964,7 @@
 &lt;span class="x"&gt;var_dump($objetoA);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Definições da Linguagem PHP</title><link href="http://excript.com/php/definicao-linguagem-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/definicao-linguagem-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Definições da Linguagem PHP</title><link href="http://excript.com/php/definicao-linguagem-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/definicao-linguagem-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1012,7 +1121,7 @@
 &lt;span class="x"&gt;unset($p1);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>do-while - caso de uso com PHP</title><link href="http://excript.com/php/do-while-caso-de-uso-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/do-while-caso-de-uso-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="destrutor"></category><category term="construtor"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>do-while - caso de uso com PHP</title><link href="http://excript.com/php/do-while-caso-de-uso-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/do-while-caso-de-uso-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1221,7 +1330,7 @@
 &lt;span class="x"&gt;$p1 -&amp;gt; nome = &amp;quot;&amp;quot;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Encapsulamento em PHP (parte II)</title><link href="http://excript.com/php/encapsulamento-php-parte2.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/encapsulamento-php-parte2.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="encapsulamento"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Encapsulamento em PHP (parte II)</title><link href="http://excript.com/php/encapsulamento-php-parte2.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/encapsulamento-php-parte2.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1252,7 +1361,7 @@
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Escopo de nomes das funções anônimas em PHP</title><link href="http://excript.com/php/escopo-de-nome-das-funcoes-anonimas-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/escopo-de-nome-das-funcoes-anonimas-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="encapsulamento"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Escopo de nomes das funções anônimas em PHP</title><link href="http://excript.com/php/escopo-de-nome-das-funcoes-anonimas-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/escopo-de-nome-das-funcoes-anonimas-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2177,7 +2286,7 @@
 &lt;span class="x"&gt;$sub-&amp;gt;funcPublica();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Gerenciando Atributos de Classe em PHP</title><link href="http://excript.com/php/gerenciando-atributos-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/gerenciando-atributos-classe-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="funções"></category><category term="funções modificadoras"></category><category term="get"></category><category term="set"></category><category term="getter"></category><category term="setter"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Gerenciando Atributos de Classe em PHP</title><link href="http://excript.com/php/gerenciando-atributos-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/gerenciando-atributos-classe-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2239,7 +2348,7 @@
 &lt;span class="x"&gt;echo &amp;quot;A idade é: {$p1-&amp;gt;get_idade()}&amp;quot;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="classe"></category><category term="objeto"></category><category term="propriedade"></category><category term="atributo"></category></entry><entry><title>Hello World em PHP</title><link href="http://excript.com/php/hello-world-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/hello-world-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="propriedade"></category><category term="atributo"></category></entry><entry><title>Hello World em PHP</title><link href="http://excript.com/php/hello-world-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/hello-world-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2322,7 +2431,7 @@
 &lt;span class="x"&gt;$sub-&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Herança com PHP II</title><link href="http://excript.com/php/heranca-php-ii.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/heranca-php-ii.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="herança"></category><category term="encapsulamento"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Herança com PHP II</title><link href="http://excript.com/php/heranca-php-ii.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/heranca-php-ii.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2382,7 +2491,7 @@
 &lt;span class="x"&gt;$sub-&amp;gt;super();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Implementando Funcionalidades em Classe no PHP</title><link href="http://excript.com/php/implementando-funcionalidades-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/implementando-funcionalidades-classe-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="herança"></category><category term="encapsulamento"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Implementando Funcionalidades em Classe no PHP</title><link href="http://excript.com/php/implementando-funcionalidades-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/implementando-funcionalidades-classe-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2429,7 +2538,7 @@
 &lt;span class="x"&gt;$t1 -&amp;gt; imprimeTeste();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Funções para importação - include() e require()</title><link href="http://excript.com/php/importacao-include-require-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/importacao-include-require-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Funções para importação - include() e require()</title><link href="http://excript.com/php/importacao-include-require-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/importacao-include-require-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -3067,47 +3176,6 @@
 &lt;span class="x"&gt;print_r($x);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Membros de Classe em PHP</title><link href="http://excript.com/php/membro-de-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/membro-de-classe-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula o que são membros de classe, como defini-los e quais as características de melhores formas para defini-los e utiliza-los pelas nossas classes.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
-&lt;span class="x"&gt;    public $nome;&lt;/span&gt;
-&lt;span class="x"&gt;    public $idade;&lt;/span&gt;
-
-&lt;span class="x"&gt;    var $teste;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category></entry><entry><title>Método GET em PHP</title><link href="http://excript.com/php/metodo-get-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/metodo-get-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -3252,7 +3320,7 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
 &lt;span class="x"&gt;$sub-&amp;gt;super();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Módulo da Divisão em PHP</title><link href="http://excript.com/php/modulo-divisao-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/modulo-divisao-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="modificadores"></category><category term="modificador de acesso"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Módulo da Divisão em PHP</title><link href="http://excript.com/php/modulo-divisao-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/modulo-divisao-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -3459,7 +3527,7 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
 &lt;span class="x"&gt;print_r(processa_lista(range(1, 10), $soma));&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Números Pares e Ímpares em PHP</title><link href="http://excript.com/php/numeros-pares-impares-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/numeros-pares-impares-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="operador"></category><category term="Null Coalescing Operator"></category><category term="Operador Null Coalesce"></category></entry><entry><title>Números Pares e Ímpares em PHP</title><link href="http://excript.com/php/numeros-pares-impares-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/numeros-pares-impares-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -4160,46 +4228,6 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Primeira Classe em PHP</title><link href="http://excript.com/php/primeira-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/primeira-classe-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula implementaremos a nossa primeira classe em PHP. Também estudaremos alguns conceitos sobre a programação orientada a objetos e os seus beneficios.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#PRIMEIRA CLASSE EM PHP&lt;/span&gt;
-
-&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
-
-&lt;span class="x"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category></entry><entry><title>Pseudo-variável $this em PHP</title><link href="http://excript.com/php/pseudo-variavel-this-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/pseudo-variavel-this-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -4250,7 +4278,7 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
 &lt;span class="x"&gt;echo $p1 -&amp;gt; get_idade();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Retorno de Valores pela função em PHP</title><link href="http://excript.com/php/retorno-valor-funcao-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/retorno-valor-funcao-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Retorno de Valores pela função em PHP</title><link href="http://excript.com/php/retorno-valor-funcao-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/retorno-valor-funcao-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -4440,7 +4468,7 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
 &lt;span class="x"&gt;echo $p1-&amp;gt;getNomeCompleto();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="oo"></category><category term="orientação a objetos"></category><category term="polimorfismo"></category><category term="herança"></category><category term="subclasse"></category><category term="superclasse"></category></entry><entry><title>String Aspas Duplas em PHP</title><link href="http://excript.com/php/string-aspas-duplas-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/string-aspas-duplas-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="oo"></category><category term="orientação a objetos"></category><category term="modificadores"></category><category term="modificador de acesso"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="herança"></category><category term="subclasse"></category><category term="superclasse"></category><category term="polimorfismo"></category></entry><entry><title>String Aspas Duplas em PHP</title><link href="http://excript.com/php/string-aspas-duplas-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/string-aspas-duplas-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -5213,4 +5241,4 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
 &lt;span class="x"&gt;$sub-&amp;gt;super();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry></feed>
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="modificadores"></category><category term="modificador de acesso"></category><category term="visibilidade dos membros de classe"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry></feed>
