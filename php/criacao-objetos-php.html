@@ -175,14 +175,26 @@ eXcript            </a>
     </div>
 <div class="section" id="criando-objetos-e-acessando-membros-de-classe">
 <h2>CRIANDO OBJETOS E ACESSANDO MEMBROS DE CLASSE</h2>
-<ul class="simple">
-<li>Para acessarmos os membros de uma classe, primeiro é necessário criar a mesma</li>
-</ul>
+<!-- Para acessarmos os membros de uma classe, primeiro é necessário criar a mesma -->
 <p>As classes são os projetos de como os objetos devem funcionar quando criados. Então, temos que entender que a classe é o nosso código propriamente dito e, para que este tenha alguma utilidade, precisamos criar uma instância do mesmo. Observe que na orientação a objetos, instância e objeto são sinônimos.</p>
 <p>Se consultarmos o dicionário Aurélio o significado de instância, teremos varias definições, dentre estas há o significado de instância na computação e o mesmo diz que:</p>
-<pre class="literal-block">
-Inform. Cada um dos objetos [v. objeto (11)] criados durante a execução de programa (9).
-</pre>
+
+    <div class="admonitionblock tip data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-tip" title="Dica!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>Inform. Cada um dos objetos [v. objeto (11)] criados durante a execução de programa (9).</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 <p>Podemos concluir que, executar o código da nossa classe significa criar novos objetos.</p>
 </div>
 <div class="section" id="conceitos-importantes">
@@ -207,7 +219,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 </div>
 <div class="section" id="destruicao-de-objetos">
 <h2>DESTRUIÇÃO DE OBJETOS</h2>
-<p>Um objeto será destruido todas as vezes em que não houver mais variáveis referenciando ao mesmo. Ou seja, o PHP desaloca a memória de todos os objetos quando estes não mais estão sendo utilizados. Se por acaso tentarmos acessar um objeto que foi destruído, temos que ocorrerá um erro e o Script PHP terá sua execução finalizada, até porque, o objeto não existe mais.</p>
+<p>Um objeto será destruido todas as vezes em que não houver mais variáveis contendo sua referência, isto, que esteja referenciando-o. Dessa forma, temos que o PHP desalocará a memória de todos os objetos quando estes não mais tiverem utilidade. Se por acaso tentarmos acessar um objeto que foi destruído, temos que ocorrerá um erro e o Script PHP terá sua execução finalizada, até porque, o objeto não existe mais.</p>
 <p>Porém, não se preocupe, o PHP sabe gerenciar muito bem a memória e também, consegue definir com bastante precisão o momento de remover cada instância da memória. Por isso, salvo em raras exceções, você irá ter problemas com a destruição de objetos que ainda estavam em uso.</p>
 <div class="highlight"><pre><span></span><span class="x">$p1 = new Pessoa();</span>
 <span class="x">$p2 = new Pessoa();</span>
