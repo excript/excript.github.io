@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"  xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head>
+    <title>A Orientação a Objetos em PHP - eXcript</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="Vi7WdSsBR9oK2RjK_6E8OrtAfzA_mVlNrhlDjt7LXZ0" />
+	<!--<link href="https://plus.google.com/" rel="publisher">	-->
+
+
+
+<link rel="canonical" href="http://excript.com/php/orientacao-a-objetos-em-php.html">
+
+        <meta name="author" content="Cláudio Rogério Carvalho Filho" />
+        <meta name="keywords" content="curso,php,programação orientada a objetos,poo" />
+    <meta name="description" content="INTRODUÇÃO A Orientação a Objetos é uma paradigma de programação, isto é, uma metodologia para o desenvolvimento de software. A definição de orientação, utilizando a definição como sendo um Verbo transitivo direto e indireto, significa, determinar a posição, orientar, indicar o rumo, guiar, dirigir, nortear. Objeto, por sua vez, é ..." />
+
+        <meta property="og:site_name" content="eXcript" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="A Orientação a Objetos em PHP"/>
+        <meta property="og:url" content="http://excript.com/php/orientacao-a-objetos-em-php.html"/>
+
+        <meta property="og:description" content="INTRODUÇÃO A Orientação a Objetos é uma paradigma de programação, isto é, uma metodologia para o desenvolvimento de software. A definição de orientação, utilizando a definição como sendo um Verbo transitivo direto e indireto, significa, determinar a posição, orientar, indicar o rumo, guiar, dirigir, nortear. Objeto, por sua vez, é ..."/>
+
+        <meta property="article:published_time" content="10-06-2016" />
+            <meta property="article:section" content="curso php" />
+            <meta property="article:tag" content="curso" />
+            <meta property="article:tag" content="php" />
+            <meta property="article:tag" content="programação orientada a objetos" />
+            <meta property="article:tag" content="poo" />
+            <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
+            <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
+
+
+    <link rel="stylesheet" href="http://excript.com/theme/css/asciidoctor-default.css" type="text/css"/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://excript.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://excript.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://excript.com/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://excript.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://excript.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="eXcript ATOM Feed"/>
+
+        <link href="http://excript.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="eXcript RSS Feed"/>
+
+
+        <link href="http://excript.com/feeds/curso-php.atom.xml" type="application/atom+xml" rel="alternate"
+              title="eXcript curso php ATOM Feed"/>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://excript.com/" class="navbar-brand">
+eXcript            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://excript.com/tag/blog.html">blog</a></li>
+                    <li><a href="http://excript.com/cursos.html">cursos</a></li>
+                    <li><a href="http://excript.com/pages/about.html">quem somos</a></li>
+                    <li><a href="http://excript.com/pages/contato.html">contato</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://excript.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container container-content">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://excript.com/php/orientacao-a-objetos-em-php.html"
+                       rel="bookmark"
+                       title="Permalink to A Orientação a Objetos em PHP">
+                        A ORIENTAÇÃO A OBJETOS EM PHP
+                    </a>
+                </h1>
+
+                    <h3 class="h3curso">
+	                    <a href="http://excript.com/php/orientacao-a-objetos-em-php.html"
+	                       rel="bookmark"
+	                       title="Permalink to A Orientação a Objetos em PHP">
+	                        CURSO DE PHP
+	                    </a>
+                    </h3>
+            </header>
+            <div class="entry-content">
+
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+
+        <span class="label label-default"></span>
+        <span class="published">
+            <time datetime="2016-06-10T01:45:00-03:00"> Publicado em 10-06-2016</time>
+        </span>
+
+
+
+	            <span class="label label-default"></span>
+	            por <a href="http://excript.com/author/claudio-rogerio-carvalho-filho.html">Cláudio Rogério Carvalho Filho</a>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" ><a data-toggle="tab" href="#indice">ÍNDICE</a></li>
+			<li role="presentation" class="active"><a data-toggle="tab" href="#artigo">ARTIGO</a></li>
+			<li role="presentation"><a data-toggle="tab" href="#videoaula">VIDEOAULA</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane" id="indice">
+
+
+<table class="table table-hover">
+        <thead>
+        <tr>
+            <th>NOME</th>
+            <th>DURAÇÃO</th>
+        </tr>
+        </thead>
+        <tbody>        </tbody>
+            </table>
+        
+
+			</div>
+
+			<div class="tab-pane active" id="artigo">
+				<div class="row">
+					
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p></p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>A <strong>Orientação a Objetos</strong> é uma paradigma de programação, isto é, uma metodologia para o desenvolvimento de software. A definição de orientação, utilizando a definição como sendo um Verbo transitivo direto e indireto, significa, determinar a posição, orientar, indicar o rumo, guiar, dirigir, nortear. Objeto, por sua vez, é tudo que pode ser manipulado, possui características e desempenha funcionalidades.</p>
+<p>Podemos aferir que o termo <strong>Orientação</strong> é o modelo utilizado, o que norteará tudo e, <strong>objeto</strong>, a definição de cada parte do modelo.</p>
+<p>Segundo a análise das definições acima a respeito de <strong>orientação</strong> e de <strong>objeto</strong>, podemos aferir também que o <strong>Paradigma Orientado a Objetos</strong> é o modelo de projeto onde todas as informações serão definidas e utilizadas como sendo objetos, isto é, entidades representativas, ou então, podemos dizer que tudo tornar-se-á objetos e poderá ser manipulado como sendo uma entidade.</p>
+</div>
+<div class="section" id="a-filosofia-e-a-orientacao-a-objetos">
+<h2>A FILOSOFIA E A ORIENTAÇÃO A OBJETOS</h2>
+<p>O estudo teórico da orientação a objeto está recheado de conceitos filosóficos e suas definições. A primeira, evidentemente, é o conceito da natureza do objeto. Comumente, diz-se que objeto é tudo que é físico e que pode ser visto ou então, segurado nas mãos. Porém, se falarmos sobre empresas, no plural, temos que o conceito é ou não é um objeto?</p>
+<p>Para a filosofia clássica, o plural é um conceito abstrato e que só existirá se houver, antes de tudo, alguma empresa fisicamente. A programação orientada a objetos analisa, geralmente, o conceito de empresa abstrato. Da mesma forma podemos perguntar o que é uma floresta? Floresta é a observação de arvores independentes observadas como pertences a um conjunto, no caso - a floresta.</p>
+</div>
+<div class="section" id="objeto">
+<h2>OBJETO</h2>
+<p>Em nosso mundo, <strong>objeto</strong> é tudo que é físico e portanto, que pode ser manipulado. Tudo que é físico possui, por definição do termo <strong>físico</strong> características e portanto, pode desempenhar atividades.</p>
+<p>Se tomarmos como exemplo uma pedra, temos que está é um objeto, existe fisicamente, possui propriedades e, pode desempenhar alguma função. Toda pedra desempenha uma função? Não sei lhe dizer, mas garanto que podemos decidir que determinada pedra desempenha alguma funcionalidade. Quais as funcionalidades que uma pedrão pode desempenhar? Tudo que as suas características nos fornecerem como uma forma de utiliza-la.</p>
+<p>Toda objeto, ou melhor, todas as pedras possuem características, como por exemplo, peso, dimensão, coloração, densidade, propriedades fisico-químicas e etc. Toda característica pode ser explorada, isto é, servir para algum fim. O peso da pedra, por exemplo, pode ser utilizado para travar uma porta. A coloração de uma pedra pode ser utilizada como decoração de muros e paredes. As propriedades físico-químicas podem ser utilizadas para ativar ou desativar uma reação e assim por diante.</p>
+<p>O que precisamos entender nesse momento é que <strong>todo objeto</strong> possui <strong>propriedades</strong> e <strong>todo objeto</strong> possui <strong>funcionalidades</strong>.</p>
+</div>
+<div class="section" id="propriedades">
+<h2>PROPRIEDADES</h2>
+<p>Propriedade é toda e qualquer característica dos objetos. É importante saber que <strong>propriedade</strong>, <strong>característica</strong> e <strong>atributo</strong> são, na orientação a objetos, sinônimos.</p>
+<p>A afirmação de que todo objeto possui propriedades é verdadeira e, aquele que disser o contrário, que demonstre o objeto que não existe, até porque, existir é a primeira propriedade de <strong>TODO</strong> objeto que, também pode ser considerado uma funcionalidade.</p>
+</div>
+<div class="section" id="funcao">
+<h2>FUNÇÃO</h2>
+<p>A função é aquilo que o objeto desempenha. Nem todo objeto terá definido funções explicitamente, até porque, há objetos cuja funcionalidade é guardar valores, ou seja, guardar propriedades.</p>
+<p>Todo objeto pode desempenhar 2 tipos de funcionalidades: interna e externa. Um objeto pode, por exemplo, alterar suas propriedades sem interagir com o meio em que está contido. Da mesma forma que um objeto pode alterar suas propriedades pela interação com o meio.</p>
+</div>
+<div class="section" id="informacao-vs-propriedade">
+<h2>INFORMAÇÃO vs PROPRIEDADE</h2>
+<p>Já estudamos que todo objeto possui propriedades, agora, vamos estudar o que são realmente as propriedades.</p>
+<p>É correto dizer que os objetos físicos possuem cor. Logo, todo objeto físico deve ter a propriedade cor, porém, se analisarmos com atenção, objetos não possuem propriedades e sim uma cor propriamente dita. Parece simples e até idiota a análise, no entanto, vejamos que, o projeto de todo objeto possui propriedades, enquanto que os objetos, em sua definição, possuem por exemplo, uma cor e não uma propriedade.</p>
+<p>O que temos de entender do conceito exposto é, que a orientação a objetos, inicialmente, trabalha com o projeto de como será cada objeto, em seguida, quando houver um objeto criado através do projeto, teremos algo físico que possui características que, iremos chamar de propriedades, mesmo sabendo que somente o projeto é que possui a definição de propriedade.</p>
+<p>Podemos resumir todo o exposto pela análise do conjunto e da unidade. A POO faz com que criemos entidades representativas e, nos obriga a definir as propriedades e funcionalidades dessas entidades. Podemos dizer então, que num primeiro momento estaremos trabalhando com o conjunto, isto é, definimos as características e funcionalidades que <strong>todos</strong> objetos criados terão. Em seguida, após definir o projeto, escreveremos que desejamos que seja criado um objeto e que este possua determinados valores segundo as propriedades anteriormente definidas. Assim, temos que entender as 2 fases da POO, onde a primeira será a definição do projeto e a segunda a utilização propriamente dita.</p>
+</div>
+<div class="section" id="objetos-especializados">
+<h2>OBJETOS ESPECIALIZADOS</h2>
+<p>Especialização é o aprimoramento de determinada característica. Se estudarmos as frutas, inicialmente iremos definir o conceito de fruta propriamente dito. Em seguida, iremos por exemplo, estudar as melancias que são, antes de mais nada frutas, porém, possuem características únicas.</p>
+<p>A análise de frutas de maneira geral é o projeto pelo qual todas as frutas são baseadas, logo, é correto dizer que, todas as frutas possuem um conjunto de características e funcionalidades iguais. Assim, quando formos definir o projeto da melancia iremos utilizar como base o projeto das frutas, do contrário, teremos projetos redundantes.</p>
+<p>O projeto das melancias terá definições que toda melancia possui, logo, quando criarmos uma melancia através deste projeto, teremos um objeto que é, ao mesmo tempo uma fruta e uma melancia. Isso porque, a melancia foi projetada se valendo do projeto das frutas, logo, toda melancia é uma fruta, mas nem toda fruta será uma melancia.</p>
+</div>
+<div class="section" id="definicao-de-objetos-que-nao-sao-objetos">
+<h2>DEFINIÇÃO DE OBJETOS QUE NÃO SÃO OBJETOS</h2>
+<p>O estudo filosófico da OO é sem dúvida intrigante, até porque, o mesmo nos orienta a representar toda e qualquer informação como sendo entidades isoladas. Porém, muitas serão as entidades que precisaremos criar uma representação física, porém, no mundo real, a mesma possui uma definição abstrata.</p>
+<p>Tomemos por exemplo o setor de RH e a necessidade de informatizar o mesmo. Para isso, nossa primeira atividade será, o estudo de como o setor funciona. Vamos criar uma situação hipotética para facilitar o estudo.</p>
+<p>Observamos que o setor de RH faz o cadastro dos colaboradores. O RH também gerencia aqueles que desejam se tornar colaboradores. O RH define o salário e a função de cada colaborador e, conforme a função definida pelo RH para determinado colaborador, este terá acesso as várias partes do nosso programa.</p>
+<p>Então, concluimos que, o setor de RH precisa, num primeiro momento de um cadastro de colaboradores e de um cadastro daqueles que desejam tornar-se colaboradores. Logo, desenhamos num papel que:</p>
+<p>Colaboradores
+* Nome
+* Idade
+* Cargo
+* Ativo/Demitido
+* Data admissão</p>
+<p>Acabamos de definir algumas propriedades dos colaboradores, e coloca-mo-as numa espécie de lista. Assim, temos as propriedades, agora, quais seriam as funções desses colaboradores? Nesse momento vamos deixar essa resposta em aberto.</p>
+<p>Vamos supor que tenhamos programado um cadastro que contenha a lista de informações elucidadas para os Colaboradores. Esse cadastro nos forneceu a capacidade de Incluir, Alterar e Excluir Colaboradores. Até esse momento, o nosso trabalho foi a implementação de algo que ocorre fisicamente, isto é, quando não há um sistema informatizado, há papeis, formulários físicos que são utilizados para este fim.</p>
+<p>Agora vamos supor que um Colaborar tenha sido demitido, logo, vamos marcar o campo Ativo como sendo igual a Falso, até porque, o Colaborador não está ativo. Agora, vamos supor que 2 anos depois o Colaborador foi re-contratado pela empresa, logo, quando o RH for fazer o cadastro, o mesmo não poderá cadastrar alguém que já possui cadastrado, correto? Então, num primeiro momento concluímos que, o RH marque o cadastro do Colaborador como sendo ativo e num primeiro momento, passamos a acreditar que tudo está funcionando normalmente.</p>
+<p>Em um determinado dia, um chefe resolve analisar os lucros da empresa e, para isso, o mesmo utilizará o nosso sistema. Logo, o mesmo gera um relatório que contém toda a receita da empresa no ano passado menos o valor das despesas. A primeira pergunta a ser feita é: o Colaborador que teve o seu cadastrado recém ativado estará ou não no cálculo das despesas do ano que passou? Se o nosso sistema funcionar segundo a definição que acabamos de estudar, o colaborador será considerado uma despesa caso a data de admissão seja igual a data da sua primeira contratação. Porém, se alterarmos a data de admissão, este problema está resolvido! Mas, se o chefe quiser um relatório de lucro de 2 anos atrás, isto é, da época em que este colaborador estava ativo, o mesmo não entrará no relatório, até porque, a sua data de admissão foi alterada!</p>
+<p>Deste problema concluímos que, além do cadastro de colaboradores, é necessário um cadastro do período trabalhado. Agora, após a análise do problema, acabamos por ter uma informação que é totalmente abstrata e, o pior de tudo, a mesma nem possui um nome propriamente dito e a mesma nem existia na época em que não havia o nosso sistema! Obviamente que, o nosso programa irá criar uma entidade, isto é, um objeto para representar esse fenômeno, porém, na prática, a contratação e a demissão são objetos ou simplesmente ações?</p>
+<p>A moral da análise anterior é que com a POO, tudo tornar-se-á objetos, que possuirá identificador, propriedades e funcionalidades, porém, o paradoxo é que no mundo físico não há objeto de admissão e demissão, mas, no mundo virtual, onde não existem objetos físicos, haverá um objeto que conterá a definição de contratado, demitido, e em qual período ocorreu... o objeto ou a ação?</p>
+</div>
+
+				</div>
+			</div>
+
+
+			<div class="tab-pane" id="videoaula">
+				<div class="panel panel-default panel-aulas">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe
+								class=class="embed-responsive-item"
+								src="https://www.youtube.com/embed/"
+								frameborder="0"
+								allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+<br>
+<br>
+<span class="label label-default"></span>
+Tags
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comentários</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'php/orientacao-a-objetos-em-php';
+                var disqus_url = 'http://excript.com/php/orientacao-a-objetos-em-php.html';
+
+            var disqus_config = function () {
+                this.language = "pt";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Por favor, ative o JavaScript para visualizar os comentários <a href="http://disqus.com/?ref_noscript"> disponibilizado por Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+	    <li class="li-sidebar">
+			<div class="fb-page" data-href="https://www.facebook.com/excript/" data-width="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/excript/"><a href="https://www.facebook.com/excript/">eXcript</a></blockquote></div></div>
+	    </li>
+
+	    <li class="li-sidebar">
+			<script src="https://apis.google.com/js/platform.js"></script>
+
+			<script>
+			  function onYtEvent(payload) {
+			    if (payload.eventType == 'subscribe') {
+			      // Add code to handle subscribe event.
+			    } else if (payload.eventType == 'unsubscribe') {
+			      // Add code to handle unsubscribe event.
+			    }
+			    if (window.console) { // for debugging only
+			      window.console.log('YT event: ', payload);
+			    }
+			  }
+			</script>
+
+			<div class="g-ytsubscribe" data-channel="excriptvideo" data-layout="full" data-count="default" data-onytevent="onYtEvent"></div>
+	    </li>
+
+	    <li class="li-sidebar">
+
+		    <!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+			<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'pt-BR'}
+			</script>
+
+			<!-- Posicione esta tag onde você deseja que o widget apareça. -->
+			<div class="g-page" data-width="200" data-href="//plus.google.com/u/0/102371115481264098253" data-rel="publisher"></div>
+
+	    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+	<div class="container">
+		
+
+		<div class="row">
+			<p class="site-info text-center">
+
+			</p><div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h5>eXcript</h5>
+						<p>
+							A eXcript é um projeto de produção audiovisual de conteúdo técnico com foco no autodidatismo.
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>CURSOS</h5>
+						<ul>
+							<li><a href="http://excript.com/curso-de-python.html">PYTHON</a></li>
+							<li><a href="http://excript.com/curso-de-java.html">JAVA</a></li>
+							<li><a href="http://excript.com/curso-php.html">PHP</a></li>
+							<li><a href="http://excript.com/curso-cpp.html">C++</a></li>
+							<li><a href="http://excript.com/curso-c.html">C</a></li>
+							<li><a href="http://excript.com/curso-de-android.html">ANDROID</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>SOCIAL</h5>
+						<ul>
+							<li><a href="http://plus.google.com/+excriptvideo">GOOGLE+</a></li>
+							<li><a href="http://www.facebook.com/excript">FACEBOOK</a></li>
+							<li><a href="http://twitter.com/eXcriptBrasil">TWITTER</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<p></p>
+		</div>
+	</div>
+</footer>
+<script src="http://excript.com/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://excript.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://excript.com/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-72583776-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1684671528414521";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>

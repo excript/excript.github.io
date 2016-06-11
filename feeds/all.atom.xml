@@ -1,5 +1,835 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-01T03:45:00-03:00</updated><entry><title>Primeira Classe em PHP</title><link href="http://excript.com/php/primeira-classe-php.html" rel="alternate"></link><published>2016-06-01T03:45:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-01:php/primeira-classe-php.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-10-01T00:00:00-03:00</updated><entry><title>Variáveis superglobais do PHP</title><link href="http://excript.com/php/variavel-superglobal-php.html" rel="alternate"></link><published>2016-10-01T00:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-10-01:php/variavel-superglobal-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a implementação e uso de variáveis que possuem escopo global, bem como a sua utilização em escopos restritos, como o escopo de funções.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;br&gt;
+    &lt;div class="admonitionblock note data-line"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="icon"&gt;
+                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
+                    &lt;/td&gt;
+                    &lt;td class="content"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="variável"></category><category term="global"></category><category term="superglobal"></category></entry><entry><title>Funções Anônimas e Arrays com PHP</title><link href="http://excript.com/php/funcao-anonima-array-php.html" rel="alternate"></link><published>2016-06-11T13:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/funcao-anonima-array-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos as funções anonimas junto com as estruturas Arrays. Estudaremos as várias funções definidas pela linguagem PHP para serem utilizadas com uso de funções anonimas.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;br&gt;
+    &lt;div class="admonitionblock note data-line"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="icon"&gt;
+                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
+                    &lt;/td&gt;
+                    &lt;td class="content"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS E ARRAYS&lt;/span&gt;
+
+&lt;span class="x"&gt;#array_map(&amp;lt;f.anonima&amp;gt;, &amp;lt;array&amp;gt;)&lt;/span&gt;
+
+&lt;span class="x"&gt;$lista = [1,2,3,4,5];&lt;/span&gt;
+
+&lt;span class="x"&gt;$f = function($x){&lt;/span&gt;
+&lt;span class="x"&gt;    return $x  * $x;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$lista_proc = array_map($f, $lista);&lt;/span&gt;
+&lt;span class="x"&gt;print_r($lista_proc);&lt;/span&gt;
+
+
+&lt;span class="x"&gt;#array_filter(&amp;lt;array&amp;gt;, &amp;lt;f.anonima&amp;gt;)&lt;/span&gt;
+
+&lt;span class="x"&gt;$filtro = function($x){&lt;/span&gt;
+&lt;span class="x"&gt;    return $x &amp;lt; 3;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$lista_filtro = array_filter($lista, $filtro);&lt;/span&gt;
+
+&lt;span class="x"&gt;print_r($lista_filtro);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category></entry><entry><title>Funções Anônimas na Prática com PHP</title><link href="http://excript.com/php/funcao-anonima-pratica-php.html" rel="alternate"></link><published>2016-06-11T12:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/funcao-anonima-pratica-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nessa aula implementaremos um código utilizando os conceitos de funções anonimas estudadas nas aulas anteriores.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;br&gt;
+    &lt;div class="admonitionblock note data-line"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="icon"&gt;
+                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
+                    &lt;/td&gt;
+                    &lt;td class="content"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#PRÁTICA - FUNÇÕES ANÔNIMAS&lt;/span&gt;
+
+&lt;span class="x"&gt;$quadrado = function($item){&lt;/span&gt;
+&lt;span class="x"&gt;    return $item * $item;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+&lt;span class="x"&gt;$cubo = function($item)use($quadrado){&lt;/span&gt;
+&lt;span class="x"&gt;    return $quadrado($item) * $item;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+&lt;span class="x"&gt;$soma = function($item){&lt;/span&gt;
+&lt;span class="x"&gt;    return $item + $item;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;function processa_lista($lista, $func){&lt;/span&gt;
+&lt;span class="x"&gt;    foreach($lista as &amp;amp;$item){&lt;/span&gt;
+&lt;span class="x"&gt;        $item = $func($item);&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    return $lista;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;echo &amp;quot;QUADRADO\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;print_r(processa_lista(range(1,10), $quadrado));&lt;/span&gt;
+
+&lt;span class="x"&gt;echo &amp;quot;\nCUBO\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;print_r(processa_lista(range(1,10), $cubo));&lt;/span&gt;
+
+&lt;span class="x"&gt;echo &amp;quot;\nSOMA\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;print_r(processa_lista(range(1,10), $soma));&lt;/span&gt;
+
+
+&lt;span class="x"&gt;//print_r(processa_lista(&lt;/span&gt;
+&lt;span class="x"&gt;//    range(1,10),&lt;/span&gt;
+&lt;span class="x"&gt;//    function($item){&lt;/span&gt;
+&lt;span class="x"&gt;//        return $item - 10;&lt;/span&gt;
+&lt;span class="x"&gt;//    }&lt;/span&gt;
+&lt;span class="x"&gt;//));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category></entry><entry><title>Escopo de nomes das funções anônimas em PHP</title><link href="http://excript.com/php/escopo-de-nome-das-funcoes-anonimas-php.html" rel="alternate"></link><published>2016-06-11T11:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/escopo-de-nome-das-funcoes-anonimas-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula entenderemos o escopo de nomes das funções anonimas, bem como as suas características e principais conceitos.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="escopo-de-nome-das-funcoes-anonimas"&gt;
+&lt;h2&gt;ESCOPO DE NOME DAS FUNÇÕES ANÔNIMAS&lt;/h2&gt;
+&lt;p&gt;Quando declaramos uma função anônima, geralmente, iremos atribuir a mesma a uma variável. A variável servirá como uma espécie de referência, até porque, através dessa variável é que poderemos invocar a função, ou melhor, &lt;strong&gt;somente&lt;/strong&gt; com essa variável é que o bloco de código da função anonima poderá ser executado!&lt;/p&gt;
+&lt;p&gt;Uma função anônima possui o seu escopo restrito, então, não é possível fazer acesso direto aos membros externos. Em suma, &lt;a class="reference external" href="http://excript.com/php/introducao-as-funcoes-php.html"&gt;o escopo de uma função anônima funciona de maneira análoga a de uma função convencional&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para acessarmos variáveis externas a função anônima, temos que explicitamente declarar na definição desta que, uma determinada variável, deve ser inserida no escopo da função anônima.&lt;/p&gt;
+&lt;p&gt;Então, para passarmos uma variável externa a uma função anônima, utilizamos a instrução &lt;tt class="docutils literal"&gt;use&lt;/tt&gt; junto a implementação da função. Também podemos passar variáveis externas através da sua referência, para isso, utilizamos o operador &lt;tt class="docutils literal"&gt;&amp;amp;&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$var1 = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$num = [&amp;quot;um&amp;quot;, &amp;quot;dois&amp;quot;, &amp;quot;três&amp;quot;];&lt;/span&gt;
+&lt;span class="x"&gt;$func = function() use ($var1, &amp;amp;$num) {&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;Variável externa $var1&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$func();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS - ESCOPO DE NOMES&lt;/span&gt;
+
+&lt;span class="x"&gt;$num = 100;&lt;/span&gt;
+&lt;span class="x"&gt;$num2 = 100;&lt;/span&gt;
+
+&lt;span class="x"&gt;$func = function() use(&amp;amp;$num, $num2) {&lt;/span&gt;
+&lt;span class="x"&gt;//    echo &amp;quot;Anônima: &amp;quot; . $num;&lt;/span&gt;
+&lt;span class="x"&gt;    $num = 1500;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$func();&lt;/span&gt;
+
+&lt;span class="x"&gt;echo $num;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category><category term="blog"></category></entry><entry><title>Introdução às Funções Anônimas em PHP</title><link href="http://excript.com/php/introducao-funcao-anonima-php.html" rel="alternate"></link><published>2016-06-11T10:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/introducao-funcao-anonima-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos o conceito de função anonima e, como utiliza-las na linguagem PHP. Também faremos um exemplo onde será possível observar as vantagens dessa definição.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="funcoes-anonimas"&gt;
+&lt;h2&gt;FUNÇÕES ANONIMAS&lt;/h2&gt;
+&lt;p&gt;As &lt;strong&gt;funções anônimas&lt;/strong&gt;, também chamadas de &lt;strong&gt;closures&lt;/strong&gt;, &lt;strong&gt;lambda functions&lt;/strong&gt;, &lt;strong&gt;funções de primeira ordem&lt;/strong&gt;, &lt;strong&gt;funções de ordem superior&lt;/strong&gt;, são blocos de instruções que não possuem nome, podem receber parâmetros e são interpretadas pela linguagem como expressões.&lt;/p&gt;
+&lt;p&gt;Uma função anônima possui um bloco de instrução, porém, não possuem referência que as identifiquem e, por conseguinte, não estarão no escopo para que possamos invoca-las.&lt;/p&gt;
+&lt;p&gt;A vantagem das funções anônimas e, que as tornam especiais, é que podemos armazena-las e manipula-las como fazemos com variáveis, e assim, podemos envia-las como sendo um parâmetro de uma função. A função receptora por sua vez, será capaz de executar a função anônima que foi recebida como parâmetro e ainda, passar os argumentos definidos no cabeçalho da mesma e recebendo a resposta da execução.&lt;/p&gt;
+&lt;p&gt;Assim, temos que uma função anônima possui todas as características e, funciona com os mesmo princípios que qualquer função, porém, como o nome sugere, esta não possui um nome - por isso: anônima!&lt;/p&gt;
+&lt;p&gt;É comum a utilização de funções anônimas como &lt;tt class="docutils literal"&gt;callback&lt;/tt&gt;, isto é, passarmos a função anônima como parâmetro e num determinado momento, a função que a recebeu, invoque a função e de continuidade ao processamento.&lt;/p&gt;
+&lt;p&gt;Para atribuirmos uma função anonima a uma variável, basta declararmos um bloco e atribuirmos este, diretamente, a uma determinada variável, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# o bloco de instrução a seguir, será atribuido à&lt;/span&gt;
+&lt;span class="x"&gt;# variável de nome $func e, para executar o código&lt;/span&gt;
+&lt;span class="x"&gt;# utilizaremos o nome da variável&lt;/span&gt;
+&lt;span class="x"&gt;$func = function($num){&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;Valor do parâmetro recebido &amp;quot; . $num;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;# aqui, estamos invocando a função anonima&lt;/span&gt;
+&lt;span class="x"&gt;# declarada nas linhas acima&lt;/span&gt;
+&lt;span class="x"&gt;$func(10);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No bloco de código acima, definimos uma função anonima e, ainda na definição, atribuimos a sua referência à variável &lt;code&gt;$func&lt;/code&gt;. Em seguida, utilizamos a instrução que já estudamos para a definição de funções - &lt;code&gt;function&lt;/code&gt;, definimos um parâmetro de nome &lt;code&gt;$num&lt;/code&gt; e, por fim, definimos o bloco de instrução da função anonima com uma par de chaves. Feito isso, temos um bloco de instrução como qualquer outra, a única diferença é que podemos retornar valores com o uso da instrução &lt;code&gt;return&lt;/code&gt; que, também já foi estudada.&lt;/p&gt;
+&lt;p&gt;Funções anônimas são expressões como quaisquer outras (como atribuição de números ou manipulação de string), logo, estas podem ser adicionada a uma variável, atribuida a um array e etc.&lt;/p&gt;
+&lt;p&gt;Como prova de que as funções anonimas são expressões, somos obrigados a utilizar um ponto e vírgula após a definição do bloco de instrução, até porque, a mesma não é uma função, mas sim, uma expressão e, como sabemos, toda expressão é finalizada com ponto-e-vírgula.&lt;/p&gt;
+&lt;p&gt;Após atribuirmos a função a uma variável, para invoca-la, basta adicionarmos os parêntesis após o nome [da variável´] e, definir os parâmetros conforme a declaração.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS&lt;/span&gt;
+
+
+&lt;span class="x"&gt;$func = function($nome){&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O nome enviado como parâmetro é: $nome&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;function teste($f){&lt;/span&gt;
+&lt;span class="x"&gt;    $f(&amp;quot;Cláudio&amp;quot;);&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;teste($func);&lt;/span&gt;
+&lt;span class="x"&gt;//$func(&amp;quot;eXcript&amp;quot;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category><category term="blog"></category></entry><entry><title>DICIONÁRIO TÉCNICO DE PROGRAMAÇÃO</title><link href="http://excript.com/dicionario/indice.html" rel="alternate"></link><published>2016-06-11T07:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:dicionario/indice.html</id><summary type="html">&lt;p&gt;O &lt;strong&gt;Dicionário Técnico de Programação e Desenvolvimento de Software eXcript&lt;/strong&gt; objetiva, mas não se limita a: &lt;strong&gt;a)&lt;/strong&gt; documentar os termos utilizados por programadores e desenvolvedores de software; &lt;strong&gt;b)&lt;/strong&gt; listar as tecnologias que utilizam o objeto definido; &lt;strong&gt;c)&lt;/strong&gt; citar fontes e propor leituras adicionais.&lt;/p&gt;
+&lt;p&gt;Todos os termos do dicionário trazem, como primeira definição, o significado da terminologia ou nomenclatura segundo nossa interpretação. As definições seguintes terão, &lt;strong&gt;obrigatoriamente&lt;/strong&gt;, a fonte de onde foram extraídas e, quando possível, trarão o link de onde retiramos a definição.&lt;/p&gt;
+&lt;p&gt;A definição de um termo poderá ser melhorada a qualquer momento, no entanto, é possível, através do sistema de versionamento GIT, obter definições anteriores.&lt;/p&gt;
+&lt;p&gt;Classe: projeto de todo objeto.&lt;/p&gt;
+&lt;p&gt;Instância: é a execução de uma classe.&lt;/p&gt;
+&lt;p&gt;Objeto: é a execução de uma classe.&lt;/p&gt;
+&lt;p&gt;Herança: capacidade de herdar as características de outra classe&lt;/p&gt;
+&lt;p&gt;Polimorfismo: capacidade de ter funções com mesmo nome e assinatura, porém, com comportamentos diferentes.&lt;/p&gt;
+&lt;p&gt;Membro de classe: pode ser uma função, ou então, uma propriedade (variável).&lt;/p&gt;
+&lt;p&gt;Propriedade: característica do objeto e na programação, é representando por uma variável.&lt;/p&gt;
+&lt;p&gt;SuperClasse: a classe pai; classe que esta sendo estendida.&lt;/p&gt;
+&lt;p&gt;SubClasse: a classe filha; a classe que implementará a partir da implementação de outra.&lt;/p&gt;
+&lt;p&gt;Classe-pai: sinônimo de SuperClasse; classe utilizada como base para a criação de outras.&lt;/p&gt;
+&lt;p&gt;Classe-base: sinônimo de SuperClasse.&lt;/p&gt;
+&lt;p&gt;Evento: algo que ocorreu dentro de uma classe e disparou uma funcionalidade.&lt;/p&gt;
+&lt;p&gt;Setar: definir um valor a; verbo ainda inexistente na Língua Portuguesa cuja origem vem do Inglês do verbo &lt;cite&gt;set&lt;/cite&gt;. Exemplo: &amp;quot;seta o valor 10 para a variável x&amp;quot;.&lt;/p&gt;
+&lt;p&gt;callback: função que será invocada quando algo ocorrer ou então, algum outro evento acontecer.&lt;/p&gt;
+&lt;p&gt;interpolar: inserir uma string no meio de outra&lt;/p&gt;
+&lt;p&gt;concatenar: juntar duas ou mais sequências de caracteres&lt;/p&gt;
+&lt;p&gt;string: conjunto de caracteres numa determinada ordem&lt;/p&gt;
+</summary><category term="dicionário"></category><category term="glossário"></category><category term="termos técnicos"></category></entry><entry><title>Herança em PHP</title><link href="http://excript.com/php/heranca-php.html" rel="alternate"></link><published>2016-06-11T06:10:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/heranca-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos o conceito de herança segundo a Orientação a Objetos. Em seguida, faremos um exemplo para estudarmos a aplicação do conceito da herança em uma situação real.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="heranca"&gt;
+&lt;h2&gt;HERANÇA&lt;/h2&gt;
+&lt;p&gt;A herança representa uma das principais características da &lt;strong&gt;Orientação a Objetos&lt;/strong&gt;, até porque, somos capazes de implementar tipos de dados hierarquicamente. Através do conceito de herança, conseguimos implementar classes de uso geral, que possuam características comuns a várias entidades relacionadas.&lt;/p&gt;
+&lt;p&gt;Essas classes poderão ser estendidas por outras, produzindo assim, classes mais especializadas e, que implementem funcionalidades que as tornam únicas.&lt;/p&gt;
+&lt;p&gt;Através da herança, poderemos utilizar propriedades e métodos definidos na superclasse. Uma boa maneira de pensarmos neste conceito é sob a perspectiva de obter objetos mais especializados conforme aumente a hierarquia. Devemos tomar cuidado com o conceito de hereditariedade animal, até porque, os filhotes não possuem, necessariamente, as características dos pais. Já, o conceito de herança na Orientação a Objetos define que, todo herdeiro receberá o conjunto de características definidas como público e privado e, terá acesso total as funcionalidades definidas na superclasse. Assim, a única maneira de restringir os herdeiros é definindo membros privados, até porque, do contrário, todo e qualquer herdeiro poderá alterar quaisquer informação.&lt;/p&gt;
+&lt;p&gt;É comum que classes derivadas sejam novamente utilizadas como base para outras. Assim, somos capazes de estender qualquer classe que não tenha o seu construtor definido como privado.&lt;/p&gt;
+&lt;p&gt;Se tomarmos como exemplo a ideia de frutas, temos que a classe fruta conterá o código que define as propriedades e funções de todas as frutas, enquanto que a classe &lt;tt class="docutils literal"&gt;Maçã&lt;/tt&gt;, receberá as funções e atributos de todas as frutas, e implementará as propriedades e funções que somente as maçãs possuem.&lt;/p&gt;
+&lt;p&gt;Toda &lt;strong&gt;classe poderá ser herdada&lt;/strong&gt; e para isso, não é preciso fazer nada de especial, ou seja, o uso da herança se resume a definição explicita na declaração de uma nova classe que a mesma será uma &amp;quot;continuação&amp;quot; de outra.&lt;/p&gt;
+&lt;p&gt;Classes que são herdadas são chamadas de &lt;strong&gt;Classe Base&lt;/strong&gt;, &lt;strong&gt;Super&lt;/strong&gt;, &lt;strong&gt;SuperClasse&lt;/strong&gt;. Classe herdeira são chamadas de &lt;strong&gt;Classes Derivadas&lt;/strong&gt;, ou &lt;strong&gt;SubClasse&lt;/strong&gt;. Também é comum chamarmos as classes base de superclasses, e as classes que herdam desta, como sendo subclasses.&lt;/p&gt;
+&lt;p&gt;O PHP não suporta herança múltipla, porém, o mesmo disponibiliza a utilização de &lt;tt class="docutils literal"&gt;traits&lt;/tt&gt;, que permite a definição de conjuntos de características. &lt;tt class="docutils literal"&gt;Traits&lt;/tt&gt; serão estudadas posteriormente e também, não podemos confundir o conceito de herança múltipla com &lt;tt class="docutils literal"&gt;traits&lt;/tt&gt;, até porque, numa análise superficial há semelhanças, mas em teoria, são conceitos distintos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-sintaxe-para-uso-da-heranca"&gt;
+&lt;h2&gt;A SINTAXE PARA USO DA HERANÇA&lt;/h2&gt;
+&lt;p&gt;Uma classe herdeira, deverá, em sua definição, utilizar a instrução &lt;cite&gt;extends&lt;/cite&gt; sucedido do nome da classe que será estendida. O código a seguir faz uma breve demonstração da nomenclatura que deve ser utilizada.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Pai()&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;class Filho extends Pai&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+&lt;span class="x"&gt;    #a classe filha utiliza a instrução `extends` e em seguida define&lt;/span&gt;
+&lt;span class="x"&gt;    # o nome da classe que está sendo estendida&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como podemos ver no trecho de código acima, a classe &lt;cite&gt;Pai&lt;/cite&gt; está sendo estendida pela classe de nome &lt;cite&gt;Filha&lt;/cite&gt; e, para isso, utilizou-se a instrução &lt;cite&gt;extends&lt;/cite&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="como-a-subclasse-utiliza-os-membros-da-super"&gt;
+&lt;h2&gt;COMO A SUBCLASSE UTILIZA OS MEMBROS DA SUPER&lt;/h2&gt;
+&lt;p&gt;Toda SubClasse poderá acessar os membros da &lt;strong&gt;super&lt;/strong&gt; diretamente, como se estes membros tivessem sido declarados em seu corpo. Segundo a teoria da Orientação a Objetos, toda classe herdeira deve ter acesso direto ao membros públicos e protegidos da super.&lt;/p&gt;
+&lt;p&gt;Assim, salvo se lermos o código, não será possível saber em qual nível hierarquico que determinado membro foi definido.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class SuperClasse {&lt;/span&gt;
+
+&lt;span class="x"&gt;    public $a = &amp;#39;variável $a&amp;#39;;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function ola()&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        echo &amp;quot;SuperClasse-&amp;gt;ola()&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;class SubClasse extends SuperClasse {&lt;/span&gt;
+
+&lt;span class="x"&gt;    #nada será declarado na SubClasse a fim de melhor entendermos&lt;/span&gt;
+&lt;span class="x"&gt;    # o funcionamento da herança de propriedades e funcionalidades&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;$super = new SuperClasse();&lt;/span&gt;
+&lt;span class="x"&gt;$super-&amp;gt;ola();&lt;/span&gt;
+&lt;span class="x"&gt;$super-&amp;gt;a = 10;&lt;/span&gt;
+
+&lt;span class="x"&gt;$sub = new SubClasse();&lt;/span&gt;
+&lt;span class="x"&gt;$sub-&amp;gt;ola();&lt;/span&gt;
+&lt;span class="x"&gt;$sub-&amp;gt;a = 10;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;A visibilidade dos membros de classe será estudada em detalhes em aulas posteriores&lt;/a&gt;, porém, desde já tenha em mente que, classes herdeiras só são privadas de acessar os membros definidos como &lt;code&gt;private&lt;/code&gt;, isto é, definidos como sendo privado!&lt;/p&gt;
+&lt;p&gt;No geral, todo herdeiro &lt;strong&gt;deve possuir acesso&lt;/strong&gt; aos demais membros, sejam eles públicos ou protegidos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="heranca-na-pratica"&gt;
+&lt;h2&gt;HERANÇA NA PRÁTICA&lt;/h2&gt;
+&lt;p&gt;Agora, vamos implementar as classes de &lt;strong&gt;Pessoa Física&lt;/strong&gt; e &lt;strong&gt;Pessoa Jurídica&lt;/strong&gt; e, ambas serão herdeiras da classe &lt;tt class="docutils literal"&gt;Pessoa&lt;/tt&gt;. A ideia é que a classe &lt;tt class="docutils literal"&gt;Pessoa&lt;/tt&gt; implemente o que é de uso comum entre as 2 definições de pessoas: física ou jurídicas. Enquanto que as classe PF e PJ implementem somente as informações referentes ao seu tipo de pessoa.&lt;/p&gt;
+&lt;p&gt;A ideia é ter um tipo de pessoa genérica e também, as pessoas especializadas, isso porque, um PF poderia, por exemplo, ser um paciente, um cliente, um vendedor, logo, seremos capazes de saber, por exemplo, as várias finalidades referentes a uma mesma Pessoa. Da mesma forma, temos que um PJ poderia ser um fornecedor, uma revenda, um cliente e etc.&lt;/p&gt;
+&lt;p&gt;É interessante observar que, um cliente, normalmente, pode ser tanto PF como também PJ. Assim, ao implementarmos o cadastro de Clientes, temos que disponibilizar ambas as opções o que atrapalhará o desenvolvimento. Por outro lado, uma mesma pessoa por ter 2 razões sociais, isto é, 2 CNPJ distintos e assim, a pessoa de maneira geral será a mesma para as 2 pessoas jurídicas distintas.&lt;/p&gt;
+&lt;p&gt;Existem alguma nomenclaturas distintas que encontraremos na literatura especializada da relação entre níveis diferentes das classes. Todas as terminologias aqui utilizadas forma retiradas do &lt;a class="reference external" href="http://excript.com/dicionario/indice.html"&gt;dicionário técnico eXcript&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Herança: capacidade de herdar as características de outra classe
+Classe: projeto de todo objeto - instância
+SuperClasse: a classe pai; classe que esta sendo estendida.
+SubClasse: nome da classe que está implementando outra.
+Classe-pai: classe utilizada como base para a criação de outras.
+Classe-base: sinônimo a SuperClasse&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# HERANÇA I&lt;/span&gt;
+
+&lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
+
+&lt;span class="x"&gt;    public $a = &amp;#39;variável $a&amp;#39;;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function ini(){&lt;/span&gt;
+&lt;span class="x"&gt;        echo &amp;quot;SuperClasse-&amp;gt;ini()&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;class SubClasse extends SuperClasse{&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;$super = new SuperClasse();&lt;/span&gt;
+&lt;span class="x"&gt;$super-&amp;gt;ini();&lt;/span&gt;
+&lt;span class="x"&gt;$super-&amp;gt;a = &amp;quot;&amp;quot;;&lt;/span&gt;
+
+&lt;span class="x"&gt;$sub = new SubClasse();&lt;/span&gt;
+&lt;span class="x"&gt;$sub-&amp;gt;ini();&lt;/span&gt;
+&lt;span class="x"&gt;$sub-&amp;gt;a = &amp;quot;qualquer valor&amp;quot;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="herança"></category><category term="encapsulamento"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="blog"></category></entry><entry><title>Gerenciando Atributos de Classe em PHP</title><link href="http://excript.com/php/gerenciando-atributos-classe-php.html" rel="alternate"></link><published>2016-06-11T05:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/gerenciando-atributos-classe-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos a utilizar funções para atribuir valores a propriedades das classes e dessa forma, gerenciar qual o valor que será atribuído.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="definindo-valores-a-variaveis-com-funcoes"&gt;
+&lt;h2&gt;DEFININDO VALORES A VARIÁVEIS COM FUNÇÕES&lt;/h2&gt;
+&lt;p&gt;Propriedades que possuem regras, deveram utilizar funções para a definição de valores e, a razão para essa metodologia é bastante simples: com funções conseguimos analisar se o valor passado é, por exemplo, inválido.&lt;/p&gt;
+&lt;p&gt;Se tivessemos por exemplo uma classe de nome Pessoa, cujo objetivo é conter os dados pessoais, é correto permitir a definição do nome da pessoa como sendo uma String com 0 caracteres? Normalmente não, porém, obviamente que você possa imaginar alguma situação necessário, porém, falando de forma geral, o nome de uma pessoa não deveria ter 0 caracteres ou então, ser composto por digitos numéricos.&lt;/p&gt;
+&lt;p&gt;Os atributos, como estudamos, são simples variáveis, logo, podemos por exemplo restringir o acesso direto a esse membro e definir 2 funções, uma para a definição de valores e outra para a leitura. Dessa maneira, permitimos o acesso externo ao membro e ao mesmo tempo, somos capazes de analisar o valor que está sendo atribuido e processar o valor que será retornado.&lt;/p&gt;
+&lt;p&gt;Nesse momento o nosso objetivo é estudar a passagem dos valores dos atributos através do uso de funções. Isso porque, &lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;a utilização de funções para a leitura e escrita de valores representa uma metodologia de desenvolvimento e por isso, haverá no mínimo uma aula dedicada ao seu estudo&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Ainda que não exista uma regra, é comum que funções que definem valores a atributos de classe utilizem o prefixo &lt;strong&gt;set&lt;/strong&gt;, da mesma forma, funções que retornam valores, geralmente utilizam o prefixo &lt;strong&gt;get&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#GERENCIANDO PROPRIEDADES&lt;/span&gt;
+
+&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
+
+&lt;span class="x"&gt;    public $idade = 0;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function get_idade(){&lt;/span&gt;
+&lt;span class="x"&gt;        return $this -&amp;gt; idade;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function set_idade($idade){&lt;/span&gt;
+&lt;span class="x"&gt;        if($idade &amp;gt; 0){&lt;/span&gt;
+&lt;span class="x"&gt;            $this-&amp;gt;idade = $idade;&lt;/span&gt;
+&lt;span class="x"&gt;        }else{&lt;/span&gt;
+&lt;span class="x"&gt;            echo &amp;quot;A idade informada é inválida.&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;        }&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;//    get - pegar&lt;/span&gt;
+&lt;span class="x"&gt;//    set - definir, atribuir a, setar&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
+&lt;span class="x"&gt;$p1 -&amp;gt; set_idade(22);&lt;/span&gt;
+&lt;span class="x"&gt;$p1 -&amp;gt; set_idade(-5);&lt;/span&gt;
+&lt;span class="x"&gt;echo &amp;quot;A idade é: {$p1-&amp;gt;get_idade()}&amp;quot;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="propriedade"></category><category term="atributo"></category><category term="blog"></category></entry><entry><title>Herança com PHP II</title><link href="http://excript.com/php/heranca-php-ii.html" rel="alternate"></link><published>2016-06-11T04:15:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/heranca-php-ii.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula daremos continuidade ao estuda da herança, a definição de subclasses e as características das classes-filhas.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="subclasse"&gt;
+&lt;h2&gt;SUBCLASSE&lt;/h2&gt;
+&lt;p&gt;Chamamos de &lt;strong&gt;Sub Classe&lt;/strong&gt; todas as classes herdeiras. O conceito de SubClasse é o da especialização, isto é, a SubClasse possui todas as características e funcionalidades da Super e agora irá definir um outro conjunto de funções e propriedades a fim de especializar algum conceito. É importante observar que toda SubClasse possui acesso aos membros públicos e protegidos da SuperClasse, porém o inverso não é verdadeiro.&lt;/p&gt;
+&lt;p&gt;Toda SubClasse recebe os membros não privados e protegidos da super classe. Isso faz com que a subclasse torne-se capaz de fazer uso de todas funções, como também, atribuir valores às variáveis definidas na super. Toda SubClasse, por definição, será &lt;strong&gt;também&lt;/strong&gt; do tipo da SuperClasse, ou seja, se tivermos as classe A e B, onde B é subclasse de A, nós temos que B será do tipo B, e também do tipo A.&lt;/p&gt;
+&lt;p&gt;Num primeiro momento a definição e utilização de SubClasse não possui quaisquer diferença no que estudamos até agora, isso porque, temos que sempre ter em mente que &lt;strong&gt;TODA&lt;/strong&gt; classe deriva obrigatoriamente de alguma SuperClasse, até porque, toda classe possui propriedades e funcionalidades por padrão, mesmo que estas sejam conceitos implicitos.&lt;/p&gt;
+&lt;p&gt;Fato é que não haverá maiores problemas na SubClasse se está não vier a estender as definições da sua SuperClasse. Do contrário, isto é, se a Sub implementar uma variável o função de mesmo nome implementado na Super, o que acontecerá? Há diversas situações onde a SubClasse precisará alterar somente o funcionamento de uma função, isto é, precisará modificar o funcionamento de uma função. Outras vezes, a função não precisará ser redefinida, somente estendida. Como sabemos, a herança é uma característica das classes e não das funções e propriedades.&lt;/p&gt;
+&lt;p&gt;A implementação da subclasse requer que conheçamos alguns conceitos relacionados ao compartilhamento de propriedades em níveis hierárquicos distintos.&lt;/p&gt;
+&lt;p&gt;Por exemplo, vamos fazer algumas suposições, ainda que não vamos, nesse momento, estudar como resolver os problemas propostos.&lt;/p&gt;
+&lt;p&gt;O que acontece se a classe derivada declara uma variável de mesmo nome declarada na classe base?
+O que acontece se a classe derivada, declara uma funções de mesmo nome?
+Estudamos que os construtores são invocados pela Máquina Virtual do PHP, ou seja, se tentarmos invocar o construtor pelo seu nome, um erro ocorrerá. Então, se a superclasse tem implementado um construtor e a subclasse também o implementou, ao criarmos uma instância da classe derivada, o que acontecera:&lt;/p&gt;
+&lt;blockquote&gt;
+a) o construtor que será invocado, será o da superclasse ou da subclasse?
+c) ambos construtores serão invocados?&lt;/blockquote&gt;
+&lt;p&gt;Acabamos de elucidar algumas situações que &lt;strong&gt;irão ocorrer, e ocorrerão muitas vezes&lt;/strong&gt;, quando estivermos trabalhando com a orientação a objetos. Isso significa que de agora em diante, o nosso estudo se ampliara, até porque, ao interagirmos com classes derivadas, estaremos também, interagindo com a classe base.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Um conceito simples mas importante é que a classe derivada deve se integrar com a classe base, jamais o contrário. Se houver problemas na implementação da classe derivada e a solução que encontrarmos é a alteração da superclasse, teremos uma de 2 situações:&lt;/dt&gt;
+&lt;dd&gt;&lt;ol class="first last arabic simple"&gt;
+&lt;li&gt;a superclasse está mau implementada&lt;/li&gt;
+&lt;li&gt;a solução por nós encontrada é um problema conceitual&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Como veremos de agora em diante, a POO propriamente dita é bastante simples e é quase que uma decoreba, o grande problema, pra não dizer o início do inferno, será totalmente conceitual, de análise da informação, das relações entre os tipos de dados e de como estes se relacionam. A implementação do código se tornará um simples detalhe decorrente, na maioria das vezes, de um grande estudo e análise!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;!-- Como a subclasse implementa suas próprias funcionalidades? --&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class SuperClasse {&lt;/span&gt;
+
+&lt;span class="x"&gt;    public $a = 0;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function super()&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        echo $a;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;class SubClasse extends SuperClasse {&lt;/span&gt;
+
+&lt;span class="x"&gt;    public $a;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function sub()&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        this-&amp;gt;$a = 10;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+
+&lt;span class="x"&gt;$sub = new SubClasse();&lt;/span&gt;
+&lt;span class="x"&gt;$sub-&amp;gt;sub();&lt;/span&gt;
+&lt;span class="x"&gt;$sub-&amp;gt;super();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="herança"></category><category term="encapsulamento"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="blog"></category></entry><entry><title>Acessando Membros de Classe em PHP</title><link href="http://excript.com/php/acessando-membros-classe-php.html" rel="alternate"></link><published>2016-06-10T23:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-10:php/acessando-membros-classe-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos o acesso a membros de classe, como devemos implementar, quais as restrições que devemos impor e demais características dessa definição.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="o-que-sao-membros-de-classe"&gt;
+&lt;h2&gt;O QUE SÃO MEMBROS DE CLASSE&lt;/h2&gt;
+&lt;p&gt;Um membro de classe é toda variável ou função definida e implementada pela classe. Assim, temos que todos os atributos e métodos que estiverem definidos numa classe são chamados de &amp;quot;membros de classe&amp;quot;. Para acessarmos os membros de uma classe, temos que utilizar a seguinte nomenclatura:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;referência + nome_membro&lt;/span&gt;
+&lt;span class="x"&gt;referência -&amp;gt; nome_membro&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Temos sempre que pensar no conceito de referência, ou seja, uma variável é somente uma referência a um objeto. Assim, temos que todas as instância que criarmos de uma classe poderão acessar os membros públicos através da definição acima.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-conceito-de-referencia"&gt;
+&lt;h2&gt;O CONCEITO DE REFERÊNCIA&lt;/h2&gt;
+&lt;p&gt;Referência é para o PHP o que o endereço é para o C++, ou seja, um valor que está apontando para uma região em que há informações armazenadas. O conceito de referência em PHP não é explicito, até porque, não conseguimos obter esse endereço facilmente. Mesmo assim, não é difícil imaginar que &lt;strong&gt;tudo&lt;/strong&gt; precisa estar armazenado em algum lugar, logo, a referência é a nomenclatura que utilizamos de forma genérica para dizer que a variável A está ligada a determinada informação.&lt;/p&gt;
+&lt;p&gt;É preciso entender que toda variável está armazenada na memória, bem como todo objeto. Entendido isso, é preciso entender que é utilizado uma variável para guardar a região em que determinado objeto está armazenado. Logo, você talvez se pergunte quem armazena o local de memória em que as variáveis estão, e a resposta é: o interpretador, a máquina virtual do PHP.&lt;/p&gt;
+&lt;p&gt;Se entendido o conceito de referência, o conceito sobre a variável &lt;tt class="docutils literal"&gt;this&lt;/tt&gt; fica fácil de ser compreendido, até porque, está é uma variável que é criada para cada novo objeto e, só pode ser utilizada para o acesso de dentro do escopo da classe. Por isso é que dizemos que a pseudo-variável $this &lt;strong&gt;sempre&lt;/strong&gt; estará se referindo a classe em que estamos trabalhando.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//internamente&lt;/span&gt;
+&lt;span class="x"&gt;$this-&amp;gt;nome_do_membro;&lt;/span&gt;
+
+&lt;span class="x"&gt;//externamente&lt;/span&gt;
+&lt;span class="x"&gt;$variavel-&amp;gt;nome_do_membro;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="acessando-membros-de-classe"&gt;
+&lt;h2&gt;ACESSANDO MEMBROS DE CLASSE&lt;/h2&gt;
+&lt;p&gt;Todo objeto criado é único, ocupa um espaço reservado na memória, possui uma referência que o identifica e, por essas definições, tem-se que todo objeto é diferente dos demais e seus atributos,, no caso, as variáveis definidas pela classe, também serão únicas e ocuparão um espaço reservado de memória.&lt;/p&gt;
+&lt;p&gt;Quando criamos 2 objetos de uma mesma classe, cada um possuirá um endereço que o identifica na memória e estes, não estarão compartilhando absolutamente nada - salvo se definirmos explicitamente o contrário.&lt;/p&gt;
+&lt;p&gt;Então, se tivermos uma classe que definiu 10 variáveis em seu corpo, nós teremos, a cada novo objeto, 10 variáveis pra cada nova instância criada. E essas 10 variáveis que, estão contidas em cada um dos objetos, só poderão ser acessadas através da variável que possui a referência para o objeto. Logo, é possível deduzir que para fazer acesso a um membro de um objeto é preciso, antes de mais nada, especificar a qual objetos estamos nos referindo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="acessando-atributos-de-objeto"&gt;
+&lt;h2&gt;ACESSANDO ATRIBUTOS DE OBJETO&lt;/h2&gt;
+&lt;p&gt;Definimos uma classe, criamos objetos, porém, até agora, não atribuimos valores às variáveis definidas na classe e que, estão disponíveis em cada instância.&lt;/p&gt;
+&lt;p&gt;Um objeto pode ser utilizado de várias maneira e para diferentes propósitos, assim, podemos trabalhar com objeto para encapsular informações ou então, para simplesmente agruparmos um conjunto de variáveis. Dessa forma, temos que todos atributos contidos num objeto, passam a ser acessado através de um namespace, isto é, um nome que o identica dentro de um projeto, até porque, é dessa maneira que somos obrigados a acessar os membros de classe.&lt;/p&gt;
+&lt;p&gt;Para entender o que foi dito acima, vamos pensar inicialmente que ao criarmos um objeto é preciso dizer onde a classe deste está definida, ou seja, programada. Toda classe está definida dentro de arquivos de código com extensão *.php e todo arquivo está, obrigatoriamente, contido dentro de uma pasta. O namespace de uma classe é o caminho &lt;strong&gt;PATH&lt;/strong&gt; até o local onde o arquivo *.php está armazenado mais o nome da classe.&lt;/p&gt;
+&lt;p&gt;Podemos concluir que todo objeto existente é o resultado da execução de um projeto, a classe. Toda classe está contida num arquivo *.php e todo arquivo *.php está contido numa pasta. Logo, temos de dizer, no momento de criação de um objeto, o namespace da classe. Porém, para acessarmos os membros de um objeto, bastará utilizarmos a referência e em seguida, especificar o nome do membro que desejamos acessar.&lt;/p&gt;
+
+    &lt;div class="admonitionblock important data-line-21"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                &lt;td class="icon"&gt;
+                    &lt;i class="fa icon-important" title="Importante!"&gt;&lt;/i&gt;
+                &lt;/td&gt;
+                &lt;td class="content"&gt;
+                    &lt;div class="paragraph data-line-22"&gt;
+                        &lt;p&gt;É importante lembrar que só é possível acessar membros públicos!&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;p&gt;O acesso aos atributos públicos de um objeto ocorre de maneira análoga a forma em que manipulamos variáveis, porém agora, temos de especificar em qual instância a variável que desejamos alterar está contida.&lt;/p&gt;
+&lt;p&gt;Para acessar um membro de um objeto, temos de especificar 2 coisas:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Qual objeto&lt;/li&gt;
+&lt;li&gt;Qual o membro&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Utilizamos o &lt;tt class="docutils literal"&gt;operador de objeto&lt;/tt&gt;, comumente chamado de &lt;tt class="docutils literal"&gt;operador seta&lt;/tt&gt; para acessarmos membros públicos, como temos no exemplo seguinte:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$objeto_nome -&amp;gt; propriedade_nome;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O esquema sempre será o mesmo quando formos acessar as funções definidas pelas classes. Inicialmente informamos o objeto, em seguida colocamos o &lt;tt class="docutils literal"&gt;operador seta&lt;/tt&gt; e por fim, definimos o nome da função [ &lt;strong&gt;funcionalidade&lt;/strong&gt; ] que queremos invocar.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$p1 = new Pessoa(); #criando um objeto de Pessoa e atribuindo a referência à variável $p1&lt;/span&gt;
+&lt;span class="x"&gt;$p2 = new Pessoa();&lt;/span&gt;
+&lt;span class="x"&gt;$p1-&amp;gt;nome = &amp;quot;João&amp;quot;; #acessando a variável $nome&lt;/span&gt;
+&lt;span class="x"&gt;                    # definida pela classe Pessoa e por isso,&lt;/span&gt;
+&lt;span class="x"&gt;                    # contida na instância $p1&lt;/span&gt;
+&lt;span class="x"&gt;$p2-&amp;gt;nome = &amp;quot;Maria&amp;quot;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A utilização de objetos para gerar HTML é igual a forma com geramos páginas fazendo uso de variáveis. A diferença é que agora a variável que utilizaremos é, na verdade, um atributo de um objeto e, para extrairmos seu valores, invocaremos uma função que foi definida para este fim.&lt;/p&gt;
+&lt;p&gt;No exemplo acima, criamos objetos, definimos seus atributos e por fim, extraímos as informações dos objetos criados. Mesmo que o exemplo feito não tenha qualquer utilidade prática, o conceito envolvido mostra o uso comum de objetos e geração de HTML.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="inicializando-membros-de-classe"&gt;
+&lt;h2&gt;INICIALIZANDO MEMBROS DE CLASSE&lt;/h2&gt;
+&lt;p&gt;Muitas propriedades de objetos precisarão ter valores iniciais para que tudo funcione corretamente. Todas as propriedades que precisam definir valores iniciais, precisaram ter seus valores atribuídos em sua declaração.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Quadrado&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+&lt;span class="x"&gt;    public $x = 5, $y = 10;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#ACESSANDO MEMBROS DE CLASSE&lt;/span&gt;
+
+&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
+&lt;span class="x"&gt;    public $idade = 0;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
+&lt;span class="x"&gt;$p2 = new Pessoa();&lt;/span&gt;
+
+&lt;span class="x"&gt;$p1 -&amp;gt; idade = 22;&lt;/span&gt;
+&lt;span class="x"&gt;$p2 -&amp;gt; idade = 15;&lt;/span&gt;
+
+&lt;span class="x"&gt;echo $p1 -&amp;gt; idade . &amp;quot;\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;echo $p2 -&amp;gt; idade;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="membro de classe"></category><category term="objeto"></category><category term="instância"></category><category term="blog"></category></entry><entry><title>Criação de Objetos em PHP</title><link href="http://excript.com/php/criacao-objetos-php.html" rel="alternate"></link><published>2016-06-10T21:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-10:php/criacao-objetos-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a criação de novos objetos através das classes que definimos em PHP. Aprenderemos as diferenças entre classe, objeto e instâncias, bem como as demais definições envolvidas.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="criando-objetos-e-acessando-membros-de-classe"&gt;
+&lt;h2&gt;CRIANDO OBJETOS E ACESSANDO MEMBROS DE CLASSE&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Para acessarmos os membros de uma classe, primeiro é necessário criar a mesma&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As classes são os projetos de como os objetos devem funcionar quando criados. Então, temos que entender que a classe é o nosso código propriamente dito e, para que este tenha alguma utilidade, precisamos criar uma instância do mesmo. Observe que na orientação a objetos, instância e objeto são sinônimos.&lt;/p&gt;
+&lt;p&gt;Se consultarmos o dicionário Aurélio o significado de instância, teremos varias definições, dentre estas há o significado de instância na computação e o mesmo diz que:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Inform. Cada um dos objetos [v. objeto (11)] criados durante a execução de programa (9).
+&lt;/pre&gt;
+&lt;p&gt;Podemos concluir que, executar o código da nossa classe significa criar novos objetos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conceitos-importantes"&gt;
+&lt;h2&gt;CONCEITOS IMPORTANTES&lt;/h2&gt;
+&lt;p&gt;Em qualquer disciplina que estudamos há um conjunto de princípios a serem estudados e entendidos e, com a orientação a objetos não é diferente. A grande maioria dos conceitos que estudaremos terão significado igual a de outras disciplinas, como por exemplo, o conceito de herança, logo, o que precisamos realmente entender e memorizar forma um conjunto bastante diminuto.&lt;/p&gt;
+&lt;p&gt;A seguir temos a definição de 3 conceitos e, talvez, os mais importantes, haja vista que todos os demais, derivam destes.&lt;/p&gt;
+&lt;p&gt;a) &lt;strong&gt;CLASSE&lt;/strong&gt;
+Projeto composto por código de programação. Quando executado executado origina um objeto.&lt;/p&gt;
+&lt;p&gt;b) &lt;strong&gt;OBJETO&lt;/strong&gt;
+Execução do código da classe.&lt;/p&gt;
+&lt;p&gt;c) &lt;strong&gt;INSTÂNCIA&lt;/strong&gt;
+Sinônimo de objeto. Essa é uma forma genérica para nos referirmos a objetos criados.&lt;/p&gt;
+&lt;p&gt;É muito importante entender que as variáveis não são objetos e nem instâncias, elas somente nos proporcionam uma forma para acessarmos as instâncias que estão na memória. Por isso, é errado dizer que uma variável é, por exemplo, um Carro, partindo do princípio de que temos a classe Carro.&lt;/p&gt;
+&lt;p&gt;Para criarmos um objeto, temos que utilizar a instrução &lt;tt class="docutils literal"&gt;new&lt;/tt&gt; e então, definir o nome da classe que desejamos um objeto. A instrução &lt;tt class="docutils literal"&gt;new&lt;/tt&gt; tem como objetivo, informar que desejamos executar o código da nossa classe e também, que queremos a instância dessa nova classe.&lt;/p&gt;
+&lt;p&gt;A instrução &lt;tt class="docutils literal"&gt;new&lt;/tt&gt; &lt;strong&gt;sempre&lt;/strong&gt; retornará a instância do objeto criado, salvo se ocorrer erros no momento da criação.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="acessando-objetos-e-seus-membros"&gt;
+&lt;h2&gt;ACESSANDO OBJETOS E SEUS MEMBROS&lt;/h2&gt;
+&lt;p&gt;Quando criamos um objeto precisamos ter uma forma para acessar o mesmo, por isso, é comum atribuirmos na declaração de criação de objetos, uma variável que receberá a instância do mesmo. Isto é, a criação de novos objetos estará numa instrução de atribuição, onde o lado direito será a criação do objeto e o lado esquerdo a variável que receberá o endereço da instância criada.
+Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a nova instância) a uma variável. Por fim, temos que entender que as variáveis representam uma forma fácil para o acesso a memória, por isso vinculamos variáveis a objetos.&lt;/p&gt;
+&lt;p&gt;Também é importante observar que, se a instância retornada não for armazenada numa variável no momento da criação, não será mais possível acessar o objeto criado, ou seja, criar um novo objeto e não atribuir a instância, significa, executar o código de inicialização do objeto e em seguida, destruir o mesmo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="destruicao-de-objetos"&gt;
+&lt;h2&gt;DESTRUIÇÃO DE OBJETOS&lt;/h2&gt;
+&lt;p&gt;Um objeto será destruido todas as vezes em que não houver mais variáveis referenciando ao mesmo. Ou seja, o PHP desaloca a memória de todos os objetos quando estes não mais estão sendo utilizados. Se por acaso tentarmos acessar um objeto que foi destruído, temos que ocorrerá um erro e o Script PHP terá sua execução finalizada, até porque, o objeto não existe mais.&lt;/p&gt;
+&lt;p&gt;Porém, não se preocupe, o PHP sabe gerenciar muito bem a memória e também, consegue definir com bastante precisão o momento de remover cada instância da memória. Por isso, salvo em raras exceções, você irá ter problemas com a destruição de objetos que ainda estavam em uso.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
+&lt;span class="x"&gt;$p2 = new Pessoa();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="garbage-collector"&gt;
+&lt;h2&gt;GARBAGE COLLECTOR&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;Garbage Collector&lt;/strong&gt; é o responsável por desalocar a memória utilizada. A forma de funcionamento do mesmo se dá pelo compartilhamento de uma variável que, a cada nova variável que fizer referência a determinada instância, o valor da variável compartilhada é incrementado e, a cada instância referenciada por uma variável que for destruída, tem o seu valor decrementado. Quando este valor for igual a 0 a instância é removida da memória.&lt;/p&gt;
+&lt;p&gt;Observe que estamos falando em instância, isto é, em objetos e não em Classes. Logo, o Garbage Collector não gerencia a quantidade de instâncias criadas, mas sim, &lt;strong&gt;a quantidade de variáveis que apontam para uma instância&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;Se você tiver dificuldade no entendimento deste conceito não há problema, até porque, basta saber que, todas as vezes que não houver mais variáveis fazendo referência a um objeto o mesmo será destruido!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#CRIAÇÃO DE OBJETOS/INSTÂNCIAS&lt;/span&gt;
+
+&lt;span class="x"&gt;class Classe{&lt;/span&gt;
+&lt;span class="x"&gt;    public $a = 1;&lt;/span&gt;
+&lt;span class="x"&gt;    public $b = 2;&lt;/span&gt;
+&lt;span class="x"&gt;    public $c = 3;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;$objetoA = new Classe();&lt;/span&gt;
+&lt;span class="x"&gt;$objetoB = new Classe();&lt;/span&gt;
+&lt;span class="x"&gt;$objetoC = new Classe();&lt;/span&gt;
+
+&lt;span class="x"&gt;var_dump($objetoA);&lt;/span&gt;
+&lt;span class="x"&gt;//var_dump($objetoB);&lt;/span&gt;
+&lt;span class="x"&gt;//var_dump($objetoC);&lt;/span&gt;
+
+&lt;span class="x"&gt;unset($objetoA);&lt;/span&gt;
+&lt;span class="x"&gt;var_dump($objetoA);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="blog"></category></entry><entry><title>Visão Geral do PHP</title><link href="http://excript.com/php/visao-geral-php.html" rel="alternate"></link><published>2016-06-10T18:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-10:php/visao-geral-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula teremos uma visão geral sobre a linguagem PHP, veremos seus principais recursos, suas principais características e a razão pela qual há tantas pessoas utilizando essa linguagem ao redor do mundo.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;VISÃO GERAL DO PHP&lt;/h2&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;introdução&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;O PHP é uma das linguagens mais utilizadas do mundo e, para o desenvolvimento Web a mesma ainda é a mais utilizada. Isso não significa que o PHP seja a melhor linguagem, mas sim que o mesmo possui uma grande adoção pela comunidade de desenvolvimento.&lt;/p&gt;
+&lt;p class="last"&gt;Atualmente, todos que desenvolvem para WEB possuem no mínimo, uma noção da linguagem PHP, isso porque, a mesma deriva da linguagem C e C++, mesmo que em suas primeiras versões, tenha sido criada com a linguagem PERL.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;o que significa PHP?&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;O ermos PHP é um assíncrono de &lt;strong&gt;Hypertext Preprocessor&lt;/strong&gt;, ou seja, uma linguagem de processamento de hipertexto. Hipertexto é chamado todo texto que possui links internos para a navegação entre diferentes páginas.&lt;/p&gt;
+&lt;p class="last"&gt;Antigamente, nas primeiras versões da linguagem PHP, dizia-se que o termo era um assíncrono de &lt;strong&gt;Personal Home Page&lt;/strong&gt;, porém, atualmente, essa definição vem sendo negada até pela documentação oficial e, infelizmente, poucos ousam a relembrar as verdadeiras origens do termo.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;server-side&lt;/dt&gt;
+&lt;dd&gt;O termos server-side vem do Inglês e significa que o código é executado do lado do servidor. Server vem de servidor e side significa lado, por isso Server-Side, ou seja: Do lado do servidor.&lt;/dd&gt;
+&lt;dt&gt;documentação e comunidade&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;Uma tecnologia para fazer sucesso precisa, antes de tudo, de excelente documentação. Até porque, não há como um conhecimento se difundir quando não existe uma fonte primária para consultar e assim, aprender e ensinar algum conceito.&lt;/p&gt;
+&lt;p&gt;Por isso, quando você tiver algum problema ou então, não souber utilizar alguma instrução, esteja certo que, muito provavelmente, alguém já teve a mesma dúvida que você e por isso, encontrarás alguma documentação em alguma parte da Web.&lt;/p&gt;
+&lt;p class="last"&gt;A comunidade PHP é gigantesca no mundo e esse talvez seja o fenômeno do porque, tudo está tão bem documentado e com tantos exemplos disponíveis. Seja em inglês, português ou espanhol, há centenas de sites que trazem bastante documentação sobre qualquer aspecto da linguagem.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;grandes frameworks&lt;/dt&gt;
+&lt;dd&gt;Existem grandes frameworks escritos em PHP, como por exemplo o Wordpress e o Magento que são, respectivamente, o maior sistema de blog e loja virtual do mundo. Ainda que isso não prove muita coisa é um excelente indicador do quão robusta está determinada tecnologia.&lt;/dd&gt;
+&lt;dt&gt;produtividade ao extremo&lt;/dt&gt;
+&lt;dd&gt;A linguagem PHP é uma linguagem viva e a cada nova versão a sintaxe e performance vem sendo aprimorada. Logo, conseguimos com o PHP uma produtividade que beira ao extremo e um processamento que equipara-se com as maiores tecnologias concorrentes.&lt;/dd&gt;
+&lt;dt&gt;fácil aprendizado&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;Observa-se que muitas pessoas tem como primeira linguagem o PHP, logo, o mesmo vem, indiretamente demonstrando que, pode ser uma excelente opção como primeira linguagem de programação.&lt;/p&gt;
+&lt;p class="last"&gt;O Curso de PHP da eXcript é um excelente lugar para todos que estejam dando os primeiros passos com a programação ou então, para aqueles que nunca antes ouviram falar sobre programação. Todo o nosso curso parte do princípio de que o aluno nada sabe e nada conhece, logo, abordamos o estudo desde o início, desde os fundamentos da Web e da lógica de programação.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;interpretado&lt;/dt&gt;
+&lt;dd&gt;A linguagem PHP, ao contrário das linguagens C e C++ é interpretada, isto é, a mesma não possui as fases de compilação e geração de código binário. Até é possível compilar um código PHP, porém, normalmente, o código é interpretado no momento em que for solicitado.&lt;/dd&gt;
+&lt;dt&gt;paradigmas suportados&lt;/dt&gt;
+&lt;dd&gt;O PHP suporta vários paradigmas de programação, como a orientação a objetos, programação procedural, funcional dentre outros. Neste curso aprenderemos os diversos paradigmas separadamente.&lt;/dd&gt;
+&lt;dt&gt;multiplataforma&lt;/dt&gt;
+&lt;dd&gt;Hoje, existem interpretadores da linguagem PHP para praticamente todas as plataformas que rodam do lado do servidor. Por isso, é comum dizermos que o PHP é multiplataforma, ou seja, que pode ser executado em diversos sistemas operacionais e obter resultados semelhantes.&lt;/dd&gt;
+&lt;dt&gt;acesso a banco de dados&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;O interpretador da linguagem PHP foi escrito em C e C++, logo, podemos facilmente extender a linguagem, criar extensões e implementar funcionalidades, como por exemplo a conexão a banco de dados. De fábrica, o PHP se conecta ao SQLite e MySQL, porém, basta baixarmos extensões para nos conectarmos a outras bases de dados.&lt;/p&gt;
+&lt;p class="last"&gt;Por isso dizemo que a linguagem é extensível, pois, qualquer pessoa pode, facilmente, criar recursos e disponibilizar novas funções.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category></entry><entry><title>A Orientação a Objetos em PHP</title><link href="http://excript.com/php/orientacao-a-objetos-em-php.html" rel="alternate"></link><published>2016-06-10T01:45:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-10:php/orientacao-a-objetos-em-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;Orientação a Objetos&lt;/strong&gt; é uma paradigma de programação, isto é, uma metodologia para o desenvolvimento de software. A definição de orientação, utilizando a definição como sendo um Verbo transitivo direto e indireto, significa, determinar a posição, orientar, indicar o rumo, guiar, dirigir, nortear. Objeto, por sua vez, é tudo que pode ser manipulado, possui características e desempenha funcionalidades.&lt;/p&gt;
+&lt;p&gt;Podemos aferir que o termo &lt;strong&gt;Orientação&lt;/strong&gt; é o modelo utilizado, o que norteará tudo e, &lt;strong&gt;objeto&lt;/strong&gt;, a definição de cada parte do modelo.&lt;/p&gt;
+&lt;p&gt;Segundo a análise das definições acima a respeito de &lt;strong&gt;orientação&lt;/strong&gt; e de &lt;strong&gt;objeto&lt;/strong&gt;, podemos aferir também que o &lt;strong&gt;Paradigma Orientado a Objetos&lt;/strong&gt; é o modelo de projeto onde todas as informações serão definidas e utilizadas como sendo objetos, isto é, entidades representativas, ou então, podemos dizer que tudo tornar-se-á objetos e poderá ser manipulado como sendo uma entidade.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-filosofia-e-a-orientacao-a-objetos"&gt;
+&lt;h2&gt;A FILOSOFIA E A ORIENTAÇÃO A OBJETOS&lt;/h2&gt;
+&lt;p&gt;O estudo teórico da orientação a objeto está recheado de conceitos filosóficos e suas definições. A primeira, evidentemente, é o conceito da natureza do objeto. Comumente, diz-se que objeto é tudo que é físico e que pode ser visto ou então, segurado nas mãos. Porém, se falarmos sobre empresas, no plural, temos que o conceito é ou não é um objeto?&lt;/p&gt;
+&lt;p&gt;Para a filosofia clássica, o plural é um conceito abstrato e que só existirá se houver, antes de tudo, alguma empresa fisicamente. A programação orientada a objetos analisa, geralmente, o conceito de empresa abstrato. Da mesma forma podemos perguntar o que é uma floresta? Floresta é a observação de arvores independentes observadas como pertences a um conjunto, no caso - a floresta.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="objeto"&gt;
+&lt;h2&gt;OBJETO&lt;/h2&gt;
+&lt;p&gt;Em nosso mundo, &lt;strong&gt;objeto&lt;/strong&gt; é tudo que é físico e portanto, que pode ser manipulado. Tudo que é físico possui, por definição do termo &lt;strong&gt;físico&lt;/strong&gt; características e portanto, pode desempenhar atividades.&lt;/p&gt;
+&lt;p&gt;Se tomarmos como exemplo uma pedra, temos que está é um objeto, existe fisicamente, possui propriedades e, pode desempenhar alguma função. Toda pedra desempenha uma função? Não sei lhe dizer, mas garanto que podemos decidir que determinada pedra desempenha alguma funcionalidade. Quais as funcionalidades que uma pedrão pode desempenhar? Tudo que as suas características nos fornecerem como uma forma de utiliza-la.&lt;/p&gt;
+&lt;p&gt;Toda objeto, ou melhor, todas as pedras possuem características, como por exemplo, peso, dimensão, coloração, densidade, propriedades fisico-químicas e etc. Toda característica pode ser explorada, isto é, servir para algum fim. O peso da pedra, por exemplo, pode ser utilizado para travar uma porta. A coloração de uma pedra pode ser utilizada como decoração de muros e paredes. As propriedades físico-químicas podem ser utilizadas para ativar ou desativar uma reação e assim por diante.&lt;/p&gt;
+&lt;p&gt;O que precisamos entender nesse momento é que &lt;strong&gt;todo objeto&lt;/strong&gt; possui &lt;strong&gt;propriedades&lt;/strong&gt; e &lt;strong&gt;todo objeto&lt;/strong&gt; possui &lt;strong&gt;funcionalidades&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="propriedades"&gt;
+&lt;h2&gt;PROPRIEDADES&lt;/h2&gt;
+&lt;p&gt;Propriedade é toda e qualquer característica dos objetos. É importante saber que &lt;strong&gt;propriedade&lt;/strong&gt;, &lt;strong&gt;característica&lt;/strong&gt; e &lt;strong&gt;atributo&lt;/strong&gt; são, na orientação a objetos, sinônimos.&lt;/p&gt;
+&lt;p&gt;A afirmação de que todo objeto possui propriedades é verdadeira e, aquele que disser o contrário, que demonstre o objeto que não existe, até porque, existir é a primeira propriedade de &lt;strong&gt;TODO&lt;/strong&gt; objeto que, também pode ser considerado uma funcionalidade.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="funcao"&gt;
+&lt;h2&gt;FUNÇÃO&lt;/h2&gt;
+&lt;p&gt;A função é aquilo que o objeto desempenha. Nem todo objeto terá definido funções explicitamente, até porque, há objetos cuja funcionalidade é guardar valores, ou seja, guardar propriedades.&lt;/p&gt;
+&lt;p&gt;Todo objeto pode desempenhar 2 tipos de funcionalidades: interna e externa. Um objeto pode, por exemplo, alterar suas propriedades sem interagir com o meio em que está contido. Da mesma forma que um objeto pode alterar suas propriedades pela interação com o meio.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="informacao-vs-propriedade"&gt;
+&lt;h2&gt;INFORMAÇÃO vs PROPRIEDADE&lt;/h2&gt;
+&lt;p&gt;Já estudamos que todo objeto possui propriedades, agora, vamos estudar o que são realmente as propriedades.&lt;/p&gt;
+&lt;p&gt;É correto dizer que os objetos físicos possuem cor. Logo, todo objeto físico deve ter a propriedade cor, porém, se analisarmos com atenção, objetos não possuem propriedades e sim uma cor propriamente dita. Parece simples e até idiota a análise, no entanto, vejamos que, o projeto de todo objeto possui propriedades, enquanto que os objetos, em sua definição, possuem por exemplo, uma cor e não uma propriedade.&lt;/p&gt;
+&lt;p&gt;O que temos de entender do conceito exposto é, que a orientação a objetos, inicialmente, trabalha com o projeto de como será cada objeto, em seguida, quando houver um objeto criado através do projeto, teremos algo físico que possui características que, iremos chamar de propriedades, mesmo sabendo que somente o projeto é que possui a definição de propriedade.&lt;/p&gt;
+&lt;p&gt;Podemos resumir todo o exposto pela análise do conjunto e da unidade. A POO faz com que criemos entidades representativas e, nos obriga a definir as propriedades e funcionalidades dessas entidades. Podemos dizer então, que num primeiro momento estaremos trabalhando com o conjunto, isto é, definimos as características e funcionalidades que &lt;strong&gt;todos&lt;/strong&gt; objetos criados terão. Em seguida, após definir o projeto, escreveremos que desejamos que seja criado um objeto e que este possua determinados valores segundo as propriedades anteriormente definidas. Assim, temos que entender as 2 fases da POO, onde a primeira será a definição do projeto e a segunda a utilização propriamente dita.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="objetos-especializados"&gt;
+&lt;h2&gt;OBJETOS ESPECIALIZADOS&lt;/h2&gt;
+&lt;p&gt;Especialização é o aprimoramento de determinada característica. Se estudarmos as frutas, inicialmente iremos definir o conceito de fruta propriamente dito. Em seguida, iremos por exemplo, estudar as melancias que são, antes de mais nada frutas, porém, possuem características únicas.&lt;/p&gt;
+&lt;p&gt;A análise de frutas de maneira geral é o projeto pelo qual todas as frutas são baseadas, logo, é correto dizer que, todas as frutas possuem um conjunto de características e funcionalidades iguais. Assim, quando formos definir o projeto da melancia iremos utilizar como base o projeto das frutas, do contrário, teremos projetos redundantes.&lt;/p&gt;
+&lt;p&gt;O projeto das melancias terá definições que toda melancia possui, logo, quando criarmos uma melancia através deste projeto, teremos um objeto que é, ao mesmo tempo uma fruta e uma melancia. Isso porque, a melancia foi projetada se valendo do projeto das frutas, logo, toda melancia é uma fruta, mas nem toda fruta será uma melancia.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="definicao-de-objetos-que-nao-sao-objetos"&gt;
+&lt;h2&gt;DEFINIÇÃO DE OBJETOS QUE NÃO SÃO OBJETOS&lt;/h2&gt;
+&lt;p&gt;O estudo filosófico da OO é sem dúvida intrigante, até porque, o mesmo nos orienta a representar toda e qualquer informação como sendo entidades isoladas. Porém, muitas serão as entidades que precisaremos criar uma representação física, porém, no mundo real, a mesma possui uma definição abstrata.&lt;/p&gt;
+&lt;p&gt;Tomemos por exemplo o setor de RH e a necessidade de informatizar o mesmo. Para isso, nossa primeira atividade será, o estudo de como o setor funciona. Vamos criar uma situação hipotética para facilitar o estudo.&lt;/p&gt;
+&lt;p&gt;Observamos que o setor de RH faz o cadastro dos colaboradores. O RH também gerencia aqueles que desejam se tornar colaboradores. O RH define o salário e a função de cada colaborador e, conforme a função definida pelo RH para determinado colaborador, este terá acesso as várias partes do nosso programa.&lt;/p&gt;
+&lt;p&gt;Então, concluimos que, o setor de RH precisa, num primeiro momento de um cadastro de colaboradores e de um cadastro daqueles que desejam tornar-se colaboradores. Logo, desenhamos num papel que:&lt;/p&gt;
+&lt;p&gt;Colaboradores
+* Nome
+* Idade
+* Cargo
+* Ativo/Demitido
+* Data admissão&lt;/p&gt;
+&lt;p&gt;Acabamos de definir algumas propriedades dos colaboradores, e coloca-mo-as numa espécie de lista. Assim, temos as propriedades, agora, quais seriam as funções desses colaboradores? Nesse momento vamos deixar essa resposta em aberto.&lt;/p&gt;
+&lt;p&gt;Vamos supor que tenhamos programado um cadastro que contenha a lista de informações elucidadas para os Colaboradores. Esse cadastro nos forneceu a capacidade de Incluir, Alterar e Excluir Colaboradores. Até esse momento, o nosso trabalho foi a implementação de algo que ocorre fisicamente, isto é, quando não há um sistema informatizado, há papeis, formulários físicos que são utilizados para este fim.&lt;/p&gt;
+&lt;p&gt;Agora vamos supor que um Colaborar tenha sido demitido, logo, vamos marcar o campo Ativo como sendo igual a Falso, até porque, o Colaborador não está ativo. Agora, vamos supor que 2 anos depois o Colaborador foi re-contratado pela empresa, logo, quando o RH for fazer o cadastro, o mesmo não poderá cadastrar alguém que já possui cadastrado, correto? Então, num primeiro momento concluímos que, o RH marque o cadastro do Colaborador como sendo ativo e num primeiro momento, passamos a acreditar que tudo está funcionando normalmente.&lt;/p&gt;
+&lt;p&gt;Em um determinado dia, um chefe resolve analisar os lucros da empresa e, para isso, o mesmo utilizará o nosso sistema. Logo, o mesmo gera um relatório que contém toda a receita da empresa no ano passado menos o valor das despesas. A primeira pergunta a ser feita é: o Colaborador que teve o seu cadastrado recém ativado estará ou não no cálculo das despesas do ano que passou? Se o nosso sistema funcionar segundo a definição que acabamos de estudar, o colaborador será considerado uma despesa caso a data de admissão seja igual a data da sua primeira contratação. Porém, se alterarmos a data de admissão, este problema está resolvido! Mas, se o chefe quiser um relatório de lucro de 2 anos atrás, isto é, da época em que este colaborador estava ativo, o mesmo não entrará no relatório, até porque, a sua data de admissão foi alterada!&lt;/p&gt;
+&lt;p&gt;Deste problema concluímos que, além do cadastro de colaboradores, é necessário um cadastro do período trabalhado. Agora, após a análise do problema, acabamos por ter uma informação que é totalmente abstrata e, o pior de tudo, a mesma nem possui um nome propriamente dito e a mesma nem existia na época em que não havia o nosso sistema! Obviamente que, o nosso programa irá criar uma entidade, isto é, um objeto para representar esse fenômeno, porém, na prática, a contratação e a demissão são objetos ou simplesmente ações?&lt;/p&gt;
+&lt;p&gt;A moral da análise anterior é que com a POO, tudo tornar-se-á objetos, que possuirá identificador, propriedades e funcionalidades, porém, o paradoxo é que no mundo físico não há objeto de admissão e demissão, mas, no mundo virtual, onde não existem objetos físicos, haverá um objeto que conterá a definição de contratado, demitido, e em qual período ocorreu... o objeto ou a ação?&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category></entry><entry><title>Primeira Classe em PHP</title><link href="http://excript.com/php/primeira-classe-php.html" rel="alternate"></link><published>2016-06-01T03:45:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-01:php/primeira-classe-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -31,7 +861,7 @@
 &lt;h2&gt;PRIMEIRA CLASSE&lt;/h2&gt;
 &lt;p&gt;Nesta aula iremos criar a nossa primeira classe em PHP. Para isso, faremos uso da palavra-chave &lt;tt class="docutils literal"&gt;class&lt;/tt&gt; que, do Inglês significa classe. Após o uso da instrução &lt;tt class="docutils literal"&gt;class&lt;/tt&gt;, temos que abrir e fechar chaves, definindo assim, o escopo da nossa classe.&lt;/p&gt;
 &lt;p&gt;Isso quer dizer que todas as variáveis e funções deverão, obrigatoriamente, serem definidas no escopo da classe.&lt;/p&gt;
-&lt;p&gt;Toda classe em POO deverá, obrigatoriamente, possuir um nome. &lt;a class="reference external" href="_`NomenclaturadeVariáveisemPHP`"&gt;A composição de nomes segue as mesmas regras estudadas na definição de nomes de variáveis em PHP&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Toda classe em POO deverá, obrigatoriamente, possuir um nome. &lt;a class="reference external" href="http://excript.com/php/nomenclatura-variavel-php.html"&gt;A composição de nomes segue as mesmas regras estudadas na definição de nomes de variáveis em PHP&lt;/a&gt; .&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="nomenclatura-convencional"&gt;
 &lt;h2&gt;NOMENCLATURA CONVENCIONAL&lt;/h2&gt;
@@ -17254,56 +18084,7 @@ Exemplos:&lt;/p&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="c"></category></entry><entry><title>Acessando Membros de Classe em PHP</title><link href="http://excript.com/php/acessando-membros-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/acessando-membros-classe-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o acesso a membros de classe, como devemos implementar, quais as restrições que devemos impor e demais características dessa definição.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#ACESSANDO MEMBROS DE CLASSE&lt;/span&gt;
-
-&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
-&lt;span class="x"&gt;    public $idade = 0;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
-&lt;span class="x"&gt;$p2 = new Pessoa();&lt;/span&gt;
-
-&lt;span class="x"&gt;$p1 -&amp;gt; idade = 22;&lt;/span&gt;
-&lt;span class="x"&gt;$p2 -&amp;gt; idade = 15;&lt;/span&gt;
-
-&lt;span class="x"&gt;echo $p1 -&amp;gt; idade . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;echo $p2 -&amp;gt; idade;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="membro de classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Ambiente de Desenvolvimento PHP</title><link href="http://excript.com/php/ambiente-desenvolvimento-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/ambiente-desenvolvimento-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="c"></category></entry><entry><title>Ambiente de Desenvolvimento PHP</title><link href="http://excript.com/php/ambiente-desenvolvimento-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/ambiente-desenvolvimento-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -17864,60 +18645,7 @@ Exemplos:&lt;/p&gt;
 &lt;span class="x"&gt;$p2 = new Pessoa();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="construtor"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Criação de Objetos em PHP</title><link href="http://excript.com/php/criacao-objetos-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/criacao-objetos-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a criação de novos objetos através das classes que definimos em PHP. Aprenderemos as diferenças entre classe, objeto e instâncias, bem como as demais definições envolvidas.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#CRIAÇÃO DE OBJETOS/INSTÂNCIAS&lt;/span&gt;
-
-&lt;span class="x"&gt;class Classe{&lt;/span&gt;
-&lt;span class="x"&gt;    public $a = 1;&lt;/span&gt;
-&lt;span class="x"&gt;    public $b = 2;&lt;/span&gt;
-&lt;span class="x"&gt;    public $c = 3;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;$objetoA = new Classe();&lt;/span&gt;
-&lt;span class="x"&gt;$objetoB = new Classe();&lt;/span&gt;
-&lt;span class="x"&gt;$objetoC = new Classe();&lt;/span&gt;
-
-&lt;span class="x"&gt;var_dump($objetoA);&lt;/span&gt;
-&lt;span class="x"&gt;//var_dump($objetoB);&lt;/span&gt;
-&lt;span class="x"&gt;//var_dump($objetoC);&lt;/span&gt;
-
-&lt;span class="x"&gt;unset($objetoA);&lt;/span&gt;
-&lt;span class="x"&gt;var_dump($objetoA);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Definições da Linguagem PHP</title><link href="http://excript.com/php/definicao-linguagem-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/definicao-linguagem-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="construtor"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Definições da Linguagem PHP</title><link href="http://excript.com/php/definicao-linguagem-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/definicao-linguagem-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -18314,55 +19042,7 @@ Exemplos:&lt;/p&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="encapsulamento"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Escopo de nomes das funções anônimas em PHP</title><link href="http://excript.com/php/escopo-de-nome-das-funcoes-anonimas-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/escopo-de-nome-das-funcoes-anonimas-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula entenderemos o escopo das funções anonimas, bem como as suas características e principais conceitos.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS - ESCOPO DE NOMES&lt;/span&gt;
-
-&lt;span class="x"&gt;$num = 100;&lt;/span&gt;
-&lt;span class="x"&gt;$num2 = 100;&lt;/span&gt;
-
-&lt;span class="x"&gt;$func = function() use(&amp;amp;$num, $num2) {&lt;/span&gt;
-&lt;span class="x"&gt;//    echo &amp;quot;Anônima: &amp;quot; . $num;&lt;/span&gt;
-&lt;span class="x"&gt;    $num = 1500;&lt;/span&gt;
-&lt;span class="x"&gt;};&lt;/span&gt;
-
-&lt;span class="x"&gt;$func();&lt;/span&gt;
-
-&lt;span class="x"&gt;echo $num;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Estrutura de Repetição for do PHP</title><link href="http://excript.com/php/estrutura-repeticao-for-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/estrutura-repeticao-for-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="encapsulamento"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Estrutura de Repetição for do PHP</title><link href="http://excript.com/php/estrutura-repeticao-for-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/estrutura-repeticao-for-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -18854,134 +19534,6 @@ Exemplos:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Funções Anônimas e Arrays com PHP</title><link href="http://excript.com/php/funcao-anonima-array-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/funcao-anonima-array-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos as funções anonimas junto com as estruturas Arrays. Estudaremos as várias funções definidas pela linguagem PHP para serem utilizadas com uso de funções anonimas.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS E ARRAYS&lt;/span&gt;
-
-&lt;span class="x"&gt;#array_map(&amp;lt;f.anonima&amp;gt;, &amp;lt;array&amp;gt;)&lt;/span&gt;
-
-&lt;span class="x"&gt;$lista = [1,2,3,4,5];&lt;/span&gt;
-
-&lt;span class="x"&gt;$f = function($x){&lt;/span&gt;
-&lt;span class="x"&gt;    return $x  * $x;&lt;/span&gt;
-&lt;span class="x"&gt;};&lt;/span&gt;
-
-&lt;span class="x"&gt;$lista_proc = array_map($f, $lista);&lt;/span&gt;
-&lt;span class="x"&gt;print_r($lista_proc);&lt;/span&gt;
-
-
-&lt;span class="x"&gt;#array_filter(&amp;lt;array&amp;gt;, &amp;lt;f.anonima&amp;gt;)&lt;/span&gt;
-
-&lt;span class="x"&gt;$filtro = function($x){&lt;/span&gt;
-&lt;span class="x"&gt;    return $x &amp;lt; 3;&lt;/span&gt;
-&lt;span class="x"&gt;};&lt;/span&gt;
-
-&lt;span class="x"&gt;$lista_filtro = array_filter($lista, $filtro);&lt;/span&gt;
-
-&lt;span class="x"&gt;print_r($lista_filtro);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Funções Anônimas na Prática com PHP</title><link href="http://excript.com/php/funcao-anonima-pratica-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/funcao-anonima-pratica-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nessa aula implementaremos um código utilizando os conceitos de funções anonimas estudadas nas aulas anteriores.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#PRÁTICA - FUNÇÕES ANÔNIMAS&lt;/span&gt;
-
-&lt;span class="x"&gt;$quadrado = function($item){&lt;/span&gt;
-&lt;span class="x"&gt;    return $item * $item;&lt;/span&gt;
-&lt;span class="x"&gt;};&lt;/span&gt;
-&lt;span class="x"&gt;$cubo = function($item)use($quadrado){&lt;/span&gt;
-&lt;span class="x"&gt;    return $quadrado($item) * $item;&lt;/span&gt;
-&lt;span class="x"&gt;};&lt;/span&gt;
-&lt;span class="x"&gt;$soma = function($item){&lt;/span&gt;
-&lt;span class="x"&gt;    return $item + $item;&lt;/span&gt;
-&lt;span class="x"&gt;};&lt;/span&gt;
-
-&lt;span class="x"&gt;function processa_lista($lista, $func){&lt;/span&gt;
-&lt;span class="x"&gt;    foreach($lista as &amp;amp;$item){&lt;/span&gt;
-&lt;span class="x"&gt;        $item = $func($item);&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-&lt;span class="x"&gt;    return $lista;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;echo &amp;quot;QUADRADO\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;print_r(processa_lista(range(1,10), $quadrado));&lt;/span&gt;
-
-&lt;span class="x"&gt;echo &amp;quot;\nCUBO\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;print_r(processa_lista(range(1,10), $cubo));&lt;/span&gt;
-
-&lt;span class="x"&gt;echo &amp;quot;\nSOMA\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;print_r(processa_lista(range(1,10), $soma));&lt;/span&gt;
-
-
-&lt;span class="x"&gt;//print_r(processa_lista(&lt;/span&gt;
-&lt;span class="x"&gt;//    range(1,10),&lt;/span&gt;
-&lt;span class="x"&gt;//    function($item){&lt;/span&gt;
-&lt;span class="x"&gt;//        return $item - 10;&lt;/span&gt;
-&lt;span class="x"&gt;//    }&lt;/span&gt;
-&lt;span class="x"&gt;//));&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category></entry><entry><title>Funções e Escopo de Variáveis em PHP</title><link href="http://excript.com/php/funcao-escopo-de-variaveis-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/funcao-escopo-de-variaveis-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -19239,69 +19791,7 @@ Exemplos:&lt;/p&gt;
 &lt;span class="x"&gt;$sub-&amp;gt;funcPublica();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="funções"></category><category term="funções modificadoras"></category><category term="get"></category><category term="set"></category><category term="getter"></category><category term="setter"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Gerenciando Atributos de Classe em PHP</title><link href="http://excript.com/php/gerenciando-atributos-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/gerenciando-atributos-classe-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula aprenderemos a gerenciar os atributos e propriedades de nossas classes.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#GERENCIANDO PROPRIEDADES&lt;/span&gt;
-
-&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
-
-&lt;span class="x"&gt;    public $idade = 0;&lt;/span&gt;
-
-&lt;span class="x"&gt;    public function get_idade(){&lt;/span&gt;
-
-&lt;span class="x"&gt;        return $this -&amp;gt; idade;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-
-&lt;span class="x"&gt;    public function set_idade($idade){&lt;/span&gt;
-&lt;span class="x"&gt;        if($idade &amp;gt; 0){&lt;/span&gt;
-&lt;span class="x"&gt;            $this-&amp;gt;idade = $idade;&lt;/span&gt;
-&lt;span class="x"&gt;        }else{&lt;/span&gt;
-&lt;span class="x"&gt;            echo &amp;quot;A idade informada é inválida.&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;        }&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-&lt;span class="x"&gt;//    get - pegar&lt;/span&gt;
-&lt;span class="x"&gt;//    set - definir, atribuir a, setar&lt;/span&gt;
-
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
-&lt;span class="x"&gt;$p1 -&amp;gt; set_idade(22);&lt;/span&gt;
-&lt;span class="x"&gt;$p1 -&amp;gt; set_idade(-5);&lt;/span&gt;
-&lt;span class="x"&gt;echo &amp;quot;A idade é: {$p1-&amp;gt;get_idade()}&amp;quot;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="propriedade"></category><category term="atributo"></category></entry><entry><title>Hello World em PHP</title><link href="http://excript.com/php/hello-world-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/hello-world-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="funções"></category><category term="funções modificadoras"></category><category term="get"></category><category term="set"></category><category term="getter"></category><category term="setter"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Hello World em PHP</title><link href="http://excript.com/php/hello-world-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/hello-world-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -19332,119 +19822,7 @@ Exemplos:&lt;/p&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Herança em PHP</title><link href="http://excript.com/php/heranca-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/heranca-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o conceito de herança segundo a Orientação a Objetos. Em seguida, faremos um exemplo para estudarmos a aplicação do conceito da herança em uma situação real.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# HERANÇA&lt;/span&gt;
-
-&lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
-
-&lt;span class="x"&gt;    public $a = &amp;#39;variável $a&amp;#39;;&lt;/span&gt;
-
-&lt;span class="x"&gt;    public function ini(){&lt;/span&gt;
-&lt;span class="x"&gt;        echo &amp;quot;SuperClasse-&amp;gt;ini()&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;class SubClasse extends SuperClasse{&lt;/span&gt;
-
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;$sub = new SubClasse();&lt;/span&gt;
-&lt;span class="x"&gt;$sub-&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="herança"></category><category term="encapsulamento"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Herança com PHP II</title><link href="http://excript.com/php/heranca-php-ii.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/heranca-php-ii.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula daremos continuidade ao estuda da herança, a definição de subclasses e as características das classes-filhas.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;!-- Como a subclasse implementa suas próprias funcionalidades? --&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class SuperClasse {&lt;/span&gt;
-
-&lt;span class="x"&gt;    public $a = 0;&lt;/span&gt;
-
-&lt;span class="x"&gt;    public function super()&lt;/span&gt;
-&lt;span class="x"&gt;    {&lt;/span&gt;
-&lt;span class="x"&gt;        echo $a;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;class SubClasse extends SuperClasse {&lt;/span&gt;
-
-&lt;span class="x"&gt;    public $a;&lt;/span&gt;
-
-&lt;span class="x"&gt;    public function sub()&lt;/span&gt;
-&lt;span class="x"&gt;    {&lt;/span&gt;
-&lt;span class="x"&gt;        this-&amp;gt;$a = 10;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-
-&lt;span class="x"&gt;$sub = new SubClasse();&lt;/span&gt;
-&lt;span class="x"&gt;$sub-&amp;gt;sub();&lt;/span&gt;
-&lt;span class="x"&gt;$sub-&amp;gt;super();&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="herança"></category><category term="encapsulamento"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Implementando Funcionalidades em Classe no PHP</title><link href="http://excript.com/php/implementando-funcionalidades-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/implementando-funcionalidades-classe-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Implementando Funcionalidades em Classe no PHP</title><link href="http://excript.com/php/implementando-funcionalidades-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/implementando-funcionalidades-classe-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -19912,54 +20290,6 @@ Exemplos:&lt;/p&gt;
 &lt;span class="x"&gt;    $conta = $conta + 1;&lt;/span&gt;
 &lt;span class="x"&gt;    echo $conta . &amp;quot;\n&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;}while($conta &amp;lt; 10);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Introdução às Funções Anônimas em PHP</title><link href="http://excript.com/php/introducao-funcao-anonima-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/introducao-funcao-anonima-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula aprenderemos o conceito de função anonimas e como utiliza-las na linguagem PHP. Também faremos um exemplo onde será possível observar as vantagens na definição e uso de funções anonimas.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS&lt;/span&gt;
-
-
-&lt;span class="x"&gt;$func = function($nome){&lt;/span&gt;
-&lt;span class="x"&gt;    echo &amp;quot;O nome enviado como parâmetro é: $nome&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;};&lt;/span&gt;
-
-&lt;span class="x"&gt;function teste($f){&lt;/span&gt;
-&lt;span class="x"&gt;    $f(&amp;quot;Cláudio&amp;quot;);&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;teste($func);&lt;/span&gt;
-&lt;span class="x"&gt;//$func(&amp;quot;eXcript&amp;quot;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category></entry><entry><title>Iterando Arrays em PHP</title><link href="http://excript.com/php/iterando-array-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/iterando-array-php.html</id><summary type="html">
@@ -22066,68 +22396,6 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;a&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Variáveis superglobais do PHP</title><link href="http://excript.com/php/variavel-superglobal-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/variavel-superglobal-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a implementação e uso de variáveis que possuem escopo global, bem como a sua utilização em escopos restritos, como o escopo de funções.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="variável"></category><category term="global"></category><category term="superglobal"></category></entry><entry><title>Visão Geral do PHP</title><link href="http://excript.com/php/visao-geral-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/visao-geral-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula teremos uma visão geral sobre a linguagem PHP, veremos seus principais recursos, suas principais características e a razão pela qual há tantas pessoas utilizando essa linguagem ao redor do mundo.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category></entry><entry><title>Visibilidade das Funções em PHP</title><link href="http://excript.com/php/visibilidade-funcao-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/visibilidade-funcao-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;

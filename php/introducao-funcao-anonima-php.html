@@ -15,20 +15,28 @@
 <link rel="canonical" href="http://excript.com/php/introducao-funcao-anonima-php.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,php" />
-    <meta name="description" content="Nesta aula aprenderemos o conceito de função anonimas e como utiliza-las na linguagem PHP. Também faremos um exemplo onde será possível observar as vantagens na definição e uso de funções anonimas." />
+        <meta name="keywords" content="curso,php,função,função anonima,lambda,closures,função lambda,função de primeira ordem,função de ordem superior,blog" />
+    <meta name="description" content="Nesta aula aprenderemos o conceito de função anonima e, como utiliza-las na linguagem PHP. Também faremos um exemplo onde será possível observar as vantagens dessa definição." />
 
         <meta property="og:site_name" content="eXcript" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Introdução às Funções Anônimas em PHP"/>
         <meta property="og:url" content="http://excript.com/php/introducao-funcao-anonima-php.html"/>
 
-        <meta property="og:description" content="Nesta aula aprenderemos o conceito de função anonimas e como utiliza-las na linguagem PHP. Também faremos um exemplo onde será possível observar as vantagens na definição e uso de funções anonimas."/>
+        <meta property="og:description" content="Nesta aula aprenderemos o conceito de função anonima e, como utiliza-las na linguagem PHP. Também faremos um exemplo onde será possível observar as vantagens dessa definição."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="11-06-2016" />
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
+            <meta property="article:tag" content="função" />
+            <meta property="article:tag" content="função anonima" />
+            <meta property="article:tag" content="lambda" />
+            <meta property="article:tag" content="closures" />
+            <meta property="article:tag" content="função lambda" />
+            <meta property="article:tag" content="função de primeira ordem" />
+            <meta property="article:tag" content="função de ordem superior" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -112,7 +120,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-11T10:00:00-03:00"> Publicado em 11-06-2016</time>
         </span>
 
 
@@ -160,30 +168,37 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula aprenderemos o conceito de função anonimas e como utiliza-las na linguagem PHP. Também faremos um exemplo onde será possível observar as vantagens na definição e uso de funções anonimas.</p>
+                            <p> Nesta aula aprenderemos o conceito de função anonima e, como utiliza-las na linguagem PHP. Também faremos um exemplo onde será possível observar as vantagens dessa definição.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="funcoes-anonimas">
+<h2>FUNÇÕES ANONIMAS</h2>
+<p>As <strong>funções anônimas</strong>, também chamadas de <strong>closures</strong>, <strong>lambda functions</strong>, <strong>funções de primeira ordem</strong>, <strong>funções de ordem superior</strong>, são blocos de instruções que não possuem nome, podem receber parâmetros e são interpretadas pela linguagem como expressões.</p>
+<p>Uma função anônima possui um bloco de instrução, porém, não possuem referência que as identifiquem e, por conseguinte, não estarão no escopo para que possamos invoca-las.</p>
+<p>A vantagem das funções anônimas e, que as tornam especiais, é que podemos armazena-las e manipula-las como fazemos com variáveis, e assim, podemos envia-las como sendo um parâmetro de uma função. A função receptora por sua vez, será capaz de executar a função anônima que foi recebida como parâmetro e ainda, passar os argumentos definidos no cabeçalho da mesma e recebendo a resposta da execução.</p>
+<p>Assim, temos que uma função anônima possui todas as características e, funciona com os mesmo princípios que qualquer função, porém, como o nome sugere, esta não possui um nome - por isso: anônima!</p>
+<p>É comum a utilização de funções anônimas como <tt class="docutils literal">callback</tt>, isto é, passarmos a função anônima como parâmetro e num determinado momento, a função que a recebeu, invoque a função e de continuidade ao processamento.</p>
+<p>Para atribuirmos uma função anonima a uma variável, basta declararmos um bloco e atribuirmos este, diretamente, a uma determinada variável, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="x"># o bloco de instrução a seguir, será atribuido à</span>
+<span class="x"># variável de nome $func e, para executar o código</span>
+<span class="x"># utilizaremos o nome da variável</span>
+<span class="x">$func = function($num){</span>
+<span class="x">    echo &quot;Valor do parâmetro recebido &quot; . $num;</span>
+<span class="x">};</span>
+
+<span class="x"># aqui, estamos invocando a função anonima</span>
+<span class="x"># declarada nas linhas acima</span>
+<span class="x">$func(10);</span>
+</pre></div>
+<p>No bloco de código acima, definimos uma função anonima e, ainda na definição, atribuimos a sua referência à variável <code>$func</code>. Em seguida, utilizamos a instrução que já estudamos para a definição de funções - <code>function</code>, definimos um parâmetro de nome <code>$num</code> e, por fim, definimos o bloco de instrução da função anonima com uma par de chaves. Feito isso, temos um bloco de instrução como qualquer outra, a única diferença é que podemos retornar valores com o uso da instrução <code>return</code> que, também já foi estudada.</p>
+<p>Funções anônimas são expressões como quaisquer outras (como atribuição de números ou manipulação de string), logo, estas podem ser adicionada a uma variável, atribuida a um array e etc.</p>
+<p>Como prova de que as funções anonimas são expressões, somos obrigados a utilizar um ponto e vírgula após a definição do bloco de instrução, até porque, a mesma não é uma função, mas sim, uma expressão e, como sabemos, toda expressão é finalizada com ponto-e-vírgula.</p>
+<p>Após atribuirmos a função a uma variável, para invoca-la, basta adicionarmos os parêntesis após o nome [da variável´] e, definir os parâmetros conforme a declaração.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#FUNÇÕES ANÔNIMAS</span>
@@ -228,7 +243,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/funcao.html">função</a>, 	<a href="http://excript.com/tag/funcao-anonima.html">função anonima</a>, 	<a href="http://excript.com/tag/lambda.html">lambda</a>, 	<a href="http://excript.com/tag/closures.html">closures</a>, 	<a href="http://excript.com/tag/funcao-lambda.html">função lambda</a>, 	<a href="http://excript.com/tag/funcao-de-primeira-ordem.html">função de primeira ordem</a>, 	<a href="http://excript.com/tag/funcao-de-ordem-superior.html">função de ordem superior</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

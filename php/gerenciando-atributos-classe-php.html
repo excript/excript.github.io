@@ -15,17 +15,17 @@
 <link rel="canonical" href="http://excript.com/php/gerenciando-atributos-classe-php.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,php,programação orientada a objetos,poo,classe,objeto,instância,propriedade,atributo" />
-    <meta name="description" content="Nesta aula aprenderemos a gerenciar os atributos e propriedades de nossas classes." />
+        <meta name="keywords" content="curso,php,programação orientada a objetos,poo,classe,objeto,instância,propriedade,atributo,blog" />
+    <meta name="description" content="Nesta aula aprenderemos a utilizar funções para atribuir valores a propriedades das classes e dessa forma, gerenciar qual o valor que será atribuído." />
 
         <meta property="og:site_name" content="eXcript" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Gerenciando Atributos de Classe em PHP"/>
         <meta property="og:url" content="http://excript.com/php/gerenciando-atributos-classe-php.html"/>
 
-        <meta property="og:description" content="Nesta aula aprenderemos a gerenciar os atributos e propriedades de nossas classes."/>
+        <meta property="og:description" content="Nesta aula aprenderemos a utilizar funções para atribuir valores a propriedades das classes e dessa forma, gerenciar qual o valor que será atribuído."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="11-06-2016" />
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -36,6 +36,7 @@
             <meta property="article:tag" content="instância" />
             <meta property="article:tag" content="propriedade" />
             <meta property="article:tag" content="atributo" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -119,7 +120,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-11T05:00:00-03:00"> Publicado em 11-06-2016</time>
         </span>
 
 
@@ -167,30 +168,21 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula aprenderemos a gerenciar os atributos e propriedades de nossas classes.</p>
+                            <p> Nesta aula aprenderemos a utilizar funções para atribuir valores a propriedades das classes e dessa forma, gerenciar qual o valor que será atribuído.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="definindo-valores-a-variaveis-com-funcoes">
+<h2>DEFININDO VALORES A VARIÁVEIS COM FUNÇÕES</h2>
+<p>Propriedades que possuem regras, deveram utilizar funções para a definição de valores e, a razão para essa metodologia é bastante simples: com funções conseguimos analisar se o valor passado é, por exemplo, inválido.</p>
+<p>Se tivessemos por exemplo uma classe de nome Pessoa, cujo objetivo é conter os dados pessoais, é correto permitir a definição do nome da pessoa como sendo uma String com 0 caracteres? Normalmente não, porém, obviamente que você possa imaginar alguma situação necessário, porém, falando de forma geral, o nome de uma pessoa não deveria ter 0 caracteres ou então, ser composto por digitos numéricos.</p>
+<p>Os atributos, como estudamos, são simples variáveis, logo, podemos por exemplo restringir o acesso direto a esse membro e definir 2 funções, uma para a definição de valores e outra para a leitura. Dessa maneira, permitimos o acesso externo ao membro e ao mesmo tempo, somos capazes de analisar o valor que está sendo atribuido e processar o valor que será retornado.</p>
+<p>Nesse momento o nosso objetivo é estudar a passagem dos valores dos atributos através do uso de funções. Isso porque, <a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html">a utilização de funções para a leitura e escrita de valores representa uma metodologia de desenvolvimento e por isso, haverá no mínimo uma aula dedicada ao seu estudo</a> .</p>
+<p>Ainda que não exista uma regra, é comum que funções que definem valores a atributos de classe utilizem o prefixo <strong>set</strong>, da mesma forma, funções que retornam valores, geralmente utilizam o prefixo <strong>get</strong>.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#GERENCIANDO PROPRIEDADES</span>
@@ -200,7 +192,6 @@ eXcript            </a>
 <span class="x">    public $idade = 0;</span>
 
 <span class="x">    public function get_idade(){</span>
-
 <span class="x">        return $this -&gt; idade;</span>
 <span class="x">    }</span>
 
@@ -249,7 +240,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>, 	<a href="http://excript.com/tag/classe.html">classe</a>, 	<a href="http://excript.com/tag/objeto.html">objeto</a>, 	<a href="http://excript.com/tag/instancia.html">instância</a>, 	<a href="http://excript.com/tag/propriedade.html">propriedade</a>, 	<a href="http://excript.com/tag/atributo.html">atributo</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>, 	<a href="http://excript.com/tag/classe.html">classe</a>, 	<a href="http://excript.com/tag/objeto.html">objeto</a>, 	<a href="http://excript.com/tag/instancia.html">instância</a>, 	<a href="http://excript.com/tag/propriedade.html">propriedade</a>, 	<a href="http://excript.com/tag/atributo.html">atributo</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

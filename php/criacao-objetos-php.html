@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/php/criacao-objetos-php.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,php,programação orientada a objetos,poo,classe,objeto,instância" />
+        <meta name="keywords" content="curso,php,programação orientada a objetos,poo,classe,objeto,instância,blog" />
     <meta name="description" content="Nesta aula estudaremos a criação de novos objetos através das classes que definimos em PHP. Aprenderemos as diferenças entre classe, objeto e instâncias, bem como as demais definições envolvidas." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,7 +25,7 @@
 
         <meta property="og:description" content="Nesta aula estudaremos a criação de novos objetos através das classes que definimos em PHP. Aprenderemos as diferenças entre classe, objeto e instâncias, bem como as demais definições envolvidas."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="10-06-2016" />
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -34,6 +34,7 @@
             <meta property="article:tag" content="classe" />
             <meta property="article:tag" content="objeto" />
             <meta property="article:tag" content="instância" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -117,7 +118,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-10T21:00:00-03:00"> Publicado em 10-06-2016</time>
         </span>
 
 
@@ -172,23 +173,52 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="criando-objetos-e-acessando-membros-de-classe">
+<h2>CRIANDO OBJETOS E ACESSANDO MEMBROS DE CLASSE</h2>
+<ul class="simple">
+<li>Para acessarmos os membros de uma classe, primeiro é necessário criar a mesma</li>
+</ul>
+<p>As classes são os projetos de como os objetos devem funcionar quando criados. Então, temos que entender que a classe é o nosso código propriamente dito e, para que este tenha alguma utilidade, precisamos criar uma instância do mesmo. Observe que na orientação a objetos, instância e objeto são sinônimos.</p>
+<p>Se consultarmos o dicionário Aurélio o significado de instância, teremos varias definições, dentre estas há o significado de instância na computação e o mesmo diz que:</p>
+<pre class="literal-block">
+Inform. Cada um dos objetos [v. objeto (11)] criados durante a execução de programa (9).
+</pre>
+<p>Podemos concluir que, executar o código da nossa classe significa criar novos objetos.</p>
+</div>
+<div class="section" id="conceitos-importantes">
+<h2>CONCEITOS IMPORTANTES</h2>
+<p>Em qualquer disciplina que estudamos há um conjunto de princípios a serem estudados e entendidos e, com a orientação a objetos não é diferente. A grande maioria dos conceitos que estudaremos terão significado igual a de outras disciplinas, como por exemplo, o conceito de herança, logo, o que precisamos realmente entender e memorizar forma um conjunto bastante diminuto.</p>
+<p>A seguir temos a definição de 3 conceitos e, talvez, os mais importantes, haja vista que todos os demais, derivam destes.</p>
+<p>a) <strong>CLASSE</strong>
+Projeto composto por código de programação. Quando executado executado origina um objeto.</p>
+<p>b) <strong>OBJETO</strong>
+Execução do código da classe.</p>
+<p>c) <strong>INSTÂNCIA</strong>
+Sinônimo de objeto. Essa é uma forma genérica para nos referirmos a objetos criados.</p>
+<p>É muito importante entender que as variáveis não são objetos e nem instâncias, elas somente nos proporcionam uma forma para acessarmos as instâncias que estão na memória. Por isso, é errado dizer que uma variável é, por exemplo, um Carro, partindo do princípio de que temos a classe Carro.</p>
+<p>Para criarmos um objeto, temos que utilizar a instrução <tt class="docutils literal">new</tt> e então, definir o nome da classe que desejamos um objeto. A instrução <tt class="docutils literal">new</tt> tem como objetivo, informar que desejamos executar o código da nossa classe e também, que queremos a instância dessa nova classe.</p>
+<p>A instrução <tt class="docutils literal">new</tt> <strong>sempre</strong> retornará a instância do objeto criado, salvo se ocorrer erros no momento da criação.</p>
+</div>
+<div class="section" id="acessando-objetos-e-seus-membros">
+<h2>ACESSANDO OBJETOS E SEUS MEMBROS</h2>
+<p>Quando criamos um objeto precisamos ter uma forma para acessar o mesmo, por isso, é comum atribuirmos na declaração de criação de objetos, uma variável que receberá a instância do mesmo. Isto é, a criação de novos objetos estará numa instrução de atribuição, onde o lado direito será a criação do objeto e o lado esquerdo a variável que receberá o endereço da instância criada.
+Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a nova instância) a uma variável. Por fim, temos que entender que as variáveis representam uma forma fácil para o acesso a memória, por isso vinculamos variáveis a objetos.</p>
+<p>Também é importante observar que, se a instância retornada não for armazenada numa variável no momento da criação, não será mais possível acessar o objeto criado, ou seja, criar um novo objeto e não atribuir a instância, significa, executar o código de inicialização do objeto e em seguida, destruir o mesmo.</p>
+</div>
+<div class="section" id="destruicao-de-objetos">
+<h2>DESTRUIÇÃO DE OBJETOS</h2>
+<p>Um objeto será destruido todas as vezes em que não houver mais variáveis referenciando ao mesmo. Ou seja, o PHP desaloca a memória de todos os objetos quando estes não mais estão sendo utilizados. Se por acaso tentarmos acessar um objeto que foi destruído, temos que ocorrerá um erro e o Script PHP terá sua execução finalizada, até porque, o objeto não existe mais.</p>
+<p>Porém, não se preocupe, o PHP sabe gerenciar muito bem a memória e também, consegue definir com bastante precisão o momento de remover cada instância da memória. Por isso, salvo em raras exceções, você irá ter problemas com a destruição de objetos que ainda estavam em uso.</p>
+<div class="highlight"><pre><span></span><span class="x">$p1 = new Pessoa();</span>
+<span class="x">$p2 = new Pessoa();</span>
+</pre></div>
+</div>
+<div class="section" id="garbage-collector">
+<h2>GARBAGE COLLECTOR</h2>
+<p>O <strong>Garbage Collector</strong> é o responsável por desalocar a memória utilizada. A forma de funcionamento do mesmo se dá pelo compartilhamento de uma variável que, a cada nova variável que fizer referência a determinada instância, o valor da variável compartilhada é incrementado e, a cada instância referenciada por uma variável que for destruída, tem o seu valor decrementado. Quando este valor for igual a 0 a instância é removida da memória.</p>
+<p>Observe que estamos falando em instância, isto é, em objetos e não em Classes. Logo, o Garbage Collector não gerencia a quantidade de instâncias criadas, mas sim, <strong>a quantidade de variáveis que apontam para uma instância</strong>!</p>
+<p>Se você tiver dificuldade no entendimento deste conceito não há problema, até porque, basta saber que, todas as vezes que não houver mais variáveis fazendo referência a um objeto o mesmo será destruido!</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#CRIAÇÃO DE OBJETOS/INSTÂNCIAS</span>
@@ -238,7 +268,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>, 	<a href="http://excript.com/tag/classe.html">classe</a>, 	<a href="http://excript.com/tag/objeto.html">objeto</a>, 	<a href="http://excript.com/tag/instancia.html">instância</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>, 	<a href="http://excript.com/tag/classe.html">classe</a>, 	<a href="http://excript.com/tag/objeto.html">objeto</a>, 	<a href="http://excript.com/tag/instancia.html">instância</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

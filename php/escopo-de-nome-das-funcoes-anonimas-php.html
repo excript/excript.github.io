@@ -15,20 +15,28 @@
 <link rel="canonical" href="http://excript.com/php/escopo-de-nome-das-funcoes-anonimas-php.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,php" />
-    <meta name="description" content="Nesta aula entenderemos o escopo das funções anonimas, bem como as suas características e principais conceitos." />
+        <meta name="keywords" content="curso,php,função,função anonima,lambda,closures,função lambda,função de primeira ordem,função de ordem superior,blog" />
+    <meta name="description" content="Nesta aula entenderemos o escopo de nomes das funções anonimas, bem como as suas características e principais conceitos." />
 
         <meta property="og:site_name" content="eXcript" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Escopo de nomes das funções anônimas em PHP"/>
         <meta property="og:url" content="http://excript.com/php/escopo-de-nome-das-funcoes-anonimas-php.html"/>
 
-        <meta property="og:description" content="Nesta aula entenderemos o escopo das funções anonimas, bem como as suas características e principais conceitos."/>
+        <meta property="og:description" content="Nesta aula entenderemos o escopo de nomes das funções anonimas, bem como as suas características e principais conceitos."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="11-06-2016" />
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
+            <meta property="article:tag" content="função" />
+            <meta property="article:tag" content="função anonima" />
+            <meta property="article:tag" content="lambda" />
+            <meta property="article:tag" content="closures" />
+            <meta property="article:tag" content="função lambda" />
+            <meta property="article:tag" content="função de primeira ordem" />
+            <meta property="article:tag" content="função de ordem superior" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -112,7 +120,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-11T11:00:00-03:00"> Publicado em 11-06-2016</time>
         </span>
 
 
@@ -160,30 +168,28 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula entenderemos o escopo das funções anonimas, bem como as suas características e principais conceitos.</p>
+                            <p> Nesta aula entenderemos o escopo de nomes das funções anonimas, bem como as suas características e principais conceitos.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="escopo-de-nome-das-funcoes-anonimas">
+<h2>ESCOPO DE NOME DAS FUNÇÕES ANÔNIMAS</h2>
+<p>Quando declaramos uma função anônima, geralmente, iremos atribuir a mesma a uma variável. A variável servirá como uma espécie de referência, até porque, através dessa variável é que poderemos invocar a função, ou melhor, <strong>somente</strong> com essa variável é que o bloco de código da função anonima poderá ser executado!</p>
+<p>Uma função anônima possui o seu escopo restrito, então, não é possível fazer acesso direto aos membros externos. Em suma, <a class="reference external" href="http://excript.com/php/introducao-as-funcoes-php.html">o escopo de uma função anônima funciona de maneira análoga a de uma função convencional</a>.</p>
+<p>Para acessarmos variáveis externas a função anônima, temos que explicitamente declarar na definição desta que, uma determinada variável, deve ser inserida no escopo da função anônima.</p>
+<p>Então, para passarmos uma variável externa a uma função anônima, utilizamos a instrução <tt class="docutils literal">use</tt> junto a implementação da função. Também podemos passar variáveis externas através da sua referência, para isso, utilizamos o operador <tt class="docutils literal">&amp;</tt>.</p>
+<div class="highlight"><pre><span></span><span class="x">$var1 = 10;</span>
+<span class="x">$num = [&quot;um&quot;, &quot;dois&quot;, &quot;três&quot;];</span>
+<span class="x">$func = function() use ($var1, &amp;$num) {</span>
+<span class="x">    echo &quot;Variável externa $var1&quot;;</span>
+<span class="x">};</span>
+
+<span class="x">$func();</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#FUNÇÕES ANÔNIMAS - ESCOPO DE NOMES</span>
@@ -228,7 +234,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/funcao.html">função</a>, 	<a href="http://excript.com/tag/funcao-anonima.html">função anonima</a>, 	<a href="http://excript.com/tag/lambda.html">lambda</a>, 	<a href="http://excript.com/tag/closures.html">closures</a>, 	<a href="http://excript.com/tag/funcao-lambda.html">função lambda</a>, 	<a href="http://excript.com/tag/funcao-de-primeira-ordem.html">função de primeira ordem</a>, 	<a href="http://excript.com/tag/funcao-de-ordem-superior.html">função de ordem superior</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

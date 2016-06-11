@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/php/acessando-membros-classe-php.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,php,programação orientada a objetos,poo,classe,membro de classe,objeto,instância" />
+        <meta name="keywords" content="curso,php,programação orientada a objetos,poo,classe,membro de classe,objeto,instância,blog" />
     <meta name="description" content="Nesta aula estudaremos o acesso a membros de classe, como devemos implementar, quais as restrições que devemos impor e demais características dessa definição." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,7 +25,7 @@
 
         <meta property="og:description" content="Nesta aula estudaremos o acesso a membros de classe, como devemos implementar, quais as restrições que devemos impor e demais características dessa definição."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="10-06-2016" />
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -35,6 +35,7 @@
             <meta property="article:tag" content="membro de classe" />
             <meta property="article:tag" content="objeto" />
             <meta property="article:tag" content="instância" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -118,7 +119,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-10T23:00:00-03:00"> Publicado em 10-06-2016</time>
         </span>
 
 
@@ -173,23 +174,84 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
+<div class="section" id="o-que-sao-membros-de-classe">
+<h2>O QUE SÃO MEMBROS DE CLASSE</h2>
+<p>Um membro de classe é toda variável ou função definida e implementada pela classe. Assim, temos que todos os atributos e métodos que estiverem definidos numa classe são chamados de &quot;membros de classe&quot;. Para acessarmos os membros de uma classe, temos que utilizar a seguinte nomenclatura:</p>
+<div class="highlight"><pre><span></span><span class="x">referência + nome_membro</span>
+<span class="x">referência -&gt; nome_membro</span>
+</pre></div>
+<p>Temos sempre que pensar no conceito de referência, ou seja, uma variável é somente uma referência a um objeto. Assim, temos que todas as instância que criarmos de uma classe poderão acessar os membros públicos através da definição acima.</p>
+</div>
+<div class="section" id="o-conceito-de-referencia">
+<h2>O CONCEITO DE REFERÊNCIA</h2>
+<p>Referência é para o PHP o que o endereço é para o C++, ou seja, um valor que está apontando para uma região em que há informações armazenadas. O conceito de referência em PHP não é explicito, até porque, não conseguimos obter esse endereço facilmente. Mesmo assim, não é difícil imaginar que <strong>tudo</strong> precisa estar armazenado em algum lugar, logo, a referência é a nomenclatura que utilizamos de forma genérica para dizer que a variável A está ligada a determinada informação.</p>
+<p>É preciso entender que toda variável está armazenada na memória, bem como todo objeto. Entendido isso, é preciso entender que é utilizado uma variável para guardar a região em que determinado objeto está armazenado. Logo, você talvez se pergunte quem armazena o local de memória em que as variáveis estão, e a resposta é: o interpretador, a máquina virtual do PHP.</p>
+<p>Se entendido o conceito de referência, o conceito sobre a variável <tt class="docutils literal">this</tt> fica fácil de ser compreendido, até porque, está é uma variável que é criada para cada novo objeto e, só pode ser utilizada para o acesso de dentro do escopo da classe. Por isso é que dizemos que a pseudo-variável $this <strong>sempre</strong> estará se referindo a classe em que estamos trabalhando.</p>
+<div class="highlight"><pre><span></span><span class="x">//internamente</span>
+<span class="x">$this-&gt;nome_do_membro;</span>
+
+<span class="x">//externamente</span>
+<span class="x">$variavel-&gt;nome_do_membro;</span>
+</pre></div>
+</div>
+<div class="section" id="acessando-membros-de-classe">
+<h2>ACESSANDO MEMBROS DE CLASSE</h2>
+<p>Todo objeto criado é único, ocupa um espaço reservado na memória, possui uma referência que o identifica e, por essas definições, tem-se que todo objeto é diferente dos demais e seus atributos,, no caso, as variáveis definidas pela classe, também serão únicas e ocuparão um espaço reservado de memória.</p>
+<p>Quando criamos 2 objetos de uma mesma classe, cada um possuirá um endereço que o identifica na memória e estes, não estarão compartilhando absolutamente nada - salvo se definirmos explicitamente o contrário.</p>
+<p>Então, se tivermos uma classe que definiu 10 variáveis em seu corpo, nós teremos, a cada novo objeto, 10 variáveis pra cada nova instância criada. E essas 10 variáveis que, estão contidas em cada um dos objetos, só poderão ser acessadas através da variável que possui a referência para o objeto. Logo, é possível deduzir que para fazer acesso a um membro de um objeto é preciso, antes de mais nada, especificar a qual objetos estamos nos referindo.</p>
+</div>
+<div class="section" id="acessando-atributos-de-objeto">
+<h2>ACESSANDO ATRIBUTOS DE OBJETO</h2>
+<p>Definimos uma classe, criamos objetos, porém, até agora, não atribuimos valores às variáveis definidas na classe e que, estão disponíveis em cada instância.</p>
+<p>Um objeto pode ser utilizado de várias maneira e para diferentes propósitos, assim, podemos trabalhar com objeto para encapsular informações ou então, para simplesmente agruparmos um conjunto de variáveis. Dessa forma, temos que todos atributos contidos num objeto, passam a ser acessado através de um namespace, isto é, um nome que o identica dentro de um projeto, até porque, é dessa maneira que somos obrigados a acessar os membros de classe.</p>
+<p>Para entender o que foi dito acima, vamos pensar inicialmente que ao criarmos um objeto é preciso dizer onde a classe deste está definida, ou seja, programada. Toda classe está definida dentro de arquivos de código com extensão *.php e todo arquivo está, obrigatoriamente, contido dentro de uma pasta. O namespace de uma classe é o caminho <strong>PATH</strong> até o local onde o arquivo *.php está armazenado mais o nome da classe.</p>
+<p>Podemos concluir que todo objeto existente é o resultado da execução de um projeto, a classe. Toda classe está contida num arquivo *.php e todo arquivo *.php está contido numa pasta. Logo, temos de dizer, no momento de criação de um objeto, o namespace da classe. Porém, para acessarmos os membros de um objeto, bastará utilizarmos a referência e em seguida, especificar o nome do membro que desejamos acessar.</p>
+
+    <div class="admonitionblock important data-line-21">
         <table>
             <tbody>
                 <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
+                <td class="icon">
+                    <i class="fa icon-important" title="Importante!"></i>
+                </td>
+                <td class="content">
+                    <div class="paragraph data-line-22">
+                        <p>É importante lembrar que só é possível acessar membros públicos!</p>
+                    </div>
+                </td>
                 </tr>
             </tbody>
         </table>
     </div>
+<p>O acesso aos atributos públicos de um objeto ocorre de maneira análoga a forma em que manipulamos variáveis, porém agora, temos de especificar em qual instância a variável que desejamos alterar está contida.</p>
+<p>Para acessar um membro de um objeto, temos de especificar 2 coisas:</p>
+<ol class="arabic simple">
+<li>Qual objeto</li>
+<li>Qual o membro</li>
+</ol>
+<p>Utilizamos o <tt class="docutils literal">operador de objeto</tt>, comumente chamado de <tt class="docutils literal">operador seta</tt> para acessarmos membros públicos, como temos no exemplo seguinte:</p>
+<div class="highlight"><pre><span></span><span class="x">$objeto_nome -&gt; propriedade_nome;</span>
+</pre></div>
+<p>O esquema sempre será o mesmo quando formos acessar as funções definidas pelas classes. Inicialmente informamos o objeto, em seguida colocamos o <tt class="docutils literal">operador seta</tt> e por fim, definimos o nome da função [ <strong>funcionalidade</strong> ] que queremos invocar.</p>
+<div class="highlight"><pre><span></span><span class="x">$p1 = new Pessoa(); #criando um objeto de Pessoa e atribuindo a referência à variável $p1</span>
+<span class="x">$p2 = new Pessoa();</span>
+<span class="x">$p1-&gt;nome = &quot;João&quot;; #acessando a variável $nome</span>
+<span class="x">                    # definida pela classe Pessoa e por isso,</span>
+<span class="x">                    # contida na instância $p1</span>
+<span class="x">$p2-&gt;nome = &quot;Maria&quot;;</span>
+</pre></div>
+<p>A utilização de objetos para gerar HTML é igual a forma com geramos páginas fazendo uso de variáveis. A diferença é que agora a variável que utilizaremos é, na verdade, um atributo de um objeto e, para extrairmos seu valores, invocaremos uma função que foi definida para este fim.</p>
+<p>No exemplo acima, criamos objetos, definimos seus atributos e por fim, extraímos as informações dos objetos criados. Mesmo que o exemplo feito não tenha qualquer utilidade prática, o conceito envolvido mostra o uso comum de objetos e geração de HTML.</p>
+</div>
+<div class="section" id="inicializando-membros-de-classe">
+<h2>INICIALIZANDO MEMBROS DE CLASSE</h2>
+<p>Muitas propriedades de objetos precisarão ter valores iniciais para que tudo funcione corretamente. Todas as propriedades que precisam definir valores iniciais, precisaram ter seus valores atribuídos em sua declaração.</p>
+<div class="highlight"><pre><span></span><span class="x">class Quadrado</span>
+<span class="x">{</span>
+<span class="x">    public $x = 5, $y = 10;</span>
+<span class="x">}</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#ACESSANDO MEMBROS DE CLASSE</span>
@@ -235,7 +297,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>, 	<a href="http://excript.com/tag/classe.html">classe</a>, 	<a href="http://excript.com/tag/membro-de-classe.html">membro de classe</a>, 	<a href="http://excript.com/tag/objeto.html">objeto</a>, 	<a href="http://excript.com/tag/instancia.html">instância</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>, 	<a href="http://excript.com/tag/classe.html">classe</a>, 	<a href="http://excript.com/tag/membro-de-classe.html">membro de classe</a>, 	<a href="http://excript.com/tag/objeto.html">objeto</a>, 	<a href="http://excript.com/tag/instancia.html">instância</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
