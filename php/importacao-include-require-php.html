@@ -513,11 +513,11 @@ eXcript            </a>
 <p>O problema em importar um arquivo que já está importado, é que as variáveis contidas no escopo desse arquivo serão resetadas, logo, todos os valores que tivermos em variáveis que estão definidas em outro arquivo serão perdidos. Isso é somente um dos problemas, é possível elucidar vários.</p>
 <p>Então, é uma boa prática a utilização das funções &quot;_once()&quot;, até porque, dessa maneira evitamos a importação de algo que já está carregado.</p>
 <dl class="docutils">
-<dt>função include()</dt>
+<dt>função <code>include()</code></dt>
 <dd><p class="first"><code>include()</code>: inclui o arquivo passado como parâmetro. Se o arquivo não for encontrado, o PHP irá lançar um &quot;warning&quot;, mas dará continuidade na execução.</p>
 <p class="last"><code>include_once()</code>: o funcionamento dessa função é igual ao da função <code>include()</code>, porém, o arquivo só será importado caso o mesmo ainda não tenha sido.</p>
 </dd>
-<dt>função require()</dt>
+<dt>função <code>require()</code></dt>
 <dd><p class="first"><code>require()</code>: a função <code>require()</code> importa arquivos, porém, caso o mesmo não seja encontrado, será levantado uma exceção e a execução é finalizada. Essa é uma maneira de interrompermos a execução dos scripts caso alguma anomalia ocorra.</p>
 <p class="last"><code>require_once()</code>: o funcionamento é igual ao da função <code>require()</code>, porém, um arquivo só será importado caso o mesmo ainda não tenha sido.</p>
 </dd>
