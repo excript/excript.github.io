@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/cpp/comentario-cpp.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,cpp,comentários" />
+        <meta name="keywords" content="curso,cpp,comentário,blog" />
     <meta name="description" content="Nesta aula estudaremos como marcar trechos de código como sendo comentários, ou seja, blocos de códigos que são ignorados pelo compilador e assim, podemos adiciona-los a qualquer local do nosso código." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,11 +25,12 @@
 
         <meta property="og:description" content="Nesta aula estudaremos como marcar trechos de código como sendo comentários, ou seja, blocos de códigos que são ignorados pelo compilador e assim, podemos adiciona-los a qualquer local do nosso código."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="15-06-2016" />
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
-            <meta property="article:tag" content="comentários" />
+            <meta property="article:tag" content="comentário" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -113,7 +114,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-15T01:30:00-03:00"> Publicado em 15-06-2016</time>
         </span>
 
 
@@ -177,7 +178,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/cpp/caracteristica-variavel-cpp.html" >Características das Variáveis em C++</a></td>
                             <td><a href="http://excript.com/cpp/caracteristica-variavel-cpp.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/cpp/manipular-variavel-cpp.html" >Nanipulando Variáveis em C++</a></td>
+                            <td><a href="http://excript.com/cpp/manipular-variavel-cpp.html" >Manipulando Variáveis em C++</a></td>
                             <td><a href="http://excript.com/cpp/manipular-variavel-cpp.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/cpp/nomenclatura-variavel-cpp.html" >Nomenclatura de Variáveis em C++</a></td>
@@ -351,23 +352,28 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="introducao-ao-uso-de-comentarios">
+<h2>INTRODUÇÃO AO USO DE COMENTÁRIOS</h2>
+<p>Comentário é todo conjunto de caracteres inserido dentro de um código e que não será avaliado pelo compilador ou interpretador. O C++ define 2 tipos de marcação de comentários, a forma inline e a forma multi-line.</p>
+</div>
+<div class="section" id="comentarios-inline">
+<h2>COMENTÁRIOS <tt class="docutils literal">inline</tt></h2>
+<p>Para adicionarmos um comentário após determinada instrução, basta utilizarmos duas barras e em seguida, estamos livres para escrevermos o que desejarmos, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; estudo &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">//escreva o que desejares após as barras</span>
+</pre></div>
+<p>Como podemos ver no exemplo acima, após a finalização da instrução com o uso de ponto e vírgula, adicionamos 2 barras <tt class="docutils literal">//</tt> e então, escrevemos um texto. Se mandassemos, por exemplo, compilar o código, veríamos que nenhuma mensagem de erro seria exibida.</p>
+</div>
+<div class="section" id="comentarios-multiline">
+<h2>COMENTÁRIOS <tt class="docutils literal">multiline</tt></h2>
+<p>Da mesma forma que podemos marcar que após determinada posição o compilador deve ignorar os caracteres, podemos definir que, um bloco de código, isto é, um conjunto de linhas, sejam ignoradas pelo compilador.</p>
+<p>Para isso, utilizamos uma notação de abertura de bloco e finalização. A abertura é feita com os caracteres <tt class="docutils literal">/*</tt> barra asterisco e a finalização, com <tt class="docutils literal">*/</tt> asterisco barra. Esta notação permite-nos definir um trecho inline como sendo comentário ou então, todo um arquivo de código.</p>
+<div class="highlight"><pre><span></span><span class="cm">/*</span>
+
+<span class="cm">    bloco de comentários</span>
+
+<span class="cm">*/</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
@@ -389,7 +395,7 @@ eXcript            </a>
 <span class="cm">*/</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;dfsa&quot;</span><span class="p">;</span><span class="c1">//A mensagem que está entre aspas é o que será impresso na tela</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;dddd&quot;</span><span class="p">;</span><span class="c1">//A mensagem que está entre aspas é o que será impresso na tela</span>
   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Ola mundo!&quot;</span><span class="p">;</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -422,7 +428,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/comentarios.html">comentários</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/comentario.html">comentário</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

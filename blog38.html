@@ -81,7 +81,7 @@ eXcript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a  href="http://excript.com/php/manipulação-arrays-php.html">Manipulação de Arrays em PHP</a></h2>
+                <h2><a  href="http://excript.com/php/instrucao-break-php.html">Instrução <tt class="docutils literal">break</tt> em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -89,7 +89,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos as várias formas para a manipulação de Arrays bem comos as características e vantagens das diversas abordagens existentes.</p>
+                            <p> Nesta aula estudaremos a instrução break, isto é, a instrução que finaliza um laço de repetição ou então, finaliza a execução de uma função.</p>
                         </div>
                     </td>
                 </tr>
@@ -115,17 +115,24 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#VERIFICA SE A ESTRUTURA É UMA ARRAY</span>
+<div class="highlight"><pre><span></span><span class="x">//INSTRUÇÃO BREAK</span>
 
-<span class="x">echo &quot;FUNÇÃO: is_array() - &quot; . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = [] - &quot; . is_array( [] ) . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/manipulação-arrays-php.html">more ...</a>
+<span class="x">$i = 0;</span>
+
+<span class="x">while(true){</span>
+
+<span class="x">    $i++;</span>
+<span class="x">    if($i==50){</span>
+<span class="x">        break;</span>
+<span class="x">    }</span>
+
+<span class="x">    echo $i . &quot;\n ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/instrucao-break-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/php/metodo-get-php.html">Método GET em PHP</a></h2>
+                <h2><a  href="http://excript.com/php/instrucao-continue-php.html">Instrução <tt class="docutils literal">continue</tt> em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -133,7 +140,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos as requisições do tipo GET, bem como suas características, definições e quando devemos fazer uso das mesmas.</p>
+                            <p> Nesta aula estudaremos a instrução continue e a sua utilização dentro das estruturas de repetição. Também estudaremos a diferença entre a instrução break e a instrução continue.</p>
                         </div>
                     </td>
                 </tr>
@@ -159,22 +166,148 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#METODO GET</span>
+<div class="highlight"><pre><span></span><span class="x">//INSTRUÇÃO CONTINUE</span>
 
-<span class="x">var_dump($_GET);</span>
+<span class="x">//NÚMEROS PARES DE 0 ATÉ 100</span>
 
-<span class="x">echo $_GET[&#39;a&#39;] . &quot;\n&quot;;</span>
-<span class="x">echo $_GET[&#39;b&#39;] . &quot;\n&quot;;</span>
-<span class="x">echo $_GET[&#39;c&#39;] . &quot;\n&quot;;</span>
+<span class="x">for($i=0 ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/instrucao-continue-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/instrucao-while-php.html">Instrução While em PHP</a></h2>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos a estrutura de repetição while, veremos quais as características e quando devemos fazer uso da mesma. Por fim, implementaremos um código e entenderemos na prática como fazer uso da instrução while.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="x">//ESTRUTURA DE REPETIÇÃO WHILE ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/instrucao-while-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/introducao-array-php.html">Introdução aos Arrays em PHP</a></h2>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula teremos uma instrução sobre a estrutura Array. Aprenderemos a relação entre um Arranjo matemático e um Array e estudaremos as principais características e recursos que os Arrays nos proporcionam.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="x">$a = array(1,2,3);</span>
+
+<span class="x">print_r($a ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/introducao-array-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/introducao-as-funcoes-php.html">Introdução às Funções em PHP</a></h2>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula iniciaremos o estudo das funções e métodos com a linguagem PHP. Estudaremos qual o conceito e definição de função, método e procedimento.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="x">#FUNÇÕES</span>
+
+<span class="x">function minhaFunc(){</span>
+<span class="x">    echo &quot;Fala galera!&quot;;</span>
+<span class="x">}</span>
+
+<span class="x">minhaFunc();</span>
 </pre></div>
 </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/metodo-get-php.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/introducao-as-funcoes-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/php/metodo-post-php.html">Método POST com PHP</a></h2>
+                <h2><a  href="http://excript.com/php/introducao-as-requisicoes-web-php.html">Introdução às Requisições Web em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -182,131 +315,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula aprenderemos o envio de requisições do tipo POST, bem como o seu funcionamento e suas diferenças do tipo de requisição GET.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<p>Este código utiliza também o código da aula anterior.</p>
-<p>metodo_post.php
-.. code-block:: php</p>
-<blockquote>
-<p>//var_dump($_GET ...</p></blockquote></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/metodo-post-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/modificador-acesso-php.html">Modificadores de Acesso em PHP</a></h2>
-                <div class="summary">
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
-            <tbody>
-                <tr>
-                    <td class="content" style="border-left: 0">
-                        <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a definição e uso dos modificadores de acesso aos membros de classe. Em seguida, estudaremos a aplicação dos modificadores ao realizarmos um exemplo prático demonstrando assim, os conceitos teóricos dos modificadores de acesso junto a um exemplo prático.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO ...</h2></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/modificador-acesso-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/modulo-divisao-php.html">Módulo da Divisão em PHP</a></h2>
-                <div class="summary">
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
-            <tbody>
-                <tr>
-                    <td class="content" style="border-left: 0">
-                        <div class="paragraph data-line">
-                            <p> Nesta aula aprenderemos a obter o módulo da divisão, bem como entenderemos a importância de ter um operador dedicado a este fim. Em seguida, realizaremos diversos exemplos para melhor entender o uso do operador módulo.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">$num1 = 9;</span>
-<span class="x">$num2 ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/modulo-divisao-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/montagem-do-html-php-ii.html">Montagem do HTML com PHP II</a></h2>
-                <div class="summary">
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
-            <tbody>
-                <tr>
-                    <td class="content" style="border-left: 0">
-                        <div class="paragraph data-line">
-                            <p> Nesta aula continuaremos o estudo a respeito da construção do código HTML com o uso da linguagem PHP.</p>
+                            <p> Nesta aula estudaremos os conceitos de uma requisição Web, como ocorre o envio e o recebimento de dados e como enviar e receber informações através do PHP.</p>
                         </div>
                     </td>
                 </tr>
@@ -331,12 +340,12 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/montagem-do-html-php-ii.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/introducao-as-requisicoes-web-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/php/montagem-html-php.html">Montagem do HTML com PHP</a></h2>
+                <h2><a  href="http://excript.com/php/introducao-as-string-php.html">Introdução às Strings em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -344,7 +353,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos as formas de envio de HTML para o cliente que fez solicitação. Também estudaremos a utilização da função echo e da função print() para escrevermos o conteúdo que será enviado ao cliente.</p>
+                            <p> Nesta aula iniciaremos o estudo das String em PHP. Veremos as terminologias utilizadas e aprendemos os principais conceitos que envolvem a utilizam e uso dessa que é, sem dúvida, a principal estrutura de qualquer linguagem de programação.</p>
                         </div>
                     </td>
                 </tr>
@@ -370,15 +379,13 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
-
-<span class="k">echo</span> <span class="s2">&quot;Ola ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/montagem-html-php.html">more ...</a>
+<div class="highlight"><pre><span></span><span class="x">#STRING ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/introducao-as-string-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/php/nomenclatura-variavel-php.html">Nomenclatura de Variáveis em PHP</a></h2>
+                <h2><a  href="http://excript.com/php/introducao-do-while-php.html">Introdução do-while em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -386,45 +393,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos quais as regras quando estamos definindo o nome de variáveis, métodos, classes e etc. Aprenderemos quais caracteres podem ser utilizados, e o que devemos evitar.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/nomenclatura-variavel-php.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/php/null-coalescing-operator-php.html">Null Coalescing Operator em PHP</a></h2>
-                <div class="summary">
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
-            <tbody>
-                <tr>
-                    <td class="content" style="border-left: 0">
-                        <div class="paragraph data-line">
-                            <p> Nesta aula aprenderemos a utilizar o Null Coalescing Operador, isto é, um novo operador implementado na versão 7 do PHP que nos proporciona uma maneira ágil de verificar valores nulos.</p>
+                            <p> Nesta aula estudaremos a estrutura de repetição do-while, isto é, faça-enquanto. Aprenderemos quando utilizar essa instrução e quais as beneficios que a mesma proporciona.</p>
                         </div>
                     </td>
                 </tr>
@@ -450,16 +419,20 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">$quadrado = function($num){</span>
-<span class="x">    return $num * $num;</span>
-<span class="x">};</span>
-<span class="x">$cubo = function ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/null-coalescing-operator-php.html">more ...</a>
+<div class="highlight"><pre><span></span><span class="x">$conta = 11;</span>
+<span class="x">do{</span>
+<span class="x">    $conta = $conta + 1;</span>
+<span class="x">    echo $conta . &quot;\n&quot;;</span>
+<span class="x">}while($conta &lt; 10);</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/introducao-do-while-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/php/numeros-pares-impares-php.html">Números Pares e Ímpares em PHP</a></h2>
+                <h2><a  href="http://excript.com/php/iterando-array-php.html">Iterando Arrays em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -467,7 +440,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula aprenderemos a analisar se um número é par ou então é impar. Estudaremos as várias maneiras existentes para a obtenção dessa propriedade matemática e escreveremos uma aplicação que pede ao usuário um número e retorna se o mesmo é par ou então ímpar.</p>
+                            <p> Nesta aula aprenderemos a percorrer todos elementos dos Arrays utilizando as estruturas de repetição estudadas nas aulas anteriores.</p>
                         </div>
                     </td>
                 </tr>
@@ -484,8 +457,53 @@ eXcript            </a>
                     </td>
                     <td class="content">
                         <div class="paragraph data-line">
-                            <p>O texto desta aula ainda ...</p></div></td></tr></tbody></table></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/php/numeros-pares-impares-php.html">more ...</a>
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="x">#ITERANDO ARRAYS</span>
+
+<span class="x">$lista = [&quot;Domingo&quot;, &quot;Segunda&quot;, &quot;Terça&quot;, &quot;Quarta&quot;, &quot;Quinta&quot;, &quot;Sexta&quot;, &quot;Sabado&quot;];</span>
+<span class="x">$qnt = count($lista);</span>
+<span class="x">echo $qnt . &quot;\n&quot;;</span>
+
+<span class="x">for($x=0; $x ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/iterando-array-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/lista-parametro-php-ii.html">Lista de Parâmetros em PHP II</a></h2>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula daremos continuidade ao estudo de funções que são capazes de receber lista de parâmetros.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="lista-de-parametros-ii">
+<h2>LISTA DE PARÂMETROS II</h2>
+<p>Essa aula é a continuação da aula anterior, logo, <a class="reference external" href="http://excript.com/php/lista-parametro-php.html">o texto de apoio da aula anterior serve a esta também</a> .</p>
+</div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="x">function somaTudo(){</span>
+
+<span class="x">    $lista = func_get_args();</span>
+<span class="x">    $qntd = func_num_args ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/lista-parametro-php-ii.html">more ...</a>
                 </div>
             </article>
             <hr/>

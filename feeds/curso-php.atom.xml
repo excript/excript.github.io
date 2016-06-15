@@ -30,7 +30,326 @@
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="variável"></category><category term="global"></category><category term="superglobal"></category></entry><entry><title>Funções Anônimas e Arrays com PHP</title><link href="http://excript.com/php/funcao-anonima-array-php.html" rel="alternate"></link><published>2016-06-11T13:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/funcao-anonima-array-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="variável"></category><category term="global"></category><category term="superglobal"></category></entry><entry><title>Importação: include() e require()</title><link href="http://excript.com/php/importacao-include-require-php.html" rel="alternate"></link><published>2016-06-15T04:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:php/importacao-include-require-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos a diferença entre as funções include() e require() e estudaremos em quais situações devemos importar bibliotecas PHP com cada uma das funções.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;Os programas que fizemos até agora, possuiam apenas um arquivo de código. Trabalhamos dessa maneira para simplificar o estudo e maximizar a visualização do código que estávamos implemento. Porém, o comum, é que uma aplicação escrita em PHP possua vários, senão, centenas de arquivos com código PHP.&lt;/p&gt;
+&lt;p&gt;Dessa forma, temos de ser capazes de dizer que um arquivo em especifico deve ser aberto antes que a execução do arquivo que estamos desenvolvendo seja interpretado. Por exemplo, podemos ter um arquivo onde definimos uma grande quantidade de funções e, quando formos utilizar determinada função, tratamos de antes importar o arquivo em que a mesma foi definida.&lt;/p&gt;
+&lt;p&gt;A capacidade de trabalhar com múltiplos arquivos é a forma mais primitiva de modularização do código PHP. Dessa forma, podíamos separar conjuntos de funções em arquivos diferentes, o que acabava fragmentando o código e, acabava por modularizar os nossos programas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="importacao-de-arquivos"&gt;
+&lt;h2&gt;IMPORTAÇÃO DE ARQUIVOS&lt;/h2&gt;
+&lt;p&gt;Todo programa PHP é constituido por um conjunto de arquivos que contém código PHP, HTML, JS, CSS ou então, qualquer outra informação que deve ser processada no lado do servidor.&lt;/p&gt;
+&lt;p&gt;O PHP disponibiliza 4 funções para importação e cada uma desempenha uma tarefa especifica, logo, temos que conhecer todas as maneiras disponíveis de importação!&lt;/p&gt;
+&lt;p&gt;Podemos importar um arquivo PHP através da função &lt;code&gt;include()&lt;/code&gt; ou então, &lt;code&gt;require()&lt;/code&gt;. Cada uma dessas 2 funções, possui uma função auxiliar que evita a importação de um arquivo que já tenha sido importado anteriormente.&lt;/p&gt;
+&lt;p&gt;O problema em importar um arquivo que já está importado, é que as variáveis contidas no escopo desse arquivo serão resetadas, logo, todos os valores que tivermos em variáveis que estão definidas em outro arquivo serão perdidos. Isso é somente um dos problemas, é possível elucidar vários.&lt;/p&gt;
+&lt;p&gt;Então, é uma boa prática a utilização das funções &amp;quot;_once()&amp;quot;, até porque, dessa maneira evitamos a importação de algo que já está carregado.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;função include()&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;&lt;code&gt;include()&lt;/code&gt;: inclui o arquivo arquivo passado como parâmetro. Se o arquivo não for encontrado, o PHP irá lançar um &amp;quot;warning&amp;quot;, mas dará continuidade na execução.&lt;/p&gt;
+&lt;p class="last"&gt;&lt;code&gt;include_once()&lt;/code&gt;: o funcionamento dessa função é igual ao da função &lt;code&gt;include()&lt;/code&gt;, porém, o arquivo só será importado caso o mesmo ainda não tenha sido.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;função require()&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;&lt;code&gt;require()&lt;/code&gt;: a função &lt;code&gt;require()&lt;/code&gt; importa arquivos, porém, caso o mesmo não seja encontrado, será levantado uma exceção e a execução é finalizada. Essa é uma maneira de interrompermos a execução dos scripts caso alguma anomalia ocorra.&lt;/p&gt;
+&lt;p class="last"&gt;&lt;code&gt;require_once()&lt;/code&gt;: o funcionamento é igual ao da função &lt;code&gt;require()&lt;/code&gt;, porém, um arquivo só será importado caso o mesmo ainda não tenha sido.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#IMPORTANDO ARQUIVOS PHP&lt;/span&gt;
+
+&lt;span class="x"&gt;include(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
+&lt;span class="x"&gt;include_once(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
+
+&lt;span class="x"&gt;require(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
+&lt;span class="x"&gt;require_once(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
+
+&lt;span class="x"&gt;echo $teste . &amp;quot;\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;$teste = 5;&lt;/span&gt;
+
+&lt;span class="x"&gt;require(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
+
+&lt;span class="x"&gt;echo $teste . &amp;quot;\n&amp;quot;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="importar"></category><category term="função"></category><category term="include"></category><category term="require"></category><category term="blog"></category></entry><entry><title>Valores de retornos de funções tipados em PHP</title><link href="http://excript.com/php/valor-retorno-funcao-tipada-php.html" rel="alternate"></link><published>2016-06-15T04:15:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:php/valor-retorno-funcao-tipada-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos como definir o tipo do valor a ser retornado pelas funções, bem como as vantagens dessa abordagens e os beneficios que podemos obter com o uso desse conceito implementado na versão 7 do PHP.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;A versão 7 do PHP permite a definição do tipo de cada parâmetro, como estudamos na aula anterior. O mesmo também disponibilizou uma notação para a definição do tipo do valor que será retornado pela função, ou seja, agora, podemos definir o valor que será recebido por uma função e o valor que está irá retornar.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="funcoes-com-retorno-tipados"&gt;
+&lt;h2&gt;FUNÇÕES COM RETORNO TIPADOS&lt;/h2&gt;
+&lt;p&gt;Função com retorno tipado é toda função que define explicitamente o tipo do valor que será retornado. Dessa maneira o PHP disponibilizou uma maneira de definirmos o tipo do valor que será recebido por uma função, como também, o valor que a mesma retornará.&lt;/p&gt;
+&lt;p&gt;A seguir, escrevemos um simples exemplo onde há uma função que define o tipo do valor que será retornado.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function getArea(int x, int y) : int {&lt;/span&gt;
+&lt;span class="x"&gt;    return x * y;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, definimos que o valor de retorno da função getArea() será um número inteiro.&lt;/p&gt;
+&lt;p&gt;Dessa forma, conseguimos manter um código mais integro e fazer com que os editores se tornem mais inteligentes, até porque, os mesmos saberão quais os valores que são esperados por parâmetros em alguma funções, como também, conseguem saber o valor que será retornado por outras funções.&lt;/p&gt;
+&lt;p&gt;É possível definir que os valores não sejam automaticamente convertidos pelo PHP, ou seja, podemos definir que, caso o valor passado não seja do tipo esperado, uma exceção seja levantada e a execução finalizada.&lt;/p&gt;
+&lt;p&gt;Para definir que desejamos que o PHP levante uma exceção caso o valor passado não seja do tipo esperado, temos que, através de um código, especificar que determinado módulo está trabalhando de maneira restrita, isto é, que os valores passados devem ser do tipo esperado. Do contrário, o Script será interrompido.&lt;/p&gt;
+&lt;p&gt;A instrução &lt;code&gt;declare(strict_types=1);&lt;/code&gt; deve ser colocada no início do arquivo para que o PHP trate o mesmo da forma estrita.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;declare(strict_types=1);//valor de retorno precisa ser do tipo definido&lt;/span&gt;
+
+&lt;span class="x"&gt;function getArea(int x, int y):int {&lt;/span&gt;
+&lt;span class="x"&gt;    return x * y;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;declare(strict_types=1);&lt;/span&gt;
+
+&lt;span class="x"&gt;#VALORES DE RETORNO TIPADO&lt;/span&gt;
+
+&lt;span class="x"&gt;function cubo(float $num) : float&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+&lt;span class="x"&gt;    return $num * $num * $num;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;function teste() : array&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+&lt;span class="x"&gt;    return [10, &amp;quot;eXcript&amp;quot;, 5.1];&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;function x() : int&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+&lt;span class="x"&gt;    return &amp;quot;aa&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;//echo cubo(10.5);&lt;/span&gt;
+
+&lt;span class="x"&gt;//var_dump( teste() );&lt;/span&gt;
+
+
+&lt;span class="x"&gt;x();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="tipo"></category><category term="função tipada"></category><category term="parâmetro"></category><category term="retorno tipado"></category><category term="return"></category><category term="blog"></category></entry><entry><title>Parâmetros Tipados em PHP</title><link href="http://excript.com/php/parametro-tipado-php.html" rel="alternate"></link><published>2016-06-15T04:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:php/parametro-tipado-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos como definir o tipo dos parâmetros de uma função, bem como as vantagens na utilização desse conceito implementado na versão 7 do PHP.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;O PHP é uma linguagem dinamicamente tipada, ou seja, não definimos o tipo de cada variável no momento de sua declaração. Isso aumenta a produtividade, porém, acaba ocasionando alguns problemas e fazendo com que tenhamos que verificar, se o valor que recebemos é do tipo esperado.&lt;/p&gt;
+&lt;p&gt;Para solucionar alguns destes problemas, foi definido na versão 7 do PHP, a capacidade de definir o tipo do parâmetro da função, ou seja, podemos definir agora que determinada função deve receber como parâmetro, por exemplo, um número. Caso uma letra seja passada, o PHP fará [tentará fazer] o trabalho de conversão da mesma para número.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="funcoes-com-parametros-tipados"&gt;
+&lt;h2&gt;FUNÇÕES COM PARÂMETROS TIPADOS&lt;/h2&gt;
+&lt;p&gt;Funções com parâmetros tipados é uma forma de evitarmos a checagem do tipo de cada parâmetro recebido. Assim, o interpretador fica com a tarefa de verificar se o valor que está sendo enviado para a função é do tipo esperado.&lt;/p&gt;
+&lt;p&gt;A seguir, estamos definindo uma função que recebe 2 parâmetros inteiros.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function getArea(int x, int y){&lt;/span&gt;
+&lt;span class="x"&gt;    return x * y;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, se passarmos por exemplo, um valor do tipo ponto flutuante como parâmetro, o PHP irá converter o mesmo para um inteiro, e o mesmo irá ocorrer se enviarmos um valor do tipo &lt;tt class="docutils literal"&gt;String&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Porém, podemos declarar no início do nosso código, que caso o valor que seja enviado não  corresponda ao tipo esperado, uma exceção deve ser levantada informando o usuário de que o valor informando possui um tipo diferente do previsto. Dessa forma, o PHP pode se transformar numa linguagem fortemente tipada, ou seja, os valores e os tipos devem ser respeitados.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;declare(strict_types=1);&lt;/span&gt;
+
+&lt;span class="x"&gt;#FUNÇÕES COM PARÂMETROS TIPADOS&lt;/span&gt;
+
+&lt;span class="x"&gt;function getArea(int $x, int $y){&lt;/span&gt;
+
+&lt;span class="x"&gt;    return $x * $y;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;function getSum(int ...$valores){&lt;/span&gt;
+
+&lt;span class="x"&gt;    return array_sum($valores);&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;echo getArea(10, 5) . &amp;quot;\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;echo getSum(1,2,3,4,5,6,&amp;quot;100&amp;quot;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="parâmetro"></category><category term="tipos"></category><category term="parâmetro tipado"></category><category term="blog"></category></entry><entry><title>Null Coalescing Operator em PHP</title><link href="http://excript.com/php/null-coalescing-operator-php.html" rel="alternate"></link><published>2016-06-15T03:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:php/null-coalescing-operator-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos a utilizar o Null Coalescing Operador, isto é, um novo operador implementado na versão 7 do PHP que nos proporciona uma maneira ágil de verificar valores nulos.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;A versão 7 do PHP trouxe um novo operador que diminui a necessidade de verificar se uma referência existe para em seguida, utilizar a mesma. O objetivo é que possamos definir o valor a ser retornado, ou então, definir um valor para caso não existe um valor a ser retornado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="operador-null-coalesce"&gt;
+&lt;h2&gt;OPERADOR NULL COALESCE&lt;/h2&gt;
+&lt;p&gt;O operador Null Coalesce é representado pela linguagem PHP com a utilização de dois sinais de interrogação, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt; variável &amp;gt; = &amp;lt; valor &amp;gt; ?? &amp;lt; há valor definido? Senão retorna isso &amp;gt;;&lt;/span&gt;
+&lt;span class="x"&gt;$x = $a ?? 10;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Se a variável &lt;code&gt;$a&lt;/code&gt; existir, o valor da mesma será definido para &lt;code&gt;$x&lt;/code&gt;, do contrário, o número 10 é que será utilizado.&lt;/p&gt;
+&lt;p&gt;É comum a necessidade de verificarmos se um determinado valor está condito num Array e então, fazer uso do mesmo. Atualmente, é necessário o uso de uma condição para averiguar que o item existe, ou então, verificar que a variável é diferente de Null, para que somente então, possamos fazer uso da mesma. Até porque, se utilizarmos uma variável que contém Null é será levantado uma exceção e o Script terá sua execução interrompida.&lt;/p&gt;
+&lt;p&gt;O operador &lt;tt class="docutils literal"&gt;Null Coalesce&lt;/tt&gt; veio para agilizar essa constante necessidade de verificação e utilização do valor contido no item ou variável checado.&lt;/p&gt;
+&lt;p&gt;A sintaxe do operador Null Coalesce é bastante semelhante a sintaxe do Operador Ternário, porém, com este operador, é verificado se a referência existe ou então, se um elemento esta contido num Array. Caso o valor exista, o mesmo será utilizado, do contrário, iremos definir algum outro valor ou então, alguma outra verificação.&lt;/p&gt;
+&lt;p&gt;É interessante observar que o operador Null Coalesce fornece uma estrutura para checagem e utilização, porém, é possível continuarmos trabalhando sem fazer uso do mesmo.&lt;/p&gt;
+&lt;p&gt;A seguir utilizamos algumas estruturas e também, a estrutura do operador Null Coalesce.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#operador ternário&lt;/span&gt;
+&lt;span class="x"&gt;echo $x ? $x : &amp;quot;&amp;quot;;&lt;/span&gt;
+
+&lt;span class="x"&gt;echo $x ?: &amp;quot;&amp;quot;;&lt;/span&gt;
+
+&lt;span class="x"&gt;#operador Null Coalesce&lt;/span&gt;
+&lt;span class="x"&gt;echo $x ?? &amp;quot;&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;echo $x ?? $b ?? &amp;quot;&amp;quot;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo  seguir, utilizamos o operador Null Coalesce para definir o que será impresso na saída padrão.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;// $a não está definido&lt;/span&gt;
+&lt;span class="x"&gt;$b = 10;&lt;/span&gt;
+
+&lt;span class="x"&gt;echo $a ?? 2; // saída 2&lt;/span&gt;
+&lt;span class="x"&gt;echo $a ?? $b ?? 7; // saída 10&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, inicialmente definimos à variável &lt;code&gt;$b&lt;/code&gt; o valor 10. Em seguida, mandamos imprimir na saída padrão o valor contido da varável &lt;code&gt;$a&lt;/code&gt;, que não foi por nós definida, ou então, algum outro valor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$quadrado = function($num){&lt;/span&gt;
+&lt;span class="x"&gt;    return $num * $num;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+&lt;span class="x"&gt;$cubo = function($num) use ($quadrado){&lt;/span&gt;
+&lt;span class="x"&gt;    return $quadrado($num) * $num;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+&lt;span class="x"&gt;$soma = function($num){&lt;/span&gt;
+&lt;span class="x"&gt;    return $num + $num;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;function processa_lista($lista, $func){&lt;/span&gt;
+&lt;span class="x"&gt;    foreach($lista as &amp;amp;$item)&lt;/span&gt;
+&lt;span class="x"&gt;        $item = $func($item);&lt;/span&gt;
+&lt;span class="x"&gt;    return $lista;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;print_r(processa_lista(range(1, 10), $soma));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="operador"></category><category term="null coalescing"></category><category term="null coalescing operator"></category><category term="operador null coalesce"></category><category term="blog"></category></entry><entry><title>Operador SpaceShift em PHP</title><link href="http://excript.com/php/operador-spaceshift-php.html" rel="alternate"></link><published>2016-06-15T03:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:php/operador-spaceshift-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos o Operador Spaceshift, aprenderemos seu funcionamento, onde devemos utiliza-los e também, aprenderemos algumas dicas e truque para extrair ao máximo desse recurso implementado na versão 7 do PHP.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="spaceship-operator"&gt;
+&lt;h2&gt;SPACESHIP OPERATOR&lt;/h2&gt;
+&lt;p&gt;O PHP 7 implementou um operador de nome &lt;tt class="docutils literal"&gt;Spaceship&lt;/tt&gt;. Com este, somos capazes de verificar 3 situações ao mesmo tempo, ou seja, verificamos se o operando a esquerda é menor, igual ou maior do que o operando a direita. O resultado da verificação será um número inteiro no intervalo entre -1 até 1.&lt;/p&gt;
+&lt;p&gt;Caso o valor retornado seja -1, o operando a esquerda é menor do o operando a sua direita. Se o valor retornado for igual a 0, os operandos são iguais. Por fim, se o valor retornado for 1, o operando a esquerda é maior do que o operando a direita do operador.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x &amp;lt;=&amp;gt; $y&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Então, temos que a cada verificação feita utilizando o operador &lt;tt class="docutils literal"&gt;SpaceShift&lt;/tt&gt;, será verificado 3 situações:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;$x&lt;/tt&gt; é menor do que &lt;tt class="docutils literal"&gt;$Y&lt;/tt&gt; retorna -1.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;$x&lt;/tt&gt; é igual a &lt;tt class="docutils literal"&gt;$Y&lt;/tt&gt;  retorna 0.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;$x&lt;/tt&gt; é menor a &lt;tt class="docutils literal"&gt;$Y&lt;/tt&gt; retorna 1.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="situacoes-menor-ou-igual-maior-ou-igual"&gt;
+&lt;h2&gt;SITUAÇÕES: MENOR OU IGUAL; MAIOR OU IGUAL&lt;/h2&gt;
+&lt;p&gt;Também é possível obter o resultado da expressões &lt;tt class="docutils literal"&gt;menor ou igual&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;maior ou igual&lt;/tt&gt; com o operador &lt;tt class="docutils literal"&gt;spaceshift&lt;/tt&gt;, neste caso temos que:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x &amp;lt;==&amp;gt; $y&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplos-com-numeros"&gt;
+&lt;h2&gt;EXEMPLOS COM NÚMEROS&lt;/h2&gt;
+&lt;p&gt;A seguir, definimos alguns exemplos utilizando números e, já definimos, como sendo comentário, o valor que será retornado.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;1 &amp;lt;=&amp;gt; 1     // 0&lt;/span&gt;
+&lt;span class="x"&gt;2 &amp;lt;=&amp;gt; 1     // 1&lt;/span&gt;
+&lt;span class="x"&gt;1 &amp;lt;=&amp;gt; 2     // -1&lt;/span&gt;
+&lt;span class="x"&gt;156 &amp;lt;==&amp;gt; 12 // 1&lt;/span&gt;
+&lt;span class="x"&gt;19 &amp;lt;==&amp;gt; 20  // -1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplos-com-arrays"&gt;
+&lt;h2&gt;EXEMPLOS COM ARRAYS&lt;/h2&gt;
+&lt;p&gt;Abaixo definimos uma lista de exemplos e novamente, colocamos como sendo comentários o valor que será impresso no console.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;echo [] &amp;lt;=&amp;gt; []; // 0&lt;/span&gt;
+&lt;span class="x"&gt;echo [1, 2, 3] &amp;lt;=&amp;gt; [1, 2, 3]; // 0&lt;/span&gt;
+&lt;span class="x"&gt;echo [1, 2, 3] &amp;lt;=&amp;gt; []; // 1&lt;/span&gt;
+&lt;span class="x"&gt;echo [1, 2, 3] &amp;lt;=&amp;gt; [1, 2, 1]; // 1&lt;/span&gt;
+&lt;span class="x"&gt;echo [1, 2, 3] &amp;lt;=&amp;gt; [1, 2, 4]; // -1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplos-com-strings"&gt;
+&lt;h2&gt;EXEMPLOS COM STRINGS&lt;/h2&gt;
+&lt;p&gt;Agora, definimos 3 exemplos utilizando String para estudarmos o funcionamento do operador &lt;code&gt;spaceshift&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;echo &amp;quot;x&amp;quot; &amp;lt;=&amp;gt; &amp;quot;x&amp;quot;; // 0&lt;/span&gt;
+&lt;span class="x"&gt;echo &amp;quot;x&amp;quot; &amp;lt;=&amp;gt; &amp;quot;y&amp;quot;; //-1&lt;/span&gt;
+&lt;span class="x"&gt;echo &amp;quot;y&amp;quot; &amp;lt;=&amp;gt; &amp;quot;x&amp;quot;; //1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#SPACESHIFT OPERATOR&lt;/span&gt;
+
+&lt;span class="x"&gt;foreach(range(0,9) as $v){&lt;/span&gt;
+
+&lt;span class="x"&gt;    $x = rand(0, 9);&lt;/span&gt;
+&lt;span class="x"&gt;    $rel = $v &amp;lt;=&amp;gt; $x;&lt;/span&gt;
+
+&lt;span class="x"&gt;    echo &amp;quot;v=$v &amp;lt;=&amp;gt; x=$x é $rel \n&amp;quot;;&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="operador"></category><category term="spaceshift"></category><category term="spaceshift operator"></category><category term="blog"></category></entry><entry><title>Funções Anônimas e Arrays com PHP</title><link href="http://excript.com/php/funcao-anonima-array-php.html" rel="alternate"></link><published>2016-06-11T13:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/funcao-anonima-array-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1104,7 +1423,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;span class="x"&gt;soma(10, 2);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="parâmetro"></category><category term="argumento"></category><category term="função variádica"></category><category term="blog"></category></entry><entry><title>Curso PHP</title><link href="http://excript.com/curso-php.html" rel="alternate"></link><published>2016-05-01T00:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:curso-php.html</id><summary type="html">&lt;div class="section" id="sobre-o-curso"&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="parâmetro"></category><category term="argumento"></category><category term="função variádica"></category><category term="blog"></category></entry><entry><title>Curso PHP</title><link href="http://excript.com/curso-php.html" rel="alternate"></link><published>2016-05-01T10:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:curso-php.html</id><summary type="html">&lt;div class="section" id="sobre-o-curso"&gt;
 &lt;h2&gt;SOBRE O CURSO&lt;/h2&gt;
 &lt;p&gt;O &lt;a class="reference external" href="http://www.excript.com/curso-php.html"&gt;Curso de PHP&lt;/a&gt; da &lt;a class="reference external" href="http://www.excript.com/"&gt;eXcript&lt;/a&gt; parte do princípio que o aluno está iniciando na programação e assim, todos os passos iniciais são descritos detalhadamente a fim de contemplar a todos os níveis.&lt;/p&gt;
 &lt;p&gt;Se você está chegando agora na programação, seja muito bem-vindo e saiba que o nosso curso guiará você pelo caminho de se tornar um programador. Este curso não há pré-requisito, logo, não existe a necessidade de ter qualquer conhecimento prévio.&lt;/p&gt;
@@ -2908,56 +3227,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;span class="x"&gt;$t1 -&amp;gt; imprimeTeste();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Funções para importação - include() e require()</title><link href="http://excript.com/php/importacao-include-require-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/importacao-include-require-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula aprenderemos a diferença entre as funções include() e require() e estudaremos em quais situações devemos importar bibliotecas PHP com cada uma das funções.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#IMPORTANDO ARQUIVOS PHP&lt;/span&gt;
-
-&lt;span class="x"&gt;include(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
-&lt;span class="x"&gt;include_once(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
-
-&lt;span class="x"&gt;require(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
-&lt;span class="x"&gt;require_once(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
-
-&lt;span class="x"&gt;echo $teste . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;$teste = 5;&lt;/span&gt;
-
-&lt;span class="x"&gt;require(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
-
-&lt;span class="x"&gt;echo $teste . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Instalando PHPStorm no Windows</title><link href="http://excript.com/php/instalando-phpstorm-no-windows.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/instalando-phpstorm-no-windows.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Instalando PHPStorm no Windows</title><link href="http://excript.com/php/instalando-phpstorm-no-windows.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/instalando-phpstorm-no-windows.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -3797,59 +4067,7 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Null Coalescing Operator em PHP</title><link href="http://excript.com/php/null-coalescing-operator-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/null-coalescing-operator-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula aprenderemos a utilizar o Null Coalescing Operador, isto é, um novo operador implementado na versão 7 do PHP que nos proporciona uma maneira ágil de verificar valores nulos.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$quadrado = function($num){&lt;/span&gt;
-&lt;span class="x"&gt;    return $num * $num;&lt;/span&gt;
-&lt;span class="x"&gt;};&lt;/span&gt;
-&lt;span class="x"&gt;$cubo = function($num) use ($quadrado){&lt;/span&gt;
-&lt;span class="x"&gt;    return $quadrado($num) * $num;&lt;/span&gt;
-&lt;span class="x"&gt;};&lt;/span&gt;
-&lt;span class="x"&gt;$soma = function($num){&lt;/span&gt;
-&lt;span class="x"&gt;    return $num + $num;&lt;/span&gt;
-&lt;span class="x"&gt;};&lt;/span&gt;
-
-&lt;span class="x"&gt;function processa_lista($lista, $func){&lt;/span&gt;
-&lt;span class="x"&gt;    foreach($lista as &amp;amp;$item)&lt;/span&gt;
-&lt;span class="x"&gt;        $item = $func($item);&lt;/span&gt;
-&lt;span class="x"&gt;    return $lista;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;print_r(processa_lista(range(1, 10), $soma));&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="operador"></category><category term="Null Coalescing Operator"></category><category term="Operador Null Coalesce"></category></entry><entry><title>Números Pares e Ímpares em PHP</title><link href="http://excript.com/php/numeros-pares-impares-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/numeros-pares-impares-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Números Pares e Ímpares em PHP</title><link href="http://excript.com/php/numeros-pares-impares-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/numeros-pares-impares-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -4266,51 +4484,6 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
 &lt;span class="x"&gt;var_dump( 10 &amp;gt;= 7 );&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Operador SpaceShift em PHP</title><link href="http://excript.com/php/operador-spaceshift-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/operador-spaceshift-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o Operador Spaceshift, aprenderemos seu funcionamento, onde devemos utiliza-los e também, aprenderemos algumas dicas e truque para extrair ao máximo desse recurso implementado na versão 7 do PHP.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#SPACESHIFT OPERATOR&lt;/span&gt;
-
-&lt;span class="x"&gt;foreach(range(0,9) as $v){&lt;/span&gt;
-
-&lt;span class="x"&gt;    $x = rand(0, 9);&lt;/span&gt;
-&lt;span class="x"&gt;    $rel = $v &amp;lt;=&amp;gt; $x;&lt;/span&gt;
-
-&lt;span class="x"&gt;    echo &amp;quot;v=$v &amp;lt;=&amp;gt; x=$x é $rel \n&amp;quot;;&lt;/span&gt;
-
-&lt;span class="x"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category></entry><entry><title>Operadores Relacionais Parte II</title><link href="http://excript.com/php/operadores-relacionais-php-algoritmo.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/operadores-relacionais-php-algoritmo.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -4424,57 +4597,6 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
 
 &lt;span class="nv"&gt;$valor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;func&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="nb"&gt;print_r&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$valor&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Parâmetros Tipados em PHP</title><link href="http://excript.com/php/parametro-tipado-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/parametro-tipado-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula aprenderemos como definir o tipo dos parâmetros de uma função, bem como as vantagens na utilização desse conceito implementado na versão 7 do PHP.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;declare(strict_types=1);&lt;/span&gt;
-
-&lt;span class="x"&gt;#FUNÇÕES COM PARÂMETROS TIPADOS&lt;/span&gt;
-
-&lt;span class="x"&gt;function getArea(int $x, int $y){&lt;/span&gt;
-
-&lt;span class="x"&gt;    return $x * $y;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;function getSum(int ...$valores){&lt;/span&gt;
-
-&lt;span class="x"&gt;    return array_sum($valores);&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;echo getArea(10, 5) . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;echo getSum(1,2,3,4,5,6,&amp;quot;100&amp;quot;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category></entry><entry><title>Parâmetros default com PHP</title><link href="http://excript.com/php/parametros-default-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/parametros-default-php.html</id><summary type="html">
@@ -5268,66 +5390,6 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Valores de retornos de funções tipados em PHP</title><link href="http://excript.com/php/valor-retorno-funcao-tipada-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/valor-retorno-funcao-tipada-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula aprenderemos como definir o tipo do valor a ser retornado pelas funções, bem como as vantagens dessa abordagens e os beneficios que podemos obter com o uso desse conceito implementado na versão 7 do PHP.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;declare(strict_types=1);&lt;/span&gt;
-
-&lt;span class="x"&gt;#VALORES DE RETORNO TIPADO&lt;/span&gt;
-
-&lt;span class="x"&gt;function cubo(float $num) : float&lt;/span&gt;
-&lt;span class="x"&gt;{&lt;/span&gt;
-&lt;span class="x"&gt;    return $num * $num * $num;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;function teste() : array&lt;/span&gt;
-&lt;span class="x"&gt;{&lt;/span&gt;
-&lt;span class="x"&gt;    return [10, &amp;quot;eXcript&amp;quot;, 5.1];&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;function x() : int&lt;/span&gt;
-&lt;span class="x"&gt;{&lt;/span&gt;
-&lt;span class="x"&gt;    return &amp;quot;aa&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;//echo cubo(10.5);&lt;/span&gt;
-
-&lt;span class="x"&gt;//var_dump( teste() );&lt;/span&gt;
-
-
-&lt;span class="x"&gt;x();&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category></entry><entry><title>Variáveis Variáveis em PHP</title><link href="http://excript.com/php/variaveis-variaveis-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/variaveis-variaveis-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;

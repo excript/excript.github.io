@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/argumentos-nomeados-posicionais-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,função,parâmetro,argumento,argumento posicional,argumento nomeado,blog" />
     <meta name="description" content="Nesta aula aprofundaremos nosso estudo e entendimento dos argumentos das funções. Estudaremos o conceito de Parâmetros Nomeados e suas características, e também aprenderemos a definição e o emprego dos Argumentos Posicionais na definição de funções bem como, no momento em que iremos utiliza-las." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,10 +25,16 @@
 
         <meta property="og:description" content="Nesta aula aprofundaremos nosso estudo e entendimento dos argumentos das funções. Estudaremos o conceito de Parâmetros Nomeados e suas características, e também aprenderemos a definição e o emprego dos Argumentos Posicionais na definição de funções bem como, no momento em que iremos utiliza-las."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="15-06-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="função" />
+            <meta property="article:tag" content="parâmetro" />
+            <meta property="article:tag" content="argumento" />
+            <meta property="article:tag" content="argumento posicional" />
+            <meta property="article:tag" content="argumento nomeado" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -112,7 +118,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-15T08:30:00-03:00"> Publicado em 15-06-2016</time>
         </span>
 
 
@@ -344,7 +350,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/parametro-de-funcao-python.html" >Parâmetros de Função em Python</a></td>
                             <td><a href="http://excript.com/python/parametro-de-funcao-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/parametro-default-python.html" >Parâmeros default em Python</a></td>
+                            <td><a href="http://excript.com/python/parametro-default-python.html" >Parâmetros default em Python</a></td>
                             <td><a href="http://excript.com/python/parametro-default-python.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/python/argumentos-nomeados-posicionais-python.html" >Argumento de Função Nomeado vs Posicional em Python</a></td>
@@ -357,21 +363,7 @@ eXcript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
-            <tbody>
-                <tr>
-                    <td class="content" style="border-left: 0">
-                        <div class="paragraph data-line">
-                            <p> Nesta aula aprofundaremos nosso estudo e entendimento dos argumentos das funções. Estudaremos o conceito de Parâmetros Nomeados e suas características, e também aprenderemos a definição e o emprego dos Argumentos Posicionais na definição de funções bem como, no momento em que iremos utiliza-las.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<br>
+					<br>
     <div class="admonitionblock note data-line">
         <table>
             <tbody>
@@ -388,6 +380,55 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
+<div class="section" id="argumentos-nomeados-keyword-arguments">
+<h2>ARGUMENTOS NOMEADOS (KEYWORD ARGUMENTS)</h2>
+<p>Em Python é possível invocarmos funções passando os argumentos de forma posicional ou então, através da associação chave-valor.</p>
+<p><tt class="docutils literal">Argumento posicional</tt> é o nome utilizado para a passagem de valores onde cada valor estara na ordem conforme implementado na função.</p>
+<p><tt class="docutils literal">Argumento nomeado</tt> é a passagem de valores fazendo associação com o nome do parâmetro e o valor que está sendo enviado.</p>
+
+    <div class="admonitionblock tip data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-tip" title="Dica!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>Lembre-se que argumento e parâmetro são nomes diferentes para conceitos iguais. O termo argumento é utilizado quando determinada função está sendo invocada, logo, dizemos que a função tem definido x argumentos. Parâmetro é o nome utilizado quando estamos manipulando a função propriamente dita, logo, dizemos que a função declarou x parâmetros.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>Considere o trecho de código a seguir:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">minha_func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># invocando a função minha_func() passando valores de forma posicional</span>
+<span class="n">minha_func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="c1"># invocando a função minha_func() passando valores de forma chave-valor</span>
+<span class="n">minha_func</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># invocando a função minha_func() passando valores de forma chave-valor</span>
+<span class="c1"># porém, fora de ordem</span>
+<span class="n">minha_func</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+<p>No código acima, declaramos uma função de nome <code>minha_func(a, b, c)</code> e definimos 3 parâmetros de nomes, <code>(a, b, c)</code>. Em seguida, invocamos a função <code>minha_func()</code> 2 vezes. Na primeira, passamos 3 valores na ordem em que estes foram definidos, ou seja, <code>1, 2, 3</code> serão, automaticamente definidos, para os parâmetros <tt class="docutils literal">a</tt>, <tt class="docutils literal">b</tt> e <tt class="docutils literal">c</tt> respectivamente. Em seguida, invocamos a função novamente, porém, definimos os parâmetro de maneira nomeada, isto é, a cada parâmetro associamos determinado valor.</p>
+<p>Argumento nomeado é um recurso que permite a passagem de valores pela associação chave-valor e assim, os mesmos não precisaram estar dispostos numa ordem pre-estabelecida, até porque, o Python receberá um dicionário que contém o nome e o valor de cada parâmetro.</p>
+<p>Se analisarmos a forma que passamos valores e as estruturas estudadas, é possível perceber que a passagem de parâmetros posicionais, <cite>nada mais é do que o envio de uma tupla &lt;{filename}../curso-de-python/0052_tuplas-python.rst&gt;</cite>, enquanto que <cite>a passagem de valores nomeados, é o envio de um dicionário &lt;{filename}../curso-de-python/0061_introducao-aos-dicionarios-python.rst&gt;</cite>.</p>
+<p>A única regra em relação a passagem de valores através de parâmetros nomeados e parâmetros posicionais, é que devemos escolher uma das formas de envio, isto é, ou utilizamos parâmetros posicionais ou então, parâmetros nomeados.</p>
+</div>
+<div class="section" id="excecao-a-regra">
+<h2>EXCEÇÃO À REGRA</h2>
+<p>É possível invocar uma função passando os primeiros argumentos de forma posicional e o restante, de forma nomeada. Porém, a regra para trabalhar dessa maneira é: argumentos posicionais, em seguida, argumentos nomeados. Tomemos como exemplo o código a seguir:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">minha_func2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+
+<span class="n">minha_func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+<p>No código acima, definimos uma função semelhante a estudada no primeiro exemplo, porém, que contém mais um argumento de nome <tt class="docutils literal">d</tt>. Em seguida, invocamos a função e, para os 2 primeiros argumentos, enviamos valores de maneira posicional. Já, para os 2 argumentos finais, de nomes <tt class="docutils literal">c</tt> e <tt class="docutils literal">d</tt>, passamos valores associando o nome do parâmetro com o respectivo valor.</p>
+</div>
 
 				</div>
 			</div>
@@ -415,7 +456,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/funcao.html">função</a>, 	<a href="http://excript.com/tag/parametro.html">parâmetro</a>, 	<a href="http://excript.com/tag/argumento.html">argumento</a>, 	<a href="http://excript.com/tag/argumento-posicional.html">argumento posicional</a>, 	<a href="http://excript.com/tag/argumento-nomeado.html">argumento nomeado</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/cpp/indentacao-espaco-em-branco-ponto-e-virgula-cpp.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,cpp,indentação,espaço em branco,ponto e vírgula" />
+        <meta name="keywords" content="curso,cpp,indentação,espaço em branco,ponto e vírgula,blog" />
     <meta name="description" content="Nesta aula estudaremos alguns conceitos fundamentais da construção de códigos C++. Aprenderemos o que é e como utilizar a indentação, os espaços em branco, a utilização do ponto e vírgula e muito mais!" />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,13 +25,14 @@
 
         <meta property="og:description" content="Nesta aula estudaremos alguns conceitos fundamentais da construção de códigos C++. Aprenderemos o que é e como utilizar a indentação, os espaços em branco, a utilização do ponto e vírgula e muito mais!"/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="15-06-2016" />
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
             <meta property="article:tag" content="indentação" />
             <meta property="article:tag" content="espaço em branco" />
             <meta property="article:tag" content="ponto e vírgula" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -115,7 +116,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-15T01:00:00-03:00"> Publicado em 15-06-2016</time>
         </span>
 
 
@@ -179,7 +180,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/cpp/caracteristica-variavel-cpp.html" >Características das Variáveis em C++</a></td>
                             <td><a href="http://excript.com/cpp/caracteristica-variavel-cpp.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/cpp/manipular-variavel-cpp.html" >Nanipulando Variáveis em C++</a></td>
+                            <td><a href="http://excript.com/cpp/manipular-variavel-cpp.html" >Manipulando Variáveis em C++</a></td>
                             <td><a href="http://excript.com/cpp/manipular-variavel-cpp.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/cpp/nomenclatura-variavel-cpp.html" >Nomenclatura de Variáveis em C++</a></td>
@@ -353,23 +354,22 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="indentacao">
+<h2>INDENTAÇÃO</h2>
+<p>O termo <strong>Indentar</strong> vem do Inglês <tt class="docutils literal">indentation</tt> e significa o recuo de um texto em relação a sua margem esquerda.</p>
+<p>Na programação, inserimos espaços em branco a esquerda de cada instrução para agruparmos visualmente um mesmo conjunto de instruções, ou então, para agruparmos instrução pertencentes a um mesmo bloco e que serão, executadas sequencialmente de cima para baixo, da esquerda para a direita.</p>
+<p>A linguagem C++ não obriga-nos a indentar o nosso código, porém, a comunidade sim! Isto é, se você enviar um código não indentado para um grupo de programadores, verás que estes, dificilmente lerão o código enviado. E, mesmo que você acredite ser isso algo banal num primeiro momento, acredite, não é! Tamanha é a importância da indentação que linguagem como o Python optaram por utilizar a indentação ao invés do par de chaves para agrupar códigos pertencentes a um mesmo bloco.</p>
+</div>
+<div class="section" id="espaco-em-branco">
+<h2>ESPAÇO EM BRANCO</h2>
+<p>Os <strong>Espaços em Branco</strong> são ignorados pelo compilador, desde que estes não estejam contidos no meio de instruções. Ou seja, colocar um espaçamento no meio de uma palavra faz com que a mesma se transforme em 2, seja em Português, em Inglês ou em C e C++!</p>
+<p>Por isso, é correto dizer que, espaços em branco são ignorados pelo compilador, até porque, os mesmos não serão nem analisados.</p>
+</div>
+<div class="section" id="ponto-e-virgula">
+<h2>PONTO E VÍRGULA</h2>
+<p>O <strong>Ponto e Vírgula</strong> é reconhecido pelo C++ como o finalizador da instrução. Desta forma, podemos colocar quantas instrução desejarmos numa mesma linha, desde que essas estejam separadas por um ponto-e-vírgula.</p>
+<p>É importante observar que a utilização do ponto e vírgula não é opcional, logo, a sua omissão acarretará na não compilação do seu código e por conseguinte, uma exceção será levantada.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
@@ -416,7 +416,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/indentacao.html">indentação</a>, 	<a href="http://excript.com/tag/espaco-em-branco.html">espaço em branco</a>, 	<a href="http://excript.com/tag/ponto-e-virgula.html">ponto e vírgula</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/indentacao.html">indentação</a>, 	<a href="http://excript.com/tag/espaco-em-branco.html">espaço em branco</a>, 	<a href="http://excript.com/tag/ponto-e-virgula.html">ponto e vírgula</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

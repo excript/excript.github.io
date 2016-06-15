@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/cpp/visao-geral-linguagem-cpp.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,cpp,visão geral" />
+        <meta name="keywords" content="curso,cpp,visão geral,superset,linguagem c,blog" />
     <meta name="description" content="Nesta aula estudaremos as principais características da linguagem C++ e também, aprenderemos vários conceitos relacionados com a linguagem." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -30,6 +30,9 @@
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
             <meta property="article:tag" content="visão geral" />
+            <meta property="article:tag" content="superset" />
+            <meta property="article:tag" content="linguagem c" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -177,7 +180,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/cpp/caracteristica-variavel-cpp.html" >Características das Variáveis em C++</a></td>
                             <td><a href="http://excript.com/cpp/caracteristica-variavel-cpp.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/cpp/manipular-variavel-cpp.html" >Nanipulando Variáveis em C++</a></td>
+                            <td><a href="http://excript.com/cpp/manipular-variavel-cpp.html" >Manipulando Variáveis em C++</a></td>
                             <td><a href="http://excript.com/cpp/manipular-variavel-cpp.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/cpp/nomenclatura-variavel-cpp.html" >Nomenclatura de Variáveis em C++</a></td>
@@ -351,23 +354,35 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="a-linguagem-c">
+<h2>A LINGUAGEM C++</h2>
+<p>A linguagem C++ possui um conjunto de características e definições que fazem da mesma a segunda linguagem mais utilizada no mundo, perdendo somente para a linguagem C. A seguir, listamos o que entendemos ser os principais recursos da linguagem e discutimos um pouco sobre cada item.</p>
+<p>Não temos como objetivo esgotar o debate de cada característica ou mesmo, sobre a linguagem C++ propriamente dita. O objetivo é descrever para fazer com que o aluno venha a conhecer e ir se acostumando com as terminologias.</p>
+<dl class="docutils">
+<dt>Superset de C</dt>
+<dd>A linguagem C++ possui todos os recursos e funcionalidades do C, logo, dizemos que C++ é um superset de C, isto é, é um conjunto que possui todos os elementos de outro.
+Um programa em C pode ser facilmente migrado para C++, até porque, o seu código é compatível pela grande maioria dos compiladores.</dd>
+<dt>Estaticamente tipada</dt>
+<dd>Da mesma forma que a linguagem C, em C++ temos tipos que são pré-definidos pela linguagem e que, abarcam os tipos fundamentais das informações que utilizamos no dia-a-dia. Assim, não precisamos criar um objeto para representar os números inteiros, até porque, já existe o tipo primitivo <code>int</code>.</dd>
+<dt>Compilada</dt>
+<dd><p class="first">Todo código C++ é compilado para o que chamamos de Linguagem de Máquina, isto é, a linguagem universal dos computadores. Logo, nosso programas são executados o mais rapido possível, até porque, estão escritos na linguagem do compilador.</p>
+<p class="last">Obviamente existem interpretadores de código C++, porém, não é de conhecimento do autor um interpretador C++ que seja utilizado em larga escala ou mesmo, em projetos grandes.</p>
+</dd>
+<dt>Multi-paradigma</dt>
+<dd><dl class="first last docutils">
+<dt>A linguagem C contempla o paradigma de programação procedural, o que foi, para a sua época, uma grande evolução na forma em que as linguagens possibilitavam a criação de programas.</dt>
+<dd>A linguagem C++ foi além do paradigma procedural e adicionou a capacidade de desenvolvimento Orientado a Objetos. Mesmo que o paradigma Orientado a Objetos tenha sido um grande sucesso a programação procedural é suportada pelo C++ até os dias atuais. Inclusive, atualmente, é possível trabalhar com o paradigma funcional, o que ainda não está muito difundido entre os desenvolvedores C++.</dd>
+</dl>
+</dd>
+<dt>Alto e Baixo nível</dt>
+<dd>Compiladores C e C++ comumente geram códigos em Assembler e, em seguida, são convertidos para código de máquina. Por essa característica, foi disponibilizado um meio para a escrita de código em Assembler junto ao código C e C++. Assim, conseguimos escrever trechos de código em alto-nível que contenham trechos em linguagens de baixo-nível.</dd>
+<dt>Orientação a Objetos</dt>
+<dd><p class="first">A Orientação a Objetos é, sem nenhuma dúvida, um divisor de águas para as linguagens de programação. Porém, o conceito não é novo e só foi adicionado às linguagens depois de muitos, mas muitos anos de debate.</p>
+<p>A principal ideia por detrás da orientação a objetos é o de definir novos tipos de dados e assim, agrupar as função para a sua manipulação criando uma entidade representativa. Então, ainda que muito se discuta sobre OO, o principal conceito e, que sozinho, já representa uma grande evolução, é a junção das características (propriedades) e funcionalidade (funções) num mesmo lugar. Obviamente que, se você possui algum conhecimento de C++, dirás que essa característica foi incluída quando a estrutura <tt class="docutils literal">struct</tt> foi disponibilizada. Porém, a estrutura <tt class="docutils literal">struct</tt> só foi capaz de aglutinar todas essas informações com o advento das classes. É importante lembrar que atualmente, conseguimos criar instâncias através de estruturas definidas tanto com <tt class="docutils literal">struct</tt> como também com <tt class="docutils literal">classes</tt>.</p>
+<p class="last">Por fim, a discussão sobre os recursos do C++ não possuem fim e sempre que possível, devemos participar dessas discussões. Até porque, no final, como rapidamente percebemos, ambas partes estão corretas e o que diferencia-os é o ponto de vista utilizado em suas analises!</p>
+</dd>
+</dl>
+</div>
 
 				</div>
 			</div>
@@ -395,7 +410,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/visao-geral.html">visão geral</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/visao-geral.html">visão geral</a>, 	<a href="http://excript.com/tag/superset.html">superset</a>, 	<a href="http://excript.com/tag/linguagem-c.html">linguagem c</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

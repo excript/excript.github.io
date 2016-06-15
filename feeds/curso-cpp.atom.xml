@@ -1,5 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-cpp.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-05-01T16:40:00-03:00</updated><entry><title>Curso C++</title><link href="http://excript.com/curso-cpp.html" rel="alternate"></link><published>2016-05-01T16:40:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:curso-cpp.html</id><summary type="html">&lt;div class="section" id="sobre-o-curso"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-cpp.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-15T01:30:00-03:00</updated><entry><title>Comentários em C++</title><link href="http://excript.com/cpp/comentario-cpp.html" rel="alternate"></link><published>2016-06-15T01:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:cpp/comentario-cpp.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos como marcar trechos de código como sendo comentários, ou seja, blocos de códigos que são ignorados pelo compilador e assim, podemos adiciona-los a qualquer local do nosso código.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao-ao-uso-de-comentarios"&gt;
+&lt;h2&gt;INTRODUÇÃO AO USO DE COMENTÁRIOS&lt;/h2&gt;
+&lt;p&gt;Comentário é todo conjunto de caracteres inserido dentro de um código e que não será avaliado pelo compilador ou interpretador. O C++ define 2 tipos de marcação de comentários, a forma inline e a forma multi-line.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="comentarios-inline"&gt;
+&lt;h2&gt;COMENTÁRIOS &lt;tt class="docutils literal"&gt;inline&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;Para adicionarmos um comentário após determinada instrução, basta utilizarmos duas barras e em seguida, estamos livres para escrevermos o que desejarmos, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; estudo &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//escreva o que desejares após as barras&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como podemos ver no exemplo acima, após a finalização da instrução com o uso de ponto e vírgula, adicionamos 2 barras &lt;tt class="docutils literal"&gt;//&lt;/tt&gt; e então, escrevemos um texto. Se mandassemos, por exemplo, compilar o código, veríamos que nenhuma mensagem de erro seria exibida.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="comentarios-multiline"&gt;
+&lt;h2&gt;COMENTÁRIOS &lt;tt class="docutils literal"&gt;multiline&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;Da mesma forma que podemos marcar que após determinada posição o compilador deve ignorar os caracteres, podemos definir que, um bloco de código, isto é, um conjunto de linhas, sejam ignoradas pelo compilador.&lt;/p&gt;
+&lt;p&gt;Para isso, utilizamos uma notação de abertura de bloco e finalização. A abertura é feita com os caracteres &lt;tt class="docutils literal"&gt;/*&lt;/tt&gt; barra asterisco e a finalização, com &lt;tt class="docutils literal"&gt;*/&lt;/tt&gt; asterisco barra. Esta notação permite-nos definir um trecho inline como sendo comentário ou então, todo um arquivo de código.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+
+&lt;span class="cm"&gt;    bloco de comentários&lt;/span&gt;
+
+&lt;span class="cm"&gt;*/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="cm"&gt;/*====================================&lt;/span&gt;
+&lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt;*          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt;* ====================================*/&lt;/span&gt;
+
+&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;* sdafasd asdfasdfasf asdfas&lt;/span&gt;
+&lt;span class="cm"&gt;* asfasdfasd asdfasd sdfasdf asdfasdf sf&lt;/span&gt;
+&lt;span class="cm"&gt;* asdfasd asdfasd&lt;/span&gt;
+&lt;span class="cm"&gt;*&lt;/span&gt;
+&lt;span class="cm"&gt;*&lt;/span&gt;
+&lt;span class="cm"&gt;* cout &amp;lt;&amp;lt; &amp;quot;ola&amp;quot;;&lt;/span&gt;
+&lt;span class="cm"&gt;*/&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;dddd&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//A mensagem que está entre aspas é o que será impresso na tela&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Ola mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="cpp"></category><category term="comentário"></category><category term="blog"></category></entry><entry><title>Indentação, Espaço em Branco e Ponto e Vírgula em C++</title><link href="http://excript.com/cpp/indentacao-espaco-em-branco-ponto-e-virgula-cpp.html" rel="alternate"></link><published>2016-06-15T01:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:cpp/indentacao-espaco-em-branco-ponto-e-virgula-cpp.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos alguns conceitos fundamentais da construção de códigos C++. Aprenderemos o que é e como utilizar a indentação, os espaços em branco, a utilização do ponto e vírgula e muito mais!&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="indentacao"&gt;
+&lt;h2&gt;INDENTAÇÃO&lt;/h2&gt;
+&lt;p&gt;O termo &lt;strong&gt;Indentar&lt;/strong&gt; vem do Inglês &lt;tt class="docutils literal"&gt;indentation&lt;/tt&gt; e significa o recuo de um texto em relação a sua margem esquerda.&lt;/p&gt;
+&lt;p&gt;Na programação, inserimos espaços em branco a esquerda de cada instrução para agruparmos visualmente um mesmo conjunto de instruções, ou então, para agruparmos instrução pertencentes a um mesmo bloco e que serão, executadas sequencialmente de cima para baixo, da esquerda para a direita.&lt;/p&gt;
+&lt;p&gt;A linguagem C++ não obriga-nos a indentar o nosso código, porém, a comunidade sim! Isto é, se você enviar um código não indentado para um grupo de programadores, verás que estes, dificilmente lerão o código enviado. E, mesmo que você acredite ser isso algo banal num primeiro momento, acredite, não é! Tamanha é a importância da indentação que linguagem como o Python optaram por utilizar a indentação ao invés do par de chaves para agrupar códigos pertencentes a um mesmo bloco.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="espaco-em-branco"&gt;
+&lt;h2&gt;ESPAÇO EM BRANCO&lt;/h2&gt;
+&lt;p&gt;Os &lt;strong&gt;Espaços em Branco&lt;/strong&gt; são ignorados pelo compilador, desde que estes não estejam contidos no meio de instruções. Ou seja, colocar um espaçamento no meio de uma palavra faz com que a mesma se transforme em 2, seja em Português, em Inglês ou em C e C++!&lt;/p&gt;
+&lt;p&gt;Por isso, é correto dizer que, espaços em branco são ignorados pelo compilador, até porque, os mesmos não serão nem analisados.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ponto-e-virgula"&gt;
+&lt;h2&gt;PONTO E VÍRGULA&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;Ponto e Vírgula&lt;/strong&gt; é reconhecido pelo C++ como o finalizador da instrução. Desta forma, podemos colocar quantas instrução desejarmos numa mesma linha, desde que essas estejam separadas por um ponto-e-vírgula.&lt;/p&gt;
+&lt;p&gt;É importante observar que a utilização do ponto e vírgula não é opcional, logo, a sua omissão acarretará na não compilação do seu código e por conseguinte, uma exceção será levantada.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="cm"&gt;/*====================================&lt;/span&gt;
+&lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt;*          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt;* ====================================*/&lt;/span&gt;
+
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="c1"&gt;//Aula - Indentação, espaço em branco e ponto e vírgula&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Ola mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="cpp"></category><category term="indentação"></category><category term="espaço em branco"></category><category term="ponto e vírgula"></category><category term="blog"></category></entry><entry><title>Curso C++</title><link href="http://excript.com/curso-cpp.html" rel="alternate"></link><published>2016-05-01T16:40:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:curso-cpp.html</id><summary type="html">&lt;div class="section" id="sobre-o-curso"&gt;
 &lt;h2&gt;SOBRE O CURSO&lt;/h2&gt;
 &lt;p&gt;O &lt;a class="reference external" href="http://www.excript.com/curso-cpp.html"&gt;Curso C++&lt;/a&gt; da &lt;a class="reference external" href="http://www.excript.com/"&gt;eXcript&lt;/a&gt; parte do princípio que o aluno está iniciando na programação neste momento e por isso, todos os passos iniciais são descritos detalhadamente de modo a permitir que qualquer pessoa seja capaz de aprender C++.&lt;/p&gt;
 &lt;p&gt;Se você está chegando agora na programação, seja muito bem-vindo e saiba que o nosso curso guiará você pelo caminho de como se tornar um programador C++. Este curso não há pré-requisito, logo, não existe a necessidade de ter qualquer conhecimento prévio.&lt;/p&gt;
@@ -79,7 +191,7 @@
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="cpp"></category><category term="abertura"></category><category term="curso de c++"></category><category term="primeira aula de c++"></category></entry><entry><title>Arrays - Definições em C++</title><link href="http://excript.com/cpp/array-definicao-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/array-definicao-cpp.html</id><summary type="html">
+</summary><category term="curso"></category><category term="cpp"></category><category term="abertura"></category><category term="curso de c++"></category><category term="primeira aula de c++"></category><category term="blog"></category></entry><entry><title>Arrays - Definições em C++</title><link href="http://excript.com/cpp/array-definicao-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/array-definicao-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -592,65 +704,7 @@
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="cpp"></category><category term="variavel"></category></entry><entry><title>Comentários em C++</title><link href="http://excript.com/cpp/comentario-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/comentario-cpp.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos como marcar trechos de código como sendo comentários, ou seja, blocos de códigos que são ignorados pelo compilador e assim, podemos adiciona-los a qualquer local do nosso código.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-
-&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-&lt;span class="cm"&gt;/*====================================&lt;/span&gt;
-&lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
-&lt;span class="cm"&gt;*          fb.com/eXcript&lt;/span&gt;
-&lt;span class="cm"&gt;* ====================================*/&lt;/span&gt;
-
-&lt;span class="cm"&gt;/*&lt;/span&gt;
-&lt;span class="cm"&gt;* sdafasd asdfasdfasf asdfas&lt;/span&gt;
-&lt;span class="cm"&gt;* asfasdfasd asdfasd sdfasdf asdfasdf sf&lt;/span&gt;
-&lt;span class="cm"&gt;* asdfasd asdfasd&lt;/span&gt;
-&lt;span class="cm"&gt;*&lt;/span&gt;
-&lt;span class="cm"&gt;*&lt;/span&gt;
-&lt;span class="cm"&gt;* cout &amp;lt;&amp;lt; &amp;quot;ola&amp;quot;;&lt;/span&gt;
-&lt;span class="cm"&gt;*/&lt;/span&gt;
-
-&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;dfsa&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//A mensagem que está entre aspas é o que será impresso na tela&lt;/span&gt;
-  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Ola mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="cpp"></category><category term="comentários"></category></entry><entry><title>Declaração de Arrays em C++</title><link href="http://excript.com/cpp/declarar-array-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/declarar-array-cpp.html</id><summary type="html">
+</summary><category term="curso"></category><category term="cpp"></category><category term="variavel"></category></entry><entry><title>Declaração de Arrays em C++</title><link href="http://excript.com/cpp/declarar-array-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/declarar-array-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1332,57 +1386,7 @@
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="cpp"></category></entry><entry><title>Indentação, Espaço em Branco e Ponto e Vírgula em C++</title><link href="http://excript.com/cpp/indentacao-espaco-em-branco-ponto-e-virgula-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/indentacao-espaco-em-branco-ponto-e-virgula-cpp.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos alguns conceitos fundamentais da construção de códigos C++. Aprenderemos o que é e como utilizar a indentação, os espaços em branco, a utilização do ponto e vírgula e muito mais!&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-
-&lt;span class="cm"&gt;/*====================================&lt;/span&gt;
-&lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
-&lt;span class="cm"&gt;*          fb.com/eXcript&lt;/span&gt;
-&lt;span class="cm"&gt;* ====================================*/&lt;/span&gt;
-
-&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-&lt;span class="c1"&gt;//Aula - Indentação, espaço em branco e ponto e vírgula&lt;/span&gt;
-
-&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Ola mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="cpp"></category><category term="indentação"></category><category term="espaço em branco"></category><category term="ponto e vírgula"></category></entry><entry><title>Inicialização de Arrays em C++</title><link href="http://excript.com/cpp/inicializar-array-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/inicializar-array-cpp.html</id><summary type="html">
+</summary><category term="curso"></category><category term="cpp"></category></entry><entry><title>Inicialização de Arrays em C++</title><link href="http://excript.com/cpp/inicializar-array-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/inicializar-array-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2113,7 +2117,7 @@
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="cpp"></category></entry><entry><title>Nanipulando Variáveis em C++</title><link href="http://excript.com/cpp/manipular-variavel-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/manipular-variavel-cpp.html</id><summary type="html">
+</summary><category term="curso"></category><category term="cpp"></category></entry><entry><title>Manipulando Variáveis em C++</title><link href="http://excript.com/cpp/manipular-variavel-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/manipular-variavel-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2127,23 +2131,54 @@
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
+&lt;div class="section" id="quantidade-de-memoria"&gt;
+&lt;h2&gt;QUANTIDADE DE MEMÓRIA&lt;/h2&gt;
+&lt;p&gt;O C++ disponibiliza o &lt;strong&gt;operador&lt;/strong&gt; de nome sizeof para inspecionarmos a quantidade de memória que está sendo utilizada por cada variável.&lt;/p&gt;
+&lt;p&gt;Em aulas passadas, &lt;a class="reference external" href="http://excript.com/cpp/variavel-cpp.html"&gt;estudamos a declaração e o funcionamento das variáveis&lt;/a&gt; . Agora, vamos aprender a inspecionar não somente o valor que cada variável está armazenando como também, o espaço que a mesma está ocupando de memória.&lt;/p&gt;
+&lt;p&gt;Cada variável em C++ é, obrigatoriamente, de um tipo. Por essa definição, &lt;a class="reference external" href="http://excript.com/cpp/tipos-primitivos-cpp.html"&gt;temos que, cada tipo utiliza uma certa quantidade de memória e assim, em tese, conseguimos antever a quantidade de memória&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Porém, como estudaremos, &lt;a class="reference external" href="http://excript.com/cpp/modificador-tipo-cpp.html"&gt;as variáveis podem ser declaradas utilizando modificadores que, de maneira geral, tem o objetivo de alterar a capacidade de armazenamento e por conseguinte, o espaço de memória utilizado&lt;/a&gt; . Por isso, temos um operador de nome
+&lt;strong&gt;sizeof&lt;/strong&gt; que, tem por objetivo, retornar a quantidade de memória utilizada por determinada variável.&lt;/p&gt;
+
+    &lt;div class="admonitionblock important data-line-21"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                &lt;td class="icon"&gt;
+                    &lt;i class="fa icon-important" title="Importante!"&gt;&lt;/i&gt;
+                &lt;/td&gt;
+                &lt;td class="content"&gt;
+                    &lt;div class="paragraph data-line-22"&gt;
+                        &lt;p&gt;É importante ressaltar que `sizeof` não é uma função e sim, um operador da linguagem C++.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;p&gt;Ainda que sizeof seja um operador, o seu uso se dá como se fosse uma função, onde, inicialmente definimo o nome, abrimos e fechamos parêntesis e passamos como parâmetro a informação que desejamos.&lt;/p&gt;
+
+    &lt;div class="admonitionblock tip data-line"&gt;
         &lt;table&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
+                        &lt;i class="fa icon-tip" title="Dica!"&gt;&lt;/i&gt;
                     &lt;/td&gt;
                     &lt;td class="content"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
+                            &lt;p&gt;Do inglês, sizeof significa **tamanho de**.&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;sizeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;variável&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;tamanhoDe&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;variável&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como podemos ver no exemplo acima, basta escrevermos o nome do operador e passar como parâmetro o nome da variável que a linguagem C++ retornará o seu tamanho.&lt;/p&gt;
+&lt;p&gt;No demais, não há nenhum segredo ou implicação no uso deste operador.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
@@ -2174,7 +2209,7 @@
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="cpp"></category></entry><entry><title>Modificadores de Tipo em C++</title><link href="http://excript.com/cpp/modificador-tipo-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/modificador-tipo-cpp.html</id><summary type="html">
+</summary><category term="curso"></category><category term="cpp"></category><category term="variáveis"></category><category term="operador"></category><category term="sizeof"></category><category term="blog"></category></entry><entry><title>Modificadores de Tipo em C++</title><link href="http://excript.com/cpp/modificador-tipo-cpp.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:cpp/modificador-tipo-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -3481,21 +3516,33 @@
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-</summary><category term="curso"></category><category term="cpp"></category><category term="visão geral"></category></entry></feed>
+&lt;div class="section" id="a-linguagem-c"&gt;
+&lt;h2&gt;A LINGUAGEM C++&lt;/h2&gt;
+&lt;p&gt;A linguagem C++ possui um conjunto de características e definições que fazem da mesma a segunda linguagem mais utilizada no mundo, perdendo somente para a linguagem C. A seguir, listamos o que entendemos ser os principais recursos da linguagem e discutimos um pouco sobre cada item.&lt;/p&gt;
+&lt;p&gt;Não temos como objetivo esgotar o debate de cada característica ou mesmo, sobre a linguagem C++ propriamente dita. O objetivo é descrever para fazer com que o aluno venha a conhecer e ir se acostumando com as terminologias.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Superset de C&lt;/dt&gt;
+&lt;dd&gt;A linguagem C++ possui todos os recursos e funcionalidades do C, logo, dizemos que C++ é um superset de C, isto é, é um conjunto que possui todos os elementos de outro.
+Um programa em C pode ser facilmente migrado para C++, até porque, o seu código é compatível pela grande maioria dos compiladores.&lt;/dd&gt;
+&lt;dt&gt;Estaticamente tipada&lt;/dt&gt;
+&lt;dd&gt;Da mesma forma que a linguagem C, em C++ temos tipos que são pré-definidos pela linguagem e que, abarcam os tipos fundamentais das informações que utilizamos no dia-a-dia. Assim, não precisamos criar um objeto para representar os números inteiros, até porque, já existe o tipo primitivo &lt;code&gt;int&lt;/code&gt;.&lt;/dd&gt;
+&lt;dt&gt;Compilada&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;Todo código C++ é compilado para o que chamamos de Linguagem de Máquina, isto é, a linguagem universal dos computadores. Logo, nosso programas são executados o mais rapido possível, até porque, estão escritos na linguagem do compilador.&lt;/p&gt;
+&lt;p class="last"&gt;Obviamente existem interpretadores de código C++, porém, não é de conhecimento do autor um interpretador C++ que seja utilizado em larga escala ou mesmo, em projetos grandes.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Multi-paradigma&lt;/dt&gt;
+&lt;dd&gt;&lt;dl class="first last docutils"&gt;
+&lt;dt&gt;A linguagem C contempla o paradigma de programação procedural, o que foi, para a sua época, uma grande evolução na forma em que as linguagens possibilitavam a criação de programas.&lt;/dt&gt;
+&lt;dd&gt;A linguagem C++ foi além do paradigma procedural e adicionou a capacidade de desenvolvimento Orientado a Objetos. Mesmo que o paradigma Orientado a Objetos tenha sido um grande sucesso a programação procedural é suportada pelo C++ até os dias atuais. Inclusive, atualmente, é possível trabalhar com o paradigma funcional, o que ainda não está muito difundido entre os desenvolvedores C++.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/dd&gt;
+&lt;dt&gt;Alto e Baixo nível&lt;/dt&gt;
+&lt;dd&gt;Compiladores C e C++ comumente geram códigos em Assembler e, em seguida, são convertidos para código de máquina. Por essa característica, foi disponibilizado um meio para a escrita de código em Assembler junto ao código C e C++. Assim, conseguimos escrever trechos de código em alto-nível que contenham trechos em linguagens de baixo-nível.&lt;/dd&gt;
+&lt;dt&gt;Orientação a Objetos&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;A Orientação a Objetos é, sem nenhuma dúvida, um divisor de águas para as linguagens de programação. Porém, o conceito não é novo e só foi adicionado às linguagens depois de muitos, mas muitos anos de debate.&lt;/p&gt;
+&lt;p&gt;A principal ideia por detrás da orientação a objetos é o de definir novos tipos de dados e assim, agrupar as função para a sua manipulação criando uma entidade representativa. Então, ainda que muito se discuta sobre OO, o principal conceito e, que sozinho, já representa uma grande evolução, é a junção das características (propriedades) e funcionalidade (funções) num mesmo lugar. Obviamente que, se você possui algum conhecimento de C++, dirás que essa característica foi incluída quando a estrutura &lt;tt class="docutils literal"&gt;struct&lt;/tt&gt; foi disponibilizada. Porém, a estrutura &lt;tt class="docutils literal"&gt;struct&lt;/tt&gt; só foi capaz de aglutinar todas essas informações com o advento das classes. É importante lembrar que atualmente, conseguimos criar instâncias através de estruturas definidas tanto com &lt;tt class="docutils literal"&gt;struct&lt;/tt&gt; como também com &lt;tt class="docutils literal"&gt;classes&lt;/tt&gt;.&lt;/p&gt;
+&lt;p class="last"&gt;Por fim, a discussão sobre os recursos do C++ não possuem fim e sempre que possível, devemos participar dessas discussões. Até porque, no final, como rapidamente percebemos, ambas partes estão corretas e o que diferencia-os é o ponto de vista utilizado em suas analises!&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="cpp"></category><category term="visão geral"></category><category term="superset"></category><category term="linguagem c"></category><category term="blog"></category></entry></feed>

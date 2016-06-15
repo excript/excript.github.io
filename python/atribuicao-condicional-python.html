@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/atribuicao-condicional-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,atribuição,if,tomada de decisão,blog" />
     <meta name="description" content="Nesta aula vamos estudar a atribuição condicional, uma maneira menos verbosa para definirmos 1 dentre 2 valores possíveis dependendo da avaliação de uma expressão." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,10 +25,14 @@
 
         <meta property="og:description" content="Nesta aula vamos estudar a atribuição condicional, uma maneira menos verbosa para definirmos 1 dentre 2 valores possíveis dependendo da avaliação de uma expressão."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="13-06-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="atribuição" />
+            <meta property="article:tag" content="if" />
+            <meta property="article:tag" content="tomada de decisão" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -112,7 +116,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-13T23:15:00-03:00"> Publicado em 13-06-2016</time>
         </span>
 
 
@@ -344,7 +348,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/parametro-de-funcao-python.html" >Parâmetros de Função em Python</a></td>
                             <td><a href="http://excript.com/python/parametro-de-funcao-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/parametro-default-python.html" >Parâmeros default em Python</a></td>
+                            <td><a href="http://excript.com/python/parametro-default-python.html" >Parâmetros default em Python</a></td>
                             <td><a href="http://excript.com/python/parametro-default-python.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/python/argumentos-nomeados-posicionais-python.html" >Argumento de Função Nomeado vs Posicional em Python</a></td>
@@ -371,23 +375,30 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="atribuicao-condicional">
+<h2>ATRIBUIÇÃO CONDICIONAL</h2>
+<p>A atribuição condicional é a atribuição de um valor mediante o resultado de uma expressão. Em suma, a atribuição condicional funciona da mesma maneira que o uso da estrutura condicional <tt class="docutils literal">if</tt>-<tt class="docutils literal">else</tt>, onde o primeiro valor definido será atribuido, caso a condição seja verdadeira, do contrário, o segundo valor é que será atribuido.</p>
+<p>A seguir, temos um exemplo onde atribuimos um valor para a variável <tt class="docutils literal">valor</tt> mediante o uso da <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">estrutura de seleção if</a>.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="n">valor</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+    <span class="n">valor</span> <span class="o">=</span> <span class="s2">&quot;Valor atribuido caso a condição seja verdadeira&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">valor</span> <span class="o">=</span> <span class="s2">&quot;Valor atribuido caso a condição seja falso&quot;</span>
+</pre></div>
+<p>Nas situações em que o valor for verdadeiro, o primeiro bloco de instrução é executado, do contrário o segundo bloco será.</p>
+<p>Essa estrutura <a class="reference external" href="http://excript.com/python/if-else-python.html">não lhe deve causar confusão, até porque, já estudamos a mesma e aprendemos que o bloco que será executado, dependerá, do valor contido na condição que está no cabeçalho da estrutura condicional if</a> .</p>
+<p>A atribuição condicional, funciona da mesma maneira que o código que acabamos de ver, porém, ao invés de ter um bloco de instrução explicitamente definido, somente o valor deve ser exposto, como podemos ver no código abaixo.</p>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span> <span class="k">else</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">&gt;</span>
+</pre></div>
+<p>O esquema acima diz que a variável de nome <tt class="docutils literal">&lt;valor&gt;</tt> deve receber o valor contido em <tt class="docutils literal">&lt; x &gt;</tt> caso a expressão <tt class="docutils literal">if(True)</tt> for verdadeira. Do contrário, temos o código <tt class="docutils literal">else &lt; y &gt;</tt> é quem definirá o valor a ser atribuido à variável <tt class="docutils literal">&lt;valor&gt;</tt>.</p>
+<p>A seguir, temos o esquema marcado como comentário e na linha seguinte, um exemplo real de uma atribuição condicional.</p>
+<div class="highlight"><pre><span></span><span class="c1">#&lt;valor&gt; = &lt; x &gt; if(True) else &lt; y &gt;</span>
+   <span class="n">x</span>     <span class="o">=</span> <span class="mi">10</span>    <span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span> <span class="k">else</span>   <span class="mi">20</span>
+</pre></div>
+<p>O estudo da atribuição condicional não deve causar espanto a todos que entenderam o correto funcionamento da estrutura condicional <tt class="docutils literal">if</tt>, até porque, o funcionamento é basicamente o mesmo, e a diferença está, na forma <tt class="docutils literal">inline</tt> como a estrutura agora estudada é utilizada.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
@@ -433,7 +444,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/atribuicao.html">atribuição</a>, 	<a href="http://excript.com/tag/if.html">if</a>, 	<a href="http://excript.com/tag/tomada-de-decisao.html">tomada de decisão</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

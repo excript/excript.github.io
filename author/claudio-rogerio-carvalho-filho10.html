@@ -81,7 +81,7 @@ eXcript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a  href="http://excript.com/android/calculadora-android-3.html">Calculadora no Android (parte 3)</a></h2>
+                <h2><a  href="http://excript.com/android/adicionando-controle-iniciar-partida.html">Adicionando o controle para iniciar a partida</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -89,37 +89,27 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nessa terceira aula, vamos implementar vários recursos da nossa calculadora</p>
+                            <p> Nessa aula utilizaremos a função getLastPlay() para sabermos quem foi o último a jogar e assim, definir se será Bola ou X que jogará na sequência.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/calculadora-android-3.html">more ...</a>
+<p>Acrescentado no arquivo XML</p>
+<p>Foi definido para cada botão.</p>
+<div class="highlight"><pre><span></span>android:enabled=&quot;flase&quot;
+</pre></div>
+<p>Botão para inicializar a partida</p>
+<div class="highlight"><pre><span></span><span class="nt">&lt;Button</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;150dp&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;40dp ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/adicionando-controle-iniciar-partida.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/calculadora-android-4.html">Calculadora no Android (parte 4)</a></h2>
+                <h2><a  href="http://excript.com/android/recuperar-instancia-funcao-findviewwithtag.html">Recuperando a Instância com a Função <tt class="docutils literal">findViewWithTag()</tt></a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -127,37 +117,29 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Esta é a nossa quarta e última aula da construção de uma calculadora no Android.</p>
+                            <p> Nesta aula iremos recuperar as instâncias dos botões adicionados ao tabuleiro do Jogo da Velha e entenderemos a importância da nomenclatura anteriormente definida aos botões.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Acrescentado no arquivo XML</p>
+<div class="highlight"><pre><span></span>andoid:onclick=&quot;clickQuadrado&quot;
+</pre></div>
+<p>Acrescentado no arquivo <tt class="docutils literal">main.java</tt></p>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/calculadora-android-4.html">more ...</a>
+
+<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/recuperar-instancia-funcao-findviewwithtag.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/classe-r-android.html">A Classe R do Android</a></h2>
+                <h2><a  href="http://excript.com/android/adicionando-os-objetos-visuais-atraves-do-xml.html">Adicionando os Objetos Visuais através do XML</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -165,37 +147,22 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula vamos estudar a Classe R</p>
+                            <p> Nesta aula vamos criar o projeto em Android do nosso Jogo da Velha e adicionaremos alguns componentes visuais que fazem parte do tabuleiro do nosso Jogo. Por fim, iniciaremos a programação em Java de pequenas funcionalidades.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/classe-r-android.html">more ...</a>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/adicionando-os-objetos-visuais-atraves-do-xml.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/continuacao.html">Continuação</a></h2>
+                <h2><a  href="http://excript.com/android/abertura-jogo-da-velha-android.html">Abertura do Jogo da Venha para Android com Java</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -203,37 +170,23 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula nós damos continuação ao estudo das views do Eclipse.</p>
+                            <p> Neste primeiro episódio, iremos analisar e discutir o que será desenvolvido durante esse nosso breve curso.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/continuacao.html">more ...</a>
+<div class="section" id="jogo-da-velha-no-android">
+<h2>JOGO DA VELHA NO ANDROID</h2>
+<p>Seja bem-vindo a primeira aula da nossa série em que construiremos um Jogo da Velha com Java para a plataforma Android.</p>
+<p>Nesse primeiro momento não iremos produzir código, nosso ...</p></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/abertura-jogo-da-velha-android.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/emulador-android.html">Emulador do Android</a></h2>
+                <h2><a  href="http://excript.com/android/activity-android.html">Activity do Android</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -241,7 +194,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula nós estudaremos o que é um Emulador e como instalar o Emulador do Android para executarmos a nossa aplicação localmente.</p>
+                            <p> Nesta aula iniciaremos o estudo sobre a Activity</p>
                         </div>
                     </td>
                 </tr>
@@ -266,12 +219,12 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/emulador-android.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/activity-android.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/estrutura-pastas-projeto-android.html">Estrutura de Pastas do Projeto Android</a></h2>
+                <h2><a  href="http://excript.com/android/activity-android-2.html">Activity do Android (parte 2)</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -279,7 +232,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula vamos estudar a estrutura de pastas geradas para cada novo projeto Android.</p>
+                            <p> Nesta aula continuaremos o estudo sobre as Activitys do Android.</p>
                         </div>
                     </td>
                 </tr>
@@ -304,12 +257,12 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/estrutura-pastas-projeto-android.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/activity-android-2.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/gerenciador-layout-android.html">Gerenciadores de Layout do Android</a></h2>
+                <h2><a  href="http://excript.com/android/activity-menu-android.html">Activity &amp; Menu no Android</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -317,7 +270,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula vamos iniciar o estudo sobre os gerenciadores de layout.</p>
+                            <p> Nesta aula nós aprenderemos como construir Menus para nossos aplicativos Android dentro de cada Activity.</p>
                         </div>
                     </td>
                 </tr>
@@ -342,12 +295,12 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/gerenciador-layout-android.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/activity-menu-android.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/gerenciador-layout-android-2.html">Gerenciadores de Layout do Android (parte 2)</a></h2>
+                <h2><a  href="http://excript.com/android/activity-view-logcat-eclipse-android.html">Activity, View, Logcat e o Eclipse</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -355,7 +308,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula, damos continuidade ao estudo dos gerenciadores de leiaute disponibilizados pela plataforma Android.</p>
+                            <p> Nesta aula vamos estudar o que é uma Activity, o que é uma View e como funciona o logcat na IDE Eclipse.</p>
                         </div>
                     </td>
                 </tr>
@@ -380,12 +333,12 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/gerenciador-layout-android-2.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/activity-view-logcat-eclipse-android.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/gerenciador-layout-android-3.html">Gerenciadores de Layout do Android (parte 3)</a></h2>
+                <h2><a  href="http://excript.com/android/arquivo-androidmanifest.xml-android.html">Arquivo <tt class="docutils literal">AndroidManifest.xml</tt></a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -393,7 +346,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta terceira aula sobre os gerenciadores de leiaute, aprofundaremos o nosso estudo e aprenderemos vários recursos implicitos.</p>
+                            <p> Nesta aula iniciaremos o estudo sobre o arquivo AndroidManifest.xml</p>
                         </div>
                     </td>
                 </tr>
@@ -418,12 +371,12 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/gerenciador-layout-android-3.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/arquivo-androidmanifest.xml-android.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/linearlayout-android.html">LinearLayout do Android</a></h2>
+                <h2><a  href="http://excript.com/android/arquivo-string.xml-android.html">ARQUIVO <tt class="docutils literal">string.xml</tt></a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -431,7 +384,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula iniciaremos o estudo sobre o gerenciador de leiaute LinearLayout.</p>
+                            <p> Nesta aula vamos estudar o arquivo XML de nome String.xml</p>
                         </div>
                     </td>
                 </tr>
@@ -456,7 +409,7 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/linearlayout-android.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/arquivo-string.xml-android.html">more ...</a>
                 </div>
             </article>
             <hr/>

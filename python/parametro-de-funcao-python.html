@@ -15,20 +15,24 @@
 <link rel="canonical" href="http://excript.com/python/parametro-de-funcao-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
-    <meta name="description" content="Nesta aula vamos estudar os parâmetros das funções e a sintaxe que a linguagem Python disponibiliza para manusermos esses atributos. Aprenderemos o conceito e a diferença entre função e argumento e aprenderemos como utiliza-los corretamente." />
+        <meta name="keywords" content="curso,python,função,parâmetro,argumento,blog" />
+    <meta name="description" content="Nesta aula vamos estudar os parâmetros das funções e a sintaxe que a linguagem Python disponibiliza para manusearmos esses atributos. Aprenderemos o conceito e a diferença entre função e argumento e aprenderemos como utiliza-los corretamente." />
 
         <meta property="og:site_name" content="eXcript" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Parâmetros de Função em Python"/>
         <meta property="og:url" content="http://excript.com/python/parametro-de-funcao-python.html"/>
 
-        <meta property="og:description" content="Nesta aula vamos estudar os parâmetros das funções e a sintaxe que a linguagem Python disponibiliza para manusermos esses atributos. Aprenderemos o conceito e a diferença entre função e argumento e aprenderemos como utiliza-los corretamente."/>
+        <meta property="og:description" content="Nesta aula vamos estudar os parâmetros das funções e a sintaxe que a linguagem Python disponibiliza para manusearmos esses atributos. Aprenderemos o conceito e a diferença entre função e argumento e aprenderemos como utiliza-los corretamente."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="15-06-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="função" />
+            <meta property="article:tag" content="parâmetro" />
+            <meta property="article:tag" content="argumento" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -112,7 +116,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-15T05:00:00-03:00"> Publicado em 15-06-2016</time>
         </span>
 
 
@@ -344,7 +348,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/parametro-de-funcao-python.html" >Parâmetros de Função em Python</a></td>
                             <td><a href="http://excript.com/python/parametro-de-funcao-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/parametro-default-python.html" >Parâmeros default em Python</a></td>
+                            <td><a href="http://excript.com/python/parametro-default-python.html" >Parâmetros default em Python</a></td>
                             <td><a href="http://excript.com/python/parametro-default-python.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/python/argumentos-nomeados-posicionais-python.html" >Argumento de Função Nomeado vs Posicional em Python</a></td>
@@ -364,30 +368,72 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula vamos estudar os parâmetros das funções e a sintaxe que a linguagem Python disponibiliza para manusermos esses atributos. Aprenderemos o conceito e a diferença entre função e argumento e aprenderemos como utiliza-los corretamente.</p>
+                            <p> Nesta aula vamos estudar os parâmetros das funções e a sintaxe que a linguagem Python disponibiliza para manusearmos esses atributos. Aprenderemos o conceito e a diferença entre função e argumento e aprenderemos como utiliza-los corretamente.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
+<div class="section" id="parametros">
+<h2>PARÂMETROS</h2>
+<p>Estudamos que funções processam informações e também, podem receber e retornar valores. Toda função contém um bloco de instrução e neste haverá um conjunto de instruções manipulando informações. É comum que as funções processem as informações que são enviadas quando as mesmas foram invocadas, ou seja, o conjunto de instrução geralmente processará os parâmetros enviado através dos nomes definidos no cabeçalho da função e chamados de <code>parâmetros</code> ou <code>argumentos</code>.</p>
+<p><code>Parâmetro</code> é uma variável declarada no cabeçalho da função e tem uso exclusivo dentro do bloco de instrução da mesma. A definição dos parâmetros que uma função deve receber obriga o envio dos valores todas as vezes em que a mesma for invocada, do contrário, a função não é invocada.</p>
+<p>É normal chamarmos o envio de informações por parâmetros como sendo o envio de mensagens, até porque, os parâmetros permitem o envio de dados para dentro das funções.</p>
+
+    <div class="admonitionblock tip data-line">
         <table>
             <tbody>
                 <tr>
                     <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
+                        <i class="fa icon-tip" title="Dica!"></i>
                     </td>
                     <td class="content">
                         <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
+                            <p>O escopo dos parâmetros é restrito ao bloco de instrução da função, e assim, quando a função finalizar a execução, os parâmetros serão desalocados.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
+<p>Funções que precisam receber vários valores podem definir vários parâmetros. Após definirmos um parâmetro, devemos utilizar uma vírgula para definirmos o próximo. Assim, o que diferencia um parâmetro de outro é o operador vírgula.</p>
+<p>O Python trata os parâmetros de funções como uma tupla ou dicionário, inclusive, podemos definir os valores que uma função receberá e no final deixar uma vírgula sobrando, da mesma forma em que podemos fazer quando estamos definindo os valores numa tupla.</p>
+</div>
+<div class="section" id="parametros-vs-argumentos">
+<h2>PARÂMETROS vs ARGUMENTOS</h2>
+<p><code>Parâmetro</code> e <code>argumento</code> são conceitos iguais mas utilizados em situações diferentes. Para entendermos a nomenclatura temos de pensar na definição da função e no código que irá invocar a mesma.</p>
+<p>Na implementação da função, definimos no cabeçalho, os parâmetros que devem ser enviados quando a função for invocada. Quando estamos invocando a função, temos que definir para cada parâmetro um valor, ou seja, temos que definir os argumentos que a função irá levar consigo.</p>
+<p>Então, é correto dizer que uma função define os parâmetros que devem ser enviados quando for invocada, e também, é correto dizer que quando vamos invocar uma função, temos que passar os argumentos por esta definido.</p>
+<p>Assim, temos que parâmetro é a variável que foi definida no cabeçalho da função e que será utilizada no bloco de instrução da mesma, enquanto que argumento, é o  valor que será passado ao invocarmos a funções.</p>
+
+    <div class="admonitionblock tip data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-tip" title="Dica!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>Parâmetro é o nome utilizado quando estamos dentro do código da função propriamente dita e, argumento, é o nome dado aos valores referentes a cada parâmetro.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>Uma função deve receber os valores na ordem em que os parâmetros estão definidos, do contrário, ocorrerá os mais diversos problemas ou então, o Script nem será executado.</p>
+<p>A seguir, escreveremos um simples trecho de código em que uma função será definida.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">print</span><span class="p">(</span> <span class="s2">&quot;A soma dos parâmetros é: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+<p>No código acima, foi definido uma função e nesta há 2 parâmetros declarados. Assim, para invocarmos a  função <cite>soma()</cite>, temos que enviar junto 2 valores, como pode ser visto no código a seguir.</p>
+<div class="highlight"><pre><span></span><span class="n">soma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+<p>Acima, estamos invocando a função de nome soma e passando 2 valores como parâmetro. O primeiro, é o valor do parâmetro de nome <code>a</code>, enquanto o segundo, é o parâmetro de nome <cite>b</cite>.</p>
+</div>
 
 				</div>
 			</div>
@@ -415,7 +461,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/funcao.html">função</a>, 	<a href="http://excript.com/tag/parametro.html">parâmetro</a>, 	<a href="http://excript.com/tag/argumento.html">argumento</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
