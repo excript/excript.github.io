@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/php/implementando-funcionalidades-classe-php.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,php,programação orientada a objetos,poo,classe,objeto,instância" />
+        <meta name="keywords" content="curso,php,programação orientada a objetos,poo,classe,objeto,instância,interface,interface pública" />
     <meta name="description" content="Nesta aula aprenderemos a implementar funcionalidades em nossas classes em PHP, bem como a forma em que devemos estruturas nossas classes." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,7 +25,7 @@
 
         <meta property="og:description" content="Nesta aula aprenderemos a implementar funcionalidades em nossas classes em PHP, bem como a forma em que devemos estruturas nossas classes."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="16-06-2016" />
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -34,6 +34,8 @@
             <meta property="article:tag" content="classe" />
             <meta property="article:tag" content="objeto" />
             <meta property="article:tag" content="instância" />
+            <meta property="article:tag" content="interface" />
+            <meta property="article:tag" content="interface pública" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -117,7 +119,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-16T01:00:00-03:00"> Publicado em 16-06-2016</time>
         </span>
 
 
@@ -439,7 +441,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" >Implementando Funcionalidades em Classe no PHP</a></td>
                             <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/php/pseudo-variavel-this-php.html" >Pseudo-variável <tt class="docutils literal">$this</tt> em PHP</a></td>
+                            <td><a href="http://excript.com/php/pseudo-variavel-this-php.html" >Pseudo-variável <code>$this</code> em PHP</a></td>
                             <td><a href="http://excript.com/php/pseudo-variavel-this-php.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/php/gerenciando-atributos-classe-php.html" >Gerenciando Atributos de Classe em PHP</a></td>
@@ -499,23 +501,33 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="implementando-os-comportamentos">
+<h2>IMPLEMENTANDO OS COMPORTAMENTOS</h2>
+<p>Todo objeto possui propriedades e todo objeto pode desempenhar alguma tarefa. É comum que um objeto desempenhe ações relacionadas as informações definidas em sua estrutura. Ou seja, as funções, na maioria das vezes, manipularão os atributos.</p>
+<p>Podemos reescrever o conceito acima pelo uso de estado e comportamento.</p>
+<p>Todo objeto possui estados e, todo objeto possui comportamentos. É comum que um objeto desempenhe comportamentos relacionadas as informações definidas em sua estrutura. Ou seja, os comportamentos, na maioria das vezes, manipularão os estados.</p>
+<p>Reescrevemos os conceitos somente por uma questão conceitual.</p>
+<p>As tarefas que um objeto executa são chamado de comportamentos, porém, a implementação não passa de uma função, cuja sintaxe é igual a sintaxe de qualquer função.</p>
+<p>Por fim, temos que as variáveis de uma instância guardarão as informações, enquanto que as funções manipulação as variáveis.</p>
+</div>
+<div class="section" id="estruturas-de-dados">
+<h2>ESTRUTURAS DE DADOS</h2>
+<p>O grande avanço das na estruturação das linguagens de programação foi a implementação da capacidade de agrupar funcionalidade e atributos numa mesta estrutura. Assim, conseguimos definir estruturas que possuem um conjunto de propriedades e fazer com que estas só sejam manipuladas através de funções pré-definidas pela classe. A esse conceito chamamos de interface pública, ou seja, o conjunto de funções para a interação com a classe constitui uma interface para o acesso externo.</p>
+<p>A ideia de ter atributos e funcionalidades numa mesma estrutura é responsável pela evolução da informática e a implementação desse conceito é, em suma, o que hoje chamamos de Orientação a Objetos.</p>
+<p>O nosso objetivo a partir de agora é, a criação de programas modulares e, a definição, em cada classe, dos atributos pertinentes a entidade.</p>
+</div>
+<div class="section" id="uma-primeira-nocao-de-encapsulamento">
+<h2>UMA PRIMEIRA NOÇÃO DE ENCAPSULAMENTO</h2>
+<p>Mesmo que não tenhamos estudado o conceito de encapsulamento, podemos observar que, os objetos funcionam como uma cápsula, onde as propriedades são o conteúdo da capsula, enquanto as funções, irão assumir uma de duas opções. a) de uso intero; b) uso externo. As funções internas, deverão ter seus nomes restritos ao escopo da classe, enquanto que as funções de uso externo, deverão ter suas funções decladas como sendo pública e estas, formarão, a interface de comunicação entre o mundo exterior e o conteúdo interno da classe.</p>
+<p>Por fim, só o conceito de manter os dados e as funções num mesmo lugar já é, por definição, uma maneira de encapsulamento, até porque, para acessarmos uma propriedade ou um funcionalidade somos obrigados a especificar a capsula que desejamos manipular.</p>
+<div class="highlight"><pre><span></span><span class="x">class Teste {</span>
+<span class="x">    function imprimeTeste(){</span>
+<span class="x">        echo &quot;teste&quot;</span>
+<span class="x">    }</span>
+
+<span class="x">}</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#IMPLEMENTANDO FUNÇÕES I</span>
@@ -559,7 +571,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>, 	<a href="http://excript.com/tag/classe.html">classe</a>, 	<a href="http://excript.com/tag/objeto.html">objeto</a>, 	<a href="http://excript.com/tag/instancia.html">instância</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>, 	<a href="http://excript.com/tag/classe.html">classe</a>, 	<a href="http://excript.com/tag/objeto.html">objeto</a>, 	<a href="http://excript.com/tag/instancia.html">instância</a>, 	<a href="http://excript.com/tag/interface.html">interface</a>, 	<a href="http://excript.com/tag/interface-publica.html">interface pública</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

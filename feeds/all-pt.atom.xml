@@ -1,5 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all-pt.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-15T08:30:00-03:00</updated><entry><title>Argumento de Função Nomeado vs Posicional em Python</title><link href="http://excript.com/python/argumentos-nomeados-posicionais-python.html" rel="alternate"></link><published>2016-06-15T08:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:python/argumentos-nomeados-posicionais-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all-pt.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-16T01:00:00-03:00</updated><entry><title>Implementando Funcionalidades em Classe no PHP</title><link href="http://excript.com/php/implementando-funcionalidades-classe-php.html" rel="alternate"></link><published>2016-06-16T01:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-16:php/implementando-funcionalidades-classe-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos a implementar funcionalidades em nossas classes em PHP, bem como a forma em que devemos estruturas nossas classes.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="implementando-os-comportamentos"&gt;
+&lt;h2&gt;IMPLEMENTANDO OS COMPORTAMENTOS&lt;/h2&gt;
+&lt;p&gt;Todo objeto possui propriedades e todo objeto pode desempenhar alguma tarefa. É comum que um objeto desempenhe ações relacionadas as informações definidas em sua estrutura. Ou seja, as funções, na maioria das vezes, manipularão os atributos.&lt;/p&gt;
+&lt;p&gt;Podemos reescrever o conceito acima pelo uso de estado e comportamento.&lt;/p&gt;
+&lt;p&gt;Todo objeto possui estados e, todo objeto possui comportamentos. É comum que um objeto desempenhe comportamentos relacionadas as informações definidas em sua estrutura. Ou seja, os comportamentos, na maioria das vezes, manipularão os estados.&lt;/p&gt;
+&lt;p&gt;Reescrevemos os conceitos somente por uma questão conceitual.&lt;/p&gt;
+&lt;p&gt;As tarefas que um objeto executa são chamado de comportamentos, porém, a implementação não passa de uma função, cuja sintaxe é igual a sintaxe de qualquer função.&lt;/p&gt;
+&lt;p&gt;Por fim, temos que as variáveis de uma instância guardarão as informações, enquanto que as funções manipulação as variáveis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="estruturas-de-dados"&gt;
+&lt;h2&gt;ESTRUTURAS DE DADOS&lt;/h2&gt;
+&lt;p&gt;O grande avanço das na estruturação das linguagens de programação foi a implementação da capacidade de agrupar funcionalidade e atributos numa mesta estrutura. Assim, conseguimos definir estruturas que possuem um conjunto de propriedades e fazer com que estas só sejam manipuladas através de funções pré-definidas pela classe. A esse conceito chamamos de interface pública, ou seja, o conjunto de funções para a interação com a classe constitui uma interface para o acesso externo.&lt;/p&gt;
+&lt;p&gt;A ideia de ter atributos e funcionalidades numa mesma estrutura é responsável pela evolução da informática e a implementação desse conceito é, em suma, o que hoje chamamos de Orientação a Objetos.&lt;/p&gt;
+&lt;p&gt;O nosso objetivo a partir de agora é, a criação de programas modulares e, a definição, em cada classe, dos atributos pertinentes a entidade.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="uma-primeira-nocao-de-encapsulamento"&gt;
+&lt;h2&gt;UMA PRIMEIRA NOÇÃO DE ENCAPSULAMENTO&lt;/h2&gt;
+&lt;p&gt;Mesmo que não tenhamos estudado o conceito de encapsulamento, podemos observar que, os objetos funcionam como uma cápsula, onde as propriedades são o conteúdo da capsula, enquanto as funções, irão assumir uma de duas opções. a) de uso intero; b) uso externo. As funções internas, deverão ter seus nomes restritos ao escopo da classe, enquanto que as funções de uso externo, deverão ter suas funções decladas como sendo pública e estas, formarão, a interface de comunicação entre o mundo exterior e o conteúdo interno da classe.&lt;/p&gt;
+&lt;p&gt;Por fim, só o conceito de manter os dados e as funções num mesmo lugar já é, por definição, uma maneira de encapsulamento, até porque, para acessarmos uma propriedade ou um funcionalidade somos obrigados a especificar a capsula que desejamos manipular.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Teste {&lt;/span&gt;
+&lt;span class="x"&gt;    function imprimeTeste(){&lt;/span&gt;
+&lt;span class="x"&gt;        echo &amp;quot;teste&amp;quot;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#IMPLEMENTANDO FUNÇÕES I&lt;/span&gt;
+
+&lt;span class="x"&gt;class Teste{&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function imprimeTeste(){&lt;/span&gt;
+&lt;span class="x"&gt;        echo &amp;quot;Função imprimeTeste() da classe de nome Teste&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;$t1 = new Teste();&lt;/span&gt;
+&lt;span class="x"&gt;$t1 -&amp;gt; imprimeTeste();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="interface"></category><category term="interface pública"></category></entry><entry><title>Pseudo-variável $this em PHP</title><link href="http://excript.com/php/pseudo-variavel-this-php.html" rel="alternate"></link><published>2016-06-15T19:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:php/pseudo-variavel-this-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a pseudo-variável $this. Entenderemos a sua definição e quando devemos utiliza-la na construção de classes PHP.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="pseudo-variavel"&gt;
+&lt;h2&gt;PSEUDO-VARIÁVEL&lt;/h2&gt;
+&lt;p&gt;Pseudo-variável é um nome que será utilizado como se fosse uma variável, porém, que não é verdadeiramente uma variável. Por isso o prefixo &lt;strong&gt;pseudo&lt;/strong&gt;, que significa, falso.&lt;/p&gt;
+&lt;p&gt;Cada classe PHP, possui uma pseudo-variável de nome &lt;code&gt;$this&lt;/code&gt;. Chamamos a mesma de pseudo-variável até porque, a mesma funciona de maneira diferente das demais variáveis e quem a manipula, é a máquina virtual do PHP.&lt;/p&gt;
+&lt;p&gt;O que temos que entender, é que &lt;code&gt;$this&lt;/code&gt; aponta para um objeto na memória, no caso, o objeto em execução, ou melhor, o objeto onde a mesma está contida, ou então, vamos dizer que a mesma aponta para si própria. Cada instância de classe terá a sua própria pseudo-variável &lt;code&gt;$this&lt;/code&gt; e esta, apontará para o endereço de memória onde a variável está sendo utilizada.;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class A{&lt;/span&gt;
+
+&lt;span class="x"&gt;    function fun(){&lt;/span&gt;
+&lt;span class="x"&gt;        $this -&amp;gt; fun();&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, definimos uma classe que contém a função &lt;code&gt;fun()&lt;/code&gt;. A função implementou uma chamada a si mesma, ou seja, utilizamos um conceito de recursividade para demonstrar que, com a variável &lt;code&gt;$this&lt;/code&gt;, temos acesso aos membros definidos internamente a classe. Se executado esse código e a função &lt;code&gt;fun()&lt;/code&gt; for invocada,a aplicação entrará em looping e ocorra o estouro da pilha que resultará na interrupção da execução do script.&lt;/p&gt;
+&lt;p&gt;Estudamos que as funções possuem seu escopo restrito, isto é, as mesmas não enxergam os membros externos, da mesma forma que, os membros externos não conseguem acessar os membros definidos internamente a função.&lt;/p&gt;
+&lt;p&gt;Devido ao escopo de nomes é que existe o conceito e a definição da variável &lt;code&gt;$this&lt;/code&gt;. Do contrário, não conseguiríamos acessar os membros de classe e por conseguinte, nada faria sentido!&lt;/p&gt;
+&lt;p&gt;Então, para acessar um membro de classe, utilizamos a variável &lt;code&gt;$this&lt;/code&gt;, em seguida utilizamos o &lt;code&gt;-&amp;gt;&lt;/code&gt; &lt;tt class="docutils literal"&gt;operador seta&lt;/tt&gt; e por fim, o nome do membro definido pela classe.&lt;/p&gt;
+&lt;p&gt;Do inglês, &lt;code&gt;this&lt;/code&gt; significa [este, esta, isto], logo, podemos concluir que a mesma tem o objetivo se fazer referência a si mesma, porém, durante o tempo de execução.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#IMPLEMENTANDO FUNÇÕES&lt;/span&gt;
+
+&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
+
+&lt;span class="x"&gt;    public $idade = 6;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function get_idade(){&lt;/span&gt;
+
+&lt;span class="x"&gt;        return $this -&amp;gt; idade;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
+&lt;span class="x"&gt;echo $p1 -&amp;gt; get_idade();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="blog"></category></entry><entry><title>Argumento de Função Nomeado vs Posicional em Python</title><link href="http://excript.com/python/argumentos-nomeados-posicionais-python.html" rel="alternate"></link><published>2016-06-15T08:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:python/argumentos-nomeados-posicionais-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1704,12 +1813,12 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;div class="section" id="programacao-orientada-a-objetos"&gt;
-&lt;h2&gt;PROGRAMAÇÃO ORIENTADA A OBJETOS&lt;/h2&gt;
+&lt;div class="section" id="os-objetos-e-o-php"&gt;
+&lt;h2&gt;OS OBJETOS E O PHP&lt;/h2&gt;
 &lt;p&gt;Nesta aula iniciaremos o estudo da Orientação a Objetos utilizando a linguagem PHP.&lt;/p&gt;
 &lt;p&gt;Inicialmente temos de saber que o PHP incorporou os conceitos da orientação a objetos e não o contrário. Ou seja, POO é uma definição para o desenvolvimento de software e que é utilizado por várias linguagens de programação de computadores. A verdade é que POO não é uma linguagem e não possui nenhuma sintaxe definida. A mesma é um conceito em que utiliza a definição de objetos do mundo real para a construção de entidades representativas que contenham informações e um conjunto de funções e métodos para a sua manipulação dessa informações.&lt;/p&gt;
 &lt;p&gt;Inicialmente, o PHP dispunha somente do paradigma de programação procedural, onde as aplicações eram construídas pela definição de funções em um ou diversos arquivos e conforme necessário as funções iam sendo invocadas.&lt;/p&gt;
-&lt;p&gt;Esse paradigma de programação continua sendo válido na construção de códigos e geralmente, é a porta de entrada de todos os programadores. Até porque, num primeiro momento, a literatura e os professores de PHP ensinam a utilizar funções sem nem ao menos declararmos uma função. Ou seja, colocamos todas as funções no corpo do arquivo que possui extensão *.php e executamos no browser.&lt;/p&gt;
+&lt;p&gt;Esse paradigma de programação continua sendo válido na construção de códigos e, geralmente, é a porta de entrada dos novos programadores. Até porque, num primeiro momento, a literatura e os professores de PHP ensinam a utilizar funções sem nem ao menos declararmos uma função. Ou seja, colocamos todas as funções no corpo do arquivo que possui extensão *.php e executamos no browser.&lt;/p&gt;
 &lt;p&gt;Assim, é comum em PHP utilizarmos os 2 paradigmas de programação e mais um terceiro, o paradigma de programação funcional. Logo, temos que o PHP suporta, basicamente, 3 paradigmas para o desenvolvimento de Scripts e aplicativos, são eles:&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;Paradigma de programação procedural&lt;/li&gt;
@@ -1718,10 +1827,28 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;/ol&gt;
 &lt;p&gt;A verdade é que não existe paradigma melhor ou pior, cada um busca servir a um propósito bem especifico e, mesmo sendo possível fazer em qualquer paradigma o que é feito em outro, a estrutura e a organização do código possui grande diferença, seja na leitura, seja na performance de sua execução.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class="section" id="conceito-de-classe"&gt;
+&lt;h2&gt;CONCEITO DE CLASSE&lt;/h2&gt;
+&lt;p&gt;Classe é um Tipo Abstrato de Dados (TAD), isto é, uma forma para declararmos um novo tipo de informação e, implementar os estados e os comportamentos do novo tipo de dado.&lt;/p&gt;
+&lt;p&gt;Por definição, as classe permitem a definição de estado e de comportamento. Assim, conseguimos manter as informações e as funções que as manipulam numa mesma entidade representativa.&lt;/p&gt;
+&lt;p&gt;Devemos entender o conceito de &lt;strong&gt;estado&lt;/strong&gt; como sendo os atributos, isto é, as variáveis propriamente ditas. Enquanto que o comportamento, são as funções, isto é, blocos de códigos que irão trabalhar e manipular os estados.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;estado&lt;/dt&gt;
+&lt;dd&gt;atributos referentes as classes&lt;/dd&gt;
+&lt;dt&gt;comportamento&lt;/dt&gt;
+&lt;dd&gt;funções que manipulam os estados&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
 &lt;div class="section" id="primeira-classe"&gt;
 &lt;h2&gt;PRIMEIRA CLASSE&lt;/h2&gt;
-&lt;p&gt;Nesta aula iremos criar a nossa primeira classe em PHP. Para isso, faremos uso da palavra-chave &lt;tt class="docutils literal"&gt;class&lt;/tt&gt; que, do Inglês significa classe. Após o uso da instrução &lt;tt class="docutils literal"&gt;class&lt;/tt&gt;, temos que abrir e fechar chaves, definindo assim, o escopo da nossa classe.&lt;/p&gt;
-&lt;p&gt;Isso quer dizer que todas as variáveis e funções deverão, obrigatoriamente, serem definidas no escopo da classe.&lt;/p&gt;
+&lt;p&gt;Agora vamos criar a nossa primeira classe em PHP. Para isso, faremos uso da palavra-chave &lt;tt class="docutils literal"&gt;class&lt;/tt&gt; que, do Inglês, significa classe. Após o uso da instrução &lt;tt class="docutils literal"&gt;class&lt;/tt&gt;, temos que abrir e fechar chaves, definindo assim, o escopo de nomes público da classe.&lt;/p&gt;
+&lt;p&gt;Isso quer dizer que todas as variáveis e funções deverão, obrigatoriamente, serem definidas entre os parêntesis que compreendem o bloco de instrução da classe, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class &amp;lt; nome &amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+&lt;span class="x"&gt;    # &amp;lt;bloco de instrução da classe&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, definimos o esquema para a declaração de classes em PHP. Inicialmente, utilizamos a palavra reservada &lt;code&gt;class&lt;/code&gt;, em seguida, definimos o nome da classe e, por fim, abrimos e fechamos chaves definindo assim, o bloco de instrução que estarão contidos &lt;strong&gt;todas&lt;/strong&gt; as funções e propriedades da classe.&lt;/p&gt;
 &lt;p&gt;Toda classe em POO deverá, obrigatoriamente, possuir um nome. &lt;a class="reference external" href="http://excript.com/php/nomenclatura-variavel-php.html"&gt;A composição de nomes segue as mesmas regras estudadas na definição de nomes de variáveis em PHP&lt;/a&gt; .&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="nomenclatura-convencional"&gt;
@@ -20649,54 +20776,7 @@ Exemplos:&lt;/p&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Implementando Funcionalidades em Classe no PHP</title><link href="http://excript.com/php/implementando-funcionalidades-classe-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/implementando-funcionalidades-classe-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula aprenderemos a implementar funcionalidades em nossas classes em PHP, bem como a forma em que devemos estruturas nossas classes.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#IMPLEMENTANDO FUNÇÕES I&lt;/span&gt;
-
-&lt;span class="x"&gt;class Teste{&lt;/span&gt;
-
-&lt;span class="x"&gt;    public function imprimeTeste(){&lt;/span&gt;
-&lt;span class="x"&gt;        echo &amp;quot;Função imprimeTeste() da classe de nome Teste&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;$t1 = new Teste();&lt;/span&gt;
-&lt;span class="x"&gt;$t1 -&amp;gt; imprimeTeste();&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Instalando PHPStorm no Windows</title><link href="http://excript.com/php/instalando-phpstorm-no-windows.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/instalando-phpstorm-no-windows.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Instalando PHPStorm no Windows</title><link href="http://excript.com/php/instalando-phpstorm-no-windows.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/instalando-phpstorm-no-windows.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -22141,57 +22221,7 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Pseudo-variável $this em PHP</title><link href="http://excript.com/php/pseudo-variavel-this-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/pseudo-variavel-this-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a pseudo-variável $this. Entenderemos a sua definição e quando devemos utiliza-la na construção de classes PHP.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#IMPLEMENTANDO FUNÇÕES&lt;/span&gt;
-
-&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
-
-&lt;span class="x"&gt;    public $idade = 6;&lt;/span&gt;
-
-&lt;span class="x"&gt;    public function get_idade(){&lt;/span&gt;
-
-&lt;span class="x"&gt;        return $this -&amp;gt; idade;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
-&lt;span class="x"&gt;echo $p1 -&amp;gt; get_idade();&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Retorno de Valores pela função em PHP</title><link href="http://excript.com/php/retorno-valor-funcao-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/retorno-valor-funcao-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category></entry><entry><title>Retorno de Valores pela função em PHP</title><link href="http://excript.com/php/retorno-valor-funcao-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/retorno-valor-funcao-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
