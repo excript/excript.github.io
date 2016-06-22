@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/cpp/primeiro-programa-cpp.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,cpp,primeiro programa,hello world" />
+        <meta name="keywords" content="curso,cpp,primeiro programa,ola mundo,hello world,blog" />
     <meta name="description" content="Nessa aula faremos nosso primeiro programa em C++, ou seja, iremos desenvolver o famoso Hello World, ou então, o famoso Ola Mundo." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,12 +25,14 @@
 
         <meta property="og:description" content="Nessa aula faremos nosso primeiro programa em C++, ou seja, iremos desenvolver o famoso Hello World, ou então, o famoso Ola Mundo."/>
 
-        <meta property="article:published_time" content="01-01-2016" />
+        <meta property="article:published_time" content="22-06-2016" />
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
             <meta property="article:tag" content="primeiro programa" />
+            <meta property="article:tag" content="ola mundo" />
             <meta property="article:tag" content="hello world" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -114,7 +116,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-01-01T00:00:00-02:00"> Publicado em 01-01-2016</time>
+            <time datetime="2016-06-22T03:00:00-03:00"> Publicado em 22-06-2016</time>
         </span>
 
 
@@ -352,23 +354,96 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="ola-mundo">
+<h2>OLA MUNDO</h2>
+<p>É comum no estudo de qualquer linguagem o desenvolvimento de um simples código comumente chamado de Hello World, ou então, Ola Mundo. Esse código tem o objetivo de demonstrar o mínimo necessário para o desenvolvimento de uma aplicação com a linguagem.</p>
+</div>
+<div class="section" id="criando-um-novo-projeto">
+<h2>CRIANDO UM NOVO PROJETO</h2>
+<p>Para criarmos um novo projeto no Code::Blocks, temos de ir em: <cite>File -&gt; New -&gt; Project</cite>, conforme a imagem a seguir:</p>
+<img alt="Criando um novo projeto no Code::Blocks 16.01" src="../images/curso-cpp/codeblocks-new-project.png" />
+<p>Na tela Project, vamos selecionar a opção, <cite>Console Application</cite> e então pressionamos o botão <tt class="docutils literal">Go</tt>.</p>
+<img alt="Escolhendo o template para a criação do novo projeto C++ no Code::Blocks 16.01" src="../images/curso-cpp/codeblocks-janela-new-from-template.png" />
+<p>Feito isso, é perguntado se o novo projeto será construído em C ou C++. Vamos selecionar a opção C++ e então pressionamos <tt class="docutils literal">Next</tt>.</p>
+<img alt="Escolhendo a opção para a criação de um novo projeto como sendo um novo projeto em C++ no Code::Blocks 16.01" src="../images/curso-cpp/codeblocks-janela-console-application.png" />
+<p>Agora, vamos definir o título para o nosso novo projeto. Vamos colocar <tt class="docutils literal">HelloWorld</tt> tudo junto e então, pressionamos <tt class="docutils literal">Next</tt>.</p>
+<img alt="Definindo o título do projeto no Code::Blocks 16.01" src="../images/curso-cpp/codeblocks-janela-console-application-project-tile.png" />
+<p>Em seguida, é perguntado qual o compilador que desejamos utilizar.
+Vamos deixar o compilador padrão e então pressionamos o botão <tt class="docutils literal">Finish</tt>.</p>
+<img alt="Definindo o compilador para o novo projeto no Code::Blocks 16.01" src="../images/curso-cpp/codeblocks-janela-console-application-compilador.png" />
+<p>Após a finalização para a criação de novos projetos, você terá uma tela semelhante a que temos na imagem a seguir:</p>
+<img alt="View Project exibindo o projeto HelloWorld criado no Code::Blocks 16.01" src="../images/curso-cpp/codeblocks-views-project1.png" />
+<p>A esquerda do vídeo há uma lista, certifique-se de selecionar a aba Project como destacado na imagem a seguir. Feito isso, você terá uma lista contendo uma árvore que contém o projeto que acabamos de criar.</p>
+<p>Na imagem abaixo, também é possível ver que a pasta <tt class="docutils literal">Source</tt> está destacada. Observe que esta pasta possui um sinal de &quot;mais&quot; a sua esquerda, como no <tt class="docutils literal">Windows Explorar</tt>. Clique nesse sinal para expandir a árvore e mostrar os outros arquivos do nosso projeto.</p>
+<img alt="View Project e pasta Source destacado no Code::Blocks 16.01" src="../images/curso-cpp/codeblocks-views-project2.png" />
+<p>Após selecionar a aba <tt class="docutils literal">Project</tt> e expandir os arquivos do projeto, de um duplo clique sobre o item <tt class="docutils literal">main.cpp</tt> contido na pasta <tt class="docutils literal">Sources</tt> que está contida no projeto que acabamos de criar de nome <tt class="docutils literal">HelloWorld</tt>.</p>
+<img alt="Exibindo o código do arquivo main.cpp criado com o Code::Blocks 16.01" src="../images/curso-cpp/codeblocks-views-project3.png" />
+<p>Após clicar no arquivo <tt class="docutils literal">main.cpp</tt>, será aberta a View contendo o código gerado por padrão pelo Code::Blocks.</p>
+<p>Nesse momento, vamos apagar todo o código gerado por padrão pelo Code::Blocks. Nosso objetivo agora é escrever um programa desde o início e estudar o que estamos fazendo.</p>
+</div>
+<div class="section" id="o-codigo">
+<h2>O CÓDIGO</h2>
+<p>Agora, vamos escrever, linha por linha o nosso programa e vamos estudando o que está sendo programado.</p>
+<p>A primeira linha que vamos escrever é para inclui uma biblioteca em nosso programa. Bibliotecas contém Classes, funções, constantes e muitos outros códigos. Todo programa que desenvolvermos iremos utilizar diversas bibliotecas.</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+</pre></div>
+<p>No trecho de código acima, estamos incluindo o arquivo <code>&lt;iostream&gt;</code>. A instrução <code>#include</code>, que em Português significa incluir, diz para o C++ importar o arquivo cujo nome está a sua frente. Nesse momento não estudaremos a inclusão de arquivos e bibliotecas, porém, tenha em mente que dessa forma, estaremos utilizando um conjunto de códigos fornecido por padrão pela biblioteca do C++.</p>
+<p>Feito isso, vamos definir um namespace para não precisar a todo momento se referir ao mesmo.</p>
+<div class="highlight"><pre><span></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</pre></div>
+<p>Na linha de código acima, utilizamos a instrução <code>using</code>, que em Português significa utilizar, dizendo ao C++ que iremos fazer uso de um <code>namespace</code> de nome <code>std</code>.</p>
+<p>Um <code>namespace</code> é semelhante ao <tt class="docutils literal">PATH</tt> de arquivo, ou seja, cada arquivo em nossa estrutura de pastas possui uma <tt class="docutils literal">PATH</tt> que o identifica, por exemplo: <tt class="docutils literal"><span class="pre">C:\pasta1\arquivoX.ext</span></tt>, como podemos ver, temos um arquivo de nome <tt class="docutils literal">arquivoX.ext</tt> cujo <tt class="docutils literal">PATH</tt> é <tt class="docutils literal"><span class="pre">C:\pasta1\</span></tt>. O funcionamento do <tt class="docutils literal">PATH</tt> do arquivo é a <code>namespace</code> num código C++. Porém, uma namespace não é necessariamente um caminho para um arquivo, as vezes, o namespace é o caminho mais o nome da classe em C++.</p>
+<p>Revisando. A instrução <code>using</code> diz que iremos utilizar uma <code>namespace</code> de nome <code>std</code>. O nome <code>std</code> vem de standard, que significa em Português, padrão. Ou seja, estamos dizendo que iremos utilizar a classe de nome <code>std</code>.</p>
+<p>Agora, vamos definir o nome da função que <strong>TODO</strong> programa em C++ deve ter. Em outras palavras, temos que toda aplicação escrita em C++ é iniciada pela função de nome <code>main()</code>, como podemos ver no código a seguir:</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>A palavra <code>int</code> a frente do nome da função principal, diz que a mesma pode retornar um valor do tipo inteiro. Iremos estudar melhor o tipo <code>int</code> nas próximas aulas.</p>
+<p>Após definirmos o nome da função, utilizamos um par de parêntesis. Em seguida, utilizamos o caractere chave de abertura e fechamento.</p>
+<p>Nesse momento, o que talvez seja de maior importancia, é saber que o código do nosso programa deverá estar entre o par de chaves. Todo par de chaves é chamado de <tt class="docutils literal">Bloco de Instrução</tt>, ou seja, um bloco que contém várias instrução dizendo o que deve ser feito.</p>
+<p>Feito isso, vamos escrever a instrução C++ que de fato, imprimirá a frase Ola Mundo no Console.</p>
+<div class="highlight"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Ola Mundo!&quot;</span><span class="p">;</span>
+</pre></div>
+<p>Na linha acima, estamos utilizando o objeto <code>cout</code>, que é um acrônimo de <tt class="docutils literal">Console Output</tt>, que em Português significa, saída padrão, em seguida, utilizamos o operador de inserção <code>&lt;&lt;</code> dizendo que o texto a direita deve ser &quot;inserido&quot; no objeto <code>cout</code>. Essa é a forma para escrevermos caracteres na tela.</p>
+<div class="highlight"><pre><span></span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+</pre></div>
+<p>A linha acima diz para a aplicação ter a sua execução pausada. Se não mandarmos a aplicação parar, a mesma imprimiria caracteres na tela, em seguida finalizaria e a janela seria fechado, ou seja, não seria possível ver o que foi impresso no <tt class="docutils literal">Console</tt>.</p>
+<p>Para utilizarmos a instrução acima que manda a aplicação pausar antes de finalizar, será necessário importar a biblioteca de nome <code>stdlib.h</code>. Para isso, vá abaixo da linha <code>#include &lt;iostream&gt;</code> e digite:</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+</pre></div>
+<p>Agora, estamos importando 2 bibliotecas no nosso programa.</p>
+<p>Por fim, temos:</p>
+<div class="highlight"><pre><span></span><span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+<p>A última instrução retorna o número zero. Desta forma, estamos finalizando a nossa aplicação e retornado o código 0, dizendo para o SO que a aplicação finalizou normalmente.</p>
+<p>Poderíamos, por exemplo, retornar um número que diz ao sistema operacional que ocorreu um erro e o código do erro é o número retornado pela nossa aplicação. Atualmente, essa funcionalidade entrou em desuso, então, tenha em mente que em 99% das vezes retornaremos o código zero e em seguida a aplicação será finalizada.</p>
+<p>A seguir, temos o código completo da nossa aplicação.</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Ola Mundo!&quot;</span><span class="p">;</span>
+
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>Agora, basta executarmos a nossa aplicação. No Code::Blocks, pra você rodar o programa, é necessário pressionar o botão verde, conforme está destacado na imagem a seguir:</p>
+<img alt="Botão Run para executar o programa" src="../images/curso-cpp/codeblocks-run-button.png" />
+<p>A primeira vez em que executarmos nossa aplicação, será perguntado se desejamos construir o nosso programa. Essa é uma mensagem padrão dizendo que os arquivos binários serão gerados e o arquivo executavel gerado.</p>
+<p>Pressione o botão &quot;Sim&quot; e então, a aplicação será construída e executada.</p>
+<img alt="Após mandar compilar e executar o programa será perguntado se desejamos construir o projeto." src="../images/curso-cpp/codeblocks-run-button-msg.png" />
+<p>Caso a sua aplicação foi executada com sucesso, deverá ser exibido uma tela do DOS semelhante a imagem a seguir:</p>
+<img alt="Botão Run para executar o programa" src="../images/curso-cpp/codeblocks-janela-programa-executado.png" />
+<p>Na imagem acima, temos inicialmente a frase: &quot;Ola Mundo!&quot; e em seguida a frase &quot;Pressione qualquer tecla para continuar...&quot;. A segunda frase sempre será exibida, em toda janela do prompt que for aberta.</p>
+<p>O nosso programa deveria ter escrito a frase &quot;Ola Mundo!&quot; e em seguida, quebrado a linha, ou seja, pressionado a tecla Enter. Esse problema será resolvido nas próximas aulas, até porque, estudamos muitos conceitos até esse momento!</p>
+</div>
 
 				</div>
 			</div>
@@ -396,7 +471,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/primeiro-programa.html">primeiro programa</a>, 	<a href="http://excript.com/tag/hello-world.html">hello world</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/primeiro-programa.html">primeiro programa</a>, 	<a href="http://excript.com/tag/ola-mundo.html">ola mundo</a>, 	<a href="http://excript.com/tag/hello-world.html">hello world</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
