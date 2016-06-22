@@ -439,7 +439,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/php/acessando-membros-classe-php.html" >Acessando Membros de Classe em PHP</a></td>
                             <td><a href="http://excript.com/php/acessando-membros-classe-php.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" >Implementando Funcionalidades em Classe no PHP</a></td>
+                            <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" >Implementando Comportamentos de Classe com PHP</a></td>
                             <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/php/pseudo-variavel-this-php.html" >Pseudo-variável <code>$this</code> em PHP</a></td>
@@ -521,37 +521,42 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x"># MODIFICADORES DE ACESSO II</span>
+<div class="highlight"><pre><span></span><span class="x"># VISIBILIDADE DAS FUNÇÕES</span>
 
 <span class="x">class SuperClasse{</span>
-<span class="x">    public $publico = 0;</span>
-<span class="x">    private $privada = 0;</span>
-<span class="x">    protected $protegido = 0;</span>
-<span class="x">    public function super(){</span>
-<span class="x">        echo $this-&gt;publico . &quot;\n&quot;;</span>
-<span class="x">        echo $this-&gt;privada . &quot;\n&quot;;</span>
-<span class="x">        echo $this-&gt;protegido . &quot;\n&quot;;</span>
+
+<span class="x">    public $uuu;</span>
+
+<span class="x">    public function funcPublica(){ echo &quot;funcPublica\n&quot;; }</span>
+<span class="x">    protected function funcProtegida(){ echo &quot;funcProtegida\n&quot;; }</span>
+<span class="x">    private function funcPrivada(){ echo &quot;funcPrivada\n&quot;; }</span>
+
+<span class="x">    function super(){</span>
+<span class="x">        $this-&gt;funcPublica();</span>
+<span class="x">        $this-&gt;funcProtegida();</span>
+<span class="x">        $this-&gt;funcPrivada();</span>
 <span class="x">    }</span>
+
 <span class="x">}</span>
-<span class="x">//$super = new SuperClasse();</span>
-<span class="x">//$super-&gt;publico = 10;</span>
-<span class="x">////$super-&gt;privada = 11; // erro</span>
-<span class="x">////$super-&gt;protegido = 12; // erro</span>
+
+<span class="x">$super = new SuperClasse();</span>
 <span class="x">//$super-&gt;super();</span>
+<span class="x">$super-&gt;funcPublica();</span>
+<span class="x">//$super-&gt;funcProtegida();</span>
+<span class="x">//$super-&gt;funcPrivada();</span>
 
 <span class="x">class SubClasse extends SuperClasse{</span>
-<span class="x">    public function sub(int $x){</span>
-<span class="x">//        echo $this-&gt;privada; // erro</span>
-<span class="x">        $this-&gt;publico = $x;</span>
-<span class="x">//        $this-&gt;privada = $x; // erro</span>
-<span class="x">        $this-&gt;protegido = $x;</span>
+
+<span class="x">    function __construct(){</span>
+
+<span class="x">        $this-&gt;funcPublica();</span>
+<span class="x">        $this-&gt;funcProtegida();</span>
+<span class="x">//        $this-&gt;funcPrivada();</span>
 <span class="x">    }</span>
 <span class="x">}</span>
 
 <span class="x">$sub = new SubClasse();</span>
-<span class="x">//$sub-&gt;protegido = 5; // erro</span>
-<span class="x">$sub-&gt;sub(1);</span>
-<span class="x">$sub-&gt;super();</span>
+<span class="x">$sub-&gt;funcPublica();</span>
 </pre></div>
 </div>
 

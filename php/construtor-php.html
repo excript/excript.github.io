@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/php/construtor-php.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,php,programação orientada a objetos,poo,construtor,classe,objeto,instância" />
+        <meta name="keywords" content="curso,php,programação orientada a objetos,poo,construtor,classe,objeto,instância,blog" />
     <meta name="description" content="Nessa aula estudaremos os construtores de classe, ou seja, funções que são invocadas no momento em que uma nova instância de classe está sendo criada. Também estudaremos a inicialização de classe, ou seja, veremos quais os passos ocorridos a cada nova instância criada." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -35,6 +35,7 @@
             <meta property="article:tag" content="classe" />
             <meta property="article:tag" content="objeto" />
             <meta property="article:tag" content="instância" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -437,7 +438,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/php/acessando-membros-classe-php.html" >Acessando Membros de Classe em PHP</a></td>
                             <td><a href="http://excript.com/php/acessando-membros-classe-php.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" >Implementando Funcionalidades em Classe no PHP</a></td>
+                            <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" >Implementando Comportamentos de Classe com PHP</a></td>
                             <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/php/pseudo-variavel-this-php.html" >Pseudo-variável <code>$this</code> em PHP</a></td>
@@ -500,23 +501,25 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="construtores">
+<h2>CONSTRUTORES</h2>
+<p>Construtor é um bloco de instrução, semelhante a uma função, definido implicita ou explicitamente por todas as classes, que é invocado automaticamente pela Máquina Virtual, todas as vezes que um objeto está sendo criado. Construtores são definidos como sendo funções, porém, não o são! Isso porque, funções retornam valores e o único valor que um construtor poderia retornar, seria a instância que está sendo no mesmo instante definida.</p>
+<p>Porém, num primeiro momento, vamos pensar num construtor como sendo um método, até porque, o mesmo possui um nome, um corpo e pode receber parâmetros. Porém, um construtor não pode ser invocado quando desejarmos, ou melhor, o construtor é um bloco de código que será invocado <strong>só e somente só na criação de novas instâncias</strong>.</p>
+<!-- Uma classe pode conter quantos construtores forem necessário, desde que a assinatura destes sejam diferentes. -->
+</div>
+<div class="section" id="definicao">
+<h2>DEFINIÇÃO</h2>
+<p>O nome do construtor de todas as classes sempre será <code>__construct()</code>. Essa é uma convenção da linguagem e não há como trabalhar de maneira diferente. Dessa forma, é fácil identificarmos o construtor da classe, até porque, todas utilizarão o padrão.</p>
+<p>A seguir, temos algumas regras que se aplicão aos contrutores.</p>
+<ul class="simple">
+<li>O construtor que será invocado na criação de novos objetos tem o nome de:  <tt class="docutils literal">__construct</tt>. Os dois <tt class="docutils literal">underlines</tt> a frente do nome é obrigatório.</li>
+<li>Construtores são geralmente utilizados para trabalharmos com valores não literais, isto é, para trabalharmos com objetos. A razão é bastante simples: todo objeto precisa ser criado e isso é feito dentro de algum bloco de instrução.</li>
+<li>O PHP primeiro cria uma nova instância de um objeto para somente então invocar o seu construtor. Do contrário, não seria possível, por exemplo, acessar os membros da classe e nem fazer uso da pseudo-variável <tt class="docutils literal">$this</tt>. Assim, primeiro cria-se uma nova instância e, somente depois é que o construtor será invocado.</li>
+<li>As variáveis de uma classe são inicializadas antes do construtor ser invocado, assim, se alterarmos o valor de um atributo dentro do bloco do construtor, este passará a ser o valor assumido por todas as instâncias.</li>
+<li>O PHP tem definido que, construtores que não recebem parâmetros poderão ter suas instâncias criadas sem a utilização do par de parêntesis.</li>
+</ul>
+<!-- Isto pode ser utilizado para tornar os valores iniciais das propriedades dependentes dos parâmetros passados quando o objecto é criado. -->
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#CONSTRUTORES</span>
@@ -571,7 +574,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>, 	<a href="http://excript.com/tag/construtor.html">construtor</a>, 	<a href="http://excript.com/tag/classe.html">classe</a>, 	<a href="http://excript.com/tag/objeto.html">objeto</a>, 	<a href="http://excript.com/tag/instancia.html">instância</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/programacao-orientada-a-objetos.html">programação orientada a objetos</a>, 	<a href="http://excript.com/tag/poo.html">poo</a>, 	<a href="http://excript.com/tag/construtor.html">construtor</a>, 	<a href="http://excript.com/tag/classe.html">classe</a>, 	<a href="http://excript.com/tag/objeto.html">objeto</a>, 	<a href="http://excript.com/tag/instancia.html">instância</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

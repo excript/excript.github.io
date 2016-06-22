@@ -410,6 +410,23 @@ eXcript            </a>
 <p>A função <code>login()</code>, definida no código acima, pode ser invocada sem que seja passado um único argumento, até porque, por padrão, há valores definidos para todos os parâmetros declarados.</p>
 <p>É importante lembrar que se invocarmos uma função sem passarmos os parâmetros que estão definidos, o Python levantará uma exceção, porém, com o uso de <tt class="docutils literal">parâmetros default</tt> a obrigatoriedade torna-se facultativa a implementação.</p>
 </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="c1"># coding: utf-8</span>
+
+<span class="c1"># =================</span>
+<span class="c1">#  = eXcript.com =</span>
+<span class="c1"># =================</span>
+
+<span class="c1"># PARÂMETROS DEFAULT</span>
+
+<span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">sistema</span><span class="p">,</span> <span class="n">usuario</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span> <span class="n">senha</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Usuário: &quot;</span><span class="p">,</span> <span class="n">usuario</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Senha: &quot;</span><span class="p">,</span> <span class="n">senha</span><span class="p">)</span>
+
+<span class="n">login</span><span class="p">()</span>
+</pre></div>
+</div>
 
 				</div>
 			</div>

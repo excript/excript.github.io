@@ -444,7 +444,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/php/acessando-membros-classe-php.html" >Acessando Membros de Classe em PHP</a></td>
                             <td><a href="http://excript.com/php/acessando-membros-classe-php.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" >Implementando Funcionalidades em Classe no PHP</a></td>
+                            <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" >Implementando Comportamentos de Classe com PHP</a></td>
                             <td><a href="http://excript.com/php/implementando-funcionalidades-classe-php.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/php/pseudo-variavel-this-php.html" >Pseudo-variável <code>$this</code> em PHP</a></td>
@@ -526,10 +526,9 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x"># FUNÇÕES DE ACESSO</span>
+<div class="highlight"><pre><span></span><span class="x"># SOBREESCRITA DE FUNÇÕES</span>
 
 <span class="x">class Pessoa{</span>
-
 <span class="x">    private $nome;</span>
 <span class="x">    private $sobrenome;</span>
 
@@ -543,7 +542,7 @@ eXcript            </a>
 <span class="x">    }</span>
 <span class="x">    public function getSobrenome() : string</span>
 <span class="x">    {</span>
-<span class="x">        return $this-&gt;sobrenome;</span>
+<span class="x">    return $this-&gt;sobrenome;</span>
 <span class="x">    }</span>
 <span class="x">    public function setSobrenome(string $sobrenome)</span>
 <span class="x">    {</span>
@@ -554,17 +553,16 @@ eXcript            </a>
 <span class="x">    {</span>
 <span class="x">        return $this-&gt;getNome() . &quot; &quot; . $this-&gt;getSobrenome();</span>
 <span class="x">    }</span>
-
 <span class="x">}</span>
 
-<span class="x">$p1 = new Pessoa();</span>
-<span class="x">$p1-&gt;setNome(&quot;eXcript&quot;);</span>
-<span class="x">$p1-&gt;setSobrenome(&quot;Brasil&quot;);</span>
+<span class="x">class PFisica extends Pessoa{</span>
 
-<span class="x">//echo $p1-&gt;getNome() . &quot;\n&quot;;</span>
-<span class="x">//echo $p1-&gt;getSobrenome() . &quot;\n&quot;;</span>
+<span class="x">//    public function getNomeCompleto() : string</span>
+<span class="x">//    {</span>
+<span class="x">//        return &quot;PFisica: {$this-&gt;getNome()} {$this-&gt;getSobrenome()}&quot;;</span>
+<span class="x">//    }</span>
 
-<span class="x">echo $p1-&gt;getNomeCompleto();</span>
+<span class="x">}</span>
 </pre></div>
 </div>
 

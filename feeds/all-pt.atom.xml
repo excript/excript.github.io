@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all-pt.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-16T01:00:00-03:00</updated><entry><title>Implementando Funcionalidades em Classe no PHP</title><link href="http://excript.com/php/implementando-funcionalidades-classe-php.html" rel="alternate"></link><published>2016-06-16T01:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-16:php/implementando-funcionalidades-classe-php.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all-pt.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-16T01:00:00-03:00</updated><entry><title>Implementando Comportamentos de Classe com PHP</title><link href="http://excript.com/php/implementando-funcionalidades-classe-php.html" rel="alternate"></link><published>2016-06-16T01:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-16:php/implementando-funcionalidades-classe-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -56,7 +56,7 @@
 &lt;span class="x"&gt;$t1 -&amp;gt; imprimeTeste();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="interface"></category><category term="interface pública"></category></entry><entry><title>Pseudo-variável $this em PHP</title><link href="http://excript.com/php/pseudo-variavel-this-php.html" rel="alternate"></link><published>2016-06-15T19:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:php/pseudo-variavel-this-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="interface"></category><category term="interface pública"></category><category term="blog"></category></entry><entry><title>Pseudo-variável $this em PHP</title><link href="http://excript.com/php/pseudo-variavel-this-php.html" rel="alternate"></link><published>2016-06-15T19:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:php/pseudo-variavel-this-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -171,6 +171,28 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, definimos uma função semelhante a estudada no primeiro exemplo, porém, que contém mais um argumento de nome &lt;tt class="docutils literal"&gt;d&lt;/tt&gt;. Em seguida, invocamos a função e, para os 2 primeiros argumentos, enviamos valores de maneira posicional. Já, para os 2 argumentos finais, de nomes &lt;tt class="docutils literal"&gt;c&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;d&lt;/tt&gt;, passamos valores associando o nome do parâmetro com o respectivo valor.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# coding: utf-8&lt;/span&gt;
+
+&lt;span class="c1"&gt;# =================&lt;/span&gt;
+&lt;span class="c1"&gt;#  = eXcript.com =&lt;/span&gt;
+&lt;span class="c1"&gt;# =================&lt;/span&gt;
+
+&lt;span class="c1"&gt;# ARGUMENTOS POSICIONAIS E ARGUMENTOS NOMEADOS&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;dados_pessoais&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sobrenome&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sexo&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Nome: {}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;Sobrenome: {}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;Idade: {}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;Sexo: {}&amp;quot;&lt;/span&gt;
+            &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sobrenome&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sexo&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="n"&gt;dados_pessoais&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Cláudio&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sobrenome&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Rogério&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sexo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# dados_pessoais(idade=30,&lt;/span&gt;
+&lt;span class="c1"&gt;#                 sexo=True,&lt;/span&gt;
+&lt;span class="c1"&gt;#                 sobrenome=&amp;quot;Carvalho&amp;quot;,&lt;/span&gt;
+&lt;span class="c1"&gt;#                 nome=&amp;quot;Cláudio&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#                 )&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category><category term="função"></category><category term="parâmetro"></category><category term="argumento"></category><category term="argumento posicional"></category><category term="argumento nomeado"></category><category term="blog"></category></entry><entry><title>Parâmetros default em Python</title><link href="http://excript.com/python/parametro-default-python.html" rel="alternate"></link><published>2016-06-15T08:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:python/parametro-default-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -218,6 +240,23 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A função &lt;code&gt;login()&lt;/code&gt;, definida no código acima, pode ser invocada sem que seja passado um único argumento, até porque, por padrão, há valores definidos para todos os parâmetros declarados.&lt;/p&gt;
 &lt;p&gt;É importante lembrar que se invocarmos uma função sem passarmos os parâmetros que estão definidos, o Python levantará uma exceção, porém, com o uso de &lt;tt class="docutils literal"&gt;parâmetros default&lt;/tt&gt; a obrigatoriedade torna-se facultativa a implementação.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# coding: utf-8&lt;/span&gt;
+
+&lt;span class="c1"&gt;# =================&lt;/span&gt;
+&lt;span class="c1"&gt;#  = eXcript.com =&lt;/span&gt;
+&lt;span class="c1"&gt;# =================&lt;/span&gt;
+
+&lt;span class="c1"&gt;# PARÂMETROS DEFAULT&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;login&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sistema&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;usuario&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;root&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;senha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;123&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Usuário: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;usuario&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Senha: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;senha&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category><category term="função"></category><category term="parâmetro"></category><category term="argumento"></category><category term="parâmetro default"></category><category term="blog"></category></entry><entry><title>Parâmetros de Função em Python</title><link href="http://excript.com/python/parametro-de-funcao-python.html" rel="alternate"></link><published>2016-06-15T05:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:python/parametro-de-funcao-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -292,6 +331,25 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Acima, estamos invocando a função de nome soma e passando 2 valores como parâmetro. O primeiro, é o valor do parâmetro de nome &lt;code&gt;a&lt;/code&gt;, enquanto o segundo, é o parâmetro de nome &lt;cite&gt;b&lt;/cite&gt;.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# coding: utf-8&lt;/span&gt;
+
+&lt;span class="c1"&gt;# =================&lt;/span&gt;
+&lt;span class="c1"&gt;#  = eXcript.com =&lt;/span&gt;
+&lt;span class="c1"&gt;# =================&lt;/span&gt;
+
+&lt;span class="c1"&gt;# PARÂMETROS&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;O total da soma de x + y é: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;total&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category><category term="função"></category><category term="parâmetro"></category><category term="argumento"></category><category term="blog"></category></entry><entry><title>Introdução às Funções em Python</title><link href="http://excript.com/python/introducao-funcoes-python.html" rel="alternate"></link><published>2016-06-15T04:45:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:python/introducao-funcoes-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -309,6 +367,23 @@
 &lt;div class="section" id="introducao"&gt;
 &lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
 &lt;p&gt;Funções são blocos de instrução que podem ser invocados de qualquer parte do nosso código. Toda função, por definição, possui um nome, pode receber parâmetros e pode retornar valores. Nem toda função receberá parâmetros, da mesma forma, que nem toda função retornará valores. Tudo dependerá da situação, ainda assim, a estrutura sempre seguirá um padrão e por isso, é facilmente reconhecido.&lt;/p&gt;
+
+    &lt;div class="admonitionblock tip data-line"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="icon"&gt;
+                        &lt;i class="fa icon-tip" title="Dica!"&gt;&lt;/i&gt;
+                    &lt;/td&gt;
+                    &lt;td class="content"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt;Em Python, funções são objetos de primeira classe.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
 &lt;p&gt;A ideia mais primitiva das funções é o agrupamento de instruções, proporcionando um meio simples de execução sequencial e que pode ser invocado de qualquer parte a qualquer momento. Dessa forma, toda função irá possuir um bloco de instrução e quando invocada, o cursor de execução do programa se posicionará na primeira linha desse bloco e a execução ocorrerá de cima para baixo, uma instrução após outra.&lt;/p&gt;
 &lt;p&gt;As função podem definir em seu cabeçalho um conjunto de valores que devem ser enviados quando a função for invocada. Desta foram, a função só será invocada se os valores forem também definidos. Após a execução das instruções definidas no bloco de instrução da função, a mesma poderá retornar um valor e, dessa forma, temos um ciclo onde os dados são enviados, processados e retornados. Por isso é que raramente devemos utilizar variáveis globais, até porque, todos valores podem ser enviados e retornados pelas funções de maneira explicita.&lt;/p&gt;
 &lt;p&gt;Como todos os parâmetros estão por definição associados a função e possuem seu escopo restrito a esta, acabamos por ter uma situação em que é fácil depurar e encontrar problemas, até porque, é de certeza absoluta que o valor de um parâmetro foi alterado no escopo da função - situação que não ocorre quando os valores são manipulados por variáveis globais, até porque, estas podem ter seus valores alterados em qualquer lugar por qualquer função.&lt;/p&gt;
@@ -354,6 +429,20 @@
 &lt;h2&gt;INVOCANDO FUNÇÕES&lt;/h2&gt;
 &lt;p&gt;O interpretador do Python tentará invocar uma função todas as vezes em que houver uma referência seguida por um par de parêntesis. Ao invocarmos uma função, é necessário enviar um valor válido para cada parâmetro contido na definição. Caso não haja parâmetros, basta somente abrirmos e fecharmos parêntesis.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;minha_func&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# coding: utf-8&lt;/span&gt;
+
+&lt;span class="c1"&gt;# =================&lt;/span&gt;
+&lt;span class="c1"&gt;#  = eXcript.com =&lt;/span&gt;
+&lt;span class="c1"&gt;# =================&lt;/span&gt;
+
+&lt;span class="c1"&gt;# INTRODUÇÃO ÀS FUNÇÕES&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;minha_func&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Fala galera!!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category><category term="função"></category><category term="procedimento"></category><category term="método"></category><category term="blog"></category></entry><entry><title>Importação: include() e require() do PHP</title><link href="http://excript.com/php/importacao-include-require-php.html" rel="alternate"></link><published>2016-06-15T04:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:php/importacao-include-require-php.html</id><summary type="html">
@@ -4842,7 +4931,7 @@ Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;cript: Fala galera, sejam todos bem vindos ao nosso curso de Python! É com muita satisfação que nós começamos o nosso estudo a respeito de uma das linguagens de programação mais empolgante, simples, completa, rica e que a muito tempo, está entre as minhas linguagens prediletas. É difícil explicar, porém, Python é uma linguagem encantadora, onde muito pouco representa um sistema completo.  Basicamente, o Python é uma linguagem rápida, com um sintaxe bonita, que muitas vezes nos faz pensar se estamos programando ou escrevendo uma carta pra namorada, de tão simples e lógico que é toda linguagem. Fato é, que eu conheço bastante pessoas que programam em Python, porém, eu não conheço uma pessoa sequer, que tenha começado a estudar e parou, porque não gostou ou então achou difícil a linguagem. Isso chega a ser impressionante! Praticamente, nunca ouvi pessoas dizerem que não gostam da sintaxe do Python. A diversas pessoas que preferem outras linguagens, porém, dizer que não gosta do Python, sinceramente, é muito difícil você ouvir falar. Muito raras são as linguagens que possuem uma biblioteca tão rica, como as que a gente tem no Python. E é muito difícil nós encontrarmos, uma linguagem que possui tanta documentação gratuita, e tamanha quantidade de exemplos como nós temos no Python. Praticamente, tudo o que você pode imaginar é possível desenvolver com o Python. Inclusive, tarefa que a até pouco tempo faziam-se somente com C ou C++, muitos programadores estão optando a bastante tempo por fazer em Python. Isso porque, você faz num espaço de tempo muito menor, e você consegue ter resultados muito semelhantes, a um programa que foi escrito em C ou C++. Parece que o Python possui uma mágica única, principalmente, para pessoas que já programaram bastante tempo com C, ou então com Java. Isso não quer dizer que o Python é a melhor linguagem, e sim que o Python é simples, porém, a sua simplicidade, não implica em más praticas de programação, ou então, em um código bagunçado e ilegível. Muito pelo contrário, o Python nos conduz a produção de um código elegante, e de tão simples e claro, muitas vezes, parece que nós temos um texto em Inglês. Então, esteja certo, de que aprender Python, é praticamente um caminho sem volta. E não estranhe se daqui a pouco você não quiser mais programar com outras linguagens, ou então, se você decidir trocar de emprego, só para poder ficar trabalhando com o Python. Você não será o primeiro a fazer isso, e sim, será mais um, vivendo o sonho de realmente trabalhar com uma linguagem que valoriza a produtividade, como também, nos auxilia na detecção de problemas e prevenção de erros. Assim, a partir desse momento, nós iremos aprender não somente a fazer programas, mas também, o porque o Python é uma das linguagens mais promissoras, e também o porque tanto se fala de Python hoje em dia. Fato é, que rapidamente nós conseguimos perceber o poder que o Python proporciona, como também, a alta produtividade que nós conseguimos obter com essa linguagem. Isso se deve porque a sintaxe do Python, é bastante parecida com a escrita humana, ou seja, o Python se parece com a forma que nós seres humanos nos comunicamos via papel, logo, quando nós temos um programa em Python, nós conseguimos chegar mais próximo da descrição de um texto, do que de fato, uma série de instruções amontoadas. Então, nesse primeiro módulo do nosso curso, nós faremos exemplos nos concentrando na entrada e retorno de dados. Ou seja, nós trabalharemos basicamente, com o prompt de comando. Estudar programação desta forma, ou seja, no prompt de comando, entrando dados e retornando, é sem dúvida a melhor pratica para aprender uma nova linguagem de programação, ou então, começar na programação. Nós até poderíamos criar telas e estudar utilizando os componentes gráficos, porém, se nós misturarmos a parte gráfica com a parte lógica, o nosso curso ficaria bastante complicado e também, nós acabaríamos dando enfase a um módulo que nem todo mundo deseja aprender. Isso porque, o Python consegue trabalhar de forma excepcional, com janela que contém uma série de controles, como também, o Python trabalha de forma excelente para a Web, recebendo, enviando e processando HTML. Assim, se nós utilizássemos a parte gráfica desde o início, talvez nós estaríamos abordando um tema que você nem deseja conhecer. Então, nesse primeiro módulo, nós vamos estudar a linguagem e seus recursos. Nós vamos dar preferencia a trabalhar dessa forma, para que nós consigamos entende bem a lógica, o fundamento da linguagem. Assim, nós conseguiremos abordar de maneira muito mais ampla a parte conceitual do Python, e depois, quando nós formos aprender a utilizar os frameworks para desenvolvimento de páginas ou então, desenvolvimento de jogos, nós já estaremos dominando os recursos do Python, e será muito mais fácil e rápido de explicar como que se trabalha com esses frameworks. Então é isso ai pessoal, na próxima aula no vamos aprender a instalar o Python, e logo, daremos início ao nosso estudo. Vejo você na nossa próxima aula, muito obrigado e até mais, tchau!&lt;/p&gt;
+                            &lt;p&gt; Está é a primeira aula do Curso de Python! Um curso totalmente gratuito, disponibilizado inicialmente no YouTube, e agora, também, na plataforma da eXcript. Nesta primeira Aula de Python, faremos um simples programa e veremos algumas características do Curso de Programação Python da eXcript.&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
@@ -4870,6 +4959,14 @@ Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span
 &lt;/div&gt;
 &lt;div class="section" id="faq-frequently-asked-questions"&gt;
 &lt;h2&gt;FAQ (Frequently Asked Questions)&lt;/h2&gt;
+&lt;div class="section" id="e-melhor-aprender-logica-de-programacao-antes-do-python"&gt;
+&lt;h3&gt;É MELHOR APRENDER LÓGICA DE PROGRAMAÇÃO ANTES DO PYTHON?&lt;/h3&gt;
+&lt;p&gt;Não! Inclusive, há muitas escolas que ensinam programação com a linguagem Python, logo, o mesmo pode ser utilizando para o aprendizado da programação, bem como, da lógica de programação.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="este-curso-exige-o-conhecimento-de-html-ou-css"&gt;
+&lt;h3&gt;ESTE CURSO EXIGE O CONHECIMENTO DE HTML OU CSS?&lt;/h3&gt;
+&lt;p&gt;Não! O Curso de Python da eXcript parte do início do estudo de qualquer linguagem de programação. Desta forma, é estudado as instruções fundamentais, bem como a sintaxe da linguagem. Portanto, o conhecimento de HTML ou de CSS não se faz necessário.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="quem-fez-o-python"&gt;
 &lt;h3&gt;QUEM FEZ O PYTHON?&lt;/h3&gt;
 &lt;p&gt;O &lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt; foi inicialmente desenvolvido pelo matemático &lt;a class="reference external" href="https://www.python.org/~guido/"&gt;Guido van Rossum&lt;/a&gt;. Atualmente, o Python é desenvolvido por um grupo de desenvolvedores ao redor do mundo. É importante observar que o desenvolvimento da linguagem de programação Python não se resume a implementação da sintaxe, construção da máquina virtual e etc. O Python possui centenas de módulos que são distribuídos por padrão, bem como dezenas de ferramentas, como o depurador, o &lt;a class="reference external" href="https://docs.python.org/3.5/library/idle.html"&gt;IDLE&lt;/a&gt;, a documentação da linguagem e etc.&lt;/p&gt;
@@ -4879,19 +4976,27 @@ Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span
 &lt;li&gt;&lt;a class="reference external" href="https://plus.google.com/u/0/115212051037621986145"&gt;Perfil G+ Guido van Rossum (en)&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
+&lt;div class="section" id="o-que-e-ide"&gt;
+&lt;h3&gt;O QUE É IDE?&lt;/h3&gt;
+&lt;p&gt;O termos IDE é um acrônimo de Integrated Development Environment que, numa tradução significa: Ambiente de Desenvolvimento Integrado. De forma geral, uma IDE é um programa que foi construído especialmente para a construção de programas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="por-que-e-ensinado-a-logica-em-todos-os-cursos"&gt;
+&lt;h3&gt;POR QUE É ENSINADO A LÓGICA EM TODOS OS CURSOS&lt;/h3&gt;
+&lt;p&gt;Várias pessoas perguntam a razão pela qual eu não faço um Curso de Lógica de Programação e em seguida avance mais rapidamente nos cursos das linguagens em geral.&lt;/p&gt;
+&lt;p&gt;Num primeiro momento há lógica no que está sendo dito, porém, numa análise sob o ensino da programação de maneira geral, essa metodologia seria um grande equívoco, como será demonstrado nas linhas a seguir.&lt;/p&gt;
+&lt;p&gt;Inicialmente, qual é o livro, editora ou WebSite que ensina a lógica e depois as linguagens propriamente ditas? Particularmente, não conheço nenhum trabalho construído dessa maneira.&lt;/p&gt;
+&lt;p&gt;Agora, quando já passamos pela fase básica da programação e conseguimos dominar a lógica fundamental, é comum querermos cursos em que haja somente as diferenças de cada linguagem, e não um curso completo. Porém, imagine-se agora, ou melhor, volte ao momento em que estavas aprendendo a sua primeira linguagem de programação e então veja, se você aprendeu a lógica e depois pegou a linguagem estudando somente as diferenças ou então, se você estudou toda a linguagem desde o início!&lt;/p&gt;
+&lt;p&gt;E também, hoje é possível aprender uma nova linguagem em 3 ou 4 horas sem precisar ler uma única página de um livro e ainda assim, queremos aprender mais rapidamente!&lt;/p&gt;
+&lt;p&gt;Em fim, é muito fácil pedir para que os cursos se adaptem a sua realidade do que se colocar no momento em que você estava aprendendo e, tenho certeza absoluta, queria ver exemplos da instrução :code:while, :code:for, :code:if com a linguagem propriamente dita, e não com Portugol ou derivados!&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="qual-ano-o-python-foi-desenvolvido"&gt;
 &lt;h3&gt;QUAL ANO O PYTHON FOI DESENVOLVIDO?&lt;/h3&gt;
 &lt;p&gt;A Linguagem de Programação &lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt;, vem sendo desenvolvida desde 1991. Novas versões sempre são lançadas e estas trazem correções, alterações na sintaxe, implementações, utilitários e etc.&lt;/p&gt;
-&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
-&lt;!-- teste --&gt;
-&lt;ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5466436161806566"
-     data-ad-slot="2551628736"
-     data-ad-format="auto"&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;&lt;!-- Quais as características que definem o Python_?
+&lt;/div&gt;
+&lt;div class="section" id="python-e-somente-para-web"&gt;
+&lt;h3&gt;PYTHON É SOMENTE PARA WEB?&lt;/h3&gt;
+&lt;p&gt;É verdade que o Python é uma excelente linguagem para a construção de WebSites, porém, a linguagem foi criada antes da popularização da Web. Por essa razão, é fácil concluir que a linguagem Python não é destinada só e somente só a construção Web, mas sim, para a construção de aplicações em geral.&lt;/p&gt;
+&lt;!-- Quais as características que definem o Python_?
 O Python_ realmente é uma boa linguagem?
 Quais os recursos do Python?
 O que faz da linguagem Python_ ser especial? --&gt;
@@ -19494,23 +19599,18 @@ Exemplos:&lt;/p&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
+&lt;div class="section" id="construtores-personalizados"&gt;
+&lt;h2&gt;CONSTRUTORES PERSONALIZADOS&lt;/h2&gt;
+&lt;p&gt;A definição de construtores é praticamente igual a definição de funções, então, seguindo a definição de funções, é permitido a declaração de parâmetros no cabeçalho do construtor. Está é a melhor forma para definirmos os principais valores de um objeto ainda em sua inicialização, prática essa muito utilizada quando estamos trabalhando com banco de dados.&lt;/p&gt;
+&lt;p&gt;A definição de parâmetros no construtor, implica na obrigatoriedade de enviar esses valores, todas as vezes em que uma nova instância estiver sendo definida.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="visibilidade-dos-construtores"&gt;
+&lt;h2&gt;VISIBILIDADE DOS CONSTRUTORES&lt;/h2&gt;
+&lt;p&gt;Se a visibilidade de um construtor não for definida, assume-se que o mesmo é público. Temos que o funcionamento da visibilidade dos construtores é igual a visibilidade dos métodos.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$p1 = new Pessoa(&amp;quot;João&amp;quot;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A utilização de construtores faz com que nossos objetos se tornem mais lógicos e acessíveis.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#CONSTRUTORES PERSONALIZADOS&lt;/span&gt;
@@ -19555,23 +19655,25 @@ Exemplos:&lt;/p&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;br&gt;
-    &lt;div class="admonitionblock note data-line"&gt;
-        &lt;table&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="icon"&gt;
-                        &lt;i class="fa icon-note" title="Nota!"&gt;&lt;/i&gt;
-                    &lt;/td&gt;
-                    &lt;td class="content"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;O texto desta aula ainda não está disponível.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
+&lt;div class="section" id="construtores"&gt;
+&lt;h2&gt;CONSTRUTORES&lt;/h2&gt;
+&lt;p&gt;Construtor é um bloco de instrução, semelhante a uma função, definido implicita ou explicitamente por todas as classes, que é invocado automaticamente pela Máquina Virtual, todas as vezes que um objeto está sendo criado. Construtores são definidos como sendo funções, porém, não o são! Isso porque, funções retornam valores e o único valor que um construtor poderia retornar, seria a instância que está sendo no mesmo instante definida.&lt;/p&gt;
+&lt;p&gt;Porém, num primeiro momento, vamos pensar num construtor como sendo um método, até porque, o mesmo possui um nome, um corpo e pode receber parâmetros. Porém, um construtor não pode ser invocado quando desejarmos, ou melhor, o construtor é um bloco de código que será invocado &lt;strong&gt;só e somente só na criação de novas instâncias&lt;/strong&gt;.&lt;/p&gt;
+&lt;!-- Uma classe pode conter quantos construtores forem necessário, desde que a assinatura destes sejam diferentes. --&gt;
+&lt;/div&gt;
+&lt;div class="section" id="definicao"&gt;
+&lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
+&lt;p&gt;O nome do construtor de todas as classes sempre será &lt;code&gt;__construct()&lt;/code&gt;. Essa é uma convenção da linguagem e não há como trabalhar de maneira diferente. Dessa forma, é fácil identificarmos o construtor da classe, até porque, todas utilizarão o padrão.&lt;/p&gt;
+&lt;p&gt;A seguir, temos algumas regras que se aplicão aos contrutores.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;O construtor que será invocado na criação de novos objetos tem o nome de:  &lt;tt class="docutils literal"&gt;__construct&lt;/tt&gt;. Os dois &lt;tt class="docutils literal"&gt;underlines&lt;/tt&gt; a frente do nome é obrigatório.&lt;/li&gt;
+&lt;li&gt;Construtores são geralmente utilizados para trabalharmos com valores não literais, isto é, para trabalharmos com objetos. A razão é bastante simples: todo objeto precisa ser criado e isso é feito dentro de algum bloco de instrução.&lt;/li&gt;
+&lt;li&gt;O PHP primeiro cria uma nova instância de um objeto para somente então invocar o seu construtor. Do contrário, não seria possível, por exemplo, acessar os membros da classe e nem fazer uso da pseudo-variável &lt;tt class="docutils literal"&gt;$this&lt;/tt&gt;. Assim, primeiro cria-se uma nova instância e, somente depois é que o construtor será invocado.&lt;/li&gt;
+&lt;li&gt;As variáveis de uma classe são inicializadas antes do construtor ser invocado, assim, se alterarmos o valor de um atributo dentro do bloco do construtor, este passará a ser o valor assumido por todas as instâncias.&lt;/li&gt;
+&lt;li&gt;O PHP tem definido que, construtores que não recebem parâmetros poderão ter suas instâncias criadas sem a utilização do par de parêntesis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- Isto pode ser utilizado para tornar os valores iniciais das propriedades dependentes dos parâmetros passados quando o objecto é criado. --&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#CONSTRUTORES&lt;/span&gt;
@@ -19599,7 +19701,7 @@ Exemplos:&lt;/p&gt;
 &lt;span class="x"&gt;$p2 = new Pessoa();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="construtor"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Definições da Linguagem PHP</title><link href="http://excript.com/php/definicao-linguagem-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/definicao-linguagem-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="construtor"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="blog"></category></entry><entry><title>Definições da Linguagem PHP</title><link href="http://excript.com/php/definicao-linguagem-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/definicao-linguagem-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -20707,42 +20809,45 @@ Exemplos:&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# VISIBILIDADE DAS FUNÇÕES&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# FUNÇÕES DE ACESSO&lt;/span&gt;
 
-&lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
+&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 
-&lt;span class="x"&gt;    public $uuu;&lt;/span&gt;
+&lt;span class="x"&gt;    private $nome;&lt;/span&gt;
+&lt;span class="x"&gt;    private $sobrenome;&lt;/span&gt;
 
-&lt;span class="x"&gt;    public function funcPublica(){ echo &amp;quot;funcPublica\n&amp;quot;; }&lt;/span&gt;
-&lt;span class="x"&gt;    protected function funcProtegida(){ echo &amp;quot;funcProtegida\n&amp;quot;; }&lt;/span&gt;
-&lt;span class="x"&gt;    private function funcPrivada(){ echo &amp;quot;funcPrivada\n&amp;quot;; }&lt;/span&gt;
+&lt;span class="x"&gt;    public function getNome() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        return $this-&amp;gt;nome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function setNome(string $nome)&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;nome = $nome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function getSobrenome() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        return $this-&amp;gt;sobrenome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function setSobrenome(string $sobrenome)&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;sobrenome = $sobrenome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
 
-&lt;span class="x"&gt;    function super(){&lt;/span&gt;
-&lt;span class="x"&gt;        $this-&amp;gt;funcPublica();&lt;/span&gt;
-&lt;span class="x"&gt;        $this-&amp;gt;funcProtegida();&lt;/span&gt;
-&lt;span class="x"&gt;        $this-&amp;gt;funcPrivada();&lt;/span&gt;
+&lt;span class="x"&gt;    public function getNomeCompleto() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        return $this-&amp;gt;getNome() . &amp;quot; &amp;quot; . $this-&amp;gt;getSobrenome();&lt;/span&gt;
 &lt;span class="x"&gt;    }&lt;/span&gt;
 
 &lt;span class="x"&gt;}&lt;/span&gt;
 
-&lt;span class="x"&gt;$super = new SuperClasse();&lt;/span&gt;
-&lt;span class="x"&gt;//$super-&amp;gt;super();&lt;/span&gt;
-&lt;span class="x"&gt;$super-&amp;gt;funcPublica();&lt;/span&gt;
-&lt;span class="x"&gt;//$super-&amp;gt;funcProtegida();&lt;/span&gt;
-&lt;span class="x"&gt;//$super-&amp;gt;funcPrivada();&lt;/span&gt;
+&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
+&lt;span class="x"&gt;$p1-&amp;gt;setNome(&amp;quot;eXcript&amp;quot;);&lt;/span&gt;
+&lt;span class="x"&gt;$p1-&amp;gt;setSobrenome(&amp;quot;Brasil&amp;quot;);&lt;/span&gt;
 
-&lt;span class="x"&gt;class SubClasse extends SuperClasse{&lt;/span&gt;
+&lt;span class="x"&gt;//echo $p1-&amp;gt;getNome() . &amp;quot;\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;//echo $p1-&amp;gt;getSobrenome() . &amp;quot;\n&amp;quot;;&lt;/span&gt;
 
-&lt;span class="x"&gt;    function __construct(){&lt;/span&gt;
-
-&lt;span class="x"&gt;        $this-&amp;gt;funcPublica();&lt;/span&gt;
-&lt;span class="x"&gt;        $this-&amp;gt;funcProtegida();&lt;/span&gt;
-&lt;span class="x"&gt;//        $this-&amp;gt;funcPrivada();&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;$sub = new SubClasse();&lt;/span&gt;
-&lt;span class="x"&gt;$sub-&amp;gt;funcPublica();&lt;/span&gt;
+&lt;span class="x"&gt;echo $p1-&amp;gt;getNomeCompleto();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="funções"></category><category term="funções modificadoras"></category><category term="get"></category><category term="set"></category><category term="getter"></category><category term="setter"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Hello World em PHP</title><link href="http://excript.com/php/hello-world-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/hello-world-php.html</id><summary type="html">
@@ -21434,7 +21539,9 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# MODIFICADORES DE ACESSO I - public e private&lt;/span&gt;
+
+&lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
 &lt;span class="x"&gt;    public $publico = 0;&lt;/span&gt;
 &lt;span class="x"&gt;    private $privada = 0;&lt;/span&gt;
 &lt;span class="x"&gt;    protected $protegido = 0;&lt;/span&gt;
@@ -22370,10 +22477,9 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# FUNÇÕES DE ACESSO&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# SOBREESCRITA DE FUNÇÕES&lt;/span&gt;
 
 &lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
-
 &lt;span class="x"&gt;    private $nome;&lt;/span&gt;
 &lt;span class="x"&gt;    private $sobrenome;&lt;/span&gt;
 
@@ -22387,7 +22493,7 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
 &lt;span class="x"&gt;    }&lt;/span&gt;
 &lt;span class="x"&gt;    public function getSobrenome() : string&lt;/span&gt;
 &lt;span class="x"&gt;    {&lt;/span&gt;
-&lt;span class="x"&gt;        return $this-&amp;gt;sobrenome;&lt;/span&gt;
+&lt;span class="x"&gt;    return $this-&amp;gt;sobrenome;&lt;/span&gt;
 &lt;span class="x"&gt;    }&lt;/span&gt;
 &lt;span class="x"&gt;    public function setSobrenome(string $sobrenome)&lt;/span&gt;
 &lt;span class="x"&gt;    {&lt;/span&gt;
@@ -22398,17 +22504,16 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
 &lt;span class="x"&gt;    {&lt;/span&gt;
 &lt;span class="x"&gt;        return $this-&amp;gt;getNome() . &amp;quot; &amp;quot; . $this-&amp;gt;getSobrenome();&lt;/span&gt;
 &lt;span class="x"&gt;    }&lt;/span&gt;
-
 &lt;span class="x"&gt;}&lt;/span&gt;
 
-&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
-&lt;span class="x"&gt;$p1-&amp;gt;setNome(&amp;quot;eXcript&amp;quot;);&lt;/span&gt;
-&lt;span class="x"&gt;$p1-&amp;gt;setSobrenome(&amp;quot;Brasil&amp;quot;);&lt;/span&gt;
+&lt;span class="x"&gt;class PFisica extends Pessoa{&lt;/span&gt;
 
-&lt;span class="x"&gt;//echo $p1-&amp;gt;getNome() . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;//echo $p1-&amp;gt;getSobrenome() . &amp;quot;\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;//    public function getNomeCompleto() : string&lt;/span&gt;
+&lt;span class="x"&gt;//    {&lt;/span&gt;
+&lt;span class="x"&gt;//        return &amp;quot;PFisica: {$this-&amp;gt;getNome()} {$this-&amp;gt;getSobrenome()}&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;//    }&lt;/span&gt;
 
-&lt;span class="x"&gt;echo $p1-&amp;gt;getNomeCompleto();&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="oo"></category><category term="orientação a objetos"></category><category term="modificadores"></category><category term="modificador de acesso"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="herança"></category><category term="subclasse"></category><category term="superclasse"></category><category term="polimorfismo"></category></entry><entry><title>String Aspas Duplas em PHP</title><link href="http://excript.com/php/string-aspas-duplas-php.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:php/string-aspas-duplas-php.html</id><summary type="html">
@@ -23060,37 +23165,42 @@ echo 'E-mail: ' . ($_POST['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quo
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# MODIFICADORES DE ACESSO II&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# VISIBILIDADE DAS FUNÇÕES&lt;/span&gt;
 
 &lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
-&lt;span class="x"&gt;    public $publico = 0;&lt;/span&gt;
-&lt;span class="x"&gt;    private $privada = 0;&lt;/span&gt;
-&lt;span class="x"&gt;    protected $protegido = 0;&lt;/span&gt;
-&lt;span class="x"&gt;    public function super(){&lt;/span&gt;
-&lt;span class="x"&gt;        echo $this-&amp;gt;publico . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;        echo $this-&amp;gt;privada . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;        echo $this-&amp;gt;protegido . &amp;quot;\n&amp;quot;;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public $uuu;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function funcPublica(){ echo &amp;quot;funcPublica\n&amp;quot;; }&lt;/span&gt;
+&lt;span class="x"&gt;    protected function funcProtegida(){ echo &amp;quot;funcProtegida\n&amp;quot;; }&lt;/span&gt;
+&lt;span class="x"&gt;    private function funcPrivada(){ echo &amp;quot;funcPrivada\n&amp;quot;; }&lt;/span&gt;
+
+&lt;span class="x"&gt;    function super(){&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;funcPublica();&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;funcProtegida();&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;funcPrivada();&lt;/span&gt;
 &lt;span class="x"&gt;    }&lt;/span&gt;
+
 &lt;span class="x"&gt;}&lt;/span&gt;
-&lt;span class="x"&gt;//$super = new SuperClasse();&lt;/span&gt;
-&lt;span class="x"&gt;//$super-&amp;gt;publico = 10;&lt;/span&gt;
-&lt;span class="x"&gt;////$super-&amp;gt;privada = 11; // erro&lt;/span&gt;
-&lt;span class="x"&gt;////$super-&amp;gt;protegido = 12; // erro&lt;/span&gt;
+
+&lt;span class="x"&gt;$super = new SuperClasse();&lt;/span&gt;
 &lt;span class="x"&gt;//$super-&amp;gt;super();&lt;/span&gt;
+&lt;span class="x"&gt;$super-&amp;gt;funcPublica();&lt;/span&gt;
+&lt;span class="x"&gt;//$super-&amp;gt;funcProtegida();&lt;/span&gt;
+&lt;span class="x"&gt;//$super-&amp;gt;funcPrivada();&lt;/span&gt;
 
 &lt;span class="x"&gt;class SubClasse extends SuperClasse{&lt;/span&gt;
-&lt;span class="x"&gt;    public function sub(int $x){&lt;/span&gt;
-&lt;span class="x"&gt;//        echo $this-&amp;gt;privada; // erro&lt;/span&gt;
-&lt;span class="x"&gt;        $this-&amp;gt;publico = $x;&lt;/span&gt;
-&lt;span class="x"&gt;//        $this-&amp;gt;privada = $x; // erro&lt;/span&gt;
-&lt;span class="x"&gt;        $this-&amp;gt;protegido = $x;&lt;/span&gt;
+
+&lt;span class="x"&gt;    function __construct(){&lt;/span&gt;
+
+&lt;span class="x"&gt;        $this-&amp;gt;funcPublica();&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;funcProtegida();&lt;/span&gt;
+&lt;span class="x"&gt;//        $this-&amp;gt;funcPrivada();&lt;/span&gt;
 &lt;span class="x"&gt;    }&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
 
 &lt;span class="x"&gt;$sub = new SubClasse();&lt;/span&gt;
-&lt;span class="x"&gt;//$sub-&amp;gt;protegido = 5; // erro&lt;/span&gt;
-&lt;span class="x"&gt;$sub-&amp;gt;sub(1);&lt;/span&gt;
-&lt;span class="x"&gt;$sub-&amp;gt;super();&lt;/span&gt;
+&lt;span class="x"&gt;$sub-&amp;gt;funcPublica();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="modificadores"></category><category term="modificador de acesso"></category><category term="visibilidade dos membros de classe"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Características do SQLite</title><link href="http://excript.com/python/caracteristicas-sqlite.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:python/caracteristicas-sqlite.html</id><summary type="html">

@@ -426,6 +426,28 @@ eXcript            </a>
 </pre></div>
 <p>No código acima, definimos uma função semelhante a estudada no primeiro exemplo, porém, que contém mais um argumento de nome <tt class="docutils literal">d</tt>. Em seguida, invocamos a função e, para os 2 primeiros argumentos, enviamos valores de maneira posicional. Já, para os 2 argumentos finais, de nomes <tt class="docutils literal">c</tt> e <tt class="docutils literal">d</tt>, passamos valores associando o nome do parâmetro com o respectivo valor.</p>
 </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="c1"># coding: utf-8</span>
+
+<span class="c1"># =================</span>
+<span class="c1">#  = eXcript.com =</span>
+<span class="c1"># =================</span>
+
+<span class="c1"># ARGUMENTOS POSICIONAIS E ARGUMENTOS NOMEADOS</span>
+
+<span class="k">def</span> <span class="nf">dados_pessoais</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">sobrenome</span><span class="p">,</span> <span class="n">idade</span><span class="p">,</span> <span class="n">sexo</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Nome: {}</span><span class="se">\n</span><span class="s2">Sobrenome: {}</span><span class="se">\n</span><span class="s2">Idade: {}</span><span class="se">\n</span><span class="s2">Sexo: {}&quot;</span>
+            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">sobrenome</span><span class="p">,</span> <span class="n">idade</span><span class="p">,</span> <span class="n">sexo</span><span class="p">))</span>
+
+<span class="n">dados_pessoais</span><span class="p">(</span><span class="s2">&quot;Cláudio&quot;</span><span class="p">,</span> <span class="n">sobrenome</span><span class="o">=</span><span class="s2">&quot;Rogério&quot;</span><span class="p">,</span> <span class="n">idade</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">sexo</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c1"># dados_pessoais(idade=30,</span>
+<span class="c1">#                 sexo=True,</span>
+<span class="c1">#                 sobrenome=&quot;Carvalho&quot;,</span>
+<span class="c1">#                 nome=&quot;Cláudio&quot;</span>
+<span class="c1">#                 )</span>
+</pre></div>
+</div>
 
 				</div>
 			</div>

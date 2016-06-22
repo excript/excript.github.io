@@ -378,6 +378,23 @@ eXcript            </a>
 <div class="section" id="introducao">
 <h2>INTRODUÇÃO</h2>
 <p>Funções são blocos de instrução que podem ser invocados de qualquer parte do nosso código. Toda função, por definição, possui um nome, pode receber parâmetros e pode retornar valores. Nem toda função receberá parâmetros, da mesma forma, que nem toda função retornará valores. Tudo dependerá da situação, ainda assim, a estrutura sempre seguirá um padrão e por isso, é facilmente reconhecido.</p>
+
+    <div class="admonitionblock tip data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-tip" title="Dica!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>Em Python, funções são objetos de primeira classe.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 <p>A ideia mais primitiva das funções é o agrupamento de instruções, proporcionando um meio simples de execução sequencial e que pode ser invocado de qualquer parte a qualquer momento. Dessa forma, toda função irá possuir um bloco de instrução e quando invocada, o cursor de execução do programa se posicionará na primeira linha desse bloco e a execução ocorrerá de cima para baixo, uma instrução após outra.</p>
 <p>As função podem definir em seu cabeçalho um conjunto de valores que devem ser enviados quando a função for invocada. Desta foram, a função só será invocada se os valores forem também definidos. Após a execução das instruções definidas no bloco de instrução da função, a mesma poderá retornar um valor e, dessa forma, temos um ciclo onde os dados são enviados, processados e retornados. Por isso é que raramente devemos utilizar variáveis globais, até porque, todos valores podem ser enviados e retornados pelas funções de maneira explicita.</p>
 <p>Como todos os parâmetros estão por definição associados a função e possuem seu escopo restrito a esta, acabamos por ter uma situação em que é fácil depurar e encontrar problemas, até porque, é de certeza absoluta que o valor de um parâmetro foi alterado no escopo da função - situação que não ocorre quando os valores são manipulados por variáveis globais, até porque, estas podem ter seus valores alterados em qualquer lugar por qualquer função.</p>
@@ -423,6 +440,20 @@ eXcript            </a>
 <h2>INVOCANDO FUNÇÕES</h2>
 <p>O interpretador do Python tentará invocar uma função todas as vezes em que houver uma referência seguida por um par de parêntesis. Ao invocarmos uma função, é necessário enviar um valor válido para cada parâmetro contido na definição. Caso não haja parâmetros, basta somente abrirmos e fecharmos parêntesis.</p>
 <div class="highlight"><pre><span></span><span class="n">minha_func</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="c1"># coding: utf-8</span>
+
+<span class="c1"># =================</span>
+<span class="c1">#  = eXcript.com =</span>
+<span class="c1"># =================</span>
+
+<span class="c1"># INTRODUÇÃO ÀS FUNÇÕES</span>
+
+<span class="k">def</span> <span class="nf">minha_func</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Fala galera!!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 
