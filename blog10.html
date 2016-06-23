@@ -81,7 +81,7 @@ eXcript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a  href="http://excript.com/android/definir-array-contera-jogadas.html">Definindo um array que conterá as jogadas</a></h2>
+                <h2><a  href="http://excript.com/php/visibilidade-funcao-php.html">Visibilidade das Funções em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -89,126 +89,24 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula definiremos o Array que conterá todas as jogadas já realizadas e será com essa estrutura que verificaremos, por exemplo, o término do jogo.</p>
+                            <p> Nesta aula estudaremos a visibilidade das funções definidas numa classe e as razões pelas quais devemos restringir o acesso a todos os membros que possuem uso interno a classe.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.widget.Button</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
-
-<span class="kd">public ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/definir-array-contera-jogadas.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/android/definindo-botoes-ja-jogados.html">Definindo os Botões já Jogados</a></h2>
-                <div class="summary">
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
+<br>
+    <div class="admonitionblock note data-line">
+        <table>
             <tbody>
                 <tr>
-                    <td class="content" style="border-left: 0">
-                        <div class="paragraph data-line">
-                            <p> Nessa aula implementaremos que após determinado jogador jogar será a vez do seu adversário e vice-e-versa.</p>
-                        </div>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
                     </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.widget.Button</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.widget.Toast</span><span class="o">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
-
-    <span class="c1">//CONST DE CADA BOTAO</span>
-    <span class="kd">private ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/definindo-botoes-ja-jogados.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/android/adicionando-controle-iniciar-partida.html">Adicionando o controle para iniciar a partida</a></h2>
-                <div class="summary">
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
-            <tbody>
-                <tr>
-                    <td class="content" style="border-left: 0">
+                    <td class="content">
                         <div class="paragraph data-line">
-                            <p> Nessa aula utilizaremos a função getLastPlay() para sabermos quem foi o último a jogar e assim, definir se será Bola ou X que jogará na sequência.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<p>Acrescentado no arquivo XML</p>
-<p>Foi definido para cada botão.</p>
-<div class="highlight"><pre><span></span>android:enabled=&quot;flase&quot;
-</pre></div>
-<p>Botão para inicializar a partida</p>
-<div class="highlight"><pre><span></span><span class="nt">&lt;Button</span>
-    <span class="na">android:layout_width=</span><span class="s">&quot;150dp&quot;</span>
-    <span class="na">android:layout_height=</span><span class="s">&quot;40dp ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/adicionando-controle-iniciar-partida.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/android/recuperar-instancia-funcao-findviewwithtag.html">Recuperando a Instância com a Função <tt class="docutils literal">findViewWithTag()</tt></a></h2>
-                <div class="summary">
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
-            <tbody>
-                <tr>
-                    <td class="content" style="border-left: 0">
-                        <div class="paragraph data-line">
-                            <p> Nesta aula iremos recuperar as instâncias dos botões adicionados ao tabuleiro do Jogo da Velha e entenderemos a importância da nomenclatura anteriormente definida aos botões.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<p>Acrescentado no arquivo XML</p>
-<div class="highlight"><pre><span></span>andoid:onclick=&quot;clickQuadrado&quot;
-</pre></div>
-<p>Acrescentado no arquivo <tt class="docutils literal">main.java</tt></p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
-
-
-<span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
-<span class="kn">import ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/recuperar-instancia-funcao-findviewwithtag.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/android/adicionando-os-objetos-visuais-atraves-do-xml.html">Adicionando os Objetos Visuais através do XML</a></h2>
-                <div class="summary">
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
-            <tbody>
-                <tr>
-                    <td class="content" style="border-left: 0">
-                        <div class="paragraph data-line">
-                            <p> Nesta aula vamos criar o projeto em Android do nosso Jogo da Velha e adicionaremos alguns componentes visuais que fazem parte do tabuleiro do nosso Jogo. Por fim, iniciaremos a programação em Java de pequenas funcionalidades.</p>
+                            <p>O texto desta aula ainda não está disponível.</p>
                         </div>
                     </td>
                 </tr>
@@ -217,13 +115,19 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/adicionando-os-objetos-visuais-atraves-do-xml.html">more ...</a>
+<div class="highlight"><pre><span></span><span class="x"># VISIBILIDADE DAS FUNÇÕES</span>
+
+<span class="x">class SuperClasse{</span>
+
+<span class="x">    public $uuu;</span>
+
+<span class="x">    public function ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/visibilidade-funcao-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/abertura-jogo-da-velha-android.html">Abertura do Jogo da Venha para Android com Java</a></h2>
+                <h2><a  href="http://excript.com/php/modificador-acesso-php.html">Modificadores de Acesso em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -231,23 +135,38 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Neste primeiro episódio, iremos analisar e discutir o que será desenvolvido durante esse nosso breve curso.</p>
+                            <p> Nesta aula estudaremos a definição e uso dos modificadores de acesso aos membros de classe. Em seguida, estudaremos a aplicação dos modificadores ao realizarmos um exemplo prático demonstrando assim, os conceitos teóricos dos modificadores de acesso junto a um exemplo prático.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<div class="section" id="jogo-da-velha-no-android">
-<h2>JOGO DA VELHA NO ANDROID</h2>
-<p>Seja bem-vindo a primeira aula da nossa série em que construiremos um Jogo da Velha com Java para a plataforma Android.</p>
-<p>Nesse primeiro momento não iremos produzir código, nosso ...</p></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/abertura-jogo-da-velha-android.html">more ...</a>
+<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO ...</h2></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/modificador-acesso-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/activity-android.html">Activity do Android</a></h2>
+                <h2><a  href="http://excript.com/php/encapsulamento-php-parte2.html">Encapsulamento em PHP (parte II)</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -255,7 +174,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula iniciaremos o estudo sobre a Activity</p>
+                            <p> Nesta aula daremos continuidade ao estudo dos conceito de encapsulamento, bem como as razões para utilização desse conceitos e os beneficios que podemos obter ao empregar essa metodologia de desenvolvimento.</p>
                         </div>
                     </td>
                 </tr>
@@ -280,12 +199,12 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/activity-android.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/encapsulamento-php-parte2.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/activity-android-2.html">Activity do Android (parte 2)</a></h2>
+                <h2><a  href="http://excript.com/php/encapsulamento-php.html">Encapsulamento em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -293,7 +212,146 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula continuaremos o estudo sobre as Activitys do Android.</p>
+                            <p> Nesta aula iniciaremos o estudo sobre o encapsulamento. Inicialmente, estudaremos o conceito prático encapsulamento ao analisarmos uma situação prática da necessidade da utilização. Em seguida, estudaremos os conceitos teóricos do encapsulamento segundo os conceitos da orientação a objetos.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA ...</h2></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/encapsulamento-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/destrutores-php.html">Destrutores em PHP</a></h2>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos a implementação de funções destrutoras que são invocadas no momento que precede a remoção de uma instância da memória.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="x">#DESTRUTORES</span>
+
+<span class="x">class Pessoa{</span>
+
+<span class="x">    function __construct(){</span>
+<span class="x">        echo &quot;Função construtora invocada.&quot;;</span>
+<span class="x">    }</span>
+
+<span class="x">    function __destruct(){</span>
+<span class="x">        echo &quot;Função destrutora invocada.&quot;;</span>
+<span class="x">    }</span>
+
+<span class="x">}</span>
+
+<span class="x">$p1 ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/destrutores-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/construtor-personalizado-php.html">Construtores Personalizados em PHP</a></h2>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula daremos continuidade sobre a utilização de funções construtoras e os seus beneficios na construção e implementação de classes.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="construtores-personalizados">
+<h2>CONSTRUTORES PERSONALIZADOS</h2>
+<p>A definição de construtores é praticamente igual a definição de funções, então, seguindo a definição de funções, é permitido a declaração de parâmetros no cabeçalho do construtor. Está ...</p></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/construtor-personalizado-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/construtor-php.html">Construtores em PHP</a></h2>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nessa aula estudaremos os construtores de classe, ou seja, funções que são invocadas no momento em que uma nova instância de classe está sendo criada. Também estudaremos a inicialização de classe, ou seja, veremos quais os passos ocorridos a cada nova instância criada.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="construtores">
+<h2>CONSTRUTORES</h2>
+<p>Construtor é um bloco de instrução ...</p></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/construtor-php.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/android/finalizacao-jogo-da-velha-android.html">Finalização do Jogo da Velha no Android com Java</a></h2>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta última aula, finalizaremos o estudo do código anteriormente produzido e teremos as considerações finais do Jogo da Velha em Java que acabamos de criar para a plataforma Android.</p>
                         </div>
                     </td>
                 </tr>
@@ -318,12 +376,12 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/activity-android-2.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/android/finalizacao-jogo-da-velha-android.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/activity-menu-android.html">Activity &amp; Menu no Android</a></h2>
+                <h2><a  href="http://excript.com/php/variavel-superglobal-php.html">Variáveis superglobais do PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -331,7 +389,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula nós aprenderemos como construir Menus para nossos aplicativos Android dentro de cada Activity.</p>
+                            <p> Nesta aula estudaremos a implementação e uso de variáveis que possuem escopo global, bem como a sua utilização em escopos restritos, como o escopo de funções.</p>
                         </div>
                     </td>
                 </tr>
@@ -356,12 +414,12 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/activity-menu-android.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/variavel-superglobal-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/android/activity-view-logcat-eclipse-android.html">Activity, View, Logcat e o Eclipse</a></h2>
+                <h2><a  href="http://excript.com/php/metodo-post-php.html">Método POST com PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -369,7 +427,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula vamos estudar o que é uma Activity, o que é uma View e como funciona o logcat na IDE Eclipse.</p>
+                            <p> Nesta aula aprenderemos o envio de requisições do tipo POST, bem como o seu funcionamento e suas diferenças do tipo de requisição GET.</p>
                         </div>
                     </td>
                 </tr>
@@ -393,8 +451,14 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/android/activity-view-logcat-eclipse-android.html">more ...</a>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<p>Este código utiliza também o código da aula anterior.</p>
+<p>metodo_post.php
+.. code-block:: php</p>
+<blockquote>
+<p>//var_dump($_GET ...</p></blockquote></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/metodo-post-php.html">more ...</a>
                 </div>
             </article>
             <hr/>

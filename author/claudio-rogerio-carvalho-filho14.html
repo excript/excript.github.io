@@ -81,7 +81,7 @@ eXcript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a  href="http://excript.com/cpp/declarar-array-cpp.html">Declaração de Arrays em C++</a></h2>
+                <h2><a  href="http://excript.com/php/retorno-valor-funcao-php.html">Retorno de Valores pela função em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -89,7 +89,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a declaração de Arrays propriamente dita. Aprenderemos a sintaxe básica e as diversas formas possíveis para declaração e inicialização das estruturas.</p>
+                            <p> Nessa aula, estudaremos, como utilizar a instrução return para retornarmos valores por uma função a quem a invocou.</p>
                         </div>
                     </td>
                 </tr>
@@ -115,24 +115,24 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="x">function media(...$valores){</span>
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+<span class="x">    $total = array_sum($valores);</span>
+<span class="x">    $total = $total / count($valores);</span>
+<span class="x">    return $total;</span>
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="x">}</span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="x">echo media(5,5,6);</span>
+</pre></div>
+</div>
 
-    <span class="kt">int</span> <span class="n">nums ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/cpp/declarar-array-cpp.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/retorno-valor-funcao-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/cpp/depuracao-codigo-cpp.html">Depuração de Código C++</a></h2>
+                <h2><a  href="http://excript.com/php/funcao-escopo-de-variaveis-php.html">Funções e Escopo de Variáveis em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -140,7 +140,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula iniciaremos o estudo sobre a depuração de aplicações C++. Inicialmente, aprenderemos a depurar com a IDE CLion e nas próximas aulas, aprenderemos a depurar com a IDE Code::Block.</p>
+                            <p> Nesta aula estudaremos o escopo de variáveis definidas em funções, bem como os vários conceitos envolvidos.</p>
                         </div>
                     </td>
                 </tr>
@@ -166,17 +166,27 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="x">$testando = 10;</span>
+<span class="x">$a = 10;</span>
+<span class="x">$b = 5;</span>
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/cpp/depuracao-codigo-cpp.html">more ...</a>
+<span class="x">function estudoEscopo(){</span>
+<span class="x">    echo $GLOBALS[&quot;a&quot;];</span>
+<span class="x">}</span>
+
+
+<span class="x">estudoEscopo();</span>
+
+<span class="x">print_r($GLOBALS);</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/funcao-escopo-de-variaveis-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/cpp/depuracao-codigo-cpp-parte2.html">Depuração de Código C++ (parte II)</a></h2>
+                <h2><a  href="http://excript.com/php/lista-parametro-php-ii.html">Lista de Parâmetros em PHP II</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -184,7 +194,37 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula daremos continuidade ao estudo conceitual da depuração, bem como a utilização das ferramentas disponíveis pelas principais IDE do mercado. Também desenvolveremos uma simples aplicação para que possamos com a mesma estudar a depuração.</p>
+                            <p> Nesta aula daremos continuidade ao estudo de funções que são capazes de receber lista de parâmetros.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="lista-de-parametros-ii">
+<h2>LISTA DE PARÂMETROS II</h2>
+<p>Essa aula é a continuação da aula anterior, logo, <a class="reference external" href="http://excript.com/php/lista-parametro-php.html">o texto de apoio da aula anterior serve a esta também</a> .</p>
+</div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="x">function somaTudo(){</span>
+
+<span class="x">    $lista = func_get_args();</span>
+<span class="x">    $qntd = func_num_args ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/lista-parametro-php-ii.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/php/parametros-default-php.html">Parâmetros default com PHP</a></h2>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos o conceito de parâmetros default, bem como seus beneficios e situações em que devemos utiliza-los.</p>
                         </div>
                     </td>
                 </tr>
@@ -210,14 +250,22 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/cpp/depuracao-codigo-cpp-parte2.html">more ...</a>
+<div class="highlight"><pre><span></span><span class="x">function login($user=&quot;root&quot;, $key=&quot;123&quot;){</span>
+<span class="x">    echo &quot;user = &quot; . $user;</span>
+<span class="x">    echo &quot;key = &quot; . $key;</span>
+<span class="x">}</span>
+
+<span class="x">login();</span>
+<span class="x">login(&quot;eXcript&quot;, &quot;123456&quot;);</span>
+</pre></div>
+</div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/parametros-default-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/cpp/depurar-clion-cpp.html">Depurando com o Clion Código C++</a></h2>
+                <h2><a  href="http://excript.com/php/definindo-parametro-php.html">Definindo parâmetros em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -225,7 +273,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a depuração com a IDE CLion. Aprenderemos como adicionar breakpoint, como executar uma determinada linha e como analisar os valores das variáveis em tempo de execução.</p>
+                            <p> Nesta aula aprenderemos a definir parâmetro que devem ser passados pelas funções quando estas forem invocadas. Estudaremos as vantagens da passagens de valores por parâmetro ao invés da utilização de variáveis globais.</p>
                         </div>
                     </td>
                 </tr>
@@ -251,18 +299,15 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="x">function soma($num1, $num2){</span>
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/cpp/depurar-clion-cpp.html">more ...</a>
+<span class="x">    $total = $num1 ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/definindo-parametro-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/cpp/depurar-codeblock-cpp.html">Depurando com o Code::Block Código C++</a></h2>
+                <h2><a  href="http://excript.com/php/introducao-as-funcoes-php.html">Introdução às Funções em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -270,45 +315,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a depuração com a IDE Code::Block. Veremos como é possível adicionar breakpoint ao código, como executar a depuração linha-a-linha e como analisar os valores das variáveis em tempo de execução.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-                    <a class="btn btn-default btn-xs" href="http://excript.com/cpp/depurar-codeblock-cpp.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/cpp/estrutura-repeticao-do-while-cpp.html">Estrutura de Repetição <tt class="docutils literal"><span class="pre">do-while</span></tt> do C++</a></h2>
-                <div class="summary">
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
-            <tbody>
-                <tr>
-                    <td class="content" style="border-left: 0">
-                        <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a estrutura de repetição do-while, isto é, a estrutura faça-enquanto. Aprenderemos também, onde utilizar essa instrução, as suas características e vantagens.</p>
+                            <p> Nesta aula iniciaremos o estudo das funções e métodos com a linguagem PHP. Estudaremos qual o conceito e definição de função, método e procedimento.</p>
                         </div>
                     </td>
                 </tr>
@@ -334,23 +341,22 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="x">#FUNÇÕES</span>
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+<span class="x">function minhaFunc(){</span>
+<span class="x">    echo &quot;Fala galera!&quot;;</span>
+<span class="x">}</span>
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="x">minhaFunc();</span>
+</pre></div>
+</div>
 
-<span class="kt">int ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/cpp/estrutura-repeticao-do-while-cpp.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/introducao-as-funcoes-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/cpp/estrutura-repeticao-for-cpp.html">Estrutura de Repetição <tt class="docutils literal">for</tt> do C++</a></h2>
+                <h2><a  href="http://excript.com/php/manipulação-arrays-php.html">Manipulação de Arrays em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -358,7 +364,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a estrutura de repetição for, isto é, uma estrutura de repetição especializada e compacta, sendo a mais utilizada pela comunidade de desenvolvimento.</p>
+                            <p> Nesta aula estudaremos as várias formas para a manipulação de Arrays bem comos as características e vantagens das diversas abordagens existentes.</p>
                         </div>
                     </td>
                 </tr>
@@ -384,21 +390,17 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="x">#VERIFICA SE A ESTRUTURA É UMA ARRAY</span>
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
-
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/cpp/estrutura-repeticao-for-cpp.html">more ...</a>
+<span class="x">echo &quot;FUNÇÃO: is_array() - &quot; . &quot;\n&quot;;</span>
+<span class="x">echo &quot;Valor = [] - &quot; . is_array( [] ) . &quot;\n&quot;;</span>
+<span class="x">echo &quot;Valor ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/manipulação-arrays-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/cpp/estrutura-repeticao-while-cpp.html">Estrutura de Repetição <tt class="docutils literal">while</tt> do C++</a></h2>
+                <h2><a  href="http://excript.com/php/array-multidimensional-php.html">Arrays Multidimensionais em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -406,7 +408,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a estrutura de repetição while. Aprenderemos onde utilizar a mesma e também, quais as vantagens do seu uso na construção de aplicações em C++.</p>
+                            <p> Nesta aula estudaremos as estruturas Arrays que possuem mais de uma dimensão.</p>
                         </div>
                     </td>
                 </tr>
@@ -432,21 +434,20 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="x">#   | ID | NOME | PONTOS |</span>
+<span class="x">#   | 1  | Zé   | 11     |</span>
+<span class="x">#   | 2  | José | 4      |</span>
+<span class="x">#   | 3  | Zéca | 22     |</span>
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
-
-<span class="k">using ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/cpp/estrutura-repeticao-while-cpp.html">more ...</a>
+<span class="x">//$jogo = array(</span>
+<span class="x">//    array(&quot;ID&quot;=&gt;1, &quot;NOME&quot;=&gt;&quot;Zé&quot;,   &quot;PONTOS&quot;=&gt;11),</span>
+<span class="x">//    array(&quot;ID&quot;=&gt;2, &quot;NOME&quot;=&gt;&quot;José ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/array-multidimensional-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/cpp/estrutura-selecao-multipla-switch-cpp.html">Estrutura de Seleção Múltipla <tt class="docutils literal">switch</tt> do C++</a></h2>
+                <h2><a  href="http://excript.com/php/array-associativo-php.html">Arrays Associativos em PHP</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -454,7 +455,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a estrutura de seleção múltipla, isto é, a estrutura que nos permite definir uma lista de condições e o bloco de instrução que deve ser executado em cada situação.</p>
+                            <p> Nesta aula estudaremos os Arrays Associativos, aprenderemos suas características e beneficios, bem como a ampla adoção desta estrutura pelas bibliotecas nativas do PHP.</p>
                         </div>
                     </td>
                 </tr>
@@ -480,17 +481,18 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="x">#ARRAYS ASSOCIATIVOS</span>
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/cpp/estrutura-selecao-multipla-switch-cpp.html">more ...</a>
+<span class="x">$pontos = [&quot;Zé&quot;=&gt;11, &quot;José&quot;=&gt;4, &quot;Zéca&quot;=&gt;22];</span>
+
+<span class="x">echo &quot;Zé: &quot; . $pontos[&quot;Zé&quot;] . &quot;\n&quot;;</span>
+<span class="x">echo ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/array-associativo-php.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/cpp/estrutura-selecao-multipla-switch-cpp-parte2.html">Estrutura de Seleção Múltipla <tt class="docutils literal">switch</tt> do C++ (parte II)</a></h2>
+                <h2><a  href="http://excript.com/php/foreach-alterando-valores.html">Estrutura <tt class="docutils literal">foreach</tt> - alterando valores internos</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -498,7 +500,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula continuaremos o estudo da estrutura de seleção múltipla switch. Neste momento, desenvolveremos uma aplicação para estudarmos de forma prática a utilização dessa estruturta de controle.</p>
+                            <p> Nesta aula estudaremos como a instrução foreach funciona internamente e como podemos alterar os valores de uma estrutura utilizando essa instrução.</p>
                         </div>
                     </td>
                 </tr>
@@ -524,16 +526,13 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="x">#ITERAÇÃO E ALTERAÇÃO DOS VALORES</span>
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
-
-<span class="k">using ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/cpp/estrutura-selecao-multipla-switch-cpp-parte2.html">more ...</a>
+<span class="x">$nums = range(0, 10);</span>
+<span class="x">//print_r($nums);</span>
+<span class="x">foreach($nums as $chave =&gt; &amp;$valor){</span>
+<span class="x">    $valor ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/php/foreach-alterando-valores.html">more ...</a>
                 </div>
             </article>
             <hr/>

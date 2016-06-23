@@ -81,7 +81,7 @@ eXcript            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a  href="http://excript.com/linguagem-c/code-block-workspace-c.html">Code::Block - Workspace para desenvolvimento em C</a></h2>
+                <h2><a  href="http://excript.com/python/for-in-range-python.html">O <tt class="docutils literal">for loop</tt> e a função <tt class="docutils literal">range()</tt> do Python</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -89,7 +89,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos os principais recursos do Code::Blocks. Aprenderemos a criar um novo projeto, a criar uma nova Workspace, como devemos organizar nosso projetos dentro da Workspace e qual a melhor maneira para salvarmos e abrirmos todos os projetos ao mesmo tempo.</p>
+                            <p> Nessa aula aprofundaremos nosso estudo sobre a relação intima entre a função ``range()`` e o laço de repetição ``for``.</p>
                         </div>
                     </td>
                 </tr>
@@ -106,13 +106,20 @@ eXcript            </a>
                     </td>
                     <td class="content">
                         <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está ...</p></div></td></tr></tbody></table></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/linguagem-c/code-block-workspace-c.html">more ...</a>
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/python/for-in-range-python.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/linguagem-c/constante-c.html">Constantes em C</a></h2>
+                <h2><a  href="http://excript.com/python/funcao-range-python.html">A função <tt class="docutils literal">range()</tt> do Python</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -120,7 +127,45 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nessa aula estudaremos o conceito de constante e aprenderemos como definir e utilizar constantes na linguagem C.</p>
+                            <p> Nesta aula estudaremos a função "range()" uma ferramenta muito utilizada junto a instrução "for", bem como, em todas as situações em que estamos trabalhando com sequências numéricas.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>O texto desta aula ainda não está disponível.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+                    <a class="btn btn-default btn-xs" href="http://excript.com/python/funcao-range-python.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a  href="http://excript.com/python/for-loop-python.html">A instrução <tt class="docutils literal">for</tt> em Python</a></h2>
+                <div class="summary">
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nessa aula estudaremos a estrutura de repetição "for", utilizada para percorrer listas e sequências facilmente do primeiro ao último elemento.</p>
                         </div>
                     </td>
                 </tr>
@@ -146,25 +191,22 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&quot;eXcript&quot;</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
-<span class="c1">//- comando nome_da_const valor</span>
-<span class="o">-</span><span class="n">define</span> <span class="n">w</span> <span class="mi">7</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&quot;python&quot;</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
 
-<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
-<span class="p">{</span>
-   <span class="k">const</span> <span class="kt">int</span> <span class="n">constante</span> <span class="o">=</span> <span class="mi">12 ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/linguagem-c/constante-c.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/python/for-loop-python.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/linguagem-c/depuracao-codeblock-c.html">Depuração com o Code::Block em C</a></h2>
+                <h2><a  href="http://excript.com/java/revisao-array-unidimensional-java.html">Revisão de Arrays Unidimensionais em Java</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -172,7 +214,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula aprenderemos o que é depuração, breakpoint e para que utilizaremos esse recurso. Aprenderemos também a depurar um simples trecho de código utilizando a IDE Code::Block.</p>
+                            <p> Nesta aula faremos uma revisão sobre a estrutura Array para nos certificarmos de termos entendido todos os conceitos e também, para revisarmos as principais características.</p>
                         </div>
                     </td>
                 </tr>
@@ -197,12 +239,12 @@ eXcript            </a>
         </table>
     </div>
 
-                    <a class="btn btn-default btn-xs" href="http://excript.com/linguagem-c/depuracao-codeblock-c.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/java/revisao-array-unidimensional-java.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/linguagem-c/depuracao_ii.html">Depuração com o Code::Block em C (parte II)</a></h2>
+                <h2><a  href="http://excript.com/java/manipulando-array-java.html">Manipulando Arrays em Java</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -210,57 +252,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nessa segunda aula sobre depuração, aprenderemos a analisar os valores contidos nas variáveis e veremos alguns recursos avançados sobre a depuração de códigos.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;ctype.h&gt;</span><span class="cp"></span>
-
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">printf ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/linguagem-c/depuracao_ii.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a  href="http://excript.com/linguagem-c/depurar-calculadora-c.html">Depurando a Calculadora Desenvolvida em C</a></h2>
-                <div class="summary">
-    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
-        <table style="margin: 0">
-            <tbody>
-                <tr>
-                    <td class="content" style="border-left: 0">
-                        <div class="paragraph data-line">
-                            <p> Nesta aula iremos depurar o código da nossa calculadora e veremos o que cada trecho do nosso código está executando a cada linha.</p>
+                            <p> Nesta aula vamos desenvolver um exemplo onde iremos definir uma estrutura Array e em seguida, aprenderemos como podemos somar todos elementos com uso de um laço de repetição for.</p>
                         </div>
                     </td>
                 </tr>
@@ -286,23 +278,15 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;conio.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0048</span> <span class="o">{</span>
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">float ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/linguagem-c/depurar-calculadora-c.html">more ...</a>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/java/manipulando-array-java.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/linguagem-c/entrada-dados-c.html">Entrada de Dados com C</a></h2>
+                <h2><a  href="http://excript.com/java/caracteristica-array-java.html">Características dos Arrays em Java</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -310,7 +294,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a entrada de dados, isto é, as informações que o nosso usuário digita no Console e envia para dentro da nossa aplicação. Entenderemos como capturar os dados passados pelo usuário e como posteriormente manipula-los.</p>
+                            <p> Nesta aula estudaremos as características que definem os Arrays e as suas principais propriedades.</p>
                         </div>
                     </td>
                 </tr>
@@ -336,13 +320,21 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/linguagem-c/entrada-dados-c.html">more ...</a>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0047</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
+
+        <span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">111</span><span class="o">;</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">222</span><span class="o">;</span>
+        <span class="n">a ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/java/caracteristica-array-java.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/linguagem-c/estrutura-repeticao-do-while-c.html">Estrutura de Repetição <tt class="docutils literal"><span class="pre">do-while</span></tt> do C</a></h2>
+                <h2><a  href="http://excript.com/java/array-unidimensional-java-parte2.html">Aarrays Unidimensionais em Java (parte II)</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -350,7 +342,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a estrutura de repetição do-while, ou seja, faça-enquanto. Estudaremos as principais características dessa instrução e onde utilizaremos a mesma em nossos códigos.</p>
+                            <p> Nesta segunda aula sobre as estrutura com uma única dimensão faremos um exemplo para aprofundar os conceitos anteriormente estudados.</p>
                         </div>
                     </td>
                 </tr>
@@ -376,21 +368,16 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;ctype.h&gt;</span><span class="cp"></span>
-
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
-
-<span class="kt">int ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/linguagem-c/estrutura-repeticao-do-while-c.html">more ...</a>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0046</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="o">{</span><span class="mi">78</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">56</span><span class="o">,</span> <span class="mi">89</span><span class="o">,</span> <span class="mi">1</span><span class="o">};</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/java/array-unidimensional-java-parte2.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/linguagem-c/estrutura-repeticao-for-c.html">Estrutura de Repetição <tt class="docutils literal">for</tt> do C</a></h2>
+                <h2><a  href="http://excript.com/java/formatar-texto-coluna-string-java.html">Formatando Textos em Colunas em Java</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -398,7 +385,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a estrutura de repetição for, a instrução mais utilizada pelos desenvolveres na construção de laços de repetição. Aprenderemos as características e as vantagens dessa estrutura e onde devemos utiliza-la.</p>
+                            <p> Nesta aula estudaremos as funções para a manipulação da saída no Console. Implementaremos um código que imprime os dados de uma planilha em que as informações estão organizadas em linhas e colunas.</p>
                         </div>
                     </td>
                 </tr>
@@ -424,14 +411,14 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/linguagem-c/estrutura-repeticao-for-c.html">more ...</a>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0045</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/java/formatar-texto-coluna-string-java.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/linguagem-c/estrutura-repeticao-for-c-parte2.html">Estrutura de Repetição <tt class="docutils literal">for</tt> do C</a></h2>
+                <h2><a  href="http://excript.com/java/array-unidimensional-java.html">Array Unidimensional em Java</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -439,7 +426,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula continuaremos o estudo da instrução for. Agora, implementaremos um simples código para estudarmos a fundo a implementação e uso dessa estrutura.</p>
+                            <p> Nesta aula iniciaremos o estudo dos Array unidimensionais, ou seja, as estruturas compostas por uma única dimensão.</p>
                         </div>
                     </td>
                 </tr>
@@ -465,25 +452,17 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0044</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="cm">/*</span>
-<span class="cm">    for( ; parte2; parte3){</span>
-
-<span class="cm">        parte1 ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/linguagem-c/estrutura-repeticao-for-c-parte2.html">more ...</a>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="o">;</span><span class="c1">//declaração do nosso array</span>
+        <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span> <span class="c1">//cria e ...</span></pre></div></div>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/java/array-unidimensional-java.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a  href="http://excript.com/linguagem-c/estrutura-repeticao-while-c.html">Estrutura de Repetição <tt class="docutils literal">while</tt> do C</a></h2>
+                <h2><a  href="http://excript.com/java/array-vetor-matriz-tabela-java.html">Array, Vetor, Matriz, Tabela em Java</a></h2>
                 <div class="summary">
     <div class="admonitionblock note data-line" style="margin-top: 1.50em">
         <table style="margin: 0">
@@ -491,7 +470,7 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos a estrutura de repetição while, que do Inglês significa, enquanto. Aprenderemos como podemos executar determinado bloco de instrução por uma quantidade de vezes e os beneficios dessa estrutura.</p>
+                            <p> Nesta aula estudaremos o conceito de Array, Vetor, Matriz e Tabela. Analisaremos cada nome e a sua respectiva definição.</p>
                         </div>
                     </td>
                 </tr>
@@ -515,14 +494,8 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www ...</span></pre></div></div>
-                    <a class="btn btn-default btn-xs" href="http://excript.com/linguagem-c/estrutura-repeticao-while-c.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://excript.com/java/array-vetor-matriz-tabela-java.html">more ...</a>
                 </div>
             </article>
             <hr/>
