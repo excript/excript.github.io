@@ -350,23 +350,25 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Operadores lógicos ou então, conectivos lógicos, representam o cerne da lógica fundamental. O C++ utiliza basicamente 2 conectivos lógicos emprestado da matemática, são eles:</p>
+<ol class="arabic simple">
+<li>Conectivo de conjunção - <cite>^</cite> - <cite>E</cite></li>
+<li>Conectivo de disjunção - <cite>v</cite> - <cite>OU</cite></li>
+</ol>
+<div class="section" id="conectivo-e">
+<h2>CONECTIVO ( E )</h2>
+<p>O conectivo E é utilizado nas expressões em que desejamos que todas as condições sejam verdadeiras, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="n">var1</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">E</span> <span class="n">var2</span> <span class="o">==</span> <span class="mi">100</span>
+</pre></div>
+<p>Temos que a primeira condição deve ser verdadeira <cite>(var1 == 0)</cite> como também a segunda condição <cite>(var2 == 100)</cite>. Caso uma das condições não seja verdadeiro, o valor lógico ser falso. Assim, o conectivo E exige que todas as condições sejam verdadeiras para que o valor lógico da expressão seja verdadeiro.a</p>
+</div>
+<div class="section" id="conectivo-ou">
+<h2>CONECTIVO ( OU )</h2>
+<p>O conectivo OU diz que uma das expressões deve ser verdadeira, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="n">var1</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">OU</span> <span class="n">var2</span> <span class="o">==</span> <span class="mi">100</span>
+</pre></div>
+<p>Assim, temos que se a primeira condição for verdadeira <cite>(var1 == 0)</cite> ou então, a segunda condição <cite>(var2 == 100)</cite>, então o valor de toda a expressão será verdadeiro.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>

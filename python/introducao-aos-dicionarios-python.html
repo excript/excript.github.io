@@ -372,23 +372,53 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>Já estudamos as listas, como também, aprendemos diversas formas para manipula-las. Agora, nós daremos início ao estudo dos dicionários, uma das estruturas mais utilizadas internamente pelas bibliotecas do Python. Ou seja, muito das implementações que utilizamos, foram construídas, fazendo uso de dicionários. E também, raras são as vezes que desenvolvermos um programa em sem a utilizarmos um dicionário, até porque, o mesmo representa da melhor maneira a estrutura chave-valor.</p>
+</div>
+<div class="section" id="o-que-e-um-dicionario">
+<h2>O QUE É UM DICIONÁRIO?</h2>
+<p>Um dicionário é uma lista especializada onde cada valor está diretamente relacionado a uma chave.</p>
+<p>Até agora, nós estávamos utilizando estruturas como listas e tuplas. Nestas, nós temos que cada elemento é associado a um número inteiro não negativo, então, podemos dizer que a estrutura lista do Python é, em sua definição mais primitiva, um dicionário. Onde a chave é o número inteiro, e o valor, o objeto que estamos associando a este número.</p>
+<p>A grande diferença dos <strong>dicionário</strong> para as listas, é que com os dicionários, é nossa responsabilidade a construção e o gerenciamento do índice e também, nós podemos utilizar como índice qualquer objeto não mutável.</p>
+<p>Ou seja, nós podemos definir que cada item terá uma cadeia de caracteres vinculado, logo, para acessar este item, deve-se informar qual a sequência de caracteres desejado. Também podemos associar um número como índice ou então, nós podemos definir que alguns elementos terão vinculados um número e outros uma string ou mesmo, uma tupla.</p>
+<p>Nós temos uma estrutura chave-valor, e cada chave sempre estará relacionada a um valor qualquer. Logo, podemos dizer que um dicionário pode funcionar como uma lista, mas uma lista não consegue trabalhar como um dicionário.</p>
+<p>A estrutura de dicionário é uma estrutura abstrata, assim, podemos estende-la e implementarmos uma lista simples, uma tupla ou então, a estrutura de chave-valor que desejarmos.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;aaa&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;bbb&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;ccc&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="p">{</span><span class="s1">&#39;bbb&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;aaa&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;ccc&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</pre></div>
+<p>No exemplo acima, associamos um conjunto de caractere a um determinado objeto numérico. Agora, para recuperarmos dos objetos numéricos, basta informarmos a respectiva cadeia de caracteres, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;aaa&quot;</span><span class="p">]</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;bbb&quot;</span><span class="p">]</span>
+<span class="mi">2</span>
+</pre></div>
+<p>O que temos é que a chave está vinculado a um valor único dentro da estrutura do dicionário. Caso uma chave não contida no dicionário seja passada, será retornado um erro, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;ddd&quot;</span><span class="p">]</span>
+</pre></div>
+<p>Nós adicionamos uma série de itens numa determinada ordem, porém, se nós iterarmos o nosso dicionário e imprimirmos os seus elementos, não necessáriamente os itens serão impressos numa ordem pre-estabelecida. Talvez, quando estivermos trabalhando com um pequeno dicionário a recuperação de elementos ocorra num determinada ordem, porém, não se pode confiar que os elementos do dicionário estarão ordenados.</p>
+</div>
+<div class="section" id="chaves-invalidas">
+<h2>CHAVES INVÁLIDAS</h2>
+<p>Em um dicionário, nós podemos definir como chave de um elemento, qualquer estrutura imutável, como exemplo, uma tupla ou então, uma string. Porém, se nós tentarmos atribuir como chave uma lista, não será possível e isso acontece, porque internamente, um dicionário utiliza um valor que é obtido através de uma chave. Logo, se nós tivermos uma estrutura mutável, o valor que o dicionário utilizou como índice terá sido mudado e então, o armazenamento chave-valor não mais funcionará.</p>
+</div>
+<div class="section" id="conjuntos-de-elementos-como-chave">
+<h2>CONJUNTOS DE ELEMENTOS COMO CHAVE</h2>
+<p>Em Python, o trabalho e manejo de listas é uma tarefa relativamente simples. Um dicionário, por exemplo, pode ter um elemento que possui uma chave mapeada através de um conjunto de objetos. Assim, nós conseguimos, por exemplo, montar arranjos, onde um grupo de elementos está mapeado a um objetos ou mesmo, um conjunto de objetos.
+Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, o valor pode ser qualquer objeto, indiferente do seu funcionamento.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">dic</span> <span class="o">=</span> <span class="p">{(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">):</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">):</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">):</span><span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">dic</span><span class="p">[(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">)]</span>
+<span class="mi">2</span>
+</pre></div>
+<p>Acima, nós temos um exemplo onde um número está associado a um conjunto de caracteres. Devido ao fato de que uma tupla é um objeto imutável, ou seja, após cria-la não mais é possível adicionar, alterar ou remover elementos, logo, nós podemos associar um objetos a um conjunto de elementos.</p>
+<p>É importante observar, que uma tupla pode conter os mesmos elementos e ainda assim ser diferente. Isso porque, a disposição dos elementos numa lista ou numa tupla a faz diferente de outra, mesmo que ambas contenham os mesmos elemento. Por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="n">premios</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="mi">44</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mo">07</span><span class="p">,</span><span class="mi">08</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">47</span><span class="p">):</span><span class="s2">&quot;Carro&quot;</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mo">02</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">41</span><span class="p">):</span><span class="s2">&quot;Casa&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 
 				</div>
 			</div>

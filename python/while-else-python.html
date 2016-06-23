@@ -373,23 +373,43 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="estrutura-while">
+<h2>ESTRUTURA <tt class="docutils literal">while</tt></h2>
+<p>O <strong>laço de repetição</strong> <tt class="docutils literal">while</tt> repete um bloco de instrução enquanto a condição definida no cabeçalho seja verdadeira.</p>
+<p>A estrutura <tt class="docutils literal">while</tt> talvez seja a mais simples para entendermos nesse momento e devemos entender a mesma, como sendo uma evolução da tomada de decisão, isto é, da instrução <tt class="docutils literal">if</tt>.  Porém, ao contrário de repetir o bloco definido logo abaixo do cabeçalho uma única vez, caso a expressão definida seja verdadeira, o bloco será executado indefinidamente, até que a expressão <strong>se torne</strong> falsa.</p>
+<p>É super importante entender que a expressão <strong>deverá</strong>, obrigatoriamente, deixar de ser verdadeira para que a repetição seja interrompida. Do contrário, a aplicação irá &quot;congelar&quot;, isto é, em outra palavras, a aplicação irá travar.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span><span class="p">(</span><span class="n">conta</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="n">conta</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">conta</span><span class="p">)</span>
+</pre></div>
+<p>No código acima, temos uma variável de nome <tt class="docutils literal">conta</tt> inicializada com o valor zero. Em seguida, utilizamos a instrução <tt class="docutils literal">while</tt> para definir uma <tt class="docutils literal">estrutura de repetição</tt> e a cada ciclo, o bloco logo em seguida, que contém 2 instruções, será executado. Neste, somamos uma unidade à variável conta e imprimimos o valor da variável, a cada ciclo, na tela.</p>
+</div>
+<div class="section" id="estrutura-else">
+<h2>ESTRUTURA <tt class="docutils literal">else</tt></h2>
+<p>A linguagem Python define a instrução <tt class="docutils literal">else</tt> como subestrutura da instrução <tt class="docutils literal">while</tt>, e essa será executada, uma única vez, quando a expressão, definida no cabeçalho, deixar de ser verdadeira.</p>
+<p>Vale repetir, que o bloco da instrução <tt class="docutils literal">else</tt> será executado uma única vez, devido ao fato de que a estrutura interrompe a execução dos ciclos, quando a expressão deixa de ser verdadeira.</p>
+<p>Àqueles que entenderam a estrutura de selação simples, isto é, a instrução <tt class="docutils literal">if</tt>, terão facilidade em manipular laços de repetição, e também, implementar a instrução <tt class="docutils literal">while</tt> corretamente. Isso porque, como já dito, a instrução <tt class="docutils literal">while</tt> funciona da mesma forma que a instrução <tt class="docutils literal">if</tt> e o que diferencia as mesmas é só e somente só, a quantidade de vezes que o <tt class="docutils literal">bloco de instrução</tt> será executado.</p>
+<p>A seguir, temos o exemplo feito anteriormente, porém agora, estamos implementando o bloco de instrução para quando a expressão definida no cabeçalho da instrução <tt class="docutils literal">while</tt> deixar de ser verdadeira.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span><span class="p">(</span><span class="n">conta</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="n">conta</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Valor da variável conta é: &quot;</span><span class="p">,</span> <span class="n">conta</span><span class="p">)</span>
+</pre></div>
+<p>No código acima, o <tt class="docutils literal">bloco de instrução</tt> para quando a expressão for verdadeira será executado até que o valor da variável <tt class="docutils literal">conta</tt> for igual a 11. Nesse momento, quando a expressão for falsa, o bloco da instrução <tt class="docutils literal">else</tt> será executado e o laço de repetição terá chego ao fim.</p>
+<p>É importante observar, que a instrução <tt class="docutils literal">else</tt> funciona da mesma maneira que na tomada de decisão, assim, devemos entender e trabalhar com essa estrutura da mesma forma.</p>
+</div>
+<div class="section" id="interrupcao-com-break">
+<h2>INTERRUPÇÃO COM <tt class="docutils literal">break</tt></h2>
+<p>A instrução <tt class="docutils literal">break</tt> finaliza abruptamente a execução das estruturas de repetição, e assim, quando essa instrução for executado, o cursor de execução irá interromper a estrutura de repetição e o cursor irá saltar para a linha seguinte após toda o laço de repetição.</p>
+<p>Em outras palavras, quando a instrução <tt class="docutils literal">break</tt> for utilizada, o cursor de execução não irá passar por dentro do bloco definido pela instrução <tt class="docutils literal">else</tt>, até porque, a instrução break encerra, <strong>imediatamente</strong>, a execução das <tt class="docutils literal">estruturas de repetição</tt>.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>

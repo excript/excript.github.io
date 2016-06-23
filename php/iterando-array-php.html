@@ -494,23 +494,29 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="iterando-arrays">
+<h2>ITERANDO ARRAYS</h2>
+<p>Das 3 estruturas de repetição por nós estudadas, a melhor para iteração de Arrays e o laço de repetição ..for...
+Até porque, nós temos uma variável contadadora, a quantidade de elementos contido na estrutura e a cada ciclo, a variável contadora é incrementada fazendo com que o nosso laço percorra todos os elementos do nosso Array.
+Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos suscetíveis a erros.</p>
+<p>A melhor maneira para iterarmos uma coleção de elementos é pela estrutura ..foreach.., ou seja, uma estrutura de repetição ..for.. especializada em percorrer todos elementos de uma estrutura ..Array...</p>
+<div class="highlight"><pre><span></span><span class="x">$lista = [&quot;Domingo&quot;, &quot;Segunda&quot;, &quot;Terça&quot;, &quot;Quarta&quot;, &quot;Quinta&quot;, &quot;Sexta&quot;, &quot;Sabado&quot;];</span>
+<span class="x">for($x=0; $x&lt;count($lista); $x++){</span>
+<span class="x">    echo $lista[$x] . &quot;\n&quot;;</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+<div class="section" id="quantidade-de-elementos-num-array">
+<h2>QUANTIDADE DE ELEMENTOS NUM ARRAY</h2>
+<p>Para sabermos quantos itens estão contidos num Array, temos a disposição a função ..count()... Basta invocarmos a função passando como parâmetro o Array que desejamos conhecer a quantidade de elementos para que seja retornado o montante.</p>
+<div class="highlight"><pre><span></span><span class="x">$arr = [&quot;aaa&quot;, &quot;bbb&quot;, &quot;ccc&quot;];</span>
+<span class="x">echo count($arr);</span>
+</pre></div>
+</div>
+<div class="section" id="iterando-arrays-numericos-estrutura-for">
+<h2>ITERANDO ARRAYS NUMÉRICOS - ESTRUTURA <tt class="docutils literal">for</tt></h2>
+<p>Inicialmente, vamos iterar um Array utilizando a estrutura ..for.. já estudada, até porque, essa é o princípio e também, a forma como as estruturas especializadas funcionam nos bastidores.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#ITERANDO ARRAYS</span>

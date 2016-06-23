@@ -347,23 +347,29 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="constantes">
+<h2>CONSTANTES</h2>
+<p>Constante é uma referência que após defindo um valor, este não podera ser alterado durante o tempo de execução.</p>
+<p>Na prática, o funcionamento é semelhante ao uso de variáveis, sendo a única diferença, que após definido um primeiro valor, este não poderá ser alterado.</p>
+</div>
+<div class="section" id="conceito">
+<h2>CONCEITO</h2>
+<p>Em programação, uma constante é a alocação de uma espaço na memória para guardar um valor durante toda a execução de um programa ou então, durante a execução de um determinado <strong>Bloco de Instrução</strong>.</p>
+<p>As constantes, são bastante semelhante ao funcionamento e uso das variáveis, a diferença, é que não podemos alterar o seu valor em tempo de execução. Se, durante o desenvolvimento de um software, definirmos que uma constante deve conter o valor inteiro 5, está, em hipótese alguma, conseguira alterar o seu valor em tempo de execução.</p>
+<p>Quando estamos iniciando na programação, é comum pensarmos que o uso de constantes ao invés de ajudar, atrapalha no desenvolvimento, o que muitas vezes pode ser uma verdade aparente.  Assim, partimos do pressuposto que sempre lembraremos que determinada referência não poderá ter o seu valor alterado e então, optamos por trabalhar com uma variável, até porque, a mesma é mais flexível.</p>
+<p>Esse tipo de pensamento, sob olhar da teoria está totalmente errado, e no olhar prático, estamos cometendo um erro gigantesco.</p>
+<p>Temos que ter em mento, que o objetivo de uma constante, como o nome sugere, é assegurar que determinada informação não será alterada, em hipótese alguma. Trabalhar com constantes faz o nosso programa ser mais seguro e menos propenso a erros. Até porque, estamos garantindo que um valor constante não será alterado durante a execução da aplicação.</p>
+<p>Em Java, definimos uma constante colocando a palavra final a frente da declaração, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="kd">final</span> <span class="kt">int</span> <span class="n">NOME</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</pre></div>
+<p>Observe a instrução final a frente da declaração. Esta é a responsável por declarar que um determinado membro não poderá ter o seu valor alterado.</p>
+<p>Em Java, existe um peculiaridade quando trabalhamos com constantes. Nós podemos declarar uma constante sem inicializá-la. A partir do momento que um valor for atribuído, este não mais poderá ser alterado. Assim, temos a liberdade de definir o valor da constante de maneira dinâmica, o que facilita a programação, porém, pode ocasionar problemas.</p>
+<p>Os nomes das constantes sempre devem estar em letra maiúscula, assim, conseguimos distinguir facilmente entre uma variável e uma constante. O Java não nos obriga a definir o nome das constantes com letra maiúscula, porém, essa é uma convenção da comunidade e devemos segui-la.</p>
+<div class="highlight"><pre><span></span><span class="kd">final</span> <span class="kt">double</span> <span class="n">VELOCIDADE_SOM</span> <span class="o">=</span> <span class="mi">340</span><span class="o">,</span><span class="mi">29</span><span class="o">;</span><span class="c1">// m/s</span>
+<span class="kd">final</span> <span class="kt">double</span> <span class="n">VELOCIDADE_LUZ</span> <span class="o">=</span> <span class="mf">299.792</span> <span class="mi">458</span><span class="o">;</span><span class="c1">// m/s</span>
+<span class="kd">final</span> <span class="kt">double</span> <span class="n">PI</span> <span class="o">=</span> <span class="mf">3.14159</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0015</span> <span class="o">{</span>

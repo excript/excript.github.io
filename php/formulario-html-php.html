@@ -494,23 +494,79 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="requisicoes-post">
+<h2>REQUISIÇÕES <tt class="docutils literal">POST</tt></h2>
+<p>O método <tt class="docutils literal">POST</tt>, ao contrário do <tt class="docutils literal">GET</tt>, não expõem os valores que estão sendo enviados na URL, mas sim, o mesmo encapsula os dados no cabeçalho da requisição HTTP que está sendo enviada ao servidor WEB.</p>
+<p>Raramente iremos ter um cadastro que utilizará o método <tt class="docutils literal">GET</tt> para envio dos dados, e também, quando estivermos trabalhando com informações confidências, o método <tt class="docutils literal">POST</tt> será por sua definição e sua abstração, muito mais seguro.</p>
+<p>Quando trabalhamos com informações criptografadas, estaremos trabalhando também, com o método <tt class="docutils literal">POST</tt>, e então, temos que a criptografação das informações, irá acontecer, no cabeçalho da requisição que está sendo enviado para o servidor.</p>
+<p>Assim, a diferença entre o método <tt class="docutils literal">GET</tt> e <tt class="docutils literal">POST</tt> é a forma como os dados são trafegados, ou seja, a forma como os dados serão expostos. Até porque, a maneira em que as informações serão enviadas é a mesma, ou seja, com o método <tt class="docutils literal">POST</tt>, cada campo do formulário terá o seu valor associado ao seu nome e a String decorrente dessas associações, terá a mesma estrutura, do que a String gerada pelo método GET.</p>
+<p>Então, a diferença será, só e somente só, na exposição destes dados, ou seja, o método <tt class="docutils literal">GET</tt> passa os valores pela URL, enquanto o método <tt class="docutils literal">POST</tt> passa as informações pelo cabeçalho HTML. Porém, a String gerada será igual em ambos os casos e também, o recebimento e trabamento dessas informações pelo PHP, ocorrerá de maneira análoga.</p>
+<p>Internamente, o recebimento de dados pelo método <tt class="docutils literal">POST</tt> em PHP, se da de maneira análoga ao recebimento de dados pelo méto <tt class="docutils literal">GET</tt> já estudado.</p>
+<p>A diferença em nosso código PHP para o recebimento das informações enviadas pelo método POST, será o nome da variável global em que os parâmetros enviados serão associados, ou seja, ao invés de utilizarmos a variável global <tt class="docutils literal">$_GET</tt>, nós iremos utilizar a variável global <tt class="docutils literal">$_POST</tt>.</p>
+</div>
+<div class="section" id="html-e-requisicoes-get-e-post">
+<h2>HTML E REQUISIÇÕES <tt class="docutils literal">GET</tt> E <tt class="docutils literal">POST</tt></h2>
+<p>As requisições do tipo <tt class="docutils literal">GET</tt> são feitas pelo endereço que desejamos acessar, logo, não há nenhuma informação adicional. Basta informar o caminho absoluto do Script e em seguida, passar os parâmetros.</p>
+<p>Requisições do tipo <tt class="docutils literal">POST</tt> são comumente enviadas através de formulários HTML, porém, também, é possível trabalhar com formulários do tipo <tt class="docutils literal">GET</tt>.</p>
+<p>Cada campo contido no formulários HTML chegará no Script PHP através do Array Associativo, a chave do campo será o seu nome no documento HTML e o valor associado, será o valor informado pelo usuário (caso haja algum).</p>
+</div>
+<div class="section" id="formularios-html">
+<h2>FORMULÁRIOS HTML</h2>
+<p>A forma mais comum para o envio de dados é através do uso de formulário HTML. Um formulário é construído através do uso da TAG <tt class="docutils literal">&lt;form&gt;</tt> e nesta é definido o script para onde este formulário deve ser enviado, no caso, o atributo <tt class="docutils literal">action</tt> e também, o método em que as informações deverão ser submetidas, no caso, temos que definir se o formulário será enviado através do métodos GET ou então do método POST no atributo de nome <tt class="docutils literal">method</tt> da TAG.</p>
+<p>Como estudamos, é possível o envio de valores através do método GET pela construção de uma URL, porém, quando estamos trabalhando com o envio de dados através do método POST, o comum é utilizarmos um formulário.</p>
+</div>
+<div class="section" id="criando-formulario-com-html">
+<h2>CRIANDO FORMULÁRIO COM HTML</h2>
+<p>No HTML, a TAG de um formulário é <tt class="docutils literal">&lt;form&gt;</tt>. Na definição, a TAG <tt class="docutils literal">&lt;form&gt;</tt> possui 2 atributos, são eles:</p>
+<blockquote>
+<ul class="simple">
+<li>action</li>
+<li>method</li>
+</ul>
+</blockquote>
+<p>O atributo <tt class="docutils literal">action</tt> é a URL absoluta até o Script PHP, ou seja, é o local para onde desejamos enviar o formulário.</p>
+<p>O atributo <tt class="docutils literal">method</tt> especifica o tipo da requisição, isto é: <tt class="docutils literal">GET</tt> ou <tt class="docutils literal">POST</tt></p>
+<p>Cada <tt class="docutils literal">input</tt> contido no formulário deve conter o atributo <tt class="docutils literal">name</tt>, haja vista que os valores são associados com a propriedade <tt class="docutils literal">name</tt> de cada <tt class="docutils literal">input</tt>.</p>
+</div>
+<div class="section" id="criando-um-formulario-em-html">
+<h2>CRIANDO UM FORMULÁRIO EM HTML</h2>
+<dl class="docutils">
+<dt>A seguir temos um formulário básico de contato, neste é pedido 3 informações:</dt>
+<dd><ul class="first last simple">
+<li>nome</li>
+<li>e-mail</li>
+<li>mensagem</li>
+</ul>
+</dd>
+</dl>
+<div class="highlight"><pre><span></span><span class="x">&lt;form id=&quot;formulario&quot; action=&quot;#&quot; method=&quot;POST&quot;&gt;</span>
+<span class="x">    &lt;fieldset&gt;</span>
+
+<span class="x">        &lt;legend&gt;Informações&lt;/legend&gt;</span>
+<span class="x">        &lt;p&gt;</span>
+<span class="x">            &lt;label for=&quot;nome&quot;&gt;Nome: &lt;em class=&quot;required&quot;&gt;(obrigatório)&lt;/em&gt;&lt;/label&gt;</span>
+<span class="x">            &lt;input name=&quot;nome&quot; id=&quot;nome&quot; type=&quot;text&quot; /&gt;</span>
+<span class="x">        &lt;/p&gt;</span>
+
+<span class="x">        &lt;p&gt;</span>
+<span class="x">            &lt;label for=&quot;email&quot;&gt;Email Address:&lt;/label&gt;</span>
+<span class="x">            &lt;input name=&quot;email&quot; id=&quot;email&quot; type=&quot;text&quot; /&gt;</span>
+<span class="x">        &lt;/p&gt;</span>
+
+<span class="x">    &lt;/fieldset&gt;</span>
+
+<span class="x">    &lt;p&gt;</span>
+<span class="x">        &lt;input type=&quot;button&quot; value=&quot;Enviar&quot; id=&quot;enviar&quot;/&gt;</span>
+<span class="x">    &lt;/p&gt;</span>
+
+<span class="x">&lt;/form&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="recebendo-as-informacoes-do-formulario">
+<h2>RECEBENDO AS INFORMAÇÕES DO FORMULÁRIO</h2>
+<p>Quando recebemos uma requisição com o envio de um formulário do tipo <tt class="docutils literal">POST</tt>, a variável global <tt class="docutils literal"><span class="pre">$_POST['']</span></tt> irá conter a lista dos campos e a estes, estarão vinculados os valores.</p>
+<p>Inicialmente, vamos verificar se os campos que compõem o formulário estão contidos e somente então, daremos continuidade no processamento das informações.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <p>formulario.php</p>
@@ -555,16 +611,15 @@ eXcript            </a>
 
 <span class="x">&lt;/body&gt;</span>
 <span class="x">&lt;/html&gt;</span>
-
-<span class="x">metodo_get.php</span>
 </pre></div>
-<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
-
-<span class="c1">//var_dump($_GET);</span>
-
-<span class="k">echo</span> <span class="s1">&#39;Nome: &#39;</span> <span class="o">.</span> <span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;nome&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
-<span class="k">echo</span> <span class="s1">&#39;E-mail: &#39;</span> <span class="o">.</span> <span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
-</pre></div>
+<p>metodo_get.php
+.. code-block:: php</p>
+<blockquote>
+<p>&lt;?php</p>
+<p>//var_dump($_GET);</p>
+<p>echo 'Nome: ' . ($_GET['nome'] ?? '') . &quot;&lt;br&gt;&quot;;
+echo 'E-mail: ' . ($_GET['email'] ?? '') . &quot;&lt;br&gt;&quot;;</p>
+</blockquote>
 <p>.</p>
 </div>
 

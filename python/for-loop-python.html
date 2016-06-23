@@ -371,23 +371,45 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="introducao-a-instrucao-for">
+<h2>INTRODUÇAO À INSTRUÇÃO <tt class="docutils literal">for</tt></h2>
+<p>A instrução <tt class="docutils literal">for</tt> possui uma quantia de ciclos pré-definida. A quantidade de ciclos é determinado pela quantidade de elementos contido na lista informada junto com a instrução <tt class="docutils literal">for</tt>. Dessa forma, será executado um ciclo para cada elemento.</p>
+<p>O laço de repetição <tt class="docutils literal">for</tt> do Python se assemelha ao <tt class="docutils literal">for each</tt> que temos em Java, PHP, C#, C++ e etc. Sendo uma estrutura simples e compacta para percorrer todos elementos de coleções ou estruturas que contenham listas de objetos.</p>
+<p>A sintaxe do Python não possui a estrutura de repetição <tt class="docutils literal">for</tt> tradicional, onde define-se uma variável, condição e incremento no cabeçalho da estrutura. A ideia, é o trabalho e manipulação de estrutura iteraveis, isto é, a definição de iteradores, objetos <tt class="docutils literal">iterators</tt>.</p>
+</div>
+<div class="section" id="a-definicao-da-instrucao-for">
+<h2>A DEFINIÇÃO DA INSTRUÇAO <tt class="docutils literal">for</tt></h2>
+<p>A estrutura <tt class="docutils literal">for</tt> exige, inicialmente, a definição de uma variável, e em seguida, a instância que será iterada. A seguir, temos o esquema para o uso da instrução <tt class="docutils literal">for</tt>.</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">&lt;</span><span class="n">variável</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">objeto</span> <span class="n">iterável</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="n">bloco</span> <span class="n">de</span> <span class="n">instrução</span>
+</pre></div>
+<p>A variável a ser declarada, receberá, a cada ciclo, um elemento contido na lista que está sendo iterada. Ao término, todos elementos terão sido percorridos, e a cada ciclo, o elemento seguinte contido no objeto iterável será passado pela variável definida inicialmente.</p>
+<p>A seguir, faremos um exemplo real e percorreremos uma lista numérica.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+<p>Acima, definimos a variável <tt class="docutils literal">item</tt> e uma lista com 5 elementos <tt class="docutils literal">[3,4,5,6,7]</tt>. A cada ciclo, o elemento seguinte é atribuido à variável <tt class="docutils literal">item</tt> e ao término, teremos executado um ciclo individual para cada elemento contido na lista.</p>
+</div>
+<div class="section" id="exemplo-1-imprimindo-todas-as-letras-de-uma-string">
+<h2>EXEMPLO 1: IMPRIMINDO TODAS AS LETRAS DE UMA STRING</h2>
+<p>Uma String é um conjunto de caracteres e assim, podemos iterar qualquer texto, por exemplo.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="k">for</span> <span class="n">letras</span> <span class="ow">in</span> <span class="s1">&#39;eXcript&#39;</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="s1">&#39;ciclo: &#39;</span><span class="p">,</span> <span class="n">letter</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="exemplo-2-imprimindo-todos-os-itens-de-uma-lista">
+<h2>EXEMPLO 2: IMPRIMINDO TODOS OS ITENS DE UMA LISTA</h2>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="n">linguagens</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span>  <span class="s1">&#39;Lua&#39;</span><span class="p">,</span> <span class="err">‘</span><span class="n">Cobol</span><span class="err">’</span><span class="p">,</span> <span class="err">‘</span><span class="n">Pascal</span><span class="err">’</span><span class="p">,</span> <span class="err">‘</span><span class="n">C</span><span class="o">++</span><span class="err">’</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">lingua</span> <span class="ow">in</span> <span class="n">linguagens</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Linguagem contida na variável “lingua” neste ciclo: &#39;</span><span class="p">,</span> <span class="n">lingua</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>

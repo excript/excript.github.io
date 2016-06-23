@@ -349,23 +349,29 @@ eXcript            </a>
     </div>
 <div class="section" id="resto-da-divisao">
 <h2>RESTO DA DIVISÃO</h2>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<blockquote>
+<p>Operação Módulo é a obtenção da parte restante da divisão entre dois numerandos positivos.
+A linguagem Java definiu que o simbolo de porcentagem [ % ] será o operador módulo, ou seja, o operador que retorna a sobra da divisão.
+O Java herdou da linguagem C o operador módulo, bem como dezenas de outras linguagens. Nós temos que o simbolo de porcentagem acabou por se tornar um padrão para a obtenção do módulo. Isso porque, dezenas de outras linguagem incorporaram essa característica.</p>
+<p>Matematicamente, há várias maneira para obtermos o resto de uma divisão, porém, o Java nos fornece um operador para essa função, logo, não precisamos perder tempo implementando um algoritmo que realize essa tarefa.</p>
+<p>Num primeiro momento, pode não parecer muito lógico a utilização deste operador. Porém, com o tempo nos acostumamos e nem relacionamos mais a porcentagem com o sinal em meio ao nosso código.</p>
+<p>A seguir, temos alguns exemplos:</p>
+<div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">9</span><span class="o">;</span>
+<span class="kt">double</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<span class="kt">double</span> <span class="n">res</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span>
+<span class="kt">double</span> <span class="n">resto</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">%</span> <span class="n">num2</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num1</span> <span class="o">+</span> <span class="s">&quot;dividido por&quot;</span> <span class="o">+</span> <span class="n">num2</span> <span class="o">+</span> <span class="s">&quot; = &quot;</span> <span class="o">+</span> <span class="n">res</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;O resto da divisao e: &quot;</span> <span class="o">+</span> <span class="n">resto</span><span class="o">);</span>
+</pre></div>
+<p>No exemplo acima, declaramos 2 variáveis do tipo double e inicializamos a primeira com 9 e a segundo com 2. Em seguida, declaramos uma terceira variável, do tipo double e inicializamo-a com o valor da divisão entre as variáveis num1 e num2. Por fim, declaramos uma quarta variável e a esta inicializamo-a com o módulo da divisão entre num1 e num2. Como visto, o operador <strong>Módulo</strong> funciona da mesma forma como os operadores aritméticos, ou seja, o princípio de funcionamento é o mesmo.</p>
+<p>A seguir, temos uma lista de exemplos bastante simples, porém, exemplos que nos ajudam a entender o funcionamento do operador Módulo.</p>
+<div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="mi">4</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="mi">6</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="mi">7</span> <span class="o">%</span> <span class="mi">3</span><span class="o">,</span><span class="mi">1</span>
+</pre></div>
+</blockquote>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>

@@ -494,23 +494,23 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="requisicoes-get">
+<h2>REQUISIÇÕES <tt class="docutils literal">GET</tt></h2>
+<p>Requisições do tipo <tt class="docutils literal">GET</tt> são as mais comuns e todo mundo que navega pela Web conhece a sua estrutura. Isso porque, uma requisição do tipo <tt class="docutils literal">GET</tt> é composta somente por uma URL.</p>
+<blockquote>
+<a class="reference external" href="http://www.meusite.com.br/script.php?var1=valor1">http://www.meusite.com.br/script.php?var1=valor1</a></blockquote>
+<p>Uma URL do tipo GET é composta pelo caminho absoluto do arquivo de Script PHP e em seguida, ma mesma recebe parâmetros através de uma convenção definida no protocolo HTTP. Essa convenção diz que após o caminho absoluto do Script, deve haver uma interrogação e então, inicia-se o processo de associação chave-valor, e os parâmetros devem ser delimitados por um &amp;.</p>
+<p>Vamos analisar a seguinte URL:</p>
+<blockquote>
+<a class="reference external" href="http://www.meusite.com.br/script.php?var1=valor1&amp;var2=valor2">http://www.meusite.com.br/script.php?var1=valor1&amp;var2=valor2</a></blockquote>
+<ol class="arabic simple">
+<li>Caminho absoluto é: <tt class="docutils literal"><span class="pre">http://www.meusite.com.br/script.php</span></tt></li>
+<li>&amp;</li>
+<li>var1=valor1</li>
+<li>var2=valor2</li>
+</ol>
+<p>Após o caractere de interrogação, temos um valor sendo associado a outro, em seguida, temos a adição de um &amp; e então, temos outros valor sendo associado. Essa requisição será entregue ao Script PHP e todos os valores associados, serão passados ao Script pelo Array <tt class="docutils literal"><span class="pre">$_GET['']</span></tt>. Cada chave-valor estará numa posição do Array associativo e então, bastara o nosso Script processar a requisição.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#METODO GET</span>

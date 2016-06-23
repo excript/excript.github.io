@@ -497,23 +497,24 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="retornando-valores">
+<h2>RETORNANDO VALORES</h2>
+<p>Para retornarmos um valor, basta passarmos o mesmo através da palavra-chave <tt class="docutils literal">return</tt>. Após o uso da instrução <tt class="docutils literal">return</tt> a função é finalizada e o valor definido retornado.</p>
+<div class="highlight"><pre><span></span><span class="x">function soma()</span>
+<span class="x">{</span>
+<span class="x">    $num = func_num_args();</span>
+<span class="x">    $args = func_get_args();</span>
+
+<span class="x">    $total = 0;</span>
+<span class="x">    for ($i = 0; $i &lt; $num; $i++)</span>
+<span class="x">        $total += $args[$i];</span>
+
+<span class="x">    return $total;</span>
+<span class="x">}</span>
+
+<span class="x">soma(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">function media(...$valores){</span>

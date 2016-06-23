@@ -347,23 +347,29 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="iterador-do-while">
+<h2>ITERADOR DO-WHILE</h2>
+<p>Como funciona a instrução do-while no Java? O laço de repetição do/while, ou então, o iterador, looping ou seja como você prefira chamar funciona de maneira análoga como o iterador While, estudado em aulas passadas. Com esse iterador, fazemos uma laço de repetição que antes de verificar se o laço deve ser ou não repetido, como tinhamos com o laço WHILE, primeiro executa o bloco de instrução.</p>
+<p>A diferença desse iterador para os outros, é que o bloco de instrução será executado no mínimo uma única vez. Como podemos ver no exemplo abaixo:</p>
+<div class="highlight"><pre><span></span><span class="k">do</span><span class="o">{</span>
+  <span class="c1">//instruções a serem executadas</span>
+<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">True</span><span class="o">)</span>
+</pre></div>
+<p>No código acima, o bloco de instrução do iterador do-while será executado e somente após a execução, a condição contida na instrução WHILE será verificada. A seguir, temos um outro exemplo, porém agora, utilizando a instrução WHILE normal.</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">while</span><span class="o">(</span><span class="n">i</span> <span class="o">!=</span> <span class="mi">10</span><span class="o">){</span>
+  <span class="n">i</span><span class="o">++;</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>Veja acima que o bloco da instrução WHILE só será executado se o valor de i for diferente de 10. Nesse caso, o bloco será executado, até porque, iniciamos o valor com 0. Agora, se o valor não fosse diferente de zero, o bloco não seria executado. A seguir, temos o mesmo exemplo, porém, com o uso da instrução DO-WHILE:</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">do</span><span class="o">{</span>
+
+<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">i</span> <span class="o">!=</span><span class="mi">0</span> <span class="o">);</span>
+</pre></div>
+<p>Veja que a condição contida na instrução WHILE não será verdadeira, porém, ainda assim, o bloco terá sido executado por no mínimo uma vez.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0027</span> <span class="o">{</span>

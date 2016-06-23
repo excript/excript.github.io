@@ -347,23 +347,107 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Palavras reservadas são as palavras que estão definidas na sintaxe da linguagem, isto é, essas palavras fazem parte da linguagem e assim, se nós utilizarmos, estaremos criando um conflito de nomes.</p>
+<p>Quando estudamos as regras de nomenclatura de variáveis, aprendemos que as palavras reservadas da linguagem, não podem ser utilizadas.</p>
+<p>Porém, se você realmente quiser utilizar um nome que é uma palavras reservada, a solução é inicializar com um underline. Como já estudado, o nome de variáveis pode inicializar com um caractere ou então, com o underline.</p>
+<p>Mesmo que não tenhamos estudado, desde o primeiro programa que fizemos em Java, fizemos uso das palavras reservadas, por exemplo: <strong>int</strong> é uma palavra reservada utilizada para definir que uma variável é do tipo inteiro. <strong>if</strong> é uma outra palavra reservada que utilizamos nas tomadas de decisões. Nós também temos as palavras <strong>public</strong>, <strong>static</strong>, <strong>void</strong> que utilizamos para declarar o método que inicializa o programa Java.</p>
+<p>Num primeiro momento, a lista contendo todas as palavras pode assustar um pouco, porém, não há necessidade de decorar ou então memorizar essa lista, até porque, cada palavra é uma instrução e para programar em Java, somos obrigados a estudar cada palavra reservada. Assim, não cometa o erro de tentar memorizar uma única instrução contida nessa lista.</p>
+<p>Toda vez que digitamos uma palavras reservada no Eclipse, ou em qualquer editor Java, o mesmo atribui uma coloração diferente para o grupo de palavras reservadas. Assim é fácil perceber se o nome que estamos querendo utilizar é ou não uma palavra reservada. Se você está programando utilizando o Eclipse, não há motivos para preocupação! Se a palavra tiver a sua cor alterada, isso significa que não podemos fazer uso da mesma.</p>
+<p>Somente se estivéssemos trabalhando com o Bloco de Notas ou então, algum editor genérico, precisaríamos memorizar ou ter um pouco de conhecimento acerca dessas palavras.</p>
+<div class="section" id="tipos-primitivos">
+<h2>TIPOS PRIMITIVOS</h2>
+<ul class="simple">
+<li><cite>boolean</cite>: tipo de dado lógico.</li>
+<li><cite>byte</cite>: inteiro de 8 bits que pode armazenar valores positivos e negativos (signed).</li>
+<li><cite>char</cite>: inteiro de 16-bit que armazena o valor unicode de um único caracteres. Podemos utilizar o tipo char para trabalharmos com números inteiros, porém, somentes os valores positivos (16-bit unsigned).</li>
+<li><cite>double</cite>: número de ponto flutuante de 64 bits (signed).</li>
+<li><cite>float</cite>: número de ponto flutuante de 32 bits (signed).</li>
+<li><cite>int</cite>: inteiro de 32 bits.</li>
+<li><cite>long</cite>: inteiro de 64 bits.</li>
+<li><cite>short</cite>: inteiro de 32 bits.</li>
+</ul>
+</div>
+<div class="section" id="modificadores-de-acesso">
+<h2>MODIFICADORES DE ACESSO</h2>
+<ul class="simple">
+<li><cite>private</cite>: restringe o acesso ao membro  (variável ou função) , fazendo que seja visível somente dentro da classe onde o mesmo foi definido.</li>
+<li><cite>protected</cite>: restringe o acesso para as classes filhas ou então, que estejam no mesmo pacote.</li>
+<li><cite>public</cite>: não há restrições quanto ao acesso</li>
+</ul>
+</div>
+<div class="section" id="modifiradores-de-classe-variaveis-e-ou-metodos">
+<h2>MODIFIRADORES DE CLASSE, VARIÁVEIS E/OU MÉTODOS</h2>
+<ul class="simple">
+<li><cite>abstract</cite>: membro que não possui implementação, somente a sua definição.</li>
+<li><cite>class</cite>: palavra reservada utilizada para definir uma estrutura tipo classe.</li>
+<li><cite>extends</cite>: utilizado para herdar de outra classe.</li>
+<li><cite>final</cite>: utilizado para definir constantes e impossibilitar, por exemplo, que um método seja redefinido numa subclasse, ou então, que uma classe seja estendida. A classe String do Java possui em seu construtor a instrução <cite>final</cite>. Logo, não é possível estender a mesma.</li>
+<li><cite>implements</cite>: define a interface que deve ser implementada ou então, as interfaces.</li>
+<li><cite>interface</cite>: palavra reservada para definir uma estrutura do tipo interface, isto é, uma estrutura que irá conter somente as definições e não as implementações propriamente ditas.</li>
+<li><cite>native</cite>: palavra utilizada para indicar que uma função está definida num outra linguagem, como por exemplo, C ou C++.</li>
+<li><cite>new</cite>: cria uma nova instância de um objeto e retorna o identificador a quem invocou o construtor da classe.</li>
+<li><cite>static</cite>: define que um membro será instanciado no momento em que a estrutura da classe for carregada. Assim, para fazer acesso a um método ou então, a uma variável, não é necessário criar uma instância antes.</li>
+<li><cite>strictfp</cite>:</li>
+<li><cite>synchronized</cite>: palavra reservada utilizada no manuseio de threads. Assim, conseguimos definir que um método só será invocado numa determinada instância, quando este não estiver sendo por uma outra instância.</li>
+<li><cite>transient</cite>: utilizado nos processos de serialização para indicar que um determinado campo não pode ou não será serializado.</li>
+<li><cite>volatile</cite>:palavra reservada que funciona de maneira contrária a palavra <cite>synchronized</cite>.</li>
+</ul>
+</div>
+<div class="section" id="controle-de-fluxo">
+<h2>CONTROLE DE FLUXO</h2>
+<ul class="simple">
+<li><cite>break</cite>:  finaliza a iteração do bloco de instrução contido</li>
+<li><cite>case</cite>: estrutura utilizada para definir as condições dentro de uma estrutura switch.</li>
+<li><cite>continue</cite>: finaliza a execução de um ciclo e já pulando para o início do próximo.</li>
+<li><cite>default</cite>: bloco que será executado quando nenhuma condição for satisfeita na estrutura switch.</li>
+<li><cite>do</cite>:estrutura de repetição que executado um determinado bloco de instrução até que a condição definida através da instrução <cite>while</cite> seja atendida.</li>
+<li><cite>else</cite>: define o bloco a ser executado caso a condição verificada não seja satisfeita.</li>
+<li><cite>for</cite>: estrutura de iteração utilizada para definir onde um laço começa e onde o mesmo irá terminar.</li>
+<li><cite>if</cite>: estrutura utilizada para verificar condições. O valor de retorno sempre será do tipo primitivo Boolean, ou seja, um valor lógico.</li>
+<li><cite>instanceof</cite>: retorna True quando uma instância é  instância oriúnda de uma classe, superclasse ou interface</li>
+<li><cite>return</cite>: valor a ser retornado por uma função. Também é utilizado para encerrar a execução de funções.</li>
+<li><cite>switch</cite>: estrutura que permite a verificação de diversas condições e também, capaz de definir uma condição padrão, ou seja, a condição <cite>default</cite>.</li>
+<li><cite>while</cite>: iterador que executa um determinado bloco até que uma condição seja verdadeira.</li>
+</ul>
+</div>
+<div class="section" id="tratamento-de-erros">
+<h2>TRATAMENTO DE ERROS</h2>
+<ul class="simple">
+<li><cite>try</cite>: define que um bloco de instrução deve ser executado de forma que se houver um erro, este deverá ser tratado.</li>
+<li><cite>finally</cite>: instrução utilizada em conjunto com a instrução <cite>try</cite> e sempre será executada, indiferente se houve ou não exceções durante a execução.</li>
+<li><cite>throws</cite>: levanta uma exceção</li>
+<li><cite>assert</cite> - função assertiva para definir determinadas condições e levantamento de exceções em tempo de desenvolvimento.</li>
+</ul>
+</div>
+<div class="section" id="pacotes">
+<h2>PACOTES</h2>
+<ul class="simple">
+<li><cite>import</cite>: importa um determinado pacote e dispobiliza seus membros para utilização numa determinada classe.</li>
+</ul>
+</div>
+<div class="section" id="variaveis">
+<h2>VARIÁVEIS</h2>
+<ul class="simple">
+<li><cite>super</cite>: faz menção a superclasse, ou seja, a classe pai.</li>
+<li><cite>this</cite>: do inglês, <cite>this</cite> significa <cite>este</cite>. Logo, utilizamos a instrução <cite>this</cite> quando estamos trabalhado dentro de uma determinada classe e queremos fazer menção a mesma.</li>
+<li><cite>void</cite>: representa um tipo sem valor. Comumente utilizamos para trabalharmos com procedimentos ao invés de funções. Assim, como a instrução <cite>void</cite> indica que não iremos retonrar qualquer valor, entende-se que a estrutura em questão, é um procedimento.</li>
+</ul>
+</div>
+<div class="section" id="palavras-reservadas-em-desuso">
+<h2>PALAVRAS RESERVADAS EM DESUSO</h2>
+<ul class="simple">
+<li><cite>const</cite>: palavra reservada que está em desuso. Sua função, seria para a declaração de constantes. Atualmente, recomenda-se a utilizaçao da palavra reservada <cite>final</cite> para a declaração de constantes.</li>
+<li><cite>goto</cite>: a linguagem Java tem a palavra <cite>goto</cite> como sendo reservada, porém, não implementou a mesma. Provavlmente, a principal razão pela não implementação é que com a estrutura <cite>goto</cite> é possível fazer um tipo de programação não estruturada, o que não é mais recomendado.</li>
+</ul>
+</div>
+<div class="section" id="literais-reservados">
+<h2>LITERAIS RESERVADOS</h2>
+<ul class="simple">
+<li><cite>null</cite>: esta palavra define que uma variável não está apontando para nada.</li>
+<li><cite>true</cite>: valor lógico que indica verdadeiro</li>
+<li><cite>false</cite>: valor lógico que indica falso</li>
+</ul>
+</div>
 
 				</div>
 			</div>

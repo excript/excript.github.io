@@ -347,23 +347,17 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="declaracao-de-array-unidimensional">
+<h2>DECLARAÇÃO DE ARRAY UNIDIMENSIONAL</h2>
+<p>A declaração de Arrays segue a estrutura de declaração de variáveis, porém, é importante observar que um Array em Java, é um objeto. Logo, não podemos simplesmente declarar um Array, nós somos obrigados a criar uma nova instância com o operador 'new'. A seguir, temos a estrutura de declaração de Arrays:</p>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">tipo</span><span class="o">&gt;[]</span> <span class="o">&lt;</span><span class="n">nome</span><span class="o">&gt;;</span>
+</pre></div>
+<p>A primeira parte é o tipo que os elementos do nosso Array devem ter. Na sequência, abrimos e fechamos colchetes, indicando ao interpretador do Java que estamos declarando um Array e não uma variável. Por fim, devemos dar um nome para o nosso Array para que possamos manipular seus elementos.</p>
+<p>Se, por acaso desejássemos declarar um Array que contenha 100 elementos do tipo inteiro, faríamos da seguinte maneira:</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">arrayInt</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">100</span><span class="o">];</span>
+</pre></div>
+<p>Agora, definimos um <cite>Array</cite>, que contém 100 elementos, onde cada elemento é do tipo inteiro e podemos fazer acesso aos elementos através da referência <cite>arrayInt</cite>.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0044</span> <span class="o">{</span>

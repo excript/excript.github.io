@@ -501,23 +501,30 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="destrutores">
+<h2>DESTRUTORES</h2>
+<p>A linguagem PHP tem definido uma função que é invocada todas as vezes em que uma instância estiver sendo criada e também, possui uma função que será invocada, todas as vezes em que um instância estiver sendo destruida.</p>
+<p>A função que destruira a instância e removerás qualquer valor associado possui o nome de <tt class="docutils literal">__destruct()</tt>.</p>
+<p>Basicamente, podemos dizer que o destrutor é invocado quando nenhuma variável estiver referenciando este, ou então, quando a função <tt class="docutils literal">unset()</tt> for invocada passando como parâmetro a instância.</p>
+<p>A função destrutor de uma classe sempre será invocado antes da classe ser removida da memória, portanto, somos capazes de executar qualquer código antes que a instância seja destruida.</p>
+</div>
+<div class="section" id="funcao-que-destroi-a-instancia-passada-como-parametro">
+<h2>FUNÇÃO QUE DESTROI A INSTÂNCIA PASSADA COMO PARÂMETRO</h2>
+<p>Já trabalhamos com a função <tt class="docutils literal">unset()</tt> quando estavamos estudando Arrays, e fizemos uso da mesma para removermos um elemento da estrutura e também, remove-lo da memória.</p>
+<p>Durante a implementação de destrutores iremos fazer uso extensivo da função unset(), haja vista que essa é a maneira mais simples e segura que um objeto realmente será destruido, ou melhor, será enviado para o Garbage Collector.</p>
+<p>A melhor maneira para testarmos se a função de destruição de um objeto está funcionando corretamente.</p>
+<p>Vale ressaltar que a função <tt class="docutils literal">unset()</tt> ocasiona da destruição e remoção dos valores da memória de maneira irreversível, após invocarmos passando como parâmetro uma instância, não existira função para voltar atrás.</p>
+<blockquote>
+A função <tt class="docutils literal">unset()</tt> desvincula uma instância de toda e qualquer estrutura ou então, outra instância.</blockquote>
+</div>
+<div class="section" id="garbage-collector">
+<h2>GARBAGE COLLECTOR</h2>
+<p>O coletor de lixo, ou então, o <tt class="docutils literal">Garbage Collector</tt> é uma entidade especializada em remover os dados da memória que não estão mais sendo utilizados.</p>
+<p>A utilização de um coletor de lixo simplifica o trabalho do programador e evitar a grande maioria dos problemas de software, até porque, fazer acesso a uma região de memória que foi desalocada pode ocasionar problemas bizarros e que são muito dificeis de serem depurados.</p>
+<p>Então, pense no coletor de lixo como o agente responsavel em liberar toda e qualquer informação que não esteja mais em uso e principalmente, fazer todo esse trabalho de gerenciamento e averiguação de quais instâncias não estão mais em uso num bloco de instrução.</p>
+<div class="highlight"><pre><span></span><span class="x">unset($r);</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#DESTRUTORES</span>

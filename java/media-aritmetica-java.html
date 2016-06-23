@@ -347,23 +347,101 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="media-aritmetica">
+<h2>MEDIA ARITMÉTICA</h2>
+<p>Nessa aula iremos declarar um Array de inteiros e atribuiremos diversos valores ao mesmo. Em seguida, iremos calcular a média aritmética, ou seja, iremos somar todos os elementos do Array e dividir pela quantidade de elementos.</p>
+<p>Este é um excelente exercício para estuarmos as diversas maneiras que temos pra iterar listas. Assim, conseguimos verificar uma grande quantidade de informação rapidamente e com um código bastante simples.</p>
+</div>
+<div class="section" id="exemplo-1">
+<h2>EXEMPLO 1</h2>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0052A</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">];</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">9</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">6</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span>
+
+        <span class="kt">int</span> <span class="n">media</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+            <span class="n">media</span> <span class="o">+=</span> <span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+
+        <span class="kt">float</span> <span class="n">total</span> <span class="o">=</span> <span class="o">(</span><span class="kt">float</span><span class="o">)</span><span class="n">media</span> <span class="o">/</span> <span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;A média é: &quot;</span><span class="o">+</span><span class="n">total</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</div>
+<div class="section" id="exemplo-2">
+<h2>EXEMPLO 2</h2>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0052B</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">125</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">5487</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">45</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="mi">457</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="mi">887</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">6</span><span class="o">]</span> <span class="o">=</span> <span class="mi">4087</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">7</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1287</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">8</span><span class="o">]</span> <span class="o">=</span> <span class="mi">5456</span><span class="o">;</span>
+        <span class="n">nums</span><span class="o">[</span><span class="mi">9</span><span class="o">]</span> <span class="o">=</span> <span class="mi">789841</span><span class="o">;</span>
+
+        <span class="kt">int</span> <span class="n">media</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">resul</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">];</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">a</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">;</span> <span class="n">a</span><span class="o">++){</span>
+            <span class="n">media</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+            <span class="k">for</span> <span class="o">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++</span> <span class="o">)</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span> <span class="o">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="o">[</span><span class="n">resul</span><span class="o">[</span><span class="n">a</span><span class="o">]])</span> <span class="o">==</span> <span class="o">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="o">)){</span>
+                    <span class="n">resul</span><span class="o">[</span><span class="n">a</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+                <span class="o">}</span>
+                <span class="n">media</span><span class="o">+=</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">nums</span><span class="o">[</span><span class="n">resul</span><span class="o">[</span><span class="mi">0</span><span class="o">]]);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">nums</span><span class="o">[</span><span class="n">resul</span><span class="o">[</span><span class="mi">1</span><span class="o">]]);</span>
+<span class="c1">//        System.out.println(media/nums);</span>
+
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</div>
+<div class="section" id="exemplo-3">
+<h2>EXEMPLO 3</h2>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0052D</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span> <span class="n">System</span><span class="o">.</span><span class="na">in</span> <span class="o">);</span>
+        <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+<span class="c1">//        System.out.println(in.readLine());</span>
+
+
+<span class="c1">//        int soma = 0;</span>
+<span class="c1">//        for(String i:args) {</span>
+<span class="c1">//            soma += Integer.valueOf(i);</span>
+<span class="c1">//        }</span>
+<span class="c1">//        System.out.println(soma);</span>
+
+<span class="c1">//        try {</span>
+<span class="c1">//            File f = new File(args[0]);</span>
+<span class="c1">//            Fiaace();</span>
+<span class="c1">//        }</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
 
 				</div>
 			</div>

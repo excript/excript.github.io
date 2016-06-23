@@ -500,23 +500,26 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>Uma classe é uma estrutura que contém um conjunto de dados, um conjunto de operações e tem implementado as funcionalidade necessárias para a correta manipulação das informações.</p>
+</div>
+<div class="section" id="encapsulamento">
+<h2>ENCAPSULAMENTO</h2>
+<p>Todo objeto é, por definição, uma estrutura de dados especializada, também chamado de tipo abstraido de dados <tt class="docutils literal">TAD</tt>. As <tt class="docutils literal">estruturas de dados</tt>, normalmente, irão possuir membros de classes que armazenam valores - as variáveis; e membros de classe que desempenham alguma ação - as funções.</p>
+<p>Os membros de classe que são utilizados internamente, devem estar inacessíveis externamente. É interessante observar que isso não é meramente uma definição, mas sim, um conceito utilizado amplamente, inclusive pela própria natureza.</p>
+<p>Há várias formas para entendermos o encapsulamento, porém, talvez a mais importante seja a capacidade de definirmos um novo tipo de informação e fazer com que instâncias desse novo tipo sejam capazes de manter a integridade de suas informações.</p>
+<p>A única maneira para mantermos a integridade é verificando os dados que são enviados pelos membros de classe e estabelecendo através destes as regras para a correta atribuição de informações.</p>
+<p>Encapsular implica na modificação da visibilidade de membros de classe e portanto, foram definidos algumas palavras-chaves para explicitamente definirmos o escopo de cada membro.</p>
+</div>
+<div class="section" id="abstracao">
+<h2>ABSTRAÇÃO</h2>
+<p>A abstração é uma das característica de um bom encapsulamento. Entretanto, podemos escrever um código que abstrai um processo sem encapsular o mesmo. Por exemplo, um função que resolve uma somatória abstrai o cálculo através do uso de funções, porém, só com o uso de funções, não haverá encapsulamento de informação nem funcionalidade.</p>
+<p>Ao ocultarmos informações, estamos protegemos nossa estrutura da má utilização por parte do usuário e por conseguinte, acabamos protegendo o usuário de uma eventual má implementação.</p>
+<p>Assim, a abstração também é a simplificação de processos complexos. Um programa é uma abstração de algoritmos em partes independentes e que são projetados para se conectarem a outras abstrações.</p>
+<p>Uma função abstrai um processo tornando-o acessível através de um nome e seus parâmetros; uma classe abstraí um tipo de dado e suas funções de tratamento e manipulação.</p>
+<p>Quando encapsulamos um processo estaremos abstraíndo a implementação e também, os possíveis dados que são utilizados. O objetivo com a encapsulação e a abstração, é ocultar os processos e dados internos, mas disponibilizar uma interface simples para a utilização desse tipo abstrato de dados. Até porque, não existe encapsulação e abstração se não houver uma forma para o acesso das informações e funcionalidades encapsuladas. Se não houver uma interface de comunicação, nós temos um módulo independente, que é executado isoladamente e não há razão para mantermos esse código dentro de qualquer outro. Se não houver uma maneira de acesso, não haverá, por definição, utilidade e uso do código.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x"># ENCAPSULAMENTO</span>

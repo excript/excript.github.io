@@ -347,23 +347,14 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Arrays Multidimensionais são estruturas de dados que possuem duas ou mais dimensões. Em suma, temos que um Array que contém uma única dimensão funciona internamente como um Array multidimensional. A diferença está na quantidade de índices que cada elemento da nossa estrutura terá como identificador.</p>
+<p>A seguir, temos a definição de um Array de uma dimensão e a seguir, definimos um segundo Array, porém, com 2 dimensões.</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">lista</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">];</span>
+
+<span class="kt">int</span><span class="o">[][]</span> <span class="n">duas_dimensoes</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">8</span><span class="o">][</span><span class="mi">8</span><span class="o">];</span>
+</pre></div>
+<p>Acima, na segunda declaração, temos um Array de duas dimensões, e cada dimensão, possui oito elementos. Logo, temos uma estrutura 8x8, capaz de armazenar 64 números inteiros distintos.</p>
+<p>É importante observar que todas as variáveis do tipo inteiro são inicializadas, por definição da linguagem, com o valor igual a zero, caso não façamos nenhuma atribuição no momento da declaração. Logo, numa estrutura Array não será diferente, até porque, cada posição do nosso Array é de fato uma variável do tipo inteiro e assim, o valor de inicialização da mesma será igual a 0.</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0053</span> <span class="o">{</span>

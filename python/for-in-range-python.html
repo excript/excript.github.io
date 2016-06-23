@@ -371,23 +371,39 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="for-x-in-range-10">
+<h2>for x in range(10)</h2>
+<p>A estrutura de repetição for executa um ciclo para cada elemento do objeto que está sendo iterado. Nas vezes em que precisamos que determinada variável seja incrementado ou decrementada a cada ciclo, a forma mais simples, é gerando um lista com a função <tt class="docutils literal">range()</tt>.</p>
+<p>No código a seguir, temos um exemplo onde a variável item recebera um número, iniciando em zero, finalizando em 9 e cada ciclo, o número seguinte da sequência é atribuido à variável <tt class="docutils literal">item</tt>.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+<p>Se executarmos esse código, teremos algo do tipo:</p>
+<pre class="literal-block">
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre>
+<p>Imprimimos os números da sequência numérica que foi gerada com a função <tt class="docutils literal">range()</tt>.</p>
+<p>Poderíamos também, gerar uma lista iniciando em 9 e finalizando em 0. A definição da estrutura <tt class="docutils literal">for loop</tt> se mantém, precisando alterar somente, os parâmetro passados pela função <tt class="docutils literal">range()</tt>, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+<p>Para gerarmos a mesma lista numérica, porém, com a ordenação invertida, podemos utilizar a função <tt class="docutils literal">reverse()</tt> que inverte a ordem de objetos iteraveis, ou então, gerar a série numérica invertida.</p>
+<p>Invocamos a função <tt class="docutils literal">range()</tt> e definimos que o parâmetro <tt class="docutils literal">start</tt> será igual a 9, stop igual a -1, e step igual -1 também.</p>
+<p>O parâmetro <tt class="docutils literal">start</tt> não há o que comentar. O parâmetro <tt class="docutils literal">stop</tt> é igual a -1 porque o intervalo é aberto, isto é, o número do extremos não fará parte do grupo, logo, se definimos -1 o último elemento da série será 0. Por fim, definimos o <tt class="docutils literal">step</tt>, ou seja, o passo, intervalo numérico entre cada elemento igual a -1. Dessa forma, o Python inverte a ordenação do objeto iterável.</p>
+</div>
 
 				</div>
 			</div>

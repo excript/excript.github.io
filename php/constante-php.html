@@ -494,23 +494,61 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="definindo-constantes-com-a-funcao-define">
+<h2>DEFININDO CONSTANTES COM A FUNÇÃO <tt class="docutils literal">define()</tt></h2>
+<p>Em programação, constante é um valor alocado na memória que pode ser acessado por uma referência, mas que não pode ter o seu valor alterado após a mesma ser definida.</p>
+<p>O PHP possui 2 sintaxes para definição de constantes e, ainda que ambas tenham funcionamento diferente, o princípio é basicamente o mesmo - definir um valor que não pode ser alterado.</p>
+<p>A forma tradicional para definição de valores constantes da-se pelo uso da função <tt class="docutils literal">define()</tt>, essa função, define um valor imutável no escopo global e assim, podemos utiliza-la de qualquer parte do nosso código, porém, não podemos alterar seu valor.</p>
+<p>A diferença entre declarar uma constante com a função <tt class="docutils literal">define()</tt> ou então, com a palavra reservada <tt class="docutils literal">const</tt> é que a instrução <tt class="docutils literal">const</tt> declara as constantes em tempo de compilação, enquanto que a função <tt class="docutils literal">define()</tt> declara as constantes em tempo de execução. Ou seja, utilizando a função <tt class="docutils literal">define()</tt> para a declaração, podemos atribuir o nome para a constante no momento em que o código está sendo executado, porém, o mesmo não é possível com a instrução <tt class="docutils literal">const</tt>.</p>
+<p>Num comparativo performatico, temos que em algumas situações a definição com a instrução <tt class="docutils literal">const</tt> é executado mais rapidamente enquanto em outras situações, o uso da função <tt class="docutils literal">define()</tt> se mostra mais veloz.</p>
+<p>A nomenclatura de constantes é igual a nomenclatura de variáveis e o que irá diferenciar é que as constantes não são precedidas pelo caractere &quot;cifrão&quot;. Ainda que não seja obrigatório, o nome de constantes deve ser composto somente por caracteres maiúsculos. A definição de constantes com caracteres maiúsculo é um padrão que vem de outras linguagens e assim, todo programador entende que uma referência com caracteres maiúsculas trata-se de um valor constante.</p>
+<p>A definição da função <tt class="docutils literal">define()</tt> é a seguinte:</p>
+<div class="highlight"><pre><span></span><span class="x">define(&lt;identificador&gt;, &lt;valor&gt;)</span>
+</pre></div>
+</div>
+<div class="section" id="verificando-se-uma-constante-existe">
+<h2>VERIFICANDO SE UMA CONSTANTE EXISTE</h2>
+<p>É comum verificarmos antes de acessarmos uma constante se a mesma está definida, para isso, temos a função <tt class="docutils literal">defined()</tt>.</p>
+<div class="highlight"><pre><span></span><span class="x">if(defined(&quot;TOTAL&quot;))</span>
+<span class="x">    echo &quot;Constante declarada.&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="acessando-constantes">
+<h2>ACESSANDO CONSTANTES</h2>
+<p>Para utilizarmos os valores constantes definidos, basta utilizar a referência que foi utilizada na definição ou então, obter o valor definido através da função <tt class="docutils literal">constant()</tt>. Só é necessário a utilização da função <tt class="docutils literal">constant()</tt> quando definimos valores constantes dinamicante, do contrário, basta informar a referência definida na declaração.</p>
+<p><a class="reference external" href="http://stackoverflow.com/questions/2447791/define-vs-const">http://stackoverflow.com/questions/2447791/define-vs-const</a></p>
+</div>
+<div class="section" id="definindo-constantes-com-a-instrucao-const">
+<h2>DEFININDO CONSTANTES COM A INSTRUÇÃO <tt class="docutils literal">const</tt></h2>
+<p>Uma outra forma para a declaração de constantes é através do uso da palavra reservada <tt class="docutils literal">const</tt>. É comum a utilização da instrução <tt class="docutils literal">const</tt> na definição de classe ou então, dentro de um namespace. Porém, isso é somente uma convenção, logo, pode-se utilizar a instrução <tt class="docutils literal">const</tt> para definir constantes onde bem entendermos.</p>
+<p>A seguir estamos fazendo uso da instrução <tt class="docutils literal">const</tt> para declararmos uma constante.</p>
+<div class="highlight"><pre><span></span><span class="x">const VALOR = 100;</span>
+</pre></div>
+</div>
+<div class="section" id="manipulando-variaveis-por-referencia">
+<h2>MANIPULANDO VARIÁVEIS POR REFERÊNCIA</h2>
+<p>O PHP permite o acesso ao endereço de memória de uma variável. Dessa forma, temos que é possível o uso de 2 variáveis que estejam apontando para um mesmo local, isto é, duas variáveis que tenham referências diferentes porém, apontam numa mesma direção.</p>
+</div>
+<div class="section" id="constantes-magicas">
+<h2>CONSTANTES MÁGICAS</h2>
+<p>Chamamos de constantes mágicas a um grupo de constantes que tem por objetivo, retornar informaçõesn sobre a execução atual do código. Assim, temos que com as constantes mágicas, podemos obter por exemplo, o número da linha em que o script está executando, o nome da função, do namespace e outros valores.</p>
+<p>Esse conjunto de funções tem por objetivo principal auxiliar na construção de ferramentas de diagnóstico de erros ou então, para outras tarefas administrativas.</p>
+<div class="highlight"><pre><span></span><span class="x">echo __LINE__ . PHP_EOL; &lt;1&gt;</span>
+<span class="x">echo __FILE__ . PHP_EOL; &lt;2&gt;</span>
+<span class="x">echo __DIR__ . PHP_EOL; &lt;3&gt;</span>
+<span class="x">echo __FUNCTION . PHP_EOL; &lt;4&gt;</span>
+<span class="x">echo __CLASS__ . PHP_EOL; &lt;5&gt;</span>
+<span class="x">echo __METHOD__ . PHP_EOL; &lt;6&gt;</span>
+<span class="x">echo __NAMESPACE__ . PHP_EOL; &lt;7&gt;</span>
+</pre></div>
+<p>&lt;1&gt; Retorna o número da linha em execução
+&lt;2&gt; Retorna o path do arquivo que está sendo executado e seu nome
+&lt;3&gt; Retorna o diretório
+&lt;4&gt; Retorna o nome da função
+&lt;5&gt; Retorna o nome da classe
+&lt;6&gt; Retorna o nome do método
+&lt;7&gt; Retorna o nome da namespace</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">define(&quot;TESTE&quot;, 10);</span>

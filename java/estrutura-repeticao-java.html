@@ -347,23 +347,40 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="lacos-de-repeticoes-for">
+<h2>LAÇOS DE REPETIÇÕES <cite>FOR</cite></h2>
+</div>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>Os laços de repetição <cite>for</cite> são os mais utilizados pelas mais diferentes linguagens de programação. Isso é um fenômeno que se observa rapidamente quando começamos a estudar códigos de outros programadores. Assim, a minha afirmação de que é a estrutura de repetição mais utilizada está baseada em minha esperiencia, e não num estudo ou estatística.</p>
+<p>Assim, nós encontramos a estrutura <cite>for</cite> em praticamente todas as linguagem de programação estruturadas e ainda que exista diferença na declaração entre as linguanges, ha um princípio comum a todos: é um ciclo e será executado por um tempo determinado na declaração da estrutura. Ou seja, ao contrário do laço de repetição “while”, que sempre será executado até que uma condição satisfaça a sentença proposta, com o looping <cite>for</cite>, já no cabeçalho é definido o intervalo no qual o looping será executado.</p>
+<p>Talvez, a segurança de que há um intervalo finito ao utilizarmos a instrução <cite>for</cite> seja a razão pela ampla adoção desta estrutura. Uma outra caracteristica bastante importante se deve pelo fato de que no cabeçalho da instrução nós sempre fornecemos todas as informações necessárias para a execução de todos os ciclos, como também, em algumas linguanges conseguimos declarar e até incrementar valores às variáveis de acumulação.</p>
+<p>É importante saber que o looping <cite>for</cite> será a nossa melhor ferramenta para todas as situações onde nós conhecemos previamente quantos itens de uma lista nós precisamos percorrer, ou então, em situações onde precisamos executar diversas instruções em um intervalo pré-definido, como exemplo:</p>
+<p>execute o ciclo no intervalo de 1 até 100
+execute o ciclo no intervalo de 0 a 1000 incrementando sempre 2 unidades numéricas à nossa variável acumuladora</p>
+</div>
+<div class="section" id="estrutura-for-em-outras-linguagens">
+<h2>ESTRUTURA <cite>for</cite> EM OUTRAS LINGUAGENS</h2>
+<p>No Python, nós utilizamos a instrução <cite>for</cite> de maneira bastante particular. Como já vimos, a ideia por detrás da instrução <cite>for</cite> é igual em todas as linguagens de programação, mas a sua estrutura de declaração ainda que sejam diferentes, possuem partes iguais.</p>
+</div>
+<div class="section" id="o-que-e-um-ciclo-de-repeticao">
+<h2>O QUE É UM CICLO DE REPETIÇÃO?</h2>
+<p>Ciclo é um fenômeno pertencente a uma série ou então, a uma determinada situação / evento. Logo, todo ciclo é por definição, a execução de um elemento, intervalo e é único, até porque, todo ciclo possui características que o distinguem dos demais. A exemplo, temos que se houverem 10 ciclos seguidos, cada um será executado após o outro. Logo, temos que os ciclos são ordenados e assim, são fenômenos independentes, mas que pertencem a um mesmo evento ou série.</p>
+<p>O mais importante a saber é que um ciclo pode ou não repetir as mesmas instruções, na mesma ordem ou em ordem diferente, contendo as mesmas caracteristicas ou mesmo, contendo caracteristicas únicas ao seu ciclo.</p>
+<p>Agora, todo ciclo na programação irá, obrigatoriamente, executar um mesmo bloco de instrução, mas esse bloco pode conter diversos controles de fluxos que alteram a execução das instruções o que acaba por obter resultados diferentes e únicos de um determinado ciclo.</p>
+<p>Por exemplo, em C, C++ e Java, nós utilizamos a seguinte estrutura:</p>
+<blockquote>
+for( &lt;parte1&gt;; &lt;parte2&gt;; &lt;parte3&gt; )</blockquote>
+<p><cite>for`&lt;parte1&gt; definição do início do ciclo e a(s) variável(is) acumuladora(s).
+Assim, temos que a parte1 da declaração da estrutura `for</cite> é o local onde nós declaramos uma ou mais variáveis, definimos o nome e atribuímos os valores iniciais a uma ou então ao conjunto de variáveis.</p>
+<p><cite>&lt;parte2&gt;</cite> condição para a continuação ou interrompimento do laço de repetição
+O segunda parte a ser declarada em uma estrutura <cite>for</cite> é aquela que define a condição para a repetição do ciclo. Assim, temos que o meio do cabeçalho da estrutura <cite>for</cite> é onde nós colocamos a condição e essa muito provavelmente estabelecerá a condição verificando a &lt;parte1&gt; com a <cite>&lt;parte3&gt;</cite> da nossa estrutura.</p>
+<p><cite>&lt;parte3&gt;</cite> incremento ou decremento da variável(is) declaradas na &lt;parte1&gt;. Ou seja, será na parte 3 onde nós modificaremos o valor da(s) variável(is) acumuladoras. Fato é que a terceira parte da estrutura é responsável pelo “andamento” do laço. Em outras palavras, podemos dizer que a terceira parte tem a responsabilidade de estabelecer qual será a mudança nas variáveis acumuladoras.</p>
+<p>Se, por alguma razão a terceira parte for omitida ou então, mau implementada, o resultado será que os ciclos se repetiram e muito raras serão as vezes em que precisamos repetir um ciclo!</p>
+<p>PARA PENSAR: as estruturas de repetição normalmente repetem instruções, porém, com parâmetros diferentes. Isto é, as instruções são sempre as mesmas, mas os paramêtros que são passados a cada instrução, normalmente são diferentes e é por essa razão que executamos as instruções através de um ciclo de repetição.
+Então, não confunda: ciclo de repetição repete as instruções, mas não necessáriamente os atributos e parâmetros que são na maioria das vezes, diferentes e pertencem a um único ciclo.</p>
+<p>Por fim, temos que as linguagens que possuem a sintaxe do C herdaram as caracteristicas do ciclo de repetição <cite>for</cite>, que como vimos, é compostos por 3 partes distintas.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0020</span> <span class="o">{</span>

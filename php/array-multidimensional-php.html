@@ -496,23 +496,79 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="arrays-multidimensionais">
+<h2>ARRAYS MULTIDIMENSIONAIS</h2>
+<p>Array Multidimensional é uma estrutura que tem vinculado um outro Array. Podemos construir estruturas com quantas dimensões forem necessárias, porém, na maior parte das vezes trabalharemos com estruturas que tenham 2 dimensões, ou seja, estruturas que armazenam informações tabulares e que também são chamadas de Tabelas, ou então, Planilhas.</p>
+<p>Estruturas multidimensionais em PHP também são representadas como Matrizes onde temos: Linhas * Colunas.</p>
+<div class="highlight"><pre><span></span><span class="x">$jogo = array</span>
+<span class="x">(</span>
+<span class="x">    array(1, &quot;Zé&quot;, 11),</span>
+<span class="x">    array(2, &quot;José&quot;, 4),</span>
+<span class="x">    array(3, &quot;Zéca&quot;, 22)</span>
+<span class="x">);</span>
+</pre></div>
+<p>A estrutura do Array acima pode também ser representada seguinte maneira:</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="29%" />
+<col width="43%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>ID</td>
+<td>NOME</td>
+<td>PONTOS</td>
+</tr>
+<tr><td>1</td>
+<td>Zé</td>
+<td>11</td>
+</tr>
+<tr><td>2</td>
+<td>José</td>
+<td>4</td>
+</tr>
+<tr><td>3</td>
+<td>Zéca</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="x">$jogo = array</span>
+<span class="x">(</span>
+<span class="x">    array(1, &quot;Zé&quot;, 11),</span>
+<span class="x">    array(2, &quot;José&quot;, 4),</span>
+<span class="x">    array(3, &quot;Zéca&quot;, 22)</span>
+<span class="x">);</span>
+
+<span class="x">for ($linha=0; $linha&lt;3; $linha++) {</span>
+<span class="x">    for ($coluna=0; $coluna&lt;3; $coluna++) {</span>
+<span class="x">        echo $jogo[$linha][$coluna].&quot;  &quot;;</span>
+<span class="x">    }</span>
+<span class="x">    echo &quot;&lt;br/&gt; \n&quot;;</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+<div class="section" id="arrays-multidimensionais-contendo-estruturas-de-dados">
+<h2>ARRAYS MULTIDIMENSIONAIS CONTENDO ESTRUTURAS DE DADOS</h2>
+<p>É bastante comum encontrarmos código que possuem Arrays associados a chaves e estes, estão representando estruturas de informações que por exemplo, serão enviadas a um componente. A seguir, temos um código demonstrativo de como essas estruturas aparecerão.</p>
+<div class="highlight"><pre><span></span><span class="x">$x = [</span>
+<span class="x">        &quot;array1&quot; =&gt; [</span>
+<span class="x">            &quot;aaa&quot;=&gt;100,</span>
+<span class="x">            &quot;bbb&quot;=&gt;200,</span>
+<span class="x">            &quot;ccc&quot;=&gt;300</span>
+<span class="x">        ],</span>
+<span class="x">        &quot;array2&quot; =&gt; [</span>
+<span class="x">            &quot;ddd&quot;=&gt;500,</span>
+<span class="x">            &quot;eee&quot;=&gt;600,</span>
+<span class="x">            &quot;fff&quot;=&gt;700</span>
+<span class="x">        ]</span>
+<span class="x">    ];</span>
+
+<span class="x">echo $x[&quot;array&quot;][&quot;bbb&quot;];</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#   | ID | NOME | PONTOS |</span>

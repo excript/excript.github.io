@@ -347,23 +347,70 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="como-formatar-um-array">
+<h2>COMO FORMATAR UM ARRAY</h2>
+<p>O Java não possui uma maneira para nós imprimirmos um Array de forma organizada no prompt de comando. Logo, é nossa responsabilidade tratar e manipular a maneira como os elementos serão impressos. O trabalho que aqui realizaremos, não é muito diferente daquilo que estamos estudando até agora, até porque, nós iremos montar uma sequência de caracteres e em seguida, mandaremos essa sequência de caracteres para a saída padrão do computador.</p>
+<p>Nesse exemplo, ao invés de utilizarmos a função System.out.println(), nós iremos fazer uso da função:</p>
+<div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">();</span>
+</pre></div>
+<p>A função &quot;printf()&quot; significa, respectivamente:</p>
+<div class="highlight"><pre><span></span><span class="n">print</span> <span class="o">=</span> <span class="n">imprimir</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">format</span>
+</pre></div>
+<p>Ou seja, imprima formatado. A formatação é uma forma para adicionarmos conjuntos de caracteres dentro de outro conjunto, bem como, definir a quantidade de números zeros que deve haver após a vírgula ou então, a frente do número.</p>
+<p>--Formatando Strings no Java
+Muitas vezes quando manipulamos Strings (textos), temos a necessidade formatar alguns formatos de dados, como por exemplo, a quantidade de casas decimais que um número deve possuir.
+Se nós não informarmos quantas casas depois da vírgula desejamos, o Java irá imprimir com a quantidade de casas padrão e nem sempre os nossos sistemas deveram estar no padrão do Java.</p>
+<p>Porém, as casas decimais são somente um exemplo, até porque, muitas são as informações que iremos desejar personalizar.</p>
+</div>
+<div class="section" id="funcao-system-out-printf">
+<h2>FUNÇÃO <cite>System.out.printf</cite></h2>
+<p>Quem já teve algum contato com a linguagem de programação C ou C++ irá sentir-se familiar com a função printf e seus parâmetros. O Java, como diversas linguagens de programação, incorporaram num primeiro momento as funcionalidades que os programadores já estavam acostumados.</p>
+<div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;Total: %10.2f: &quot;</span><span class="o">,</span> <span class="n">tot</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;% 4d&quot;</span><span class="o">,</span> <span class="n">valint</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%20.10s\n&quot;</span><span class="o">,</span> <span class="n">valstr</span><span class="o">);</span>
+</pre></div>
+</div>
+<div class="section" id="caracteres-a-serem-substituidos">
+<h2>CARACTERES A SEREM SUBSTITUIDOS</h2>
+<p>d : valores inteiros (byte, short, int, long)
+f : números com ponto flutuante (float, double)
+c : caractere (caso o C seja maiúsculo, o caractere será impresso maiúsculo)
+s : string (Caso o S seja maiúsculo, toda a string também será)</p>
+</div>
+<div class="section" id="formatacao-de-inteiros">
+<h2>FORMATAÇÃO DE INTEIROS</h2>
+<p>A seguir, temos uma lista com exemplos da utilização dos caracteres que serão substituídos e também, há varias formatações que podemos utilizar.</p>
+<p>%d: imprime o número inteiro sem qualquer modificação.
+%6d: Se o número inteiro tiver menos do que seis dígitos, será adicionado zeros a esquerda até que a quantidade de dígitos seja igual a 6.
+% .2d: Neste caso estamos forçando a quantidade de dígitos que o valor terá.</p>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">com.javacodegeeks.core.string</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringFromatExample</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%-12s%-12s%s\n&quot;</span><span class="o">,</span><span class="s">&quot;Coluna 1&quot;</span><span class="o">,</span><span class="s">&quot;Coluna 2&quot;</span><span class="o">,</span><span class="s">&quot;Coluna 3&quot;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%-12d%-12d%07d\n&quot;</span><span class="o">,</span><span class="mi">15</span><span class="o">,</span><span class="mi">12</span><span class="o">,</span><span class="mi">5</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<div class="section" id="formatacao-de-numero-com-ponto-flutuante-double-e-float">
+<h2>FORMATAÇÃO DE NÚMERO COM PONTO FLUTUANTE - <cite>double</cite> e <cite>float</cite></h2>
+<p>%f: imprime o número bruto
+%15f: imprime o número bruto. Caso o mesmo tenha menos do que 15 casas decimais, sera preenchido com zeros a direita até que o a quantidade de dígitos seja igual a 15.
+% .8f: Restringe a quantidade de caracteres em 8 dígitos.
+% 9.4f: imprimirá no máximo 4 casas decimais, enquanto que a base, caso não tenha 9 dígitos, será colocado zeros a esquerda até que seja igual a 9.</p>
+<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">com.javacodegeeks.core.string</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringFromatExample</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%-12s%-12s\n&quot;</span><span class="o">,</span><span class="s">&quot;Column 1&quot;</span><span class="o">,</span><span class="s">&quot;Column 2&quot;</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;%-12.5f%.20f&quot;</span><span class="o">,</span> <span class="mf">12.23429837482</span><span class="o">,</span><span class="mf">9.10212023134</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0045</span> <span class="o">{</span>

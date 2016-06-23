@@ -347,23 +347,65 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Nessa aulas sobre variáveis, estudamos como atribuir um valor a uma variável.
+Agora, estudaremos como verificar se um valor é igual a outros valor, ou seja,
+veremos a utilização do operador que determina a relação entre dois operandos e os erros que geralmente ocorre pela
+utilização errada entre os operadores de comparação e de atribuição.</p>
+<div class="section" id="codigo">
+<h2>CODIGO</h2>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+                <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="o">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">9</span><span class="o">;</span>
+
+                <span class="kt">int</span> <span class="n">resultado</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+                <span class="n">resultado</span><span class="o">+=</span><span class="mi">3</span><span class="o">;</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">resultado</span><span class="o">);</span>
+
+                <span class="n">resultado</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+                <span class="n">resultado</span> <span class="o">=</span> <span class="n">resultado</span> <span class="o">+</span> <span class="mi">3</span><span class="o">;</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">resultado</span><span class="o">);</span>
+
+                <span class="kt">int</span> <span class="n">resultado2</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+                <span class="n">resultado2</span> <span class="o">-=</span> <span class="n">y</span><span class="o">;</span><span class="c1">//resultado2 = resultado2 - y;</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">resultado2</span><span class="o">);</span>
+
+                <span class="kt">int</span> <span class="n">resultado3</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+                <span class="n">resultado3</span> <span class="o">*=</span> <span class="n">y</span><span class="o">;</span><span class="c1">//resultado3 = resultado3 * y;</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">resultado3</span><span class="o">);</span>
+
+                <span class="kt">int</span> <span class="n">resultado4</span> <span class="o">=</span> <span class="mi">15</span><span class="o">;</span>
+                <span class="n">resultado4</span> <span class="o">/=</span> <span class="n">x</span> <span class="o">;</span><span class="c1">//resultado4 = resultado4 / x;</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">resultado4</span><span class="o">);</span>
+
+                <span class="kt">int</span> <span class="n">resultado5</span> <span class="o">=</span> <span class="mi">15</span><span class="o">;</span>
+                <span class="n">resultado5</span> <span class="o">%=</span> <span class="n">y</span><span class="o">;</span><span class="c1">//resultado5 = resultado5 % x;</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">resultado5</span><span class="o">);</span>
+        <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+<p>Quais os operadores de atribuição da linguagem Java?
+Em Java, temos um único operador de atribuição simples e 5 operadores compostos. O operador simples é representado por um único sinal de igual, enquanto que os operadores compostos são constituídos pela junção do operador de atribuição simples junto com um operador matemático.</p>
+<p>Todos os operadores que estudamos em aulas passadas, agora, possuíram um operador correspondente de atribuição. A seguir, podemos ver a lista completa:</p>
+<ul class="simple">
+<li><cite>+=</cite></li>
+<li><cite>-=</cite></li>
+<li><cite>/=</cite></li>
+<li><cite>*=</cite></li>
+<li><cite>%=</cite></li>
+</ul>
+<p>Agora, se nós utilizássemos expressões, nós teríamos algo semelhante a listagem que se segue:</p>
+<ol class="arabic simple">
+<li>x <cite>-=</cite> 1   (é igual)   x <cite>=</cite> x <cite>-</cite>' 1;</li>
+<li>x <cite>+=</cite> 1   (é igual)   x <cite>=</cite> x <cite>+</cite>' 1;</li>
+<li>x <cite>*=</cite> 1   (é igual)   x <cite>=</cite> x <cite>*</cite>' 1;</li>
+<li>x <cite>/=</cite> 1   (é igual)   x <cite>=</cite> x <cite>/</cite>' 1;</li>
+<li>x <cite>%=</cite> 1   (é igual)   x <cite>=</cite> x <cite>%</cite>' 1;</li>
+</ol>
+<p>Então, o que os operadores compostos realizam é a soma do valor da variável mais o valor que se deseja somar, essa é a finalidade desses operadores, disponibilizar uma maneira rápida e simples e incrementar um valor X a um determinado número.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0025</span> <span class="o">{</span>

@@ -375,23 +375,58 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="introducao-a-iteracao-de-listas">
+<h2>INTRODUÇÃO À ITERAÇÃO DE LISTAS</h2>
+<p>O estudo da iteração de listas é de fato, a explicação do por que estudamos anteriormente as Estruturas de Repetição e também, a Estrutura de Dados Lista.</p>
+<p>A iteração tem o objetivo de percorrer os elementos contidos numa lista. Estudamos, que o Python possui 2 instruções definidas para que sejamos capazes de trabalhar com Iteração.</p>
+<p>A estrutura de repetição <tt class="docutils literal">while</tt> pode iterar uma lista incrementando um objeto numérico a cada ciclo e acessando assim, um elemento diferente em ciclos diferentes.</p>
+<p>Da mesma forma, estudamos, que a estrutura de repetição <tt class="docutils literal">for</tt> é especializada na iteração de listas. Dessa forma, não é necessário a definição de quase nada, bastando somente informar uma variável que recerá um novo elemento a cada ciclo, e a lista que queremos iterar.</p>
+</div>
+<div class="section" id="iteracao-de-listas-com-a-instrucao-while">
+<h2>ITERAÇÃO DE LISTAS COM A INSTRUÇÃO <tt class="docutils literal">while</tt></h2>
+<p>No código a seguir, percorreremos todos os elementos cotidos numna lista e imprimiremo-os na saída padrão com a instrução <tt class="docutils literal">while</tt>.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">num_elementos_lista</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">num_elementos_lista</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<div class="section" id="iteracao-de-listas-com-a-instrucao-for">
+<h2>ITERAÇÃO DE LISTAS COM A INSTRUÇÃO <tt class="docutils literal">for</tt></h2>
+<p>No código a seguir, percorreremos todos os elementos cotidos numna lista e imprimiremo-os na saída padrão com a instrução <tt class="docutils literal">for</tt>.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+<p>O código acima, poderia também ser feito, definindo a lista na própria estrutura <tt class="docutils literal">for</tt>.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+<p>É fácil perceber que na maior parte das vezes iremos manipular listas com a estrutura de repetição <tt class="docutils literal">for</tt>, até porque a mesma, é projetada para este fim.</p>
+</div>
+<div class="section" id="realizando-operacoes-com-elementos-da-lista">
+<h2>REALIZANDO OPERAÇÕES COM ELEMENTOS DA LISTA</h2>
+<p>A principal razão para percorremos todos elementos de uma lista é a capacidade de realizar determinada operação sobre cada elemento. No código a seguir, vamos percorrer os elementos, executar uma expressão matemática e imprimir o resultado na saída padrão.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>
+<span class="o">&gt;&gt;&gt;</span>     <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+<span class="mi">10</span>
+<span class="mi">20</span>
+<span class="mi">30</span>
+<span class="mi">40</span>
+<span class="mi">50</span>
+</pre></div>
+<p>No código acima, multiplicamos o valor de cada elemento da lista por 10 e em seguida, imprimimos o resultado na saída padrão.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>

@@ -494,23 +494,47 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="funcoes-e-o-escopo-de-variaveis">
+<h2>FUNÇÕES E O ESCOPO DE VARIÁVEIS</h2>
+<p>As funções em PHP possuem seu escopo restrito de forma a tornar o bloco de instrução da função isolado. Temos que de dentro de uma função, não existe visibilidade das variáveis definidas no script.</p>
+<p>Todas as variáveis que são declaradas no corpo de um arquivo possuem escopo global, isto é, podem ser acessadas de qualquer parte do código. Já, as variáveis declaradas dentro de uma função, não serão visíveis externamente da mesma maneira que não é possível acessar as variáveis de escopo global de dentro de uma função.</p>
+<p>Em PHP temos diversos escopos e iremos no decorrer do curso estudar cada um deles.</p>
+<ul class="simple">
+<li>Escopo global</li>
+<li>Escopo de funções</li>
+<li>Escopo de classes</li>
+<li>Escopo de namespace</li>
+</ul>
+</div>
+<div class="section" id="escopo-de-funcao">
+<h2>ESCOPO DE FUNÇÃO</h2>
+<p>O primeiro nível de escopo é o escopo de variáveis. É comum chamarmos o escopo de funções como escopo local, logo, tudo que for declarado dentro de uma função será desalocado no momento em que está finalizar a execução.</p>
+<div class="highlight"><pre><span></span><span class="x">function funcEstudo(){</span>
+<span class="x">    $valor1 = 10;</span>
+<span class="x">    $valor2 = 16;</span>
+<span class="x">    $total = $valor1 + $valor2;</span>
+<span class="x">}</span>
+
+<span class="x">funcEstudo();</span>
+
+<span class="x">echo $total;</span>
+</pre></div>
+<p>O código acima se executado, levantará uma exceção dizendo que a variável $total não existe. Então, como regra geral, tudo que acontecer dentro de uma função será finalizado com esta.</p>
+<div class="highlight"><pre><span></span><span class="x">$x = &#39;Fala&#39;; // global $x</span>
+<span class="x">function funcaoX()</span>
+<span class="x">{</span>
+<span class="x">    global $x;</span>
+<span class="x">    $x .= &#39; galera!!!&#39;;</span>
+<span class="x">    echo $x;</span>
+<span class="x">}</span>
+
+<span class="x">funcaoX();</span>
+</pre></div>
+<p>Uma outra forma de acesso a variável <tt class="docutils literal">$x</tt> é utilizando o array <tt class="docutils literal">$GLOBALS</tt>.</p>
+<div class="highlight"><pre><span></span><span class="x">$GLOBALS[&#39;x&#39;] .= &#39; World&#39;; // change global $x</span>
+</pre></div>
+<p>AS VARIÁVEIS NÃO SÃO DESTRUÍDAS AO TÉRMINO DO BLOCO DE INSTRUÇÃO!!! ALTERAR VÍDEO AULA!!</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">$testando = 10;</span>

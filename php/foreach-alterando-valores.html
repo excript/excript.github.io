@@ -494,23 +494,14 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="alteracao-de-valores-e-a-estrutura-foreach">
+<h2>ALTERAÇÃO DE VALORES E A ESTRUTURA FOREACH</h2>
+<p>É recorrente a dúvida do porque não é possível alterar o valor dos elementos quando utilizamos o laço de repetição <tt class="docutils literal">foreach</tt>. Para nós estudarmos essa situação, vamos fazer uma simples implementação e então estudar o que está acontecendo.</p>
+<p>É comum ao iterarmos Arrays precisarmos alterar o valor do elemento que está sendo iterado. Porém, se utilizarmos a definição padrão, não será possível alterar o valor dos elementos e como perceberemos, a alteração irá ocorrer, porém, não no elemento contido no nosso Array.</p>
+<p>Isso acontece, porque o PHP atribui a variavel que nós definimos no cabeçalho da estrutura <tt class="docutils literal">foreach</tt> uma cópia do valor do nosso elemento contido no Array, por essa razão, se alterarmos o valor passado pela variável definida no cabeçalho, a alteração não irá ocorrer no elemento contido no Array, mas sim, na variável que está sendo utilizada para iterar o Array.</p>
+<p>A solução a esse problema, é definirmos no cabeçalho da estrutura <tt class="docutils literal">foreach</tt> que deve ser passado a referência do elemento contido no nosso Array, e não a copia do valor do elemento.</p>
+<p>Nós ainda não estudamos a passagem de valores através do uso de referência, porém, pense na referência como sendo um ponteiro para uma região na memória em que a variável guarda o valor.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#ITERAÇÃO E ALTERAÇÃO DOS VALORES</span>

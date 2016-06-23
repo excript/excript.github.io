@@ -494,23 +494,44 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Toda linguagem de programação possui suas próprias definições e com o PHP não é diferente. O nosso objetivo agora, é estudar as principais definições da linguagem PHP.</p>
+<div class="section" id="instrucao">
+<h2>INSTRUÇÃO</h2>
+<p>Conjunto de caracteres que normalmente é uma palavra e possui um significado para o interpretador, fazendo com que o mesmo desempenhe uma tarefa.</p>
+<p>Um programa ou <cite>script</cite> nada mais é do que um conjunto de instruções numa ordem lógica a fim de realizar uma determinada tarefa. Logo, o nosso objetivo como programadores, é definir o conjunto de instruções necessárias para a realização da tarefa.</p>
+<p>Toda instrução PHP deve ser finalizada com um ponto e vírgula. Para o interpretador, tudo que estiver num mesmo intervalo entre ponto-e-vírgula será considerado uma mesma instrução. Logo, podemos dizer que o interpretador distingue entre duas instruções pela presença do caractere ponto-e-vírgula.</p>
+<p>É comum, escrevemos uma instrução por linha, até porque, isso melhora a legibilidade do nosso código. Porém, nós podemos escrever todas as instruções utilizando uma única linha, desde que seja posto o ponto-e-vírgula ao término de cada instrução.</p>
+</div>
+<div class="section" id="indentacao">
+<h2>INDENTAÇÃO</h2>
+<p>Indentaçao é o espaçamento da margem até determinada instrução. Um código indentado é um código que está contido numa estrutura hierárquica, onde cada nível se diferencia do outro pela quantidade de espaçamento da margem até a instrução, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+  <span class="nv">$variavel1</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span>
+  <span class="nv">$variavel2</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span>
+  <span class="p">{</span>
+    <span class="nv">$num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span>
+    <span class="nv">$num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span><span class="o">&lt;</span><span class="mi">4</span><span class="o">&gt;</span>
+  <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+<p>Acima temos um código onde declaramos e inicializamos 4 variáveis. As duas primeiras, ou seja, onde temos as marcações 1 e 2, contém um único espaçamento da margem até o primeiro caractere. Já, as duas últimas 3 e 4,  contém quatro caracteres, contando da margem até a declaração da variável.</p>
+<p>Então, nós temos que as duas últimas declarações estão um nível a frente, logo, entende-se que estás estão contidas em um outro bloco de instruções.</p>
+<p>Em PHP, não há a obrigatoriedade de manter o código indentado, porém, essa é uma boa prática de programação e assim, devemos adotar esse padrão. Do contrário, veja como é muito mais dificil de entender um código que não possui indentação:</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span> <span class="nv">$variavel1</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span><span class="nv">$variavel2</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;{</span><span class="nv">$num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span><span class="nv">$num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;}</span><span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+<p>O código acima funciona sem qualquer problema, até porque, cada instrução está sendo finalizando com um ponto e vírgula. Porém, como pode-se perceber, a legibilidade do código é muito mais complicada.</p>
+<p>Temos que o primeiro e o segundo código apresentado desempenham a mesma função, porém, se tratando de legibilidade, o segundo código é muito mais dificil de ser interpretado por humanos e isso se deve pela única razão de o mesmo não estar devidamente indentado.</p>
+<p>Aprenderemos, no decorrer do curso, diversas instruções para a manipulação do fluxo de controle do nosso código, ou seja, estruturas que são utilizadas para escolher qual bloco deve ser executado. Todas as vezes em que uma estrutura for utilizada, iremos indentar o código referente ao seu bloco de instrução com espaçamentos a mais do que o nível onde a estrutura está declarada. Logo, será a partir dessas aulas que conseguiremos perceber a importância que é manter o código indentado.</p>
+</div>
+<div class="section" id="espacos-em-branco">
+<h2>ESPAÇOS EM BRANCO</h2>
+<p>Todo código em PHP pode conter espaços em branco indefinidamente, ou seja, todos os espaços em branco que não forem considerados como instruções, serão automaticamente ignorados, da mesma forma como a quebra de linha e outros caracteres especiais.</p>
+<p>Por essa razão é que a indentação é facultativa, ou seja, no momento em que o código for interpretado o que realmente ira importar é o emprego do ponto e vírgula ou então, dos caracteres de abertura e fechamento de chaves: <cite>{</cite> e <cite>}</cite></p>
+</div>
+<div class="section" id="ponto-e-virgula">
+<h2>PONTO E VÍRGULA</h2>
+<p>Acabamos de estudar que cada instrução deve ser finalizada com ponto e vírgula, logo, não há necessidade de explicarmos novamente a grande tarefa que esse caractere representa dentro do noso código.</p>
+</div>
 
 				</div>
 			</div>

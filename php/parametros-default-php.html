@@ -494,23 +494,17 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="parametros-default">
+<h2>PARÂMETROS DEFAULT</h2>
+<p>Um recurso bastante importante é a definição de valores <tt class="docutils literal">default</tt> para os parâmetros. Assim, caso o usuário não defina um valor de um parâmetro, este já terá um valor por padrão.</p>
+<div class="highlight"><pre><span></span><span class="x">function login($user=&quot;user&quot;, $senha=&quot;123&quot;)</span>
+<span class="x">{</span>
+<span class="x">    echo &quot;user: &quot; . $user;</span>
+<span class="x">    echo &quot;senha: &quot; . $senha;</span>
+<span class="x">}</span>
+</pre></div>
+<p>É importante lembrar que se invocarmos uma função sem passarmos os parâmetros que estão definidos, o PHP levantará uma exceção.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">function login($user=&quot;root&quot;, $key=&quot;123&quot;){</span>

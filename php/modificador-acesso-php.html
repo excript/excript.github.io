@@ -501,23 +501,31 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="introducao-aos-modificadores-de-acesso">
+<h2>INTRODUÇÃO AOS MODIFICADORES DE ACESSO</h2>
+<p>Os membros de classe podem ter o seu nível de acesso alterado, ou seja, podemos definir que um membro de classe seja público, enquanto outro, tenha seu uso restrito a classe em que este foi declarado. Também é possível definir que um determinado membro esteja disponível somente dentro das classes derivadas.</p>
+<p>É comum nós falarmos que os modificadores de acesso alteram a visibilidade dos membros de classe, até porque, cada modificador define o nível de visibilidade e assim, temos membros visíveis em diferentes partes de um código.</p>
+<p>Cada membro de classe, implicitamente, possuirá um nível de acessibilidade que determinará onde o este poderá ser acessado.</p>
+<p>O conceito de restringir o acesso aos membros de classe está diretamente relacionado ao conceito de encapsulamento e abstração de dados, até porque, é dessa forma que restringiremos a visibilidade dos membros de uso interno da classe e também, será assim que disponibilizaremos uma interface de acesso.</p>
+</div>
+<div class="section" id="o-conceito-de-interface-publica">
+<h2>O CONCEITO DE INTERFACE PÚBLICA</h2>
+<p>Uma interface pública, nada tem a ver com a parte gráfica de uma aplicação. Este conceito está relacionado com a orientação a objetos e significa o conjunto de funções e atributos que estão definidos como sendo de utilização público, ou seja, estes podem ser utilizados por qualquer instância ou então, pelas subclasses.</p>
+<p>Todo objeto irá possuir uma interface pública para que possamos interagir com o mesmo. Para a definição da interface pública, é recomendado o uso restritivo, isto é, sempre atribuir o maior grau de restrição possível a cada membro de classe. Isso faz com que tenhamos menos trabalho para testarmos cada estrutura, diminui a incompatibilidade entre futuras versões, garante coesão, abstração e encapsulamento da informação.</p>
+<p>A linguagem PHP, disponibiliza 3 modificadores de acesso:</p>
+<p>public (omissão) - o modificador que garante a visibilidade em qualquer lugar do nosso código
+protected - restringe o acesso às classes derivadas
+private. - restring o acesso a classe em que esta contido</p>
+</div>
+<div class="section" id="os-conceitos-de-visibilidade-de-membros">
+<h2>OS CONCEITOS DE VISIBILIDADE DE MEMBROS</h2>
+<p>A utilização dos modificadores de acesso é bastante simples, porém, há várias situações onde podemos nos confundir, e é por essa razão, que qualquer prova de orientação a objetos, tenha no mínimo uma questão sobre modificadores de acesso e por vezes, a questão é uma pegadinha.</p>
+<p>A maneira mais fácil, e na minha concepção, a mais lógica, é pensar da seguinte maneira:</p>
+<p>O que é público é de todos, então, uma membro público poderá ser acessado de qualquer lugar do nosso código, seja através de uma instância de classe, ou então, dentro de uma classe derivada.</p>
+<p>O que é privado, por outro lado, é de uso exclusivo e por isso, ninguém deve ter acesso. Por isso, temos que membros privados só poderão ser acessados dentro da classe onde estes foram declarados.</p>
+<p>Por fim temos o nível de acesso protegido. O que é protegido pode ser acessado, porém, com algumas ressalvas e devemos seguir algumas regras. Então, um membro protegido pode ser acessado, mas com uma condição: dentro das classes derivadas.</p>
+<p>Então, quando um programador define um membro como protegido, o que ele está dizendo, é que as subclasses, isto é, todas as classes herdeiras, podem acessar o membro diretamente. Porém, as instâncias terão o acesso restringido. Dai vem o nome protegido, ou seja, somente quem pode acessar é o pai e seus filhos, no caso, o membro protegido está restrito a família em que este foi definido.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x"># MODIFICADORES DE ACESSO I - public e private</span>

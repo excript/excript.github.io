@@ -347,23 +347,18 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="instrucao-break-na-pratica">
+<h2>INSTRUÇÃO BREAK NA PRÁTICA</h2>
+<p>Um laços pode ser interrompido a qualquer momento, como estudamos na aula anterior. Porém, há diversas formas em que podemos trabalhar com a instrução <cite>break</cite>, instrução responsável pela interrupção de uma execução. Nessa aula, o nosso objetivo será investigar com exemplos as diferentes maneiras de utilização da instrução &quot;break&quot; dentro das estruturas de repetição.</p>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[])</span> <span class="n">args</span><span class="o">{</span>
+  <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">!=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="o">)</span>
+      <span class="k">break</span><span class="o">;</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+<p>Acima temos um exemplo com o uso da instrução <cite>break</cite> que está contido dentro do laço de repetição <cite>for</cite>. É importante saber que a instrução &quot;break&quot; interrompe qualquer laço. Ou seja, podemos interromper o iterador &quot;while&quot; ou então, o <cite>do-while</cite> da mesma forma, ou seja, somente invocando a instrução <cite>break</cite>.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0038</span> <span class="o">{</span>

@@ -347,23 +347,26 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Como utilizar o label? Muitas serão as vezes em que uma estrutura estará contida dentro de outra, até porque, até porque, essa é a maneira mais prática para iterarmos uma estrutura multidimensional, ou então, verificarmos uma condição numa lista.</p>
+<p>Se em um determinado momento verificarmos que não mais precisamos executar o looping que está executando o nosso looping, como poderemos interromper a execução do laços externos ao que estamos contido?</p>
+<p>É sempre importante lembrar que a instrução <cite>break</cite> ou então a instrução <cite>continue</cite> interrompem o laço de repetição do bloco onde estão contidas, porém, se quisermos interromper não somente o laço onde estamos contidos mas também, o laço que contém o laço em que estamos, como resolver esse problema?</p>
+<p>Para essas situações, podemos utilizar os <cite>labels</cite> para que assim, possamos dar nome a cada estrutura de controle e também, para podermos manipulá-las quando precisarmos. Essa é a função dos <cite>labels</cite>, atribuir nomes às estruturas fornecendo uma maneira de manipularmos as mesmas quando necessário, como no exemplo a seguir:</p>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">//podemos nos referir a estrutura &quot;if&quot; através do &quot;label&quot; que a contém</span>
+  <span class="n">label1</span><span class="o">:{</span>
+    <span class="k">if</span><span class="o">(</span><span class="mi">1</span><span class="o">==</span><span class="mi">1</span><span class="o">){</span>
+    <span class="o">}</span>
+   <span class="o">}</span>
+
+  <span class="c1">//O label 2 contém o laço &quot;for&quot;, logo passamos a ter controle sob o mesmo</span>
+  <span class="n">label</span> <span class="mi">2</span><span class="o">:{</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">!=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>A utilização dos labels não é amplamente utilizada, porém, o seu poder está além de uma simples demonstração. Todas as vezes em que precisarmos ter um controle sob determinada estrutura, essa é a única maneira em que podemos fazer.</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0039</span> <span class="o">{</span>

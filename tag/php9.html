@@ -97,23 +97,6 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
@@ -128,7 +111,10 @@ eXcript            </a>
 
 <span class="x">    </span><span class="cp">&lt;?php</span>
     <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$_REQUEST</span><span class="p">);</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST ...</span></pre></div></div>
+    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;dependentes&quot;</span><span class="p">])){</span>
+        <span class="nv">$dependentes</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;dependentes&quot;</span><span class="p">];</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">is_numeric</span><span class="p">(</span><span class="nv">$dependentes</span><span class="p">)){</span>
+            <span class="nv">$dependentes ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/do-while-caso-de-uso-php.html">more ...</a>
                 </div>
             </article>
@@ -143,23 +129,6 @@ eXcript            </a>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
                             <p> Nesta aula estudaremos a estrutura de repetição do-while, isto é, faça-enquanto. Aprenderemos quando utilizar essa instrução e quais as beneficios que a mesma proporciona.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
                         </div>
                     </td>
                 </tr>
@@ -196,26 +165,13 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">//ESTRUTURA DE REPETIÇÃO WHILE ...</span></pre></div></div>
+<div class="highlight"><pre><span></span><span class="x">//ESTRUTURA DE REPETIÇÃO WHILE</span>
+
+<span class="x">//$num = 100;</span>
+<span class="x">//while($num &gt; 0){</span>
+<span class="x">//    echo $num  . &quot;\n ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/instrucao-while-php.html">more ...</a>
                 </div>
             </article>
@@ -236,27 +192,14 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html lang=&quot;pt-br ...</span></pre></div></div>
+<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
+
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">    &lt;title&gt;Estrutura elseif - Curso ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/elseif-php.html">more ...</a>
                 </div>
             </article>
@@ -277,17 +220,9 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda ...</p></div></td></tr></tbody></table></div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/numeros-pares-impares-php.html">more ...</a>
                 </div>
             </article>
@@ -308,29 +243,18 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">$num = 50;</span>
 
 <span class="x">if(($num &gt; 10)&amp;&amp;($num &lt; 100)){</span>
-<span class="x">    echo &quot;eh ...</span></pre></div></div>
+<span class="x">    echo &quot;eh verdadeiro&quot;;</span>
+<span class="x">}</span>
+
+
+
+<span class="x">var_dump(10 == 10);</span>
+<span class="x">var_dump((10 == 10) == True ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/operador-logico-php.html">more ...</a>
                 </div>
             </article>
@@ -351,25 +275,11 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 <div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM ...</h2></div>
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="x">/*</span>
+<span class="x"> * 1) APRESENTAR OS SLIDES</span>
+<span class="x"> * 2) ESTUDAR ALGUMAS ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/operador-relacional-php.html">more ...</a>
                 </div>
             </article>
@@ -390,26 +300,13 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">//aprofundando o estudo dos operadores ...</span></pre></div></div>
+<div class="highlight"><pre><span></span><span class="x">//aprofundando o estudo dos operadores relacionais</span>
+
+<span class="x">echo &quot;igualdade\n&quot;;</span>
+<span class="x">var_dump(10==10);</span>
+<span class="x">var_dump ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/operadores-relacionais-php-algoritmo.html">more ...</a>
                 </div>
             </article>
@@ -430,27 +327,14 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html ...</span></pre></div></div>
+<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
+
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">    &lt;title&gt;Tela ...</span></pre></div></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/tela-login-senha-php.html">more ...</a>
                 </div>
             </article>
@@ -471,30 +355,7 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;pt-br&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title ...</span></pre></div></div>
+<p>Nessa aula, ao invés de darmos continuidade ao estudo das estruturas de controle, vamos definir uma estrutura para o nosso estudo, no ...</p>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/ambiente-estudo-php.html">more ...</a>
                 </div>
             </article>

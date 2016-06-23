@@ -347,23 +347,70 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Quais os operadores lógicos do C++? Operadores lógicos constituem o conjunto de conectivos lógicos existentes na lógica fundamental. O C++ utiliza basicamente 2 conectivos lógicos emprestado da matemática, são eles:</p>
+<ol class="arabic simple">
+<li>Conectivo de conjunção - ^ - E</li>
+<li>Conectivo de disjunção - v - OU</li>
+</ol>
+<div class="section" id="conectivo-e">
+<h2>CONECTIVO ( E )</h2>
+<p>O conectivo E é utilizado nas expressões em que desejamos que todas as condições sejam verdadeiras, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="n">var1</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">E</span> <span class="n">var2</span> <span class="o">==</span> <span class="mi">100</span>
+</pre></div>
+<p>Temos que a primeira condição deve ser verdadeira (var1 == 0) como também a segunda condição (var2 == 100). Caso uma das condições não seja verdadeiro, o valor lógico ser falso. Assim, o conectivo E exige que todas as condições sejam verdadeiras para que o valor lógico da expressão seja verdadeiro.a</p>
+</div>
+<div class="section" id="conectivo-ou">
+<h2>CONECTIVO ( OU )</h2>
+<p>O conectivo OU diz que uma das expressões deve ser verdadeira, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="n">var1</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">OU</span> <span class="n">var2</span> <span class="o">==</span> <span class="mi">100</span>
+</pre></div>
+<p>Assim, temos que se a primeira condição for verdadeira (var1 == 0) ou então, a segunda condição (var2 == 100), então o valor de toda a expressão será verdadeiro.</p>
+</div>
+<div class="section" id="operadores-logicos">
+<h2>OPERADORES LÓGICOS</h2>
+<p>Operador lógico obtém o valor lógico de uma expressão. O resultado da resolução da expressão é chamado de <cite>valor lógico</cite>, que em Java, também chamamos de um valor booleano.  Em Java temo disponível 3 operadores lógicos, são eles:</p>
+<ul class="simple">
+<li>conjunção <cite>e</cite></li>
+<li>disjunção <cite>ou</cite></li>
+<li>negação <cite>not</cite></li>
+</ul>
+<p>Em aulas anteriores, estudamos o tipo <cite>boolean</cite> e aprendemos que esse tipo de dado primitivo armazena valores lógicos, ou seja, armazena 1 para verdadeiro e 0 para falso.</p>
+<p>Uma proposição só pode assumir uma condição lógica, ou seja, ou a proposição é verdadeira, ou não é. Assim, o tipo <strong>boolean</strong> é um tipo especial utilizado para o armazenamento dessa informação.</p>
+<p>Os operadores lógicos são utilizados para efetuarmos operações em condições lógicas. Por exemplo: podemos verificar se a idade de uma pessoa é maior do que 18 anos, para isso, basta nós utilizarmos os operadores relacionais que então será retornado, a relação entre a idade da pessoa e o número 18.
+Porém, se nós precisarmos verificar a idade e o sexo de determinada pessoa? Ou seja, se nós precisarmos obter a relação entre a idade informada e o número 18, e o sexo informado com os gêneros possíveis, como que nós faremos?</p>
+<p>É nessas situações que entram os operadores lógicos. Eles fazem a conexão entre dois valores lógicos e retornam a relação existente. Assim, vamos supor a situação onde num time desportivo as mulheres precisam ter no mínimo 10 anos para participar, enquanto que os homens, precisam ter no mínimo 11 anos. Uma das condições possíveis seria:</p>
+<p>gênero é igual a homem <cite>E</cite> idade é maior ou igual a 11 - condição para que os homens possam participar do time desportivo. A condição que verificaria se uma mulher pode participar, pode ser feita da seguinte forma:
+gênero é igual a mulher <cite>E</cite> idade é maior ou igual a 10</p>
+<p>No exemplo acima, estamos fazendo uma ligação entre duas condições lógicas através do operador de conjunção, ou seja, o operador  <cite>E</cite>.</p>
+<p>Os operadores lógicos são fundamentais para que possamos construir expressões lógicas elaboradas. Do contrário, nós até conseguimos implementar as condições lógicas através do aninhamento de tomadas de decisão, porém, o código fica muito mais extenso e a leitura e entendimento se tornam muito mais difícil.</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;x é maior do que y? &quot;</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="o">));</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;x é maior do que y ou maior do que z? &quot;</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="o">||</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">z</span> <span class="o">));</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;x NÃO é maior do que y ou NÃO é maior do que z? &quot;</span> <span class="o">+</span> <span class="o">(!(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="o">)</span> <span class="o">||</span> <span class="o">!(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">z</span> <span class="o">)));</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;x é diferente de z? &quot;</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">!=</span> <span class="n">z</span><span class="o">));</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;x é maior do que y E maior do que z? &quot;</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="o">&amp;&amp;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">z</span> <span class="o">));</span>
+</pre></div>
+<p>As duas formas lógicas para determinar se um número é maior do que outro.</p>
+<div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;x é maior do que z? &quot;</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">z</span><span class="o">));</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;x NÃO é menor do que z? &quot;</span> <span class="o">+</span> <span class="o">!(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">z</span><span class="o">));</span>
+
+<span class="o">((</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">==</span> <span class="kc">true</span><span class="o">);</span> <span class="c1">//verdade</span>
+<span class="o">((</span><span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">==</span> <span class="kc">false</span><span class="o">);</span> <span class="c1">//falso</span>
+
+<span class="o">((</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">||</span> <span class="o">(</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">==</span> <span class="kc">true</span><span class="o">);</span> <span class="c1">//verdade</span>
+<span class="o">((</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">||</span> <span class="o">(</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">==</span> <span class="kc">false</span><span class="o">);</span> <span class="c1">//falso</span>
+<span class="o">((</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">||</span> <span class="o">(</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="o">));</span> <span class="c1">//verdade</span>
+
+<span class="o">((</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">==</span> <span class="kc">true</span><span class="o">);</span> <span class="c1">//verdade</span>
+<span class="o">!(((</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">)</span> <span class="o">==</span> <span class="kc">false</span><span class="o">));</span> <span class="c1">//verdade</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>

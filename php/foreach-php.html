@@ -494,23 +494,70 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="iterando-arrays-estrutura-foreach">
+<h2>ITERANDO ARRAYS - ESTRUTURA <cite>foreach</cite></h2>
+<p>A estrutura de iteração <cite>foreach</cite> é uma instrução especializada na iteração de <cite>Arrays</cite>, ou seja, uma estrutura que está projetada para percorrer todos os elementos contidos num <cite>Array</cite>.
+Essa estrutura, além de melhorar a legibilidade do código, também evita alguns problemas, como o acesso a elementos que não existem, problema recorrente quando trabalhamos com a estrutura <cite>for</cite> em sua definição básica.</p>
+<p>Com a estrutura <cite>foreach</cite> temos acesso total aos elementos, da mesma forma como teríamos se estivessemos utilizando a estrutura <cite>for</cite> normal.
+Então, temos que o laço percorrerá todos elementos e a cada ciclo será definido o próximo elemento contido na estrutura que está sendo iterada.</p>
+<p>Então, temos que pensar na estrutura <cite>foreach</cite> da seguinte maneira: &quot;a cada elemento do array, execute o bloco definido&quot;.</p>
+<div class="highlight"><pre><span></span><span class="x">$lista = array(</span>
+<span class="x">    0 =&gt; &#39;par&#39;,</span>
+<span class="x">    1 =&gt; &#39;impar&#39;,</span>
+<span class="x">    2 =&gt; &#39;par&#39;,</span>
+<span class="x">    3 =&gt; &#39;impar&#39;,</span>
+<span class="x">    4 =&gt; &#39;par&#39;,</span>
+<span class="x">    5 =&gt; &#39;impar&#39;,</span>
+<span class="x">    6 =&gt; &#39;par&#39;,</span>
+<span class="x">    7 =&gt; &#39;impar&#39;,</span>
+<span class="x">    8 =&gt; &#39;par&#39;,</span>
+<span class="x">    9 =&gt; &#39;impar&#39;,</span>
+<span class="x">    10 =&gt; &#39;par&#39;</span>
+<span class="x">);</span>
+
+<span class="x">// Imprime os números de 1 até 10</span>
+<span class="x">foreach( range(0, 10, 2) as $numero ) {</span>
+<span class="x">    print &quot;$numero = $lista[$numero] \n&quot;;</span>
+<span class="x">}</span>
+<span class="x">$arr = range(1, 10);</span>
+<span class="x">foreach($arr as $valor) {</span>
+<span class="x">    echo &quot;$valor\n&quot;;</span>
+<span class="x">}</span>
+<span class="x">$arr = array(1, 2, 3, 17);</span>
+<span class="x">$i = 0;</span>
+
+<span class="x">foreach ($arr as $valor) {</span>
+<span class="x">    echo &quot;\$arr[$i] =&gt; $valor\n&quot;;</span>
+<span class="x">    $i++;</span>
+<span class="x">}</span>
+
+<span class="x">$lista = array (</span>
+<span class="x">    &quot;um&quot; =&gt; 1,</span>
+<span class="x">    &quot;dois&quot; =&gt; 2,</span>
+<span class="x">    &quot;três&quot; =&gt; 3,</span>
+<span class="x">    &quot;quatro&quot; =&gt; 4</span>
+<span class="x">);</span>
+
+<span class="x">foreach ($lista as $chave =&gt; $valor) {</span>
+<span class="x">    echo &quot;\$lista[$chave] =&gt; $valor.\n&quot;;</span>
+<span class="x">}</span>
+
+<span class="x">$lista = array();</span>
+<span class="x">$lista[0][0] = &quot;a&quot;;</span>
+<span class="x">$lista[0][1] = &quot;b&quot;;</span>
+<span class="x">$lista[1][0] = &quot;c&quot;;</span>
+<span class="x">$lista[1][1] = &quot;d&quot;;</span>
+
+<span class="x">foreach ($lista as $val1) {</span>
+<span class="x">    foreach ($val1 as $val2) {</span>
+<span class="x">        echo &quot;$val2\n&quot;;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+<span class="x">foreach ([1, 2, 3, 4, 5] as $valor){</span>
+<span class="x">    echo &quot;$valor\n&quot;;</span>
+<span class="x">}</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#ESTRUTURA FOREACH</span>

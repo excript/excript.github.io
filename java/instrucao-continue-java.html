@@ -347,23 +347,16 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Como utilizar a instrução Continue do Java? Aprendemos a utilizar a instrução <cite>break</cite> como também, fizemos alguns exemplos para entender o seu funcionamento. Agora, estudaremos a instrução <cite>continue</cite> que tem o seu funcionamento idêntico a instrução <cite>break</cite>, porém, com um pequena diferença.</p>
+<p>Enquanto a instrução <cite>break</cite> finaliza todo o laço de execução, a instrução <cite>continue</cite> somete irá finalizar o laço em execução. Assim, ao invés de finalizarmos todo o laço, agora, iremos finalizar um único ciclo, sem fazer qualquer outra alteração na execução de toda a estrutura de repetição. A seguir, temos um exemplo:</p>
+<div class="highlight"><pre><span></span><span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
+
+  <span class="k">if</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+    <span class="k">continue</span><span class="o">;</span><span class="c1">//o ciclo em execução será finalizado, mas não o laço de repetição &#39;while&#39;</span>
+
+<span class="o">}</span>
+</pre></div>
+<p>Acima, temos um exemplo bastante simples e hipotético da estrutura de repetição. Dentro do bloco de instrução dessa estrutura, definimos uma condição e caso essa seja verificada, a instrução <cite>continue</cite> será invocada e o ciclo em execução será finalizado. Como já dissemos outras vezes, somente o ciclo é finalizado, e não o laço de repetição.</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0040</span> <span class="o">{</span>

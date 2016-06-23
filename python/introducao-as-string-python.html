@@ -371,23 +371,54 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="introducao-as-string">
+<h2>INTRODUÇÃO ÀS STRING</h2>
+<p>Uma <tt class="docutils literal">string</tt> é qualquer sequência de caracteres. Caractere é a menor unidade de todos o texto, temos que o caractere pode ser númerico, uma letra do alfabeto, ou um caractere especial.</p>
+<p>Na programação, é comum a manipulação de cadeias de caracteres, isso porque, a maior parte da informação que o ser humano trabalha, está no formato de texto. Assim, processamos caracteres a todo instânte e rapidamente descobrimos, a grande necessidade em tratar e processar textos das formas mais variadas formas, e que virão, dos mais variados dispositivos. Por isso, o entendimento e o domínio na manipulação de caracteres é essêncial.</p>
+<p>É importante observar que <strong>todo texto inicialmente</strong> é, um objeto do tipo <tt class="docutils literal">str</tt>. Portanto, dependerá do nosso código a transformação de <tt class="docutils literal">str</tt> para outro tipo de dado, até porque, como estudado, duas <tt class="docutils literal">string</tt> quando somadas com o operador de adição <tt class="docutils literal">+</tt>, resultará numa concatenação, isto é, a junção de 2 fragmentos de textos. Porém, quando estivermos lidando com números, desejaremos obter, com o sinal de adição, soma entre 2 valores numéricos. Por isso, sempre precisaremos converter de <tt class="docutils literal">str</tt> para o tipo que desejamos e para que nossas conversões funcionem, muitas vezes, precisaremos saber, se os caracteres são válidos.</p>
+</div>
+<div class="section" id="o-conceito-de-caractere-e-string">
+<h2>O CONCEITO DE CARACTERE E STRING</h2>
+<p>Caractere é a únidade mínima de toda String. Um caractere pode ser numérico, letras do alfabeto ou um caracteres especial.</p>
+<p>É importante observar, que no Python, diferentemente de outras linguagens, nós não temos o tipo Char, ou seja, o tipo caractere. Para o Python, tudo são <tt class="docutils literal">Strings</tt>, indiferente se a mesma contizer 1 ou &quot;n&quot; caracteres.</p>
+<p>No trecho de código a seguir, podemos ver o que discutimos em uso:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+</pre></div>
+<p>A seguir, implementamos um código simples onde um texto é vinculado a uma referência. Em seguida, escrevemos a referência e o valor vinculado é impresso na saída padrão. Observe como estamos trabalhando com um conjunto de caracteres, numa determinada ordem.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Lista de Caracteres&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span>
+<span class="s2">&quot;Lista de Caracteres&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="terminologias">
+<h2>TERMINOLOGIAS</h2>
+<p>Quando manipulamos cadeias de caracteres, isto é, <tt class="docutils literal">string</tt>, utilizamos algumas terminologias especificas que são, de fato, o nome da ação que será realizada. A primeira e mais comum, é o termo Concatenar. O segundo, menos utilizador verbalmente, porém, muito utilizado em nossos códigos, é interpolar.</p>
+</div>
+<div class="section" id="concatenar">
+<h2>CONCATENAR</h2>
+<p>Concatenar é a junção de 2 cadeias de caracteres, dando origem a uma nova <tt class="docutils literal">string</tt> que contém as partes &quot;juntadas&quot;. A concatenação, pode ser a direita ou então a esquerda de outra <tt class="docutils literal">string</tt>. Então por exemplo, a seguir, temos uma situação hipotética onde é possível observar uma concatenação.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">concatenacao</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span> <span class="o">+</span> <span class="s2">&quot;456&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">concatenacao</span>
+</pre></div>
+</div>
+<div class="section" id="interpolar">
+<h2>INTERPOLAR</h2>
+<p>Interpolar é a inserção de texto dentro de outro. A interpolação, ocorre de várias formas, e algumas linguagens e bibliotecas, proporcionam maneiras bastante interessantes e diferentes para interpolarmos valores. O Python fornece um conjunto de ferramentas bastante poderosas para o manuseio de texto.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">sexo</span> <span class="o">=</span> <span class="s2">&quot;masculino&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="s2">&quot;Cláudio&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">interpolar</span> <span class="o">=</span> <span class="s2">&quot;Sexo é igual a </span><span class="si">%s</span><span class="s2"> e nome é igual </span><span class="si">%s</span><span class="s2"> &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">sexo</span><span class="p">,</span> <span class="n">nome</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">interpolar</span>
+<span class="s1">&#39;Sexo é igual a masculino e nome é igual Cláudio &#39;</span>
+</pre></div>
+</div>
+<div class="section" id="as-string-sao-listas-imutaveis">
+<h2>As <tt class="docutils literal">string</tt> SÃO LISTAS IMUTÁVEIS</h2>
+<p>Para o Python, toda <tt class="docutils literal">string</tt> é uma lista imutável, semelhante a uma Tupla, porém, com funcionalidade bastante especifica. A manipulaçao de <tt class="docutils literal">string</tt>, tuplas e listas é bastante semelhante, porém, uma <tt class="docutils literal">string</tt> após definida, não pode ser alterada.</p>
+<p>Internamente, quando uma <tt class="docutils literal">string</tt> é definida, uma série de otimizações são feitas, de tal forma, que é mais rápido destruir a instância existente e criar um nova, do que reaproveitar as otimizações existentes. Por isso, por exemplo, a concatenação, interpolação ou qualquer ou manipulação com <tt class="docutils literal">string</tt>, o resultado será, uma nova instância criada com as modificações a serem feitas.</p>
+</div>
 
 				</div>
 			</div>

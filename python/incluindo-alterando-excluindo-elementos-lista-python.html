@@ -371,23 +371,141 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>Nas aulas passadas estudamos diversos conceitos sobre as listas e também, aprendemos como trablhar com algumas funções. Nessa aula, nos dedicaremos, ao estudo das 3 principais funcionalidades que são a inclusão, alteração e exclusão de elememtos.</p>
+<p>O código a seguir, deve ser utilizado como base em todos os exemplos desta aula. A cada novo título, deve-se recriar as listas para conseguir um resultado igual.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span> <span class="p">]</span>
+</pre></div>
+</div>
+<div class="section" id="adicionando-elemento">
+<h2>ADICIONANDO ELEMENTO</h2>
+<p>A função <tt class="docutils literal">append()</tt>, do inglês, significa &quot;anexar&quot;, logo, aqui no Python, essa função irá adicionar o elemento passado como argumento ao final da lista, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span>
+<span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">]</span>
+</pre></div>
+<p>Como podemos ver, agora, o ELEMENTO &quot;x&quot; foi anexado a lista <tt class="docutils literal">A</tt>.</p>
+</div>
+<div class="section" id="funcao-insert">
+<h2>FUNÇÃO <tt class="docutils literal">insert()</tt></h2>
+<p>A função <tt class="docutils literal">insert()</tt>, como o nome sugere, faz a inserção de um elemento em nossa lista, porém, agora, nós vamos informar em qual posição o elemento será inserido. Ou seja, enquanto a função <tt class="docutils literal">append()</tt> adiciona um elemento no final da lista, a função <tt class="docutils literal">insert()</tt> adiciona um elemento no local em que nós especificarmos, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span>
+<span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">]</span>
+</pre></div>
+<p>Como podemos observar, inserimos o caractere <tt class="docutils literal">y</tt> como sendo o primeiro elemento da lista <tt class="docutils literal">A</tt> com o uso da função <tt class="docutils literal">insert()</tt>.</p>
+<p>A seguir, temos a assinatura da função <tt class="docutils literal">insert()</tt>.</p>
+<blockquote>
+insert( &lt;índice&gt;, &lt;objeto&gt; )</blockquote>
+<p>Como podemos ver, o primeiro argumento é o índice e o segundo, o objeto propriamento dito. Assim, o objeto será adicionado à lista na posição cujo índice seja igual ao informado e os elementos que estiverem após o novo elemento, terão seus índices alterados automaticamente.</p>
+</div>
+<div class="section" id="alteracao-de-elemento">
+<h2>ALTERAÇÃO DE ELEMENTO</h2>
+<p>A mesma notação utilizada para obtermos o elemento vinculado a determinado índice, pode ser utilizada, para alterarmos o elemento vinculado.</p>
+<p>Inicialmente, é importante observar, que nos exemplos a seguir, não iremos alterar o caractere de um objeto, mas sim, iremos substitui-lo.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;t&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span>
+<span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">]</span>
+</pre></div>
+<p>No código acima, alteramos o objeto <tt class="docutils literal">b</tt> pelo objeto <tt class="docutils literal">t</tt>. Observe que ambos são objetos diferentes e assim, o que o Python fez internamente, é excluir o objeto <tt class="docutils literal">b</tt> e adicionar em seu lugar, ou seja, com mesmo índice, um outro objeto.</p>
+</div>
+<div class="section" id="excluindo-elemento">
+<h2>EXCLUINDO ELEMENTO</h2>
+<p>Para excluirmos um elemento, temos uma função built-in isto é, uma função implementada na VM do Python. Assim, basta passarmos como parâmetro o objeto a ser excluído que a função se encarregará pelo restante, como temos no código a seguir.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">del</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span>
+<span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">]</span>
+</pre></div>
+<p>Como podemos ver, passamos como parâmetro o elemento <tt class="docutils literal">a[1]</tt> pela função <tt class="docutils literal">del()</tt> que o elemento foi removido da lista, como também, o índice de cada elemento a frente do elemento excluído foi alterado automáticamente.</p>
+<p>Desta forma, o elemento da lista A de índice igual a 2 era o objeto <tt class="docutils literal">str</tt> <tt class="docutils literal">c</tt>. Após excluírmos o elemento de índice igual a 1, o objeto que tinha índice igual a 2 passou a ter índice igual a 1, até porque, um elemento foi removido e o índice teve que ser reajustado, do contrário, teríamos que retornamos o elemento igual a 1 seria gerada uma exceção.</p>
+<p>Com isso, temos que entender que os índices não são valores absolutos e não podem ser utilizados como um meio para representar elementos, até porque, se um elemento é excluído ou um elemento é inserido no meio da lista, todos elementos a frente, terão seus índices alterados.</p>
+</div>
+<div class="section" id="excluindo-todos-os-elemento">
+<h2>EXCLUINDO TODOS OS ELEMENTO</h2>
+<p>A função <tt class="docutils literal">clear()</tt> remove todos elementos da lista. A palavra <tt class="docutils literal">Clear</tt> do Inglês, significa <tt class="docutils literal">limpar</tt>, <tt class="docutils literal">limpeza</tt>, logo, é essa a ação feita sobre uma lista que contém elementos.</p>
+<p>No código a seguir, vamos criar uma lista cuja referência será <tt class="docutils literal">C</tt> e os elementos será a junção dos elementos da lista A e B.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span>
+<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span>
+<span class="p">[]</span>
+</pre></div>
+<p>Como visto, inicialmente, criamos uma lista de nome C que contém os elementos de A e B e imprimimo-os na tela. Em seguida, invocamos a função <tt class="docutils literal">clear()</tt> da lista C e mandamos imprimir os elementos na tela. Como pode ser visto, foi impresso somente um par de colchetes <tt class="docutils literal">[]</tt>, representando assim, uma lista vazia.</p>
+</div>
+<div class="section" id="excluir-elementos-num-intervalo">
+<h2>EXCLUIR ELEMENTOS NUM INTERVALO</h2>
+<p>Estudamos que a função built-in <tt class="docutils literal">del()</tt> remove um elemento da lista. Porém, a mesma é capaz de muito mais, como por exemplo, realizar a exclusão de todos os elementos num determinado intervalo, por exemplo, se tivermos uma lista <tt class="docutils literal">[1,2,3,4,5,6]</tt> e quisermos excluir todos elementos que esteja no intervalo de índice igual a 2 até o índice igual 4, passaríamos a ter a seguinte lista <tt class="docutils literal">[1,2,5,6]</tt>.</p>
+<p>Também podemos excluir os elementos que estejam entre outros num intervalo especifico, por exemplo, vamos supor a lista <tt class="docutils literal">[1,2,3,4,5,6]</tt>. Se precisarmos de uma lista contendo os elementos com 2 intervalos entre si, por exemplo, <tt class="docutils literal">[1, 3, 5]</tt> bastaria utilizarmos a notação que já estudamos.</p>
+<p>No código a seguir, será demonstrado um meio simples para você estudar o que estamos falando e ainda que a notação seja a mesma utilizada, a ideia que utilizaremos, talvez, seja novidade pra você.</p>
+<div class="highlight"><pre><span></span><span class="c1">#abaixo, definimos uma lista com 6 elementos e em seguida,</span>
+<span class="c1">#utilizamos a notação que extrai elementos num intervalo</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">][</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="c1">#abaixo, definimos uma lista com 6 elementos e em seguida,</span>
+<span class="c1">#utilizamos a notação que define o passo [intervalo entre os elementos]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">][::</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+<p>Para estudarmos os conceitos de exclusão estudados, iremos criar novamente a lista <tt class="docutils literal">C</tt> que é a junção das listas A e B e em seguida, aplicaremos o que estudamos.</p>
+<div class="highlight"><pre><span></span><span class="c1">#exclusão de elementos num intervalo</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">del</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span>
+<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">]</span>
+
+<span class="c1">#exclusão de elementos que estejam entre intervalo</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">del</span><span class="p">(</span><span class="n">C</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span>
+<span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">]</span>
+</pre></div>
+<p>Como podemos ver nos 2 exemplos acima apresentados, toda e qualquer sublista passada como argumento para a funçao <tt class="docutils literal">del()</tt> terá os elementos removidos da lista.</p>
+</div>
+<div class="section" id="funcao-pop">
+<h2>FUNÇÃO <tt class="docutils literal">pop()</tt></h2>
+<p>A função <tt class="docutils literal">pop()</tt> retorna um elemento da lista e no mesmo instânte, remove-o. É muito comum termos listas que contenham elementos que precisam ser processados e após o processamento, estes podem devem ser excluidos para que não haja processamento duplicado. Para essa tarefa repetitiva, o Python trás implementado uma função que retorna determinado elemento e ao mesmo tempo, exclui-o.</p>
+<p>Se nenhum argumento for passado pela função <tt class="docutils literal">pop()</tt> a mesma retornará e removerá o último elemento da lista. Porém, se desejarmos um elemento em especifico, basta passarmos como parâmetro o índice e então, o mesmo será retornado e excluído da lista.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="s1">&#39;f&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span>
+<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="s1">&#39;e&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span>
+<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="s1">&#39;d&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span>
+<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="s1">&#39;a&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">C</span>
+<span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
+</pre></div>
+<p>No código acima, criamos a lista <tt class="docutils literal">C</tt> que contém os elementos de <tt class="docutils literal">A</tt> e <tt class="docutils literal">B</tt> e em seguida, invocamos a função <tt class="docutils literal">pop()</tt>, um elemento foi impresso e em seguida, já verificamos a lista C e contatamos, que o elemento impresso com a função <tt class="docutils literal">pop()</tt> não mais fazia parte da lista.</p>
+<p>Como pode ser visto, quando não passamos o índice do elemento, o elemento excluido foi o último da lista. Dessa forma, removemos os elementos <tt class="docutils literal">f</tt>, <tt class="docutils literal">e</tt>, <tt class="docutils literal">d</tt>. Feito isso, invocamos a função <tt class="docutils literal">pop()</tt> novamente, porém, nessa quarta vez, passamos como parâmetro o número 0 e então, tivemos que o primeiro elemento da lista foi retornado e ao verificarmos a lista, o mesmo foi removido.</p>
+<p>A função por padrão retorna e remove o último elemento, porém, é possível informar qual elemento desejamos que seja retornado e removido, caso assim desejarmos.</p>
+</div>
 
 				</div>
 			</div>

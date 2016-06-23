@@ -296,23 +296,21 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Blocos de instruções são partes de código agrupadas, ou seja, partes de um código que serão executadas em um mesmo momento.</p>
+<p>Podemos pensar em blocos de instruções como &quot;regiões&quot; de um código que foi demarcado utilizando um par de chaves. Assim, todo bloco irá iniciar com a chave de abertura e será finalizado com uma chave de fechamento.</p>
+<p>Então, podemos dizer que o início de um bloco é a primeira instrução após a chave de abertura <cite>{</cite>, da mesma forma, o término será após a chave de fechamento <cite>}</cite>.</p>
+<p>É importante observar que se você tiver um bloco de instrução dentro de um bloco de instrução, o fechamento do bloco mais aninhado não fechara o bloco externo, mas sim, o bloco aninhado, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="n">inicio</span><span class="p">(){</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="nb">true</span><span class="p">){</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>Acima nós podemos temos um função de nome inicio().</p>
+<p>Após o nome da função, temos <cite>2</cite> parêntesis, um de abertura e outro de fechamento. Estes parêntesis representam o cabeçalho da função.</p>
+<p>Em seguida, nós temos uma chave de abertura, ou seja, o início do bloco da função main <cite>{</cite>  e no final do nosso código, nós temos um chave de fechamento, ou seja, a chave de delimita o bloco de instrução da função <cite>inicio()</cite>.</p>
+<p>Dentro do bloco de instrução da função início, nós temos uma estrutura IF e esta também possui o seu bloco de instrução e da mesma forma, o seu bloco inicia com uma chave <cite>{</cite> e é finalizado com a chave de fechamento: <cite>}</cite></p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>

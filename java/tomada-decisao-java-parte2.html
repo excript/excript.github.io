@@ -347,23 +347,81 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Aprendemos, que com a tomada de decisão, somos capazes de avaliar uma condição e a partir desta, decidir se um bloco de instrução será executado.</p>
+<p>Agora, vamos estudar a situação em que a condição não é verdadeira, ou seja, vamos estudar o que deve acontecer nas situações em o valor lógico for igual a false.</p>
+<p>Nós definimos uma expressão, ou melhor, nós definimos uma condição. Nós temos, que o interpretador pegara a expressão contida entre os parêntesis e a substituirá por um valor booleano - <tt class="docutils literal">true</tt>/<tt class="docutils literal">false</tt>. Se o valor substituído for <strong>true</strong> as instruções representadas pelo retângulo serão executadas, do contrário, nada ocorrerá e o nosso programa continuara a sua execução normalmente.</p>
+<p>Em praticamente toda entrada de dado nós devemos verificar se o valor informado corresponde ao valor esperado. Isso porque, em um cadastro de pessoas não podemos permitir que o campo idade contenha letras. Assim, antes de enviar para o banco de dados, nós devemos verificar todas as informações, e caso alguma não esteja correta, temos que levantar uma mensagem de erro para que a informação incorreta seja corrigida.</p>
+<p>Quando um programa exibe uma mensagem de erro, trava ou fecha abruptamente, o que aconteceu foi uma situação inesperada e caso houvesse uma tomada de decisão, ocorreria um desvio na execução das instruções e o programa não apresentaria esse <tt class="docutils literal">bug</tt>.</p>
+<p>Nós podemos dizer que um <tt class="docutils literal">bug</tt> em um programa é o resultado da não verificação de um determinado estado. Quando nosso programa não está preparado para um situação, a execução deste será aleatória e muito provavelmente será exibido uma mensagem de erro. Porém, há diversos erros em que nenhuma mensagem é apresentada, como por exemplo, um usuário informar que seu nome é um número com caracteres especiais.</p>
+<p>Se o nosso programa não verificar todos os caracteres digitados, o nosso programa terá um erro e este não levantara nenhuma mensagem de erro, e isso irá causar uma série de informações inválidas no cadastro. Logo, pela falta de uma verificação, acabamos com uma base de dados que contém informações erradas. Esse é um outro grupo de erro e geralmente, quando percebemos, há muita informação desconexa e essas deveram ser corrigidas.</p>
+<p>Agora vamos fazer um programa para praticarmos tudo que já estudamos:</p>
+<div class="highlight"><pre><span></span><span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Digite &#39;1&#39; para sim e digite &#39;0&#39; para não: &quot;</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">acao</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+
+<span class="k">if</span><span class="o">(</span><span class="n">acao</span><span class="o">==</span><span class="mi">1</span><span class="o">){</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">&quot;Você disse que sim!&quot;</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">if</span><span class="o">(</span><span class="n">acao</span><span class="o">==</span><span class="mi">0</span><span class="o">){</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">&quot;Você disse que não!&quot;</span><span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+<p>No código acima, criamos uma instância de Scanner e atribuímos a mesma para a variável <tt class="docutils literal">in</tt>.
+Em seguida, escrevemos uma mensagem para o usuário pedindo para que o mesmo digite 1 para dizer que sim, e 0 para dizer que não.</p>
+<p>Em seguida, nós verificamos com a instrução <tt class="docutils literal">if</tt> se o número digitado pelo usuário é igual a 1. Se sim, escrevemos na tela uma mensagem confirmando a operação.</p>
+<p>Em seguida, nós avaliaremos outra expressão com a instrução <tt class="docutils literal">if</tt>, se o número contido na variável for igual a 0, imprimimos uma mensagem para o usuário confirmando o valor digitado.</p>
+<p>O programa que acabamos de fazer funciona perfeitamente e nós conseguimos o resultado esperado. Porém, estamos utilizando duas estrutura <tt class="docutils literal">if</tt>, enquanto poderíamos utilizar somente uma. E também, caso a condição da expressão contida no primeiro <strong>if</strong> seja verdadeiro, não há necessidade para verificarmos novamente o valor contido na variável <strong>acao</strong>, até porque, já conhecemos.</p>
+<p>Esse exemplo teve como objetivo, mostrar a necessidade de combinar outras instruções junto com a tomada de decisão <tt class="docutils literal">if</tt>. Mesmo que o resultado seja o esperado, nosso código, mesmo que correto possui erros lógicos.</p>
+<div class="section" id="else">
+<h2>ELSE</h2>
+<p>A instrução <tt class="docutils literal">else</tt> é utilizada para definir o bloco de instrução que deve ser executado quando a condição não for satisfeita.</p>
+<p>A palavra <tt class="docutils literal">else</tt> significa em português <tt class="docutils literal">senão</tt>, logo, como o nome sugere, é a instrução que irá conter o que dever ser feito se quando a expressão verificada for igual a <tt class="docutils literal">false</tt>.</p>
+<p>A seguir temos um exemplo mostrando a utilização da instrução <tt class="docutils literal">else</tt>:</p>
+<div class="highlight"><pre><span></span><span class="k">if</span><span class="o">(</span><span class="kc">false</span><span class="o">){</span>
+<span class="o">}</span><span class="k">else</span><span class="o">{</span>
+    <span class="c1">//bloco que será executado quando a condição não for satisfeita</span>
+<span class="o">}</span>
+</pre></div>
+<p>É uma pratica comum a verificação de uma outra condição dentro do bloco <strong>else</strong>, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="k">if</span><span class="o">(</span><span class="kc">false</span><span class="o">){</span>
+<span class="o">}</span><span class="k">else</span><span class="o">{</span>
+    <span class="k">if</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
+        <span class="c1">//este bloco será executado se a instrução for verdadeira</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>No exemplo acima, nós estamos verificando uma condição e definindo dois blocos, um para caso a condição seja atendida e o outro para quando o valor retornado for igual a <strong>false</strong>. Dentro do bloco de instrução <strong>else</strong> foi utilizado uma outra tomada de decisão, logo, nós temos que o bloco de instrução da tomada de decisão que está contido na instrução <strong>else</strong> da primeira tomada de decisão só será executado caso a primeira condição não seja verificada e caso a segundo condição retorne <strong>true</strong>.</p>
+</div>
+<div class="section" id="exemplo-feito-em-aula">
+<h2>EXEMPLO FEITO EM AULA</h2>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0011</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">//igual</span>
+        <span class="c1">//diferente</span>
+
+<span class="c1">//        System.out.println(1==1);</span>
+
+<span class="c1">//        boolean b = 1==1;</span>
+<span class="c1">//        System.out.println( b );</span>
+
+<span class="c1">//        boolean b = 2!=1;</span>
+<span class="c1">//        System.out.println( b );</span>
+
+<span class="c1">//        boolean b = 2&gt;1;</span>
+
+<span class="c1">//        System.out.println( b );</span>
+
+        <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="n">num1</span> <span class="o">&gt;</span> <span class="n">num2</span> <span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span> <span class="n">num1</span> <span class="o">&gt;=</span> <span class="n">num2</span> <span class="o">);</span>
+
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
 
 				</div>
 			</div>

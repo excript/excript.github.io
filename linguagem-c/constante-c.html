@@ -296,23 +296,22 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>Em C, constantes são espaços de memória reservado que contém um valor que não pode ser alterado.</p>
+<p>A forma de trabalho com uma constante e uma variável é bastante comum, ambas possuem um tipo, uma referência e um valor. O que as diferencia é a sua capacidade de permitir a alteração de valor durante o tempo de execução.</p>
+<p>Dessa forma, temos que o valor contido num espaço de memória constante garante integridade ao nossos sistemas e também, fazem com que o nosso código siga um padrão.</p>
+<p>Em C, temos 2 maneiras para declarar uma constante. A primeira e mais comum, é com a utilização da palavra reservada <cite>const</cite>. A segunda forma, é declarando-a através de diretivas de compilação, como temos no exemplo a seguir:</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">VALOR</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;O valor da constante eh: %d&quot;</span><span class="p">,</span> <span class="n">VALOR</span> <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>A outra forma, no caso, utilizando diretiva de compilação, fica da seguinte maneira:</p>
+<div class="highlight"><pre><span></span><span class="cp">#define PI 3.141592</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;O valor de PI eh: %.6f&quot;</span><span class="p">,</span> <span class="n">PI</span> <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>

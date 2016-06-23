@@ -494,23 +494,22 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="definindo-parametros">
+<h2>DEFININDO PARÂMETROS</h2>
+<p>Podemos definir parâmetros numa função, para isso, basta adicionarmos o nome de cada parâmetro no cabeçalho da função. Para declararmos vários parâmetros, basta utilizarmos uma vírgula para separmos cada um.</p>
+</div>
+<div class="section" id="parametros-versus-argumentos">
+<h2>PARÂMETROS versus ARGUMENTOS</h2>
+<div class="highlight"><pre><span></span><span class="x">function soma($a, $b)</span>
+<span class="x">{</span>
+<span class="x">    $x = $a + $b;</span>
+<span class="x">    echo &quot;A soma dos parâmetros é: &quot; . $x;</span>
+<span class="x">}</span>
+</pre></div>
+<p>Agora, ao invocarmos a função <tt class="docutils literal">soma()</tt> devemos passar 2 valores e então, estes serão somados.</p>
+<div class="highlight"><pre><span></span><span class="x">soma(10, 20);</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">function soma($num1, $num2){</span>

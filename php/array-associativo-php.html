@@ -494,23 +494,37 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="arrays-associativos">
+<h2>ARRAYS ASSOCIATIVOS</h2>
+<p>Arrays associativos são estruturas onde cada elemento é identificado por uma chave única, entao, é indiferente se estamos trabalhando com Arrays Indexados ou Arrays Multidimensionais, ambos serão por definição, estruturas associativas.</p>
+<p>As estruturas Associativas do PHP podem vincular qualquer tipo de informação, seja ela um objeto, uma estrutura binária, um Array Multidimensional ou mesmo uma simples string contendo uma URL.</p>
+<p>Os Arrays podem conter chaves e valores dos mais variados tipos numa mesma estrutura, até porque, não existe Arrays tipados. Todas as estruturas são pode definição heterogeneas.</p>
+<div class="highlight"><pre><span></span><span class="x">$pontos = array(&quot;Zé&quot;=&gt;&quot;11&quot;, &quot;José&quot;=&gt;&quot;4&quot;, &quot;Zéca&quot;=&gt;&quot;22&quot;);</span>
+</pre></div>
+<p>No código acima criamos um Array Associativo e vinculamos ao nome de cada participante de um jogo a sua pontuação. Como visto, construimos uma lista vinculando valores inteiros a uma String.</p>
+<div class="highlight"><pre><span></span><span class="x">$pontos = array(&quot;Zé&quot;=&gt;&quot;11&quot;, &quot;José&quot;=&gt;&quot;4&quot;, &quot;Zéca&quot;=&gt;&quot;22&quot;);</span>
+
+<span class="x">echo &quot;Pontos do Zé: &quot;.$pontos[&quot;Zé&quot;].&quot;&lt;br/&gt;&quot;;</span>
+<span class="x">echo &quot;Pontos do José: &quot;.$pontos[&quot;José&quot;].&quot;&lt;br/&gt;&quot;;</span>
+<span class="x">echo &quot;Pontos do  Zéca: &quot;.$pontos[&quot;Zéca&quot;].&quot;&lt;br/&gt;&quot;;</span>
+</pre></div>
+</div>
+<div class="section" id="alterando-valores-em-estruturas-associativas">
+<h2>ALTERANDO VALORES EM ESTRUTURAS ASSOCIATIVAS</h2>
+<p>Cada item contido num Array Associativo possui por definição uma chave e está possui um valor vinculado. Da mesma maneira em que podemos associar um novo valor, também é possível fazer a sua alteração.</p>
+<p>Se definirmos um valor a uma chave existente, teremos que o valor desta chave será alterado, do contrário, um novo item será adicionado à estrutura.</p>
+</div>
+<div class="section" id="listas-associativas-heterogeneas">
+<h2>LISTAS ASSOCIATIVAS HETEROGENEAS</h2>
+<p>Uma lista heterogenea seria algo do gênero:</p>
+<div class="highlight"><pre><span></span><span class="x">$pontos = array(</span>
+<span class="x">    &quot;url&quot;=&gt;&quot;excript.com/&quot;,</span>
+<span class="x">    404=&gt;&quot;excript.com/error/&quot;,</span>
+<span class="x">    301=&gt;&quot;excript.com/error301/&quot;,</span>
+<span class="x">);</span>
+</pre></div>
+<p>Na estrutura acima vinculamos inicialmente uma String a outra String. Em seguida, definimos 2 outros itens e a estes vinculamos um Inteiro a String.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="x">#ARRAYS ASSOCIATIVOS</span>

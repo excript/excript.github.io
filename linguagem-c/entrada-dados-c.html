@@ -296,23 +296,24 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="entrada-de-dados">
+<h2>ENTRADA DE DADOS</h2>
+<p>A entrada de dados em C pode ser feita de diversas maneira. No prompt, é comum a utilização da função <cite>scanf()</cite>. Esta, tem por objetivo, devolver todos os caracteres digitados no prompt e retornar para a variável que nós especificamos. Assim, temos a entrada de dados mais primitiva do C, porém, bastante funcional.</p>
+<p>Por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">valor</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">valor</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="a-funcao-scanf">
+<h2>A FUNÇÃO <cite>scanf()</cite></h2>
+<p>O funcionamento da função <cite>scanf()</cite> é parecido com o funcionamento da função &quot;printf()&quot; que nós já estudamos. A principal diferença é que agora estamos manipulando o fluxo de entrada de dados, enquanto que com a função <cite>printf()</cite>, estávamos manipulando a saída de informações, ou seja, o Fluxo de Saída.</p>
+<p>No primeiro parâmetro da função <cite>scanf()</cite> temos de informar o tipo de dados que estamos esperando, enquanto que no segundo parâmetro, temos de passar o ponteiro da variável em que desejamos receber o valor oriundo do Fluxo de Entrada de dados.</p>
+<p>A seguir, temos uma lista que contém o Tipo do Argumento de entrada de dados que é esperado pela função <cite>scanf()</cite>.</p>
+<p><cite>%d</cite> e <cite>%lg</cite> - tipo inteiro ou de ponto flutuante (<cite>float</cite>) e (<cite>double</cite>).
+<cite>%i</cite> - tipo inteiro
+<cite>%c</cite> - caracteres</p>
+<p>Há outros valores definidos, porém, nesse momento, devemos conhecer somente estes três tipos.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>

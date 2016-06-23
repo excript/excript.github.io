@@ -350,23 +350,61 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p>O que são os modificadores de tipo? Em suma, são instruções que antecedem a declaração de variáveis e conferem a está uma característica especial.</p>
+<p>Em C++ temos 4 modificadores de tipo:
+- short
+- long
+- signed
+- unsigned</p>
+<div class="section" id="modificador-short">
+<h2>MODIFICADOR <cite>short</cite></h2>
+<p>O modificador short é utilizado quando queremos que a variável possua um tamanho menor, até porque, não precisamos que a mesma contenha números grandes.</p>
+</div>
+<div class="section" id="modificador-long">
+<h2>MODIFICADOR <cite>long</cite></h2>
+<p>O modificador long é o oposto do modificador <cite>short</cite>, este confere a variável uma capacidade extra de armazenamento. Assim, conseguimos estender o tamanho de armazenamento que podemos utilizar.</p>
+</div>
+<div class="section" id="modificador-signed">
+<h2>MODIFICADOR <cite>signed</cite></h2>
+<p>O modificador signed é utilizado para dizer as variáveis que estas podem conter tanto números positivos como também, números negativos. Ou seja, é o tipo default da linguagem C++.</p>
+</div>
+<div class="section" id="modificador-unsigned">
+<h2>MODIFICADOR <cite>unsigned</cite></h2>
+<p>O modificador unsigned é o oposto de unsigned, assim, dizemos para  o compilador que desejamos trabalhar somente com números positivos. Logo, a nossa variável irá possuir mair capacidade de armazenamento, até porque, o bit que seria utilizado para armazenar o sinal, agora poderá ser utilizado para armazenar números.</p>
+</div>
+<div class="section" id="codigo-envido-por-aluno">
+<h2>CÓDIGO ENVIDO POR ALUNO</h2>
+<p>Nome: Matheus Souza - <a class="reference external" href="https://plus.google.com/b/102371115481264098253/103032760058774924445/posts">https://plus.google.com/b/102371115481264098253/103032760058774924445/posts</a></p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;cstdlib&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">A</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">short</span> <span class="kt">int</span> <span class="n">B</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">long</span> <span class="kt">int</span> <span class="n">C</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">signed</span> <span class="kt">int</span> <span class="n">D</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">E</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">short</span> <span class="kt">signed</span> <span class="kt">int</span> <span class="n">F</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">long</span> <span class="kt">signed</span> <span class="kt">int</span> <span class="n">G</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">short</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">H</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">long</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">I</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um short int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um long int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um signed int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">D</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um unsigned int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um short signed int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um long signed int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">G</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um short unsigned int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">H</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um long unsigned int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">I</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Os valores acima significam que o normal ocupa 4B de memória, o short só ocupa 2B e o long ocupa 8B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>

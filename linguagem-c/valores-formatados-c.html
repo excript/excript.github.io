@@ -296,23 +296,13 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="texto-com-formatacoes">
+<h2>TEXTO COM FORMATAÇÕES</h2>
+<p>Como imprimir valores formatados na tela? Nessa aula aprenderemos a utilizar a função <cite>printf()</cite> ou seja, <cite>print()</cite> vem de imprimir e o <cite>f</cite> no final, vem de <cite>format</cite> - imprima formatado.</p>
+<p>É importante observar que estamos querendo imprimir valores com ponto flutuante de maneira formatada, ou então, valores do tipo inteiro.</p>
+<p>A função printf interpreta alguns conjuntos de caracteres que são precedidos pelo sinal de porcentagem. Por exemplo, <cite>%s</cite>, diz que o primeiro valor é do tipo <cite>string</cite> e deve ser concatenado com a string a esquerda do sinal <cite>&quot;%s&quot;</cite> com o respectivo valor a direita. Da mesma forma temos o <cite>%d</cite> e <cite>%i</cite>, que utilizamos para inserir um número inteiro. Já, o <cite>%f</cite> é utilizado para inserir um valor do tipo ponto flutuante.</p>
+<p>Essa é uma maneira bastante conveniente para inserirmos valores dentro de uma cadeia de caracteres. Do contrário, teríamos que trabalhar abrindo e fechado aspas, o que nem sempre é a tarefa mais fácil e poucas vezes, resulta num código legível.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>

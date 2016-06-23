@@ -371,23 +371,40 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<br>
-    <div class="admonitionblock note data-line">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="icon">
-                        <i class="fa icon-note" title="Nota!"></i>
-                    </td>
-                    <td class="content">
-                        <div class="paragraph data-line">
-                            <p>O texto desta aula ainda não está disponível.</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="section" id="fatiaento-de-lista">
+<h2>FATIAENTO DE LISTA</h2>
+<p>Fatiamento de listas é a extração de um conjunto de elementos contidos numa lista.</p>
+<p>Tomemos como exemplo a lista <tt class="docutils literal">[1,2,3,4,5]</tt> uma forma de fatiarmos é extraíndo os elementos num determinado intervalor, como por exemplo <tt class="docutils literal">[2,3,4]</tt>.</p>
+</div>
+<div class="section" id="a-notacao-utilizada">
+<h2>A NOTAÇÃO UTILIZADA</h2>
+<p>Para extrairmos um conjunto de elemento de uma lista, utilizamos inicialmente, a mesma notação utilizada para a obtenção de um único elemento, porém, ao invés de definirmos somente o elemento que desejamos, informaremos agora, o intervalo desejado.</p>
+<p>É importante observar que a notação de fatiamento é uma evolução da notação de obtenção de um único elemento, a diferença está somente na adição de alguns caracteres.</p>
+<p>Para retornarmos uma elemento de uma lista, devemos passar entre colchete, qual o índice do elemento. No fatiamento, adicionaremos 2 informações, o índice do primeiro e do último elemento a ser extraído, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
+</pre></div>
+<p>No código acima, definimos uma referência <tt class="docutils literal">A</tt> e atribuimos a esta uma lista contendo 5 elementos. Em seguida, utilizamos a referência seguida por um par de colchetes <tt class="docutils literal">[]</tt> e dentro deste, definimos dois números que foram separados pelo caractere <tt class="docutils literal">:</tt>.</p>
+<p>Então, a notação que devemos utilizar no fatiamento de listas é a seguinte:</p>
+<blockquote>
+referência[ &lt;inicio&gt; : &lt;fim&gt; ]</blockquote>
+<p>Referência é o nome da variável que está vinculada a lista, <tt class="docutils literal">&lt;inicio&gt;</tt> é o índice corresponde ao primeiro elemento que deve pertencer a fração a ser extraída e <tt class="docutils literal">&lt;fim&gt;</tt>, deve ser o índice do último elemento que deve estar contido na lista a ser extraída.</p>
+</div>
+<div class="section" id="intervalo-elementos">
+<h2>INTERVALO ELEMENTOS</h2>
+<p>Intervalo é a distância existente entre cada elemento resultante do fatiamento. Por exemplo, se tivermos uma lista com os elementos de 1 até 10 e definirmos o <tt class="docutils literal">intervalo</tt> como sendo igual a 2, iremos obter uma lista igual <tt class="docutils literal">[1, 3, 5, 7, 9]</tt>.</p>
+<p>A notação para a definição do intervalo é uma continuação da notação do fatiamento, assim, temos que:</p>
+<blockquote>
+referência[ &lt;inicio&gt; : &lt;fim&gt; : &lt;intervalo&gt; ]</blockquote>
+<p>Na notação acima, a única novidade a utilização do sinal de <tt class="docutils literal">:</tt> e a definiçao do intervalo propriamente dito.</p>
+<p>A seguir, vamos definir uma lista e extrair desta uma lista onde os elementos tenham um intervalo pré-definido.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">X</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+<p>Observe no código acima que não definimos o intervalo inicial e final, até porque, queríamos trabalhar com todos os elementos definidos em <tt class="docutils literal">X</tt>. Porém, poderíamos ter definido inicialmente o fatiamento e a notação final seria praticamente a mesma.</p>
+</div>
 
 				</div>
 			</div>
