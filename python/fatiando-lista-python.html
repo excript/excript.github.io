@@ -16,14 +16,14 @@
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
         <meta name="keywords" content="curso,python" />
-    <meta name="description" content="Nesta aula estudaremos como fatiar listas, isto é, como extrair segmentos de dentro de grandes listas e também, estudaremos como extraír elementos dispostos num determinado intervalo." />
+    <meta name="description" content="Nesta aula estudaremos como fatiar listas, isto é, como extrair segmentos de dentro de grandes listas e também, estudaremos como extrair elementos dispostos num determinado intervalo." />
 
         <meta property="og:site_name" content="eXcript" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Fatiando Listas em Python"/>
         <meta property="og:url" content="http://excript.com/python/fatiando-lista-python.html"/>
 
-        <meta property="og:description" content="Nesta aula estudaremos como fatiar listas, isto é, como extrair segmentos de dentro de grandes listas e também, estudaremos como extraír elementos dispostos num determinado intervalo."/>
+        <meta property="og:description" content="Nesta aula estudaremos como fatiar listas, isto é, como extrair segmentos de dentro de grandes listas e também, estudaremos como extrair elementos dispostos num determinado intervalo."/>
 
         <meta property="article:published_time" content="28-04-2015" />
             <meta property="article:section" content="curso de python" />
@@ -261,7 +261,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/for-loop-python.html" >A instrução <tt class="docutils literal">for</tt> em Python</a></td>
                             <td><a href="http://excript.com/python/for-loop-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/funcao-range-python.html" >A função <tt class="docutils literal">range()</tt> do Python</a></td>
+                            <td><a href="http://excript.com/python/funcao-range-python.html" >A função <code>range()</code> do Python</a></td>
                             <td><a href="http://excript.com/python/funcao-range-python.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/python/for-in-range-python.html" >O <tt class="docutils literal">for loop</tt> e a função <tt class="docutils literal">range()</tt> do Python</a></td>
@@ -365,17 +365,17 @@ eXcript            </a>
                 <tr>
                     <td class="content" style="border-left: 0">
                         <div class="paragraph data-line">
-                            <p> Nesta aula estudaremos como fatiar listas, isto é, como extrair segmentos de dentro de grandes listas e também, estudaremos como extraír elementos dispostos num determinado intervalo.</p>
+                            <p> Nesta aula estudaremos como fatiar listas, isto é, como extrair segmentos de dentro de grandes listas e também, estudaremos como extrair elementos dispostos num determinado intervalo.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<div class="section" id="fatiaento-de-lista">
-<h2>FATIAENTO DE LISTA</h2>
+<div class="section" id="fatiamento-de-lista">
+<h2>FATIAMENTO DE LISTA</h2>
 <p>Fatiamento de listas é a extração de um conjunto de elementos contidos numa lista.</p>
-<p>Tomemos como exemplo a lista <tt class="docutils literal">[1,2,3,4,5]</tt> uma forma de fatiarmos é extraíndo os elementos num determinado intervalor, como por exemplo <tt class="docutils literal">[2,3,4]</tt>.</p>
+<p>Tomemos como exemplo a lista <tt class="docutils literal">[1,2,3,4,5]</tt> uma forma de fatiarmos é extraindo os elementos num determinado intervalo, como por exemplo <tt class="docutils literal">[2,3,4]</tt>.</p>
 </div>
 <div class="section" id="a-notacao-utilizada">
 <h2>A NOTAÇÃO UTILIZADA</h2>
@@ -386,19 +386,19 @@ eXcript            </a>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
 <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
 </pre></div>
-<p>No código acima, definimos uma referência <tt class="docutils literal">A</tt> e atribuimos a esta uma lista contendo 5 elementos. Em seguida, utilizamos a referência seguida por um par de colchetes <tt class="docutils literal">[]</tt> e dentro deste, definimos dois números que foram separados pelo caractere <tt class="docutils literal">:</tt>.</p>
+<p>No código acima, definimos uma referência <code>A</code> e atribuimos a esta uma lista contendo 5 elementos. Em seguida, utilizamos a referência seguida por um par de colchetes <code>[]</code> e dentro deste, definimos dois números que foram separados pelo caractere <code>:</code>.</p>
 <p>Então, a notação que devemos utilizar no fatiamento de listas é a seguinte:</p>
 <blockquote>
 referência[ &lt;inicio&gt; : &lt;fim&gt; ]</blockquote>
-<p>Referência é o nome da variável que está vinculada a lista, <tt class="docutils literal">&lt;inicio&gt;</tt> é o índice corresponde ao primeiro elemento que deve pertencer a fração a ser extraída e <tt class="docutils literal">&lt;fim&gt;</tt>, deve ser o índice do último elemento que deve estar contido na lista a ser extraída.</p>
+<p>Referência é o nome da variável que está vinculada a lista, <code>&lt;inicio&gt;</code> é o índice corresponde ao primeiro elemento que deve pertencer a fração a ser extraída e <code>&lt;fim&gt;</code>, deve ser o índice do último elemento que deve estar contido na lista a ser extraída.</p>
 </div>
 <div class="section" id="intervalo-elementos">
 <h2>INTERVALO ELEMENTOS</h2>
-<p>Intervalo é a distância existente entre cada elemento resultante do fatiamento. Por exemplo, se tivermos uma lista com os elementos de 1 até 10 e definirmos o <tt class="docutils literal">intervalo</tt> como sendo igual a 2, iremos obter uma lista igual <tt class="docutils literal">[1, 3, 5, 7, 9]</tt>.</p>
+<p>Intervalo é a distância existente entre cada elemento resultante do fatiamento. Por exemplo, se tivermos uma lista com os elementos de 1 até 10 e definirmos o <tt class="docutils literal">intervalo</tt> como sendo igual a 2, iremos obter uma lista igual <code>[1, 3, 5, 7, 9]</code>.</p>
 <p>A notação para a definição do intervalo é uma continuação da notação do fatiamento, assim, temos que:</p>
 <blockquote>
 referência[ &lt;inicio&gt; : &lt;fim&gt; : &lt;intervalo&gt; ]</blockquote>
-<p>Na notação acima, a única novidade a utilização do sinal de <tt class="docutils literal">:</tt> e a definiçao do intervalo propriamente dito.</p>
+<p>Na notação acima, a única novidade a utilização do sinal de <tt class="docutils literal">:</tt> e a definição do intervalo propriamente dito.</p>
 <p>A seguir, vamos definir uma lista e extrair desta uma lista onde os elementos tenham um intervalo pré-definido.</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">X</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>

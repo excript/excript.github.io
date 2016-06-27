@@ -263,7 +263,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/for-loop-python.html" >A instrução <tt class="docutils literal">for</tt> em Python</a></td>
                             <td><a href="http://excript.com/python/for-loop-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/funcao-range-python.html" >A função <tt class="docutils literal">range()</tt> do Python</a></td>
+                            <td><a href="http://excript.com/python/funcao-range-python.html" >A função <code>range()</code> do Python</a></td>
                             <td><a href="http://excript.com/python/funcao-range-python.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/python/for-in-range-python.html" >O <tt class="docutils literal">for loop</tt> e a função <tt class="docutils literal">range()</tt> do Python</a></td>
@@ -375,8 +375,8 @@ eXcript            </a>
         </table>
     </div>
 <div class="section" id="instrucao-continue">
-<h2>Instrução <tt class="docutils literal">continue</tt></h2>
-<p>A instrução <tt class="docutils literal">continue</tt> interrompe a execução do ciclo. A instrução <tt class="docutils literal">break</tt> e a instrução <tt class="docutils literal">continue</tt> são ferramentas das estruturas de repetição permitindo a interrupção de um único ciclo ou do laço de repetição.</p>
+<h2>INSTRUÇÃO <code>continue</code></h2>
+<p>A instrução <code>continue</code> interrompe a execução do ciclo. A instrução <code>break</code> e a instrução <code>continue</code> são ferramentas das estruturas de repetição permitindo a interrupção de um único ciclo ou do laço de repetição.</p>
 <p>É importante observar que somente o ciclo que está sendo executado será interrompido, logo, o cursor de execução retorna ao cabeçalho da estrutura de repetição e tem início a execução do ciclo seguinte.</p>
 <p>No código abaixo construimos um simples exemplo com o único propósito de demonstrar a interrupção da execução de um único ciclo.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
@@ -388,9 +388,9 @@ eXcript            </a>
         <span class="k">continue</span>
     <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
-<p>No código acima, declaramos a variável <tt class="docutils literal">x</tt> e a inicializamos com o valor 0. Em seguida, implementamos um laço de repetição <tt class="docutils literal">while loop</tt> e definimos como condição para execução do bloco de instrução, que o valor de <tt class="docutils literal">x</tt> seja menor ou igual a 10.</p>
-<p>Na linha seguinte, incrementamos uma únidade em <tt class="docutils literal">x</tt> e em seguida, utilizamo a instrução <tt class="docutils literal">if</tt> definindo que nas situações onde o módulo de <tt class="docutils literal">x</tt> por 2 precisa for igual a 0 a instrução <tt class="docutils literal">continue</tt> deve ser executada, o que ocasiona, a interrupção da execução do ciclo.</p>
-<p>Em decorrência da lógica implementada, a última instrução do ciclo, <tt class="docutils literal">print(x)</tt>, não é executada quando o módulo é igual a 0, até porque, a execução é interrompida com o uso da  instrução <tt class="docutils literal">continue</tt>.</p>
+<p>No código acima, declaramos a variável <code>x</code> e a inicializamos com o valor 0. Em seguida, implementamos um laço de repetição <tt class="docutils literal">while loop</tt> e definimos como condição para execução do bloco de instrução, que o valor de <code>x</code> seja menor ou igual a 10.</p>
+<p>Na linha seguinte, incrementamos uma unidade em <code>x</code> e em seguida, utilizamo a instrução <code>if</code> definindo que nas situações onde o módulo de <code>x</code> por 2 precisa for igual a 0 a instrução <code>continue</code> deve ser executada, o que ocasiona, a interrupção da execução do ciclo.</p>
+<p>Em decorrência da lógica implementada, a última instrução do ciclo, <code>print(x)</code>, não é executada quando o módulo é igual a 0, até porque, a execução é interrompida com o uso da  instrução <code>continue</code>.</p>
 <p>A seguir, temos o resultado obtido com a execução do código anterior.</p>
 <pre class="literal-block">
 2
@@ -402,25 +402,33 @@ eXcript            </a>
 <p>Por fim, temos 2 situações que precisam ser entendidas:</p>
 <blockquote>
 <ol class="arabic simple">
-<li>a instrução <tt class="docutils literal">break</tt> interrompe toda a execução da estrutura de repetição</li>
-<li>a instrução <tt class="docutils literal">break</tt> interrompe só e somente só, o ciclo que estava, ou seja, somente um ciclo é executado.</li>
+<li>a instrução <code>break</code> interrompe toda a execução da estrutura de repetição</li>
+<li>a instrução <code>break</code> interrompe só e somente só, o ciclo que estava, ou seja, somente um ciclo é executado.</li>
 </ol>
 </blockquote>
-</div>
-<div class="section" id="uma-linda-historia-com-break-e-continue">
-<h2>Uma linda história com <tt class="docutils literal">break</tt> e <tt class="docutils literal">continue</tt></h2>
-<p>Imagine-se numa situação em que o Gasparzinho lhe peça para caminhares ao redor de um quarteirão por 10 vezes. A origem é onde estás, e então, inicias a jornada de caminha 10 voltas ao redor do quarteirão. Ao invés falarmos volta, falaremos ciclo. Então, inicias a execução do primeiro ciclo de 10.</p>
-<p>Na metade da terceira volta, o Gasparzinho lhe aborda dizendo que algo aconteceu e ele não quer que você continue a execução do <strong>terceiro ciclo</strong> e assim, fostes magicamente levado a origem da jornada e então, dás continuidade a caminhada.</p>
-<p>SITUAÇÃO 1: na terceira volta, por alguma razão, a caminha foi interrompida e você foi levado magicamente para o ponto inicial do trajeto. Temos que o terceiro ciclo foi interrompido, MAS A JORNADA e a meta de caminhar 10 vezes ao redor do quarteirão continua.</p>
-<p>Ciclo 4 caminhado com sucesso...
+<!-- d
+Uma linda história com ``break`` e ``continue``
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Imagine-se numa situação em que o Gasparzinho lhe peça para caminhares ao redor de um quarteirão por 10 vezes. A origem é onde estás, e então, inicias a jornada de caminha 10 voltas ao redor do quarteirão. Ao invés falarmos volta, falaremos ciclo. Então, inicias a execução do primeiro ciclo de 10.
+
+Na metade da terceira volta, o Gasparzinho lhe aborda dizendo que algo aconteceu e ele não quer que você continue a execução do **terceiro ciclo** e assim, fostes magicamente levado a origem da jornada e então, dás continuidade a caminhada.
+
+SITUAÇÃO 1: na terceira volta, por alguma razão, a caminha foi interrompida e você foi levado magicamente para o ponto inicial do trajeto. Temos que o terceiro ciclo foi interrompido, MAS A JORNADA e a meta de caminhar 10 vezes ao redor do quarteirão continua.
+
+Ciclo 4 caminhado com sucesso...
 Ciclo 5 caminhado com sucesso...
-Ciclo 6 caminhado com sucesso...</p>
-<p>No ciclo 7, ou seja, na sétima vez que estavas caminhando ao redor do quarteirão, o Gasparzinho reaparece e lhe diz que a jornada deve ser interrompida, estás liberado para caminhares por onde quiseres, salvo ao redor do quarteirão.</p>
-<p>SITUAÇÃO 2: no ciclo 7, por alguma razão, o Gasparzinho resolveu interromper a jornada.</p>
-<p>CONCLUSÃO: No terceiro ciclo, por alguma razão, houve uma interrupção e não finalizastes o ciclo, onde fostes magicamente levado ao ponto inicial a joranda continua... é isso que a instrução <tt class="docutils literal">continue</tt> desempenha: ela interrompe a execução do ciclo, e inicia a execução do ciclo seguinte.</p>
-<p>No sétimo ciclo também houve uma interrupção onde a jornada cancelada, isto é, não precisas e não deves continuar caminhando ao redor do quarteirão, a meta foi quebrada... por isso a instrução <tt class="docutils literal">break</tt>: a mesma finaliza a estrutura de repetição totalmente.</p>
-<p><tt class="docutils literal">CONTINUE</tt>: interrompe o ciclo
-<tt class="docutils literal">BREAK</tt>: interrompe toda a execução</p>
+Ciclo 6 caminhado com sucesso...
+
+No ciclo 7, ou seja, na sétima vez que estavas caminhando ao redor do quarteirão, o Gasparzinho reaparece e lhe diz que a jornada deve ser interrompida, estás liberado para caminhares por onde quiseres, salvo ao redor do quarteirão.
+
+SITUAÇÃO 2: no ciclo 7, por alguma razão, o Gasparzinho resolveu interromper a jornada.
+
+CONCLUSÃO: No terceiro ciclo, por alguma razão, houve uma interrupção e não finalizastes o ciclo, onde fostes magicamente levado ao ponto inicial a joranda continua... é isso que a instrução ``continue`` desempenha: ela interrompe a execução do ciclo, e inicia a execução do ciclo seguinte.
+
+No sétimo ciclo também houve uma interrupção onde a jornada cancelada, isto é, não precisas e não deves continuar caminhando ao redor do quarteirão, a meta foi quebrada... por isso a instrução ``break``: a mesma finaliza a estrutura de repetição totalmente.
+``CONTINUE``: interrompe o ciclo
+``BREAK``: interrompe toda a execução -->
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
