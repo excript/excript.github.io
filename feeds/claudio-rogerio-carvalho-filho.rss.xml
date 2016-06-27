@@ -1050,6 +1050,10 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="repeticao"&gt;
+&lt;h2&gt;REPETIÇÃO&lt;/h2&gt;
+&lt;p&gt;Está aula é uma continuação da anterior, logo, &lt;a class="reference external" href="http://excript.com/python/iteracao-python.html"&gt;o texto auxiliar foi unificado. Clique aqui para ir à aula anterior&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Mon, 13 Jun 2016 20:15:00 -0300</pubDate><guid isPermaLink="false">tag:excript.com,2016-06-13:python/lacos-de-repeticao-em-python.html</guid><category>curso</category><category>python</category></item><item><title>Estrutura de repetição while em Python</title><link>http://excript.com/python/while-else-python.html</link><description>
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -1065,7 +1069,7 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
         &lt;/table&gt;
     &lt;/div&gt;
 &lt;div class="section" id="estrutura-while"&gt;
-&lt;h2&gt;ESTRUTURA &lt;tt class="docutils literal"&gt;while&lt;/tt&gt;&lt;/h2&gt;
+&lt;h2&gt;ESTRUTURA &lt;code&gt;while&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;O &lt;strong&gt;laço de repetição&lt;/strong&gt; &lt;tt class="docutils literal"&gt;while&lt;/tt&gt; repete um bloco de instrução enquanto a condição definida no cabeçalho seja verdadeira.&lt;/p&gt;
 &lt;p&gt;A estrutura &lt;tt class="docutils literal"&gt;while&lt;/tt&gt; talvez seja a mais simples para entendermos nesse momento e devemos entender a mesma, como sendo uma evolução da tomada de decisão, isto é, da instrução &lt;tt class="docutils literal"&gt;if&lt;/tt&gt;.  Porém, ao contrário de repetir o bloco definido logo abaixo do cabeçalho uma única vez, caso a expressão definida seja verdadeira, o bloco será executado indefinidamente, até que a expressão &lt;strong&gt;se torne&lt;/strong&gt; falsa.&lt;/p&gt;
 &lt;p&gt;É super importante entender que a expressão &lt;strong&gt;deverá&lt;/strong&gt;, obrigatoriamente, deixar de ser verdadeira para que a repetição seja interrompida. Do contrário, a aplicação irá &amp;quot;congelar&amp;quot;, isto é, em outra palavras, a aplicação irá travar.&lt;/p&gt;
@@ -1079,11 +1083,11 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
 &lt;p&gt;No código acima, temos uma variável de nome &lt;tt class="docutils literal"&gt;conta&lt;/tt&gt; inicializada com o valor zero. Em seguida, utilizamos a instrução &lt;tt class="docutils literal"&gt;while&lt;/tt&gt; para definir uma &lt;tt class="docutils literal"&gt;estrutura de repetição&lt;/tt&gt; e a cada ciclo, o bloco logo em seguida, que contém 2 instruções, será executado. Neste, somamos uma unidade à variável conta e imprimimos o valor da variável, a cada ciclo, na tela.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="estrutura-else"&gt;
-&lt;h2&gt;ESTRUTURA &lt;tt class="docutils literal"&gt;else&lt;/tt&gt;&lt;/h2&gt;
+&lt;h2&gt;ESTRUTURA &lt;code&gt;else&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;A linguagem Python define a instrução &lt;tt class="docutils literal"&gt;else&lt;/tt&gt; como subestrutura da instrução &lt;tt class="docutils literal"&gt;while&lt;/tt&gt;, e essa será executada, uma única vez, quando a expressão, definida no cabeçalho, deixar de ser verdadeira.&lt;/p&gt;
 &lt;p&gt;Vale repetir, que o bloco da instrução &lt;tt class="docutils literal"&gt;else&lt;/tt&gt; será executado uma única vez, devido ao fato de que a estrutura interrompe a execução dos ciclos, quando a expressão deixa de ser verdadeira.&lt;/p&gt;
-&lt;p&gt;Àqueles que entenderam a estrutura de selação simples, isto é, a instrução &lt;tt class="docutils literal"&gt;if&lt;/tt&gt;, terão facilidade em manipular laços de repetição, e também, implementar a instrução &lt;tt class="docutils literal"&gt;while&lt;/tt&gt; corretamente. Isso porque, como já dito, a instrução &lt;tt class="docutils literal"&gt;while&lt;/tt&gt; funciona da mesma forma que a instrução &lt;tt class="docutils literal"&gt;if&lt;/tt&gt; e o que diferencia as mesmas é só e somente só, a quantidade de vezes que o &lt;tt class="docutils literal"&gt;bloco de instrução&lt;/tt&gt; será executado.&lt;/p&gt;
-&lt;p&gt;A seguir, temos o exemplo feito anteriormente, porém agora, estamos implementando o bloco de instrução para quando a expressão definida no cabeçalho da instrução &lt;tt class="docutils literal"&gt;while&lt;/tt&gt; deixar de ser verdadeira.&lt;/p&gt;
+&lt;p&gt;Àqueles que entenderam a &lt;a class="reference external" href="http://excript.com/python/tomada-decisao-python.html"&gt;Tomada de Decisão&lt;/a&gt;, isto é, a instrução &lt;a class="reference external" href="http://excript.com/python/tomada-decisao-python.html"&gt;if&lt;/a&gt;, terão facilidade em manipular laços de repetição, como também, conseguirão facilmente implementar a instrução &lt;a class="reference external" href="http://excript.com/python/tomada-decisao-python.html"&gt;while&lt;/a&gt; . Isso porque, como já dito, a instrução &lt;code&gt;while&lt;/code&gt; funciona da mesma forma que a instrução &lt;code&gt;if&lt;/code&gt;, e o que diferencia as mesmas é só e somente só, a quantidade de vezes que o &lt;tt class="docutils literal"&gt;bloco de instrução&lt;/tt&gt; será executado.&lt;/p&gt;
+&lt;p&gt;A seguir, temos o exemplo feito anteriormente, porém, agora, estamos implementando o bloco de instrução para quando a expressão definida no cabeçalho da instrução &lt;code&gt;while&lt;/code&gt; deixar de ser verdadeira.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
 
 &lt;span class="n"&gt;conta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
@@ -1093,13 +1097,13 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
 &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Valor da variável conta é: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;conta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, o &lt;tt class="docutils literal"&gt;bloco de instrução&lt;/tt&gt; para quando a expressão for verdadeira será executado até que o valor da variável &lt;tt class="docutils literal"&gt;conta&lt;/tt&gt; for igual a 11. Nesse momento, quando a expressão for falsa, o bloco da instrução &lt;tt class="docutils literal"&gt;else&lt;/tt&gt; será executado e o laço de repetição terá chego ao fim.&lt;/p&gt;
-&lt;p&gt;É importante observar, que a instrução &lt;tt class="docutils literal"&gt;else&lt;/tt&gt; funciona da mesma maneira que na tomada de decisão, assim, devemos entender e trabalhar com essa estrutura da mesma forma.&lt;/p&gt;
+&lt;p&gt;No código acima, o &lt;tt class="docutils literal"&gt;bloco de instrução&lt;/tt&gt; para quando a expressão for verdadeira será executado até que o valor da variável &lt;code&gt;conta&lt;/code&gt; seja igual a 11. Nesse momento, quando a expressão for falsa, o bloco da instrução &lt;code&gt;else&lt;/code&gt; será executado e o laço de repetição terá chego ao fim.&lt;/p&gt;
+&lt;p&gt;É importante observar, que a instrução &lt;code&gt;else&lt;/code&gt; funciona da mesma maneira daquela estudada na &lt;a class="reference external" href="http://excript.com/python/tomada-decisao-python.html"&gt;Tomada de Decisão&lt;/a&gt; .&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="interrupcao-com-break"&gt;
 &lt;h2&gt;INTERRUPÇÃO COM &lt;tt class="docutils literal"&gt;break&lt;/tt&gt;&lt;/h2&gt;
-&lt;p&gt;A instrução &lt;tt class="docutils literal"&gt;break&lt;/tt&gt; finaliza abruptamente a execução das estruturas de repetição, e assim, quando essa instrução for executado, o cursor de execução irá interromper a estrutura de repetição e o cursor irá saltar para a linha seguinte após toda o laço de repetição.&lt;/p&gt;
-&lt;p&gt;Em outras palavras, quando a instrução &lt;tt class="docutils literal"&gt;break&lt;/tt&gt; for utilizada, o cursor de execução não irá passar por dentro do bloco definido pela instrução &lt;tt class="docutils literal"&gt;else&lt;/tt&gt;, até porque, a instrução break encerra, &lt;strong&gt;imediatamente&lt;/strong&gt;, a execução das &lt;tt class="docutils literal"&gt;estruturas de repetição&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;A instrução &lt;code&gt;break&lt;/code&gt; finaliza abruptamente a execução das estruturas de repetição, e assim, quando essa instrução for executado, o cursor de execução irá interromper a estrutura de repetição e o cursor irá saltar para a linha seguinte após toda o &lt;tt class="docutils literal"&gt;Laço de Repetição&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Em outras palavras, quando a instrução &lt;code&gt;break&lt;/code&gt; for utilizada, o cursor de execução não irá passar por dentro do bloco definido pela instrução &lt;code&gt;else&lt;/code&gt;, até porque, a instrução break encerra, &lt;strong&gt;imediatamente&lt;/strong&gt;, a execução da &lt;tt class="docutils literal"&gt;estrutura de repetição&lt;/tt&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
@@ -5265,6 +5269,10 @@ Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span
 &lt;/div&gt;
 &lt;div class="section" id="faq-frequently-asked-questions"&gt;
 &lt;h2&gt;FAQ (Frequently Asked Questions)&lt;/h2&gt;
+&lt;div class="section" id="posso-utilizar-o-notepad-ao-inves-do-pycharm"&gt;
+&lt;h3&gt;POSSO UTILIZAR O NOTEPAD AO INVÉS DO &lt;tt class="docutils literal"&gt;PyCharm&lt;/tt&gt;?&lt;/h3&gt;
+&lt;p&gt;Sem qualquer problema! Porém, você terá que escrever seu código e em seguir ir no Prompt de Comando, Shell e mandar executar o seu código.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="e-melhor-aprender-logica-de-programacao-antes-do-python"&gt;
 &lt;h3&gt;É MELHOR APRENDER LÓGICA DE PROGRAMAÇÃO ANTES DO PYTHON?&lt;/h3&gt;
 &lt;p&gt;Não! Inclusive, há muitas escolas que ensinam programação com a linguagem Python, logo, o mesmo pode ser utilizando para o aprendizado da programação, bem como, da lógica de programação.&lt;/p&gt;
@@ -18281,7 +18289,7 @@ Em cada expressão matemática, você deve imprimir o resultado de uma expressã
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Vamos estudar nessa aula a Iteração, Estrutura de Repetição, looping, Laço de Repetição, Laços Condicionais&lt;/p&gt;
+                            &lt;p&gt; Vamos estudar nessa aula a Iteração, Estrutura de Repetição, looping, Laço de Repetição, Laços Condicionais ou como você preferir chama-los!&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
@@ -18307,7 +18315,7 @@ Em cada expressão matemática, você deve imprimir o resultado de uma expressã
 &lt;div class="section" id="a-repeticao-de-forma-primitiva"&gt;
 &lt;h2&gt;A REPETIÇÃO DE FORMA PRIMITIVA&lt;/h2&gt;
 &lt;p&gt;A forma mais primitiva que as linguagens de programação disponibilizam para a repetição de um mesmo bloco, era com o uso das instruções &lt;tt class="docutils literal"&gt;goto&lt;/tt&gt;, que numa tradução livre, seria algo como &lt;tt class="docutils literal"&gt;vá para&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;Algumas linguagens obrigavamo-nos a definir o número da linha para qual desejamos saltar, outras, permitiam a definição de &lt;tt class="docutils literal"&gt;labels&lt;/tt&gt;, isto é, nomes, para então, com a instrução &lt;tt class="docutils literal"&gt;goto&lt;/tt&gt;, pularmos para a linha de um respectivo &lt;tt class="docutils literal"&gt;label&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Algumas linguagens obrigava-nos a definir o número da linha para qual desejamos saltar, outras, permitiam a definição de &lt;tt class="docutils literal"&gt;labels&lt;/tt&gt;, isto é, nomes, para então, com a instrução &lt;tt class="docutils literal"&gt;goto&lt;/tt&gt;, pularmos para a linha de um respectivo &lt;tt class="docutils literal"&gt;label&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;Desta forma, se desejassemos repetir um bloco, bastaria &amp;quot;pular&amp;quot; para o início do &lt;tt class="docutils literal"&gt;label&lt;/tt&gt; e assim, repetir as instrução enquanto fosse necessário, por exemplo.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt; &lt;span class="n"&gt;REPETIÇÃO&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;linha1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -18340,10 +18348,10 @@ Em cada expressão matemática, você deve imprimir o resultado de uma expressã
 
 &lt;span class="n"&gt;minhaFunção&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, definimos uma função de nome &lt;tt class="docutils literal"&gt;minhaFunção()&lt;/tt&gt; e estamos invocando-a na última linha do código, ou seja, estamos invocando a função após a sua definição.&lt;/p&gt;
-&lt;p&gt;A partir do momento em que invocamos a função &lt;tt class="docutils literal"&gt;minhaFunção()&lt;/tt&gt;, estamos também, enviando como argumento, um valor literal inteiro igual a 0. Esse valor é recebido como parâmetro pela referência &lt;tt class="docutils literal"&gt;val&lt;/tt&gt;, em seguida, agora já, dentro da função, algumas linhas são executadas, e então, a variável &lt;tt class="docutils literal"&gt;val&lt;/tt&gt; recebe o valor dela mesma, acrescido de 1 unidade.&lt;/p&gt;
+&lt;p&gt;No código acima, definimos uma função de nome &lt;code&gt;minhaFunção()&lt;/code&gt; e estamos invocando-a na última linha do código, ou seja, estamos invocando a função após a sua definição.&lt;/p&gt;
+&lt;p&gt;A partir do momento em que invocamos a função &lt;code&gt;minhaFunção()&lt;/code&gt;, estamos também, enviando como argumento, um valor literal inteiro igual a 0. Esse valor é recebido como parâmetro pela referência &lt;tt class="docutils literal"&gt;val&lt;/tt&gt;, em seguida, agora já, dentro da função, algumas linhas são executadas, e então, a variável &lt;tt class="docutils literal"&gt;val&lt;/tt&gt; recebe o valor dela mesma, acrescido de 1 unidade.&lt;/p&gt;
 &lt;p&gt;Feito isso, uma condição é verificada, e caso o valor da variável &lt;tt class="docutils literal"&gt;val&lt;/tt&gt; seja menor do que o valor inteiro literal 10, então, o bloco de instrução verdadeiro será executado, e este, contém uma única instrução, que invoca a função novamente, passando como argumento, o valor contido na variável &lt;tt class="docutils literal"&gt;val&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;Do contrário, isto é, caso o valor da variável &lt;tt class="docutils literal"&gt;val&lt;/tt&gt; seja igual ou maior do que 10, então, é executado a instrução &lt;tt class="docutils literal"&gt;exit()&lt;/tt&gt; e o bloco de instrução é finalizado.&lt;/p&gt;
+&lt;p&gt;Do contrário, isto é, caso o valor da variável &lt;tt class="docutils literal"&gt;val&lt;/tt&gt; seja igual ou maior do que 10, então, é executado a instrução &lt;code&gt;exit()&lt;/code&gt; e o bloco de instrução é finalizado.&lt;/p&gt;
 &lt;p&gt;Neste exemplo, podemos ver como um mesmo bloco é executado por diversas vezes e somente quando a condição definida, dentro do próprio bloco deixar de ser verdadeira, é que a execução será interrompida. Do contrário, o ciclo continuara sua execução, de maneira indefinida.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="bloco-de-instrucao"&gt;
@@ -18353,17 +18361,17 @@ Em cada expressão matemática, você deve imprimir o resultado de uma expressã
 &lt;div class="section" id="ciclo-ou-laco"&gt;
 &lt;h2&gt;CICLO OU LAÇO&lt;/h2&gt;
 &lt;p&gt;O &lt;strong&gt;ciclo&lt;/strong&gt; é a &lt;strong&gt;repetição&lt;/strong&gt; do &lt;tt class="docutils literal"&gt;bloco de instrução&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;Do dicionárioa Aurélio, temos que ciclo é: &amp;quot;Série de fenômenos que se sucedem numa ordem determinada:&amp;quot;&lt;/p&gt;
+&lt;p&gt;Do dicionários Aurélio, temos que ciclo é: &amp;quot;Série de fenômenos que se sucedem numa ordem determinada:&amp;quot;&lt;/p&gt;
 &lt;p&gt;O bloco de instrução executado por definição, sempre será o mesmo. Então, devemos pensar no ciclo, nas linguagens de programação, como a execução de um mesmo bloco de instrução. Talvez, o bloco tenha condições que determinem, conforme a expressão definida, blocos de instruções diferentes, porém, no geral, esse bloco sempre estará contido dentro do bloco de instrução da estrutura de repetição.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="estruturas-de-repeticao"&gt;
 &lt;h2&gt;ESTRUTURAS DE REPETIÇÃO&lt;/h2&gt;
 &lt;p&gt;As linguagens de programação atuais, fornecem meios para a repetição de um &lt;strong&gt;bloco de instrução&lt;/strong&gt; de forma mais simples e menos verbosa. Essa são, tecnicamente chamadas, de &lt;strong&gt;Iteradores&lt;/strong&gt;, isto é, repetidores.&lt;/p&gt;
-&lt;p&gt;Normalmente, as linguagens disponiblizam um iterador que repetira uma quantia finita de vezes, e outro que repetirá, enquanto uma condição seja verdadeira, ou seja, um repetidor condicional.&lt;/p&gt;
+&lt;p&gt;Normalmente, as linguagens disponibilizam um iterador que repetira uma quantia finita de vezes, e outro que repetirá, enquanto uma condição seja verdadeira, ou seja, um repetidor condicional.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="iteradores-em-python"&gt;
 &lt;h2&gt;ITERADORES EM PYTHON&lt;/h2&gt;
-&lt;p&gt;O Python disponibiliza 2 iteradores, o primeiro e mais simples, é o iterador condicional, que repetira um determinado bloco de código, enquanto a condição definida no cabeçalho da estrutra for verdadeiro, de nome &lt;tt class="docutils literal"&gt;while&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;O Python disponibiliza 2 iteradores, o primeiro e mais simples, é o iterador condicional, que repetira um determinado bloco de código, enquanto a condição definida no cabeçalho da estrutura for verdadeiro, de nome &lt;tt class="docutils literal"&gt;while&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;O segundo iterador, é o iterador finito, isto é, que repetira por uma quantidade de vezes conhecido previamente, que é chamado de &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;for..in&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
@@ -21240,7 +21248,7 @@ Assim, temos que podemos ler o que um usuário digita através da função &lt;c
     &lt;/div&gt;
 &lt;div class="section" id="caracteres-de-escape"&gt;
 &lt;h2&gt;CARACTERES DE ESCAPE&lt;/h2&gt;
-&lt;p&gt;Os &lt;tt class="docutils literal"&gt;caracteres de escape&lt;/tt&gt; é uma definição para adicionar as strings marcações que não possui um desenho propriamente dito, porém, que desempenham tarefas bastante importantes na formação e exibição dos textos. Temos, por exemplo, uma quebra de linha. A mesma não possui um caractere que a represente visualmente, até porque, a sua representação visual, é o posicionamento do cursor no canto esquerto da linha seguinte. O mesmo acontece com a tabulação, não há um desenho que o represente, até porque, o objetivo, é o posicionamento do texto mais a direita do vídeo.&lt;/p&gt;
+&lt;p&gt;Os &lt;tt class="docutils literal"&gt;caracteres de escape&lt;/tt&gt; é uma definição para adicionar as strings marcações que não possui um desenho propriamente dito, porém, que desempenham tarefas bastante importantes na formação e exibição dos textos. Temos, por exemplo, uma quebra de linha. A mesma não possui um caractere que a represente visualmente, até porque, a sua representação visual, é o posicionamento do cursor no canto esquerdo da linha seguinte. O mesmo acontece com a tabulação, não há um desenho que o represente, até porque, o objetivo, é o posicionamento do texto mais a direita do vídeo.&lt;/p&gt;
 &lt;p&gt;É interessante notar, que os &lt;tt class="docutils literal"&gt;Caracteres de Escape&lt;/tt&gt;, talvez sejam, a primeira notação de formatação criada na informática. Hoje em dia, por exemplo, o HTML possui uma marcação para representar a quebra de linha, que no caso, é a Tag &lt;tt class="docutils literal"&gt;&amp;lt;br&amp;gt;&lt;/tt&gt;. Na época, como só havia a necessidade de representar algumas poucas representações, utilizou-se esse sistema.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="notacao-de-escape"&gt;
@@ -21314,7 +21322,7 @@ Assim, temos que podemos ler o que um usuário digita através da função &lt;c
 
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Escape_sequences_in_C"&gt;https://en.wikipedia.org/wiki/Escape_sequences_in_C&lt;/a&gt;&lt;/p&gt;
+&lt;!-- dd https://en.wikipedia.org/wiki/Escape_sequences_in_C --&gt;
 &lt;/div&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Wed, 26 Feb 2014 19:26:00 -0300</pubDate><guid isPermaLink="false">tag:excript.com,2014-02-26:linguagem-c/caracter-escape-c.html</guid><category>curso</category><category>c</category></item><item><title>Estrutura de Repetição while do C</title><link>http://excript.com/linguagem-c/estrutura-repeticao-while-c.html</link><description>
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
