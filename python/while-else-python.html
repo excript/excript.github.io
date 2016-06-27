@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/while-else-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python,while,while loop" />
+        <meta name="keywords" content="curso,python,while,while loop,else,blog" />
     <meta name="description" content="Nesta aula estudaremos a instrução "while" que é, a estrutura de repetição mais simples do Python, onde definimos uma expressão e um mesmo bloco será executado enquanto a expressão definida for verdadeira" />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,12 +25,14 @@
 
         <meta property="og:description" content="Nesta aula estudaremos a instrução "while" que é, a estrutura de repetição mais simples do Python, onde definimos uma expressão e um mesmo bloco será executado enquanto a expressão definida for verdadeira"/>
 
-        <meta property="article:published_time" content="13-06-2016" />
+        <meta property="article:published_time" content="27-06-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="while" />
             <meta property="article:tag" content="while loop" />
+            <meta property="article:tag" content="else" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -115,7 +117,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-06-13T18:15:00-03:00"> Publicado em 13-06-2016</time>
+            <time datetime="2016-06-27T18:15:00-03:00"> Publicado em 27-06-2016</time>
         </span>
 
 
@@ -376,9 +378,9 @@ eXcript            </a>
     </div>
 <div class="section" id="estrutura-while">
 <h2>ESTRUTURA <code>while</code></h2>
-<p>O <strong>laço de repetição</strong> <tt class="docutils literal">while</tt> repete um bloco de instrução enquanto a condição definida no cabeçalho seja verdadeira.</p>
-<p>A estrutura <tt class="docutils literal">while</tt> talvez seja a mais simples para entendermos nesse momento e devemos entender a mesma, como sendo uma evolução da tomada de decisão, isto é, da instrução <tt class="docutils literal">if</tt>.  Porém, ao contrário de repetir o bloco definido logo abaixo do cabeçalho uma única vez, caso a expressão definida seja verdadeira, o bloco será executado indefinidamente, até que a expressão <strong>se torne</strong> falsa.</p>
-<p>É super importante entender que a expressão <strong>deverá</strong>, obrigatoriamente, deixar de ser verdadeira para que a repetição seja interrompida. Do contrário, a aplicação irá &quot;congelar&quot;, isto é, em outra palavras, a aplicação irá travar.</p>
+<p>O <strong>Laço de Repetição</strong> <code>while</code> repete um bloco de instrução enquanto a condição definida em seu cabeçalho seja verdadeira.</p>
+<p>A estrutura <code>while</code> talvez seja a mais simples para entendermos nesse momento. Devemos entender a mesma como sendo uma variante da Tomada de Decisão, isto é, da instrução <code>if</code>.  Porém, ao contrário de repetir o bloco uma única vez, caso a expressão definida seja verdadeira, o bloco será executado indefinidamente, até que a expressão <strong>se torne</strong> falsa.</p>
+<p>É super importante entender que a expressão <strong>deverá</strong>, obrigatoriamente, deixar de ser verdadeira para que a repetição seja interrompida. Do contrário, a aplicação irá <strong>congelar</strong>, isto é, a aplicação irá travar.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span>
@@ -386,14 +388,14 @@ eXcript            </a>
     <span class="n">conta</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">print</span><span class="p">(</span><span class="n">conta</span><span class="p">)</span>
 </pre></div>
-<p>No código acima, temos uma variável de nome <tt class="docutils literal">conta</tt> inicializada com o valor zero. Em seguida, utilizamos a instrução <tt class="docutils literal">while</tt> para definir uma <tt class="docutils literal">estrutura de repetição</tt> e a cada ciclo, o bloco logo em seguida, que contém 2 instruções, será executado. Neste, somamos uma unidade à variável conta e imprimimos o valor da variável, a cada ciclo, na tela.</p>
+<p>No código acima, temos uma variável de nome <code>conta</code> inicializada com o valor 0. Em seguida, utilizamos a instrução <code>while</code> para definir uma <tt class="docutils literal">Estrutura de Repetição</tt> e, a cada ciclo, o bloco na seguida, que contém 2 instruções, será executado. Neste bloco, somamos uma unidade à variável <code>conta</code> e imprimimos o valor da mesma, a cada ciclo, na saida padrão com a função <code>print()</code>.</p>
 </div>
 <div class="section" id="estrutura-else">
 <h2>ESTRUTURA <code>else</code></h2>
-<p>A linguagem Python define a instrução <tt class="docutils literal">else</tt> como subestrutura da instrução <tt class="docutils literal">while</tt>, e essa será executada, uma única vez, quando a expressão, definida no cabeçalho, deixar de ser verdadeira.</p>
-<p>Vale repetir, que o bloco da instrução <tt class="docutils literal">else</tt> será executado uma única vez, devido ao fato de que a estrutura interrompe a execução dos ciclos, quando a expressão deixa de ser verdadeira.</p>
-<p>Àqueles que entenderam a <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">Tomada de Decisão</a>, isto é, a instrução <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">if</a>, terão facilidade em manipular laços de repetição, como também, conseguirão facilmente implementar a instrução <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">while</a> . Isso porque, como já dito, a instrução <code>while</code> funciona da mesma forma que a instrução <code>if</code>, e o que diferencia as mesmas é só e somente só, a quantidade de vezes que o <tt class="docutils literal">bloco de instrução</tt> será executado.</p>
-<p>A seguir, temos o exemplo feito anteriormente, porém, agora, estamos implementando o bloco de instrução para quando a expressão definida no cabeçalho da instrução <code>while</code> deixar de ser verdadeira.</p>
+<p>A linguagem Python define a instrução <code>else</code> como uma subestrutura da instrução <code>while</code>. Essa instrução define um bloco de código que será executado uma única vez, quando a expressão definida no cabeçalho da instrução <code>while</code>, deixar de ser verdadeira.</p>
+<p>Vale repetir, que o bloco da instrução <code>else</code> será executado uma única vez, devido ao fato de que a estrutura interrompe a execução dos ciclos quando a expressão deixar de ser verdadeira.</p>
+<p>Àqueles que entenderam a <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">Tomada de Decisão</a>, isto é, a instrução <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">if</a>, deverão ter facilidade em manipular Laços de Repetição <code>while</code>, como também, conseguirão facilmente implementar a instrução <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">while</a> . Isso porque, como já dito, a instrução <code>while</code> funciona da mesma forma que a instrução <code>if</code>, e o que diferencia as mesmas é só e somente só a quantidade de vezes que o <tt class="docutils literal">Bloco de Instrução</tt> será executado.</p>
+<p>A seguir, temos o exemplo feito anteriormente, porém, agora, estamos implementando o <tt class="docutils literal">Bloco de Instrução</tt> para quando a expressão definida no cabeçalho da instrução <code>while</code> deixar de ser verdadeira.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span>
@@ -403,13 +405,13 @@ eXcript            </a>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Valor da variável conta é: &quot;</span><span class="p">,</span> <span class="n">conta</span><span class="p">)</span>
 </pre></div>
-<p>No código acima, o <tt class="docutils literal">bloco de instrução</tt> para quando a expressão for verdadeira será executado até que o valor da variável <code>conta</code> seja igual a 11. Nesse momento, quando a expressão for falsa, o bloco da instrução <code>else</code> será executado e o laço de repetição terá chego ao fim.</p>
-<p>É importante observar, que a instrução <code>else</code> funciona da mesma maneira daquela estudada na <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">Tomada de Decisão</a> .</p>
+<p>No código acima, o <tt class="docutils literal">Bloco de Instrução</tt> para quando a expressão for verdadeira será executado até que o valor da variável <code>conta</code> seja igual a 11. Nesse momento, quando a expressão passar a ser falsa falsa, o <tt class="docutils literal">Bloco da Instrução</tt> <code>else</code> será executado e o <tt class="docutils literal">Laço de Repetição</tt> terá chego ao fim.</p>
+<p>É importante observar que a instrução <code>else</code> funciona da mesma maneira àquela estudada na <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">Tomada de Decisão</a> .</p>
 </div>
 <div class="section" id="interrupcao-com-break">
-<h2>INTERRUPÇÃO COM <tt class="docutils literal">break</tt></h2>
-<p>A instrução <code>break</code> finaliza abruptamente a execução das estruturas de repetição, e assim, quando essa instrução for executado, o cursor de execução irá interromper a estrutura de repetição e o cursor irá saltar para a linha seguinte após toda o <tt class="docutils literal">Laço de Repetição</tt>.</p>
-<p>Em outras palavras, quando a instrução <code>break</code> for utilizada, o cursor de execução não irá passar por dentro do bloco definido pela instrução <code>else</code>, até porque, a instrução break encerra, <strong>imediatamente</strong>, a execução da <tt class="docutils literal">estrutura de repetição</tt>.</p>
+<h2>INTERRUPÇÃO COM <code>break</code></h2>
+<p>A instrução <code>break</code> finaliza abruptamente a execução das estruturas de repetição e assim, quando essa instrução for executada, o cursor de execução irá interromper a execução das instruções definidas pela <tt class="docutils literal">Estrutura de Repetição</tt> e irá saltar para a linha seguinte após o <tt class="docutils literal">Laço de Repetição</tt>.</p>
+<p>Em outras palavras, temos que quando a instrução <code>break</code> for utilizada, o cursor de execução não irá passar por dentro do bloco definido pela instrução <code>else</code>, até porque, a instrução <code>break</code> encerra, <strong>imediatamente</strong> a execução da <tt class="docutils literal">Estrutura de Repetição</tt>.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
@@ -452,7 +454,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/while.html">while</a>, 	<a href="http://excript.com/tag/while-loop.html">while loop</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/while.html">while</a>, 	<a href="http://excript.com/tag/while-loop.html">while loop</a>, 	<a href="http://excript.com/tag/else.html">else</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

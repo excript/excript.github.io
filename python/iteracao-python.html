@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/iteracao-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python,iteração,estrutura de repetição,looping,laço de repetição,laços condicionais" />
+        <meta name="keywords" content="curso,python,iteração,estrutura de repetição,looping,laço de repetição,laços condicionais,blog" />
     <meta name="description" content="Vamos estudar nessa aula a Iteração, Estrutura de Repetição, looping, Laço de Repetição, Laços Condicionais ou como você preferir chama-los!" />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,7 +25,7 @@
 
         <meta property="og:description" content="Vamos estudar nessa aula a Iteração, Estrutura de Repetição, looping, Laço de Repetição, Laços Condicionais ou como você preferir chama-los!"/>
 
-        <meta property="article:published_time" content="06-10-2014" />
+        <meta property="article:published_time" content="27-06-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -34,6 +34,7 @@
             <meta property="article:tag" content="looping" />
             <meta property="article:tag" content="laço de repetição" />
             <meta property="article:tag" content="laços condicionais" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -118,7 +119,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2014-10-06T11:08:00-03:00"> Publicado em 06-10-2014</time>
+            <time datetime="2016-06-27T11:08:00-03:00"> Publicado em 27-06-2016</time>
         </span>
 
 
@@ -379,9 +380,24 @@ eXcript            </a>
     </div>
 <div class="section" id="introducao-a-iteracao">
 <h2>INTRODUÇÃO À ITERAÇÃO</h2>
-<p>A <strong>Iteração</strong>, <strong>Estrutura de Repetição</strong>, <strong>looping</strong>, <strong>Laço de Repetição</strong>, <strong>Laços Condicionais</strong> ou somente <strong>repetição</strong>, são os vários nomes utilizados para nos referir às estruturas das linguagens que tem o propósito de repetir um mesmo bloco de código, por uma quantidade finita de vezes, ou enquanto uma condição for verdadeira.</p>
-<p>Essas estruturas que toda linguagem de programação possui, proporciona a execução de um determinado bloco de código mais do que uma única vez, e seu uso normalmente está relacionado com a manipulação de listas.</p>
-<p>As estruturas que repetem um bloco enquanto uma condição for verdadeira, funcionam da mesma forma que as estruturas condicionais, e a diferença, é que o bloco será executado, enquanto uma condição for verdadeira.</p>
+<p>Iterar é a ação de repetir algo. Na programação, iteração significa a repetição de um conjunto de instruções por uma quantidade finita de vezes ou então, enquanto uma condição seja aceita.</p>
+<p>Há várias formas para falarmos sobre a iteração, por exemplo: <strong>Iteração</strong>, <strong>Estrutura de Repetição</strong>, <strong>looping</strong>, <strong>Laço de Repetição</strong>, <strong>Laços Condicionais</strong>, <strong>repetição</strong> e etc. Todos as nomenclaturas acima são utilizadas para nos referir às estruturas das linguagens que tem o propósito de repetir um mesmo bloco de código, por uma quantidade finita de vezes, ou enquanto uma condição for verdadeira.</p>
+<p>Toda linguagem de programação possui no mínimo uma forma de iteração.</p>
+<p>É comum que os iniciantes não enxerguem onde esse tipo de estrutura é utilizada e isso é normal! Então, vamos utilizar um exemplo para tentar demonstrar o seu uso e importância.</p>
+</div>
+<div class="section" id="caso-de-uso">
+<h2>CASO DE USO</h2>
+<p>Vamos supor que tenhamos uma lista de nomes, como por exemplo, a lista a seguir:</p>
+<pre class="literal-block">
+fulano
+ciclano
+beltrano
+</pre>
+<p>Agora, vamos supor que queiramos utilizar esses nomes, porém, precisamos que os mesmos estejam em letras maiúsculas. Assim, vamos criar um código que deve ser executado transformando o nome de caracteres minusculos para maiúsculos. Observe que esse código é o mesmo, indiferente do nome, ou então, indiferente seja o item contido na lista acima.</p>
+<p>DESSA FORMA TEMOS que precisamos que um mesmo bloco de código seja executado para cada elemento contido na lista de nomes acima! Ou seja, vamos criar um único código e executa-lo a quantidade de vezes que precisarmos, ou então, a quantidade de itens existentes na lista.</p>
+</div>
+<div class="section" id="exemplo-utilizando-python">
+<h2>EXEMPLO UTILIZANDO PYTHON</h2>
 <p>No código a seguir, temos um exemplo utilizando a estrutura de repetição <tt class="docutils literal">while</tt>, que numa tradução livre, significa, <tt class="docutils literal">enquanto</tt>.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
@@ -390,14 +406,14 @@ eXcript            </a>
     <span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
     <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
-<p>O código acima, inicialmente declara uma variável de nome <tt class="docutils literal">num</tt> e a inicializa com o valor literal <tt class="docutils literal">0</tt>. Em seguida, com a instrução <tt class="docutils literal">while</tt> é definido uma estrutura de repetição, e essa será repetida enquanto a condição definida entre parêntesis, no cabeçalho da estrutura <tt class="docutils literal">while</tt> seja verdadeiro.</p>
-<p>É importante observar, que a condição definida no cabeçalho da estrutura <tt class="docutils literal">while</tt> só deixará de ser verdadeiro, porque o valor da variável <tt class="docutils literal">num</tt> é incrementado toda vez que o bloco de instrução é executado, do contrário, teríamos um laço de repetição infinito e que faria o nosso programar travar, congelar.</p>
+<p>O código acima, inicialmente declara uma variável de nome <code>num</code> e inicializa-a com o valor literal <code>0</code> . Em seguida, com a instrução <code>while</code> é definido uma Estrutura de Repetição e essa será repetida enquanto a condição definida entre parêntesis, no cabeçalho da estrutura <code>while</code> for verdadeiro.</p>
+<p>É importante observar, que a condição definida no cabeçalho da estrutura <code>while</code> só deixará de ser verdadeira, porque o valor da variável <code>num</code> é incrementado toda vez que o bloco de instrução é executado, do contrário, teríamos um laço de repetição infinito e que faria o nosso programar travar, congelar - entrar em looping!</p>
 </div>
 <div class="section" id="a-repeticao-de-forma-primitiva">
 <h2>A REPETIÇÃO DE FORMA PRIMITIVA</h2>
-<p>A forma mais primitiva que as linguagens de programação disponibilizam para a repetição de um mesmo bloco, era com o uso das instruções <tt class="docutils literal">goto</tt>, que numa tradução livre, seria algo como <tt class="docutils literal">vá para</tt>.</p>
-<p>Algumas linguagens obrigava-nos a definir o número da linha para qual desejamos saltar, outras, permitiam a definição de <tt class="docutils literal">labels</tt>, isto é, nomes, para então, com a instrução <tt class="docutils literal">goto</tt>, pularmos para a linha de um respectivo <tt class="docutils literal">label</tt>.</p>
-<p>Desta forma, se desejassemos repetir um bloco, bastaria &quot;pular&quot; para o início do <tt class="docutils literal">label</tt> e assim, repetir as instrução enquanto fosse necessário, por exemplo.</p>
+<p>A forma mais primitiva que as linguagens de programação dispunham para a repetição de um mesmo bloco se dava com o uso das instruções <code>goto</code>, que numa tradução livre significa algo como <tt class="docutils literal">vá para</tt>.</p>
+<p>Algumas linguagens obrigava-nos a definir o número da linha para qual desejamos saltar, outras, permitiam a definição de <code>label</code>, isto é, nomes, para então, com a instrução <code>goto</code>, pularmos para a linha de um respectivo <code>label</code>.</p>
+<p>Desta forma, se desejassemos repetir um mesmo bloco, tínhamos que <strong>pular</strong> para o início do <code>label</code> e assim, repetir as instrução enquanto fosse necessário, por exemplo.</p>
 <div class="highlight"><pre><span></span><span class="n">label</span> <span class="n">REPETIÇÃO</span><span class="p">:</span>
     <span class="n">linha1</span><span class="p">;</span>
     <span class="n">linha2</span><span class="p">;</span>
@@ -408,12 +424,12 @@ eXcript            </a>
     <span class="n">SENÃO</span>
         <span class="n">instrucao</span>
 </pre></div>
-<p>No código acima, um pouco escrito em Português e outra parte em Inglês, temos como 3 últimas linhas uma estrutura de seleção, onde uma condição é verificada, e caso a expressão seja verdadeira, o cursos de execução do programa, salta para linha onde o <tt class="docutils literal">label</tt> foi definido. Do contrário, o bloco <tt class="docutils literal">SENÃO</tt> é executado e a execução seguirá o de execução, sempre de cima para baixo, da esquerda para direita.</p>
+<p>No código acima, um pouco escrito em Português e outra parte em Inglês, temos como as 3 últimas linhas de código, uma estrutura de seleção, onde uma condição é verificada e, caso a expressão seja verdadeira, o cursos de execução do programa saltará para linha onde o <code>label</code> está declarado. Do contrário, o bloco <code>SENÃO</code> é executado e a execução seguirá normalmente.</p>
 </div>
 <div class="section" id="a-recursividade-como-laco-de-repeticao">
 <h2>A RECURSIVIDADE COMO LAÇO DE REPETIÇÃO</h2>
-<p>Recursividade é a invocação de uma função dentro dela mesma, ou seja, é toda função que invoca a si mesma. Essa é uma prática perigosa de trabalho, que pode facilmente travar nossos programas, ou então, estourar a pilha, isto é, podemos obter o famoso erro <tt class="docutils literal">stack overflow error</tt> que nada mais é, do que o limite máximo de vezes que uma função pode chamar a si mesma.</p>
-<p>A seguir, temos um exemplo em Português, onde trabalhos com o conceito de recursividade.</p>
+<p>Recursividade significa a invocação de uma função por ela mesma, ou seja, é toda função que invoca a si mesma. Essa é uma prática perigosa de trabalho e que pode facilmente travar nossos programas, ou então, estourar a pilha de execução, isto é, podemos obter o famoso erro <tt class="docutils literal">stack overflow error</tt> que, nada mais é do que o limite máximo de vezes que uma função pode chamar a si mesma.</p>
+<p>A seguir, temos um exemplo em Português, onde trabalhamos com o conceito de recursividade.</p>
 <div class="highlight"><pre><span></span><span class="n">func</span> <span class="n">minhaFunção</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
 
     <span class="n">linha</span> <span class="mi">1</span>
@@ -430,30 +446,30 @@ eXcript            </a>
 <span class="n">minhaFunção</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 <p>No código acima, definimos uma função de nome <code>minhaFunção()</code> e estamos invocando-a na última linha do código, ou seja, estamos invocando a função após a sua definição.</p>
-<p>A partir do momento em que invocamos a função <code>minhaFunção()</code>, estamos também, enviando como argumento, um valor literal inteiro igual a 0. Esse valor é recebido como parâmetro pela referência <tt class="docutils literal">val</tt>, em seguida, agora já, dentro da função, algumas linhas são executadas, e então, a variável <tt class="docutils literal">val</tt> recebe o valor dela mesma, acrescido de 1 unidade.</p>
-<p>Feito isso, uma condição é verificada, e caso o valor da variável <tt class="docutils literal">val</tt> seja menor do que o valor inteiro literal 10, então, o bloco de instrução verdadeiro será executado, e este, contém uma única instrução, que invoca a função novamente, passando como argumento, o valor contido na variável <tt class="docutils literal">val</tt>.</p>
-<p>Do contrário, isto é, caso o valor da variável <tt class="docutils literal">val</tt> seja igual ou maior do que 10, então, é executado a instrução <code>exit()</code> e o bloco de instrução é finalizado.</p>
-<p>Neste exemplo, podemos ver como um mesmo bloco é executado por diversas vezes e somente quando a condição definida, dentro do próprio bloco deixar de ser verdadeira, é que a execução será interrompida. Do contrário, o ciclo continuara sua execução, de maneira indefinida.</p>
+<p>A partir do momento que invocamos a função <code>minhaFunção()</code>, estamos também, enviando como argumento um valor literal inteiro igual a <code>0</code> . Esse valor é recebido como parâmetro pelo argumento <code>val</code>. Agora, estando dentro da função, algumas linhas são executadas, e então, a variável <code>val</code> recebe o valor dela mesma, acrescido de 1 unidade.</p>
+<p>Feito isso, uma condição é verificada e, caso o valor da variável <code>val</code> seja menor do que o valor inteiro literal <code>10</code>, o bloco de instrução verdadeiro será executado, e este, contém uma única instrução que invoca a função novamente passando como parâmetro o valor contido na variável <code>val</code>.</p>
+<p>Do contrário, isto é, caso o valor da variável <code>val</code> seja igual ou maior do que <code>10</code>, então, é executado a instrução <code>exit()</code> e o bloco de instrução é finalizado.</p>
+<p>Neste exemplo, podemos ver como um mesmo bloco é executado por diversas vezes e somente quando a condição definida dentro do próprio bloco deixar de ser verdadeira, é que a execução será interrompida. Do contrário, o ciclo continuara sua execução, de maneira indefinida.</p>
 </div>
 <div class="section" id="bloco-de-instrucao">
 <h2>BLOCO DE INSTRUÇÃO</h2>
-<p>O Bloco de Instrução é o conjunto de instrução que está na sequência das estruturas e sempre estarão na indentação, um nível hierarquico a frente da definição da estrutura.</p>
+<p>O Bloco de Instrução é o conjunto de instrução que SEMPRE está na sequência das estruturas e sempre estarão na indentação, um nível hierarquico a frente da definição da estrutura.</p>
 </div>
 <div class="section" id="ciclo-ou-laco">
 <h2>CICLO OU LAÇO</h2>
-<p>O <strong>ciclo</strong> é a <strong>repetição</strong> do <tt class="docutils literal">bloco de instrução</tt>.</p>
-<p>Do dicionários Aurélio, temos que ciclo é: &quot;Série de fenômenos que se sucedem numa ordem determinada:&quot;</p>
-<p>O bloco de instrução executado por definição, sempre será o mesmo. Então, devemos pensar no ciclo, nas linguagens de programação, como a execução de um mesmo bloco de instrução. Talvez, o bloco tenha condições que determinem, conforme a expressão definida, blocos de instruções diferentes, porém, no geral, esse bloco sempre estará contido dentro do bloco de instrução da estrutura de repetição.</p>
+<p>O <strong>ciclo</strong> é o nome chamado a uma única <strong>repetição</strong> do <tt class="docutils literal">bloco de instrução</tt>.</p>
+<p>Do dicionários Aurélio, temos que ciclo significa: &quot;Série de fenômenos que se sucedem numa ordem determinada&quot;</p>
+<p>Então, temos que o bloco de instrução executado por definição, sempre será o mesmo. Assim, devemos pensar no conceito de ciclo para as linguagens de programação, como a execução de um mesmo bloco de código. Talvez, o bloco tenha condições que determinem, conforme a expressão definida, blocos de instruções diferentes, porém, no geral, esse bloco sempre estará contido dentro do bloco de instrução da estrutura de repetição.</p>
 </div>
 <div class="section" id="estruturas-de-repeticao">
 <h2>ESTRUTURAS DE REPETIÇÃO</h2>
-<p>As linguagens de programação atuais, fornecem meios para a repetição de um <strong>bloco de instrução</strong> de forma mais simples e menos verbosa. Essa são, tecnicamente chamadas, de <strong>Iteradores</strong>, isto é, repetidores.</p>
+<p>As linguagens de programação atuais fornecem meios para a repetição de um <strong>bloco de instrução</strong> de forma mais simples e menos verbosas do que suas antecessoras. Essa estruturas são, tecnicamente chamadas de <strong>Iteradores</strong>, isto é, repetidores.</p>
 <p>Normalmente, as linguagens disponibilizam um iterador que repetira uma quantia finita de vezes, e outro que repetirá, enquanto uma condição seja verdadeira, ou seja, um repetidor condicional.</p>
 </div>
 <div class="section" id="iteradores-em-python">
 <h2>ITERADORES EM PYTHON</h2>
-<p>O Python disponibiliza 2 iteradores, o primeiro e mais simples, é o iterador condicional, que repetira um determinado bloco de código, enquanto a condição definida no cabeçalho da estrutura for verdadeiro, de nome <tt class="docutils literal">while</tt>.</p>
-<p>O segundo iterador, é o iterador finito, isto é, que repetira por uma quantidade de vezes conhecido previamente, que é chamado de <tt class="docutils literal"><span class="pre">for..in</span></tt>.</p>
+<p>O Python disponibiliza 2 iteradores, o primeiro e mais simples é o iterador condicional, que repetira um determinado bloco de código enquanto a condição definida no cabeçalho da estrutura for verdadeiro, de nome <code>while</code>.</p>
+<p>O segundo iterador, é o iterador finito, isto é, que repetira por uma quantidade de vezes conhecido previamente que é chamado de <code>for..in</code>.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
@@ -496,7 +512,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/iteracao.html">iteração</a>, 	<a href="http://excript.com/tag/estrutura-de-repeticao.html">estrutura de repetição</a>, 	<a href="http://excript.com/tag/looping.html">looping</a>, 	<a href="http://excript.com/tag/laco-de-repeticao.html">laço de repetição</a>, 	<a href="http://excript.com/tag/lacos-condicionais.html">laços condicionais</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/iteracao.html">iteração</a>, 	<a href="http://excript.com/tag/estrutura-de-repeticao.html">estrutura de repetição</a>, 	<a href="http://excript.com/tag/looping.html">looping</a>, 	<a href="http://excript.com/tag/laco-de-repeticao.html">laço de repetição</a>, 	<a href="http://excript.com/tag/lacos-condicionais.html">laços condicionais</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
