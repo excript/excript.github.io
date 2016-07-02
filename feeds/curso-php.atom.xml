@@ -612,8 +612,41 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;h2&gt;ESCOPO DE NOME DAS FUNÇÕES ANÔNIMAS&lt;/h2&gt;
 &lt;p&gt;Quando declaramos uma função anônima, geralmente, iremos atribuir a mesma a uma variável. A variável servirá como uma espécie de referência, até porque, através dessa variável é que poderemos invocar a função, ou melhor, &lt;strong&gt;somente&lt;/strong&gt; com essa variável é que o bloco de código da função anonima poderá ser executado!&lt;/p&gt;
 &lt;p&gt;Uma função anônima possui o seu escopo restrito, então, não é possível fazer acesso direto aos membros externos. Em suma, &lt;a class="reference external" href="http://excript.com/php/introducao-as-funcoes-php.html"&gt;o escopo de uma função anônima funciona de maneira análoga a de uma função convencional&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Para acessarmos variáveis externas a função anônima, temos que explicitamente declarar na definição desta que, uma determinada variável, deve ser inserida no escopo da função anônima.&lt;/p&gt;
-&lt;p&gt;Então, para passarmos uma variável externa a uma função anônima, utilizamos a instrução &lt;tt class="docutils literal"&gt;use&lt;/tt&gt; junto a implementação da função. Também podemos passar variáveis externas através da sua referência, para isso, utilizamos o operador &lt;tt class="docutils literal"&gt;&amp;amp;&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Dessa forma, para acessarmos variáveis externas a função anônima, temos que explicitamente declarar, no cabeçalho da função, que determinadas variáveis devem estar visíveis dentro da função que estamos definindo.&lt;/p&gt;
+&lt;p&gt;Para que seja possível essa manipulação no escopo das variáveis, foi definido a instrução &lt;code&gt;use&lt;/code&gt; que funciona como complemento da declaração das funções anonimas, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$func = function() use ($x) {&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$func();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, declaramos uma variável de nome &lt;code&gt;$x&lt;/code&gt; e inicializamo-a com o número inteiro 10. Em seguida, definimos uma função anonima e nesta declaramos, com a instrução &lt;code&gt;use&lt;/code&gt;, que a variável &lt;code&gt;$x&lt;/code&gt; deve estar acessível internamente.&lt;/p&gt;
+&lt;p&gt;Por essa razão é que conseguimos acessar a variável &lt;code&gt;$x&lt;/code&gt;, até porque, por padrão, funções anonimas não possuem acesso aos membros externos, como já estudado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="passagem-de-referencia-e-de-valor"&gt;
+&lt;h2&gt;PASSAGEM DE REFERÊNCIA E DE VALOR&lt;/h2&gt;
+&lt;p&gt;Funções anonimas funcionam de maneira análoga a qualquer outra função, logo, estas possuem o escopo restrito. Da mesma forma, temos que ao inserirmos variáveis no escopo de uma função, o que estamos de fato fazendo, é declarando uma variável de mesmo nome e inicializando-a com o valor igual a variável externa.&lt;/p&gt;
+&lt;p&gt;Desta forma, se alterarmos o valor das variáveis inseridas no escopo local, o que será alterado, é só e somente só a variável de mesmo nome re-declarada no escopo local da função anonima. Logo, se desejarmos alterar a variável cujo escopo é externo a função, temos de passar a sua referência e não o seu valor. Para isso, basta precedermos o seu nome pelo uso de um &amp;amp; comercial.&lt;/p&gt;
+&lt;p&gt;Vejamos o código a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$y = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$func = function() use ($x, &amp;amp;$y) {&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O valor de y é: $y&amp;quot;;&lt;/span&gt;
+
+&lt;span class="x"&gt;    $x = 0;&lt;/span&gt;
+&lt;span class="x"&gt;    $y = 0;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$func();&lt;/span&gt;
+
+&lt;span class="x"&gt;echo &amp;quot;-----&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;echo &amp;quot;O valor de y é: $y&amp;quot;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, podemos facilmente observar que somente a variável externa &lt;code&gt;$y&lt;/code&gt; é que teve o seu valor alterado, isso porque, a referência da mesma foi inserida no escopo local da função anonima.&lt;/p&gt;
+&lt;p&gt;A seguir, implementamos mais um exemplo para avançarmos ainda mais em nosso estudo.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$var1 = 10;&lt;/span&gt;
 &lt;span class="x"&gt;$num = [&amp;quot;um&amp;quot;, &amp;quot;dois&amp;quot;, &amp;quot;três&amp;quot;];&lt;/span&gt;
 &lt;span class="x"&gt;$func = function() use ($var1, &amp;amp;$num) {&lt;/span&gt;
@@ -640,7 +673,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;span class="x"&gt;echo $num;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category><category term="blog"></category></entry><entry><title>Introdução às Funções Anônimas em PHP</title><link href="http://excript.com/php/introducao-funcao-anonima-php.html" rel="alternate"></link><published>2016-06-11T10:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/introducao-funcao-anonima-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="use"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category><category term="blog"></category></entry><entry><title>Introdução às Funções Anônimas em PHP</title><link href="http://excript.com/php/introducao-funcao-anonima-php.html" rel="alternate"></link><published>2016-06-11T10:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/introducao-funcao-anonima-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;

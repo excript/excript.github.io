@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-05-12T21:00:00-03:00</updated><entry><title>SQLite Internamente</title><link href="http://excript.com/python/sqlite-internamente.html" rel="alternate"></link><published>2016-05-12T21:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-12:python/sqlite-internamente.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-26T01:02:00-03:00</updated><entry><title>Características do SQLite</title><link href="http://excript.com/python/caracteristicas-sqlite.html" rel="alternate"></link><published>2016-06-26T01:02:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-26:python/caracteristicas-sqlite.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos as principais características do banco de dados SQLite.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="principais-caracteristicas"&gt;
+&lt;h2&gt;PRINCIPAIS CARACTERÍSTICAS&lt;/h2&gt;
+&lt;p&gt;Nesta aula estudaremos as principais características do banco de dados &lt;tt class="docutils literal"&gt;SQLite&lt;/tt&gt;, bem como suas particularidades e sua integração junto ao código do &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt;. Nosso objetivo é fornecer um conhecimento mínimo dos recursos e o que temos a disposição.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;motor de banco de dados&lt;/dt&gt;
+&lt;dd&gt;O SQLite é um motor de banco de dados escrito com a Linguagem C. Todas as operações são feitas localmente e todos os dados são acessados diretamente do local onde a base está armazenada. As linguagens como o Python acessam os recursos através de uma interface de acesso pública disponibilizada pelo fabricante. Desta forma, os dados são lidos e processados a cada requisição pelo motor de banco de dados que vem acoplado a interface e e que suporta os principais recursos disponibilizados pelos principais bancos de dados relacionais.&lt;/dd&gt;
+&lt;dt&gt;instalação inferior a 500kb&lt;/dt&gt;
+&lt;dd&gt;O motor do banco de dados é um código escrito em C que, quando executado, utiliza menos de 500kb de memória, o que o torna perfeito para uso nos mais diversos dispositivos, e computadores pessoais.&lt;/dd&gt;
+&lt;dt&gt;conexão via path&lt;/dt&gt;
+&lt;dd&gt;Nos conectamos a base de dados através do PATH do sistema operacional onde a mesma está armazenada. Em seguida, o motor do banco de dados realiza as operações necessárias, atualiza o arquivos, fecha a conexão e retorna, através de uma função de callback os dados ou a confirmação do que foi solicitado. Assim, não há quaisquer instância em execução em outro computador ou mesmo localmente, tudo está otimizado para o acesso local.&lt;/dd&gt;
+&lt;dt&gt;pre-configurado&lt;/dt&gt;
+&lt;dd&gt;Por padrão, basta executarmos uma Query que cria uma nova base de dados para termos um novo banco criado e já configurado para uso. Desta forma, temos que o driver de acesso ou a base gerada precisam ser configurado, salvo em ocasiões em que estivermos trabalhando com algo bastante especializado.&lt;/dd&gt;
+&lt;dt&gt;dispensa inicialização&lt;/dt&gt;
+&lt;dd&gt;O SQLite é acessado e gerenciado através de uma biblioteca local, como já estudado. Assim, temos que o mesmo dispensa uma instancia para o seu correto funcionamento, logo, todas as transações são gerenciadas através do driver que estará disponível em todos os computadores que precisarem acessar a base.&lt;/dd&gt;
+&lt;dt&gt;domínio público&lt;/dt&gt;
+&lt;dd&gt;Atualmente, o código do banco de dados está disponibilizado como domínio público, ou seja, o código atualmente pertence a toda a humanidade e ninguém pode requerer direitos autorais ou royalties pela sua utilização, seja em softwares livres ou privados.&lt;/dd&gt;
+&lt;dt&gt;multiplataforma&lt;/dt&gt;
+&lt;dd&gt;A linguagem C possui compiladores para as mais diversas plataformas e estes funcionam de maneira relativamente igual. Desta forma, uma mesma base pode ser acessada por diferentes dispositivos sob diferentes sistemas operacionais e tudo deverá, teoricamente, funcionar sem maiores complicações.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+</summary><category term="python"></category><category term="sqlite"></category><category term="driver"></category><category term="banco de dados"></category></entry><entry><title>SQLite Internamente</title><link href="http://excript.com/python/sqlite-internamente.html" rel="alternate"></link><published>2016-05-12T21:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-12:python/sqlite-internamente.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -194,25 +228,27 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="definicao"&gt;
+&lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
 &lt;p&gt;Tabela é uma estrutura bidimensional utilizada para organizar conjuntos de informações que possuem uma mesma estrutura.&lt;/p&gt;
-&lt;div class="section" id="linguagem-sql"&gt;
-&lt;h2&gt;LINGUAGEM SQL&lt;/h2&gt;
 &lt;/div&gt;
 &lt;div class="section" id="tabela"&gt;
 &lt;h2&gt;TABELA&lt;/h2&gt;
-&lt;p&gt;A &lt;strong&gt;TABELA&lt;/strong&gt; é a estrutura fundamental dos bancos de dados relacionais. Todas as informações, indiferente do tipo, está contido dentro de um tabela. Cada tabela possui um conjunto de atributos - as colunas. Assim, por definição do termo, temos que: um conjunto de colunas formam uma tabela. Logo, toda tabela irá conter no mínimo um única coluna.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;tabela&lt;/strong&gt; é a estrutura fundamental dos bancos de dados relacionais. Todas as informações, indiferente do tipo, estão contidas dentro de tabelas. Cada tabela possui um conjunto de atributos - &lt;strong&gt;as colunas&lt;/strong&gt;. Assim, por definição do termo, temos que todo conjunto de colunas formam uma tabela e todo conjunto de tabelas formam um banco de dados.&lt;/p&gt;
+&lt;p&gt;Toda tabela contém, no mínimo, uma coluna.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="coluna"&gt;
 &lt;h2&gt;COLUNA&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;COLUNA&lt;/strong&gt; é o atributo de uma tabela. Toda coluna sempre possuirá um tipo, e este identifica a informação que cada célula irá conter. O tipo é definido no mesmo momento da criação da tabela e este não ira suportar o armazenamento de um outro tipo de informação.
-Uma coluna pode ter o seu tipo alterado a qualquer momento, porém, as informações deverão ser convertidas para  o novo tipo. Não há um número máximo de colunas numa tabela, porém, cada base de dados em SQLite tem um atributo que limita a quantidade de colunas. Essa é uma limitação artificial, e serve somente a título de definição. Para alterar a capacidade é necessário alterar o código fonte do banco de dados e então, recompilar todos os códigos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Coluna&lt;/strong&gt; é um atributo da tabela. Toda coluna possui tipo, e este identifica a informação que cada célula conterá. O &lt;strong&gt;tipo&lt;/strong&gt; é definido no mesmo momento da criação da tabela e sendo que a mesma não suportará o armazenamento de dados que não estejam em conformidade com o tipo pré-definido.&lt;/p&gt;
+&lt;p&gt;A coluna pode ter o seu tipo alterado a qualquer momento, porém, as informações deverão ser convertidas para o novo tipo.&lt;/p&gt;
+&lt;p&gt;Não há quantidade máxima de colunas que uma tabela pode conter em teoria, porém, cada base de dados em SQLite tem um atributo que limita a quantidade de colunas. Essa é uma limitação artificial, e serve somente a título de definição. Para alterar a capacidade é necessário alterar o código fonte do banco de dados e então, recompilar todo o código.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="registro"&gt;
 &lt;h2&gt;REGISTRO&lt;/h2&gt;
-&lt;p&gt;Registro é um conjunto de informações agrupadas. Cada registro possui a quantidade de colunas que a tabela possuir. Uma tabela pode conter nenhum registro ou então, um número infinito de registros.
-Na documentação do SQLite não há limite numérico, porém, há um limite pré-determinado que cada tabela pode conter. A verdadeira limitação encontra-se no tipo de dado utilizado na programação do banco de dados, por exemplo, o tipo inteiro.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Registro&lt;/strong&gt; é um conjunto de informações agrupadas. Cada registro possui a quantidade de colunas que a tabela possuir. Uma tabela pode conter nenhum registro ou então, um número infinito de registros.&lt;/p&gt;
+&lt;p&gt;Na documentação do SQLite não há limite numérico, porém, há um limite pré-determinado que cada tabela pode conter. A verdadeira limitação encontra-se no tipo de dado utilizado na programação do banco de dados, por exemplo, o tipo inteiro.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Introdução ao SQL do SQLite</title><link href="http://excript.com/python/introducao-sql-sqlite.html" rel="alternate"></link><published>2015-05-09T20:37:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-09:python/introducao-sql-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>Introdução ao SQL do SQLite</title><link href="http://excript.com/python/introducao-sql-sqlite.html" rel="alternate"></link><published>2015-05-09T20:37:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-09:python/introducao-sql-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -238,7 +274,7 @@ Na documentação do SQLite não há limite numérico, porém, há um limite pr�
 &lt;p&gt;A comunidade acabou criando diversas bibliotecas que se especializaram em gerar o código SQL de forma diferente a diferentes bancos de dados. Assim, criou-se uma interface de programação que permitiu um mesmo sistema ser executada em diferentes estruturas e bancos de dados. Atualmente, é muito comum em um novo projeto a utilização de algum framework, até porque, a manipulação do SQL acaba por ocasionar diversos erros, sem contar, a que a manutenção do código SQL é geralmente, bastante complicada.
 Um outro problema, é que diversos programadores mantinham códigos SQL misturado com o código da aplicação. Assim, quando era necessário dar manutenção em um código SQL, tinha-se que extrair o mesmo de dentro das aspas e concatenações que normalmente são utilizados na geração do código. Assim, a programação estava se tornando bastante onerosa e sujeita a erros que não havia necessidade estarem submetidos.&lt;/p&gt;
 &lt;p&gt;Hoje, os bancos de dados são componentes fundamentais de qualquer aplicação e sua utilização pode ser encontrada em pequenas aplicações como também, em grandes datacenter com centenas de computadores interconectados que dividem o processamento como também, o armazenamento.&lt;/p&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Criando o Primeiro BD com SQLite</title><link href="http://excript.com/python/criando-primeiro-bd-sqlite.html" rel="alternate"></link><published>2015-05-08T11:14:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-08:python/criando-primeiro-bd-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>Criando o Primeiro BD com SQLite</title><link href="http://excript.com/python/criando-primeiro-bd-sqlite.html" rel="alternate"></link><published>2015-05-08T11:14:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-08:python/criando-primeiro-bd-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -269,7 +305,7 @@ O sqlite sempre trabalha dentro da home do seu usuário que estiver em execuçã
 &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;MinhaPasta/&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;meu&lt;/span&gt; &lt;span class="n"&gt;caso&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dumps/&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sqlite3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;renato.db&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>O que é banco de dados</title><link href="http://excript.com/python/o-que-e-banco-de-dados-sqlite.html" rel="alternate"></link><published>2015-05-07T07:18:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-07:python/o-que-e-banco-de-dados-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>O que é banco de dados</title><link href="http://excript.com/python/o-que-e-banco-de-dados-sqlite.html" rel="alternate"></link><published>2015-05-07T07:18:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-07:python/o-que-e-banco-de-dados-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -314,50 +350,7 @@ Essa é a razão de hoje haver tantas empresas e tantos diferentes banco de dado
 &lt;h2&gt;DURABILIDADE&lt;/h2&gt;
 &lt;p&gt;Durabilidade é o conceito que determina que após a efetivação de uma operação, ou seja, após a confirmação de que o registro foi salvo com sucesso, este deve assim persistir indefinidamente. Este conceito estabelece que fatores internos ou externos, como a interrupção de energia ou então, ou um possível erro no sistema operacional não comprometam o sucesso de uma ou um conjunto de operações.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Características do SQLite</title><link href="http://excript.com/python/caracteristicas-sqlite.html" rel="alternate"></link><published>2015-05-06T01:02:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-06:python/caracteristicas-sqlite.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos as principais características do banco de dados SQLite.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;p&gt;Agora, estudaremos as principais características do banco de dados SQLite bem como, algumas particularidades do acesso através do Python. Assim, conseguiremos entender o porque a dupla Python e SQLite é tão poderosa e sua integração tão transparente.&lt;/p&gt;
-&lt;div class="section" id="motor-de-banco-de-dados"&gt;
-&lt;h2&gt;MOTOR DE BANCO DE DADOS&lt;/h2&gt;
-&lt;p&gt;O SQLite, ainda que seja executado e acesso na maioria das vezes localmente, possui um motor de banco de dados completo e assim, consegue suportar os principais recursos que bancos de dados profissionais atualmente estão suportando.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tamanho-da-instalacao-inferior-a-500kb"&gt;
-&lt;h2&gt;TAMANHO DA INSTALAÇÃO INFERIOR A 500kb&lt;/h2&gt;
-&lt;p&gt;Mesmo com todos os recursos que o SQLite proporciona, quando executado, o mesmo faz uso de menos de 500kb de memória, o que o faz perfeito para ser utilizado nos mais diversos dispositivos, e computadores pessoais.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conexao-via-path"&gt;
-&lt;h2&gt;CONEXÃO VIA PATH&lt;/h2&gt;
-&lt;p&gt;Para conectar-se a uma base SQLite, basta somente informar o PATH de onde a mesma encontra-se. Isso porque, o SQLite é um motor implementado na linguagem C que não possui um instância em execução para o bom funcionamento.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="pre-configurado"&gt;
-&lt;h2&gt;PRE-CONFIGURADO&lt;/h2&gt;
-&lt;p&gt;Para iniciarmos o uso de uma base SQLite, não precisamos fazer praticamente qualquer configuração, isso porque, o mesmo vem com uma configuração de fábrica excelente para as mais diversas e importantes situações.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="nao-precisa-ser-inicializado-antes-do-uso"&gt;
-&lt;h2&gt;NÃO PRECISA SER INICIALIZADO ANTES DO USO&lt;/h2&gt;
-&lt;p&gt;Devido ao fato do SQLite ser acessado e gerenciado através de uma biblioteca local, o mesmo dispensa uma instancia para o seu correto funcionamento. Assim, todas as transações são gerenciadas através de gerenciadores instalados em diversas máquinas distintas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="licenca"&gt;
-&lt;h2&gt;LICENÇA&lt;/h2&gt;
-&lt;p&gt;O código do banco de dados SQLite possui atualmente uma licença de domínio público, logo, todos temos acesso sem a necessidade de qualquer pagamento ou taxa pela sua utilização.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="multiplataforma"&gt;
-&lt;h2&gt;MULTIPLATAFORMA&lt;/h2&gt;
-&lt;p&gt;Em vista de que todo o seu código está escrito na linguagem C, o mesmo pode ser compilado para as diversas plataformas que possuem compilador para a linguagem C. E como as principais plataformas possuem compilador da linguagem C, temos que o SQLite está compilado nativamente para praticamente todos os sistemas operacionais existentes. Assim, você pode acessar uma base de um sistema Windows, Linux, MAC, Android, iOS que em todos eles, o funcionamento será o mesmo.&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Como instalar o SQLite</title><link href="http://excript.com/python/como-instalar-sqlite.html" rel="alternate"></link><published>2015-05-05T21:54:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-05:python/como-instalar-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>Como instalar o SQLite</title><link href="http://excript.com/python/como-instalar-sqlite.html" rel="alternate"></link><published>2015-05-05T21:54:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-05:python/como-instalar-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -371,9 +364,12 @@ Essa é a razão de hoje haver tantas empresas e tantos diferentes banco de dado
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="instalacao"&gt;
+&lt;h2&gt;INSTALAÇÃO&lt;/h2&gt;
 &lt;p&gt;O SQLite, por seu tamanho mínimo, está disponível em vários sistemas operacionais e também, acoplado em várias linguagens de programação por padrão. Ainda assim, caso o mesmo não esteja instalado, é possível fazermos o download e instala-lo manualmente, até porque, toda a estrutura do banco de dados SQLite se resume a um único arquivo executável.&lt;/p&gt;
 &lt;p&gt;Como instalar o SQLite? O Python trás por padrão as bibliotecas para o acesso e gerenciamento de bases SQLite. Porém, se desejarmos acessar uma base através do prompt de comando, faz-se necessário o download do executável que permite o acesso.&lt;/p&gt;
 &lt;p&gt;Todos os arquivos estão disponíveis no site do SQLite, na seção Download, segue o link:
 &lt;a class="reference external" href="http://www.sqlite.org/"&gt;http://www.sqlite.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Após o download dos arquivos para o acesso ao SQLite, será necessário adicionar ao path o sistema operacional o local onde você colocou os arquivos e então, o seu computador já estará pronto para o uso.&lt;/p&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry></feed>
+&lt;/div&gt;
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry></feed>

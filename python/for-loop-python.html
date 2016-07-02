@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/for-loop-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,for,iteradores,iterator,blog" />
     <meta name="description" content="Nessa aula estudaremos a estrutura de repetição "for", utilizada para percorrer listas e sequências facilmente do primeiro ao último elemento." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,10 +25,14 @@
 
         <meta property="og:description" content="Nessa aula estudaremos a estrutura de repetição "for", utilizada para percorrer listas e sequências facilmente do primeiro ao último elemento."/>
 
-        <meta property="article:published_time" content="29-10-2014" />
+        <meta property="article:published_time" content="02-07-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="for" />
+            <meta property="article:tag" content="iteradores" />
+            <meta property="article:tag" content="iterator" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -93,7 +97,7 @@ eXcript            </a>
                     <a href="http://excript.com/python/for-loop-python.html"
                        rel="bookmark"
                        title="Permalink to A instrução for em Python">
-                        A INSTRUÇÃO <TT CLASS="DOCUTILS LITERAL">FOR</TT> EM PYTHON
+                        A INSTRUÇÃO <CODE>FOR</CODE> EM PYTHON
                     </a>
                 </h1>
 
@@ -113,7 +117,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2014-10-29T11:25:00-02:00"> Publicado em 29-10-2014</time>
+            <time datetime="2016-07-02T18:25:00-03:00"> Publicado em 02-07-2016</time>
         </span>
 
 
@@ -258,7 +262,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/while-else-python.html" >Estrutura de repetição <code>while</code> em Python</a></td>
                             <td><a href="http://excript.com/python/while-else-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/for-loop-python.html" >A instrução <tt class="docutils literal">for</tt> em Python</a></td>
+                            <td><a href="http://excript.com/python/for-loop-python.html" >A instrução <code>for</code> em Python</a></td>
                             <td><a href="http://excript.com/python/for-loop-python.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/python/funcao-range-python.html" >A função <code>range()</code> do Python</a></td>
@@ -350,6 +354,9 @@ eXcript            </a>
                         </tr><tr>
                             <td><a href="http://excript.com/python/argumentos-nomeados-posicionais-python.html" >Argumento de Função Nomeado vs Posicional em Python</a></td>
                             <td><a href="http://excript.com/python/argumentos-nomeados-posicionais-python.html" ></a></td>
+                        </tr><tr>
+                            <td><a href="http://excript.com/python/retornar-valor-python.html" >Retornando Valores pelas Funções em Python</a></td>
+                            <td><a href="http://excript.com/python/retornar-valor-python.html" ></a></td>
                         </tr>        </tbody>
             </table>
         
@@ -372,26 +379,28 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<div class="section" id="introducao-a-instrucao-for">
-<h2>INTRODUÇÃO À INSTRUÇÃO <code>for</code></h2>
-<p>A instrução <tt class="docutils literal">for</tt> possui uma quantia de ciclos pré-definida. A quantidade de ciclos é determinado pela quantidade de elementos contido na lista informada junto com a instrução <tt class="docutils literal">for</tt>. Dessa forma, será executado um ciclo para cada elemento.</p>
-<p>O laço de repetição <tt class="docutils literal">for</tt> do Python se assemelha ao <tt class="docutils literal">for each</tt> que temos em Java, PHP, C#, C++ e etc. Sendo uma estrutura simples e compacta para percorrer todos elementos de coleções ou estruturas que contenham listas de objetos.</p>
-<p>A sintaxe do Python não possui a estrutura de repetição <tt class="docutils literal">for</tt> tradicional, onde define-se uma variável, condição e incremento no cabeçalho da estrutura. A ideia, é o trabalho e manipulação de estrutura iteraveis, isto é, a definição de iteradores, objetos <tt class="docutils literal">iterators</tt>.</p>
+<div class="section" id="introducao-a-instrucao-for-in">
+<h2>INTRODUÇÃO À INSTRUÇÃO <code>for..in</code></h2>
+<p>A instrução <code>for</code> se caracteriza por obrigar o programador a definir, explicitamente em seu cabeçalho, a quantidade de vezes [ciclos] que será executado. A quantidade de ciclos é determinado pela quantidade de elementos contido na lista declarada junto com a instrução <code>for</code>. Dessa forma, será executado um ciclo para cada elemento <strong>isoladamente</strong>.</p>
+<p>O <tt class="docutils literal">Laço de Repetição</tt> <code>for</code> do Python se assemelha ao <code>for each</code> encontrado linguagens como o Java, PHP, C# e etc. Inclusive, a característica encontrada em todas as linguagens é a mesma que temos aqui em Python: uma estrutura simples e compacta para percorrer todos elementos das coleções ou estruturas que contenham listas de objetos.</p>
+<p>A sintaxe do Python não possui a estrutura de repetição <code>for</code> tradicional, onde define-se uma variável, condição e incremento no cabeçalho da estrutura. A ideia, é o trabalho e manipulação de estrutura iteraveis, isto é, a definição de iteradores, ou melhor: objetos iteráveis - <code>iterators</code>.</p>
+<p>Se você não conhece a estrutura &quot;normal&quot; da instrução <tt class="docutils literal">for</tt> implementada pela maioria das linguagens, não há problema, até porque, tal conhecimento de nada serve quando estamos programando em Python!</p>
 </div>
 <div class="section" id="a-definicao-da-instrucao-for">
 <h2>A DEFINIÇÃO DA INSTRUÇÃO <code>for</code></h2>
-<p>A estrutura <tt class="docutils literal">for</tt> exige, inicialmente, a definição de uma variável, e em seguida, a instância que será iterada. A seguir, temos o esquema para o uso da instrução <tt class="docutils literal">for</tt>.</p>
+<p>A estrutura <tt class="docutils literal">for</tt> exige, inicialmente, a definição de uma variável e, em seguida, a lista que será iterada. A seguir, temos o esquema para o uso da instrução <tt class="docutils literal">for</tt>.</p>
 <div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">&lt;</span><span class="n">variável</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">objeto</span> <span class="n">iterável</span><span class="o">&gt;</span><span class="p">:</span>
     <span class="n">bloco</span> <span class="n">de</span> <span class="n">instrução</span>
 </pre></div>
-<p>A variável a ser declarada, receberá, a cada ciclo, um elemento contido na lista que está sendo iterada. Ao término, todos elementos terão sido percorridos, e a cada ciclo, o elemento seguinte contido no objeto iterável será passado pela variável definida inicialmente.</p>
+<p>A variável a ser declarada na primeira parte da estrutura, receberá, a cada ciclo, um elemento contido na lista que está sendo iterada. Ao término, todos elementos terão sido percorridos, e a cada ciclo, o elemento seguinte contido no objeto iterável terá sido passado pela variável definida inicialmente.</p>
 <p>A seguir, faremos um exemplo real e percorreremos uma lista numérica.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 </pre></div>
-<p>Acima, definimos a variável <tt class="docutils literal">item</tt> e uma lista com 5 elementos <tt class="docutils literal">[3,4,5,6,7]</tt>. A cada ciclo, o elemento seguinte é atribuido à variável <tt class="docutils literal">item</tt> e ao término, teremos executado um ciclo individual para cada elemento contido na lista.</p>
+<p>Nós podemos ler o laço de repetição definido acima <code>for item in [3,4,5,6,7]:</code> da seguinte maneira. Para cada elemento contido na lista <code>[3,4,5,6,7]</code> execute o bloco de código a seguir e a cada execução, atribua à variável <tt class="docutils literal">item</tt> <code>for item in</code> um item da lista.</p>
+<p>Ou entao, podemos ler como estamos estudando... Acima, definimos a variável <code>item</code> e uma lista com 5 elementos <code>[3,4,5,6,7]</code>. A cada ciclo, o elemento seguinte é atribuido à variável <code>item</code> e ao término, teremos executado um ciclo individual para cada elemento contido na lista.</p>
 </div>
 <div class="section" id="exemplo-1-imprimindo-todas-as-letras-de-uma-string">
 <h2>EXEMPLO 1: IMPRIMINDO TODAS AS LETRAS DE UMA STRING</h2>
@@ -449,7 +458,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/for.html">for</a>, 	<a href="http://excript.com/tag/iteradores.html">iteradores</a>, 	<a href="http://excript.com/tag/iterator.html">iterator</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

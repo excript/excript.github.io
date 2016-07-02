@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/caracteristicas-sqlite.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="python,sqlite" />
+        <meta name="keywords" content="python,sqlite,driver,banco de dados" />
     <meta name="description" content="Nesta aula estudaremos as principais características do banco de dados SQLite." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,10 +25,12 @@
 
         <meta property="og:description" content="Nesta aula estudaremos as principais características do banco de dados SQLite."/>
 
-        <meta property="article:published_time" content="06-05-2015" />
+        <meta property="article:published_time" content="26-06-2016" />
             <meta property="article:section" content="python" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="sqlite" />
+            <meta property="article:tag" content="driver" />
+            <meta property="article:tag" content="banco de dados" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -113,7 +115,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2015-05-06T01:02:00-03:00"> Publicado em 06-05-2015</time>
+            <time datetime="2016-06-26T01:02:00-03:00"> Publicado em 26-06-2016</time>
         </span>
 
 
@@ -195,34 +197,25 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<p>Agora, estudaremos as principais características do banco de dados SQLite bem como, algumas particularidades do acesso através do Python. Assim, conseguiremos entender o porque a dupla Python e SQLite é tão poderosa e sua integração tão transparente.</p>
-<div class="section" id="motor-de-banco-de-dados">
-<h2>MOTOR DE BANCO DE DADOS</h2>
-<p>O SQLite, ainda que seja executado e acesso na maioria das vezes localmente, possui um motor de banco de dados completo e assim, consegue suportar os principais recursos que bancos de dados profissionais atualmente estão suportando.</p>
-</div>
-<div class="section" id="tamanho-da-instalacao-inferior-a-500kb">
-<h2>TAMANHO DA INSTALAÇÃO INFERIOR A 500kb</h2>
-<p>Mesmo com todos os recursos que o SQLite proporciona, quando executado, o mesmo faz uso de menos de 500kb de memória, o que o faz perfeito para ser utilizado nos mais diversos dispositivos, e computadores pessoais.</p>
-</div>
-<div class="section" id="conexao-via-path">
-<h2>CONEXÃO VIA PATH</h2>
-<p>Para conectar-se a uma base SQLite, basta somente informar o PATH de onde a mesma encontra-se. Isso porque, o SQLite é um motor implementado na linguagem C que não possui um instância em execução para o bom funcionamento.</p>
-</div>
-<div class="section" id="pre-configurado">
-<h2>PRE-CONFIGURADO</h2>
-<p>Para iniciarmos o uso de uma base SQLite, não precisamos fazer praticamente qualquer configuração, isso porque, o mesmo vem com uma configuração de fábrica excelente para as mais diversas e importantes situações.</p>
-</div>
-<div class="section" id="nao-precisa-ser-inicializado-antes-do-uso">
-<h2>NÃO PRECISA SER INICIALIZADO ANTES DO USO</h2>
-<p>Devido ao fato do SQLite ser acessado e gerenciado através de uma biblioteca local, o mesmo dispensa uma instancia para o seu correto funcionamento. Assim, todas as transações são gerenciadas através de gerenciadores instalados em diversas máquinas distintas.</p>
-</div>
-<div class="section" id="licenca">
-<h2>LICENÇA</h2>
-<p>O código do banco de dados SQLite possui atualmente uma licença de domínio público, logo, todos temos acesso sem a necessidade de qualquer pagamento ou taxa pela sua utilização.</p>
-</div>
-<div class="section" id="multiplataforma">
-<h2>MULTIPLATAFORMA</h2>
-<p>Em vista de que todo o seu código está escrito na linguagem C, o mesmo pode ser compilado para as diversas plataformas que possuem compilador para a linguagem C. E como as principais plataformas possuem compilador da linguagem C, temos que o SQLite está compilado nativamente para praticamente todos os sistemas operacionais existentes. Assim, você pode acessar uma base de um sistema Windows, Linux, MAC, Android, iOS que em todos eles, o funcionamento será o mesmo.</p>
+<div class="section" id="principais-caracteristicas">
+<h2>PRINCIPAIS CARACTERÍSTICAS</h2>
+<p>Nesta aula estudaremos as principais características do banco de dados <tt class="docutils literal">SQLite</tt>, bem como suas particularidades e sua integração junto ao código do <tt class="docutils literal">Python</tt>. Nosso objetivo é fornecer um conhecimento mínimo dos recursos e o que temos a disposição.</p>
+<dl class="docutils">
+<dt>motor de banco de dados</dt>
+<dd>O SQLite é um motor de banco de dados escrito com a Linguagem C. Todas as operações são feitas localmente e todos os dados são acessados diretamente do local onde a base está armazenada. As linguagens como o Python acessam os recursos através de uma interface de acesso pública disponibilizada pelo fabricante. Desta forma, os dados são lidos e processados a cada requisição pelo motor de banco de dados que vem acoplado a interface e e que suporta os principais recursos disponibilizados pelos principais bancos de dados relacionais.</dd>
+<dt>instalação inferior a 500kb</dt>
+<dd>O motor do banco de dados é um código escrito em C que, quando executado, utiliza menos de 500kb de memória, o que o torna perfeito para uso nos mais diversos dispositivos, e computadores pessoais.</dd>
+<dt>conexão via path</dt>
+<dd>Nos conectamos a base de dados através do PATH do sistema operacional onde a mesma está armazenada. Em seguida, o motor do banco de dados realiza as operações necessárias, atualiza o arquivos, fecha a conexão e retorna, através de uma função de callback os dados ou a confirmação do que foi solicitado. Assim, não há quaisquer instância em execução em outro computador ou mesmo localmente, tudo está otimizado para o acesso local.</dd>
+<dt>pre-configurado</dt>
+<dd>Por padrão, basta executarmos uma Query que cria uma nova base de dados para termos um novo banco criado e já configurado para uso. Desta forma, temos que o driver de acesso ou a base gerada precisam ser configurado, salvo em ocasiões em que estivermos trabalhando com algo bastante especializado.</dd>
+<dt>dispensa inicialização</dt>
+<dd>O SQLite é acessado e gerenciado através de uma biblioteca local, como já estudado. Assim, temos que o mesmo dispensa uma instancia para o seu correto funcionamento, logo, todas as transações são gerenciadas através do driver que estará disponível em todos os computadores que precisarem acessar a base.</dd>
+<dt>domínio público</dt>
+<dd>Atualmente, o código do banco de dados está disponibilizado como domínio público, ou seja, o código atualmente pertence a toda a humanidade e ninguém pode requerer direitos autorais ou royalties pela sua utilização, seja em softwares livres ou privados.</dd>
+<dt>multiplataforma</dt>
+<dd>A linguagem C possui compiladores para as mais diversas plataformas e estes funcionam de maneira relativamente igual. Desta forma, uma mesma base pode ser acessada por diferentes dispositivos sob diferentes sistemas operacionais e tudo deverá, teoricamente, funcionar sem maiores complicações.</dd>
+</dl>
 </div>
 
 				</div>
@@ -251,7 +244,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/sqlite.html">sqlite</a>            </div>
+	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/sqlite.html">sqlite</a>, 	<a href="http://excript.com/tag/driver.html">driver</a>, 	<a href="http://excript.com/tag/banco-de-dados.html">banco de dados</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

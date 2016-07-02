@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/php/escopo-de-nome-das-funcoes-anonimas-php.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,php,função,função anonima,lambda,closures,função lambda,função de primeira ordem,função de ordem superior,blog" />
+        <meta name="keywords" content="curso,php,use,função,função anonima,lambda,closures,função lambda,função de primeira ordem,função de ordem superior,blog" />
     <meta name="description" content="Nesta aula entenderemos o escopo de nomes das funções anonimas, bem como as suas características e principais conceitos." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -29,6 +29,7 @@
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
+            <meta property="article:tag" content="use" />
             <meta property="article:tag" content="função" />
             <meta property="article:tag" content="função anonima" />
             <meta property="article:tag" content="lambda" />
@@ -507,8 +508,41 @@ eXcript            </a>
 <h2>ESCOPO DE NOME DAS FUNÇÕES ANÔNIMAS</h2>
 <p>Quando declaramos uma função anônima, geralmente, iremos atribuir a mesma a uma variável. A variável servirá como uma espécie de referência, até porque, através dessa variável é que poderemos invocar a função, ou melhor, <strong>somente</strong> com essa variável é que o bloco de código da função anonima poderá ser executado!</p>
 <p>Uma função anônima possui o seu escopo restrito, então, não é possível fazer acesso direto aos membros externos. Em suma, <a class="reference external" href="http://excript.com/php/introducao-as-funcoes-php.html">o escopo de uma função anônima funciona de maneira análoga a de uma função convencional</a>.</p>
-<p>Para acessarmos variáveis externas a função anônima, temos que explicitamente declarar na definição desta que, uma determinada variável, deve ser inserida no escopo da função anônima.</p>
-<p>Então, para passarmos uma variável externa a uma função anônima, utilizamos a instrução <tt class="docutils literal">use</tt> junto a implementação da função. Também podemos passar variáveis externas através da sua referência, para isso, utilizamos o operador <tt class="docutils literal">&amp;</tt>.</p>
+<p>Dessa forma, para acessarmos variáveis externas a função anônima, temos que explicitamente declarar, no cabeçalho da função, que determinadas variáveis devem estar visíveis dentro da função que estamos definindo.</p>
+<p>Para que seja possível essa manipulação no escopo das variáveis, foi definido a instrução <code>use</code> que funciona como complemento da declaração das funções anonimas, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="x">$x = 10;</span>
+<span class="x">$func = function() use ($x) {</span>
+<span class="x">    echo &quot;O valor de x é: $x&quot;;</span>
+<span class="x">};</span>
+
+<span class="x">$func();</span>
+</pre></div>
+<p>No código acima, declaramos uma variável de nome <code>$x</code> e inicializamo-a com o número inteiro 10. Em seguida, definimos uma função anonima e nesta declaramos, com a instrução <code>use</code>, que a variável <code>$x</code> deve estar acessível internamente.</p>
+<p>Por essa razão é que conseguimos acessar a variável <code>$x</code>, até porque, por padrão, funções anonimas não possuem acesso aos membros externos, como já estudado.</p>
+</div>
+<div class="section" id="passagem-de-referencia-e-de-valor">
+<h2>PASSAGEM DE REFERÊNCIA E DE VALOR</h2>
+<p>Funções anonimas funcionam de maneira análoga a qualquer outra função, logo, estas possuem o escopo restrito. Da mesma forma, temos que ao inserirmos variáveis no escopo de uma função, o que estamos de fato fazendo, é declarando uma variável de mesmo nome e inicializando-a com o valor igual a variável externa.</p>
+<p>Desta forma, se alterarmos o valor das variáveis inseridas no escopo local, o que será alterado, é só e somente só a variável de mesmo nome re-declarada no escopo local da função anonima. Logo, se desejarmos alterar a variável cujo escopo é externo a função, temos de passar a sua referência e não o seu valor. Para isso, basta precedermos o seu nome pelo uso de um &amp; comercial.</p>
+<p>Vejamos o código a seguir:</p>
+<div class="highlight"><pre><span></span><span class="x">$x = 10;</span>
+<span class="x">$y = 10;</span>
+<span class="x">$func = function() use ($x, &amp;$y) {</span>
+<span class="x">    echo &quot;O valor de x é: $x&quot;;</span>
+<span class="x">    echo &quot;O valor de y é: $y&quot;;</span>
+
+<span class="x">    $x = 0;</span>
+<span class="x">    $y = 0;</span>
+<span class="x">};</span>
+
+<span class="x">$func();</span>
+
+<span class="x">echo &quot;-----&quot;;</span>
+<span class="x">echo &quot;O valor de x é: $x&quot;;</span>
+<span class="x">echo &quot;O valor de y é: $y&quot;;</span>
+</pre></div>
+<p>No exemplo acima, podemos facilmente observar que somente a variável externa <code>$y</code> é que teve o seu valor alterado, isso porque, a referência da mesma foi inserida no escopo local da função anonima.</p>
+<p>A seguir, implementamos mais um exemplo para avançarmos ainda mais em nosso estudo.</p>
 <div class="highlight"><pre><span></span><span class="x">$var1 = 10;</span>
 <span class="x">$num = [&quot;um&quot;, &quot;dois&quot;, &quot;três&quot;];</span>
 <span class="x">$func = function() use ($var1, &amp;$num) {</span>
@@ -562,7 +596,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/funcao.html">função</a>, 	<a href="http://excript.com/tag/funcao-anonima.html">função anonima</a>, 	<a href="http://excript.com/tag/lambda.html">lambda</a>, 	<a href="http://excript.com/tag/closures.html">closures</a>, 	<a href="http://excript.com/tag/funcao-lambda.html">função lambda</a>, 	<a href="http://excript.com/tag/funcao-de-primeira-ordem.html">função de primeira ordem</a>, 	<a href="http://excript.com/tag/funcao-de-ordem-superior.html">função de ordem superior</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/php.html">php</a>, 	<a href="http://excript.com/tag/use.html">use</a>, 	<a href="http://excript.com/tag/funcao.html">função</a>, 	<a href="http://excript.com/tag/funcao-anonima.html">função anonima</a>, 	<a href="http://excript.com/tag/lambda.html">lambda</a>, 	<a href="http://excript.com/tag/closures.html">closures</a>, 	<a href="http://excript.com/tag/funcao-lambda.html">função lambda</a>, 	<a href="http://excript.com/tag/funcao-de-primeira-ordem.html">função de primeira ordem</a>, 	<a href="http://excript.com/tag/funcao-de-ordem-superior.html">função de ordem superior</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

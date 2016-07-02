@@ -1,5 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/claudio-rogerio-carvalho-filho.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-27T20:15:00-03:00</updated><entry><title>Laços de Repetição do Python</title><link href="http://excript.com/python/lacos-de-repeticao-em-python.html" rel="alternate"></link><published>2016-06-27T20:15:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-27:python/lacos-de-repeticao-em-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/claudio-rogerio-carvalho-filho.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-02T18:25:00-03:00</updated><entry><title>A instrução for em Python</title><link href="http://excript.com/python/for-loop-python.html" rel="alternate"></link><published>2016-07-02T18:25:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-02:python/for-loop-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nessa aula estudaremos a estrutura de repetição "for", utilizada para percorrer listas e sequências facilmente do primeiro ao último elemento.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao-a-instrucao-for-in"&gt;
+&lt;h2&gt;INTRODUÇÃO À INSTRUÇÃO &lt;code&gt;for..in&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A instrução &lt;code&gt;for&lt;/code&gt; se caracteriza por obrigar o programador a definir, explicitamente em seu cabeçalho, a quantidade de vezes [ciclos] que será executado. A quantidade de ciclos é determinado pela quantidade de elementos contido na lista declarada junto com a instrução &lt;code&gt;for&lt;/code&gt;. Dessa forma, será executado um ciclo para cada elemento &lt;strong&gt;isoladamente&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;O &lt;tt class="docutils literal"&gt;Laço de Repetição&lt;/tt&gt; &lt;code&gt;for&lt;/code&gt; do Python se assemelha ao &lt;code&gt;for each&lt;/code&gt; encontrado linguagens como o Java, PHP, C# e etc. Inclusive, a característica encontrada em todas as linguagens é a mesma que temos aqui em Python: uma estrutura simples e compacta para percorrer todos elementos das coleções ou estruturas que contenham listas de objetos.&lt;/p&gt;
+&lt;p&gt;A sintaxe do Python não possui a estrutura de repetição &lt;code&gt;for&lt;/code&gt; tradicional, onde define-se uma variável, condição e incremento no cabeçalho da estrutura. A ideia, é o trabalho e manipulação de estrutura iteraveis, isto é, a definição de iteradores, ou melhor: objetos iteráveis - &lt;code&gt;iterators&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Se você não conhece a estrutura &amp;quot;normal&amp;quot; da instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; implementada pela maioria das linguagens, não há problema, até porque, tal conhecimento de nada serve quando estamos programando em Python!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-definicao-da-instrucao-for"&gt;
+&lt;h2&gt;A DEFINIÇÃO DA INSTRUÇÃO &lt;code&gt;for&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A estrutura &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; exige, inicialmente, a definição de uma variável e, em seguida, a lista que será iterada. A seguir, temos o esquema para o uso da instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;variável&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;objeto&lt;/span&gt; &lt;span class="n"&gt;iterável&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;bloco&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;instrução&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A variável a ser declarada na primeira parte da estrutura, receberá, a cada ciclo, um elemento contido na lista que está sendo iterada. Ao término, todos elementos terão sido percorridos, e a cada ciclo, o elemento seguinte contido no objeto iterável terá sido passado pela variável definida inicialmente.&lt;/p&gt;
+&lt;p&gt;A seguir, faremos um exemplo real e percorreremos uma lista numérica.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Nós podemos ler o laço de repetição definido acima &lt;code&gt;for item in [3,4,5,6,7]:&lt;/code&gt; da seguinte maneira. Para cada elemento contido na lista &lt;code&gt;[3,4,5,6,7]&lt;/code&gt; execute o bloco de código a seguir e a cada execução, atribua à variável &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; &lt;code&gt;for item in&lt;/code&gt; um item da lista.&lt;/p&gt;
+&lt;p&gt;Ou entao, podemos ler como estamos estudando... Acima, definimos a variável &lt;code&gt;item&lt;/code&gt; e uma lista com 5 elementos &lt;code&gt;[3,4,5,6,7]&lt;/code&gt;. A cada ciclo, o elemento seguinte é atribuido à variável &lt;code&gt;item&lt;/code&gt; e ao término, teremos executado um ciclo individual para cada elemento contido na lista.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-1-imprimindo-todas-as-letras-de-uma-string"&gt;
+&lt;h2&gt;EXEMPLO 1: IMPRIMINDO TODAS AS LETRAS DE UMA STRING&lt;/h2&gt;
+&lt;p&gt;Uma String é um conjunto de caracteres e assim, podemos iterar qualquer texto, por exemplo.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;letras&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;eXcript&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+   &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ciclo: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;letter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-2-imprimindo-todos-os-itens-de-uma-lista"&gt;
+&lt;h2&gt;EXEMPLO 2: IMPRIMINDO TODOS OS ITENS DE UMA LISTA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;linguagens&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="s1"&gt;&amp;#39;Lua&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;Cobol&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;Pascal&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;lingua&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;linguagens&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+   &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Linguagem contida na variável “lingua” neste ciclo: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lingua&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;eXcript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="for"></category><category term="iteradores"></category><category term="iterator"></category><category term="blog"></category></entry><entry><title>Retornando Valores pelas Funções em Python</title><link href="http://excript.com/python/retornar-valor-python.html" rel="alternate"></link><published>2016-07-02T17:07:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-02:python/retornar-valor-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos o retorno de valores pelas funções. Estudaremos a instrução return e utiliza-la para retornar dados.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="a-instrucao-return"&gt;
+&lt;h2&gt;A INSTRUÇÃO &lt;code&gt;return&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;O objetivo de toda função é o processamento de alguma informação e o retorno do dado processado. Desta forma, temos que toda função pode, por definição, retornar valores.&lt;/p&gt;
+&lt;p&gt;Como estudado, uma função é um bloco de código que possui um nome, pode ser invocado, pode receber argumentos e pode retornar valores. Para retornarmos valores por funções, temos que utilizar uma notação especifica para este fim que é, a instrução &lt;code&gt;return&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A palavra-chave &lt;code&gt;return&lt;/code&gt; é utilizada para declarar a informação a ser retornada pela função. A mesma funciona também para finalizar a execução do bloco de instrução da função, retornado assim, o valor que estiver a sua frente. Então, a instrução &lt;code&gt;return&lt;/code&gt; é utilizada tanto para o retorno de valores pelas funções, como também, para finalizar a execução da função.&lt;/p&gt;
+&lt;p&gt;É importante entender que o uso da palavra-chave &lt;code&gt;return&lt;/code&gt; não está só e somente só relacionado com o retorno de valores, a mesma é frequentemente utilizada para finalizar a execução das instruções contidas no bloco de instrução da função, funcionado de maneira semelhante a palavra-chave &lt;code&gt;break&lt;/code&gt; e &lt;code&gt;continue&lt;/code&gt; que, são utilizadas para finalizar a execução do laço de repetição ou de um único ciclo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="consequencia-logica"&gt;
+&lt;h2&gt;CONSEQUÊNCIA LÓGICA&lt;/h2&gt;
+&lt;p&gt;O conceito por detrás da instrução &lt;code&gt;return&lt;/code&gt; que explica a finalização da função é que, cada função, tem um objetivo definido, logo, se já temos a informação a ser retornada, é porque já atingimos o objetivo e assim, a execução deve ser finalizada.&lt;/p&gt;
+&lt;p&gt;Quando a instrução &lt;code&gt;return&lt;/code&gt; é utilizada sem a definição de um valor a ser retornado, por padrão, o valor que será retornado é &lt;code&gt;None&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;O uso da instrução &lt;code&gt;return&lt;/code&gt; para a finalização da função não é obrigatório. O Python, após executar a última instrução do bloco de instrução da função, finalizara a execução, e o cursor voltará para a linha em que a função foi invocada. Assim, a execução pode ocorrer com o uso da instrução &lt;code&gt;return&lt;/code&gt; ou mesmo, pela execução de todo o bloco.&lt;/p&gt;
+&lt;p&gt;Vamos definir uma função que retorna um valor.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+
+&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;teste&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="função"></category><category term="retorno"></category><category term="return"></category><category term="blog"></category></entry><entry><title>Operador Ternário do C - Exemplo prático</title><link href="http://excript.com/linguagem-c/operador-ternario-exemplo-c.html" rel="alternate"></link><published>2016-07-02T01:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-02:linguagem-c/operador-ternario-exemplo-c.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula vamos continuar o estudo do Operador Ternário desenvolvendo uma pequena aplicação onde substituiremos a estrutura de seleção múltipla Switch por uma expressão que irá concatenar o uso do operador ternário.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="operador-ternario-vs-instrucao-switch"&gt;
+&lt;h2&gt;OPERADOR TERNÁRIO vs INSTRUÇÃO &lt;tt class="docutils literal"&gt;switch&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;Vamos desenvolver um exemplo onde encadearemos várias &lt;strong&gt;Operações Ternárias&lt;/strong&gt; e &lt;a class="reference external" href="http://excript.com/linguagem-c/estrutura-selecao-multipla-c.html"&gt;produziremos um código semelhante a Estrutura de Seleção Múltipla o Switch&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O exemplo que faremos tem por objetivo só e somente o estudo do &lt;strong&gt;Operador Ternário&lt;/strong&gt;, até porque, na prática, a instrução &lt;tt class="docutils literal"&gt;switch&lt;/tt&gt; talvez seja mais indicada - talvez!&lt;/p&gt;
+&lt;p&gt;Porém, não há qualquer erro conceitual ou prático implementar com a estrutura que aqui será apresentada, salvo que não é comum esse tipo de implementação.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-programa"&gt;
+&lt;h2&gt;O PROGRAMA&lt;/h2&gt;
+&lt;p&gt;O programa que desenvolveremos irá solicitar que o usuário informe uma letra entre &lt;tt class="docutils literal"&gt;A&lt;/tt&gt; à &lt;tt class="docutils literal"&gt;G&lt;/tt&gt;. Feito isso, iremos imprimir na tela o código &lt;a class="reference external" href="https://pt.wikipedia.org/wiki/ASCII"&gt;ASCII&lt;/a&gt; do caractere.&lt;/p&gt;
+&lt;p&gt;O código ASCII é um código numérico que cada letra possui. A tabela ASCII foi substituída pelo sistema &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;UTF-8&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;O primeiro código que implementaremos, utilizará a &lt;strong&gt;Estrutura de Seleção Múltipla&lt;/strong&gt; &lt;tt class="docutils literal"&gt;switch&lt;/tt&gt;. Em seguida, implementaremos a mesma aplicação utilizando o &lt;strong&gt;Operador Ternário&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Como dito, o principal objetivo nesse momento é estudarmos o potencial do &lt;strong&gt;Operador Ternário&lt;/strong&gt; e as variações que podemos obter com o mesmo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="utilizando-a-instrucao-switch"&gt;
+&lt;h2&gt;UTILIZANDO A INSTRUÇÃO &lt;tt class="docutils literal"&gt;switch&lt;/tt&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="c1"&gt;//  ==========                 ==========&lt;/span&gt;
+&lt;span class="c1"&gt;//  ========== www.eXcript.com ==========&lt;/span&gt;
+&lt;span class="c1"&gt;//  ==========                 ==========&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um caractere entre A ate G: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;caractere&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;scanf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;%c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;switch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;65&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;66&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;67&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;68&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;E&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;69&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;70&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;G&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;71&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O codigo ASCII da letra digitada eh: %i&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;codigo&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="utilizando-o-operador-ternario"&gt;
+&lt;h2&gt;UTILIZANDO O OPERADOR TERNÁRIO&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="c1"&gt;//  ==========                 ==========&lt;/span&gt;
+&lt;span class="c1"&gt;//  ========== www.eXcript.com ==========&lt;/span&gt;
+&lt;span class="c1"&gt;//  ==========                 ==========&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um caractere entre A ate G: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;caractere&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;scanf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;%c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;65&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;66&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;67&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;68&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;E&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;69&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;70&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;G&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;71&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O codigo ASCII da letra digitada eh: %i&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;codigo&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="c"></category><category term="operador"></category><category term="operador ternário"></category><category term="condição"></category><category term="blog"></category></entry><entry><title>Laços de Repetição do Python</title><link href="http://excript.com/python/lacos-de-repeticao-em-python.html" rel="alternate"></link><published>2016-06-27T20:15:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-27:python/lacos-de-repeticao-em-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -203,7 +419,41 @@ beltrano
     &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="iteração"></category><category term="estrutura de repetição"></category><category term="looping"></category><category term="laço de repetição"></category><category term="laços condicionais"></category><category term="blog"></category></entry><entry><title>Primeiro Programa em C++</title><link href="http://excript.com/cpp/primeiro-programa-cpp.html" rel="alternate"></link><published>2016-06-22T03:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-22:cpp/primeiro-programa-cpp.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="iteração"></category><category term="estrutura de repetição"></category><category term="looping"></category><category term="laço de repetição"></category><category term="laços condicionais"></category><category term="blog"></category></entry><entry><title>Características do SQLite</title><link href="http://excript.com/python/caracteristicas-sqlite.html" rel="alternate"></link><published>2016-06-26T01:02:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-26:python/caracteristicas-sqlite.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos as principais características do banco de dados SQLite.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="principais-caracteristicas"&gt;
+&lt;h2&gt;PRINCIPAIS CARACTERÍSTICAS&lt;/h2&gt;
+&lt;p&gt;Nesta aula estudaremos as principais características do banco de dados &lt;tt class="docutils literal"&gt;SQLite&lt;/tt&gt;, bem como suas particularidades e sua integração junto ao código do &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt;. Nosso objetivo é fornecer um conhecimento mínimo dos recursos e o que temos a disposição.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;motor de banco de dados&lt;/dt&gt;
+&lt;dd&gt;O SQLite é um motor de banco de dados escrito com a Linguagem C. Todas as operações são feitas localmente e todos os dados são acessados diretamente do local onde a base está armazenada. As linguagens como o Python acessam os recursos através de uma interface de acesso pública disponibilizada pelo fabricante. Desta forma, os dados são lidos e processados a cada requisição pelo motor de banco de dados que vem acoplado a interface e e que suporta os principais recursos disponibilizados pelos principais bancos de dados relacionais.&lt;/dd&gt;
+&lt;dt&gt;instalação inferior a 500kb&lt;/dt&gt;
+&lt;dd&gt;O motor do banco de dados é um código escrito em C que, quando executado, utiliza menos de 500kb de memória, o que o torna perfeito para uso nos mais diversos dispositivos, e computadores pessoais.&lt;/dd&gt;
+&lt;dt&gt;conexão via path&lt;/dt&gt;
+&lt;dd&gt;Nos conectamos a base de dados através do PATH do sistema operacional onde a mesma está armazenada. Em seguida, o motor do banco de dados realiza as operações necessárias, atualiza o arquivos, fecha a conexão e retorna, através de uma função de callback os dados ou a confirmação do que foi solicitado. Assim, não há quaisquer instância em execução em outro computador ou mesmo localmente, tudo está otimizado para o acesso local.&lt;/dd&gt;
+&lt;dt&gt;pre-configurado&lt;/dt&gt;
+&lt;dd&gt;Por padrão, basta executarmos uma Query que cria uma nova base de dados para termos um novo banco criado e já configurado para uso. Desta forma, temos que o driver de acesso ou a base gerada precisam ser configurado, salvo em ocasiões em que estivermos trabalhando com algo bastante especializado.&lt;/dd&gt;
+&lt;dt&gt;dispensa inicialização&lt;/dt&gt;
+&lt;dd&gt;O SQLite é acessado e gerenciado através de uma biblioteca local, como já estudado. Assim, temos que o mesmo dispensa uma instancia para o seu correto funcionamento, logo, todas as transações são gerenciadas através do driver que estará disponível em todos os computadores que precisarem acessar a base.&lt;/dd&gt;
+&lt;dt&gt;domínio público&lt;/dt&gt;
+&lt;dd&gt;Atualmente, o código do banco de dados está disponibilizado como domínio público, ou seja, o código atualmente pertence a toda a humanidade e ninguém pode requerer direitos autorais ou royalties pela sua utilização, seja em softwares livres ou privados.&lt;/dd&gt;
+&lt;dt&gt;multiplataforma&lt;/dt&gt;
+&lt;dd&gt;A linguagem C possui compiladores para as mais diversas plataformas e estes funcionam de maneira relativamente igual. Desta forma, uma mesma base pode ser acessada por diferentes dispositivos sob diferentes sistemas operacionais e tudo deverá, teoricamente, funcionar sem maiores complicações.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+</summary><category term="python"></category><category term="sqlite"></category><category term="driver"></category><category term="banco de dados"></category></entry><entry><title>Primeiro Programa em C++</title><link href="http://excript.com/cpp/primeiro-programa-cpp.html" rel="alternate"></link><published>2016-06-22T03:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-22:cpp/primeiro-programa-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1425,8 +1675,41 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;h2&gt;ESCOPO DE NOME DAS FUNÇÕES ANÔNIMAS&lt;/h2&gt;
 &lt;p&gt;Quando declaramos uma função anônima, geralmente, iremos atribuir a mesma a uma variável. A variável servirá como uma espécie de referência, até porque, através dessa variável é que poderemos invocar a função, ou melhor, &lt;strong&gt;somente&lt;/strong&gt; com essa variável é que o bloco de código da função anonima poderá ser executado!&lt;/p&gt;
 &lt;p&gt;Uma função anônima possui o seu escopo restrito, então, não é possível fazer acesso direto aos membros externos. Em suma, &lt;a class="reference external" href="http://excript.com/php/introducao-as-funcoes-php.html"&gt;o escopo de uma função anônima funciona de maneira análoga a de uma função convencional&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Para acessarmos variáveis externas a função anônima, temos que explicitamente declarar na definição desta que, uma determinada variável, deve ser inserida no escopo da função anônima.&lt;/p&gt;
-&lt;p&gt;Então, para passarmos uma variável externa a uma função anônima, utilizamos a instrução &lt;tt class="docutils literal"&gt;use&lt;/tt&gt; junto a implementação da função. Também podemos passar variáveis externas através da sua referência, para isso, utilizamos o operador &lt;tt class="docutils literal"&gt;&amp;amp;&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Dessa forma, para acessarmos variáveis externas a função anônima, temos que explicitamente declarar, no cabeçalho da função, que determinadas variáveis devem estar visíveis dentro da função que estamos definindo.&lt;/p&gt;
+&lt;p&gt;Para que seja possível essa manipulação no escopo das variáveis, foi definido a instrução &lt;code&gt;use&lt;/code&gt; que funciona como complemento da declaração das funções anonimas, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$func = function() use ($x) {&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$func();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, declaramos uma variável de nome &lt;code&gt;$x&lt;/code&gt; e inicializamo-a com o número inteiro 10. Em seguida, definimos uma função anonima e nesta declaramos, com a instrução &lt;code&gt;use&lt;/code&gt;, que a variável &lt;code&gt;$x&lt;/code&gt; deve estar acessível internamente.&lt;/p&gt;
+&lt;p&gt;Por essa razão é que conseguimos acessar a variável &lt;code&gt;$x&lt;/code&gt;, até porque, por padrão, funções anonimas não possuem acesso aos membros externos, como já estudado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="passagem-de-referencia-e-de-valor"&gt;
+&lt;h2&gt;PASSAGEM DE REFERÊNCIA E DE VALOR&lt;/h2&gt;
+&lt;p&gt;Funções anonimas funcionam de maneira análoga a qualquer outra função, logo, estas possuem o escopo restrito. Da mesma forma, temos que ao inserirmos variáveis no escopo de uma função, o que estamos de fato fazendo, é declarando uma variável de mesmo nome e inicializando-a com o valor igual a variável externa.&lt;/p&gt;
+&lt;p&gt;Desta forma, se alterarmos o valor das variáveis inseridas no escopo local, o que será alterado, é só e somente só a variável de mesmo nome re-declarada no escopo local da função anonima. Logo, se desejarmos alterar a variável cujo escopo é externo a função, temos de passar a sua referência e não o seu valor. Para isso, basta precedermos o seu nome pelo uso de um &amp;amp; comercial.&lt;/p&gt;
+&lt;p&gt;Vejamos o código a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$y = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$func = function() use ($x, &amp;amp;$y) {&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O valor de y é: $y&amp;quot;;&lt;/span&gt;
+
+&lt;span class="x"&gt;    $x = 0;&lt;/span&gt;
+&lt;span class="x"&gt;    $y = 0;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$func();&lt;/span&gt;
+
+&lt;span class="x"&gt;echo &amp;quot;-----&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;echo &amp;quot;O valor de y é: $y&amp;quot;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, podemos facilmente observar que somente a variável externa &lt;code&gt;$y&lt;/code&gt; é que teve o seu valor alterado, isso porque, a referência da mesma foi inserida no escopo local da função anonima.&lt;/p&gt;
+&lt;p&gt;A seguir, implementamos mais um exemplo para avançarmos ainda mais em nosso estudo.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$var1 = 10;&lt;/span&gt;
 &lt;span class="x"&gt;$num = [&amp;quot;um&amp;quot;, &amp;quot;dois&amp;quot;, &amp;quot;três&amp;quot;];&lt;/span&gt;
 &lt;span class="x"&gt;$func = function() use ($var1, &amp;amp;$num) {&lt;/span&gt;
@@ -1453,7 +1736,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;span class="x"&gt;echo $num;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category><category term="blog"></category></entry><entry><title>Introdução às Funções Anônimas em PHP</title><link href="http://excript.com/php/introducao-funcao-anonima-php.html" rel="alternate"></link><published>2016-06-11T10:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/introducao-funcao-anonima-php.html</id><summary type="html">
+</summary><category term="curso"></category><category term="php"></category><category term="use"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category><category term="blog"></category></entry><entry><title>Introdução às Funções Anônimas em PHP</title><link href="http://excript.com/php/introducao-funcao-anonima-php.html" rel="alternate"></link><published>2016-06-11T10:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/introducao-funcao-anonima-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1514,11 +1797,11 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;p&gt;Todos os termos do dicionário trazem, como primeira definição, o significado da terminologia ou nomenclatura segundo nossa interpretação. As definições seguintes terão, &lt;strong&gt;obrigatoriamente&lt;/strong&gt;, a fonte de onde foram extraídas e, quando possível, trarão o link de onde retiramos a definição.&lt;/p&gt;
 &lt;p&gt;A definição de um termo poderá ser melhorada a qualquer momento, no entanto, é possível, através do sistema de versionamento GIT, obter definições anteriores.&lt;/p&gt;
 &lt;!-- TERMOS
-
-
 Função
 Procedimento
-Método --&gt;
+Método
+socket
+TCP/IP --&gt;
 &lt;/div&gt;
 &lt;div class="section" id="recursividade"&gt;
 &lt;h2&gt;Recursividade&lt;/h2&gt;
@@ -11575,25 +11858,27 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="definicao"&gt;
+&lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
 &lt;p&gt;Tabela é uma estrutura bidimensional utilizada para organizar conjuntos de informações que possuem uma mesma estrutura.&lt;/p&gt;
-&lt;div class="section" id="linguagem-sql"&gt;
-&lt;h2&gt;LINGUAGEM SQL&lt;/h2&gt;
 &lt;/div&gt;
 &lt;div class="section" id="tabela"&gt;
 &lt;h2&gt;TABELA&lt;/h2&gt;
-&lt;p&gt;A &lt;strong&gt;TABELA&lt;/strong&gt; é a estrutura fundamental dos bancos de dados relacionais. Todas as informações, indiferente do tipo, está contido dentro de um tabela. Cada tabela possui um conjunto de atributos - as colunas. Assim, por definição do termo, temos que: um conjunto de colunas formam uma tabela. Logo, toda tabela irá conter no mínimo um única coluna.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;tabela&lt;/strong&gt; é a estrutura fundamental dos bancos de dados relacionais. Todas as informações, indiferente do tipo, estão contidas dentro de tabelas. Cada tabela possui um conjunto de atributos - &lt;strong&gt;as colunas&lt;/strong&gt;. Assim, por definição do termo, temos que todo conjunto de colunas formam uma tabela e todo conjunto de tabelas formam um banco de dados.&lt;/p&gt;
+&lt;p&gt;Toda tabela contém, no mínimo, uma coluna.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="coluna"&gt;
 &lt;h2&gt;COLUNA&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;COLUNA&lt;/strong&gt; é o atributo de uma tabela. Toda coluna sempre possuirá um tipo, e este identifica a informação que cada célula irá conter. O tipo é definido no mesmo momento da criação da tabela e este não ira suportar o armazenamento de um outro tipo de informação.
-Uma coluna pode ter o seu tipo alterado a qualquer momento, porém, as informações deverão ser convertidas para  o novo tipo. Não há um número máximo de colunas numa tabela, porém, cada base de dados em SQLite tem um atributo que limita a quantidade de colunas. Essa é uma limitação artificial, e serve somente a título de definição. Para alterar a capacidade é necessário alterar o código fonte do banco de dados e então, recompilar todos os códigos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Coluna&lt;/strong&gt; é um atributo da tabela. Toda coluna possui tipo, e este identifica a informação que cada célula conterá. O &lt;strong&gt;tipo&lt;/strong&gt; é definido no mesmo momento da criação da tabela e sendo que a mesma não suportará o armazenamento de dados que não estejam em conformidade com o tipo pré-definido.&lt;/p&gt;
+&lt;p&gt;A coluna pode ter o seu tipo alterado a qualquer momento, porém, as informações deverão ser convertidas para o novo tipo.&lt;/p&gt;
+&lt;p&gt;Não há quantidade máxima de colunas que uma tabela pode conter em teoria, porém, cada base de dados em SQLite tem um atributo que limita a quantidade de colunas. Essa é uma limitação artificial, e serve somente a título de definição. Para alterar a capacidade é necessário alterar o código fonte do banco de dados e então, recompilar todo o código.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="registro"&gt;
 &lt;h2&gt;REGISTRO&lt;/h2&gt;
-&lt;p&gt;Registro é um conjunto de informações agrupadas. Cada registro possui a quantidade de colunas que a tabela possuir. Uma tabela pode conter nenhum registro ou então, um número infinito de registros.
-Na documentação do SQLite não há limite numérico, porém, há um limite pré-determinado que cada tabela pode conter. A verdadeira limitação encontra-se no tipo de dado utilizado na programação do banco de dados, por exemplo, o tipo inteiro.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Registro&lt;/strong&gt; é um conjunto de informações agrupadas. Cada registro possui a quantidade de colunas que a tabela possuir. Uma tabela pode conter nenhum registro ou então, um número infinito de registros.&lt;/p&gt;
+&lt;p&gt;Na documentação do SQLite não há limite numérico, porém, há um limite pré-determinado que cada tabela pode conter. A verdadeira limitação encontra-se no tipo de dado utilizado na programação do banco de dados, por exemplo, o tipo inteiro.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Manipulação de Arrays Bidimensionais em C++</title><link href="http://excript.com/cpp/manipular-array-bidimensional-cpp.html" rel="alternate"></link><published>2015-06-05T18:16:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-06-05:cpp/manipular-array-bidimensional-cpp.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>Manipulação de Arrays Bidimensionais em C++</title><link href="http://excript.com/cpp/manipular-array-bidimensional-cpp.html" rel="alternate"></link><published>2015-06-05T18:16:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-06-05:cpp/manipular-array-bidimensional-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -12214,7 +12499,7 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
 &lt;p&gt;A comunidade acabou criando diversas bibliotecas que se especializaram em gerar o código SQL de forma diferente a diferentes bancos de dados. Assim, criou-se uma interface de programação que permitiu um mesmo sistema ser executada em diferentes estruturas e bancos de dados. Atualmente, é muito comum em um novo projeto a utilização de algum framework, até porque, a manipulação do SQL acaba por ocasionar diversos erros, sem contar, a que a manutenção do código SQL é geralmente, bastante complicada.
 Um outro problema, é que diversos programadores mantinham códigos SQL misturado com o código da aplicação. Assim, quando era necessário dar manutenção em um código SQL, tinha-se que extrair o mesmo de dentro das aspas e concatenações que normalmente são utilizados na geração do código. Assim, a programação estava se tornando bastante onerosa e sujeita a erros que não havia necessidade estarem submetidos.&lt;/p&gt;
 &lt;p&gt;Hoje, os bancos de dados são componentes fundamentais de qualquer aplicação e sua utilização pode ser encontrada em pequenas aplicações como também, em grandes datacenter com centenas de computadores interconectados que dividem o processamento como também, o armazenamento.&lt;/p&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Criando o Primeiro BD com SQLite</title><link href="http://excript.com/python/criando-primeiro-bd-sqlite.html" rel="alternate"></link><published>2015-05-08T11:14:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-08:python/criando-primeiro-bd-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>Criando o Primeiro BD com SQLite</title><link href="http://excript.com/python/criando-primeiro-bd-sqlite.html" rel="alternate"></link><published>2015-05-08T11:14:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-08:python/criando-primeiro-bd-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -12245,7 +12530,7 @@ O sqlite sempre trabalha dentro da home do seu usuário que estiver em execuçã
 &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;MinhaPasta/&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;meu&lt;/span&gt; &lt;span class="n"&gt;caso&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;dumps/&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;conn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sqlite3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;renato.db&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Declaração de Arrays em C++</title><link href="http://excript.com/cpp/declarar-array-cpp.html" rel="alternate"></link><published>2015-05-07T22:27:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-07:cpp/declarar-array-cpp.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>Declaração de Arrays em C++</title><link href="http://excript.com/cpp/declarar-array-cpp.html" rel="alternate"></link><published>2015-05-07T22:27:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-07:cpp/declarar-array-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -12346,50 +12631,7 @@ Essa é a razão de hoje haver tantas empresas e tantos diferentes banco de dado
 &lt;h2&gt;DURABILIDADE&lt;/h2&gt;
 &lt;p&gt;Durabilidade é o conceito que determina que após a efetivação de uma operação, ou seja, após a confirmação de que o registro foi salvo com sucesso, este deve assim persistir indefinidamente. Este conceito estabelece que fatores internos ou externos, como a interrupção de energia ou então, ou um possível erro no sistema operacional não comprometam o sucesso de uma ou um conjunto de operações.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Características do SQLite</title><link href="http://excript.com/python/caracteristicas-sqlite.html" rel="alternate"></link><published>2015-05-06T01:02:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-06:python/caracteristicas-sqlite.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos as principais características do banco de dados SQLite.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;p&gt;Agora, estudaremos as principais características do banco de dados SQLite bem como, algumas particularidades do acesso através do Python. Assim, conseguiremos entender o porque a dupla Python e SQLite é tão poderosa e sua integração tão transparente.&lt;/p&gt;
-&lt;div class="section" id="motor-de-banco-de-dados"&gt;
-&lt;h2&gt;MOTOR DE BANCO DE DADOS&lt;/h2&gt;
-&lt;p&gt;O SQLite, ainda que seja executado e acesso na maioria das vezes localmente, possui um motor de banco de dados completo e assim, consegue suportar os principais recursos que bancos de dados profissionais atualmente estão suportando.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tamanho-da-instalacao-inferior-a-500kb"&gt;
-&lt;h2&gt;TAMANHO DA INSTALAÇÃO INFERIOR A 500kb&lt;/h2&gt;
-&lt;p&gt;Mesmo com todos os recursos que o SQLite proporciona, quando executado, o mesmo faz uso de menos de 500kb de memória, o que o faz perfeito para ser utilizado nos mais diversos dispositivos, e computadores pessoais.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conexao-via-path"&gt;
-&lt;h2&gt;CONEXÃO VIA PATH&lt;/h2&gt;
-&lt;p&gt;Para conectar-se a uma base SQLite, basta somente informar o PATH de onde a mesma encontra-se. Isso porque, o SQLite é um motor implementado na linguagem C que não possui um instância em execução para o bom funcionamento.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="pre-configurado"&gt;
-&lt;h2&gt;PRE-CONFIGURADO&lt;/h2&gt;
-&lt;p&gt;Para iniciarmos o uso de uma base SQLite, não precisamos fazer praticamente qualquer configuração, isso porque, o mesmo vem com uma configuração de fábrica excelente para as mais diversas e importantes situações.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="nao-precisa-ser-inicializado-antes-do-uso"&gt;
-&lt;h2&gt;NÃO PRECISA SER INICIALIZADO ANTES DO USO&lt;/h2&gt;
-&lt;p&gt;Devido ao fato do SQLite ser acessado e gerenciado através de uma biblioteca local, o mesmo dispensa uma instancia para o seu correto funcionamento. Assim, todas as transações são gerenciadas através de gerenciadores instalados em diversas máquinas distintas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="licenca"&gt;
-&lt;h2&gt;LICENÇA&lt;/h2&gt;
-&lt;p&gt;O código do banco de dados SQLite possui atualmente uma licença de domínio público, logo, todos temos acesso sem a necessidade de qualquer pagamento ou taxa pela sua utilização.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="multiplataforma"&gt;
-&lt;h2&gt;MULTIPLATAFORMA&lt;/h2&gt;
-&lt;p&gt;Em vista de que todo o seu código está escrito na linguagem C, o mesmo pode ser compilado para as diversas plataformas que possuem compilador para a linguagem C. E como as principais plataformas possuem compilador da linguagem C, temos que o SQLite está compilado nativamente para praticamente todos os sistemas operacionais existentes. Assim, você pode acessar uma base de um sistema Windows, Linux, MAC, Android, iOS que em todos eles, o funcionamento será o mesmo.&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Como instalar o SQLite</title><link href="http://excript.com/python/como-instalar-sqlite.html" rel="alternate"></link><published>2015-05-05T21:54:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-05:python/como-instalar-sqlite.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>Como instalar o SQLite</title><link href="http://excript.com/python/como-instalar-sqlite.html" rel="alternate"></link><published>2015-05-05T21:54:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-05:python/como-instalar-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -12403,12 +12645,15 @@ Essa é a razão de hoje haver tantas empresas e tantos diferentes banco de dado
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="instalacao"&gt;
+&lt;h2&gt;INSTALAÇÃO&lt;/h2&gt;
 &lt;p&gt;O SQLite, por seu tamanho mínimo, está disponível em vários sistemas operacionais e também, acoplado em várias linguagens de programação por padrão. Ainda assim, caso o mesmo não esteja instalado, é possível fazermos o download e instala-lo manualmente, até porque, toda a estrutura do banco de dados SQLite se resume a um único arquivo executável.&lt;/p&gt;
 &lt;p&gt;Como instalar o SQLite? O Python trás por padrão as bibliotecas para o acesso e gerenciamento de bases SQLite. Porém, se desejarmos acessar uma base através do prompt de comando, faz-se necessário o download do executável que permite o acesso.&lt;/p&gt;
 &lt;p&gt;Todos os arquivos estão disponíveis no site do SQLite, na seção Download, segue o link:
 &lt;a class="reference external" href="http://www.sqlite.org/"&gt;http://www.sqlite.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Após o download dos arquivos para o acesso ao SQLite, será necessário adicionar ao path o sistema operacional o local onde você colocou os arquivos e então, o seu computador já estará pronto para o uso.&lt;/p&gt;
-</summary><category term="python"></category><category term="sqlite"></category></entry><entry><title>Ordenamento de Listas em Python</title><link href="http://excript.com/python/ordenamento-lista-python.html" rel="alternate"></link><published>2015-05-03T21:26:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-03:python/ordenamento-lista-python.html</id><summary type="html">
+&lt;/div&gt;
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>Ordenamento de Listas em Python</title><link href="http://excript.com/python/ordenamento-lista-python.html" rel="alternate"></link><published>2015-05-03T21:26:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-03:python/ordenamento-lista-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -17374,70 +17619,6 @@ DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;
 &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category></entry><entry><title>A instrução for em Python</title><link href="http://excript.com/python/for-loop-python.html" rel="alternate"></link><published>2014-10-29T11:25:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-29:python/for-loop-python.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nessa aula estudaremos a estrutura de repetição "for", utilizada para percorrer listas e sequências facilmente do primeiro ao último elemento.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="introducao-a-instrucao-for"&gt;
-&lt;h2&gt;INTRODUÇÃO À INSTRUÇÃO &lt;code&gt;for&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; possui uma quantia de ciclos pré-definida. A quantidade de ciclos é determinado pela quantidade de elementos contido na lista informada junto com a instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt;. Dessa forma, será executado um ciclo para cada elemento.&lt;/p&gt;
-&lt;p&gt;O laço de repetição &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; do Python se assemelha ao &lt;tt class="docutils literal"&gt;for each&lt;/tt&gt; que temos em Java, PHP, C#, C++ e etc. Sendo uma estrutura simples e compacta para percorrer todos elementos de coleções ou estruturas que contenham listas de objetos.&lt;/p&gt;
-&lt;p&gt;A sintaxe do Python não possui a estrutura de repetição &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; tradicional, onde define-se uma variável, condição e incremento no cabeçalho da estrutura. A ideia, é o trabalho e manipulação de estrutura iteraveis, isto é, a definição de iteradores, objetos &lt;tt class="docutils literal"&gt;iterators&lt;/tt&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="a-definicao-da-instrucao-for"&gt;
-&lt;h2&gt;A DEFINIÇÃO DA INSTRUÇÃO &lt;code&gt;for&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A estrutura &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; exige, inicialmente, a definição de uma variável, e em seguida, a instância que será iterada. A seguir, temos o esquema para o uso da instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;variável&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;objeto&lt;/span&gt; &lt;span class="n"&gt;iterável&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;bloco&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;instrução&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A variável a ser declarada, receberá, a cada ciclo, um elemento contido na lista que está sendo iterada. Ao término, todos elementos terão sido percorridos, e a cada ciclo, o elemento seguinte contido no objeto iterável será passado pela variável definida inicialmente.&lt;/p&gt;
-&lt;p&gt;A seguir, faremos um exemplo real e percorreremos uma lista numérica.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Acima, definimos a variável &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; e uma lista com 5 elementos &lt;tt class="docutils literal"&gt;[3,4,5,6,7]&lt;/tt&gt;. A cada ciclo, o elemento seguinte é atribuido à variável &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; e ao término, teremos executado um ciclo individual para cada elemento contido na lista.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-1-imprimindo-todas-as-letras-de-uma-string"&gt;
-&lt;h2&gt;EXEMPLO 1: IMPRIMINDO TODAS AS LETRAS DE UMA STRING&lt;/h2&gt;
-&lt;p&gt;Uma String é um conjunto de caracteres e assim, podemos iterar qualquer texto, por exemplo.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;letras&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;eXcript&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-   &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ciclo: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;letter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-2-imprimindo-todos-os-itens-de-uma-lista"&gt;
-&lt;h2&gt;EXEMPLO 2: IMPRIMINDO TODOS OS ITENS DE UMA LISTA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="n"&gt;linguagens&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="s1"&gt;&amp;#39;Lua&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;Cobol&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;Pascal&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;lingua&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;linguagens&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-   &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Linguagem contida na variável “lingua” neste ciclo: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lingua&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;eXcript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category></entry><entry><title>Revisão de Arrays Unidimensionais em Java</title><link href="http://excript.com/java/revisao-array-unidimensional-java.html" rel="alternate"></link><published>2014-10-26T15:55:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-26:java/revisao-array-unidimensional-java.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -18706,20 +18887,23 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="java"></category><category term="lambda"></category></entry><entry><title>Palavra-Chave this do Java</title><link href="http://excript.com/java/palavra-chave-this-java.html" rel="alternate"></link><published>2014-07-17T18:17:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-07-17:java/palavra-chave-this-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="lambda"></category></entry><entry><title>Palavra-Chave this do Java</title><link href="http://excript.com/java/palavra-chave-this-java.html" rel="alternate"></link><published>2014-07-17T18:17:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-07-17:java/palavra-chave-this-java.html</id><summary type="html">&lt;div class="section" id="palavra-chave-this"&gt;
+&lt;h2&gt;PALAVRA-CHAVE &lt;code&gt;this&lt;/code&gt;&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos as palavra-reservada this da linguagem Java&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Janela&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
@@ -18749,20 +18933,23 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Inicialização de Objetos em Java</title><link href="http://excript.com/java/inicializar-objetos-java.html" rel="alternate"></link><published>2014-07-02T18:40:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-07-02:java/inicializar-objetos-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Inicialização de Objetos em Java</title><link href="http://excript.com/java/inicializar-objetos-java.html" rel="alternate"></link><published>2014-07-02T18:40:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-07-02:java/inicializar-objetos-java.html</id><summary type="html">&lt;div class="section" id="inicializacao-de-objetos"&gt;
+&lt;h2&gt;INICIALIZAÇÃO DE OBJETOS&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a inicialização de objetos Java a partir das classes anteriormente definidas&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Janela&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
@@ -18798,20 +18985,23 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Construtores em Java</title><link href="http://excript.com/java/construtor-java.html" rel="alternate"></link><published>2014-06-24T16:23:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-24:java/construtor-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Construtores em Java</title><link href="http://excript.com/java/construtor-java.html" rel="alternate"></link><published>2014-06-24T16:23:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-24:java/construtor-java.html</id><summary type="html">&lt;div class="section" id="construtor"&gt;
+&lt;h2&gt;CONSTRUTOR&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos os construtores de classe, bem como a sua declaração e sitaxe em classes Java&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Janela&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
@@ -18835,20 +19025,23 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Recursividade com Java</title><link href="http://excript.com/java/recursividade-java.html" rel="alternate"></link><published>2014-06-12T15:06:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-12:java/recursividade-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Recursividade com Java</title><link href="http://excript.com/java/recursividade-java.html" rel="alternate"></link><published>2014-06-12T15:06:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-12:java/recursividade-java.html</id><summary type="html">&lt;div class="section" id="recursividade"&gt;
+&lt;h2&gt;RECURSIVIDADE&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o que é recursividade e como utilizar esse conceito em nossas aplicações&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Fatorial&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
@@ -18869,20 +19062,23 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Overloading em java</title><link href="http://excript.com/java/overloading-java.html" rel="alternate"></link><published>2014-06-12T15:03:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-12:java/overloading-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Overloading em java</title><link href="http://excript.com/java/overloading-java.html" rel="alternate"></link><published>2014-06-12T15:03:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-12:java/overloading-java.html</id><summary type="html">&lt;div class="section" id="overloading"&gt;
+&lt;h2&gt;OVERLOADING&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o conceito de overloading e como utiliza-los na composição de classes em Java.&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Sobrecarga&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
@@ -18907,34 +19103,40 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Palavra-Chave new do Java</title><link href="http://excript.com/java/palavra-chave-new-java.html" rel="alternate"></link><published>2014-06-12T14:59:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-12:java/palavra-chave-new-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Palavra-Chave new do Java</title><link href="http://excript.com/java/palavra-chave-new-java.html" rel="alternate"></link><published>2014-06-12T14:59:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-12:java/palavra-chave-new-java.html</id><summary type="html">&lt;div class="section" id="palavra-chave-new"&gt;
+&lt;h2&gt;PALAVRA-CHAVE &lt;code&gt;new&lt;/code&gt;&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o uso das palavras-chaves, as keywords da linguagem Java.&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Instância em java</title><link href="http://excript.com/java/instancia-java.html" rel="alternate"></link><published>2014-06-10T13:19:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-10:java/instancia-java.html</id><summary type="html">
+&lt;/div&gt;
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Instância em java</title><link href="http://excript.com/java/instancia-java.html" rel="alternate"></link><published>2014-06-10T13:19:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-10:java/instancia-java.html</id><summary type="html">&lt;div class="section" id="instancia"&gt;
+&lt;h2&gt;INSTÂNCIA&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o que são instâncias para o Java e como devemos utiliza-las&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Retangulo&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
@@ -18973,20 +19175,23 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Retorno de Valores com Funções</title><link href="http://excript.com/java/retorno-valores-funcoes-java.html" rel="alternate"></link><published>2014-06-08T01:32:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-08:java/retorno-valores-funcoes-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Retorno de Valores com Funções</title><link href="http://excript.com/java/retorno-valores-funcoes-java.html" rel="alternate"></link><published>2014-06-08T01:32:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-08:java/retorno-valores-funcoes-java.html</id><summary type="html">&lt;div class="section" id="retorno-de-valores"&gt;
+&lt;h2&gt;RETORNO DE VALORES&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula aprenderemos como devemos retornar valores através de funções em Java.&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Retangulo&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
@@ -19015,20 +19220,23 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Parâmetros e Argumentos de Função em Java</title><link href="http://excript.com/java/parametro-argumento-funcao-java.html" rel="alternate"></link><published>2014-06-06T14:37:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-06:java/parametro-argumento-funcao-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Parâmetros e Argumentos de Função em Java</title><link href="http://excript.com/java/parametro-argumento-funcao-java.html" rel="alternate"></link><published>2014-06-06T14:37:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-06:java/parametro-argumento-funcao-java.html</id><summary type="html">&lt;div class="section" id="parametros-e-argumentos"&gt;
+&lt;h2&gt;PARÂMETROS E ARGUMENTOS&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos os parâmetros e os argumentos de uma função. Como declara-los e como devemos trabalhar com esse conceito.&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Retangulo&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
@@ -19067,20 +19275,23 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Atributos de Classe em Java</title><link href="http://excript.com/java/atributo-classe-java.html" rel="alternate"></link><published>2014-06-06T03:40:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-06:java/atributo-classe-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Atributos de Classe em Java</title><link href="http://excript.com/java/atributo-classe-java.html" rel="alternate"></link><published>2014-06-06T03:40:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-06:java/atributo-classe-java.html</id><summary type="html">&lt;div class="section" id="atributo"&gt;
+&lt;h2&gt;ATRIBUTO&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a definição de atributos e propriedades junto a objetos&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Main&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
@@ -19095,20 +19306,23 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Funções e Métodos em Java</title><link href="http://excript.com/java/funcao-metodo-java.html" rel="alternate"></link><published>2014-06-06T03:40:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-06:java/funcao-metodo-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Funções e Métodos em Java</title><link href="http://excript.com/java/funcao-metodo-java.html" rel="alternate"></link><published>2014-06-06T03:40:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-06:java/funcao-metodo-java.html</id><summary type="html">&lt;div class="section" id="funcao-e-metodo"&gt;
+&lt;h2&gt;FUNÇÃO E MÉTODO&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula teremos uma visão geral sobre o que é uma função e o que são métodos&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Calculo&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
@@ -19129,20 +19343,23 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Classes em Java</title><link href="http://excript.com/java/classes-java.html" rel="alternate"></link><published>2014-06-05T20:08:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-05:java/classes-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Classes em Java</title><link href="http://excript.com/java/classes-java.html" rel="alternate"></link><published>2014-06-05T20:08:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-05:java/classes-java.html</id><summary type="html">&lt;div class="section" id="classe"&gt;
+&lt;h2&gt;CLASSE&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o conceito de classe e como o Java trabalha com o conceito de classes&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;java&lt;/span&gt;
@@ -19168,54 +19385,57 @@ Agora, vamos estudar todos os programas e configurações que são necessários 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Introdução a Objetos com Java</title><link href="http://excript.com/java/introducao-objetos-java.html" rel="alternate"></link><published>2014-06-05T19:14:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-05:java/introducao-objetos-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Introdução a Objetos com Java</title><link href="http://excript.com/java/introducao-objetos-java.html" rel="alternate"></link><published>2014-06-05T19:14:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-05:java/introducao-objetos-java.html</id><summary type="html">&lt;div class="section" id="introducao-a-objetos"&gt;
+&lt;h2&gt;INTRODUÇÃO A OBJETOS&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;cript: Fala galera!!! Sejam todos bem-vindos a mais um episódio do nosso Curso de Java Orientado a Objetos. Na última aula, nós tivemos uma visão geral, sobre o que é programação orientada a objetos. Nessa aula, nós vamos começar a estudar: O que é um objeto. Então, segundo o dicionário Aurélio, objeto é tudo que é manipulado ou então, que pode ser. Nós podemos dizer que objeto é uma coisa, uma peça, um artigo de compra, ou então algo que nós conseguimos pegar. Assim, nós temos que objeto é algo no qual possui características e também, é capaz de desempenhar alguma função. Então, nós temos que por definição, um objeto sempre será composto por atributos e comportamentos. Ou seja: funções! Agora, a título de estudo, vamos supor um objeto que está bem próximo a nós, então, vamos tomar um celular. Nós temos que um celular pode assumir diversos estados, por exemplo: ele pode estar ligado ou desligado. E também, o mesmo pode estar realizando alguma tarefa, por exemplo, ele pode esta sendo utilizado para efetuar uma ligação. Assim, os estados, ou melhor, as propriedades do celular, são inúmeras, como por exemplo, ligado ou desligado, conectado ou desconectado, tela ligada, tela desligada. Qual é a altura do volume no caso baixo, médio, alto. Assim, nós temos tanto atributos simples, onde nós só temos 2 condições como por exemplo, ligado ou desligado, e nós também temos atributos complexos, como por exemplo, como definir um volume de um celular? A gente pode utilizar um inteiro que vai de 0 até 100, ou então, nós poderíamos utilizar 3 estados, como baixo, médio e alto e até, nós poderíamos combinar 2 formas de volume, ou seja a gente tem um volume que se vai dar numa proporção de 0 até 100 e nós temos uma outra forma, que nós vamos utilizar para definir o volume como baixo, médio ou alto. Em todo objeto, nós também temos as suas funções, isto é, um celular pode realizar atualmente uma série de tarefas. Assim, cada tarefa que o nosso celular faz, ele está desta forma, executando uma função. Assim, nós temos que as funções, são tudo que o nosso dispositivo pode fazer, e os atributos ou então, os estados, são todas as informações que o nosso objeto pode conter. Então, ao invés de um objeto alterar o volume de um celular, fazendo referência a uma variável, por exemplo, ele iria se utilizar, de uma função para fazer isso. Até porque, se um objeto defini que um volume de um celular pode ir de 0 até 100, o que aconteceria se alguém atribuisse o volume de 150? Ou seja, o objeto volume precisa prever que isso não ocorra e uma forma de nós fazer isso, é utilizando funções. Ao invés dos outros objetos acessarem diretamente as variáveis e os atributos, elas vão fazer acesso utilizando as funções pública, que como nós estudaremos nas próximas aulas, é a interface de acesso a esse objeto. Assim, se utilizando da interface, nós temos como verificar, quais os parâmetros que estão sendo passados pela função, e se esse parâmetro pode ou não ser atribuído a nossas variáveis. Então, nós temos que as nossas funções, elas podem fazer as verificações dos valores que estão sendo passados e assim, caso venha a ocorrer algum problema, o nosso objeto pode levantar alguma exceção, informando que o valor que está sendo recebido é inválido. De forma resumida, nós podemos dizer que a orientação a objetos, possui 4 pilares. Se nós fossemos elucidá-los, ou seja, se nós fossemos citar os principais, nós teríamos que o primeiro seria o encapsulamento. O encapsulamento é a forma como nós utilizamos para encapsular uma série de funções, uma série de atributos, dentro de uma unidade representativa. Ou seja, nós concentramos uma série de informações, dentro de um único local. Então, nós podemos dizer, que um grupo de informações está encapsulado dentro de um objeto. Um outro conceito muito importante que nós temos na orientação a objetos, são as Classes. Como nós veremos, a classe, é o que define a estrutura do nosso objeto, ou seja é o projeto de todo objeto. Assim, nós temos que todo objeto na programação, ele foi criado de um Classe, ou seja, de uma normatização. Os objetos como nós veremos, eles são os resultados da execução da nossa classe. Assim, se nós temos que a Classe é o projeto, o Objeto, é a execução dessa Classe. Ou seja, é a materialização do projeto. Por último, mas não menos importante, nós temos a herança. A herança, como o nome sugere é a capacidade que nós temos de programar, herdando características dos ancestrais. Ou seja, nós podemos definir uma Classe baseada em outra. Dessa forma, a nossa Classe quando executada, ela terá todas as características e funções da Classe no qual a mesma é herdeira. Assim, nós temos que quando nós somos herdeiros de uma Classe, nós conseguimos estender o trabalho dessa Classe, como também, nós conseguimos sobreescrever alguns métodos. Ou seja, nós conseguimos mudar o funcionamento de alguns métodos da nossa superclasse, simplesmente, sobreescrevendo esses métodos. Um último conceito que nós devemos aprender, é que um objeto, pode ser formado de "n" objetos. Ou seja, dentro de um objeto, nós podemos ter vários outros objetos, e assim, pela união desses objetos e pela comunicação entre eles, nós temos a formação de um novo objeto. Esses objetos que estão contidos dentro desse objeto maior, eles passarão a ser, atributos desse objeto maior como também, eles terão a capacidade de executar as funções que foram definidas dentro deles. Assim, voltando ao exemplo do nosso celular, nós temos que todo celular possui um teclado uma bateria, um chip e etc. Tanto o teclado como a bateria e o chip, são por definição outros objetos, e esses objetos quando "ligados" eles dão origem a outros objetos, como por exemplo, o nosso celular. Neste caso, nós temos que um celular é um objeto composto ou seja, é um objeto que é composto por "n" outros objetos. Basicamente, todo sistema que nós construímos orientado a objetos, ele é em si, um objeto que contém inúmeros outros objetos. Assim, nós temos que um programa pronto, ele é um objeto, que contém inúmeros outros objetos dentro dele. Assim, cada objeto, passa a ser um atributo do nosso objeto grandão. E então nós temos que esse nosso objeto grande, acaba encapsulando vários outros objetos dentro de si. E dessa forma nós temos, que nós só conseguimos acessar esses outros objetos, através desse objeto maior. Ou seja, utilizando o nosso sistema. Então é isso ai pessoal, nessa aula nós tivemos uma introdução aos objetos. Na próxima aula nós continuamos o nosso estudo, muito obrigado e até mais!!! Tchau!!!!!!&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Abertura do Curso de Java Orientado a Objetos</title><link href="http://excript.com/java/abertura-curso-java-orientado-objetos.html" rel="alternate"></link><published>2014-06-05T18:53:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-05:java/abertura-curso-java-orientado-objetos.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;cript: Fala galera!! Sejam todos bem-vindos ao Curso de Java Orientado a Objetos, o segundo módulo do nosso Curso de Java. Agora, nós vamos iniciar o estudo da orientação a objetos com a linguagem Java. Sem dúvidas, a orientação a objetos, é o paradigma de programação mais utilizado para o modelamento e desenvolvimento de software no mundo. Então, nós estamos começando nessa aula, o módulo de Java Orientado a Objetos. Assim, para que você consiga acompanhar este módulo, é necessário, que você tenha feito o módulo básico, ou então, que você tenha conhecimento prévio, de programação em Java. Caso você esteja começando a programar agora, você pode acessar todas as nossas aulas do nosso Curso de Java, clicando aqui nesse link! Então, no primeiro módulo do nosso Curso de Java. Nós aprendemos a sintaxe da linguagem, como também, as várias estruturas utilizadas no desenvolvimento de software. Porém, para que nós consigamos desenvolver softwares, nós precisamos ainda mais, nós precisamos saber, qual forma nós iremos programar, e gerenciar, as várias partes do nosso programa. Até porque, em pouco tempo, acabamos por ter centenas de linhas de códigos, então, se o projeto em que nós estamos trabalhando não tiver uma estrutura modular, muito provavelmente, nós acabaremos, sendo engolidos pela má estruturação do nosso código. E assim, nós vamos perder muito tempo, tentando entender, o que nós implementamos no mês passado! E assim, se o nosso código não tiver uma boa orientação a objetos, acabará, que nós teremos que fazer mudanças drásticas na estrutura do nosso programa. E se o mesmo, já estiver sendo utilizado por um grande número pessoas, ou seja, já estiver na produção, essas mudanças podem acabar sendo traumáticas. Mesmo se nós tivermos testes unitários para todas as partes do nosso programa, ainda assim, toda a mudança que nós fazemos no núcleo dos nossos objetos, acabará inevitavelmente, fazendo algumas partes do nosso sistema não funcionar mais de forma correta. Assim, nós temos que a orientação a objetos, nos fornece um caminho, como também, uma série de padrões amplamente utilizados pela comunidade de desenvolvimento. Ou seja, a comunidade internacional, ao longo dos anos, tratou de catalogar, varias maneiras para o desenvolvimento de projetos de software, como também, metodologias para implementação. Tudo isso, a fim de padronizar a construção de software. Então nós temos um conjunto de padrões chamados patterns, e a grande maioria desses patterns, utiliza o paradigma de programação orientado a objetos. Patterns, significa padrões em Português, então Design Patterns, significa padrões de projeto. Assim, é muito importante entender os padrões de projetos e não somente para nós utilizarmos essas estruturas no nossos projetos, e sim, para que nós consigamos entender, as bibliotecas do Java Standard Edition. Ou seja, as bibliotecas padrões do Java. Como exemplo maior, nós temos a biblioteca Collection do Java, que foi implementada, se valendo de diversos design patterns, pelo ex-engenheiro da Sun Microsystem, ...., que inclusive, em meado de 2006, lançou um dos livros que se tornou referência de design patterns, Effective Java, que muito provavelmente, você ainda irá ler. Nós temos também, que se por exemplo, nós precisarmos entender as bibliotecas do Android, também será muito útil entender os design patterns, ainda que os principais desenhos de projetos, foram há alguns anos, refutados por engenheiros da Google. Porém, ainda que o padrão de projetos que foi utilizado para desenvolver a biblioteca, não esteja sendo empregado como nós conhecemos na sua forma pura, o simples fato, de ter conhecimento, de como essas estruturas funcionam, e como esses padrões de projetos fazem uso da orientação a objetos, ou seja, os mesmos são fundamentados pelos conceitos básicos da orientação a objetos e são por essas razões, que é tão importante entender os vários conceitos da orientação a objetos, e também, as várias técnicas que nós podemos utilizar, pra modularizar, da melhor forma o nosso código. Como último exemplo, se o seu conhecimento de orientação a objetos for por demais superficial, você acabara o tempo todo, esbarrando em pequenos problemas, como por exemplo, nós tivemos o lançamento do Java 8. Se você não tiver, um bom conhecimento de orientação a objetos, você pode vir a ter mais dificuldade, para entender, as várias técnicas que nós conseguimos utilizar com a programação funcional. Que nos últimos anos, está cada vez mais sendo Misturada com a orientação a objetos. Ou seja, nós estamos programando em 2 paradigmas diferentes simultaneamente. Isso se deve pela razão, que ao mesmo tempo que nós temos todos os benefícios da orientação a objetos, nós acabamos por ter, alguns efeitos colaterais, como por exemplo, a quantidade de código que se precisa pra se fazer algumas implementações simples, que na programação funcional, utilizando-se de métodos anônimos, ou seja, o tão falado lambda, nós conseguimos obter, uma outra forma de trabalhar, muito mais produtiva, porém, ainda assim, sem perder os princípios da orientação a objetos. Apenas, se adequando a uma realidade um pouco diferente, pra assim evitar a obrigatoriedade, de criar de forma explícita uma classe anônima, que estende uma interface super simples, que só tem um método declarado e tudo isso funcionando dessa forma, para que o princípio da orientação a objetos seja empregado da forma mais correta e pura, o que acaba sendo excelente para a modularização do trabalho, mas que tem como efeito colateral, um código muito mais carregado e difícil de ler. Então, como nós estudaremos nesse módulo uma das regras fundamentais das interfaces, acabou de ser violado pela versão 8 do Java Standard Edition. Ainda assim, devido a forma como as bibliotecas do Java estão estruturadas, toda essa mudança, não implicou em nenhum grande problema para nós programadores. Então, todo aquele que não domina o princípio do emprego das interfaces pela orientação a objetos, acaba, nesses momentos, não conseguindo entender, as mudanças, que a versão 8 do Java trouxe. Então, um programador que desconhece o funcionamento das interfaces pela orientação a objetos, até consegue fazer uso das expressões lambdas, porém, este acaba por não entender o que de fato está acontecendo nos bastidores, assim, nós temos que o mesmo, acaba por fazer uma programação um tanto robótica, e quando realmente precisar de uma solução, não saberá como implementar ela, porque desconhece, as regras fundamentais, da orientação a objetos. Então, esteja certo, que a partir desse momento, você aprenderá o que há de melhor no mundo da programação, que é a orientação a objetos. Uma forma elegante de programar, que modela e modulariza o nossos sistemas, encapsulando lógicas complexas, conferindo coesão ao nosso código e fazendo os nossos projetos se materializarem através de classes que se tornaram objetos. Por isso, dedique-se ao máximo na orientação a objetos. Essa é uma forma de programação consagrada dentre todos os desenvolvedores, assim, nós temos que os conceitos da orientação a objetos, já foram amplamente testados por inúmeros sistemas gigantes e não é a toa que o mesmo se tornou um padrão internacional para o desenvolvimento de sistemas. Por fim, nós temos que o grande objetivo da orientação a objetos, é tornar os nosso programas modulares, e assim, tornar as nossas bibliotecas de fácil reutilização. Ou seja, as bibliotecas que nós iremos criar, serão capazes, de serem reutilizadas em outros projetos, e por pessoas que nós nem conhecemos e tudo isso, graças a uma metodologia de programação universal, que não somente constrói as nossas aplicações, como também, molda as nossas bibliotecas que serão reutilizadas, por um grupo sem fim de pessoas. Esse é o verdadeiro princípio e magia da orientação a objetos. Poder desenvolver um pacote de recursos, que nós iremos utilizar nos mais diversos projetos, e também, nós podemos disponibilizar todos esses recursos na internet. Então é isso ai pessoal! Espero que vocês consigam adentrar-se no mundo maravilhoso da orientação a objetos! Uma metodologia de desenvolvimento que tem por objetivo, da forma, ao mais abstrato dos conceitos, e que vocês podem ter certeza, que vocês irão se divertir criando objetos e definindo como os mesmos irão se comportar, como também tratando de especificar todas as suas características, que podem ser modificadas por todo aquele que utilizar as suas bibliotecas. Ou seja, a partir de agora, os nossos objetos, serão a materialização das nossas ideias, e assim, nós temos que nós poderemos ver fisicamente os nossos sonhos fazendo parte das nossas realidades todos os dias, até porque nós vamos estar o tempo todo trabalhando com as nossas criações. Com aquilo que nós modelamos, planejamos e desenvolvemos! Então é isso ai pessoal, vejo vocês na nossa próxima aula muito obrigado e até mais! Tchau!!!!!!!!!!!!!&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="abertura"&gt;
-&lt;h2&gt;ABERTURA&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Introdução a Orientação a Objetos com Java</title><link href="http://excript.com/java/introducao-orientacao-objetos-java.html" rel="alternate"></link><published>2014-06-05T18:53:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-05:java/introducao-orientacao-objetos-java.html</id><summary type="html">
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Abertura do Curso de Java Orientado a Objetos</title><link href="http://excript.com/java/abertura-curso-java-orientado-objetos.html" rel="alternate"></link><published>2014-06-05T18:53:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-05:java/abertura-curso-java-orientado-objetos.html</id><summary type="html">&lt;div class="section" id="abertura"&gt;
+&lt;h2&gt;ABERTURA&lt;/h2&gt;
+
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;cript: Fala galera! Sejam todos bem-vindos a mais um episódio do nosso curso de Java Orientado a Objetos. Programação Orientada a Objetos, é um paradigma de programação onde tudo é representado como se fosse um objeto físico. Logo, cada objeto irá possuir, por definição do termo, atributos, ou seja, características que o definem. Como também, esses objetos vão desempenhar alguma tarefa específica que nesse caso, serão os seus métodos. Assim, nós acabamos por ter entidades especializadas, que não somente informações na memória, como também, fazem todo o gerenciamento e disponibilizam um maneira simples de acesso ao seus dados. Assim, nós acabamos por ter uma série de objetos que são especialistas, no tratamento de uma determinada informação. Muito do estudo da orientação a objetos, se da entorno dos atributos e dos métodos da classe. Todo atributo, tem por definição, armazenar uma característica do objeto, enquanto que uma função, vai ter o objetivo, executar alguma tarefa. Essas tarefas, sempre devem ter relação direta ao objeto ao qual se está manipulando, ou então, ter alguma ligação entre eles. Assim, quando nós trabalhamos com orientação a objetos, nós temos um conjunto de atributos e também, nós temos um conjunto de métodos e tudo isso, fica agrupado dentro de uma mesma entidade, logo, unidade. nós temos que os métodos que manipulam os atributos, estão contidos, junto da mesma Assim, quando nós vamos enviar um dado para um determinado objeto, nós estamos também, enviando um conjunto de métodos que manipulam estes dados. Assim, toda vez que nós tivermos um objeto, este objeto vai ter atributos e ele também vai ter métodos, ou seja, as funções do objeto. Então, a programação orientada a objetos, é uma forma que nós temos de agrupar tudo que diz respeito a uma mesma entidade, num mesmo lugar. Isto é, tanto os dados, como também, os métodos que os manipulam. Essa é uma forma de trabalho onde a gente dispensa que as outras entidades do nosso sistema, se preocupem como os dados são tratados ou administrados, até porque, essa é a razão pela existência desse objeto aqui, e assim, os outros objetos não vão se importar em gerenciar e tratar esse dados que estão contidos dentro deste objeto, o que realmente importa para os outros objetos, é que o contrato público que é fornecido pela classe, seja cumprido, o restante, será de interesse único do objeto invocado. Então, quando nós temos uma classe, nós temos uma interface de acesso a essas informações. Como nós veremos numa aula especifica, uma interface de acesso, é um contrato que estabelece que se estabelece entre duas partes e que diz respeito como as informações devem ser enviadas e como as informações serão recebidas deste objeto. Assim, como nós veremos, cada objeto tem a responsabilidade de tornar oculto o acesso direto aos seus atributos, ou seja, os objetos, eles tem por objetivo, cuidar das suas informações, assim, deve-se evitar, que objetos externos, consigam mudar os atributos que estão contidos dentro de um objeto diretamente. Ou seja, a interface de acesso, ela tem por objetivo, definir de qual forma a relação que haverá, entre dois objetos do sistema. Assim, nós sempre teremos um padrão de acesso as informações que estão contidas dentro de um objeto. Quando nós temos um sistema orientado a objetos, nós temos um sistema com varias partes especializadas que trocam mensagens entre si. Essas mensagens, ou então, essas instâncias, não entregam uma simples informação a outro objeto. Essas instâncias, ela não entregam simplesmente uma informação, como por exemplo, um número, um valor e sim, elas entregam um objeto que tem tantos dados como também, a lógica, para o acesso correto as informações. Então, o objeto que está recebendo a mensagem, acaba  por ter a sua disposição, tudo que necessita para o uso correto de uma determinada informação e tudo isso, sem que seja necessário que o objeto receptor, precise entender, qual é a maneira, ou mesmo, qual forma essas informações estão sendo gerenciadas internamente, dentro do objeto que ele está recebendo. Então, você pode pensar em orientação a objetos, como uma fábrica que terceiriza toda a linha de produção. Assim, o trabalho dessa empresa é gerenciar os fornecedores e então, entregar a seus clientes o que lhe foi encomendado. Desta forma, nenhum fornecedor conhece os outros fornecedores, mas todos os fornecedores, conhecem como enviar mensagens aos outros fornecedores, como também, conhece como receberam as respostas destes. Isso porque, há uma normatização de como as informações devem ser trocadas entre eles, ou seja, há um ou mais contratos gerais de trocas de informações. Então, uma empresa que terceiriza todas os serviços, acaba por ter um trabalho colaborativo especializado, onde cada um, conhece somente a sua função e sempre que necessário, pede-se ao especialista o tratamento de determinada informação. Então, como via de regra, uma empresa nunca fara o serviço de outra, isso porque, os serviços devem ser de responsabilidade de quem é o especialista, até porque, se ocorrer algum problema, facilmente se descobrira a origem dele, até porque, existe somente uma entidade que manipula determinada informação, dentro de todo o sistema e assim, caso venha a ocorrer determinado problema na mensagem, bastara somente verificar como a empresa esta fabricando e averiguar, se o contrato estabelecido foi ou não seguido. Dessa forma, ou seja, estudando a mensagem que foi enviada e a mensagem que foi recebida se consegue de forma fácil descobrir, em qual estágio da comunicação houve um erro e tendo essa informação se consegue descobrir qual foi o fornecedor que produziu uma mensagem errada. Por isso é que nós podemos pensar que programação orientada a objeto é semelhante quando nós trabalhamos só com especialistas, então, ninguém precisa conhecer a forma como o outro trabalha, até porque, isso não é um problema seus. O fato é, que cada um deve cuidar somente da sua tarefa e cumprir o contrato global que tudo funcionara sem problema. E trabalhando com esse modelo, pra nós trocarmos um fornecedor, basta simplesmente nós adequarmos um outro fornecedor a forma como o nosso contrato funciona. Até porque, se houver um outro fornecedor que entrega a mensagem da mesma maneira, nenhum dos outros fornecedores perceberam e também, eles nem precisam ficar sabendo que ocorreu essa mudança, pois como nós já vimos o importante na programação orientada a objetos é respeitar o contrato de trocas de mensagens, ou seja, como você deve enviar a mensagem e como você receberá o retorno dessa mensagem. Então é isso ai pessoal, a nossa aula fica por aqui, nesta aula nós estudamos um pouco sobre o que é orientação a objetos e nós também estudamos, um exemplo que representa um pouco sobre como funciona a orientação a objetos dentro de um sistema. Então é isso ai, vejo vocês na nossa próxima aula, muito obrigado e até mais. Tchau!&lt;/p&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Introdução a Orientação a Objetos com Java</title><link href="http://excript.com/java/introducao-orientacao-objetos-java.html" rel="alternate"></link><published>2014-06-05T18:53:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-05:java/introducao-orientacao-objetos-java.html</id><summary type="html">&lt;div class="section" id="introducao-a-orientacao-a-objetos"&gt;
+&lt;h2&gt;INTRODUÇÃO A ORIENTAÇÃO A OBJETOS&lt;/h2&gt;
+
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt;c::&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 </summary><category term="java"></category><category term="orientado"></category><category term="a"></category><category term="objetos"></category></entry><entry><title>Módulo da Divisão em C#</title><link href="http://excript.com/csharp/modulo-divisao-csharp.html" rel="alternate"></link><published>2014-06-03T18:11:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-03:csharp/modulo-divisao-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -20628,7 +20848,7 @@ Por exemplo:&lt;/p&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="c"></category></entry><entry><title>Laços Condicionais do C</title><link href="http://excript.com/linguagem-c/laco-condinal-c.html" rel="alternate"></link><published>2014-02-28T19:01:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-28:linguagem-c/laco-condinal-c.html</id><summary type="html">
+</summary><category term="curso"></category><category term="c"></category></entry><entry><title>Laços Condicionais do C</title><link href="http://excript.com/linguagem-c/laco-condicional-c.html" rel="alternate"></link><published>2014-02-28T19:01:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-28:linguagem-c/laco-condicional-c.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -21350,7 +21570,7 @@ Assim, temos que podemos ler o que um usuário digita através da função &lt;c
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!-- dd https://en.wikipedia.org/wiki/Escape_sequences_in_C --&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="c"></category></entry><entry><title>Estrutura de Repetição while do C</title><link href="http://excript.com/linguagem-c/estrutura-repeticao-while-c.html" rel="alternate"></link><published>2014-02-26T19:26:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-26:linguagem-c/estrutura-repeticao-while-c.html</id><summary type="html">
+</summary><category term="curso"></category><category term="c"></category><category term="escape sequence"></category></entry><entry><title>Estrutura de Repetição while do C</title><link href="http://excript.com/linguagem-c/estrutura-repeticao-while-c.html" rel="alternate"></link><published>2014-02-26T19:26:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-26:linguagem-c/estrutura-repeticao-while-c.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;

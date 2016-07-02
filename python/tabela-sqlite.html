@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/tabela-sqlite.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="python,sqlite" />
+        <meta name="keywords" content="python,sqlite,banco de dados" />
     <meta name="description" content="Nesta aula estudaremos o que é uma tabela para um banco de dados" />
 
         <meta property="og:site_name" content="eXcript" />
@@ -29,6 +29,7 @@
             <meta property="article:section" content="python" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="sqlite" />
+            <meta property="article:tag" content="banco de dados" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -195,23 +196,25 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
+<div class="section" id="definicao">
+<h2>DEFINIÇÃO</h2>
 <p>Tabela é uma estrutura bidimensional utilizada para organizar conjuntos de informações que possuem uma mesma estrutura.</p>
-<div class="section" id="linguagem-sql">
-<h2>LINGUAGEM SQL</h2>
 </div>
 <div class="section" id="tabela">
 <h2>TABELA</h2>
-<p>A <strong>TABELA</strong> é a estrutura fundamental dos bancos de dados relacionais. Todas as informações, indiferente do tipo, está contido dentro de um tabela. Cada tabela possui um conjunto de atributos - as colunas. Assim, por definição do termo, temos que: um conjunto de colunas formam uma tabela. Logo, toda tabela irá conter no mínimo um única coluna.</p>
+<p>A <strong>tabela</strong> é a estrutura fundamental dos bancos de dados relacionais. Todas as informações, indiferente do tipo, estão contidas dentro de tabelas. Cada tabela possui um conjunto de atributos - <strong>as colunas</strong>. Assim, por definição do termo, temos que todo conjunto de colunas formam uma tabela e todo conjunto de tabelas formam um banco de dados.</p>
+<p>Toda tabela contém, no mínimo, uma coluna.</p>
 </div>
 <div class="section" id="coluna">
 <h2>COLUNA</h2>
-<p><strong>COLUNA</strong> é o atributo de uma tabela. Toda coluna sempre possuirá um tipo, e este identifica a informação que cada célula irá conter. O tipo é definido no mesmo momento da criação da tabela e este não ira suportar o armazenamento de um outro tipo de informação.
-Uma coluna pode ter o seu tipo alterado a qualquer momento, porém, as informações deverão ser convertidas para  o novo tipo. Não há um número máximo de colunas numa tabela, porém, cada base de dados em SQLite tem um atributo que limita a quantidade de colunas. Essa é uma limitação artificial, e serve somente a título de definição. Para alterar a capacidade é necessário alterar o código fonte do banco de dados e então, recompilar todos os códigos.</p>
+<p><strong>Coluna</strong> é um atributo da tabela. Toda coluna possui tipo, e este identifica a informação que cada célula conterá. O <strong>tipo</strong> é definido no mesmo momento da criação da tabela e sendo que a mesma não suportará o armazenamento de dados que não estejam em conformidade com o tipo pré-definido.</p>
+<p>A coluna pode ter o seu tipo alterado a qualquer momento, porém, as informações deverão ser convertidas para o novo tipo.</p>
+<p>Não há quantidade máxima de colunas que uma tabela pode conter em teoria, porém, cada base de dados em SQLite tem um atributo que limita a quantidade de colunas. Essa é uma limitação artificial, e serve somente a título de definição. Para alterar a capacidade é necessário alterar o código fonte do banco de dados e então, recompilar todo o código.</p>
 </div>
 <div class="section" id="registro">
 <h2>REGISTRO</h2>
-<p>Registro é um conjunto de informações agrupadas. Cada registro possui a quantidade de colunas que a tabela possuir. Uma tabela pode conter nenhum registro ou então, um número infinito de registros.
-Na documentação do SQLite não há limite numérico, porém, há um limite pré-determinado que cada tabela pode conter. A verdadeira limitação encontra-se no tipo de dado utilizado na programação do banco de dados, por exemplo, o tipo inteiro.</p>
+<p><strong>Registro</strong> é um conjunto de informações agrupadas. Cada registro possui a quantidade de colunas que a tabela possuir. Uma tabela pode conter nenhum registro ou então, um número infinito de registros.</p>
+<p>Na documentação do SQLite não há limite numérico, porém, há um limite pré-determinado que cada tabela pode conter. A verdadeira limitação encontra-se no tipo de dado utilizado na programação do banco de dados, por exemplo, o tipo inteiro.</p>
 </div>
 
 				</div>
@@ -240,7 +243,7 @@ Na documentação do SQLite não há limite numérico, porém, há um limite pr�
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/sqlite.html">sqlite</a>            </div>
+	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/sqlite.html">sqlite</a>, 	<a href="http://excript.com/tag/banco-de-dados.html">banco de dados</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

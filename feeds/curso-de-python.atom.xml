@@ -1,5 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-de-python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-27T20:15:00-03:00</updated><entry><title>Laços de Repetição do Python</title><link href="http://excript.com/python/lacos-de-repeticao-em-python.html" rel="alternate"></link><published>2016-06-27T20:15:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-27:python/lacos-de-repeticao-em-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-de-python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-02T18:25:00-03:00</updated><entry><title>A instrução for em Python</title><link href="http://excript.com/python/for-loop-python.html" rel="alternate"></link><published>2016-07-02T18:25:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-02:python/for-loop-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nessa aula estudaremos a estrutura de repetição "for", utilizada para percorrer listas e sequências facilmente do primeiro ao último elemento.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao-a-instrucao-for-in"&gt;
+&lt;h2&gt;INTRODUÇÃO À INSTRUÇÃO &lt;code&gt;for..in&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A instrução &lt;code&gt;for&lt;/code&gt; se caracteriza por obrigar o programador a definir, explicitamente em seu cabeçalho, a quantidade de vezes [ciclos] que será executado. A quantidade de ciclos é determinado pela quantidade de elementos contido na lista declarada junto com a instrução &lt;code&gt;for&lt;/code&gt;. Dessa forma, será executado um ciclo para cada elemento &lt;strong&gt;isoladamente&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;O &lt;tt class="docutils literal"&gt;Laço de Repetição&lt;/tt&gt; &lt;code&gt;for&lt;/code&gt; do Python se assemelha ao &lt;code&gt;for each&lt;/code&gt; encontrado linguagens como o Java, PHP, C# e etc. Inclusive, a característica encontrada em todas as linguagens é a mesma que temos aqui em Python: uma estrutura simples e compacta para percorrer todos elementos das coleções ou estruturas que contenham listas de objetos.&lt;/p&gt;
+&lt;p&gt;A sintaxe do Python não possui a estrutura de repetição &lt;code&gt;for&lt;/code&gt; tradicional, onde define-se uma variável, condição e incremento no cabeçalho da estrutura. A ideia, é o trabalho e manipulação de estrutura iteraveis, isto é, a definição de iteradores, ou melhor: objetos iteráveis - &lt;code&gt;iterators&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Se você não conhece a estrutura &amp;quot;normal&amp;quot; da instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; implementada pela maioria das linguagens, não há problema, até porque, tal conhecimento de nada serve quando estamos programando em Python!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-definicao-da-instrucao-for"&gt;
+&lt;h2&gt;A DEFINIÇÃO DA INSTRUÇÃO &lt;code&gt;for&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A estrutura &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; exige, inicialmente, a definição de uma variável e, em seguida, a lista que será iterada. A seguir, temos o esquema para o uso da instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;variável&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;objeto&lt;/span&gt; &lt;span class="n"&gt;iterável&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;bloco&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;instrução&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A variável a ser declarada na primeira parte da estrutura, receberá, a cada ciclo, um elemento contido na lista que está sendo iterada. Ao término, todos elementos terão sido percorridos, e a cada ciclo, o elemento seguinte contido no objeto iterável terá sido passado pela variável definida inicialmente.&lt;/p&gt;
+&lt;p&gt;A seguir, faremos um exemplo real e percorreremos uma lista numérica.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Nós podemos ler o laço de repetição definido acima &lt;code&gt;for item in [3,4,5,6,7]:&lt;/code&gt; da seguinte maneira. Para cada elemento contido na lista &lt;code&gt;[3,4,5,6,7]&lt;/code&gt; execute o bloco de código a seguir e a cada execução, atribua à variável &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; &lt;code&gt;for item in&lt;/code&gt; um item da lista.&lt;/p&gt;
+&lt;p&gt;Ou entao, podemos ler como estamos estudando... Acima, definimos a variável &lt;code&gt;item&lt;/code&gt; e uma lista com 5 elementos &lt;code&gt;[3,4,5,6,7]&lt;/code&gt;. A cada ciclo, o elemento seguinte é atribuido à variável &lt;code&gt;item&lt;/code&gt; e ao término, teremos executado um ciclo individual para cada elemento contido na lista.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-1-imprimindo-todas-as-letras-de-uma-string"&gt;
+&lt;h2&gt;EXEMPLO 1: IMPRIMINDO TODAS AS LETRAS DE UMA STRING&lt;/h2&gt;
+&lt;p&gt;Uma String é um conjunto de caracteres e assim, podemos iterar qualquer texto, por exemplo.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;letras&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;eXcript&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+   &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ciclo: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;letter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-2-imprimindo-todos-os-itens-de-uma-lista"&gt;
+&lt;h2&gt;EXEMPLO 2: IMPRIMINDO TODOS OS ITENS DE UMA LISTA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;linguagens&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="s1"&gt;&amp;#39;Lua&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;Cobol&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;Pascal&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;lingua&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;linguagens&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+   &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Linguagem contida na variável “lingua” neste ciclo: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lingua&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;eXcript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="for"></category><category term="iteradores"></category><category term="iterator"></category><category term="blog"></category></entry><entry><title>Retornando Valores pelas Funções em Python</title><link href="http://excript.com/python/retornar-valor-python.html" rel="alternate"></link><published>2016-07-02T17:07:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-02:python/retornar-valor-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos o retorno de valores pelas funções. Estudaremos a instrução return e utiliza-la para retornar dados.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="a-instrucao-return"&gt;
+&lt;h2&gt;A INSTRUÇÃO &lt;code&gt;return&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;O objetivo de toda função é o processamento de alguma informação e o retorno do dado processado. Desta forma, temos que toda função pode, por definição, retornar valores.&lt;/p&gt;
+&lt;p&gt;Como estudado, uma função é um bloco de código que possui um nome, pode ser invocado, pode receber argumentos e pode retornar valores. Para retornarmos valores por funções, temos que utilizar uma notação especifica para este fim que é, a instrução &lt;code&gt;return&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A palavra-chave &lt;code&gt;return&lt;/code&gt; é utilizada para declarar a informação a ser retornada pela função. A mesma funciona também para finalizar a execução do bloco de instrução da função, retornado assim, o valor que estiver a sua frente. Então, a instrução &lt;code&gt;return&lt;/code&gt; é utilizada tanto para o retorno de valores pelas funções, como também, para finalizar a execução da função.&lt;/p&gt;
+&lt;p&gt;É importante entender que o uso da palavra-chave &lt;code&gt;return&lt;/code&gt; não está só e somente só relacionado com o retorno de valores, a mesma é frequentemente utilizada para finalizar a execução das instruções contidas no bloco de instrução da função, funcionado de maneira semelhante a palavra-chave &lt;code&gt;break&lt;/code&gt; e &lt;code&gt;continue&lt;/code&gt; que, são utilizadas para finalizar a execução do laço de repetição ou de um único ciclo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="consequencia-logica"&gt;
+&lt;h2&gt;CONSEQUÊNCIA LÓGICA&lt;/h2&gt;
+&lt;p&gt;O conceito por detrás da instrução &lt;code&gt;return&lt;/code&gt; que explica a finalização da função é que, cada função, tem um objetivo definido, logo, se já temos a informação a ser retornada, é porque já atingimos o objetivo e assim, a execução deve ser finalizada.&lt;/p&gt;
+&lt;p&gt;Quando a instrução &lt;code&gt;return&lt;/code&gt; é utilizada sem a definição de um valor a ser retornado, por padrão, o valor que será retornado é &lt;code&gt;None&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;O uso da instrução &lt;code&gt;return&lt;/code&gt; para a finalização da função não é obrigatório. O Python, após executar a última instrução do bloco de instrução da função, finalizara a execução, e o cursor voltará para a linha em que a função foi invocada. Assim, a execução pode ocorrer com o uso da instrução &lt;code&gt;return&lt;/code&gt; ou mesmo, pela execução de todo o bloco.&lt;/p&gt;
+&lt;p&gt;Vamos definir uma função que retorna um valor.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+
+&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;teste&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="função"></category><category term="retorno"></category><category term="return"></category><category term="blog"></category></entry><entry><title>Laços de Repetição do Python</title><link href="http://excript.com/python/lacos-de-repeticao-em-python.html" rel="alternate"></link><published>2016-06-27T20:15:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-27:python/lacos-de-repeticao-em-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -4844,70 +4954,6 @@ DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;
 &lt;span class="c1"&gt;#por essa razão, há lista é nula&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="p"&gt;[]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category></entry><entry><title>A instrução for em Python</title><link href="http://excript.com/python/for-loop-python.html" rel="alternate"></link><published>2014-10-29T11:25:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-29:python/for-loop-python.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nessa aula estudaremos a estrutura de repetição "for", utilizada para percorrer listas e sequências facilmente do primeiro ao último elemento.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="introducao-a-instrucao-for"&gt;
-&lt;h2&gt;INTRODUÇÃO À INSTRUÇÃO &lt;code&gt;for&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; possui uma quantia de ciclos pré-definida. A quantidade de ciclos é determinado pela quantidade de elementos contido na lista informada junto com a instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt;. Dessa forma, será executado um ciclo para cada elemento.&lt;/p&gt;
-&lt;p&gt;O laço de repetição &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; do Python se assemelha ao &lt;tt class="docutils literal"&gt;for each&lt;/tt&gt; que temos em Java, PHP, C#, C++ e etc. Sendo uma estrutura simples e compacta para percorrer todos elementos de coleções ou estruturas que contenham listas de objetos.&lt;/p&gt;
-&lt;p&gt;A sintaxe do Python não possui a estrutura de repetição &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; tradicional, onde define-se uma variável, condição e incremento no cabeçalho da estrutura. A ideia, é o trabalho e manipulação de estrutura iteraveis, isto é, a definição de iteradores, objetos &lt;tt class="docutils literal"&gt;iterators&lt;/tt&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="a-definicao-da-instrucao-for"&gt;
-&lt;h2&gt;A DEFINIÇÃO DA INSTRUÇÃO &lt;code&gt;for&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A estrutura &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; exige, inicialmente, a definição de uma variável, e em seguida, a instância que será iterada. A seguir, temos o esquema para o uso da instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;variável&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;objeto&lt;/span&gt; &lt;span class="n"&gt;iterável&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;bloco&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;instrução&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A variável a ser declarada, receberá, a cada ciclo, um elemento contido na lista que está sendo iterada. Ao término, todos elementos terão sido percorridos, e a cada ciclo, o elemento seguinte contido no objeto iterável será passado pela variável definida inicialmente.&lt;/p&gt;
-&lt;p&gt;A seguir, faremos um exemplo real e percorreremos uma lista numérica.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Acima, definimos a variável &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; e uma lista com 5 elementos &lt;tt class="docutils literal"&gt;[3,4,5,6,7]&lt;/tt&gt;. A cada ciclo, o elemento seguinte é atribuido à variável &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; e ao término, teremos executado um ciclo individual para cada elemento contido na lista.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-1-imprimindo-todas-as-letras-de-uma-string"&gt;
-&lt;h2&gt;EXEMPLO 1: IMPRIMINDO TODAS AS LETRAS DE UMA STRING&lt;/h2&gt;
-&lt;p&gt;Uma String é um conjunto de caracteres e assim, podemos iterar qualquer texto, por exemplo.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;letras&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;eXcript&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-   &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ciclo: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;letter&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-2-imprimindo-todos-os-itens-de-uma-lista"&gt;
-&lt;h2&gt;EXEMPLO 2: IMPRIMINDO TODOS OS ITENS DE UMA LISTA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="n"&gt;linguagens&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="s1"&gt;&amp;#39;Lua&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;Cobol&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;Pascal&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;lingua&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;linguagens&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-   &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Linguagem contida na variável “lingua” neste ciclo: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lingua&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;eXcript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category></entry><entry><title>Operadores Lógicos em Python</title><link href="http://excript.com/python/operadores-logicos-python.html" rel="alternate"></link><published>2014-06-03T18:11:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-03:python/operadores-logicos-python.html</id><summary type="html">
