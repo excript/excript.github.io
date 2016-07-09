@@ -1,5 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all-pt.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-02T18:25:00-03:00</updated><entry><title>A instrução for em Python</title><link href="http://excript.com/python/for-loop-python.html" rel="alternate"></link><published>2016-07-02T18:25:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-02:python/for-loop-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all-pt.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-08T18:19:00-03:00</updated><entry><title>A função range() do Python</title><link href="http://excript.com/python/funcao-range-python.html" rel="alternate"></link><published>2016-07-08T18:19:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-08:python/funcao-range-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a função "range()" uma ferramenta muito utilizada junto a instrução "for", bem como, em todas as situações em que estamos trabalhando com sequências numéricas.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="a-funcao-range"&gt;
+&lt;h2&gt;A função &lt;code&gt;range()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A função &lt;code&gt;range()&lt;/code&gt; retorna uma série numérica no intervalo enviado como argumento. A série retornada é um objeto iterável tipo &lt;code&gt;range()&lt;/code&gt; e os elementos contidos serão gerados em demanda.&lt;/p&gt;
+&lt;p&gt;É comum o uso da função &lt;code&gt;range()&lt;/code&gt; com a estrutura &lt;tt class="docutils literal"&gt;for loop&lt;/tt&gt; para a cada ciclo, ter o valor da variável definida no cabeçalho incrementado ou decrementado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="definicao-da-funcao-range"&gt;
+&lt;h2&gt;DEFINIÇÃO DA FUNÇÃO &lt;code&gt;range()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A seguir, temos a definição da função  &lt;code&gt;range()&lt;/code&gt; encontrada na documentação oficial do Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#primeira definição ou definição simplificada&lt;/span&gt;
+&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#segunda definição ou definição completa&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A função &lt;code&gt;range()&lt;/code&gt; exige a definição do último elemento da sequência numérica. Por padrão, o parâmetro &lt;tt class="docutils literal"&gt;start&lt;/tt&gt; será igual a 0 e o &lt;tt class="docutils literal"&gt;step&lt;/tt&gt; igual a 1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="parametros-da-funcao-range"&gt;
+&lt;h2&gt;PARÂMETROS DA FUNÇÃO &lt;code&gt;range()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Podemos especificar o início da sequência numérica, e o passo, isto é, o intervalo entre cada elemento. O único parâmetro obrigatório é o último elemento da sequência.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;start - início da sequência&lt;/li&gt;
+&lt;li&gt;stop - último elemento da sequência&lt;/li&gt;
+&lt;li&gt;step - intervalo entre os elementos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Na definição da função &lt;code&gt;range()&lt;/code&gt; é utilizado a notação de conjuntos numéricos para documentar se o intervalo da sequência é aberto ou fechado. Então, os colchetes junto aos parâmetros indica se o intervalo é aberto ou fechado, isto é, se o número estará contido ou não na sequência numérica.&lt;/p&gt;
+
+&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+&lt;!-- Horizontal --&gt;
+&lt;ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5466436161806566"
+     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;div class="section" id="intervalos-abertos"&gt;
+&lt;h2&gt;INTERVALOS ABERTOS&lt;/h2&gt;
+&lt;p&gt;] x [ -&amp;gt; Quando os colchetes se opõem ao número, temos um intervalo aberto. Assim, todos os números no intervalo estarão contidos na sequência numérica, menos os extremos.
+&lt;strong&gt;Intervalo:&lt;/strong&gt; ]a, b[
+&lt;strong&gt;Conjunto:&lt;/strong&gt; {x ∈ R | a &amp;lt; x &amp;lt; b}
+&lt;strong&gt;Tradução:&lt;/strong&gt; números reais maiores do que &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; e menores do que &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; (quando o intervalo está aberto, entende-se que todos os números do intervalo estão contidos, menos o(s) extremo(s).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="intervalos-fechados"&gt;
+&lt;h2&gt;INTERVALOS FECHADOS&lt;/h2&gt;
+&lt;p&gt;[ x ] -&amp;gt; Quando o colchete estiver de “acordo” (no sentido normal) ao número, tem-se um intervalo fechado. Assim, todos os números contidos no intervalo estarão contidos inclusive os extremos da sequência.
+&lt;strong&gt;Intervalo:&lt;/strong&gt; [a, b]
+&lt;strong&gt;Conjunto:&lt;/strong&gt; {x ∈ R | a ≤x ≤ b}
+&lt;strong&gt;Tradução:&lt;/strong&gt; números reais maiores ou igual a &lt;cite&gt;a&lt;/cite&gt; e menores ou igual a &lt;cite&gt;b&lt;/cite&gt; (quando o intervalo está fechado, entende-se que todos os números do intervalo estão contidos, inclusive o(s) extremo(s).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="voltando-para-o-python"&gt;
+&lt;h2&gt;VOLTANDO PARA O PYTHON&lt;/h2&gt;
+&lt;p&gt;Agora que já relembramos alguns conceitos da matemática, vamos rever a notação da função &lt;code&gt;range()&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Com a primeira notação é possível invocar a função definindo somente, o intervalo final, ou seja, definindo somente o parâmetro &lt;cite&gt;stop&lt;/cite&gt;. Assume-se assim, que o início da sequência é igual a 0 e o final, igual ao valor passado como parâmetro.&lt;/p&gt;
+&lt;p&gt;Com a segunda notação, ou então, com a notação completa, temos a capacidade de definir (1) o início da sequência (2) o último elemento e (3) o passo, isto é, o intervalo entre cada elemento.&lt;/p&gt;
+&lt;p&gt;Agora, vamos praticar todo o conceito estudado, até porque, essa ainda é a melhor maneira para estudarmos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-de-uso-da-primeira-notacao"&gt;
+&lt;h2&gt;EXEMPLO DE USO DA PRIMEIRA NOTAÇÃO&lt;/h2&gt;
+&lt;p&gt;Vamos desenvolver um simples exemplo demonstrando o uso da primeira notação estudada, assim, vamos invocar a função &lt;code&gt;range()&lt;/code&gt; e passar como parâmetro o últimos elemento da sequência numérica que desejamos.&lt;/p&gt;
+&lt;p&gt;É importante observar que na versão 3x do Python será retornado, pela função &lt;code&gt;range()&lt;/code&gt;, um objeto iterável, e não uma lista contendo os elementos propriamente dito. Por essa razão, iremos forçar a conversão do objeto iterável para o objeto &lt;tt class="docutils literal"&gt;list&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;DEFINIÇÃO: &lt;tt class="docutils literal"&gt;range( stop[ )&lt;/tt&gt;
+DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A função retornou uma lista contendo 5 elementos, onde o primeiro é o 0 e o último 4. O primeiro elemento é igual a 0, até porque, quando não definido, assume-se que &lt;tt class="docutils literal"&gt;start=0&lt;/tt&gt;. O último elemento é o 4, até porque, o parâmetro &lt;tt class="docutils literal"&gt;stop&lt;/tt&gt; possui o intervalo aberto, isto é, o número definido não estará contido na sequência numérica.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplos-de-usa-da-segunda-notacao"&gt;
+&lt;h2&gt;EXEMPLOS DE USA DA SEGUNDA NOTAÇÃO&lt;/h2&gt;
+&lt;p&gt;Vamos desenvolver um simples exemplo demonstrando o uso da segunda notação estudada.&lt;/p&gt;
+&lt;p&gt;DEFINIÇÃO: range( [start], stop[, step] )
+DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- **start** - valor onde o intervalo deve começar
+- **stop** - valor (menos um) onde o intervalo deve finalizar
+- **step** - passo (intervalo entre os elementos da sequência)
+&lt;/pre&gt;
+&lt;p&gt;Vamos gerar uma lista que contenha 4 objetos numéricos e que o primeiro seja igual a 2 e o último igual a 5.&lt;/p&gt;
+&lt;p&gt;Novamente, iremos converter o objeto iterável retornado pela função &lt;code&gt;range()&lt;/code&gt; para o tipo &lt;code&gt;list&lt;/code&gt;, para que o mesmo, tenha seus elementos impressos na saída padrão.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, definimos o parâmetro &lt;code&gt;start=2&lt;/code&gt; e &lt;code&gt;stop=6&lt;/code&gt; logo, o primeiro elemento foi o 2, enquanto o último elemento, igual a 5.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="passo-ou-intervalo-entre-os-elementos"&gt;
+&lt;h2&gt;PASSO OU INTERVALO ENTRE OS ELEMENTOS&lt;/h2&gt;
+&lt;p&gt;O &lt;code&gt;step&lt;/code&gt; é o intervalo entre cada elemento numérico. Se por exemplo, gerarmos uma sequência numérica entre 0 e 10 e definirmos, será assumido por padrão, que o &lt;code&gt;step&lt;/code&gt; é igual a 1 e por essa razão, o elemento seguinte estará a 1 unidade do elemento anterior, e a lista será igual a: &lt;tt class="docutils literal"&gt;[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Agora, se nós gerarmos uma lista entre 0 e 10, porém, definirmos o passo como sendo igual a 2, a seguinte lista será retornada: &lt;tt class="docutils literal"&gt;[0, 2, 4, 6, 8]&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Em ambos os casos os estamos trabalhando com uma sequência numérica num mesmo intervalo, porém, no primeiro exemplo o intervalo entre os elementos é igual a 1 unidade, enquanto que no segundo exemplo, o espaço entre os elementos é de 2 unidades.&lt;/p&gt;
+&lt;p&gt;No código a seguir, vamos gerar uma lista no intervalo 2 à 10 e o &lt;code&gt;step&lt;/code&gt; será igual a 2 unidades.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;27&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, geramos 2 sequência numéricas, a primeira no intervalo de 2 à 10 e com o &lt;tt class="docutils literal"&gt;step&lt;/tt&gt; igual a 2. Logo foram impresso 4 elementos no intervalo de 2 à 10.&lt;/p&gt;
+&lt;p&gt;Em seguida, novamente com a função &lt;code&gt;range()&lt;/code&gt; definimos uma segunda sequência numérica no intervalo de 0 à 30 e o &lt;tt class="docutils literal"&gt;step&lt;/tt&gt; igual a 3. Logo, foi impresso uma lista, contendo 10 elementos, onde o primeiro é o 0 e o último o 27. Também é possível observar, que a sequência gerada é a tabuada de 3, faltando somente o último valor e para isso, bastava somente definir o intervalo final como sendo igual a 31.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplos-da-documentacao-oficial-do-python"&gt;
+&lt;h2&gt;EXEMPLOS DA DOCUMENTAÇÃO OFICIAL DO PYTHON&lt;/h2&gt;
+&lt;p&gt;Os exemplos a seguir, foram extraídos da documentação oficial do Python e demonstram situação interessantes com o uso da função &lt;code&gt;range()&lt;/code&gt;. Vale a pena o estudo de cada situação detalhadamente.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="c1"&gt;#gerando uma sequência de 0 à 9&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;#gerando uma sequência de 1 à 11&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;#gerando uma sequência de 0 à 30 com step=5&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;#gerando uma sequência os 5 primeiros números da tabuada de 3&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;#gerando uma sequência numérica negativa&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;#gerando uma sequência numérica vazia&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[]&lt;/span&gt;
+
+&lt;span class="c1"&gt;#gerando uma sequência numérica vazia,&lt;/span&gt;
+&lt;span class="c1"&gt;#onde o interval inicial é maior do que o final&lt;/span&gt;
+&lt;span class="c1"&gt;#por essa razão, há lista é nula&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category></entry><entry><title>A instrução for em Python</title><link href="http://excript.com/python/for-loop-python.html" rel="alternate"></link><published>2016-07-02T18:25:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-02:python/for-loop-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -26,7 +188,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;variável&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;objeto&lt;/span&gt; &lt;span class="n"&gt;iterável&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;bloco&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;instrução&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A variável a ser declarada na primeira parte da estrutura, receberá, a cada ciclo, um elemento contido na lista que está sendo iterada. Ao término, todos elementos terão sido percorridos, e a cada ciclo, o elemento seguinte contido no objeto iterável terá sido passado pela variável definida inicialmente.&lt;/p&gt;
+&lt;p&gt;A variável a ser declarada na primeira parte da estrutura, receberá, a cada ciclo, um elemento contido na lista que está sendo iterada. Ao término, todos elementos terão sido percorridos e, a cada ciclo, o elemento seguinte contido no objeto iterável terá sido passado pela variável definida inicialmente.&lt;/p&gt;
 &lt;p&gt;A seguir, faremos um exemplo real e percorreremos uma lista numérica.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
 
@@ -18142,168 +18304,6 @@ No sétimo ciclo também houve uma interrupção onde a jornada cancelada, isto 
 &lt;p&gt;Para gerarmos a mesma lista numérica, porém, com a ordenação invertida, podemos utilizar a função &lt;code&gt;reverse()&lt;/code&gt; que inverte a ordem de objetos iteraveis, ou então, gerar a série numérica invertida.&lt;/p&gt;
 &lt;p&gt;Invocamos a função &lt;code&gt;range()&lt;/code&gt; e definimos que o parâmetro &lt;code&gt;start&lt;/code&gt; será igual a 9, stop igual a -1, e step igual -1 também.&lt;/p&gt;
 &lt;p&gt;O parâmetro &lt;code&gt;start&lt;/code&gt; não há o que comentar. O parâmetro &lt;code&gt;stop&lt;/code&gt; é igual a -1 porque o intervalo é aberto, isto é, o número do extremos não fará parte do grupo, logo, se definimos -1 o último elemento da série será 0. Por fim, definimos o &lt;code&gt;step&lt;/code&gt;, ou seja, o passo, intervalo numérico entre cada elemento igual a -1. Dessa forma, o Python inverte a ordenação do objeto iterável.&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category></entry><entry><title>A função range() do Python</title><link href="http://excript.com/python/funcao-range-python.html" rel="alternate"></link><published>2014-10-30T13:16:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-30:python/funcao-range-python.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a função "range()" uma ferramenta muito utilizada junto a instrução "for", bem como, em todas as situações em que estamos trabalhando com sequências numéricas.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="a-funcao-range"&gt;
-&lt;h2&gt;A função &lt;code&gt;range()&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A função &lt;code&gt;range()&lt;/code&gt; retorna uma série numérica no intervalo definido como parâmetro. É retornado um objeto iterável do tipo &lt;code&gt;range()&lt;/code&gt; e os elementos são gerados conforme a demanda.&lt;/p&gt;
-&lt;p&gt;É comum o uso da função &lt;code&gt;range()&lt;/code&gt; com a estrutura &lt;tt class="docutils literal"&gt;for loop&lt;/tt&gt; para a cada ciclo, ter o valor da variável definida no cabeçalho incrementado ou decrementado.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="definicao-da-funcao-range"&gt;
-&lt;h2&gt;DEFINIÇÃO DA FUNÇÃO &lt;code&gt;range()&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A seguir, temos a definição da função  &lt;code&gt;range()&lt;/code&gt; encontrada na documentação oficial do Python:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#primeira definição ou definição simplificada&lt;/span&gt;
-&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#segunda definição ou definição completa&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A função &lt;code&gt;range()&lt;/code&gt; exige a definição do último elemento da sequência numérica. Por padrão, o parâmetro &lt;tt class="docutils literal"&gt;start&lt;/tt&gt; será igual a 0 e o &lt;tt class="docutils literal"&gt;step&lt;/tt&gt; igual a 1.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="parametros-da-funcao-range"&gt;
-&lt;h2&gt;PARÂMETROS DA FUNÇÃO &lt;code&gt;range()&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Podemos especificar o início da sequência numérica, e o passo, isto é, o intervalo entre cada elemento. O único parâmetro obrigatório é o último elemento da sequência.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;start - início da sequência&lt;/li&gt;
-&lt;li&gt;stop - último elemento da sequência&lt;/li&gt;
-&lt;li&gt;step - intervalo entre os elementos&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Na definição da função &lt;code&gt;range()&lt;/code&gt; é utilizado a notação de conjuntos numéricos para documentar se o intervalo da sequência é aberto ou fechado. Então, os colchetes junto aos parâmetros indica se o intervalo é aberto ou fechado, isto é, se o número estará contido ou não na sequência numérica.&lt;/p&gt;
-
-&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
-&lt;!-- Horizontal --&gt;
-&lt;ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5466436161806566"
-     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
-&lt;/div&gt;
-&lt;div class="section" id="intervalos-abertos"&gt;
-&lt;h2&gt;INTERVALOS ABERTOS&lt;/h2&gt;
-&lt;p&gt;] x [ -&amp;gt; Quando os colchetes se opõem ao número, temos um intervalo aberto. Assim, todos os números no intervalo estarão contidos na sequência numérica, menos os extremos.
-&lt;strong&gt;Intervalo:&lt;/strong&gt; ]a, b[
-&lt;strong&gt;Conjunto:&lt;/strong&gt; {x ∈ R | a &amp;lt; x &amp;lt; b}
-&lt;strong&gt;Tradução:&lt;/strong&gt; números reais maiores do que &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; e menores do que &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; (quando o intervalo está aberto, entende-se que todos os números do intervalo estão contidos, menos o(s) extremo(s).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="intervalos-fechados"&gt;
-&lt;h2&gt;INTERVALOS FECHADOS&lt;/h2&gt;
-&lt;p&gt;[ x ] -&amp;gt; Quando o colchete estiver de “acordo” (no sentido normal) ao número, tem-se um intervalo fechado. Assim, todos os números contidos no intervalo estarão contidos inclusive os extremos da sequência.
-&lt;strong&gt;Intervalo:&lt;/strong&gt; [a, b]
-&lt;strong&gt;Conjunto:&lt;/strong&gt; {x ∈ R | a ≤x ≤ b}
-&lt;strong&gt;Tradução:&lt;/strong&gt; números reais maiores ou igual a &lt;cite&gt;a&lt;/cite&gt; e menores ou igual a &lt;cite&gt;b&lt;/cite&gt; (quando o intervalo está fechado, entende-se que todos os números do intervalo estão contidos, inclusive o(s) extremo(s).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="voltando-para-o-python"&gt;
-&lt;h2&gt;VOLTANDO PARA O PYTHON&lt;/h2&gt;
-&lt;p&gt;Agora que já relembramos alguns conceitos da matemática, vamos rever a notação da função &lt;code&gt;range()&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Com a primeira notação é possível invocar a função definindo somente, o intervalo final, ou seja, definindo somente o parâmetro &lt;cite&gt;stop&lt;/cite&gt;. Assume-se assim, que o início da sequência é igual a 0 e o final, igual ao valor passado como parâmetro.&lt;/p&gt;
-&lt;p&gt;Com a segunda notação, ou então, com a notação completa, temos a capacidade de definir (1) o início da sequência (2) o último elemento e (3) o passo, isto é, o intervalo entre cada elemento.&lt;/p&gt;
-&lt;p&gt;Agora, vamos praticar todo o conceito estudado, até porque, essa ainda é a melhor maneira para estudarmos.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-de-uso-da-primeira-notacao"&gt;
-&lt;h2&gt;EXEMPLO DE USO DA PRIMEIRA NOTAÇÃO&lt;/h2&gt;
-&lt;p&gt;Vamos desenvolver um simples exemplo demonstrando o uso da primeira notação estudada, assim, vamos invocar a função &lt;code&gt;range()&lt;/code&gt; e passar como parâmetro o últimos elemento da sequência numérica que desejamos.&lt;/p&gt;
-&lt;p&gt;É importante observar que na versão 3x do Python será retornado, pela função &lt;code&gt;range()&lt;/code&gt;, um objeto iterável, e não uma lista contendo os elementos propriamente dito. Por essa razão, iremos forçar a conversão do objeto iterável para o objeto &lt;tt class="docutils literal"&gt;list&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;DEFINIÇÃO: &lt;tt class="docutils literal"&gt;range( stop[ )&lt;/tt&gt;
-DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A função retornou uma lista contendo 5 elementos, onde o primeiro é o 0 e o último 4. O primeiro elemento é igual a 0, até porque, quando não definido, assume-se que &lt;tt class="docutils literal"&gt;start=0&lt;/tt&gt;. O último elemento é o 4, até porque, o parâmetro &lt;tt class="docutils literal"&gt;stop&lt;/tt&gt; possui o intervalo aberto, isto é, o número definido não estará contido na sequência numérica.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplos-de-usa-da-segunda-notacao"&gt;
-&lt;h2&gt;EXEMPLOS DE USA DA SEGUNDA NOTAÇÃO&lt;/h2&gt;
-&lt;p&gt;Vamos desenvolver um simples exemplo demonstrando o uso da segunda notação estudada.&lt;/p&gt;
-&lt;p&gt;DEFINIÇÃO: range( [start], stop[, step] )
-DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-- **start** - valor onde o intervalo deve começar
-- **stop** - valor (menos um) onde o intervalo deve finalizar
-- **step** - passo (intervalo entre os elementos da sequência)
-&lt;/pre&gt;
-&lt;p&gt;Vamos gerar uma lista que contenha 4 objetos numéricos e que o primeiro seja igual a 2 e o último igual a 5.&lt;/p&gt;
-&lt;p&gt;Novamente, iremos converter o objeto iterável retornado pela função &lt;code&gt;range()&lt;/code&gt; para o tipo &lt;code&gt;list&lt;/code&gt;, para que o mesmo, tenha seus elementos impressos na saída padrão.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, definimos o parâmetro &lt;code&gt;start=2&lt;/code&gt; e &lt;code&gt;stop=6&lt;/code&gt; logo, o primeiro elemento foi o 2, enquanto o último elemento, igual a 5.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="passo-ou-intervalo-entre-os-elementos"&gt;
-&lt;h2&gt;PASSO OU INTERVALO ENTRE OS ELEMENTOS&lt;/h2&gt;
-&lt;p&gt;O &lt;code&gt;step&lt;/code&gt; é o intervalo entre cada elemento numérico. Se por exemplo, gerarmos uma sequência numérica entre 0 e 10 e definirmos, será assumido por padrão, que o &lt;code&gt;step&lt;/code&gt; é igual a 1 e por essa razão, o elemento seguinte estará a 1 unidade do elemento anterior, e a lista será igual a: &lt;tt class="docutils literal"&gt;[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;Agora, se nós gerarmos uma lista entre 0 e 10, porém, definirmos o passo como sendo igual a 2, a seguinte lista será retornada: &lt;tt class="docutils literal"&gt;[0, 2, 4, 6, 8]&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;Em ambos os casos os estamos trabalhando com uma sequência numérica num mesmo intervalo, porém, no primeiro exemplo o intervalo entre os elementos é igual a 1 unidade, enquanto que no segundo exemplo, o espaço entre os elementos é de 2 unidades.&lt;/p&gt;
-&lt;p&gt;No código a seguir, vamos gerar uma lista no intervalo 2 à 10 e o &lt;code&gt;step&lt;/code&gt; será igual a 2 unidades.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;27&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, geramos 2 sequência numéricas, a primeira no intervalo de 2 à 10 e com o &lt;tt class="docutils literal"&gt;step&lt;/tt&gt; igual a 2. Logo foram impresso 4 elementos no intervalo de 2 à 10.&lt;/p&gt;
-&lt;p&gt;Em seguida, novamente com a função &lt;code&gt;range()&lt;/code&gt; definimos uma segunda sequência numérica no intervalo de 0 à 30 e o &lt;tt class="docutils literal"&gt;step&lt;/tt&gt; igual a 3. Logo, foi impresso uma lista, contendo 10 elementos, onde o primeiro é o 0 e o último o 27. Também é possível observar, que a sequência gerada é a tabuada de 3, faltando somente o último valor e para isso, bastava somente definir o intervalo final como sendo igual a 31.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplos-da-documentacao-oficial-do-python"&gt;
-&lt;h2&gt;EXEMPLOS DA DOCUMENTAÇÃO OFICIAL DO PYTHON&lt;/h2&gt;
-&lt;p&gt;Os exemplos a seguir, foram extraídos da documentação oficial do Python e demonstram situação interessantes com o uso da função &lt;code&gt;range()&lt;/code&gt;. Vale a pena o estudo de cada situação detalhadamente.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="c1"&gt;#gerando uma sequência de 0 à 9&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="c1"&gt;#gerando uma sequência de 1 à 11&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="c1"&gt;#gerando uma sequência de 0 à 30 com step=5&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="c1"&gt;#gerando uma sequência os 5 primeiros números da tabuada de 3&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="c1"&gt;#gerando uma sequência numérica negativa&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="c1"&gt;#gerando uma sequência numérica vazia&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;[]&lt;/span&gt;
-
-&lt;span class="c1"&gt;#gerando uma sequência numérica vazia,&lt;/span&gt;
-&lt;span class="c1"&gt;#onde o interval inicial é maior do que o final&lt;/span&gt;
-&lt;span class="c1"&gt;#por essa razão, há lista é nula&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;[]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category></entry><entry><title>Revisão de Arrays Unidimensionais em Java</title><link href="http://excript.com/java/revisao-array-unidimensional-java.html" rel="alternate"></link><published>2014-10-26T15:55:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-26:java/revisao-array-unidimensional-java.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
