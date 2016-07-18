@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/funcao-range-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,lista,for loop,iteração,looping,range" />
     <meta name="description" content="Nesta aula estudaremos a função "range()" uma ferramenta muito utilizada junto a instrução "for", bem como, em todas as situações em que estamos trabalhando com sequências numéricas." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,10 +25,15 @@
 
         <meta property="og:description" content="Nesta aula estudaremos a função "range()" uma ferramenta muito utilizada junto a instrução "for", bem como, em todas as situações em que estamos trabalhando com sequências numéricas."/>
 
-        <meta property="article:published_time" content="08-07-2016" />
+        <meta property="article:published_time" content="17-07-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="lista" />
+            <meta property="article:tag" content="for loop" />
+            <meta property="article:tag" content="iteração" />
+            <meta property="article:tag" content="looping" />
+            <meta property="article:tag" content="range" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -113,7 +118,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-07-08T18:19:00-03:00"> Publicado em 08-07-2016</time>
+            <time datetime="2016-07-17T00:19:00-03:00"> Publicado em 17-07-2016</time>
         </span>
 
 
@@ -377,12 +382,12 @@ eXcript            </a>
     </div>
 <div class="section" id="a-funcao-range">
 <h2>A função <code>range()</code></h2>
-<p>A função <code>range()</code> retorna uma série numérica no intervalo enviado como argumento. A série retornada é um objeto iterável tipo <code>range()</code> e os elementos contidos serão gerados em demanda.</p>
-<p>É comum o uso da função <code>range()</code> com a estrutura <tt class="docutils literal">for loop</tt> para a cada ciclo, ter o valor da variável definida no cabeçalho incrementado ou decrementado.</p>
+<p>A função <code>range()</code> retorna uma série numérica no intervalo enviado como argumento. A série retornada é um objeto iterável tipo <code>range</code> e os elementos contidos serão gerados sob demanda.</p>
+<p>É comum o uso da função <code>range()</code> com a estrutura <tt class="docutils literal">for loop</tt>. Desta formta temos que a cada ciclo o próximo elemento da sequência será utilizado de tal forma que é possível partirmos de um ponto e ir incrementando, decrementando <tt class="docutils literal">x</tt> unidades.</p>
 </div>
 <div class="section" id="definicao-da-funcao-range">
 <h2>DEFINIÇÃO DA FUNÇÃO <code>range()</code></h2>
-<p>A seguir, temos a definição da função  <code>range()</code> encontrada na documentação oficial do Python:</p>
+<p>A seguir, temos a <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#func-range">definição da função  range() encontrada na documentação oficial do Python</a>:</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="nb">range</span><span class="p">(</span> <span class="n">stop</span> <span class="p">)</span> <span class="c1">#primeira definição ou definição simplificada</span>
@@ -392,7 +397,7 @@ eXcript            </a>
 </div>
 <div class="section" id="parametros-da-funcao-range">
 <h2>PARÂMETROS DA FUNÇÃO <code>range()</code></h2>
-<p>Podemos especificar o início da sequência numérica, e o passo, isto é, o intervalo entre cada elemento. O único parâmetro obrigatório é o último elemento da sequência.</p>
+<p>A função <tt class="docutils literal">range()</tt> permite-nos especificar o início da sequência, o passo, e o valor final. O único parâmetro obrigatório é o que define quem será o último elemento da sequência.</p>
 <blockquote>
 <ul class="simple">
 <li>start - início da sequência</li>
@@ -412,35 +417,36 @@ eXcript            </a>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-<div class="section" id="intervalos-abertos">
-<h2>INTERVALOS ABERTOS</h2>
-<p>] x [ -&gt; Quando os colchetes se opõem ao número, temos um intervalo aberto. Assim, todos os números no intervalo estarão contidos na sequência numérica, menos os extremos.
-<strong>Intervalo:</strong> ]a, b[
+<div class="section" id="intervalo-aberto-e-fechado">
+<h2>INTERVALO ABERTO E FECHADO</h2>
+<dl class="docutils">
+<dt>intervalo aberto <tt class="docutils literal">] x [</tt></dt>
+<dd><p class="first">Quando os colchetes se opõem ao número, temos um intervalo aberto. Assim, todos os números no intervalo estarão contidos na sequência numérica, menos os extremos.</p>
+<p class="last"><strong>Intervalo:</strong> ]a, b[
 <strong>Conjunto:</strong> {x ∈ R | a &lt; x &lt; b}
 <strong>Tradução:</strong> números reais maiores do que <tt class="docutils literal">a</tt> e menores do que <tt class="docutils literal">b</tt> (quando o intervalo está aberto, entende-se que todos os números do intervalo estão contidos, menos o(s) extremo(s).</p>
-</div>
-<div class="section" id="intervalos-fechados">
-<h2>INTERVALOS FECHADOS</h2>
-<p>[ x ] -&gt; Quando o colchete estiver de “acordo” (no sentido normal) ao número, tem-se um intervalo fechado. Assim, todos os números contidos no intervalo estarão contidos inclusive os extremos da sequência.
+</dd>
+<dt>intervalo fechado <tt class="docutils literal">[ x ]</tt></dt>
+<dd>Quando o colchete estiver de &quot;acordo&quot; (no sentido normal) ao número, tem-se um intervalo fechado. Assim, todos os números contidos neste intervalo estarão contidos inclusive os extremos da sequência.
 <strong>Intervalo:</strong> [a, b]
 <strong>Conjunto:</strong> {x ∈ R | a ≤x ≤ b}
-<strong>Tradução:</strong> números reais maiores ou igual a <cite>a</cite> e menores ou igual a <cite>b</cite> (quando o intervalo está fechado, entende-se que todos os números do intervalo estão contidos, inclusive o(s) extremo(s).</p>
+<strong>Tradução:</strong> números reais maiores ou igual a <tt class="docutils literal">a</tt> e menores ou igual a <tt class="docutils literal">b</tt> (quando o intervalo está fechado, entende-se que todos os números do intervalo estão contidos, inclusive o(s) extremo(s).</dd>
+</dl>
 </div>
-<div class="section" id="voltando-para-o-python">
-<h2>VOLTANDO PARA O PYTHON</h2>
+<div class="section" id="voltando-ao-python">
+<h2>VOLTANDO AO PYTHON</h2>
 <p>Agora que já relembramos alguns conceitos da matemática, vamos rever a notação da função <code>range()</code>:</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="nb">range</span><span class="p">(</span> <span class="n">stop</span> <span class="p">)</span>
 <span class="nb">range</span><span class="p">(</span> <span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">stop</span><span class="p">[,</span> <span class="n">step</span><span class="p">]</span> <span class="p">)</span>
 </pre></div>
-<p>Com a primeira notação é possível invocar a função definindo somente, o intervalo final, ou seja, definindo somente o parâmetro <cite>stop</cite>. Assume-se assim, que o início da sequência é igual a 0 e o final, igual ao valor passado como parâmetro.</p>
-<p>Com a segunda notação, ou então, com a notação completa, temos a capacidade de definir (1) o início da sequência (2) o último elemento e (3) o passo, isto é, o intervalo entre cada elemento.</p>
-<p>Agora, vamos praticar todo o conceito estudado, até porque, essa ainda é a melhor maneira para estudarmos.</p>
+<p>Com a primeira notação é possível invocar a função definindo somente, o intervalo final, ou seja, definindo somente o parâmetro <cite>stop</cite>. Assume-se assim, que o início da sequência é igual a 0 e o final, igual ao valor que está sendo enviado como argumento.</p>
+<p>Com a segunda notação, ou então, com a notação completa, temos a capacidade de definir <strong>(1)</strong> o início da sequência <strong>(2)</strong> o último elemento e <strong>(3)</strong> o passo, isto é, o intervalo entre cada elemento.</p>
 </div>
 <div class="section" id="exemplo-de-uso-da-primeira-notacao">
 <h2>EXEMPLO DE USO DA PRIMEIRA NOTAÇÃO</h2>
-<p>Vamos desenvolver um simples exemplo demonstrando o uso da primeira notação estudada, assim, vamos invocar a função <code>range()</code> e passar como parâmetro o últimos elemento da sequência numérica que desejamos.</p>
+<p>Vamos desenvolver um simples exemplo demonstrando o uso da primeira notação estudada, assim, vamos invocar a função <code>range()</code> e passar como argumento o últimos elemento da sequência numérica que desejamos.</p>
 <p>É importante observar que na versão 3x do Python será retornado, pela função <code>range()</code>, um objeto iterável, e não uma lista contendo os elementos propriamente dito. Por essa razão, iremos forçar a conversão do objeto iterável para o objeto <tt class="docutils literal">list</tt>.</p>
 <p>DEFINIÇÃO: <tt class="docutils literal">range( stop[ )</tt>
 DEFINIÇÃO MATEMÁTICA: <tt class="docutils literal">[0,5[</tt></p>
@@ -449,18 +455,19 @@ DEFINIÇÃO MATEMÁTICA: <tt class="docutils literal">[0,5[</tt></p>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
 </pre></div>
-<p>A função retornou uma lista contendo 5 elementos, onde o primeiro é o 0 e o último 4. O primeiro elemento é igual a 0, até porque, quando não definido, assume-se que <tt class="docutils literal">start=0</tt>. O último elemento é o 4, até porque, o parâmetro <tt class="docutils literal">stop</tt> possui o intervalo aberto, isto é, o número definido não estará contido na sequência numérica.</p>
+<p>A função retornou uma lista contendo 5 elementos, onde o primeiro é o 0 e o último 4.</p>
+<p>O primeiro elemento é igual a 0, até porque, quando não definido, assume-se que <tt class="docutils literal">start=0</tt>. O último elemento é o 4, até porque, o parâmetro <tt class="docutils literal">stop</tt> possui o intervalo aberto, isto é, o número definido não estará contido na sequência numérica.</p>
 </div>
-<div class="section" id="exemplos-de-usa-da-segunda-notacao">
-<h2>EXEMPLOS DE USA DA SEGUNDA NOTAÇÃO</h2>
+<div class="section" id="exemplos-de-uso-da-segunda-notacao">
+<h2>EXEMPLOS DE USO DA SEGUNDA NOTAÇÃO</h2>
 <p>Vamos desenvolver um simples exemplo demonstrando o uso da segunda notação estudada.</p>
 <p>DEFINIÇÃO: range( [start], stop[, step] )
 DEFINIÇÃO MATEMÁTICA: <tt class="docutils literal">[0,5[</tt></p>
-<pre class="literal-block">
-- **start** - valor onde o intervalo deve começar
-- **stop** - valor (menos um) onde o intervalo deve finalizar
-- **step** - passo (intervalo entre os elementos da sequência)
-</pre>
+<ul class="simple">
+<li><strong>start</strong> - valor onde o intervalo deve começar</li>
+<li><strong>stop</strong> - valor (menos um) onde o intervalo deve finalizar</li>
+<li><strong>step</strong> - passo (intervalo entre os elementos da sequência)</li>
+</ul>
 <p>Vamos gerar uma lista que contenha 4 objetos numéricos e que o primeiro seja igual a 2 e o último igual a 5.</p>
 <p>Novamente, iremos converter o objeto iterável retornado pela função <code>range()</code> para o tipo <code>list</code>, para que o mesmo, tenha seus elementos impressos na saída padrão.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
@@ -523,6 +530,12 @@ DEFINIÇÃO MATEMÁTICA: <tt class="docutils literal">[0,5[</tt></p>
 <span class="p">[]</span>
 </pre></div>
 </div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<ul class="simple">
+<li>Documentação oficial: <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#func-range">https://docs.python.org/3.6/library/functions.html#func-range</a></li>
+</ul>
+</div>
 
 				</div>
 			</div>
@@ -550,7 +563,7 @@ DEFINIÇÃO MATEMÁTICA: <tt class="docutils literal">[0,5[</tt></p>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/lista.html">lista</a>, 	<a href="http://excript.com/tag/for-loop.html">for loop</a>, 	<a href="http://excript.com/tag/iteracao.html">iteração</a>, 	<a href="http://excript.com/tag/looping.html">looping</a>, 	<a href="http://excript.com/tag/range.html">range</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

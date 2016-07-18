@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/for-in-range-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,for loop,range" />
     <meta name="description" content="Nessa aula aprofundaremos nosso estudo sobre a relação intima entre a função range() e o laço de repetição for." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,10 +25,12 @@
 
         <meta property="og:description" content="Nessa aula aprofundaremos nosso estudo sobre a relação intima entre a função range() e o laço de repetição for."/>
 
-        <meta property="article:published_time" content="01-11-2014" />
+        <meta property="article:published_time" content="17-07-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="for loop" />
+            <meta property="article:tag" content="range" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -113,7 +115,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2014-11-01T18:26:00-02:00"> Publicado em 01-11-2014</time>
+            <time datetime="2016-07-17T10:00:00-03:00"> Publicado em 17-07-2016</time>
         </span>
 
 
@@ -377,8 +379,9 @@ eXcript            </a>
     </div>
 <div class="section" id="for-x-in-range-10">
 <h2>for x in range(10)</h2>
-<p>A estrutura de repetição for executa um ciclo para cada elemento do objeto que está sendo iterado. Nas vezes em que precisamos que determinada variável seja incrementado ou decrementada a cada ciclo, a forma mais simples, é gerando uma lista com a função <code>range()</code>.</p>
-<p>No código a seguir, temos um exemplo onde a variável item recebera um número, iniciando em zero, finalizando em 9 e cada ciclo, o número seguinte da sequência é atribuido à variável <code>item</code>.</p>
+<p>Agora, <a class="reference external" href="http://excript.com/python/for-loop-python.html">vamos fazer um exemplo utilizando a estrutura de repetição for</a> e a <a class="reference external" href="http://excript.com/python/funcao-range-python.html">função built-in do Python que retorna sequências numéricas</a>.</p>
+<p>A estrutura de repetição <tt class="docutils literal">for</tt> executa um ciclo para cada elemento do objeto que está sendo iterado. Nas vezes em que precisamos que determinada variável seja incrementado ou decrementada a cada ciclo, a forma mais simples, é gerando uma lista com a função <code>range()</code>.</p>
+<p>No código a seguir, temos um exemplo onde a variável item recebera um número, iniciando em zero, finalizando em 9 e, a cada ciclo, o número seguinte da sequência é atribuido à variável <code>item</code>.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -415,8 +418,8 @@ eXcript            </a>
     <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 </pre></div>
 <p>Para gerarmos a mesma lista numérica, porém, com a ordenação invertida, podemos utilizar a função <code>reverse()</code> que inverte a ordem de objetos iteraveis, ou então, gerar a série numérica invertida.</p>
-<p>Invocamos a função <code>range()</code> e definimos que o parâmetro <code>start</code> será igual a 9, stop igual a -1, e step igual -1 também.</p>
-<p>O parâmetro <code>start</code> não há o que comentar. O parâmetro <code>stop</code> é igual a -1 porque o intervalo é aberto, isto é, o número do extremos não fará parte do grupo, logo, se definimos -1 o último elemento da série será 0. Por fim, definimos o <code>step</code>, ou seja, o passo, intervalo numérico entre cada elemento igual a -1. Dessa forma, o Python inverte a ordenação do objeto iterável.</p>
+<p>Invocamos a função <code>range()</code> e definimos que o parâmetro <code>start</code> seja igual a 9, <code>stop</code> igual a -1, e <code>step</code> igual -1.</p>
+<p>O argumento <code>start</code> não há o que comentar. O parâmetro <code>stop</code> é igual a -1 porque o intervalo é aberto, isto é, o número do extremos não fará parte do grupo, logo, se definimos -1, o último elemento da série será 0. Por fim, definimos o <code>step</code>, ou seja, o passo, intervalo numérico entre cada elemento igual a -1. Dessa forma, o Python inverte a ordenação do objeto iterável.</p>
 </div>
 
 				</div>
@@ -445,7 +448,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/for-loop.html">for loop</a>, 	<a href="http://excript.com/tag/range.html">range</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

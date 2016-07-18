@@ -1,5 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all-pt.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-08T18:19:00-03:00</updated><entry><title>A função range() do Python</title><link href="http://excript.com/python/funcao-range-python.html" rel="alternate"></link><published>2016-07-08T18:19:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-08:python/funcao-range-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all-pt.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-17T13:20:00-03:00</updated><entry><title>Instrução break do Python</title><link href="http://excript.com/python/instrucao-break-python.html" rel="alternate"></link><published>2016-07-17T13:20:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-17:python/instrucao-break-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nessa aula estudaremos a função "break" do Python que é, uma instrução auxiliadora das Estruturas de Repetição e que nos proporciona, um maior controle durante a iteração.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="a-instrucao-break"&gt;
+&lt;h2&gt;A INSTRUÇÃO &lt;code&gt;break&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A instrução &lt;code&gt;break&lt;/code&gt; finaliza a iteração e o Script continua a execução normalmente. O objetivo dessa instrução é fornecer a capacidade de forçar a interrupção da iteração.&lt;/p&gt;
+&lt;p&gt;A seguir, temos um código simples que utiliza a instrução &lt;code&gt;break&lt;/code&gt; pra finalizar a execução do laço de repetição &lt;code&gt;while&lt;/code&gt;, quando a condição definida com a instrução &lt;code&gt;if&lt;/code&gt; retornar verdadeiro.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Interrompendo a execução da repetição.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código anterior, definimos a variável &lt;code&gt;x&lt;/code&gt; e atribuimos 0 ainda na definição. Em seguida, implementamos o laço de repetição &lt;code&gt;while&lt;/code&gt; e definimos que, enquanto o valor de &lt;code&gt;x&lt;/code&gt; for menor do que 10, o bloco de instrução será executado. Em seguida, implementamos com a instrução &lt;code&gt;if&lt;/code&gt; uma condição que avalia se o valor de &lt;code&gt;x&lt;/code&gt; é igual a 5. Se a expressão for igual a &lt;code&gt;True&lt;/code&gt;, será impresso uma mensagem no console e a instrução &lt;code&gt;break&lt;/code&gt; executada, o que ocasionará, na interrupção da execução do laço de repetição &lt;code&gt;while&lt;/code&gt;.&lt;/p&gt;
+
+&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+&lt;!-- Horizontal --&gt;
+&lt;ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5466436161806566"
+     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Antes de entrar no laço&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;A condição estabelecida retornou true&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Depois de ter entrado no laço&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="break"></category><category term="for loop"></category><category term="while loop"></category></entry><entry><title>O for loop e a função range() do Python</title><link href="http://excript.com/python/for-in-range-python.html" rel="alternate"></link><published>2016-07-17T10:00:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-17:python/for-in-range-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nessa aula aprofundaremos nosso estudo sobre a relação intima entre a função range() e o laço de repetição for.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="for-x-in-range-10"&gt;
+&lt;h2&gt;for x in range(10)&lt;/h2&gt;
+&lt;p&gt;Agora, &lt;a class="reference external" href="http://excript.com/python/for-loop-python.html"&gt;vamos fazer um exemplo utilizando a estrutura de repetição for&lt;/a&gt; e a &lt;a class="reference external" href="http://excript.com/python/funcao-range-python.html"&gt;função built-in do Python que retorna sequências numéricas&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A estrutura de repetição &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; executa um ciclo para cada elemento do objeto que está sendo iterado. Nas vezes em que precisamos que determinada variável seja incrementado ou decrementada a cada ciclo, a forma mais simples, é gerando uma lista com a função &lt;code&gt;range()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;No código a seguir, temos um exemplo onde a variável item recebera um número, iniciando em zero, finalizando em 9 e, a cada ciclo, o número seguinte da sequência é atribuido à variável &lt;code&gt;item&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Se executarmos esse código, teremos algo do tipo:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;
+&lt;p&gt;Imprimimos os números da sequência numérica que foi gerada com a função &lt;code&gt;range()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Poderíamos também, gerar uma lista iniciando em 9 e finalizando em 0. A definição da estrutura &lt;tt class="docutils literal"&gt;for loop&lt;/tt&gt; se mantém, precisando alterar somente, os parâmetro passados pela função &lt;code&gt;range()&lt;/code&gt;, por exemplo:&lt;/p&gt;
+
+&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+&lt;!-- Horizontal --&gt;
+&lt;ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5466436161806566"
+     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Para gerarmos a mesma lista numérica, porém, com a ordenação invertida, podemos utilizar a função &lt;code&gt;reverse()&lt;/code&gt; que inverte a ordem de objetos iteraveis, ou então, gerar a série numérica invertida.&lt;/p&gt;
+&lt;p&gt;Invocamos a função &lt;code&gt;range()&lt;/code&gt; e definimos que o parâmetro &lt;code&gt;start&lt;/code&gt; seja igual a 9, &lt;code&gt;stop&lt;/code&gt; igual a -1, e &lt;code&gt;step&lt;/code&gt; igual -1.&lt;/p&gt;
+&lt;p&gt;O argumento &lt;code&gt;start&lt;/code&gt; não há o que comentar. O parâmetro &lt;code&gt;stop&lt;/code&gt; é igual a -1 porque o intervalo é aberto, isto é, o número do extremos não fará parte do grupo, logo, se definimos -1, o último elemento da série será 0. Por fim, definimos o &lt;code&gt;step&lt;/code&gt;, ou seja, o passo, intervalo numérico entre cada elemento igual a -1. Dessa forma, o Python inverte a ordenação do objeto iterável.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="for loop"></category><category term="range"></category></entry><entry><title>A função range() do Python</title><link href="http://excript.com/python/funcao-range-python.html" rel="alternate"></link><published>2016-07-17T00:19:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-17:python/funcao-range-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -15,12 +126,12 @@
     &lt;/div&gt;
 &lt;div class="section" id="a-funcao-range"&gt;
 &lt;h2&gt;A função &lt;code&gt;range()&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A função &lt;code&gt;range()&lt;/code&gt; retorna uma série numérica no intervalo enviado como argumento. A série retornada é um objeto iterável tipo &lt;code&gt;range()&lt;/code&gt; e os elementos contidos serão gerados em demanda.&lt;/p&gt;
-&lt;p&gt;É comum o uso da função &lt;code&gt;range()&lt;/code&gt; com a estrutura &lt;tt class="docutils literal"&gt;for loop&lt;/tt&gt; para a cada ciclo, ter o valor da variável definida no cabeçalho incrementado ou decrementado.&lt;/p&gt;
+&lt;p&gt;A função &lt;code&gt;range()&lt;/code&gt; retorna uma série numérica no intervalo enviado como argumento. A série retornada é um objeto iterável tipo &lt;code&gt;range&lt;/code&gt; e os elementos contidos serão gerados sob demanda.&lt;/p&gt;
+&lt;p&gt;É comum o uso da função &lt;code&gt;range()&lt;/code&gt; com a estrutura &lt;tt class="docutils literal"&gt;for loop&lt;/tt&gt;. Desta formta temos que a cada ciclo o próximo elemento da sequência será utilizado de tal forma que é possível partirmos de um ponto e ir incrementando, decrementando &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; unidades.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="definicao-da-funcao-range"&gt;
 &lt;h2&gt;DEFINIÇÃO DA FUNÇÃO &lt;code&gt;range()&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A seguir, temos a definição da função  &lt;code&gt;range()&lt;/code&gt; encontrada na documentação oficial do Python:&lt;/p&gt;
+&lt;p&gt;A seguir, temos a &lt;a class="reference external" href="https://docs.python.org/3.6/library/functions.html#func-range"&gt;definição da função  range() encontrada na documentação oficial do Python&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
 
 &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#primeira definição ou definição simplificada&lt;/span&gt;
@@ -30,7 +141,7 @@
 &lt;/div&gt;
 &lt;div class="section" id="parametros-da-funcao-range"&gt;
 &lt;h2&gt;PARÂMETROS DA FUNÇÃO &lt;code&gt;range()&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Podemos especificar o início da sequência numérica, e o passo, isto é, o intervalo entre cada elemento. O único parâmetro obrigatório é o último elemento da sequência.&lt;/p&gt;
+&lt;p&gt;A função &lt;tt class="docutils literal"&gt;range()&lt;/tt&gt; permite-nos especificar o início da sequência, o passo, e o valor final. O único parâmetro obrigatório é o que define quem será o último elemento da sequência.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;start - início da sequência&lt;/li&gt;
@@ -50,35 +161,36 @@
 (adsbygoogle = window.adsbygoogle || []).push({});
 &lt;/script&gt;
 &lt;/div&gt;
-&lt;div class="section" id="intervalos-abertos"&gt;
-&lt;h2&gt;INTERVALOS ABERTOS&lt;/h2&gt;
-&lt;p&gt;] x [ -&amp;gt; Quando os colchetes se opõem ao número, temos um intervalo aberto. Assim, todos os números no intervalo estarão contidos na sequência numérica, menos os extremos.
-&lt;strong&gt;Intervalo:&lt;/strong&gt; ]a, b[
+&lt;div class="section" id="intervalo-aberto-e-fechado"&gt;
+&lt;h2&gt;INTERVALO ABERTO E FECHADO&lt;/h2&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;intervalo aberto &lt;tt class="docutils literal"&gt;] x [&lt;/tt&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;Quando os colchetes se opõem ao número, temos um intervalo aberto. Assim, todos os números no intervalo estarão contidos na sequência numérica, menos os extremos.&lt;/p&gt;
+&lt;p class="last"&gt;&lt;strong&gt;Intervalo:&lt;/strong&gt; ]a, b[
 &lt;strong&gt;Conjunto:&lt;/strong&gt; {x ∈ R | a &amp;lt; x &amp;lt; b}
 &lt;strong&gt;Tradução:&lt;/strong&gt; números reais maiores do que &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; e menores do que &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; (quando o intervalo está aberto, entende-se que todos os números do intervalo estão contidos, menos o(s) extremo(s).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="intervalos-fechados"&gt;
-&lt;h2&gt;INTERVALOS FECHADOS&lt;/h2&gt;
-&lt;p&gt;[ x ] -&amp;gt; Quando o colchete estiver de “acordo” (no sentido normal) ao número, tem-se um intervalo fechado. Assim, todos os números contidos no intervalo estarão contidos inclusive os extremos da sequência.
+&lt;/dd&gt;
+&lt;dt&gt;intervalo fechado &lt;tt class="docutils literal"&gt;[ x ]&lt;/tt&gt;&lt;/dt&gt;
+&lt;dd&gt;Quando o colchete estiver de &amp;quot;acordo&amp;quot; (no sentido normal) ao número, tem-se um intervalo fechado. Assim, todos os números contidos neste intervalo estarão contidos inclusive os extremos da sequência.
 &lt;strong&gt;Intervalo:&lt;/strong&gt; [a, b]
 &lt;strong&gt;Conjunto:&lt;/strong&gt; {x ∈ R | a ≤x ≤ b}
-&lt;strong&gt;Tradução:&lt;/strong&gt; números reais maiores ou igual a &lt;cite&gt;a&lt;/cite&gt; e menores ou igual a &lt;cite&gt;b&lt;/cite&gt; (quando o intervalo está fechado, entende-se que todos os números do intervalo estão contidos, inclusive o(s) extremo(s).&lt;/p&gt;
+&lt;strong&gt;Tradução:&lt;/strong&gt; números reais maiores ou igual a &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; e menores ou igual a &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; (quando o intervalo está fechado, entende-se que todos os números do intervalo estão contidos, inclusive o(s) extremo(s).&lt;/dd&gt;
+&lt;/dl&gt;
 &lt;/div&gt;
-&lt;div class="section" id="voltando-para-o-python"&gt;
-&lt;h2&gt;VOLTANDO PARA O PYTHON&lt;/h2&gt;
+&lt;div class="section" id="voltando-ao-python"&gt;
+&lt;h2&gt;VOLTANDO AO PYTHON&lt;/h2&gt;
 &lt;p&gt;Agora que já relembramos alguns conceitos da matemática, vamos rever a notação da função &lt;code&gt;range()&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
 
 &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Com a primeira notação é possível invocar a função definindo somente, o intervalo final, ou seja, definindo somente o parâmetro &lt;cite&gt;stop&lt;/cite&gt;. Assume-se assim, que o início da sequência é igual a 0 e o final, igual ao valor passado como parâmetro.&lt;/p&gt;
-&lt;p&gt;Com a segunda notação, ou então, com a notação completa, temos a capacidade de definir (1) o início da sequência (2) o último elemento e (3) o passo, isto é, o intervalo entre cada elemento.&lt;/p&gt;
-&lt;p&gt;Agora, vamos praticar todo o conceito estudado, até porque, essa ainda é a melhor maneira para estudarmos.&lt;/p&gt;
+&lt;p&gt;Com a primeira notação é possível invocar a função definindo somente, o intervalo final, ou seja, definindo somente o parâmetro &lt;cite&gt;stop&lt;/cite&gt;. Assume-se assim, que o início da sequência é igual a 0 e o final, igual ao valor que está sendo enviado como argumento.&lt;/p&gt;
+&lt;p&gt;Com a segunda notação, ou então, com a notação completa, temos a capacidade de definir &lt;strong&gt;(1)&lt;/strong&gt; o início da sequência &lt;strong&gt;(2)&lt;/strong&gt; o último elemento e &lt;strong&gt;(3)&lt;/strong&gt; o passo, isto é, o intervalo entre cada elemento.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-de-uso-da-primeira-notacao"&gt;
 &lt;h2&gt;EXEMPLO DE USO DA PRIMEIRA NOTAÇÃO&lt;/h2&gt;
-&lt;p&gt;Vamos desenvolver um simples exemplo demonstrando o uso da primeira notação estudada, assim, vamos invocar a função &lt;code&gt;range()&lt;/code&gt; e passar como parâmetro o últimos elemento da sequência numérica que desejamos.&lt;/p&gt;
+&lt;p&gt;Vamos desenvolver um simples exemplo demonstrando o uso da primeira notação estudada, assim, vamos invocar a função &lt;code&gt;range()&lt;/code&gt; e passar como argumento o últimos elemento da sequência numérica que desejamos.&lt;/p&gt;
 &lt;p&gt;É importante observar que na versão 3x do Python será retornado, pela função &lt;code&gt;range()&lt;/code&gt;, um objeto iterável, e não uma lista contendo os elementos propriamente dito. Por essa razão, iremos forçar a conversão do objeto iterável para o objeto &lt;tt class="docutils literal"&gt;list&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;DEFINIÇÃO: &lt;tt class="docutils literal"&gt;range( stop[ )&lt;/tt&gt;
 DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;/p&gt;
@@ -87,18 +199,19 @@ DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A função retornou uma lista contendo 5 elementos, onde o primeiro é o 0 e o último 4. O primeiro elemento é igual a 0, até porque, quando não definido, assume-se que &lt;tt class="docutils literal"&gt;start=0&lt;/tt&gt;. O último elemento é o 4, até porque, o parâmetro &lt;tt class="docutils literal"&gt;stop&lt;/tt&gt; possui o intervalo aberto, isto é, o número definido não estará contido na sequência numérica.&lt;/p&gt;
+&lt;p&gt;A função retornou uma lista contendo 5 elementos, onde o primeiro é o 0 e o último 4.&lt;/p&gt;
+&lt;p&gt;O primeiro elemento é igual a 0, até porque, quando não definido, assume-se que &lt;tt class="docutils literal"&gt;start=0&lt;/tt&gt;. O último elemento é o 4, até porque, o parâmetro &lt;tt class="docutils literal"&gt;stop&lt;/tt&gt; possui o intervalo aberto, isto é, o número definido não estará contido na sequência numérica.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="exemplos-de-usa-da-segunda-notacao"&gt;
-&lt;h2&gt;EXEMPLOS DE USA DA SEGUNDA NOTAÇÃO&lt;/h2&gt;
+&lt;div class="section" id="exemplos-de-uso-da-segunda-notacao"&gt;
+&lt;h2&gt;EXEMPLOS DE USO DA SEGUNDA NOTAÇÃO&lt;/h2&gt;
 &lt;p&gt;Vamos desenvolver um simples exemplo demonstrando o uso da segunda notação estudada.&lt;/p&gt;
 &lt;p&gt;DEFINIÇÃO: range( [start], stop[, step] )
 DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-- **start** - valor onde o intervalo deve começar
-- **stop** - valor (menos um) onde o intervalo deve finalizar
-- **step** - passo (intervalo entre os elementos da sequência)
-&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;start&lt;/strong&gt; - valor onde o intervalo deve começar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;stop&lt;/strong&gt; - valor (menos um) onde o intervalo deve finalizar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;step&lt;/strong&gt; - passo (intervalo entre os elementos da sequência)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Vamos gerar uma lista que contenha 4 objetos numéricos e que o primeiro seja igual a 2 e o último igual a 5.&lt;/p&gt;
 &lt;p&gt;Novamente, iremos converter o objeto iterável retornado pela função &lt;code&gt;range()&lt;/code&gt; para o tipo &lt;code&gt;list&lt;/code&gt;, para que o mesmo, tenha seus elementos impressos na saída padrão.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
@@ -161,7 +274,13 @@ DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;
 &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category></entry><entry><title>A instrução for em Python</title><link href="http://excript.com/python/for-loop-python.html" rel="alternate"></link><published>2016-07-02T18:25:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-02:python/for-loop-python.html</id><summary type="html">
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Documentação oficial: &lt;a class="reference external" href="https://docs.python.org/3.6/library/functions.html#func-range"&gt;https://docs.python.org/3.6/library/functions.html#func-range&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="lista"></category><category term="for loop"></category><category term="iteração"></category><category term="looping"></category><category term="range"></category></entry><entry><title>A instrução for em Python</title><link href="http://excript.com/python/for-loop-python.html" rel="alternate"></link><published>2016-07-02T18:25:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-02:python/for-loop-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -18195,117 +18314,7 @@ No sétimo ciclo também houve uma interrupção onde a jornada cancelada, isto 
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="continue"></category><category term="instrução continue"></category></entry><entry><title>Instrução break do Python</title><link href="http://excript.com/python/instrucao-break-python.html" rel="alternate"></link><published>2014-11-02T10:02:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-11-02:python/instrucao-break-python.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nessa aula estudaremos a função "break" do Python que é, uma instrução auxiliadora das Estruturas de Repetição e que nos proporciona, um maior controle durante a iteração.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="a-instrucao-break"&gt;
-&lt;h2&gt;A INSTRUÇÃO &lt;code&gt;break&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A instrução &lt;code&gt;break&lt;/code&gt; finaliza a iteração e o Script continua a execução normalmente. O objetivo dessa instrução é fornecer a capacidade de forçar a interrupção da iteração sem a avaliação de qualquer expressão.&lt;/p&gt;
-&lt;p&gt;A seguir, temos um código simples que utiliza a instrução &lt;code&gt;break&lt;/code&gt; pra finalizar a execução do laço de repetição &lt;code&gt;while&lt;/code&gt;, quando a condição definida com a instrução &lt;code&gt;if&lt;/code&gt; retornar verdadeiro.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Interrompendo a execução da repetição.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;break&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código anterior, definimos a variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; e atribuimos 0 ainda na definição. Em seguida, implementamos o laço de repetição &lt;code&gt;while&lt;/code&gt; e definimos que enquanto o valor de &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; for menor do que 10, o bloco de instrução deve ser executado. Em seguida, implementamos com a instrução &lt;code&gt;if&lt;/code&gt; uma condição que avalia se o valor de &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é igual a 5. Se a expressão for igual a &lt;code&gt;True&lt;/code&gt;, será impresso uma mensagem no console e a instrução break será executada, o que ocasionará, na interrupção da execução do laço de repetição &lt;code&gt;while&lt;/code&gt;.&lt;/p&gt;
-
-&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
-&lt;!-- Horizontal --&gt;
-&lt;ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5466436161806566"
-     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Antes de entrar no laço&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;A condição estabelecida retornou true&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;break&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Depois de ter entrado no laço&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="break"></category><category term="for loop"></category><category term="while loop"></category></entry><entry><title>O for loop e a função range() do Python</title><link href="http://excript.com/python/for-in-range-python.html" rel="alternate"></link><published>2014-11-01T18:26:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-11-01:python/for-in-range-python.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nessa aula aprofundaremos nosso estudo sobre a relação intima entre a função range() e o laço de repetição for.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="for-x-in-range-10"&gt;
-&lt;h2&gt;for x in range(10)&lt;/h2&gt;
-&lt;p&gt;A estrutura de repetição for executa um ciclo para cada elemento do objeto que está sendo iterado. Nas vezes em que precisamos que determinada variável seja incrementado ou decrementada a cada ciclo, a forma mais simples, é gerando uma lista com a função &lt;code&gt;range()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;No código a seguir, temos um exemplo onde a variável item recebera um número, iniciando em zero, finalizando em 9 e cada ciclo, o número seguinte da sequência é atribuido à variável &lt;code&gt;item&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Se executarmos esse código, teremos algo do tipo:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-&lt;/pre&gt;
-&lt;p&gt;Imprimimos os números da sequência numérica que foi gerada com a função &lt;code&gt;range()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Poderíamos também, gerar uma lista iniciando em 9 e finalizando em 0. A definição da estrutura &lt;tt class="docutils literal"&gt;for loop&lt;/tt&gt; se mantém, precisando alterar somente, os parâmetro passados pela função &lt;code&gt;range()&lt;/code&gt;, por exemplo:&lt;/p&gt;
-
-&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
-&lt;!-- Horizontal --&gt;
-&lt;ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5466436161806566"
-     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para gerarmos a mesma lista numérica, porém, com a ordenação invertida, podemos utilizar a função &lt;code&gt;reverse()&lt;/code&gt; que inverte a ordem de objetos iteraveis, ou então, gerar a série numérica invertida.&lt;/p&gt;
-&lt;p&gt;Invocamos a função &lt;code&gt;range()&lt;/code&gt; e definimos que o parâmetro &lt;code&gt;start&lt;/code&gt; será igual a 9, stop igual a -1, e step igual -1 também.&lt;/p&gt;
-&lt;p&gt;O parâmetro &lt;code&gt;start&lt;/code&gt; não há o que comentar. O parâmetro &lt;code&gt;stop&lt;/code&gt; é igual a -1 porque o intervalo é aberto, isto é, o número do extremos não fará parte do grupo, logo, se definimos -1 o último elemento da série será 0. Por fim, definimos o &lt;code&gt;step&lt;/code&gt;, ou seja, o passo, intervalo numérico entre cada elemento igual a -1. Dessa forma, o Python inverte a ordenação do objeto iterável.&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category></entry><entry><title>Revisão de Arrays Unidimensionais em Java</title><link href="http://excript.com/java/revisao-array-unidimensional-java.html" rel="alternate"></link><published>2014-10-26T15:55:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-26:java/revisao-array-unidimensional-java.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="continue"></category><category term="instrução continue"></category></entry><entry><title>Revisão de Arrays Unidimensionais em Java</title><link href="http://excript.com/java/revisao-array-unidimensional-java.html" rel="alternate"></link><published>2014-10-26T15:55:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-26:java/revisao-array-unidimensional-java.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
