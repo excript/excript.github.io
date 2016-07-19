@@ -128,7 +128,7 @@ substitua o texto &amp;lt;anos&amp;gt; pela diferença entre a sua idade e a de 
 &lt;p&gt;Reescreva o código a seguir a fim de se utilizar o mínimo de linha possíveis:
 Nota(s):
 Amontoar linhas não soluciona o problema. O código a seguir não é simplificação e sim, confusão:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;Digite&lt;/span&gt; &lt;span class="n"&gt;um&lt;/span&gt; &lt;span class="n"&gt;número&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Escreva de forma tal a utilizar somente 4 linhas&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
@@ -429,19 +429,23 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;div class="section" id="exercicio"&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Escreva um programa que peça para o usuário informar qual tabuada o mesmo deseja ver e armazene o número em uma variável. Em seguida, imprima a tabuada na tela se utilizando da instrução FOR. Para imprimir a tabuada, siga o modelo abaixo:&lt;/p&gt;
-&lt;p&gt;Por favor, informe qual a tabuada que você deseja:
-&lt;tt class="docutils literal"&gt;`Ax x B10 = Cresultado 10`&lt;/tt&gt;
-&lt;tt class="docutils literal"&gt;`Ax x B9 = Cresultado 9`&lt;/tt&gt;
-&lt;tt class="docutils literal"&gt;`Ax x B8 = Cresultado 8`&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;Por favor, informe qual a tabuada que você deseja:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+``Ax x B10 = Cresultado 10``
+``Ax x B9 = Cresultado 9``
+``Ax x B8 = Cresultado 8``
+&lt;/pre&gt;
 &lt;p&gt;Nota(s):
-&lt;tt class="docutils literal"&gt;`Ax`&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;`B`&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;`C`&lt;/tt&gt; representam, respectivamente:
+&lt;tt class="docutils literal"&gt;Ax&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;B&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;C&lt;/tt&gt; representam, respectivamente:
 Ax - número da tabuada desejada pelo usuário
 B - número a ser incrementado
-C - resultado da expressão &lt;tt class="docutils literal"&gt;`AX`&lt;/tt&gt; X &lt;tt class="docutils literal"&gt;`BX`&lt;/tt&gt; = &lt;tt class="docutils literal"&gt;`CX`&lt;/tt&gt;
-Exemplo:
-&lt;tt class="docutils literal"&gt;`5 x 10 = 50`&lt;/tt&gt;
-&lt;tt class="docutils literal"&gt;`5 x 9&amp;nbsp;&amp;nbsp; = 45`&lt;/tt&gt;
-&lt;tt class="docutils literal"&gt;`5 x 8&amp;nbsp;&amp;nbsp; = 40`&lt;/tt&gt;&lt;/p&gt;
+C - resultado da expressão &lt;tt class="docutils literal"&gt;AX&lt;/tt&gt; X &lt;tt class="docutils literal"&gt;BX&lt;/tt&gt; = &lt;tt class="docutils literal"&gt;CX&lt;/tt&gt;
+Exemplo:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+``5 x 10 = 50``
+``5 x 9   = 45``
+``5 x 8   = 40``
+&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
@@ -555,8 +559,21 @@ Exemplos:&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class="section" id="exercicio"&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
-&lt;p&gt;Faça um programa que peça o nome, idade e cidade de nascimento do usuário. Em seguida, imprima a frase abaixo trocando as tag’s &amp;amp;lt;nome&amp;amp;gt;, &amp;amp;lt;idade&amp;amp;gt;, &amp;amp;lt;cidade&amp;amp;gt;, pelo nome, idade e cidade informado pelo usuário.&lt;/p&gt;
-&lt;p&gt;“Ola. Meu nome é &amp;amp;lt;nome&amp;amp;gt;, sou natural de &amp;amp;lt;cidade&amp;amp;gt;, tenho &amp;amp;lt;idade&amp;amp;gt; anos e estou aprendendo a programar.”&lt;/p&gt;
+&lt;p&gt;Faça um programa que peça o nome, idade e cidade de nascimento do usuário. Em seguida, imprima a frase abaixo trocando as tag’s &amp;lt;nome&amp;gt;, &amp;lt;idade&amp;gt;, &amp;lt;cidade&amp;gt;, pelo nome, idade e cidade informado pelo usuário.&lt;/p&gt;
+&lt;p&gt;&amp;quot;Ola. Meu nome é &amp;lt;nome&amp;gt;, sou natural de &amp;lt;cidade&amp;gt;, tenho &amp;lt;idade&amp;gt; anos e estou aprendendo a programar.&amp;quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="nota"&gt;
+&lt;h2&gt;NOTA&lt;/h2&gt;
+&lt;p&gt;O usuário &lt;strong&gt;João Moacir Barth Junior&lt;/strong&gt; fez uma correção e um adendo a implementação que fizemos nesta aula. A seguir, há uma explicação do problema por ele observado.&lt;/p&gt;
+&lt;p&gt;O código a seguir executa sem quaisquer erro. Porém, é importante observar a forma como iremos ler números inteiros.&lt;/p&gt;
+&lt;p&gt;Na resolução do exercício lemos um número inteiro utilizando a seguinte linha de código:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O código acima funciona e o número digitado no Console pelo usuário é passado para a variável inteira &lt;code&gt;idade&lt;/code&gt;. Porém, &lt;a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#nextLine()"&gt;a instrução nextInt() lê um ou N valores inteiros&lt;/a&gt;, desde que estes estejam separados por espaço. Isso significa que após lermos um número com a função &lt;code&gt;nextInt()&lt;/code&gt; o Cursor continuara na mesma linha e será nossa tarefa posicionar o mesmo na linha abaixo, caso queiramos que ler outros valores pelo Console que o nosso usuário venha a digitar.&lt;/p&gt;
+&lt;p&gt;Pra isso, é necessário invocar a função &lt;code&gt;nextLine()&lt;/code&gt;, do contrário, será levantado uma exceção. A seguir temos o código que deverá ser utilizado para ler números inteiros e em seguida, posicionar o Cursor na linha seguinte.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextLine&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
@@ -596,6 +613,12 @@ Exemplos:&lt;/p&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;p&gt;Link para a &lt;a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html"&gt;documentação oficial da Classe Scanner&lt;/a&gt;.
+Link para a &lt;a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#nextLine()"&gt;documentação oficial da função nextLine() da Classe Scanner&lt;/a&gt;.
+Link para a &lt;a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#nextInt()"&gt;documentação oficial da função nextInt() da Classe Scanner&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 </summary><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Imprimindo Texto (j0001)</title><link href="http://excript.com/java/exercicio-java-imprimindo-texto.html" rel="alternate"></link><published>2014-10-07T14:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-07:java/exercicio-java-imprimindo-texto.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -612,8 +635,8 @@ Exemplos:&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class="section" id="exercicio"&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
-&lt;p&gt;Faça um programa que imprima o texto “Ola mundo” para o usuário. Em seguida, imprima na tela o número 522 e então, imprima uma linha em branco. Depois de imprimir a linha em branco, escreva na tela a seguinte frase:&lt;/p&gt;
-&lt;p&gt;“Seja bem-vindo a lista de exercícios resolvidos”&lt;/p&gt;
+&lt;p&gt;Faça um programa que imprima o texto &amp;quot;Ola mundo&amp;quot; para o usuário. Em seguida, imprima na tela o número 522 e então, imprima uma linha em branco. Depois de imprimir a linha em branco, escreva na tela a seguinte frase:&lt;/p&gt;
+&lt;p&gt;&amp;quot;Seja bem-vindo a lista de exercícios resolvidos&amp;quot;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
@@ -659,12 +682,12 @@ Exemplos:&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class="section" id="exercicio"&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
-&lt;p&gt;Agora, vamos resolver o exercício que pede: Faça um programa que imprima a frase: “Seja bem-vindo ao meu programa!”&lt;/p&gt;
+&lt;p&gt;Agora, vamos resolver o exercício que pede: Faça um programa que imprima a frase: &amp;quot;Seja bem-vindo ao meu programa!&amp;quot;&lt;/p&gt;
 &lt;p&gt;Em seguida, imprima uma linha em branco e na na sequência, imprima as frases e o resultado da expressões matemáticas.&lt;/p&gt;
 &lt;p&gt;Cada frase e seu resultado devem estar na mesma linha.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="n"&gt;produto&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;por&lt;/span&gt; &lt;span class="mi"&gt;90&lt;/span&gt; &lt;span class="n"&gt;é&lt;/span&gt; &lt;span class="n"&gt;igual&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;
-&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="n"&gt;quociente&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="mi"&gt;90&lt;/span&gt; &lt;span class="n"&gt;por&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="n"&gt;é&lt;/span&gt; &lt;span class="n"&gt;igual&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;
-&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="n"&gt;quadrado&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="n"&gt;é&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O produto de 8 por 90 é igual a:&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;O quociente de 90 por 30 é igual a:&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;O quadrado de 9 é:&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Nota(s):
 Em cada expressão matemática, você deve imprimir o resultado de uma expressão na qual o compilador é quem resolveu. Ou seja, é para concatenar a frase sugerida no enunciado com o resultado.&lt;/p&gt;

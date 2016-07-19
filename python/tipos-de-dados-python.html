@@ -25,7 +25,7 @@
 
         <meta property="og:description" content="Nessa aula estudaremos os tipos de dados definidos pela linguagem Python, como também, as diferenças entre diferentes tipos. Por fim, veremos a diferença entre um o tipo do dado e o dado propriamente dito."/>
 
-        <meta property="article:published_time" content="06-05-2016" />
+        <meta property="article:published_time" content="18-07-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -122,7 +122,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-05-06T20:20:00-03:00"> Publicado em 06-05-2016</time>
+            <time datetime="2016-07-18T16:20:00-03:00"> Publicado em 18-07-2016</time>
         </span>
 
 
@@ -386,13 +386,72 @@ eXcript            </a>
     </div>
 <div class="section" id="tipos">
 <h2>TIPOS</h2>
-<p>O <strong>tipo de dado</strong> funciona como uma classificação da informação. A informação, pode ser qualquer uma, como por exemplo, Nome, Idade, Endereço, uma Música, um Arquivo, o valor da conta bancária e etc.</p>
-<p>As informações, de forma geral, seguem regras que possibilitam uma classificação, por exemplo, o valor das contas bancárias, geralmente, será composta por números. O nome das pessoas, normalmente, é constituído somente por letras. A idade das pessoas é representado por números inteiros. Datas são a junção de números com alguns caracteres especiais e assim por diante.</p>
-<p>Devido aos diferentes tipos de informações existente, existe, na programação, os tipos de dados. Os tipos são, basicamente, as formas diferentes de representar diferentes informações e essa classificação, faz com que consigamos, por exemplo, definir que o operador de soma entre 2 números resultará na resolução da expressão matemática, porém, o sinal de adição entre 2 variáveis do tipo String, resultará na concatenação de ambos valores e assim por diante.</p>
+<p>O <strong>tipo</strong> é uma forma de classificar as informação. As linguagens de programação normalmente trazem implementado o que é chamado de <strong>tipos primitivos</strong>, isto é, o tipo de dado mais genérico possível.</p>
+<p>Toda informação que manipularemos será, por definição, de um tipo.</p>
+<p>Na informática tudo é manipulado como sendo bits. Quando manipulamos letras estamos trabalhando também com bits, porém, numa camada acima. Então, vamos definir agora, que num primeiro momento, toda informação é de fato um caractere, seja ele uma letra, um número, um simbolo ou então, um caractere especial.</p>
+<p>Assim, definimos num primeiro momento que tudo são caracteres.</p>
+<div class="section" id="string">
+<h3>String</h3>
+<p>Na programação String representa um conjunto de caracteres disposto numa determinada ordem. A partir de agora, todas as vezes em que falarmos o termo String, estaremos nos referindo a um conjunto de caracteres.</p>
+</div>
+<div class="section" id="numerico">
+<h3>Numérico</h3>
+<p>Um segundo tipo de informação são os dados compostos por caracteres numéricos. Os números são dividos em 2 partes:</p>
+<p>inteiros - chamados de <strong>integer</strong> ou <strong>int</strong>
+ponto flutuante - chamado de <strong>float</strong> ou <strong>double</strong></p>
+</div>
+<div class="section" id="exemplos-de-informacao">
+<h3>Exemplos de informação</h3>
+<p>A título de exemplo, vamos citar alguns tipos de informação e em seguida, vamos definir o tipo de cada uma.</p>
+<ul class="simple">
+<li>Nome - dado tipo String</li>
+<li>Idade - dado tipo Integer</li>
+<li>Conta bancária - dado composto por números, pontos e traços</li>
+</ul>
+<p>As informações são classificadas devido ao fato de seguirem regras e estruturas iguais. Ou seja, um número de telefone possui uma regra para todo o território nacional, logo, é possível classificar esse tipo de dado, até porque, há uma regra que o define.</p>
+
+    <div class="admonitionblock tip data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-tip" title="Dica!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>Atualmente, os números de telefones no estado de São Paulo contém 9 digitos, enquanto os demais estados e capitais utilizam somente 8 digitos. Essa é uma situação que já ocorreu há anos e voltou a acontecer. Por isso, devemos estar certos de que irá acontecer novamente no futuro. Assim, é prudente que nossos softwares sejam capazes de lidar com essa variáção, seja para o momento atual, seja para estarem preparados para futuras modificações.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>Um outros exemplo que possibilita a classificação é o número das contas bancárias que, geralmente, é composto por números e um digito verificador. O nome das pessoas, normalmente, é constituído somente por letras. A idade das pessoas é representado por números inteiros. Datas são a junção de números com alguns caracteres especiais e assim por diante.</p>
+
+    <div class="admonitionblock tip data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-tip" title="Dica!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>Digito verificar é aquele número contido no final, geralmente após um traço ou então, após um ponto. A função deste digito é proporcinar um meio para chegar se os digitos anteriores estão corretos, até porque, o digito verificador é obtido através de uma fórmula matemática que utiliza todos os números e no final, gera um digito de confirmação. Por exemplo, o CPF é composto de 9 digitos, mais 2 digitos verificador, por exemplo: ``CPF: 123.456.789-09``.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>A última parte do CPF acima, no caso, o número <tt class="docutils literal">09</tt> é o digito verificador e o mesmo foi obtido através de uma fórmula que utilizou todos os 9 digitos e resultou no digito verificador <tt class="docutils literal">09</tt>.
+Exemplos de informações que possuem digito verificador são: o número da conta corrente de alguns bancos, o CPF dentre outras informações.</p>
+<p>Os tipos de dados são uma forma de classificação que facilita o processamento e a manipulação das informações.</p>
+</div>
 </div>
 <div class="section" id="tipos-primitivos">
 <h2>TIPOS PRIMITIVOS</h2>
-<p>Tipo primitivo são os tipos de dados mais simples, isto é, a informação em sua forma mais primitiva. Bons exemplos de valores primitivos são os caractere, os número, o valor True e False e etc. A documentação do Python não trata os tipos de dados elementares com a nomenclatura de <strong>Tipo Primitivo</strong>, mas sim <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html">chama-os de tipos built-ins</a>, isto é, classes que estão definidas por padrão dentro da Máquina Virtual do Python e que representam determinado tipo de informação.</p>
+<p><strong>Tipo Primitivo</strong> são os tipos de dados mais simples, isto é, a informação em sua forma mais primitiva. Bons exemplos de valores primitivos são os caractere, os número, o valor True e False e etc. A documentação do Python não trata os tipos de dados elementares com a nomenclatura de <strong>Tipo Primitivo</strong>, mas sim <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html">chama-os de tipos built-ins</a>, isto é, classes que estão definidas por padrão dentro da Máquina Virtual do Python e que representam determinado tipo de informação.</p>
 <p>Nesse momento, chamaremos de Tipos Primitivos as informações em sua forma mais simples, porém, é importante saber que para o Python, não há tipo primitivos, mas sim, estruturas de dados que estão definidas, muitas vezes, dentro da própria Máquina Virtual do Python.</p>
 <p>É normal que as linguagens de programação tenham um conjunto de tipos chamados de: <strong>tipos primitivos</strong>. Devemos pensar nessa classificação como sendo os tipos primários de informações, como por exemplo, o tipo numérico. Como sabemos, todo número é constituído por números. Dessa forma, o tipo numérico pode ser qualquer valor que seja composto por 1 ou mais caracteres numéricos. Dessa forma, isto é, tendo a certeza de que uma variável declarada como sendo do tipo numérico inteiro sempre terá um valor numérico válido, somos capazes de desenvolver funções especificas que manipulam esse tipo de dado de maneira muito mais eficiente e sem a necessidade de verificação se o tipo da informação contida em determinada variável é válido.</p>
 <p>Da mesma forma, temos o tipo de dado que representa conjuntos de caracteres, que na programação, é comumente chamado de <cite>String</cite> e o Python o chama de <cite>str</cite>. As <cite>String</cite> são capazes de armazenar conjuntos de caracteres que estão dispostos numa determinada ordem. Todas as vezes que estivermos manipulando dados que contenha caracteres - o tipo mais primitivo, isto é, a maneira mais abstrata para representarmos caracteres - estaremos utilizando uma variável definida como sendo do tipo <cite>str</cite>.</p>

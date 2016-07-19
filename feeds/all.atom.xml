@@ -1,5 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-17T13:20:00-03:00</updated><entry><title>Instrução break do Python</title><link href="http://excript.com/python/instrucao-break-python.html" rel="alternate"></link><published>2016-07-17T13:20:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-17:python/instrucao-break-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-18T16:20:00-03:00</updated><entry><title>Tipos de dados em Python</title><link href="http://excript.com/python/tipos-de-dados-python.html" rel="alternate"></link><published>2016-07-18T16:20:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-18:python/tipos-de-dados-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nessa aula estudaremos os tipos de dados definidos pela linguagem Python, como também, as diferenças entre diferentes tipos. Por fim, veremos a diferença entre um o tipo do dado e o dado propriamente dito.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="tipos"&gt;
+&lt;h2&gt;TIPOS&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;tipo&lt;/strong&gt; é uma forma de classificar as informação. As linguagens de programação normalmente trazem implementado o que é chamado de &lt;strong&gt;tipos primitivos&lt;/strong&gt;, isto é, o tipo de dado mais genérico possível.&lt;/p&gt;
+&lt;p&gt;Toda informação que manipularemos será, por definição, de um tipo.&lt;/p&gt;
+&lt;p&gt;Na informática tudo é manipulado como sendo bits. Quando manipulamos letras estamos trabalhando também com bits, porém, numa camada acima. Então, vamos definir agora, que num primeiro momento, toda informação é de fato um caractere, seja ele uma letra, um número, um simbolo ou então, um caractere especial.&lt;/p&gt;
+&lt;p&gt;Assim, definimos num primeiro momento que tudo são caracteres.&lt;/p&gt;
+&lt;div class="section" id="string"&gt;
+&lt;h3&gt;String&lt;/h3&gt;
+&lt;p&gt;Na programação String representa um conjunto de caracteres disposto numa determinada ordem. A partir de agora, todas as vezes em que falarmos o termo String, estaremos nos referindo a um conjunto de caracteres.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="numerico"&gt;
+&lt;h3&gt;Numérico&lt;/h3&gt;
+&lt;p&gt;Um segundo tipo de informação são os dados compostos por caracteres numéricos. Os números são dividos em 2 partes:&lt;/p&gt;
+&lt;p&gt;inteiros - chamados de &lt;strong&gt;integer&lt;/strong&gt; ou &lt;strong&gt;int&lt;/strong&gt;
+ponto flutuante - chamado de &lt;strong&gt;float&lt;/strong&gt; ou &lt;strong&gt;double&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplos-de-informacao"&gt;
+&lt;h3&gt;Exemplos de informação&lt;/h3&gt;
+&lt;p&gt;A título de exemplo, vamos citar alguns tipos de informação e em seguida, vamos definir o tipo de cada uma.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Nome - dado tipo String&lt;/li&gt;
+&lt;li&gt;Idade - dado tipo Integer&lt;/li&gt;
+&lt;li&gt;Conta bancária - dado composto por números, pontos e traços&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As informações são classificadas devido ao fato de seguirem regras e estruturas iguais. Ou seja, um número de telefone possui uma regra para todo o território nacional, logo, é possível classificar esse tipo de dado, até porque, há uma regra que o define.&lt;/p&gt;
+
+    &lt;div class="admonitionblock tip data-line"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="icon"&gt;
+                        &lt;i class="fa icon-tip" title="Dica!"&gt;&lt;/i&gt;
+                    &lt;/td&gt;
+                    &lt;td class="content"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt;Atualmente, os números de telefones no estado de São Paulo contém 9 digitos, enquanto os demais estados e capitais utilizam somente 8 digitos. Essa é uma situação que já ocorreu há anos e voltou a acontecer. Por isso, devemos estar certos de que irá acontecer novamente no futuro. Assim, é prudente que nossos softwares sejam capazes de lidar com essa variáção, seja para o momento atual, seja para estarem preparados para futuras modificações.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;p&gt;Um outros exemplo que possibilita a classificação é o número das contas bancárias que, geralmente, é composto por números e um digito verificador. O nome das pessoas, normalmente, é constituído somente por letras. A idade das pessoas é representado por números inteiros. Datas são a junção de números com alguns caracteres especiais e assim por diante.&lt;/p&gt;
+
+    &lt;div class="admonitionblock tip data-line"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="icon"&gt;
+                        &lt;i class="fa icon-tip" title="Dica!"&gt;&lt;/i&gt;
+                    &lt;/td&gt;
+                    &lt;td class="content"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt;Digito verificar é aquele número contido no final, geralmente após um traço ou então, após um ponto. A função deste digito é proporcinar um meio para chegar se os digitos anteriores estão corretos, até porque, o digito verificador é obtido através de uma fórmula matemática que utiliza todos os números e no final, gera um digito de confirmação. Por exemplo, o CPF é composto de 9 digitos, mais 2 digitos verificador, por exemplo: ``CPF: 123.456.789-09``.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;p&gt;A última parte do CPF acima, no caso, o número &lt;tt class="docutils literal"&gt;09&lt;/tt&gt; é o digito verificador e o mesmo foi obtido através de uma fórmula que utilizou todos os 9 digitos e resultou no digito verificador &lt;tt class="docutils literal"&gt;09&lt;/tt&gt;.
+Exemplos de informações que possuem digito verificador são: o número da conta corrente de alguns bancos, o CPF dentre outras informações.&lt;/p&gt;
+&lt;p&gt;Os tipos de dados são uma forma de classificação que facilita o processamento e a manipulação das informações.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tipos-primitivos"&gt;
+&lt;h2&gt;TIPOS PRIMITIVOS&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Tipo Primitivo&lt;/strong&gt; são os tipos de dados mais simples, isto é, a informação em sua forma mais primitiva. Bons exemplos de valores primitivos são os caractere, os número, o valor True e False e etc. A documentação do Python não trata os tipos de dados elementares com a nomenclatura de &lt;strong&gt;Tipo Primitivo&lt;/strong&gt;, mas sim &lt;a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html"&gt;chama-os de tipos built-ins&lt;/a&gt;, isto é, classes que estão definidas por padrão dentro da Máquina Virtual do Python e que representam determinado tipo de informação.&lt;/p&gt;
+&lt;p&gt;Nesse momento, chamaremos de Tipos Primitivos as informações em sua forma mais simples, porém, é importante saber que para o Python, não há tipo primitivos, mas sim, estruturas de dados que estão definidas, muitas vezes, dentro da própria Máquina Virtual do Python.&lt;/p&gt;
+&lt;p&gt;É normal que as linguagens de programação tenham um conjunto de tipos chamados de: &lt;strong&gt;tipos primitivos&lt;/strong&gt;. Devemos pensar nessa classificação como sendo os tipos primários de informações, como por exemplo, o tipo numérico. Como sabemos, todo número é constituído por números. Dessa forma, o tipo numérico pode ser qualquer valor que seja composto por 1 ou mais caracteres numéricos. Dessa forma, isto é, tendo a certeza de que uma variável declarada como sendo do tipo numérico inteiro sempre terá um valor numérico válido, somos capazes de desenvolver funções especificas que manipulam esse tipo de dado de maneira muito mais eficiente e sem a necessidade de verificação se o tipo da informação contida em determinada variável é válido.&lt;/p&gt;
+&lt;p&gt;Da mesma forma, temos o tipo de dado que representa conjuntos de caracteres, que na programação, é comumente chamado de &lt;cite&gt;String&lt;/cite&gt; e o Python o chama de &lt;cite&gt;str&lt;/cite&gt;. As &lt;cite&gt;String&lt;/cite&gt; são capazes de armazenar conjuntos de caracteres que estão dispostos numa determinada ordem. Todas as vezes que estivermos manipulando dados que contenha caracteres - o tipo mais primitivo, isto é, a maneira mais abstrata para representarmos caracteres - estaremos utilizando uma variável definida como sendo do tipo &lt;cite&gt;str&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;O fato de o Python não trabalhar com tipo primitivos diretamente, deve-se ao fato de que em Python, &lt;strong&gt;tudo são objetos&lt;/strong&gt;. Dessa forma, o que chamaríamos de primitivo é, em Python, representado como uma e toda informação será, um objeto propriamente dito. A seguir, temos a lista dos principais tipos built-ins da linguagem Python:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;int - para números inteiros&lt;/li&gt;
+&lt;li&gt;str - para conjunto de caracteres&lt;/li&gt;
+&lt;li&gt;bool - armazena True ou False&lt;/li&gt;
+&lt;li&gt;list - para agrupar um conjunto de elementos&lt;/li&gt;
+&lt;li&gt;tupla - igual ao tipo &lt;cite&gt;list&lt;/cite&gt;, porém, imutável&lt;/li&gt;
+&lt;li&gt;dic - para agrupar elementos que serão recuperados por uma &lt;cite&gt;chave&lt;/cite&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;O Python fornece um conjunto de tipos básicos bastante amplo e que normalmente, atendem a maioria das necessidades. Cada tipo citado, possui um conjunto de funções e métodos que permitem manipularmos as informações, contidas na variável, de maneira bastante eficiente.&lt;/p&gt;
+&lt;p&gt;Sempre que formos criar um novo &lt;strong&gt;tipo de dados&lt;/strong&gt;, acabaremos utilizando os tipos básicos da linguagem, como por exemplo, o tipo &lt;cite&gt;int&lt;/cite&gt;, ou então, o tipo &lt;cite&gt;str&lt;/cite&gt; e assim por diante.&lt;/p&gt;
+
+&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+&lt;!-- Horizontal --&gt;
+&lt;ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5466436161806566"
+     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;div class="section" id="diferenca-entre-tipo-e-valor"&gt;
+&lt;h2&gt;DIFERENÇA ENTRE TIPO E VALOR&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;valor&lt;/strong&gt; é qualquer informação, seja um número, texto, música, vídeo e etc. O &lt;strong&gt;tipo&lt;/strong&gt; por sua vez, é a estrutura da informação e a forma de classificarmos os dados.&lt;/p&gt;
+&lt;p&gt;Todo valor numérico deve ser capaz de ser somado a outro valor, ou então, subtraido. Da mesma forma que todo texto, deve ser capaz de ser concatenado a outro, isto é, ser juntado a outro conjunto de caracteres.&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;tipo&lt;/strong&gt; da informação deve ser pensado como uma forma de classificarmos as diferentes informações e assim, termos a disposição um conjunto de funções para tratarmos e modificarmos os valores.&lt;/p&gt;
+&lt;p&gt;É importante saber que somos capazes de criar novos tipos de dados a qualquer momento, e a programação orientada a objetos é, em sua definição mais primitiva, uma maneira de criarmos novos tipos abstratos e definirmos, na estrutura da classe, funções, métodos, verificações que busquem tratar valores que tenham uma mesma estrutura.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conversao-de-dados-ou-coercao-de-tipos"&gt;
+&lt;h2&gt;CONVERSÃO DE DADOS OU COERÇÃO DE TIPOS&lt;/h2&gt;
+&lt;p&gt;Se as informações possuem tipos, logo, temos de ser capazes em converter um tipo de informação num outro tipo de dado. Essa ação de conversão é comumente chamada de &lt;strong&gt;Coerção de Tipos&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Linguagem tipada é aquela que permite a classificação das informações pelo uso de tipos de dados, por exemplo, o Python trata um conjunto de caracteres como sendo do tipo &lt;cite&gt;String&lt;/cite&gt;, logo, o Python é uma linguagem tipada, no caso, uma linguagem dinamicamente tipada.&lt;/p&gt;
+&lt;p&gt;Se existem diferentes tipos de informação, temos de ser capazes de converter, por exemplo, um número para o tipo texto. Ou seja, a conversão de valores é essencial para que possamos trabalhar com informações tipadas, até porque, há diversas situações onde desejaremos manipular um número como sendo um texto.&lt;/p&gt;
+&lt;p&gt;Essa conversão é comumente chamada de &lt;strong&gt;Conversão de Dados&lt;/strong&gt; ou então, &lt;strong&gt;Coerção de Tipos&lt;/strong&gt;. É importante observar, que uma informação do tipo texto, pode ser constituida de letras e números, ou seja, o grupo de caracteres alfanuméricos. Então, um número pode ser representado como um texto, mas o contrário, nem sempre será possível.&lt;/p&gt;
+&lt;p&gt;Pra convertermos, por exemplo, um texto para o tipo numérico, devemos especificar o tipo a ser convertido e passarmos o valor através de parêntesis, como podemos ver a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;tipo_a_ser_convertido&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;informação&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A seguir, declaramos uma variável de nome &lt;cite&gt;texto&lt;/cite&gt; e atribuimos um valor numérico a mesma. Em seguida, declaramos outra variável, de nome &lt;cite&gt;num&lt;/cite&gt; e atribuimos a esta o resultado da Coerção de Tipos. Isto é, dissemos que o valor da variável &lt;cite&gt;texto&lt;/cite&gt; deve ser convertido num tipo numérico &lt;cite&gt;num = int(texto)&lt;/cite&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;10&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;texto&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;#o sinal de + concatena duas informações&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;#o sinal de + soma dois números&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1010&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, podemos observar que a utilização do operador &lt;cite&gt;+&lt;/cite&gt; funciona de maneira diferente conforme o tipo de dado que esteja sendo utilizado. Quando o sinal de adição estiver entre dois valores numéricos, estes serão somados. Quando o sinal adição estiver entre dois valores do tipo &lt;cite&gt;String&lt;/cite&gt;, estes serão concatenados (juntados) e quando o sinal de adição estiver entre um valor do tipo numérico e do tipo &lt;cite&gt;String&lt;/cite&gt;, uma exceção será levantada dizendo que não é possível utilizar o operador de adição entre tipos distintos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="para-refletir"&gt;
+&lt;h2&gt;PARA REFLETIR&lt;/h2&gt;
+&lt;p&gt;Em Python, tudo é tratado como sendo um objeto, inclusive, o próprio código por nós escrito!&lt;/p&gt;
+&lt;p&gt;Linguagens como Java e C# também são fortemente orientada a objetos, porém, ambas possuem por exemplo, tipos de dados primitivos, o que não existe no Python.&lt;/p&gt;
+&lt;p&gt;O Python trata todo e qualquer valor como sendo um objeto. Se tivermos 2 variáveis que contenham o número 10, para o Python, ambas variáveis estarão apontando para um objeto na memória, cujo valor é 10. Dizer que uma variável contém um valor, é por definição da linguagem, um erro, até porque, os valores não estão armazenados numa posição determinada pela variável. Em Python, os dados são associados a variáveis, logo, variáveis que contenham um mesmo valor, na verdade, internamente o que haverá, é uma informação associadas a várias variáveis. Há um excelente &lt;a class="reference external" href="http://pythonclub.com.br/tuplas-mutantes-em-python.html"&gt;artigo falando sobre a forma que o Python trata os tipos e as informações publicado pelo Luciano Ramalho&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Por fim, temos 4 tipos para classificação para os tipos de informações.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Tipos simples&lt;/tt&gt;  - constituidos por simples blocos, como &lt;tt class="docutils literal"&gt;int()&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;float()&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Tipos de contêiner&lt;/tt&gt; - objetos capazes de conter outros objetos&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Tipos de código&lt;/tt&gt; - objetos encapsuladores de elementos dos nosso programas&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;Tipos internos&lt;/tt&gt; - tipos que serão utilizados durante a execução do nosso programa&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;No &lt;a class="reference external" href="http://www.ibm.com/developerworks/br/library/os-python1/"&gt;link a seguir há mais informações sobre os tipos de dados do Python&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="tipos"></category><category term="tipo de dados"></category><category term="int"></category><category term="float"></category><category term="string"></category><category term="date"></category><category term="bool"></category><category term="str"></category><category term="blog"></category></entry><entry><title>Instrução break do Python</title><link href="http://excript.com/python/instrucao-break-python.html" rel="alternate"></link><published>2016-07-17T13:20:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-17:python/instrucao-break-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -5197,103 +5352,7 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
 &lt;p&gt;No código acima, é possível ver que para o Python, o número &lt;cite&gt;1.1&lt;/cite&gt; é um número do tipo &lt;cite&gt;float&lt;/cite&gt;, isto é, do tipo ponto flutuante. Já, o número &lt;cite&gt;1&lt;/cite&gt; é, para o Python, um número inteiro. O número &lt;cite&gt;1j&lt;/cite&gt; é um número complexo e o resultado da expressão, 10 elevado a 1000, será também um número inteiro.&lt;/p&gt;
 &lt;p&gt;Atualmente, o Python trata qualquer número que não possua casas decimais como sendo um inteiro, mesmo números que tenham centenas de dígitos, serão para o Python, números inteiros.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="tipos de dados"></category><category term="tipos"></category><category term="ponto flutuante"></category><category term="double"></category><category term="float"></category><category term="blog"></category></entry><entry><title>Tipos de dados em Python</title><link href="http://excript.com/python/tipos-de-dados-python.html" rel="alternate"></link><published>2016-05-06T20:20:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/tipos-de-dados-python.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nessa aula estudaremos os tipos de dados definidos pela linguagem Python, como também, as diferenças entre diferentes tipos. Por fim, veremos a diferença entre um o tipo do dado e o dado propriamente dito.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="tipos"&gt;
-&lt;h2&gt;TIPOS&lt;/h2&gt;
-&lt;p&gt;O &lt;strong&gt;tipo de dado&lt;/strong&gt; funciona como uma classificação da informação. A informação, pode ser qualquer uma, como por exemplo, Nome, Idade, Endereço, uma Música, um Arquivo, o valor da conta bancária e etc.&lt;/p&gt;
-&lt;p&gt;As informações, de forma geral, seguem regras que possibilitam uma classificação, por exemplo, o valor das contas bancárias, geralmente, será composta por números. O nome das pessoas, normalmente, é constituído somente por letras. A idade das pessoas é representado por números inteiros. Datas são a junção de números com alguns caracteres especiais e assim por diante.&lt;/p&gt;
-&lt;p&gt;Devido aos diferentes tipos de informações existente, existe, na programação, os tipos de dados. Os tipos são, basicamente, as formas diferentes de representar diferentes informações e essa classificação, faz com que consigamos, por exemplo, definir que o operador de soma entre 2 números resultará na resolução da expressão matemática, porém, o sinal de adição entre 2 variáveis do tipo String, resultará na concatenação de ambos valores e assim por diante.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tipos-primitivos"&gt;
-&lt;h2&gt;TIPOS PRIMITIVOS&lt;/h2&gt;
-&lt;p&gt;Tipo primitivo são os tipos de dados mais simples, isto é, a informação em sua forma mais primitiva. Bons exemplos de valores primitivos são os caractere, os número, o valor True e False e etc. A documentação do Python não trata os tipos de dados elementares com a nomenclatura de &lt;strong&gt;Tipo Primitivo&lt;/strong&gt;, mas sim &lt;a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html"&gt;chama-os de tipos built-ins&lt;/a&gt;, isto é, classes que estão definidas por padrão dentro da Máquina Virtual do Python e que representam determinado tipo de informação.&lt;/p&gt;
-&lt;p&gt;Nesse momento, chamaremos de Tipos Primitivos as informações em sua forma mais simples, porém, é importante saber que para o Python, não há tipo primitivos, mas sim, estruturas de dados que estão definidas, muitas vezes, dentro da própria Máquina Virtual do Python.&lt;/p&gt;
-&lt;p&gt;É normal que as linguagens de programação tenham um conjunto de tipos chamados de: &lt;strong&gt;tipos primitivos&lt;/strong&gt;. Devemos pensar nessa classificação como sendo os tipos primários de informações, como por exemplo, o tipo numérico. Como sabemos, todo número é constituído por números. Dessa forma, o tipo numérico pode ser qualquer valor que seja composto por 1 ou mais caracteres numéricos. Dessa forma, isto é, tendo a certeza de que uma variável declarada como sendo do tipo numérico inteiro sempre terá um valor numérico válido, somos capazes de desenvolver funções especificas que manipulam esse tipo de dado de maneira muito mais eficiente e sem a necessidade de verificação se o tipo da informação contida em determinada variável é válido.&lt;/p&gt;
-&lt;p&gt;Da mesma forma, temos o tipo de dado que representa conjuntos de caracteres, que na programação, é comumente chamado de &lt;cite&gt;String&lt;/cite&gt; e o Python o chama de &lt;cite&gt;str&lt;/cite&gt;. As &lt;cite&gt;String&lt;/cite&gt; são capazes de armazenar conjuntos de caracteres que estão dispostos numa determinada ordem. Todas as vezes que estivermos manipulando dados que contenha caracteres - o tipo mais primitivo, isto é, a maneira mais abstrata para representarmos caracteres - estaremos utilizando uma variável definida como sendo do tipo &lt;cite&gt;str&lt;/cite&gt;.&lt;/p&gt;
-&lt;p&gt;O fato de o Python não trabalhar com tipo primitivos diretamente, deve-se ao fato de que em Python, &lt;strong&gt;tudo são objetos&lt;/strong&gt;. Dessa forma, o que chamaríamos de primitivo é, em Python, representado como uma e toda informação será, um objeto propriamente dito. A seguir, temos a lista dos principais tipos built-ins da linguagem Python:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;int - para números inteiros&lt;/li&gt;
-&lt;li&gt;str - para conjunto de caracteres&lt;/li&gt;
-&lt;li&gt;bool - armazena True ou False&lt;/li&gt;
-&lt;li&gt;list - para agrupar um conjunto de elementos&lt;/li&gt;
-&lt;li&gt;tupla - igual ao tipo &lt;cite&gt;list&lt;/cite&gt;, porém, imutável&lt;/li&gt;
-&lt;li&gt;dic - para agrupar elementos que serão recuperados por uma &lt;cite&gt;chave&lt;/cite&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;O Python fornece um conjunto de tipos básicos bastante amplo e que normalmente, atendem a maioria das necessidades. Cada tipo citado, possui um conjunto de funções e métodos que permitem manipularmos as informações, contidas na variável, de maneira bastante eficiente.&lt;/p&gt;
-&lt;p&gt;Sempre que formos criar um novo &lt;strong&gt;tipo de dados&lt;/strong&gt;, acabaremos utilizando os tipos básicos da linguagem, como por exemplo, o tipo &lt;cite&gt;int&lt;/cite&gt;, ou então, o tipo &lt;cite&gt;str&lt;/cite&gt; e assim por diante.&lt;/p&gt;
-
-&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
-&lt;!-- Horizontal --&gt;
-&lt;ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5466436161806566"
-     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
-&lt;/div&gt;
-&lt;div class="section" id="diferenca-entre-tipo-e-valor"&gt;
-&lt;h2&gt;DIFERENÇA ENTRE TIPO E VALOR&lt;/h2&gt;
-&lt;p&gt;O &lt;strong&gt;valor&lt;/strong&gt; é qualquer informação, seja um número, texto, música, vídeo e etc. O &lt;strong&gt;tipo&lt;/strong&gt; por sua vez, é a estrutura da informação e a forma de classificarmos os dados.&lt;/p&gt;
-&lt;p&gt;Todo valor numérico deve ser capaz de ser somado a outro valor, ou então, subtraido. Da mesma forma que todo texto, deve ser capaz de ser concatenado a outro, isto é, ser juntado a outro conjunto de caracteres.&lt;/p&gt;
-&lt;p&gt;O &lt;strong&gt;tipo&lt;/strong&gt; da informação deve ser pensado como uma forma de classificarmos as diferentes informações e assim, termos a disposição um conjunto de funções para tratarmos e modificarmos os valores.&lt;/p&gt;
-&lt;p&gt;É importante saber que somos capazes de criar novos tipos de dados a qualquer momento, e a programação orientada a objetos é, em sua definição mais primitiva, uma maneira de criarmos novos tipos abstratos e definirmos, na estrutura da classe, funções, métodos, verificações que busquem tratar valores que tenham uma mesma estrutura.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conversao-de-dados-ou-coercao-de-tipos"&gt;
-&lt;h2&gt;CONVERSÃO DE DADOS OU COERÇÃO DE TIPOS&lt;/h2&gt;
-&lt;p&gt;Se as informações possuem tipos, logo, temos de ser capazes em converter um tipo de informação num outro tipo de dado. Essa ação de conversão é comumente chamada de &lt;strong&gt;Coerção de Tipos&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Linguagem tipada é aquela que permite a classificação das informações pelo uso de tipos de dados, por exemplo, o Python trata um conjunto de caracteres como sendo do tipo &lt;cite&gt;String&lt;/cite&gt;, logo, o Python é uma linguagem tipada, no caso, uma linguagem dinamicamente tipada.&lt;/p&gt;
-&lt;p&gt;Se existem diferentes tipos de informação, temos de ser capazes de converter, por exemplo, um número para o tipo texto. Ou seja, a conversão de valores é essencial para que possamos trabalhar com informações tipadas, até porque, há diversas situações onde desejaremos manipular um número como sendo um texto.&lt;/p&gt;
-&lt;p&gt;Essa conversão é comumente chamada de &lt;strong&gt;Conversão de Dados&lt;/strong&gt; ou então, &lt;strong&gt;Coerção de Tipos&lt;/strong&gt;. É importante observar, que uma informação do tipo texto, pode ser constituida de letras e números, ou seja, o grupo de caracteres alfanuméricos. Então, um número pode ser representado como um texto, mas o contrário, nem sempre será possível.&lt;/p&gt;
-&lt;p&gt;Pra convertermos, por exemplo, um texto para o tipo numérico, devemos especificar o tipo a ser convertido e passarmos o valor através de parêntesis, como podemos ver a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;tipo_a_ser_convertido&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;informação&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A seguir, declaramos uma variável de nome &lt;cite&gt;texto&lt;/cite&gt; e atribuimos um valor numérico a mesma. Em seguida, declaramos outra variável, de nome &lt;cite&gt;num&lt;/cite&gt; e atribuimos a esta o resultado da Coerção de Tipos. Isto é, dissemos que o valor da variável &lt;cite&gt;texto&lt;/cite&gt; deve ser convertido num tipo numérico &lt;cite&gt;num = int(texto)&lt;/cite&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;10&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;texto&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;#o sinal de + concatena duas informações&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;#o sinal de + soma dois números&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1010&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No exemplo acima, podemos observar que a utilização do operador &lt;cite&gt;+&lt;/cite&gt; funciona de maneira diferente conforme o tipo de dado que esteja sendo utilizado. Quando o sinal de adição estiver entre dois valores numéricos, estes serão somados. Quando o sinal adição estiver entre dois valores do tipo &lt;cite&gt;String&lt;/cite&gt;, estes serão concatenados (juntados) e quando o sinal de adição estiver entre um valor do tipo numérico e do tipo &lt;cite&gt;String&lt;/cite&gt;, uma exceção será levantada dizendo que não é possível utilizar o operador de adição entre tipos distintos.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="para-refletir"&gt;
-&lt;h2&gt;PARA REFLETIR&lt;/h2&gt;
-&lt;p&gt;Em Python, tudo é tratado como sendo um objeto, inclusive, o próprio código por nós escrito!&lt;/p&gt;
-&lt;p&gt;Linguagens como Java e C# também são fortemente orientada a objetos, porém, ambas possuem por exemplo, tipos de dados primitivos, o que não existe no Python.&lt;/p&gt;
-&lt;p&gt;O Python trata todo e qualquer valor como sendo um objeto. Se tivermos 2 variáveis que contenham o número 10, para o Python, ambas variáveis estarão apontando para um objeto na memória, cujo valor é 10. Dizer que uma variável contém um valor, é por definição da linguagem, um erro, até porque, os valores não estão armazenados numa posição determinada pela variável. Em Python, os dados são associados a variáveis, logo, variáveis que contenham um mesmo valor, na verdade, internamente o que haverá, é uma informação associadas a várias variáveis. Há um excelente &lt;a class="reference external" href="http://pythonclub.com.br/tuplas-mutantes-em-python.html"&gt;artigo falando sobre a forma que o Python trata os tipos e as informações publicado pelo Luciano Ramalho&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Por fim, temos 4 tipos para classificação para os tipos de informações.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;Tipos simples&lt;/tt&gt;  - constituidos por simples blocos, como &lt;tt class="docutils literal"&gt;int()&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;float()&lt;/tt&gt;&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;Tipos de contêiner&lt;/tt&gt; - objetos capazes de conter outros objetos&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;Tipos de código&lt;/tt&gt; - objetos encapsuladores de elementos dos nosso programas&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;Tipos internos&lt;/tt&gt; - tipos que serão utilizados durante a execução do nosso programa&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;No &lt;a class="reference external" href="http://www.ibm.com/developerworks/br/library/os-python1/"&gt;link a seguir há mais informações sobre os tipos de dados do Python&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="tipos"></category><category term="tipo de dados"></category><category term="int"></category><category term="float"></category><category term="string"></category><category term="date"></category><category term="bool"></category><category term="str"></category><category term="blog"></category></entry><entry><title>Nomenclatura das Variáveis em Python</title><link href="http://excript.com/python/nomenclatura-variaveis-python.html" rel="alternate"></link><published>2016-05-06T19:10:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/nomenclatura-variaveis-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="tipos de dados"></category><category term="tipos"></category><category term="ponto flutuante"></category><category term="double"></category><category term="float"></category><category term="blog"></category></entry><entry><title>Nomenclatura das Variáveis em Python</title><link href="http://excript.com/python/nomenclatura-variaveis-python.html" rel="alternate"></link><published>2016-05-06T19:10:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:python/nomenclatura-variaveis-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -6554,8 +6613,17 @@ O que faz da linguagem Python_ ser especial? --&gt;
 &lt;/div&gt;
 &lt;div class="section" id="para-aprender-c-e-preciso-antes-aprender-c"&gt;
 &lt;h3&gt;PARA APRENDER C++, É PRECISO ANTES APRENDER C?&lt;/h3&gt;
-&lt;p&gt;Não! A Linguagem C++ é uma evolução da Linguagem C, porém, nenhum autor até hoje escreveu um livro de C++ em que fosse pré-requisito o conhecimento da Linguagem C. Com certeza, se você tiver conhecimento de Programação C lhe será bastante útil, porém, se por exemplo, você tivesse conhecimento de Programação JavaScript, seria proporcionalmente, tão útil como aquele que tem conhecimento da Linguagem C.&lt;/p&gt;
-&lt;p&gt;A verdade, é que o conhecimento prévio de alguma linguagem sempre é meio caminho andado, porém, para fazer o Curso de Programação C++ da eXcript, não é necessário ter conhecimentos prévios, nem a Lógica de Programação faz-se necessário!&lt;/p&gt;
+&lt;p&gt;Não! A Linguagem C++ é uma evolução da Linguagem C, porém, nenhum autor até hoje escreveu um livro de C++ em que fosse pré-requisito o conhecimento da Linguagem C, isto é, uma linguagem não é pré-requisito para outra. Tanto a linguagem C como a linguagem C++ são consideras linguagens diferentes e &lt;strong&gt;independetes&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Obviamente que se você tiver conhecimento de &lt;strong&gt;Programação C&lt;/strong&gt; lhe será bastante útil ao aprenderes C++, porém, se por exemplo, você tivesse conhecimento de Programação JavaScript, seria tão útil quanto o conhecimento da linguagem C! O que é necessário entender é que o conhecimento de qualquer linguagem sempre será válido no estudo de outra - somente isso!&lt;/p&gt;
+&lt;p&gt;Em outras palavras, temos que o conhecimento prévio de alguma linguagem de programação &lt;strong&gt;sempre é meio caminho andado&lt;/strong&gt;, porém, para fazer o Curso de Programação C++ da eXcript, não é necessário ter conhecimentos prévios, nem a Lógica de Programação faz-se necessário!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="c-vs-c-vs-c"&gt;
+&lt;h3&gt;C vs C++ vs C#&lt;/h3&gt;
+&lt;p&gt;É comum perguntarem a diferença entre as linguagens C, C++ e C#, como também, se uma é pré-requisito para outra.&lt;/p&gt;
+&lt;p&gt;Inicialmente, não existe nenhuma linguagem de programação que conheçamos que seja, um pré-requisito ao estudo de outra. Até porque, toda linguagem de programação deve ser independente, isto é, deve fornecer ferramentas para que o programador possa, através da mesma, construir lógias e implementar recursos.&lt;/p&gt;
+&lt;p&gt;Caso houvesse uma linguagem que fosse dependente de outra, teríamos uma situação em que a linguagem dependente não poderia ser chamada de linguagem de programação e sim, de uma extensão de determinada linguagem.&lt;/p&gt;
+&lt;p&gt;E qual é a melhor linguagem? C, C++ ou C#?
+Não existe linguagem melhor do que a outra, o que existe são linguagens que possuem estruturas que resolvem problemas melhor do que outras, somente isso. Assim, quaisquer pessoa que venha afirmar que determinada linguagem é melhor do que outras estará, de 2 uma: (1) incorrendo num erro. (2) querendo dizer que determinadas linguagem resolve um problema melhor do que outra.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="o-que-sao-bibliotecas"&gt;
 &lt;h3&gt;O QUE SÃO BIBLIOTECAS?&lt;/h3&gt;
@@ -8822,7 +8890,7 @@ substitua o texto &amp;lt;anos&amp;gt; pela diferença entre a sua idade e a de 
 &lt;p&gt;Reescreva o código a seguir a fim de se utilizar o mínimo de linha possíveis:
 Nota(s):
 Amontoar linhas não soluciona o problema. O código a seguir não é simplificação e sim, confusão:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;Digite&lt;/span&gt; &lt;span class="n"&gt;um&lt;/span&gt; &lt;span class="n"&gt;número&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Escreva de forma tal a utilizar somente 4 linhas&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
@@ -9123,19 +9191,23 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;div class="section" id="exercicio"&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Escreva um programa que peça para o usuário informar qual tabuada o mesmo deseja ver e armazene o número em uma variável. Em seguida, imprima a tabuada na tela se utilizando da instrução FOR. Para imprimir a tabuada, siga o modelo abaixo:&lt;/p&gt;
-&lt;p&gt;Por favor, informe qual a tabuada que você deseja:
-&lt;tt class="docutils literal"&gt;`Ax x B10 = Cresultado 10`&lt;/tt&gt;
-&lt;tt class="docutils literal"&gt;`Ax x B9 = Cresultado 9`&lt;/tt&gt;
-&lt;tt class="docutils literal"&gt;`Ax x B8 = Cresultado 8`&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;Por favor, informe qual a tabuada que você deseja:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+``Ax x B10 = Cresultado 10``
+``Ax x B9 = Cresultado 9``
+``Ax x B8 = Cresultado 8``
+&lt;/pre&gt;
 &lt;p&gt;Nota(s):
-&lt;tt class="docutils literal"&gt;`Ax`&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;`B`&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;`C`&lt;/tt&gt; representam, respectivamente:
+&lt;tt class="docutils literal"&gt;Ax&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;B&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;C&lt;/tt&gt; representam, respectivamente:
 Ax - número da tabuada desejada pelo usuário
 B - número a ser incrementado
-C - resultado da expressão &lt;tt class="docutils literal"&gt;`AX`&lt;/tt&gt; X &lt;tt class="docutils literal"&gt;`BX`&lt;/tt&gt; = &lt;tt class="docutils literal"&gt;`CX`&lt;/tt&gt;
-Exemplo:
-&lt;tt class="docutils literal"&gt;`5 x 10 = 50`&lt;/tt&gt;
-&lt;tt class="docutils literal"&gt;`5 x 9&amp;nbsp;&amp;nbsp; = 45`&lt;/tt&gt;
-&lt;tt class="docutils literal"&gt;`5 x 8&amp;nbsp;&amp;nbsp; = 40`&lt;/tt&gt;&lt;/p&gt;
+C - resultado da expressão &lt;tt class="docutils literal"&gt;AX&lt;/tt&gt; X &lt;tt class="docutils literal"&gt;BX&lt;/tt&gt; = &lt;tt class="docutils literal"&gt;CX&lt;/tt&gt;
+Exemplo:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+``5 x 10 = 50``
+``5 x 9   = 45``
+``5 x 8   = 40``
+&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
@@ -19142,8 +19214,21 @@ A seguir, temos um exemplo da declaração de uma Array de inteiros:&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class="section" id="exercicio"&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
-&lt;p&gt;Faça um programa que peça o nome, idade e cidade de nascimento do usuário. Em seguida, imprima a frase abaixo trocando as tag’s &amp;amp;lt;nome&amp;amp;gt;, &amp;amp;lt;idade&amp;amp;gt;, &amp;amp;lt;cidade&amp;amp;gt;, pelo nome, idade e cidade informado pelo usuário.&lt;/p&gt;
-&lt;p&gt;“Ola. Meu nome é &amp;amp;lt;nome&amp;amp;gt;, sou natural de &amp;amp;lt;cidade&amp;amp;gt;, tenho &amp;amp;lt;idade&amp;amp;gt; anos e estou aprendendo a programar.”&lt;/p&gt;
+&lt;p&gt;Faça um programa que peça o nome, idade e cidade de nascimento do usuário. Em seguida, imprima a frase abaixo trocando as tag’s &amp;lt;nome&amp;gt;, &amp;lt;idade&amp;gt;, &amp;lt;cidade&amp;gt;, pelo nome, idade e cidade informado pelo usuário.&lt;/p&gt;
+&lt;p&gt;&amp;quot;Ola. Meu nome é &amp;lt;nome&amp;gt;, sou natural de &amp;lt;cidade&amp;gt;, tenho &amp;lt;idade&amp;gt; anos e estou aprendendo a programar.&amp;quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="nota"&gt;
+&lt;h2&gt;NOTA&lt;/h2&gt;
+&lt;p&gt;O usuário &lt;strong&gt;João Moacir Barth Junior&lt;/strong&gt; fez uma correção e um adendo a implementação que fizemos nesta aula. A seguir, há uma explicação do problema por ele observado.&lt;/p&gt;
+&lt;p&gt;O código a seguir executa sem quaisquer erro. Porém, é importante observar a forma como iremos ler números inteiros.&lt;/p&gt;
+&lt;p&gt;Na resolução do exercício lemos um número inteiro utilizando a seguinte linha de código:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O código acima funciona e o número digitado no Console pelo usuário é passado para a variável inteira &lt;code&gt;idade&lt;/code&gt;. Porém, &lt;a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#nextLine()"&gt;a instrução nextInt() lê um ou N valores inteiros&lt;/a&gt;, desde que estes estejam separados por espaço. Isso significa que após lermos um número com a função &lt;code&gt;nextInt()&lt;/code&gt; o Cursor continuara na mesma linha e será nossa tarefa posicionar o mesmo na linha abaixo, caso queiramos que ler outros valores pelo Console que o nosso usuário venha a digitar.&lt;/p&gt;
+&lt;p&gt;Pra isso, é necessário invocar a função &lt;code&gt;nextLine()&lt;/code&gt;, do contrário, será levantado uma exceção. A seguir temos o código que deverá ser utilizado para ler números inteiros e em seguida, posicionar o Cursor na linha seguinte.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextLine&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
@@ -19183,6 +19268,12 @@ A seguir, temos um exemplo da declaração de uma Array de inteiros:&lt;/p&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;p&gt;Link para a &lt;a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html"&gt;documentação oficial da Classe Scanner&lt;/a&gt;.
+Link para a &lt;a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#nextLine()"&gt;documentação oficial da função nextLine() da Classe Scanner&lt;/a&gt;.
+Link para a &lt;a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#nextInt()"&gt;documentação oficial da função nextInt() da Classe Scanner&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 </summary><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Imprimindo Texto (j0001)</title><link href="http://excript.com/java/exercicio-java-imprimindo-texto.html" rel="alternate"></link><published>2014-10-07T14:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-07:java/exercicio-java-imprimindo-texto.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -19199,8 +19290,8 @@ A seguir, temos um exemplo da declaração de uma Array de inteiros:&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class="section" id="exercicio"&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
-&lt;p&gt;Faça um programa que imprima o texto “Ola mundo” para o usuário. Em seguida, imprima na tela o número 522 e então, imprima uma linha em branco. Depois de imprimir a linha em branco, escreva na tela a seguinte frase:&lt;/p&gt;
-&lt;p&gt;“Seja bem-vindo a lista de exercícios resolvidos”&lt;/p&gt;
+&lt;p&gt;Faça um programa que imprima o texto &amp;quot;Ola mundo&amp;quot; para o usuário. Em seguida, imprima na tela o número 522 e então, imprima uma linha em branco. Depois de imprimir a linha em branco, escreva na tela a seguinte frase:&lt;/p&gt;
+&lt;p&gt;&amp;quot;Seja bem-vindo a lista de exercícios resolvidos&amp;quot;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
@@ -19246,12 +19337,12 @@ A seguir, temos um exemplo da declaração de uma Array de inteiros:&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class="section" id="exercicio"&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
-&lt;p&gt;Agora, vamos resolver o exercício que pede: Faça um programa que imprima a frase: “Seja bem-vindo ao meu programa!”&lt;/p&gt;
+&lt;p&gt;Agora, vamos resolver o exercício que pede: Faça um programa que imprima a frase: &amp;quot;Seja bem-vindo ao meu programa!&amp;quot;&lt;/p&gt;
 &lt;p&gt;Em seguida, imprima uma linha em branco e na na sequência, imprima as frases e o resultado da expressões matemáticas.&lt;/p&gt;
 &lt;p&gt;Cada frase e seu resultado devem estar na mesma linha.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="n"&gt;produto&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;por&lt;/span&gt; &lt;span class="mi"&gt;90&lt;/span&gt; &lt;span class="n"&gt;é&lt;/span&gt; &lt;span class="n"&gt;igual&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;
-&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="n"&gt;quociente&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="mi"&gt;90&lt;/span&gt; &lt;span class="n"&gt;por&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="n"&gt;é&lt;/span&gt; &lt;span class="n"&gt;igual&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;
-&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;O&lt;/span&gt; &lt;span class="n"&gt;quadrado&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="n"&gt;é&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O produto de 8 por 90 é igual a:&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;O quociente de 90 por 30 é igual a:&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;O quadrado de 9 é:&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Nota(s):
 Em cada expressão matemática, você deve imprimir o resultado de uma expressão na qual o compilador é quem resolveu. Ou seja, é para concatenar a frase sugerida no enunciado com o resultado.&lt;/p&gt;
