@@ -1,5 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-de-python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-18T16:20:00-03:00</updated><entry><title>Tipos de dados em Python</title><link href="http://excript.com/python/tipos-de-dados-python.html" rel="alternate"></link><published>2016-07-18T16:20:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-18:python/tipos-de-dados-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/curso-de-python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-20T13:23:00-03:00</updated><entry><title>Instrução continue em Python</title><link href="http://excript.com/python/instrucao-continue-python.html" rel="alternate"></link><published>2016-07-20T13:23:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-20:python/instrucao-continue-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a instrução "continue", uma ferramenta a ser utilizada dentro das estruturas de repetição e que proporciona um maior controle sobre a iteração.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="instrucao-continue"&gt;
+&lt;h2&gt;INSTRUÇÃO &lt;code&gt;continue&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A instrução &lt;code&gt;continue&lt;/code&gt; interrompe a execução do ciclo sem interromper a execução do laço de repetição.&lt;/p&gt;
+&lt;p&gt;A instrução &lt;code&gt;break&lt;/code&gt; e a instrução &lt;code&gt;continue&lt;/code&gt; são ferramentas das estruturas de repetição permitindo a interrupção de um único ciclo ou do laço de repetição. É importante saber distinguir ambas instruções, por exemplo, a instrução &lt;code&gt;break&lt;/code&gt; interrompe não somente o ciclo em execução, mas sim, todo o laço, enquanto que a instrução &lt;code&gt;continue&lt;/code&gt; finaliza um único laço, fazendo com que o Cursor de execução vá para o cabeçalho da estrutura de repetição.&lt;/p&gt;
+&lt;p&gt;Então, nunca é demais repetir que instrução &lt;code&gt;contine&lt;/code&gt; interrompe somente o ciclo que está sendo executado fazendo com que o cursor de execução retorne ao cabeçalho da estrutura de repetição para dar início a execução do ciclo seguinte.&lt;/p&gt;
+&lt;p&gt;Caso não conheças a instrução &lt;code&gt;break&lt;/code&gt; &lt;a class="reference external" href="http://excript.com/python/instrucao-break-python.html"&gt;para a interrupção de laços&lt;/a&gt;, é interessante que o faça! E também, se &lt;a class="reference external" href="http://excript.com/python/iteracao-python.html"&gt;houver dúvidas sobre as estrutruras de repetição, estude a aula&lt;/a&gt; em que tratamos sobre as mesmas.&lt;/p&gt;
+&lt;p&gt;No código abaixo construimos um simples exemplo com o único propósito de demonstrar a interrupção da execução de um único ciclo com a instruçao &lt;code&gt;continue&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, declaramos a variável &lt;code&gt;x&lt;/code&gt; e a inicializamos com o valor 0. Em seguida, implementamos um laço de repetição &lt;a class="reference external" href="http://excript.com/python/while-else-python.html"&gt;while loop&lt;/a&gt; e definimos como condição para execução do bloco de instrução, que o valor de &lt;code&gt;x&lt;/code&gt; seja menor ou igual a 10.&lt;/p&gt;
+&lt;p&gt;Na linha seguinte, incrementamos uma unidade em &lt;code&gt;x&lt;/code&gt; e em seguida, utilizamos &lt;a class="reference external" href="http://excript.com/python/if-else-python.html"&gt;a instrução if&lt;/a&gt; &lt;a class="reference external" href="http://excript.com/python/modulo-da-divisao-python.html"&gt;definindo que se o módulo de x por 2 for igual a 0&lt;/a&gt; a instrução &lt;code&gt;continue&lt;/code&gt; será executada, o que ocasionará, a interrupção da execução do ciclo.&lt;/p&gt;
+&lt;p&gt;Em decorrência da lógica implementada, a última instrução do ciclo, &lt;code&gt;print(x)&lt;/code&gt;, não é executada quando o módulo é igual a 0, até porque, a execução é interrompida com o uso da  instrução &lt;code&gt;continue&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A seguir, temos o resultado obtido com a execução do código anterior.&lt;/p&gt;
+
+&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+&lt;!-- Horizontal --&gt;
+&lt;ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5466436161806566"
+     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;pre class="literal-block"&gt;
+2
+4
+6
+8
+10
+&lt;/pre&gt;
+&lt;p&gt;Por fim, temos 2 situações que precisam ser entendidas:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;a instrução &lt;code&gt;break&lt;/code&gt; interrompe toda a execução da estrutura de repetição&lt;/li&gt;
+&lt;li&gt;a instrução &lt;code&gt;continue&lt;/code&gt; interrompe só e somente só, o ciclo que estava, ou seja, somente um ciclo é executado.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;!-- d
+Uma linda história com ``break`` e ``continue``
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Imagine-se numa situação em que o Gasparzinho lhe peça para caminhares ao redor de um quarteirão por 10 vezes. A origem é onde estás, e então, inicias a jornada de caminha 10 voltas ao redor do quarteirão. Ao invés falarmos volta, falaremos ciclo. Então, inicias a execução do primeiro ciclo de 10.
+
+Na metade da terceira volta, o Gasparzinho lhe aborda dizendo que algo aconteceu e ele não quer que você continue a execução do **terceiro ciclo** e assim, fostes magicamente levado a origem da jornada e então, dás continuidade a caminhada.
+
+SITUAÇÃO 1: na terceira volta, por alguma razão, a caminha foi interrompida e você foi levado magicamente para o ponto inicial do trajeto. Temos que o terceiro ciclo foi interrompido, MAS A JORNADA e a meta de caminhar 10 vezes ao redor do quarteirão continua.
+
+Ciclo 4 caminhado com sucesso...
+Ciclo 5 caminhado com sucesso...
+Ciclo 6 caminhado com sucesso...
+
+No ciclo 7, ou seja, na sétima vez que estavas caminhando ao redor do quarteirão, o Gasparzinho reaparece e lhe diz que a jornada deve ser interrompida, estás liberado para caminhares por onde quiseres, salvo ao redor do quarteirão.
+
+SITUAÇÃO 2: no ciclo 7, por alguma razão, o Gasparzinho resolveu interromper a jornada.
+
+CONCLUSÃO: No terceiro ciclo, por alguma razão, houve uma interrupção e não finalizastes o ciclo, onde fostes magicamente levado ao ponto inicial a joranda continua... é isso que a instrução ``continue`` desempenha: ela interrompe a execução do ciclo, e inicia a execução do ciclo seguinte.
+
+No sétimo ciclo também houve uma interrupção onde a jornada cancelada, isto é, não precisas e não deves continuar caminhando ao redor do quarteirão, a meta foi quebrada... por isso a instrução ``break``: a mesma finaliza a estrutura de repetição totalmente.
+``CONTINUE``: interrompe o ciclo
+``BREAK``: interrompe toda a execução --&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;inicio&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;else&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fim&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/iteracao-python.html"&gt;As estruturas de repetição (iteração)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/instrucao-break-python.html"&gt;Instrução break&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/while-else-python.html"&gt;Estrutura de Repetição while&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/for-in-range-python.html"&gt;Estrutura de Repetição for&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="continue"></category><category term="instrução continue"></category><category term="iteração"></category><category term="break"></category><category term="laço de repetição"></category><category term="estrutura de repetição"></category></entry><entry><title>Tipos de dados em Python</title><link href="http://excript.com/python/tipos-de-dados-python.html" rel="alternate"></link><published>2016-07-18T16:20:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-18:python/tipos-de-dados-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -798,6 +909,15 @@ beltrano
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/for-in-range-python.html"&gt;Estrutura de Repetição for..in&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/while-else-python.html"&gt;Estrutura de Repetição while(True)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/instrucao-break-python.html"&gt;Instrução break&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/instrucao-continue-python.html"&gt;Instrução continue&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category><category term="iteração"></category><category term="estrutura de repetição"></category><category term="looping"></category><category term="laço de repetição"></category><category term="laços condicionais"></category><category term="blog"></category></entry><entry><title>Argumento de Função Nomeado vs Posicional em Python</title><link href="http://excript.com/python/argumentos-nomeados-posicionais-python.html" rel="alternate"></link><published>2016-06-15T08:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:python/argumentos-nomeados-posicionais-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -3152,10 +3272,10 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;div class="section" id="ambiente-para-desenvolvimento-em-python"&gt;
 &lt;h2&gt;AMBIENTE PARA DESENVOLVIMENTO EM PYTHON&lt;/h2&gt;
 &lt;img alt="Imagem da IDE PyCharm utilizada nos Cursos da eXcript" src="../images/curso-de-python/pycharm-ide.png" /&gt;
-&lt;p&gt;Para desenvolvermos em Python, podemos utilizar qualquer editor de textos ou então, o simples Bloco de Nota do Windows. Por padrão, o interpretador do Python executa textos [códigos] compostos por caracteres ASCII e/ou Unicode e por isso, é indiferente o programa que utilizamos para escrevermos códigos. Isso porque, um arquivo de código é basicamente um arquivo de texto com a extensão *.py.&lt;/p&gt;
-&lt;p&gt;Atualmente, é comum utilizarmos programas pra construir programas, isto é, utilizamos softwares que são desenvolvidos para agilizar e automatizar a nossa tarefa de programação. Estes software são conhecidos como IDE, um acrônimo de &lt;tt class="docutils literal"&gt;Integrated Development Environment&lt;/tt&gt;, que numa tradução livre significa, &lt;tt class="docutils literal"&gt;Ambiente de Desenvolvimento Integrado&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;Existem centenas de &lt;strong&gt;IDE&lt;/strong&gt; no mercado, algumas são gratuitas, outras pagas. Os recursos que estas oferecem vão desde a compilação e execução automatica do código, até o gerenciamento e geração de código automatizado.&lt;/p&gt;
-&lt;p&gt;Para programarmos em Python, temos diversas opções de IDE disponíveis, a maioria é gratuita ou então, possui uma versão livre. Inclusive, existe &lt;strong&gt;IDE&lt;/strong&gt; para desenvolvimento em Python escritas com a própria linguagem Python, como o é o caso do &lt;a class="reference external" href="http://ninja-ide.org/downloads/"&gt;NINJA IDE&lt;/a&gt;, uma excelente ferramenta, multiplataforma, gratuita e open source.&lt;/p&gt;
+&lt;p&gt;Para desenvolvermos em &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt;, podemos utilizar qualquer editor de textos ou então, o simples Bloco de Nota do Windows. Por padrão, o interpretador do &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt; executa textos [códigos] compostos por caracteres ASCII e/ou Unicode e por isso, é indiferente o programa utilido para escrever os códigos. Isso porque, um arquivo de código é basicamente um arquivo de texto com a extensão *.py.&lt;/p&gt;
+&lt;p&gt;Atualmente, é comum utilizarmos programas pra construir programas, isto é, utilizamos softwares que são desenvolvidos para agilizar e automatizar nossas tarefas de programação. Estes software são conhecidos como &lt;tt class="docutils literal"&gt;IDE&lt;/tt&gt;, um acrônimo de &lt;tt class="docutils literal"&gt;Integrated Development Environment&lt;/tt&gt;, que numa tradução livre significa, &lt;tt class="docutils literal"&gt;Ambiente de Desenvolvimento Integrado&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Existem centenas de &lt;strong&gt;IDE&lt;/strong&gt; no mercado, muitas gratuitas, outras pagas. Os recursos que estas oferecem vão desde a compilação e execução automatica do código, até o gerenciamento e geração de código automatizado.&lt;/p&gt;
+&lt;p&gt;Para programarmos em &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt;, temos diversas opções de &lt;tt class="docutils literal"&gt;IDE&lt;/tt&gt; disponíveis, a maioria é gratuita ou então, possui uma versão livre. Inclusive, existe &lt;strong&gt;IDE&lt;/strong&gt; para desenvolvimento em &lt;tt class="docutils literal"&gt;Python&lt;/tt&gt; escritas com a própria linguagem Python, como o é o caso do &lt;a class="reference external" href="http://ninja-ide.org/downloads/"&gt;NINJA IDE&lt;/a&gt;, uma excelente ferramenta, multiplataforma, gratuita e open source.&lt;/p&gt;
 
 &lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
 &lt;!-- retangulo --&gt;
@@ -3171,8 +3291,42 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;h2&gt;PyCharm&lt;/h2&gt;
 &lt;img alt="Logo da IDE JetBrain PyCharm" src="../images/curso-de-python/jetbrains-pycharm.png" /&gt;
 &lt;p&gt;O PyCharm é uma IDE desenvolvida pela empresa &lt;a class="reference external" href="https://www.jetbrains.com/"&gt;JetBrains&lt;/a&gt;, empresa esta especializada na produção de ferramentas para o desenvolvimento de software, como por exemplo, o AndroidStudio, que atualmente é, &lt;a class="reference external" href="http://developer.android.com/"&gt;o Ambiente de Desenvolvimento oficial para a plataforma Google Android&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Os produtos &lt;a class="reference external" href="https://www.jetbrains.com/"&gt;JetBrains&lt;/a&gt;, ou melhor, as IDE´s da JetBrains, estão dentre as melhores ferramentas para desenvolvimento. Para programação em Python, temos a IDE de nome &lt;strong&gt;PyCharm&lt;/strong&gt;, e este será o programa que utilizaremos para desenvolvimento de aplicações Python em todas as aulas deste curso.&lt;/p&gt;
-&lt;p&gt;Atualmente, o &lt;strong&gt;PyCharm&lt;/strong&gt; é considerado a melhor &lt;strong&gt;IDE&lt;/strong&gt; para desenvolvimento em Python e, recomendamos que voce utilize o mesmo para o estudo da linguagem Python.&lt;/p&gt;
+
+    &lt;div class="admonitionblock tip data-line"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="icon"&gt;
+                        &lt;i class="fa icon-tip" title="Dica!"&gt;&lt;/i&gt;
+                    &lt;/td&gt;
+                    &lt;td class="content"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt;IDE é um programa para fazer programas. Nada tem a ver com a compilação, linkedição, interpretação ou geração de código executável.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;p&gt;Os produtos &lt;a class="reference external" href="https://www.jetbrains.com/"&gt;JetBrains&lt;/a&gt;, ou melhor, as &lt;tt class="docutils literal"&gt;IDE&lt;/tt&gt; s da JetBrains, estão dentre as melhores ferramentas para desenvolvimento, seja em Python, C/C++, Ruby, PHP, Web e etc. Para programação em Python, temos a IDE de nome &lt;strong&gt;PyCharm&lt;/strong&gt;, e este será o programa que utilizaremos para desenvolvimento de aplicações Python em todas as aulas deste curso.&lt;/p&gt;
+&lt;p&gt;Atualmente, o &lt;strong&gt;PyCharm&lt;/strong&gt; é considerado a melhor &lt;strong&gt;IDE&lt;/strong&gt; para desenvolvimento em Python e, recomendamos que voce utilize o mesmo em seu estudo, até porque, é gratuito e fácil de utilizar.&lt;/p&gt;
+
+    &lt;div class="admonitionblock tip data-line"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="icon"&gt;
+                        &lt;i class="fa icon-tip" title="Dica!"&gt;&lt;/i&gt;
+                    &lt;/td&gt;
+                    &lt;td class="content"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt;Você pode utilizar quaisquer IDE para desenvolvimento em Python.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
 
 &lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
 &lt;!-- Horizontal --&gt;
@@ -3183,7 +3337,7 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;script&gt;
 (adsbygoogle = window.adsbygoogle || []).push({});
 &lt;/script&gt;
-&lt;p&gt;O PyCharm possui uma versão gratuita e uma versão paga. Inicialmente, a versão gratuita possui muito mais recursos do que iremos precisar, porém, quando estivermos desenvolvendo para Web e utilizando framework's como Django ou Flask, é producente adquirir uma licença pela agilidade e produtividade que a versão comercial do PyCharm proporciona.&lt;/p&gt;
+&lt;p&gt;O &lt;tt class="docutils literal"&gt;PyCharm&lt;/tt&gt; possui uma versão gratuita e uma versão paga. Inicialmente, a versão gratuita possui muito mais recursos do que iremos precisar, porém, quando estivermos desenvolvendo para Web e utilizando framework's como Django ou Flask, é producente adquirir uma licença pela agilidade e produtividade que a versão comercial do PyCharm proporciona.&lt;/p&gt;
 &lt;p&gt;A IDE PyCharm oferece um módulo de acesso a Banco de Dados e também, trás uma maneira de testarmos códigos SQL, administrar o nosso banco, alterar, editar e excluir registros de maneira simples e rápida. Conseguimos administrar praticamente todos os bancos de dados do mercado sem a necessidade de utilizarmos outro programa, até porque, o PyCharm possui todo o módulo de acesso a base de dados incorporada a IDE.&lt;/p&gt;
 &lt;p&gt;Neste curso utilizaremos a versão comunitária do PyCharm e recomendamos que você também a utilize. Porém, sinta-se livre para trabalhar com qualquer editor, o resultado sempre deverá ser o mesmo, haja vista que a &lt;strong&gt;IDE&lt;/strong&gt;, isto é, o Ambiente de Desenvolvimento Integrado, gerencia a produção de código sem alterar ou influenciar como o código será executado.&lt;/p&gt;
 &lt;/div&gt;
@@ -3608,6 +3762,11 @@ Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span
 &lt;h3&gt;POSSO UTILIZAR O NOTEPAD AO INVÉS DO &lt;tt class="docutils literal"&gt;PyCharm&lt;/tt&gt;?&lt;/h3&gt;
 &lt;p&gt;Sem qualquer problema! Porém, você terá que escrever seu código e em seguir ir no Prompt de Comando, Shell e mandar executar o seu código.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="posso-utilizar-outra-ide"&gt;
+&lt;h2&gt;POSSO UTILIZAR OUTRA IDE?&lt;/h2&gt;
+&lt;p&gt;Sim! É possível acompanhar as aulas utilizando quaisquer IDE do mercado. Porém, esteja certo de que as configurações da IDE estejam corretas, como por exemplo, qual interpretador será utilizadi para executar o código.&lt;/p&gt;
+&lt;p&gt;Nunca é demais repetir que não existe um programa que deve ser utilizado obrigatoriamente para construir outros programas. Todas as IDE são, em sua definição mais primitiva, editores de texto puro. Porém, esses software incorporaram uma série de funcionalidades que ajudam no desenvolvimento de software e assim, acabam sendo utilizadas pelos desenvolvedores.&lt;/p&gt;
 &lt;div class="section" id="e-melhor-aprender-logica-de-programacao-antes-do-python"&gt;
 &lt;h3&gt;É MELHOR APRENDER LÓGICA DE PROGRAMAÇÃO ANTES DO PYTHON?&lt;/h3&gt;
 &lt;p&gt;Não! Inclusive, há muitas escolas que ensinam programação com a linguagem Python, logo, o mesmo pode ser utilizando para o aprendizado da programação, bem como, da lógica de programação.&lt;/p&gt;
@@ -5610,107 +5769,7 @@ Assim, ainda que o funcionamento das lista em seja similar a um Array em C, C++,
 &lt;p&gt;Por exemplo, se falarmos em Pilha, iremos tratar da forma como novos elementos são inseridos na lista, e na forma como ocorrerá a sua remoção. Ou seja, se formos colocando um livro em cima de outro, teremos, após o segundo livro, uma pilha de livros, onde os livros sempre são adicionados sobre o último livro adicionado. Da mesma forma, temos que se formos verificar os livros contidos nessa Pilha, veremos que o último a entrar, será o primeiro da Pilha, da mesma forma que o primeiro a entrar nessa Pilha, será o último ser verificado.&lt;/p&gt;
 &lt;p&gt;Assim, temos que uma Pilha é uma lista, porém, a forma como manipulamos os elementos, seja na inclusão ou na leitura, funciona de maneira igual ao que ocorre, por exemplo, com uma pilha de livros e etc.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category></entry><entry><title>Instrução continue em Python</title><link href="http://excript.com/python/instrucao-continue-python.html" rel="alternate"></link><published>2014-11-03T18:17:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-11-03:python/instrucao-continue-python.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a instrução "continue", uma ferramenta a ser utilizada dentro das estruturas de repetição e que nos proporciona um maior controle sobre a iteração.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="instrucao-continue"&gt;
-&lt;h2&gt;INSTRUÇÃO &lt;code&gt;continue&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A instrução &lt;code&gt;continue&lt;/code&gt; interrompe a execução do ciclo. A instrução &lt;code&gt;break&lt;/code&gt; e a instrução &lt;code&gt;continue&lt;/code&gt; são ferramentas das estruturas de repetição permitindo a interrupção de um único ciclo ou do laço de repetição.&lt;/p&gt;
-&lt;p&gt;É importante observar que somente o ciclo que está sendo executado será interrompido, logo, o cursor de execução retorna ao cabeçalho da estrutura de repetição e tem início a execução do ciclo seguinte.&lt;/p&gt;
-&lt;p&gt;No código abaixo construimos um simples exemplo com o único propósito de demonstrar a interrupção da execução de um único ciclo.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;continue&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, declaramos a variável &lt;code&gt;x&lt;/code&gt; e a inicializamos com o valor 0. Em seguida, implementamos um laço de repetição &lt;tt class="docutils literal"&gt;while loop&lt;/tt&gt; e definimos como condição para execução do bloco de instrução, que o valor de &lt;code&gt;x&lt;/code&gt; seja menor ou igual a 10.&lt;/p&gt;
-&lt;p&gt;Na linha seguinte, incrementamos uma unidade em &lt;code&gt;x&lt;/code&gt; e em seguida, utilizamo a instrução &lt;code&gt;if&lt;/code&gt; definindo que nas situações onde o módulo de &lt;code&gt;x&lt;/code&gt; por 2 precisa for igual a 0 a instrução &lt;code&gt;continue&lt;/code&gt; deve ser executada, o que ocasiona, a interrupção da execução do ciclo.&lt;/p&gt;
-&lt;p&gt;Em decorrência da lógica implementada, a última instrução do ciclo, &lt;code&gt;print(x)&lt;/code&gt;, não é executada quando o módulo é igual a 0, até porque, a execução é interrompida com o uso da  instrução &lt;code&gt;continue&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;A seguir, temos o resultado obtido com a execução do código anterior.&lt;/p&gt;
-
-&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
-&lt;!-- Horizontal --&gt;
-&lt;ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5466436161806566"
-     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
-&lt;pre class="literal-block"&gt;
-2
-4
-6
-8
-10
-&lt;/pre&gt;
-&lt;p&gt;Por fim, temos 2 situações que precisam ser entendidas:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;a instrução &lt;code&gt;break&lt;/code&gt; interrompe toda a execução da estrutura de repetição&lt;/li&gt;
-&lt;li&gt;a instrução &lt;code&gt;break&lt;/code&gt; interrompe só e somente só, o ciclo que estava, ou seja, somente um ciclo é executado.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;!-- d
-Uma linda história com ``break`` e ``continue``
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-Imagine-se numa situação em que o Gasparzinho lhe peça para caminhares ao redor de um quarteirão por 10 vezes. A origem é onde estás, e então, inicias a jornada de caminha 10 voltas ao redor do quarteirão. Ao invés falarmos volta, falaremos ciclo. Então, inicias a execução do primeiro ciclo de 10.
-
-Na metade da terceira volta, o Gasparzinho lhe aborda dizendo que algo aconteceu e ele não quer que você continue a execução do **terceiro ciclo** e assim, fostes magicamente levado a origem da jornada e então, dás continuidade a caminhada.
-
-SITUAÇÃO 1: na terceira volta, por alguma razão, a caminha foi interrompida e você foi levado magicamente para o ponto inicial do trajeto. Temos que o terceiro ciclo foi interrompido, MAS A JORNADA e a meta de caminhar 10 vezes ao redor do quarteirão continua.
-
-Ciclo 4 caminhado com sucesso...
-Ciclo 5 caminhado com sucesso...
-Ciclo 6 caminhado com sucesso...
-
-No ciclo 7, ou seja, na sétima vez que estavas caminhando ao redor do quarteirão, o Gasparzinho reaparece e lhe diz que a jornada deve ser interrompida, estás liberado para caminhares por onde quiseres, salvo ao redor do quarteirão.
-
-SITUAÇÃO 2: no ciclo 7, por alguma razão, o Gasparzinho resolveu interromper a jornada.
-
-CONCLUSÃO: No terceiro ciclo, por alguma razão, houve uma interrupção e não finalizastes o ciclo, onde fostes magicamente levado ao ponto inicial a joranda continua... é isso que a instrução ``continue`` desempenha: ela interrompe a execução do ciclo, e inicia a execução do ciclo seguinte.
-
-No sétimo ciclo também houve uma interrupção onde a jornada cancelada, isto é, não precisas e não deves continuar caminhando ao redor do quarteirão, a meta foi quebrada... por isso a instrução ``break``: a mesma finaliza a estrutura de repetição totalmente.
-``CONTINUE``: interrompe o ciclo
-``BREAK``: interrompe toda a execução --&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;inicio&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;continue&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;break&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;else&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fim&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="continue"></category><category term="instrução continue"></category></entry><entry><title>Operadores Lógicos em Python</title><link href="http://excript.com/python/operadores-logicos-python.html" rel="alternate"></link><published>2014-06-03T18:11:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-03:python/operadores-logicos-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category></entry><entry><title>Operadores Lógicos em Python</title><link href="http://excript.com/python/operadores-logicos-python.html" rel="alternate"></link><published>2014-06-03T18:11:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-03:python/operadores-logicos-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
