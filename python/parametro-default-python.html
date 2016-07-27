@@ -25,7 +25,7 @@
 
         <meta property="og:description" content="Nesta aula continuaremos o estudo dos parâmetros e iremos aprofundar nosso entendimento com a definição e a capacidade de definirmos parâmetros default em nossas funções."/>
 
-        <meta property="article:published_time" content="15-06-2016" />
+        <meta property="article:published_time" content="27-07-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -118,7 +118,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2016-06-15T08:00:00-03:00"> Publicado em 15-06-2016</time>
+            <time datetime="2016-07-27T08:30:00-03:00"> Publicado em 27-07-2016</time>
         </span>
 
 
@@ -382,7 +382,14 @@ eXcript            </a>
     </div>
 <div class="section" id="parametros-default">
 <h2>PARÂMETROS DEFAULT</h2>
-<p><tt class="docutils literal">Parâmetro default</tt> são parâmetros que recebem um valor na implementação da função, ou seja, o valor é atribuído ao parâmetro dentro do parêntesis. Os <tt class="docutils literal">parâmetros default</tt> funcionam da mesma forma que a inicialização de variáveis, ou seja, nós definimos um valor no momento da sua declaração.</p>
+<p><tt class="docutils literal">Parâmetro default</tt> é uma parâmetro que tem um valor associado na declaração da função, ou seja, o valor é atribuído ao parâmetro dentro do parêntesis. O <tt class="docutils literal">parâmetros default</tt> funciona da mesma forma que a inicialização e declaração de variáveis, isto é, a mesma recebe um valor no momento da sua declaração.</p>
+<p>Por exemplo, vamos implementar uma simples função e definir um único parâmetro default.</p>
+<div class="highlight"><pre><span></span><span class="c1"># a função está sendo definida e o valor 1000 está sendo associado</span>
+<span class="c1"># ao parametro de nome param1</span>
+<span class="k">def</span> <span class="nf">minha_funcao</span><span class="p">(</span><span class="n">param1</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">param1</span><span class="p">)</span>
+</pre></div>
+<p>Como pode ser visto no código acima, implementamos uma função de nome <code>minha_funcao()</code> e definimos no cabeçalho da mesma [entre parêntesis] um parâmetro de nome <code>param1</code> e associamos a este nome o valor inteiro 1000.</p>
 
     <div class="admonitionblock tip data-line">
         <table>
@@ -393,26 +400,29 @@ eXcript            </a>
                     </td>
                     <td class="content">
                         <div class="paragraph data-line">
-                            <p>Podemos pensar em parâmetros default como se fossem variáveis que são, inicializadas no momento da declaração.</p>
+                            <p>Podemos pensar em parâmetros default como se fossem variáveis que são inicializadas no momento da declaração.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<p>Esse recurso faz com que o parâmetro possa ser omitido quando a função for invocada. Até o momento, invocamos várias vezes funções que continham <tt class="docutils literal">parâmetros default</tt>, como por exemplo, a função <code>range()</code>. A seguir, temos o cabeçalho da função range().</p>
+<p>A biblioteca padrão do Python contém centenas de funções que possuem parâmetros com valores associados, uma delas é a função range() já estudada.</p>
+<p>Em aulas anteriores, invocamos, algumas vezes, funções que continham <tt class="docutils literal">parâmetros default</tt>,  por exemplo, a função <code>range()</code>, cuja notação pode ser vista no trecho de código a seguir.</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
-<p>O segundo parâmetro de nome <code>start</code> é inicializado com o valor <code>None</code>. Para o Python, <code>None</code> é igual a zero e assim, se a função <code>range()</code> for invocada utilizando somente 2 argumentos, ocorrerá que o parâmetro <code>start</code> será interpretado como sendo zero e então, a lista numérica retornada estará no intervalo fechado, iniciando em zero e finalizando com intervalo aberto referente ao final da sequência numérica.</p>
-<p><tt class="docutils literal">Parâmetro default</tt> é um conceito que poupa, na maior parte das vezes, a utilização de uma estrutura condicional e por isso, evita alguns erros simples.</p>
-<p>No trecho de código a seguir, definiremos uma função que define valores default para seus parâmetros.</p>
+<p>A função <code>range()</code> é, na verdade, uma classe, por isso que o nome da função é <code>__init__()</code>, isto é, essa função é a função que é invocada quando uma nova instância está sendo criada.</p>
+<p>O primeiro parâmetro é de nome <code>self</code>, neste momento, temos que saber somente que este parâmetro é comum em todas as funções implementadas dentro de quaisquer classe. Então, não vamos estuda-lo agora, até porque, quando criamos uma instância de <code>range()</code> não é necessário enviar o argumento de nome <code>self</code>.</p>
+<p>O segundo parâmetro de nome <code>start</code> é inicializado com o valor <code>None</code>. Para o Python, <code>None</code> é igual a zero e assim, se a função <code>range()</code> for invocada utilizando somente 2 argumentos, ocorrerá que o parâmetro <code>start</code> será interpretado como sendo zero e então, a lista numérica retornada estará no intervalo fechado, iniciando em zero.</p>
+<p>Os 2 outros parâmetros definidos na função serão estudados na sequência, o nosso objetivo agora, foi somente estudar o parâmetro defaulta da função de inicialização da classe <code>range()</code>.</p>
+<p>No trecho de código a seguir, implementamos uma função que define parâmetros default.</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="n">senha</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span> <span class="s2">&quot;user: &quot;</span> <span class="o">.</span> <span class="n">user</span>
     <span class="k">print</span><span class="p">(</span> <span class="s2">&quot;senha: &quot;</span> <span class="o">.</span> <span class="n">senha</span>
 </pre></div>
 <p>A função <code>login()</code>, definida no código acima, pode ser invocada sem que seja passado um único argumento, até porque, por padrão, há valores definidos para todos os parâmetros declarados.</p>
-<p>É importante lembrar que se invocarmos uma função sem passarmos os parâmetros que estão definidos, o Python levantará uma exceção, porém, com o uso de <tt class="docutils literal">parâmetros default</tt> a obrigatoriedade torna-se facultativa a implementação.</p>
+<p>É importante dizer que, se invocarmos uma função sem passarmos os parâmetros que estão definidos, o Python levantará uma exceção, porém, com o uso de <tt class="docutils literal">parâmetros default</tt>, a obrigatoriedade torna-se facultativo.</p>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Horizontal -->

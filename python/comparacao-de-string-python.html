@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/comparacao-de-string-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python" />
+        <meta name="keywords" content="curso,python,caractere,ascii,unicode,escape sequence" />
     <meta name="description" content="Nesta aula, aprenderemos, como funciona a comparação de string no Python, e também, veremos o como que é definido, internamente, quando é solicitado a relação entre 2 caracteres." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,10 +25,14 @@
 
         <meta property="og:description" content="Nesta aula, aprenderemos, como funciona a comparação de string no Python, e também, veremos o como que é definido, internamente, quando é solicitado a relação entre 2 caracteres."/>
 
-        <meta property="article:published_time" content="24-07-2015" />
+        <meta property="article:published_time" content="26-07-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="caractere" />
+            <meta property="article:tag" content="ascii" />
+            <meta property="article:tag" content="unicode" />
+            <meta property="article:tag" content="escape sequence" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -113,7 +117,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2015-07-24T13:42:00-03:00"> Publicado em 24-07-2015</time>
+            <time datetime="2016-07-26T13:01:00-03:00"> Publicado em 26-07-2016</time>
         </span>
 
 
@@ -377,8 +381,8 @@ eXcript            </a>
     </div>
 <div class="section" id="introducao">
 <h2>INTRODUÇÃO</h2>
-<p>Para entendermos como o Python estabelece a relação entre 2 caracteres, precisamos entender alguns conceitos sobre o princípio da computação. Então, nessa aula, iremos estudar alguns conceitos que não estão relacionados diretamente a linguagem, mas sim, a computação propriamente dita.</p>
-<p>A seguir, temos um código de degustação, onde as expressões serao o resultado da relação entre 2 caracteres.</p>
+<p>Para entendermos como o Python estabelece a relação entre 2 caracteres, precisamos entender alguns conceitos sobre o princípio da computação. Então, nessa aula, iremos estudar alguns conceitos que não estão relacionados diretamente a linguagem Python, e sim, a computação propriamente dita.</p>
+<p>A seguir, temos um código de &quot;degustação&quot;, onde as expressões serão o resultado da relação entre 2 caracteres.</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;A&quot;</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span>
 <span class="bp">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;b&quot;</span> <span class="o">==</span> <span class="s2">&quot;b&quot;</span>
@@ -401,24 +405,29 @@ eXcript            </a>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>A tabela ASCII contém os caracteres vinculados a um número inteiro positivo. Essa tabela decorre do fato de que o computador só manipula números, logo, cada caractere possui um número que o identifique.</p>
-<p>O termo <tt class="docutils literal">ASCII</tt> é um acrônimo de &quot;American Standard Code for Information Interchange&quot; que numa tradução livre, seria, &quot;Código Padrão Americano para o Intercâmbio de Informação&quot;.</p>
-<p>Podemos obter o código ASCII de um caractere ou então, através de um código obter um caractere. Geralmente, trabalhamos com os códigos ASCII quando estamos definindo funcionalidades para determinadas teclas, como por exemplo, na construção de um jogo.</p>
+<p>A tabela ASCII contém os caracteres vinculados a um número inteiro positivo. Essa tabela decorre do fato de que o computador só manipula números, logo, cada caractere, possui, um número que o identifique.</p>
+<p>O termo <tt class="docutils literal">ASCII</tt> é um acrônimo de <a class="reference external" href="https://pt.wikipedia.org/wiki/ASCII">American Standard Code for Information Interchange</a> que numa tradução livre, seria, &quot;Código Padrão Americano para o Intercâmbio de Informação&quot;.</p>
+<p>Podemos obter o código ASCII de um caractere ou então, através de um caractere, obter o seu respectivo código. Geralmente, trabalhamos com os códigos ASCII quando estamos definindo funcionalidades para determinadas teclas, como por exemplo, na construção de um jogo.</p>
 <p>A tabela ASCII é a convenção que define o valor decimal e binário de cada caractere. Nesse momento, não aprofundaremos o estudo sobre a tabela ASCII ou então, o padrão UNICODE. Porém, estudaremos detalhadamente numa próxima situação. Agora, o que nós temos que saber, é que cada letra do nosso teclado está associado a um valor numérico.</p>
+<p><a class="reference external" href="https://docs.python.org/3/howto/unicode.html">Veja neste link uma explicação da relação do Python com o sistema UNICODE</a> .</p>
 <p>Por exemplo, a letra <tt class="docutils literal">A</tt> maiúscula recebe o código 65, a letra <tt class="docutils literal">B</tt> o código 66 e assim por diante. A letra <tt class="docutils literal">a</tt> minúscula, recebe o código 97, e a letra <tt class="docutils literal">b</tt> minúscula o código 98 e assim por diante.</p>
-<p>Esses valores serão utilizados, por exemplo, para compararmos <tt class="docutils literal">String</tt>. Por exemplo, se digitar a seguinte expressão, qual o valor lógico retornado?</p>
+<p>Esses valores serão utilizados, por exemplo, quando comparamos 2 <tt class="docutils literal">String</tt> distintas. Por exemplo, se digitar a seguinte expressão, qual o valor lógico retornado?</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;a&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;X&quot;</span>
 <span class="bp">True</span>
 </pre></div>
-<p>Nós temos que o valor lógico retornado será True, até porque, o código ASCII do caractere <tt class="docutils literal">a</tt> minúsculo é maior do que o caractere <tt class="docutils literal">x</tt>. Você pode pesquisar por tabela ASCII que facilmente encontraras a tabelas com todos os seus valores. Porém, nós temos 2 funções que são bastante uteis. A primeira é a função <tt class="docutils literal">ord()</tt>, que recebe uma letra como parâmetro e retorna o código ASCII da mesma. A segunda função, é a <tt class="docutils literal">chr()</tt>, onde passamos o código ASCII e nos é retornado a respectiva letra. Por exemplo, vamos entender a razão de recebermos o valor lógico True quando comparamos a String anteriormente.</p>
+<p>Temos que o valor lógico retornado será <tt class="docutils literal">True</tt>, até porque, o código ASCII do caractere <tt class="docutils literal">a</tt> minúsculo (65) é maior do que o caractere <tt class="docutils literal">X</tt> maiúsculo.</p>
+<p>O Python disponibiliza 2 funções que são bastante uteis quando estamos trabalhando com o sistema ASCII. A primeira é a função <a class="reference external" href="https://docs.python.org/3/library/functions.html#ord">ord()</a> , que recebe uma letra como parâmetro e retorna o código ASCII da mesma. A segunda função, é a <a class="reference external" href="https://docs.python.org/3/library/functions.html#chr">chr()</a> , onde passamos o código ASCII e nos é retornado a respectiva letra.</p>
+<p>A seguir, temos 2 exemplos utilizando as funções builtin do Python <a class="reference external" href="https://docs.python.org/3/library/functions.html#ord">ord()</a> e <a class="reference external" href="https://docs.python.org/3/library/functions.html#chr">chr()</a>.</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
 <span class="mi">97</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>
 <span class="s1">&#39;a&#39;</span>
 </pre></div>
+<p>No exemplo acima, inicialmente, confirmamos que o código ASCII da letra <cite>a</cite> minúscula é 97. Em seguida, passamos o código 97 como argumento da função <cite>chr()</cite> e, como resposta, tivemos o caractere <cite>a</cite>.</p>
 </div>
 <div class="section" id="exemplo-imprimindo-a-tabela-ascii">
 <h2>EXEMPLO - IMPRIMINDO A TABELA ASCII</h2>
+<p>A seguir, temos um exemplo em que é impresso, na saída padrão, o código ASCII e a respectiva letra dos 122 primeiros caracteres.</p>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">123</span><span class="p">):</span>
     <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - &quot;</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
@@ -550,18 +559,25 @@ eXcript            </a>
 </div>
 <div class="section" id="caracteres-de-escape">
 <h2>CARACTERES DE ESCAPE</h2>
-<p>Os <tt class="docutils literal">caracteres de escape</tt> é uma definição para adicionar as strings marcações que não possuem um desenho propriamente dito, porém, que desempenham tarefas bastante importantes na formatação e exibição dos textos. Tomemos por exemplo, uma quebra de linha, ou seja, o pressionamento da tecla Enter.</p>
-<p>A quebra de linha não possui um caractere que a represente visualmente, até porque, a sua representação visual, é o posicionamento do cursor no canto esquerto da linha seguinte. O mesmo acontece com a tabulação, não há um desenho que a represente, até porque, o objetivo, é o posicionamento do texto mais a direita do vídeo.</p>
+<p>Os <tt class="docutils literal">caracteres de escape</tt> é uma definição para adicionar as strings, marcações que não possuem um desenho (representação visual) propriamente dito. Ainda que estes caracteres não tenham uma simbologia que os justifiquem, os mesmos possuem representações na forma em que nossos textos serão exibidos ou impressos. Assim, temos que os <tt class="docutils literal">Caracteres de Escape</tt> desempenham tarefas bastante importantes na formatação e exibição dos textos. Tomemos por exemplo, uma quebra de linha, ou seja, o pressionamento da tecla Enter.</p>
+<p>A quebra de linha não possui um caractere que a represente visualmente, até porque, a sua representação visual, é o posicionamento do cursor no canto esquerto da linha seguinte. O mesmo acontece com a tabulação, onde não há um desenho que a represente, até porque, o objetivo, é o posicionamento do texto mais a direita do vídeo.</p>
 <p>É interessante notar, que os <tt class="docutils literal">Caracteres de Escape</tt>, fazem um trabalho semelhante, ao encontrado em linguagem de marcação moderna, como por exemplo, o HTML, que utiliza para a representação de quebra de linha, a Tag <tt class="docutils literal">&lt;br&gt;</tt>.</p>
 </div>
 <div class="section" id="notacao-de-escape">
 <h2>NOTAÇÃO DE ESCAPE</h2>
 <p>A notação utilizada e o que define os <tt class="docutils literal">Caracteres de Escape</tt>, é a barra invertida. Todo <tt class="docutils literal">Caractere de Escape</tt> é formado por uma barra invertida e outro caractere que definirá a ação.</p>
 <p>O primeiro caractere, no caso, a barra, define que estamos utilizando a notação de <tt class="docutils literal">Caracteres de Escape</tt>, enquanto que o segundo caractere, representa a ação a ser realizada.</p>
+<div class="section" id="exemplos">
+<h3>EXEMPLOS</h3>
+<ul class="simple">
+<li>/n - quebra de linha</li>
+<li>/t - tabulação</li>
+</ul>
+</div>
 </div>
 <div class="section" id="possiveis-erros">
 <h2>POSSÍVEIS ERROS</h2>
-<p>Alguns Caracteres de Escape, talvez, não funcionem no editor que estejas utilizando, e também, não tente utilizar os <tt class="docutils literal">Caracteres de Escape</tt> dentro de editores de texto puro, como por exemplo, o Bloco de Notas do Windows, até porque, ao invés de obteres um o resultado aqui descrito, terás somente, os digitos em sua representação textual.</p>
+<p>Alguns Caracteres de Escape, talvez, não funcionem no editor que estejas utilizando, e também, não tente utilizar os <tt class="docutils literal">Caracteres de Escape</tt> dentro de editores de texto puro, como por exemplo, o <tt class="docutils literal">Bloco de Notas</tt> do Windows, até porque, ao invés de obteres um o resultado aqui descrito, terás somente, os digitos em sua representação textual.</p>
 <p>Os <tt class="docutils literal">Caracteres de Escape</tt>, como por exemplo, o <tt class="docutils literal">Carriage Return</tt>, cuja notação é <tt class="docutils literal">\r</tt>, normalmente, não funciona na plataforma Windows e nem nos Prompts de Comando modernos. O mesmo foi amplamente utilizado, na época das impressoras matriciais, até porque, praticamente todo o controle era feito com uso de <tt class="docutils literal">Caracteres de Escape</tt>, e o funcionamento da manipulação das impressoras, ocorria de forma semelhante a maneira como manipulamos o prompt atutalmente. A diferença, é que ao invés de enviarmos o texto para o o Prompt, enviávamos para um arquivo virtual, que era na verdade, a saída padrão da impressora.</p>
 </div>
 <div class="section" id="a-tabela-de-caracteres-de-escape">
@@ -600,7 +616,12 @@ eXcript            </a>
 <span class="p">}</span>
 </pre></div>
 <p>Observe no código acima, que o Caractere de Escape n está junto a palavra <tt class="docutils literal">galera</tt>, porém o mesmo, será interpretado pela compilador e então, uma quebra de linha será adicionada.</p>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Escape_sequences_in_C">https://en.wikipedia.org/wiki/Escape_sequences_in_C</a></p>
+</div>
+<div class="section" id="links">
+<h2>LINKS</h2>
+<p><a class="reference external" href="https://docs.python.org/3/howto/unicode.html">Python e o sistema UNICODE</a>
+<a class="reference external" href="https://en.wikipedia.org/wiki/Escape_sequences_in_C">Escape Sequence em C</a>
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#ascii">Função Builtin ascii() do Python</a></p>
 </div>
 
 				</div>
@@ -629,7 +650,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/caractere.html">caractere</a>, 	<a href="http://excript.com/tag/ascii.html">ascii</a>, 	<a href="http://excript.com/tag/unicode.html">unicode</a>, 	<a href="http://excript.com/tag/escape-sequence.html">escape sequence</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
