@@ -1,5 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-27T08:30:00-03:00</updated><entry><title>Parâmetros default em Python</title><link href="http://excript.com/python/parametro-default-python.html" rel="alternate"></link><published>2016-07-27T08:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-27:python/parametro-default-python.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://excript.com/feeds/all.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-08-30T10:26:00-03:00</updated><entry><title>Ordenamento de Listas em Python</title><link href="http://excript.com/python/ordenamento-lista-python.html" rel="alternate"></link><published>2016-08-30T10:26:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-08-30:python/ordenamento-lista-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos o ordenamento de lista, a ordem padrão, como inverter a ordem e outras funcionalidades disponibilizadas pela biblioteca padrão do Python.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;Ordenar é definir a sequência dos elementos contidos numa lista. Por padrão, todo novo elementos adicionados é incluído no final da lista, logo, seu índice será igual a -1.&lt;/p&gt;
+&lt;p&gt;As listas são ordenadas das mais diversas formas, como por exemplo, por ordem alfabética. Todo ordenameto é um algoritmo que define a sequência em que os elementos serão dispostos. O Python disponibiliza por padrão, o ordenamento por ordem alfabética através funções incluídas na biblioteca padrão.&lt;/p&gt;
+&lt;p&gt;Nosso objetivo agora é estudar a função de ordenação disponibilizada nativamente pelo Python.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-descricao-dos-objetos"&gt;
+&lt;h2&gt;A DESCRIÇÃO DOS OBJETOS&lt;/h2&gt;
+&lt;p&gt;Em Python, há 2 funções que definem um texto a ser impresso na saída padrão, isto é, se passarmos uma lista com parâmetro da função &lt;code&gt;print()&lt;/code&gt; os elementos serão impressos na saída padrão devido a programação implementada pela classe &lt;code&gt;list&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Podemos implementar a função &lt;tt class="docutils literal"&gt;__str__()&lt;/tt&gt; ou então, &lt;tt class="docutils literal"&gt;__repr__()&lt;/tt&gt; dentro das nossas classes para que as essas retornem qualquer texto que melhor defina o conteúdo do objeto.&lt;/p&gt;
+&lt;p&gt;Na ordenação, o funcionamento ocorrerá, por padrão, com o uso dessa descrição. Assim, se a classe no qual o objeto foi criado não possuir a implementação dessas funções, não será possível organizar com as funções padrão das bibliotecas.&lt;/p&gt;
+&lt;p&gt;Por padrão, todas as classes nativas trazem essas funções implementadas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-funcao-sort"&gt;
+&lt;h2&gt;A FUNÇÃO &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt;&lt;/h2&gt;
+
+&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+&lt;!-- Horizontal --&gt;
+&lt;ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5466436161806566"
+     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;p&gt;A função &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt; ordena os elementos alfabeticamente. Como estudado acima, o texto utilizado por padrão, será aquele retornado pelas funções que descrevem o conteúdo dos objetos.&lt;/p&gt;
+&lt;p&gt;A seguir, vamos definir uma lista e então, com a função &lt;code&gt;sort()&lt;/code&gt;, iremos ordenar os elementos.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como pode ser visto, inicialmente, a lista foi impressa seguindo a ordem em que definimos os elementos ainda na declaração. Em seguida, invocamos a função &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt; e então, a lista foi impressa com os elementos ordenados alfabeticamente.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ordem-inversa"&gt;
+&lt;h2&gt;ORDEM INVERSA&lt;/h2&gt;
+&lt;p&gt;Para invertermos a sequência, isto é, para que o últimos seja o primeiro e o primeiro o último, passamos como argumento da função &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt; &lt;tt class="docutils literal"&gt;reverse=True&lt;/tt&gt;. O parâmetro &lt;tt class="docutils literal"&gt;reverse&lt;/tt&gt; como podemos deduzir, informa que queremos a ordem alfabética normal quando igual a &lt;code&gt;True&lt;/code&gt; ou então, a ordem reversa quando igual &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como podemos ver, os itens foram impressos ordenamente na ordem reversa.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-funcao-reverse"&gt;
+&lt;h2&gt;A FUNÇÃO &lt;code&gt;reverse()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A função &lt;code&gt;reverse()&lt;/code&gt; inverte a ordem da lista mas sem ordena-la, ou seja, a ordem em que os elementos estão dispostos é indiferente, o que importa, é fazer com que o último seja o primeiro e vice-e-versa.&lt;/p&gt;
+&lt;p&gt;Vamos definir uma lista numérica e em seguida, invocar a função &lt;code&gt;reverse()&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;234&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;234&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;234&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, definimos uma lista e vinculamos a referência &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; à mesma. Feito isso, invocamos a função &lt;code&gt;reverse()&lt;/code&gt; e então, imprimimos novamente os elementos. Desta vez, a impressão ocorreu na ordem inversa a ordem em que os elementos foram adicionados. Isso porque, a função &lt;code&gt;reverse()&lt;/code&gt; havia sido invocada.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="como-a-inversao-ocorre-internamente"&gt;
+&lt;h2&gt;COMO A INVERSÃO OCORRE INTERNAMENTE&lt;/h2&gt;
+&lt;p&gt;O Python sempre busca a forma de trabalho menos custoza, isto é, a mais performática. Por isso, ao invocarmos a função &lt;code&gt;reverse()&lt;/code&gt;, ou então, ao ordenarmos inversamente os elementos, internamente, somente um propriedade é alterada, sem que nenhum elemento seja movido.&lt;/p&gt;
+&lt;p&gt;Isso é possível pelo fato das listas serem objetos iteraveis, definição está que permite-nos entregar os elementos da forma como bem entendermos. Assim, não podemos ver uma lista como sendo um Array em C, até porque, em Python, sempre é feito o mínimo necessário, utilizando desta maneira, a menor quantidade de memória e distribuindo o processamento.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists"&gt;(en) Documentação Oficial&lt;/a&gt;
+&lt;a class="reference external" href="http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_08.html"&gt;(pt) Listas - Aprenda Computação com Python v1.1&lt;/a&gt;
+&lt;a class="reference external" href="http://pt.stackoverflow.com/questions/130880/list-compreension-vs-ciclo-for"&gt;(pt) Stack Overflow&lt;/a&gt;
+&lt;a class="reference external" href="http://www.devfuria.com.br/python/listas/"&gt;(pt) O BÁSICO DE LISTAS - Devfuria&lt;/a&gt;
+&lt;a class="reference external" href="http://www.tutorialspoint.com/python/python_lists.htm"&gt;(en) Tutorial Point&lt;/a&gt;
+&lt;a class="reference external" href="http://effbot.org/zone/python-list.htm"&gt;(en) An Introduction to Python Lists&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="lista"></category><category term="ordenação"></category><category term="blog"></category></entry><entry><title>Parâmetros default em Python</title><link href="http://excript.com/python/parametro-default-python.html" rel="alternate"></link><published>2016-07-27T08:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-27:python/parametro-default-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -13808,102 +13903,7 @@ Essa é a razão de hoje haver tantas empresas e tantos diferentes banco de dado
 &lt;a class="reference external" href="http://www.sqlite.org/"&gt;http://www.sqlite.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Após o download dos arquivos para o acesso ao SQLite, será necessário adicionar ao path o sistema operacional o local onde você colocou os arquivos e então, o seu computador já estará pronto para o uso.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>Ordenamento de Listas em Python</title><link href="http://excript.com/python/ordenamento-lista-python.html" rel="alternate"></link><published>2015-05-03T21:26:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-03:python/ordenamento-lista-python.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o ordenamento de lista, a ordem padrão, como inverter a ordem e outras funcionalidades disponibilizadas pela biblioteca padrão do Python.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="introducao"&gt;
-&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
-&lt;p&gt;Ordenar é definir a sequência dos elementos contidos numa lista. Por padrão, todo novo elementos adicionados é incluído no final da lista, logo, seu índice será igual a -1.&lt;/p&gt;
-&lt;p&gt;As listas são ordenadas das mais diversas formas, como por exemplo, por ordem alfabética. Todo ordenameto é um algoritmo que define a sequência em que os elementos serão dispostos. O Python disponibiliza por padrão, o ordenamento por ordem alfabética através funções incluídas na biblioteca padrão.&lt;/p&gt;
-&lt;p&gt;Nosso objetivo agora é estudar a função de ordenação disponibilizada nativamente pelo Python.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="a-descricao-dos-objetos"&gt;
-&lt;h2&gt;A DESCRIÇÃO DOS OBJETOS&lt;/h2&gt;
-&lt;p&gt;Em Python, há 2 funções que definem um texto a ser impresso na saída padrão, isto é, se passarmos uma lista com parâmetro da função &lt;code&gt;print()&lt;/code&gt; os elementos serão impressos na saída padrão devido a programação implementada pela classe &lt;code&gt;list&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Podemos implementar a função &lt;tt class="docutils literal"&gt;__str__()&lt;/tt&gt; ou então, &lt;tt class="docutils literal"&gt;__repr__()&lt;/tt&gt; dentro das nossas classes para que as essas retornem qualquer texto que melhor defina o conteúdo do objeto.&lt;/p&gt;
-&lt;p&gt;Na ordenação, o funcionamento ocorrerá, por padrão, com o uso dessa descrição. Assim, se a classe no qual o objeto foi criado não possuir a implementação dessas funções, não será possível organizar com as funções padrão das bibliotecas.&lt;/p&gt;
-&lt;p&gt;Por padrão, todas as classes nativas trazem essas funções implementadas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="a-funcao-sort"&gt;
-&lt;h2&gt;A FUNÇÃO &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt;&lt;/h2&gt;
-
-&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
-&lt;!-- Horizontal --&gt;
-&lt;ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5466436161806566"
-     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
-&lt;p&gt;A função &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt; ordena os elementos alfabeticamente. Como estudado acima, o texto utilizado por padrão, será aquele retornado pelas funções que descrevem o conteúdo dos objetos.&lt;/p&gt;
-&lt;p&gt;A seguir, vamos definir uma lista e então, com a função &lt;code&gt;sort()&lt;/code&gt;, iremos ordenar os elementos.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como pode ser visto, inicialmente, a lista foi impressa seguindo a ordem em que definimos os elementos ainda na declaração. Em seguida, invocamos a função &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt; e então, a lista foi impressa com os elementos ordenados alfabeticamente.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ordem-inversa"&gt;
-&lt;h2&gt;ORDEM INVERSA&lt;/h2&gt;
-&lt;p&gt;Para invertermos a sequência, isto é, para que o últimos seja o primeiro e o primeiro o último, passamos como argumento da função &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt; &lt;tt class="docutils literal"&gt;reverse=True&lt;/tt&gt;. O parâmetro &lt;tt class="docutils literal"&gt;reverse&lt;/tt&gt; como podemos deduzir, informa que queremos a ordem alfabética normal quando igual a &lt;code&gt;True&lt;/code&gt; ou então, a ordem reversa quando igual &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lista&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como podemos ver, os itens foram impressos ordenamente na ordem reversa.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="a-funcao-reverse"&gt;
-&lt;h2&gt;A FUNÇÃO &lt;code&gt;reverse()&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A função &lt;code&gt;reverse()&lt;/code&gt; inverte a ordem da lista mas sem ordena-la, ou seja, a ordem em que os elementos estão dispostos é indiferente, o que importa, é fazer com que o último seja o primeiro e vice-e-versa.&lt;/p&gt;
-&lt;p&gt;Vamos definir uma lista numérica e em seguida, invocar a função &lt;code&gt;reverse()&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;234&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;234&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;234&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, definimos uma lista e vinculamos a referência &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; à mesma. Feito isso, invocamos a função &lt;code&gt;reverse()&lt;/code&gt; e então, imprimimos novamente os elementos. Desta vez, a impressão ocorreu na ordem inversa a ordem em que os elementos foram adicionados. Isso porque, a função &lt;code&gt;reverse()&lt;/code&gt; havia sido invocada.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="como-a-inversao-ocorre-internamente"&gt;
-&lt;h2&gt;COMO A INVERSÃO OCORRE INTERNAMENTE&lt;/h2&gt;
-&lt;p&gt;O Python sempre busca a forma de trabalho menos custoza, isto é, a mais performática. Por isso, ao invocarmos a função &lt;code&gt;reverse()&lt;/code&gt;, ou então, ao ordenarmos inversamente os elementos, internamente, somente um propriedade é alterada, sem que nenhum elemento seja movido.&lt;/p&gt;
-&lt;p&gt;Isso é possível pelo fato das listas serem objetos iteraveis, definição está que permite-nos entregar os elementos da forma como bem entendermos. Assim, não podemos ver uma lista como sendo um Array em C, até porque, em Python, sempre é feito o mínimo necessário, utilizando desta maneira, a menor quantidade de memória e distribuindo o processamento.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="links-externos"&gt;
-&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists"&gt;(en) Documentação Oficial&lt;/a&gt;
-&lt;a class="reference external" href="http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_08.html"&gt;(pt) Listas - Aprenda Computação com Python v1.1&lt;/a&gt;
-&lt;a class="reference external" href="http://pt.stackoverflow.com/questions/130880/list-compreension-vs-ciclo-for"&gt;(pt) Stack Overflow&lt;/a&gt;
-&lt;a class="reference external" href="http://www.devfuria.com.br/python/listas/"&gt;(pt) O BÁSICO DE LISTAS - Devfuria&lt;/a&gt;
-&lt;a class="reference external" href="http://www.tutorialspoint.com/python/python_lists.htm"&gt;(en) Tutorial Point&lt;/a&gt;
-&lt;a class="reference external" href="http://effbot.org/zone/python-list.htm"&gt;(en) An Introduction to Python Lists&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="lista"></category><category term="ordenação"></category><category term="blog"></category></entry><entry><title>Incluindo, Alterando e Excluindo Elementos no Python</title><link href="http://excript.com/python/incluindo-alterando-excluindo-elementos-lista-python.html" rel="alternate"></link><published>2015-05-01T19:35:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-01:python/incluindo-alterando-excluindo-elementos-lista-python.html</id><summary type="html">
+</summary><category term="python"></category><category term="sqlite"></category><category term="banco de dados"></category></entry><entry><title>Incluindo, Alterando e Excluindo Elementos no Python</title><link href="http://excript.com/python/incluindo-alterando-excluindo-elementos-lista-python.html" rel="alternate"></link><published>2015-05-01T19:35:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-01:python/incluindo-alterando-excluindo-elementos-lista-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
