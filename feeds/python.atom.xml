@@ -211,8 +211,55 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
     &lt;/div&gt;
 &lt;div class="section" id="sobre-o-curso"&gt;
 &lt;h2&gt;SOBRE O CURSO&lt;/h2&gt;
-&lt;p&gt;Neste curso teremos uma abordagem sobre banco de dados. Em seguida, utilizaremos a linguagem Python para praticarmos os conceitos estudados.&lt;/p&gt;
-&lt;p&gt;A linguagem universal para manipulação de tabelas relacionais é o SQL. É comum que os programas tenham código SQL internamente, assim, o sistema é desenvolvido, por exemplo, com o Python, porém, o acesso aos dados ocorre com o uso de códigos SQL que estão contidos dentro do código Python na forma de Strings.&lt;/p&gt;
+&lt;p&gt;Neste curso estudaremos o Banco de Dados SQLite e como acessá-lo e utilizá-lo através da linguagem Python. As primeiras aulas abordam em detalhes alguns dos principais conceitos sobre Banco de Dados Relacionais e em seguida, incia-se o estudo da manipulação de dados através do Python.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-linguagem-sql"&gt;
+&lt;h2&gt;A LINGUAGEM SQL&lt;/h2&gt;
+&lt;p&gt;A linguagem universal para manipulação de dados relacionais é o &lt;a class="reference external" href="https://pt.wikipedia.org/wiki/SQL"&gt;SQL&lt;/a&gt;. É comum que os programas tenham código SQL internamente, assim, o sistema é desenvolvido, por exemplo, com o Python, porém, o acesso aos dados ocorre com o uso de códigos SQL que estão contidos dentro do código Python na forma de Strings.&lt;/p&gt;
+&lt;p&gt;Rapidamente entendem-se que trabalhar com a linguagem SQL dentro de outra linguagem é, normalmente, uma maneira pouco eficaz e ineficente. Porém, manter o código SQL num arquivo externo também não é a melhor solução. E, muitas vezes acabamos percebendo que a linguagem SQL se torna um mal necessário. Não que a mesma seja verbosa ou ineficaz - nada disso! O problema é que as linguagens são orientadas a objetos e as informações, quando manipuladas com a linguagem SQL, acabam, não sendo objetos e sim, dados no formato String, numérico ou binário.&lt;/p&gt;
+&lt;p&gt;Por isso, aprender SQL é supor importante, da mesma forma que aprender a trabalhar com os principais banco de dados, mas, num futuro não muito distante, sentiremos a necessidade de algo mais produtivo e será nesse momento que conheceremos as soluções que tratam tudo como sendo objetos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dados-relacionais"&gt;
+&lt;h2&gt;DADOS RELACIONAIS&lt;/h2&gt;
+&lt;p&gt;A própria terminologia, que não é oficial, explica bastante do que iremos brevemente comentar - dados que se relacionam.&lt;/p&gt;
+&lt;p&gt;Banco de Dados Relacionais são, plataformas que permitem armazenar todas as informações de maneira que permita definir internamente a relação entre tabelas através do uso de uma ligação tipo referência referenciado.&lt;/p&gt;
+&lt;p&gt;Por isso, é comum criarmos em todas as tabelas, uma coluna de nome Chave Primária (CP) e noutra, Chave Estrangeira (CE). Atualmente, é comum utilizar a nomenclatura (id) que, do Inglês significa, identidade.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="faq"&gt;
+&lt;h2&gt;FAQ&lt;/h2&gt;
+&lt;div class="section" id="maximo-de-acessos-simultaneos"&gt;
+&lt;h3&gt;MÁXIMO DE ACESSOS SIMULTÂNEOS&lt;/h3&gt;
+&lt;p&gt;O banco de dados &lt;tt class="docutils literal"&gt;SQLite&lt;/tt&gt; não determina um limite de conexões, e mesmo que o pessoal do desenvolvimento tentasse, não iriam conseguir. Isso porque, não existe um Sistema Gerenciador de Banco de Dados (SGBD), mas sim, um pequeno programa &lt;a class="reference external" href="http://excript.com/curso-c.html"&gt;escrito com a Linguagem C&lt;/a&gt;, incorporado por diversas linguagens, tais como &lt;a class="reference external" href="http://excript.com/curso-de-python.html"&gt;Python&lt;/a&gt; e &lt;a class="reference external" href="http://excript.com/curso-php.html"&gt;PHP&lt;/a&gt;, que permite acessar, abrir o arquivo que contém os dados, executar uma pesquisa e no final, encerrar o acesso &lt;strong&gt;com o arquivo em disco&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Por isso, é importante deixar claro desde o início que TODAS as bases de dados serão acessadas diretamente, isto é, nosso programa &amp;quot;se conectará&amp;quot; ao arquivo que contém todas as informações. Por isso, existe um limite que os próprios Sistemas Operacionais e o driver de comunicação como o HD acabam estabelecendo indiretamente, até porque, o limite é físico, ou seja, quando muitos computadores estão lendo e escrevendo no mesmo arquivo, num determinado momento, o disco rígido acabará por apresentar &amp;quot;gargalos&amp;quot;, seja para a leitura, seja para a escrita.&lt;/p&gt;
+&lt;p&gt;Por isso, não devemos pensar numa quantidade de acessos diretamente, mas sim, na quantidade de requisições e ações simultâneas ao disco rígido própriamente dito. Ninguém conseguirá responder exatamente qual é a quantidade verdadeira e, quem tentar fazê-lo, terá que levar em conta todos os modelos de HD, drivers de acesso, e a fila de requisições do Sistema Operacional hospedeiro em conta, o que é muito difícil de se fazer.&lt;/p&gt;
+&lt;p&gt;Se mesmo assim você não se contentar com toda a resposta acima, pense o seguinte: quando a escolha do motor de banco de dados é o SQLite, presume-se que esta base será acessada, principalmente, por um único usuário. Até porque, se o objetivo é disponibilizar um conjunto de informações com vários dispositivos, existem SGBD (Sistema Gerenciador de Banco de Dados) desenhados para esta finalidade, tais como &lt;a class="reference external" href="https://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt;, &lt;a class="reference external" href="https://www.mysql.com/"&gt;MySQL&lt;/a&gt;, &lt;a class="reference external" href="https://www.oracle.com/database/"&gt;Oracle&lt;/a&gt;, &lt;a class="reference external" href="https://www.microsoft.com/en-us/cloud-platform/sql-server"&gt;SQL Server&lt;/a&gt; e etc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="acesso-remoto"&gt;
+&lt;h2&gt;ACESSO REMOTO&lt;/h2&gt;
+&lt;p&gt;O banco de dados SQLite não pode ser acessado diretamente, até porque, não existe um programa sendo executado num determinado computador para &amp;quot;ser acessado&amp;quot;. O acesso ocorre a nível de arquivo, ou seja, se &amp;quot;conectar&amp;quot; a uma base de dados SQLite significa, abrir um determinado arquivo utilizando, normalmente, o driver (programa escrito em C) para então acessar um arquivo que está em um determinado diretório no nosso disco rígido.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="qual-banco-de-dados-suporta-acesso-multiplo"&gt;
+&lt;h2&gt;QUAL BANCO DE DADOS SUPORTA ACESSO MÚLTIPLO?&lt;/h2&gt;
+&lt;p&gt;Há vários. atualmente, pode-se dizer que, todo Banco de Dados pode ser acessado via rede, como já foi explicado nas respostas acimas. Atualmente, o SQLite é um dos raros bancos que &lt;strong&gt;só podem ser acessado&lt;/strong&gt; diretamente, isto é, cada computador que &amp;quot;está conectado ao banco&amp;quot;, ou melhor, &amp;quot;que possui uma conexão com a base de dados&amp;quot;, está fazendo-a pelo acesso direto ao arquivo que contém &lt;strong&gt;todas as informações&lt;/strong&gt; da base, algumas vezes o arquivo está no próprio computador, noutras, numa rede que acaba centralizado e sendo utilizado como um servidor.&lt;/p&gt;
+&lt;p&gt;É importante lembrar que o SQLite não é um banco de dados para ser acessado por vários usuários ao mesmo tempo e sim, uma solução eficaz de armazenamento para um ou alguns pouco mais usuários.&lt;/p&gt;
+&lt;p&gt;Se você está procurando por banco de dados relacionais que suporte múltiplos acesso simultâneos, o SQLite não é para você!&lt;/p&gt;
+&lt;p&gt;Banco de dados que suportam 1 ou N conexões: &lt;a class="reference external" href="https://www.postgresql.org/"&gt;MySQL (free)&lt;/a&gt;, &lt;a class="reference external" href="https://www.mysql.com/"&gt;PostgreSQL (free)&lt;/a&gt;, &lt;a class="reference external" href="https://www.oracle.com/database/"&gt;Oracle (pago)&lt;/a&gt;, &lt;a class="reference external" href="https://www.microsoft.com/en-us/cloud-platform/sql-server"&gt;SQL Server&lt;/a&gt; e etc.﻿&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;p&gt;Link para o &lt;a class="reference external" href="https://www.sqlite.org/"&gt;site oficial do Banco de Dados SQLite&lt;/a&gt;
+Link para Wikipia sobre a &lt;a class="reference external" href="https://pt.wikipedia.org/wiki/SQL"&gt;linguagem SQL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Link para &lt;a class="reference external" href="http://excript.com/curso-c.html"&gt;Curso de C&lt;/a&gt;
+Link para &lt;a class="reference external" href="http://excript.com/curso-de-python.html"&gt;Curso de Python&lt;/a&gt;
+Link para &lt;a class="reference external" href="http://excript.com/curso-php.html"&gt;Curso de PHP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Link para &lt;a class="reference external" href="http://clang.llvm.org/"&gt;Linguagem C&lt;/a&gt;
+Link para &lt;a class="reference external" href="https://www.python.org/"&gt;Linguagem Python&lt;/a&gt;
+Link para &lt;a class="reference external" href="http://php.net/"&gt;Linguagem PHP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Banco de Dados &lt;a class="reference external" href="https://www.postgresql.org/"&gt;PostgreSQL&lt;/a&gt; .
+Banco de Dados &lt;a class="reference external" href="https://www.mysql.com/"&gt;MySQL&lt;/a&gt; .
+Banco de Dados &lt;a class="reference external" href="https://www.oracle.com/database/"&gt;Oracle&lt;/a&gt; .
+Banco de Dados &lt;a class="reference external" href="https://www.microsoft.com/en-us/cloud-platform/sql-server"&gt;SQL Server&lt;/a&gt; .&lt;/p&gt;
 &lt;/div&gt;
 </summary><category term="python"></category><category term="sqlite"></category><category term="sqlite3"></category><category term="sql"></category><category term="banco de dados"></category><category term="blog"></category></entry><entry><title>Tabela no SQLite</title><link href="http://excript.com/python/tabela-sqlite.html" rel="alternate"></link><published>2015-06-07T19:20:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-06-07:python/tabela-sqlite.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;

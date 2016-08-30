@@ -377,17 +377,18 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<div class="section" id="ordenamento-padrao">
-<h2>ORDENAMENTO PADRÃO</h2>
-<p>O ordenamento é a sequência dos elementos contidos numa lista. Por padrão, todo novo elementos adicionados será incluído no final da lista, ou seja, terá índice igual a -1.</p>
-<p>É comum que listas sejam ordenadas das mais diversas formas, como por exemplo, por ordem alfabética. Para isso, existem funções prontas incluídas na biblioteca padrão e que irão ordenar, seguindo regras pré-determinadas.</p>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>Ordenar é definir a sequência dos elementos contidos numa lista. Por padrão, todo novo elementos adicionados é incluído no final da lista, logo, seu índice será igual a -1.</p>
+<p>As listas são ordenadas das mais diversas formas, como por exemplo, por ordem alfabética. Todo ordenameto é um algoritmo que define a sequência em que os elementos serão dispostos. O Python disponibiliza por padrão, o ordenamento por ordem alfabética através funções incluídas na biblioteca padrão.</p>
+<p>Nosso objetivo agora é estudar a função de ordenação disponibilizada nativamente pelo Python.</p>
 </div>
 <div class="section" id="a-descricao-dos-objetos">
 <h2>A DESCRIÇÃO DOS OBJETOS</h2>
-<p>Em Python, o valor que é impresso na saída padrão, ou então retornado, será o valor definido em funções internas a classe. Assim, foi definidos 2 funções por padrão, que o Python utilizará para retornar um texto que identifique o objeto ou então, qualquer informação pertinente.</p>
-<p>Então, podemos implementar a função <tt class="docutils literal">__str__()</tt> ou então, <tt class="docutils literal">__repr__()</tt> dentro das nossas classes para que as mesmas retornem, qualquer texto que melhor defina o conteúdo de toda a classe.</p>
-<p>São essa funções que por exemplo, são impressas no console sem precisarmos invocar a função <tt class="docutils literal">print()</tt>.</p>
-<p>Na ordenação o funcionamento ocorrerá, por padrão, com o uso dessa descrição. Assim, se a classe no qual o objeto foi criado não possuir a implementação dessas funções, por padrão, não será possível organizar com as funções padrão das bibliotecas.</p>
+<p>Em Python, há 2 funções que definem um texto a ser impresso na saída padrão, isto é, se passarmos uma lista com parâmetro da função <code>print()</code> os elementos serão impressos na saída padrão devido a programação implementada pela classe <code>list</code>.</p>
+<p>Podemos implementar a função <tt class="docutils literal">__str__()</tt> ou então, <tt class="docutils literal">__repr__()</tt> dentro das nossas classes para que as essas retornem qualquer texto que melhor defina o conteúdo do objeto.</p>
+<p>Na ordenação, o funcionamento ocorrerá, por padrão, com o uso dessa descrição. Assim, se a classe no qual o objeto foi criado não possuir a implementação dessas funções, não será possível organizar com as funções padrão das bibliotecas.</p>
+<p>Por padrão, todas as classes nativas trazem essas funções implementadas.</p>
 </div>
 <div class="section" id="a-funcao-sort">
 <h2>A FUNÇÃO <tt class="docutils literal">sort()</tt></h2>
@@ -402,7 +403,7 @@ eXcript            </a>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <p>A função <tt class="docutils literal">sort()</tt> ordena os elementos alfabeticamente. Como estudado acima, o texto utilizado por padrão, será aquele retornado pelas funções que descrevem o conteúdo dos objetos.</p>
-<p>A seguir, vamos definir uma lista e então, com a função <tt class="docutils literal">sort()</tt> iremos ordenar os elementos.</p>
+<p>A seguir, vamos definir uma lista e então, com a função <code>sort()</code>, iremos ordenar os elementos.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="p">]</span>
@@ -416,7 +417,7 @@ eXcript            </a>
 </div>
 <div class="section" id="ordem-inversa">
 <h2>ORDEM INVERSA</h2>
-<p>Para invertermos uma lista, isto é, para que o últimos seja o primeiro e o primeiro o último, passamos como argumento da função <tt class="docutils literal">sort()</tt> <tt class="docutils literal">reverse=True</tt>. O parâmetro <tt class="docutils literal">reverse</tt> como podemos deduzir, permite-nos dizer se queremos a ordem alfabética normal ou então, a ordem reversa.</p>
+<p>Para invertermos a sequência, isto é, para que o últimos seja o primeiro e o primeiro o último, passamos como argumento da função <tt class="docutils literal">sort()</tt> <tt class="docutils literal">reverse=True</tt>. O parâmetro <tt class="docutils literal">reverse</tt> como podemos deduzir, informa que queremos a ordem alfabética normal quando igual a <code>True</code> ou então, a ordem reversa quando igual <code>True</code>.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="p">]</span>
@@ -429,9 +430,9 @@ eXcript            </a>
 <p>Como podemos ver, os itens foram impressos ordenamente na ordem reversa.</p>
 </div>
 <div class="section" id="a-funcao-reverse">
-<h2>A FUNÇÃO <tt class="docutils literal">reverse()</tt></h2>
-<p>A função <tt class="docutils literal">reverse()</tt> inverte a ordem da lista mas sem ordenala, ou seja, a ordem em que os elementos estão dispostos é indiferente, o que importa, é fazer com que o último seja o primeiro e vice-e-versa.</p>
-<p>Vamos definir uma lista numérica e em seguida, invocar a função <tt class="docutils literal">reverse()</tt>.</p>
+<h2>A FUNÇÃO <code>reverse()</code></h2>
+<p>A função <code>reverse()</code> inverte a ordem da lista mas sem ordena-la, ou seja, a ordem em que os elementos estão dispostos é indiferente, o que importa, é fazer com que o último seja o primeiro e vice-e-versa.</p>
+<p>Vamos definir uma lista numérica e em seguida, invocar a função <code>reverse()</code>.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">234</span><span class="p">]</span>
@@ -441,12 +442,21 @@ eXcript            </a>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">l</span>
 <span class="p">[</span><span class="mi">234</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 </pre></div>
-<p>No código acima, definimos uma lista e vinculamos a referência <tt class="docutils literal">x</tt> à mesma. Feito isso, invocamos a função <tt class="docutils literal">reverse()</tt> e então, imprimimos novamente os elementos. Desta vez, a impressão ocorreu na ordem inversa a ordem em que os elementos foram adicionados. Isso porque, a função <tt class="docutils literal">reverse()</tt> havia sido invocada.</p>
+<p>No código acima, definimos uma lista e vinculamos a referência <tt class="docutils literal">x</tt> à mesma. Feito isso, invocamos a função <code>reverse()</code> e então, imprimimos novamente os elementos. Desta vez, a impressão ocorreu na ordem inversa a ordem em que os elementos foram adicionados. Isso porque, a função <code>reverse()</code> havia sido invocada.</p>
 </div>
 <div class="section" id="como-a-inversao-ocorre-internamente">
 <h2>COMO A INVERSÃO OCORRE INTERNAMENTE</h2>
-<p>O Python sempre busca a forma de trabalho menos custoza e mais performática. Por isso, ao invocarmos a função <tt class="docutils literal">reverse()</tt> ou então, ao ordenarmos inversamente os elementos, internamente, somente um propriedade é alterada, sem que nenhum elemento seja de fato atingido.</p>
+<p>O Python sempre busca a forma de trabalho menos custoza, isto é, a mais performática. Por isso, ao invocarmos a função <code>reverse()</code>, ou então, ao ordenarmos inversamente os elementos, internamente, somente um propriedade é alterada, sem que nenhum elemento seja movido.</p>
 <p>Isso é possível pelo fato das listas serem objetos iteraveis, definição está que permite-nos entregar os elementos da forma como bem entendermos. Assim, não podemos ver uma lista como sendo um Array em C, até porque, em Python, sempre é feito o mínimo necessário, utilizando desta maneira, a menor quantidade de memória e distribuindo o processamento.</p>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<p><a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">(en) Documentação Oficial</a>
+<a class="reference external" href="http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_08.html">(pt) Listas - Aprenda Computação com Python v1.1</a>
+<a class="reference external" href="http://pt.stackoverflow.com/questions/130880/list-compreension-vs-ciclo-for">(pt) Stack Overflow</a>
+<a class="reference external" href="http://www.devfuria.com.br/python/listas/">(pt) O BÁSICO DE LISTAS - Devfuria</a>
+<a class="reference external" href="http://www.tutorialspoint.com/python/python_lists.htm">(en) Tutorial Point</a>
+<a class="reference external" href="http://effbot.org/zone/python-list.htm">(en) An Introduction to Python Lists</a></p>
 </div>
 
 				</div>

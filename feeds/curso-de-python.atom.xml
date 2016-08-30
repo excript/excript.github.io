@@ -5030,17 +5030,18 @@ Por fim, incrementamos a lista mais uma vez a letra &lt;tt class="docutils liter
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;div class="section" id="ordenamento-padrao"&gt;
-&lt;h2&gt;ORDENAMENTO PADRÃO&lt;/h2&gt;
-&lt;p&gt;O ordenamento é a sequência dos elementos contidos numa lista. Por padrão, todo novo elementos adicionados será incluído no final da lista, ou seja, terá índice igual a -1.&lt;/p&gt;
-&lt;p&gt;É comum que listas sejam ordenadas das mais diversas formas, como por exemplo, por ordem alfabética. Para isso, existem funções prontas incluídas na biblioteca padrão e que irão ordenar, seguindo regras pré-determinadas.&lt;/p&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;Ordenar é definir a sequência dos elementos contidos numa lista. Por padrão, todo novo elementos adicionados é incluído no final da lista, logo, seu índice será igual a -1.&lt;/p&gt;
+&lt;p&gt;As listas são ordenadas das mais diversas formas, como por exemplo, por ordem alfabética. Todo ordenameto é um algoritmo que define a sequência em que os elementos serão dispostos. O Python disponibiliza por padrão, o ordenamento por ordem alfabética através funções incluídas na biblioteca padrão.&lt;/p&gt;
+&lt;p&gt;Nosso objetivo agora é estudar a função de ordenação disponibilizada nativamente pelo Python.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="a-descricao-dos-objetos"&gt;
 &lt;h2&gt;A DESCRIÇÃO DOS OBJETOS&lt;/h2&gt;
-&lt;p&gt;Em Python, o valor que é impresso na saída padrão, ou então retornado, será o valor definido em funções internas a classe. Assim, foi definidos 2 funções por padrão, que o Python utilizará para retornar um texto que identifique o objeto ou então, qualquer informação pertinente.&lt;/p&gt;
-&lt;p&gt;Então, podemos implementar a função &lt;tt class="docutils literal"&gt;__str__()&lt;/tt&gt; ou então, &lt;tt class="docutils literal"&gt;__repr__()&lt;/tt&gt; dentro das nossas classes para que as mesmas retornem, qualquer texto que melhor defina o conteúdo de toda a classe.&lt;/p&gt;
-&lt;p&gt;São essa funções que por exemplo, são impressas no console sem precisarmos invocar a função &lt;tt class="docutils literal"&gt;print()&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;Na ordenação o funcionamento ocorrerá, por padrão, com o uso dessa descrição. Assim, se a classe no qual o objeto foi criado não possuir a implementação dessas funções, por padrão, não será possível organizar com as funções padrão das bibliotecas.&lt;/p&gt;
+&lt;p&gt;Em Python, há 2 funções que definem um texto a ser impresso na saída padrão, isto é, se passarmos uma lista com parâmetro da função &lt;code&gt;print()&lt;/code&gt; os elementos serão impressos na saída padrão devido a programação implementada pela classe &lt;code&gt;list&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Podemos implementar a função &lt;tt class="docutils literal"&gt;__str__()&lt;/tt&gt; ou então, &lt;tt class="docutils literal"&gt;__repr__()&lt;/tt&gt; dentro das nossas classes para que as essas retornem qualquer texto que melhor defina o conteúdo do objeto.&lt;/p&gt;
+&lt;p&gt;Na ordenação, o funcionamento ocorrerá, por padrão, com o uso dessa descrição. Assim, se a classe no qual o objeto foi criado não possuir a implementação dessas funções, não será possível organizar com as funções padrão das bibliotecas.&lt;/p&gt;
+&lt;p&gt;Por padrão, todas as classes nativas trazem essas funções implementadas.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="a-funcao-sort"&gt;
 &lt;h2&gt;A FUNÇÃO &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt;&lt;/h2&gt;
@@ -5055,7 +5056,7 @@ Por fim, incrementamos a lista mais uma vez a letra &lt;tt class="docutils liter
 (adsbygoogle = window.adsbygoogle || []).push({});
 &lt;/script&gt;
 &lt;p&gt;A função &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt; ordena os elementos alfabeticamente. Como estudado acima, o texto utilizado por padrão, será aquele retornado pelas funções que descrevem o conteúdo dos objetos.&lt;/p&gt;
-&lt;p&gt;A seguir, vamos definir uma lista e então, com a função &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt; iremos ordenar os elementos.&lt;/p&gt;
+&lt;p&gt;A seguir, vamos definir uma lista e então, com a função &lt;code&gt;sort()&lt;/code&gt;, iremos ordenar os elementos.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
@@ -5069,7 +5070,7 @@ Por fim, incrementamos a lista mais uma vez a letra &lt;tt class="docutils liter
 &lt;/div&gt;
 &lt;div class="section" id="ordem-inversa"&gt;
 &lt;h2&gt;ORDEM INVERSA&lt;/h2&gt;
-&lt;p&gt;Para invertermos uma lista, isto é, para que o últimos seja o primeiro e o primeiro o último, passamos como argumento da função &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt; &lt;tt class="docutils literal"&gt;reverse=True&lt;/tt&gt;. O parâmetro &lt;tt class="docutils literal"&gt;reverse&lt;/tt&gt; como podemos deduzir, permite-nos dizer se queremos a ordem alfabética normal ou então, a ordem reversa.&lt;/p&gt;
+&lt;p&gt;Para invertermos a sequência, isto é, para que o últimos seja o primeiro e o primeiro o último, passamos como argumento da função &lt;tt class="docutils literal"&gt;sort()&lt;/tt&gt; &lt;tt class="docutils literal"&gt;reverse=True&lt;/tt&gt;. O parâmetro &lt;tt class="docutils literal"&gt;reverse&lt;/tt&gt; como podemos deduzir, informa que queremos a ordem alfabética normal quando igual a &lt;code&gt;True&lt;/code&gt; ou então, a ordem reversa quando igual &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
@@ -5082,9 +5083,9 @@ Por fim, incrementamos a lista mais uma vez a letra &lt;tt class="docutils liter
 &lt;p&gt;Como podemos ver, os itens foram impressos ordenamente na ordem reversa.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="a-funcao-reverse"&gt;
-&lt;h2&gt;A FUNÇÃO &lt;tt class="docutils literal"&gt;reverse()&lt;/tt&gt;&lt;/h2&gt;
-&lt;p&gt;A função &lt;tt class="docutils literal"&gt;reverse()&lt;/tt&gt; inverte a ordem da lista mas sem ordenala, ou seja, a ordem em que os elementos estão dispostos é indiferente, o que importa, é fazer com que o último seja o primeiro e vice-e-versa.&lt;/p&gt;
-&lt;p&gt;Vamos definir uma lista numérica e em seguida, invocar a função &lt;tt class="docutils literal"&gt;reverse()&lt;/tt&gt;.&lt;/p&gt;
+&lt;h2&gt;A FUNÇÃO &lt;code&gt;reverse()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A função &lt;code&gt;reverse()&lt;/code&gt; inverte a ordem da lista mas sem ordena-la, ou seja, a ordem em que os elementos estão dispostos é indiferente, o que importa, é fazer com que o último seja o primeiro e vice-e-versa.&lt;/p&gt;
+&lt;p&gt;Vamos definir uma lista numérica e em seguida, invocar a função &lt;code&gt;reverse()&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;234&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -5094,12 +5095,21 @@ Por fim, incrementamos a lista mais uma vez a letra &lt;tt class="docutils liter
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;234&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, definimos uma lista e vinculamos a referência &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; à mesma. Feito isso, invocamos a função &lt;tt class="docutils literal"&gt;reverse()&lt;/tt&gt; e então, imprimimos novamente os elementos. Desta vez, a impressão ocorreu na ordem inversa a ordem em que os elementos foram adicionados. Isso porque, a função &lt;tt class="docutils literal"&gt;reverse()&lt;/tt&gt; havia sido invocada.&lt;/p&gt;
+&lt;p&gt;No código acima, definimos uma lista e vinculamos a referência &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; à mesma. Feito isso, invocamos a função &lt;code&gt;reverse()&lt;/code&gt; e então, imprimimos novamente os elementos. Desta vez, a impressão ocorreu na ordem inversa a ordem em que os elementos foram adicionados. Isso porque, a função &lt;code&gt;reverse()&lt;/code&gt; havia sido invocada.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="como-a-inversao-ocorre-internamente"&gt;
 &lt;h2&gt;COMO A INVERSÃO OCORRE INTERNAMENTE&lt;/h2&gt;
-&lt;p&gt;O Python sempre busca a forma de trabalho menos custoza e mais performática. Por isso, ao invocarmos a função &lt;tt class="docutils literal"&gt;reverse()&lt;/tt&gt; ou então, ao ordenarmos inversamente os elementos, internamente, somente um propriedade é alterada, sem que nenhum elemento seja de fato atingido.&lt;/p&gt;
+&lt;p&gt;O Python sempre busca a forma de trabalho menos custoza, isto é, a mais performática. Por isso, ao invocarmos a função &lt;code&gt;reverse()&lt;/code&gt;, ou então, ao ordenarmos inversamente os elementos, internamente, somente um propriedade é alterada, sem que nenhum elemento seja movido.&lt;/p&gt;
 &lt;p&gt;Isso é possível pelo fato das listas serem objetos iteraveis, definição está que permite-nos entregar os elementos da forma como bem entendermos. Assim, não podemos ver uma lista como sendo um Array em C, até porque, em Python, sempre é feito o mínimo necessário, utilizando desta maneira, a menor quantidade de memória e distribuindo o processamento.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists"&gt;(en) Documentação Oficial&lt;/a&gt;
+&lt;a class="reference external" href="http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_08.html"&gt;(pt) Listas - Aprenda Computação com Python v1.1&lt;/a&gt;
+&lt;a class="reference external" href="http://pt.stackoverflow.com/questions/130880/list-compreension-vs-ciclo-for"&gt;(pt) Stack Overflow&lt;/a&gt;
+&lt;a class="reference external" href="http://www.devfuria.com.br/python/listas/"&gt;(pt) O BÁSICO DE LISTAS - Devfuria&lt;/a&gt;
+&lt;a class="reference external" href="http://www.tutorialspoint.com/python/python_lists.htm"&gt;(en) Tutorial Point&lt;/a&gt;
+&lt;a class="reference external" href="http://effbot.org/zone/python-list.htm"&gt;(en) An Introduction to Python Lists&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category><category term="listas"></category><category term="ordenamento"></category></entry><entry><title>Incluindo, Alterando e Excluindo Elementos no Python</title><link href="http://excript.com/python/incluindo-alterando-excluindo-elementos-lista-python.html" rel="alternate"></link><published>2015-05-01T19:35:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-01:python/incluindo-alterando-excluindo-elementos-lista-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -5759,26 +5769,33 @@ Assim, ainda que o funcionamento das lista em seja similar a um Array em C, C++,
     &lt;/div&gt;
 &lt;div class="section" id="introducao-as-listas"&gt;
 &lt;h2&gt;INTRODUÇÃO ÀS LISTAS&lt;/h2&gt;
-&lt;p&gt;Uma &lt;strong&gt;lista&lt;/strong&gt; é um conjunto de itens dispostos ou não em ordem. É importante observar que a lista é a estrutura de dados mais primitiva e não seria errado afirmar que tudo são elementos e constituem a listas.&lt;/p&gt;
-&lt;p&gt;Superficialmente, todas as listas são iguais, porém, o critério utilizado na formação, escolha, ordenamento são infinitos. Da mesma forma que, a maneira como uma lista pode ser utilizada é infinita.&lt;/p&gt;
-&lt;p&gt;O conceito de lista é simples, até porque, a própria natureza faz uso extensivo, e todo ser humano, desde o aleitamento, possui laços estreitos com as listas, e tudo que este vier a fazer, será em algum momento comentado com alguém pelos pais, e a informação será passada como elementos pertencentes a determinada criança.&lt;/p&gt;
-&lt;p&gt;Se você entender só e somente só o que foi dito até nesse momento e começares a perceber o mundo como sendo grandes e infinitas listas, já terás dados um enorme passo na disciplina de Estruturas de Dados. Quem me dera alguém ter me explicado isso antes de me apresentar o conceito de Banco de Dados, índices, arrays e etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lista&lt;/strong&gt; é uma sequência finita de elementos.&lt;/p&gt;
+&lt;p&gt;A lista é a estrutura de dados mais primitiva para trabalhar com itens. As regras de inclusão, alteração, exclusão e leitura definirão o subtipo de lista, por exemplo, uma fila é uma lista ordenada pela ordem de entrada, onde o primeiro a entrar será o primeiro a sair. Uma pilha é o contrário de fila, até porque, o último elemento adicionado será o primeiro a sair.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Estrutura de dados constituída por uma seqüência ordenada e finita de itens (os quais podem, inclusive, ser outras listas, ditas sublistas), e que pode ser modificada com a inserção, exclusão e reordenamento dos itens.&lt;/p&gt;
+&lt;p class="attribution"&gt;&amp;mdash;Dicionário Aurélio.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Superficialmente, todas as listas são iguais, porém, o critério utilizado na formação, escolha, ordenamento são infinitos. Da mesma forma que, há infinas maneiras de utilizar estrutas tipo lista.&lt;/p&gt;
+&lt;p&gt;O conceito de lista é intuitivo e a forma mais primitiva de organização de conjuntos de elementos. Todo dia temos uma lista de afazeres e no final do dia, uma lista de tarefas realizadas. Temos listas de telefone, de amigos, inimigos, de produtos a serem vendidos, listas do que deve ser comprado, do que pode e não pode ser feito e etc.&lt;/p&gt;
+&lt;p&gt;Todo programa é uma lista de instruções que serão executados numa ordem determinado pelo programdor. A lista é um dos conceito mais utilizado na computação até porque, a principal tarefa do computador é processar uma série de contas o mais rápido possível.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="principios-das-listas"&gt;
 &lt;h2&gt;PRINCÍPIOS DAS LISTAS&lt;/h2&gt;
-&lt;p&gt;Toda lista pode conter 0, &lt;code&gt;n&lt;/code&gt; ou infinitos elementos. A lista é uma &lt;tt class="docutils literal"&gt;Estrutura de Dados&lt;/tt&gt; propriamente dita, e os elementos que a compõem, podem ser qualquer um, inclusive, outras  &lt;tt class="docutils literal"&gt;Estrutura de Dado&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Toda lista pode conter 0, &lt;code&gt;n&lt;/code&gt; ou infinitos elementos. A lista é uma &lt;tt class="docutils literal"&gt;Estrutura de Dados&lt;/tt&gt; propriamente dita, e os elementos que a compõem, podem ser qualquer um, inclusive outras listas.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="manipulacao-de-listas"&gt;
 &lt;h2&gt;MANIPULAÇÃO DE LISTAS&lt;/h2&gt;
-&lt;p&gt;Manipular listas significa qualquer alteração do seu volume. É comum, que a alteração dos elementos da lista seja também considerado como manipulação da lista, o que teoricamente não é verdade.&lt;/p&gt;
-&lt;p&gt;Uma &lt;tt class="docutils literal"&gt;lista ideal&lt;/tt&gt; é capaz de realizar no mínimo 3 ações:&lt;/p&gt;
+&lt;p&gt;A lista contém 4 conceitos fundamentais:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;Incluir item&lt;/li&gt;
-&lt;li&gt;Excluir item&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Adição&lt;/li&gt;
+&lt;li&gt;Alteração [da disposição dos elementos]&lt;/li&gt;
+&lt;li&gt;Exclusão&lt;/li&gt;
+&lt;li&gt;Leitura&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Alterar uma lista, é a inclusão ou exclusão de elementos. A alteração da informação do elemento altera somente o elemento, e não a lista propriamente dita. Até porque, uma lista contém, por definição, itens, indiferente do seu tipo ou sua definição.&lt;/p&gt;
+&lt;p&gt;Nem toda lista permitirá a adição, alteração ou exclusão de itens, porém, a capacidade de leitura é obrigatório.&lt;/p&gt;
+&lt;p&gt;É importante entender que a lista possui um conjunto de propriedades e funções que a definem e, &lt;strong&gt;todo&lt;/strong&gt; elemento contido nesta lista também.&lt;/p&gt;
 
 &lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
 &lt;!-- Horizontal --&gt;
@@ -5792,9 +5809,7 @@ Assim, ainda que o funcionamento das lista em seja similar a um Array em C, C++,
 &lt;/div&gt;
 &lt;div class="section" id="tipos-de-lista"&gt;
 &lt;h2&gt;TIPOS DE LISTA&lt;/h2&gt;
-&lt;p&gt;O conceito mais simples de lista é aquela onde temos uma série de elementos, um abaixo do outro. Os vários tipos de definições de lista dizem respeito a forma como os elementos são organizados, ou então, a ações conjuntas ligadas a inclusão e remoção de elementos.&lt;/p&gt;
-&lt;p&gt;Por exemplo, se falarmos em Pilha, iremos tratar da forma como novos elementos são inseridos na lista, e na forma como ocorrerá a sua remoção. Ou seja, se formos colocando um livro em cima de outro, teremos, após o segundo livro, uma pilha de livros, onde os livros sempre são adicionados sobre o último livro adicionado. Da mesma forma, temos que se formos verificar os livros contidos nessa Pilha, veremos que o último a entrar, será o primeiro da Pilha, da mesma forma que o primeiro a entrar nessa Pilha, será o último ser verificado.&lt;/p&gt;
-&lt;p&gt;Assim, temos que uma Pilha é uma lista, porém, a forma como manipulamos os elementos, seja na inclusão ou na leitura, funciona de maneira igual ao que ocorre, por exemplo, com uma pilha de livros e etc.&lt;/p&gt;
+&lt;p&gt;O conceito mais simples de lista é aquela onde temos uma série de elementos. Os vários tipos de definições de lista dizem respeito a forma como os elementos são organizados, ou então, as ações conjuntas ligadas a inclusão e remoção de elementos.&lt;/p&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category></entry><entry><title>Operadores Lógicos em Python</title><link href="http://excript.com/python/operadores-logicos-python.html" rel="alternate"></link><published>2014-06-03T18:11:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-06-03:python/operadores-logicos-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
