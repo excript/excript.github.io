@@ -15,7 +15,7 @@
 <link rel="canonical" href="http://excript.com/python/iterando-listas-em-python.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,python,list,lista,iteração,iteração de listas" />
+        <meta name="keywords" content="curso,python,list,lista,iteração,iteração de listas,blog" />
     <meta name="description" content="Nesta aula vamos estudar a iteração de listas, também chamado varredura de listas, ou então, a ação de percorrer os elementos contidos numa estrutura. Estudaremos a iteração com a instrução "for", como também, com a instrução "while"." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -25,7 +25,7 @@
 
         <meta property="og:description" content="Nesta aula vamos estudar a iteração de listas, também chamado varredura de listas, ou então, a ação de percorrer os elementos contidos numa estrutura. Estudaremos a iteração com a instrução "for", como também, com a instrução "while"."/>
 
-        <meta property="article:published_time" content="10-03-2015" />
+        <meta property="article:published_time" content="11-08-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -33,6 +33,7 @@
             <meta property="article:tag" content="lista" />
             <meta property="article:tag" content="iteração" />
             <meta property="article:tag" content="iteração de listas" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -117,7 +118,7 @@ eXcript            </a>
 
         <span class="label label-default"></span>
         <span class="published">
-            <time datetime="2015-03-10T19:14:00-03:00"> Publicado em 10-03-2015</time>
+            <time datetime="2016-08-11T10:14:00-03:00"> Publicado em 11-08-2016</time>
         </span>
 
 
@@ -382,13 +383,13 @@ eXcript            </a>
 <div class="section" id="introducao-a-iteracao-de-listas">
 <h2>INTRODUÇÃO À ITERAÇÃO DE LISTAS</h2>
 <p>O estudo da iteração de listas é de fato, a explicação do por que estudamos anteriormente as Estruturas de Repetição e também, a Estrutura de Dados Lista.</p>
-<p>A iteração tem o objetivo de percorrer os elementos contidos numa lista. Estudamos, que o Python possui 2 instruções definidas para que sejamos capazes de trabalhar com Iteração.</p>
-<p>A estrutura de repetição <code>while</code> pode iterar uma lista incrementando um objeto numérico a cada ciclo e acessando assim, um elemento diferente em ciclos diferentes.</p>
+<p>A <a class="reference external" href="http://excript.com/python/iteracao-python.html">iteração tem o objetivo de percorrer os elementos contidos numa lista</a>. Estudamos, que o Python possui 2 instruções definidas para que sejamos capazes de trabalhar com Iteração, que são, a estrutura <a class="reference external" href="http://excript.com/python/while-else-python.html">while</a> e a estrutura <a class="reference external" href="http://excript.com/python/for-loop-python.html">for</a>.</p>
+<p>A estrutura de repetição <code>while</code> pode iterar uma lista incrementando um objeto numérico a cada ciclo e acessando assim, um elemento diferente em cada ciclo.</p>
 <p>Da mesma forma, estudamos, que a estrutura de repetição <code>for</code> é especializada na iteração de listas. Dessa forma, não é necessário a definição de quase nada, bastando somente informar uma variável que receberá um novo elemento a cada ciclo, e a lista que queremos iterar.</p>
 </div>
 <div class="section" id="iteracao-de-listas-com-a-instrucao-while">
 <h2>ITERAÇÃO DE LISTAS COM A INSTRUÇÃO <tt class="docutils literal">while</tt></h2>
-<p>No código a seguir, percorreremos todos os elementos contidos numa lista e imprimiremo-os na saída padrão com a instrução <code>while</code>.</p>
+<p>No código a seguir, percorreremos todos os elementos contidos numa lista utilizando o laço de repetição <code>while</code>.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -398,6 +399,7 @@ eXcript            </a>
     <span class="k">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
     <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
 </pre></div>
+<p>Essa é uma forma de iteração de listas não recomendada, até porque, a linguagem Python fornece uma instrução mais eficiente, sintaticamente falando.</p>
 </div>
 <div class="section" id="iteracao-de-listas-com-a-instrucao-for">
 <h2>ITERAÇÃO DE LISTAS COM A INSTRUÇÃO <code>for</code></h2>
@@ -411,7 +413,7 @@ eXcript            </a>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p>No código a seguir, percorreremos todos os elementos contidos numa lista e imprimiremo-os na saída padrão com a instrução <code>for</code>.</p>
+<p>No código a seguir, percorreremos todos os elementos contidos numa lista com a instrução <code>for</code>.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -428,7 +430,7 @@ eXcript            </a>
 </div>
 <div class="section" id="realizando-operacoes-com-elementos-da-lista">
 <h2>REALIZANDO OPERAÇÕES COM ELEMENTOS DA LISTA</h2>
-<p>A principal razão para percorremos todos elementos de uma lista é a capacidade de realizar determinada operação sobre cada elemento. No código a seguir, vamos percorrer os elementos, executar uma expressão matemática e imprimir o resultado na saída padrão.</p>
+<p>A principal razão para percorremos todos elementos de uma lista é a capacidade de realizar determinada operação sobre cada elemento. Nosso objetivo agora é demonstrar esse recurso e para isso, construiremos um simples código que itera uma lista numérica e multiplica o valor de cada item por 100. Em seguida é impresso na saída padrão o resultado da operação de multiplicação que efetuamos.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>
@@ -439,7 +441,7 @@ eXcript            </a>
 <span class="mi">40</span>
 <span class="mi">50</span>
 </pre></div>
-<p>No código acima, multiplicamos o valor de cada elemento da lista por 10 e em seguida, imprimimos o resultado na saída padrão.</p>
+<p>No código acima, multiplicamos o valor de cada elemento da lista por 10 e em seguida, imprimimos o resultado na saída padrão. Essa é uma simples demonstração de como iterar listas e realizar uma determinada operação sobre seus elementos.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
@@ -469,6 +471,22 @@ eXcript            </a>
 <span class="k">print</span><span class="p">(</span><span class="n">lista_nums</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="section" id="veja-tambem">
+<h2>VEJA TAMBÉM</h2>
+<ul class="simple">
+<li>Aula: <a class="reference external" href="http://excript.com/python/iteracao-python.html">Estruturas de Repetição</a></li>
+<li>Aula: <a class="reference external" href="http://excript.com/python/while-else-python.html">Estrutura de Repetição for..in</a></li>
+<li>Aula: <a class="reference external" href="http://excript.com/python/for-loop-python.html">Estrutura de Repetição while(True)</a></li>
+</ul>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<p><a class="reference external" href="https://docs.python.org/3/tutorial/controlflow.html#for-statements">Estrutura for (Documentação oficial) (en)</a>
+<a class="reference external" href="https://docs.python.org/3/reference/compound_stmts.html#while">Estrutura while (Documentação oficial) (en)</a>
+<a class="reference external" href="https://www.tutorialspoint.com/python/python_loops.htm">Python Loops (TurialsPoint) (en)</a>
+<a class="reference external" href="https://www.tutorialspoint.com/python/python_while_loop.htm">While Loop (TurialsPoint) (en)</a>
+<a class="reference external" href="https://www.tutorialspoint.com/python/python_for_loop.htm">For Loop (TurialsPoint) (en)</a></p>
+</div>
 
 				</div>
 			</div>
@@ -496,7 +514,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/list.html">list</a>, 	<a href="http://excript.com/tag/lista.html">lista</a>, 	<a href="http://excript.com/tag/iteracao.html">iteração</a>, 	<a href="http://excript.com/tag/iteracao-de-listas.html">iteração de listas</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/list.html">list</a>, 	<a href="http://excript.com/tag/lista.html">lista</a>, 	<a href="http://excript.com/tag/iteracao.html">iteração</a>, 	<a href="http://excript.com/tag/iteracao-de-listas.html">iteração de listas</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
