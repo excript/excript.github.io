@@ -76,7 +76,90 @@
 &lt;li&gt;&lt;a class="reference external" href="http://jtauber.com/blog/2006/04/15/python_tuples_are_not_just_constant_lists/"&gt;Python Tuples are Not Just Constant Lists (en)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="curso"></category><category term="python"></category><category term="list"></category><category term="tupla"></category><category term="lista"></category><category term="pilha"></category><category term="fila"></category><category term="blog"></category></entry><entry><title>Iteração de Listas em Python</title><link href="http://excript.com/python/iterando-listas-em-python.html" rel="alternate"></link><published>2016-11-11T14:14:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-11:python/iterando-listas-em-python.html</id><summary type="html">
+</summary><category term="curso"></category><category term="python"></category><category term="list"></category><category term="tupla"></category><category term="lista"></category><category term="pilha"></category><category term="fila"></category><category term="blog"></category></entry><entry><title>INSTALAÇÃO DO KIVY NO MACOSX</title><link href="http://excript.com/blog/instalacao-kivy-mac.html" rel="alternate"></link><published>2016-11-22T18:50:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-22:blog/instalacao-kivy-mac.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos a instalar a biblioteca Kivy no sistema operacional Mac OSX.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="mac-osx"&gt;
+&lt;h2&gt;MAC OSX&lt;/h2&gt;
+&lt;p&gt;Neste artiogo aprenderemos a construir um ambiente de trabalho no Mac OSX, como também, estudaremos as várias ferramentas disponíveis e as várias maneiras diferentes de montar o nosso ambiente.&lt;/p&gt;
+&lt;p&gt;De fábrica o Mac OSX 10 e as versões anteriores possuem a versão do Python 2x que é de uso exclusivo do SO e por isso, não deveríamos instalar pacotes ou mesmo, ficar utilizando essa versão no desenvolvimento.&lt;/p&gt;
+&lt;p&gt;Neste curso trabalharemos com o Anaconda, portanto, não utilizaremos a versão do Python instalada por padrão no Mac para quase nada.&lt;/p&gt;
+&lt;p&gt;É importante dizer que neste momento estamos construindo nosso ambiente de desenvolvimento, posteriormente, construiremos um ambiente para gerar executáveis, seja para o próprio Mac OSX, ou então, para o iOS. Então, vamos construir um ambiente voltado somente para o desenvolvimento.&lt;/p&gt;
+&lt;p&gt;No momento em que essa aula está sendo gravada, a documentação oficial para a instalação da biblioteca Kivy no Mac contém alguns problemas, por isso, seguiremos um tutorial que eu mesmo desenvolvi. Junto a essa aula você encontrará um arquivo contendo os passos para a instalação e os comandos que devem ser digitados no Terminal.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="instalando-o-anaconda-no-mac-osx"&gt;
+&lt;h2&gt;INSTALANDO O ANACONDA NO MAC OSX&lt;/h2&gt;
+&lt;p&gt;Se você não souber qual a sua versão do sistema operacional Mac, utilize o comando abaixo.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#retorna a versão do MacOS&lt;/span&gt;
+sw_vers
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="instalacao-do-gerenciador-brew"&gt;
+&lt;h3&gt;1) Instalação do gerenciador brew&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/usr/bin/ruby -e &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="instalacao-das-dependencias"&gt;
+&lt;h3&gt;2) Instalação das dependencias&lt;/h3&gt;
+&lt;p&gt;Os pacotes a seguir são necessários tanto pra versão 2x como 3x.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#não utilizar SUDO&lt;/span&gt;
+brew install sdl sdl_image sdl_mixer sdl_ttf smpeg portmidi
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="download-anaconda"&gt;
+&lt;h3&gt;3) Download Anaconda&lt;/h3&gt;
+&lt;p&gt;Para &lt;a class="reference external" href="https://www.continuum.io/downloads#osx"&gt;fazer o donwload da instalação da Ananconda, utilize este link&lt;/a&gt; .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="criacao-e-instalacao-dos-ambientes-virtuais-e-da-biblioteca-kivy"&gt;
+&lt;h3&gt;4) Criação e instalação dos ambientes virtuais e da biblioteca kivy&lt;/h3&gt;
+&lt;p&gt;Agora, iremos criar 2 ambientes virtuais de nome k27 e k35 e instalaremos o framework kivy em cada ambiente. É importante dizer que iremos instalar ambas versões devido ao fato de que em alguma situações, o projeto Kivy fornece suporte somente a versão 2.7.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#criação do ambiente k27&lt;/span&gt;
+conda create -p k27 &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;2.7
+
+&lt;span class="c1"&gt;#instalar pygame&lt;/span&gt;
+pip install pygame
+
+&lt;span class="c1"&gt;#biblioteca gráfica&lt;/span&gt;
+conda install pillow
+
+
+&lt;span class="c1"&gt;#biblioteca que compila código Python&lt;/span&gt;
+conda install &lt;span class="nv"&gt;cython&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0.23
+
+
+&lt;span class="c1"&gt;#instalação da biblioteca Kivy&lt;/span&gt;
+$ &lt;span class="nv"&gt;USE_OSX_FRAMEWORKS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; pip install -I --no-cache-dir --no-binary all kivy
+
+
+
+&lt;span class="c1"&gt;#criação do ambiente k35&lt;/span&gt;
+conda create -p k35 &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3.5
+
+&lt;span class="c1"&gt;#instalar pygame&lt;/span&gt;
+pip install pygame
+
+&lt;span class="c1"&gt;#biblioteca gráfica&lt;/span&gt;
+conda install pillow
+
+&lt;span class="c1"&gt;#biblioteca que compila código Python&lt;/span&gt;
+conda install &lt;span class="nv"&gt;cython&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0.23
+
+&lt;span class="c1"&gt;#instalação da biblioteca Kivy&lt;/span&gt;
+$ &lt;span class="nv"&gt;USE_OSX_FRAMEWORKS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; pip install -I --no-cache-dir --no-binary all kivy
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="python"></category><category term="blog"></category></entry><entry><title>Iteração de Listas em Python</title><link href="http://excript.com/python/iterando-listas-em-python.html" rel="alternate"></link><published>2016-11-11T14:14:00-02:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-11:python/iterando-listas-em-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2033,16 +2116,6 @@ beltrano
    &lt;span class="n"&gt;x&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt;   &lt;span class="mi"&gt;20&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O estudo da atribuição condicional não deve causar espanto a todos que entenderam o correto funcionamento da estrutura condicional &lt;tt class="docutils literal"&gt;if&lt;/tt&gt;, até porque, o funcionamento é basicamente o mesmo, e a diferença está, na forma &lt;tt class="docutils literal"&gt;inline&lt;/tt&gt; como a estrutura agora estudada é utilizada.&lt;/p&gt;
-
-&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
-&lt;!-- Horizontal --&gt;
-&lt;ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5466436161806566"
-     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
@@ -2776,27 +2849,19 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;div class="section" id="depuracao"&gt;
 &lt;h2&gt;DEPURAÇÃO&lt;/h2&gt;
 &lt;img alt="IDE PyCharm em modo de depuração com um breakpoint na primeira linha" src="../images/curso-de-python/depuracao-pycharm.png" /&gt;
-&lt;p&gt;Depuração é uma forma de execução do nosso código em que é possível manipular a execução de cada linha e verificar os valores das instâncias.&lt;/p&gt;
-&lt;p&gt;Então, é correto dizer que depurar um código significa a execução de cada linha vagarosamente, onde o programador é quem diz quando que determinada instrução deve ser executada. E também, a cada linha executada, é possível verificar o valor das variáveis que estão no escopo local e global, e também, alguns editores permitem a alteração do valor das variáveis. Desta forma, conseguimos simular situações onde talvez, não fosse possível através do nosso programa.&lt;/p&gt;
+&lt;p&gt;Depuração é uma técnica de programação em que é possível manipular a execução de cada linha e verificar os valores das variáveis (instâncias).&lt;/p&gt;
+&lt;p&gt;A depuração é uma ferramenta presente nas IDE modernas e nos proporciona uma forma de executar nossa aplicação passo-a-passo e ir verificando o valor das variáveis e o que nosso programa vai executando.&lt;/p&gt;
+&lt;p&gt;É correto dizer que depurar um código significa a execução de cada linha vagarosamente, onde o programador é quem diz quando que determinada instrução deve ser executada. E também, a cada linha executada, é possível verificar o valor das variáveis que estão no escopo local e global&lt;/p&gt;
+&lt;p&gt;Algumas IDEs permitem a alteração do valor das variáveis e a executação de código paralelamente. Desta forma, conseguimos simular situações onde talvez, não fosse possível através do nosso programa.&lt;/p&gt;
 &lt;p&gt;A depuração é comumente utilizada para na detecção de erros e para entender o estado do programa e de suas variáveis antes do problema ocorrer de fato, ou após o erro ter ocorrido.&lt;/p&gt;
 &lt;p&gt;Podemos dizer que é possível depurar qualquer código de qualquer linguagem, até porque, esse é um recurso atualmente considerado elementar para a correta construção de software. Algumas vezes a depuração é um recurso encontrado em determinada IDE, outras vezes, a capacidade de depuração acaba sendo uma ferramenta disponibilizada pela linguagem, isto é, a Máquina Virtual ou o Compilador da linguagem é quem disponibilizam esses recursos e capacidades.&lt;/p&gt;
 &lt;p&gt;Neste Curso de Python, estamos utilizando a IDE &lt;a class="reference external" href="https://www.jetbrains.com/pycharm/download/"&gt;PyCharm&lt;/a&gt; e a mesma oferece-nos grande capacidade para depuração e análise interna em tempo de execução.&lt;/p&gt;
-
-&lt;script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
-&lt;!-- Horizontal --&gt;
-&lt;ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-5466436161806566"
-     data-ad-slot="9013620336"&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
 &lt;/div&gt;
 &lt;div class="section" id="o-que-e-breakpoint"&gt;
 &lt;h2&gt;O QUE É &lt;tt class="docutils literal"&gt;breakpoint&lt;/tt&gt;?&lt;/h2&gt;
 &lt;p&gt;A palavra &lt;tt class="docutils literal"&gt;breakpoint&lt;/tt&gt;, significa, na depuração de programas, o número da linha em que a execução do código será interrompido para o início da depuração.&lt;/p&gt;
-&lt;p&gt;Esse é um recurso existente para que não seja necessário depurar todo o código desde o início. Assim, podemos marcar em qual ponto do programa desejamos iniciar a depuração e, quando o cursor de execução chegar na linha demarcada, a execução será interrompida e a IDE trará o código em que ocorreu a interrupção.&lt;/p&gt;
-&lt;p&gt;Na imagem principal desta postagem, é possível ver um breakpoint na primeira linha da IDE PyCharm. Normalmente, os &lt;tt class="docutils literal"&gt;breakpoints&lt;/tt&gt; são representados por uma bola vermelha no canto esquerdo [margem] dos editores de código.&lt;/p&gt;
+&lt;p&gt;Esse é um recurso permite interrompermos a execução do nosso programa num determinado ponto. Assim, podemos marcar em qual local do programa desejamos iniciar a depuração e quando o cursor de execução chegar na linha demarcada, a execução será interrompida e a IDE trará o código em que ocorreu a interrupção.&lt;/p&gt;
+&lt;p&gt;Na imagem acima, é possível ver um breakpoint na primeira linha da IDE PyCharm. Normalmente, os &lt;tt class="docutils literal"&gt;breakpoints&lt;/tt&gt; são representados por uma bola vermelha no canto esquerdo [margem] dos editores de código.&lt;/p&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category><category term="depuração"></category><category term="pycharm"></category><category term="blog"></category></entry><entry><title>Estrutura if e else em Python</title><link href="http://excript.com/python/if-else-python.html" rel="alternate"></link><published>2016-05-16T23:30:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-16:python/if-else-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -4084,7 +4149,7 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;div class="section" id="idle-visao-geral"&gt;
 &lt;h2&gt;IDLE - VISÃO GERAL&lt;/h2&gt;
 &lt;img alt="Imagem que exibe o IDLE em execução." src="../images/curso-de-python/idle.png" /&gt;
-&lt;p&gt;O IDLE é um programa escrito em Python para ser utilizado como um ambiente de desenvolvimento integrado para execução de Script´s. A aplicação vem junto com a maioria das instalações do Python e está presente na distribuição oficial desde a versão 2.3.&lt;/p&gt;
+&lt;p&gt;A palavra IDLE é o acrônimo de &lt;strong&gt;Integrated Development and Learning Environment&lt;/strong&gt;. O mesmo é um programa escrito em Python para ser utilizado como um ambiente de desenvolvimento integrado para execução de Script´s. A aplicação vem junto com a maioria das instalações do Python e está presente na distribuição oficial desde a versão 2.3.&lt;/p&gt;
 &lt;p&gt;O editor está construido 100% em Python, logo, toda a parte gráfica foi desenvolvida utilizando a biblioteca Tkinter, um bind (versão) da biblioteca Tk disponibilizada nativamente para Python.&lt;/p&gt;
 &lt;p&gt;De forma geral, podemos dizer que o objetivo do IDLE é proporcionar uma maneira rápida e fácil para o uso das funções e bibliotecas do Python, como também, proporcionar uma plataforma de estudo simples de ser utilizada, disponibilizando num único lugar, todos os recursos e bibliotecas do Python.&lt;/p&gt;
 &lt;/div&gt;
@@ -4202,6 +4267,14 @@ Alt + N - para avançar. O 'N' vem de &amp;quot;Next&amp;quot;.&lt;/p&gt;
 &lt;h2&gt;CONSIDERAÇÕES FINAIS&lt;/h2&gt;
 &lt;p&gt;Nesse artigo estudamos o mínimo sobre o IDLE e aprendemos somente as teclas de atalho essenciais para que possamos utilizar o ambiente para testes e estudos disponibilizado nas principais versões do Python.&lt;/p&gt;
 &lt;p&gt;É possível obter muito mais do que o demonstrado e podemos explorar diversos outros recursos acessando o Menu do próprio editor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://lwn.net/1999/0114/a/idle.html"&gt;Anuncio na lista de discussão oficial (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/idle.html"&gt;IDLE (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/IDLE"&gt;Wikipedia (en)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category><category term="idle"></category><category term="ide"></category><category term="editor"></category><category term="blog"></category></entry><entry><title>Recursos do Python</title><link href="http://excript.com/python/recursos-python.html" rel="alternate"></link><published>2016-05-01T21:20:00-03:00</published><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:python/recursos-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
