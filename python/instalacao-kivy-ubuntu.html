@@ -130,6 +130,181 @@ eXcript            </a>
                 </div>
 
 
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a data-toggle="tab" href="#artigo">ARTIGO</a></li>
+		</ul>
+
+		<div class="tab-content">
+
+			<div class="tab-pane active" id="artigo">
+				<div class="row">
+					
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula aprenderemos a instalar a biblioteca Kivy no sistema operacional Ubuntu.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="ubuntu">
+<h2>UBUNTU</h2>
+<p>Neste artigo aprenderemos como construir um ambiente de trabalho no Ubuntu, como também, as várias ferramentas disponíveis e as várias maneiras diferentes de configurar o nosso ambiente.</p>
+<p>O sistema operacional Ubuntu recebeu atenção especial na documentação do projeto Kivy, por essa razão, ensinaremos em detalhes a construção de ambientes de trabalho no mesmo.</p>
+<p>De fábrica o Ubuntu 16.04 e as versões anteriores possuem 2 versões do Python, a 2x e a 3x. Por padrão, o Ubuntu define o Python 2x. Então, para executarmos um Script no interpretador 3x temos que definir isso explicitamente.</p>
+<p>O Ubuntu possui vários atalhos para um mesmo interpretador do Python, por exemplo, se digitarmos no Terminal python, python2 ou python2.7 o modo interativo do Python 2x é iniciado. O mesmo acontece com a versão 3x, ou seja, podemos digitar python3 ou python 3.4 que o modo interativo do Python da versão 3x será iniciado.</p>
+<p>Esse mesmo sistema de link ocorre com a ferramenta pip. Assim, podemos instalar um pacote no Python2x com o comando pip ou pip2 e podemos instalar um pacote para o Python3x com o comando pip3.</p>
+<p>A documentação oficial da biblioteca Kivy oferecer 2 formas para instalarmos a biblioteca e suas dependências no Ubuntu. A primeira opção instala a biblioteca nas instalações default do Python. Essa é uma forma de trabalho que você deve evitar, salvo em alguns poucos casos. A segunda forma, é fazer a instalação em um ambiente virtual.</p>
+<p>Então, é importante que você saiba que nós construiremos 3 ambientes de trabalho. O primeiro e principal será utilizando o Anaconda. O segundo, será utilizando o virtualenv. E o terceiro e menos recomendado, instalaremos a biblioteca Kivy na instalação do Python default.</p>
+<p>Sugerimos e recomendamos que você construa seu ambiente com o Anaconda, até porque, neste curso optamos por essa ferramenta. Porém, se houver algum problema, construa seu ambiente com a ferramenta virtualenv e virtualenvwrapper. Por fim, em últimos casos, ou então, caso você não possua privilégios, instale a biblioteca na instalação do Python.</p>
+<p>Neste primeiro momento está ocorrendo uma incompatibilidade com a biblioteca Kivy e o Anaconda. Assim que a incompatibilidade for solucionada, as vídeos aulas ensinando a construção do ambiente com essas ferramentas será gravada e disponibilizada.</p>
+</div>
+<div class="section" id="instalacao-sem-ambiente-virtual">
+<h2>INSTALAÇÃO SEM AMBIENTE VIRTUAL</h2>
+<p>Para instalarmos a biblioteca Kivy na instalação default do Ubuntu, basta adicionarmos o repositório ao nosso sistema, no caso, o PPA (Personal Package Archives), seja para a versão 2x, 3x ou a versão de desenvolvimento.</p>
+<p>Ainda que essa seja a forma mais fácil para construirmos o ambiente de trabalho, é a menos recomendada. Isso porque, se utilizarmos a versão do Python que o SO utiliza e eventualmente corrompemos ou causamormos algum problema, nosso sistema operacional deixará de funcionar corretamente!</p>
+<div class="highlight"><pre><span></span><span class="c1">#adicionando o PPA ao sistema (stable builds)</span>
+$ sudo add-apt-repository ppa:kivy-team/kivy
+<span class="c1">#adicionando o PPA ao sistema (nightly builds)</span>
+$ sudo add-apt-repository ppa:kivy-team/kivy-daily
+
+<span class="c1">#atualizando o sistema</span>
+$ sudo apt-get update
+
+<span class="c1">#instalando o Kivy no Python 2x</span>
+$ sudo apt-get install python-kivy
+<span class="c1">#instalando o Kivy no Python 3x</span>
+$ sudo apt-get install python3-kivy
+
+<span class="c1">#instalando os códigos de exemplo</span>
+$ sudo apt-get install python-kivy-examples
+</pre></div>
+</div>
+<div class="section" id="anaconda-virtualenv-e-ubuntu">
+<h2>ANACONDA, VIRTUALENV E UBUNTU</h2>
+<p>No momento em que este manual está sendo escrito há uma incompatibilidade entre a biblioteca <a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html">Kivy</a> e os ambientes virtuais criados com <a class="reference external" href="https://www.continuum.io/">Anaconda no Ubuntu</a>. Por essa razão será ensinado a construir o ambiente de trabalho utilizando a ferramenta <a class="reference external" href="https://virtualenv.pypa.io/">virtualenv</a> e <a class="reference external" href="https://virtualenvwrapper.readthedocs.io/">virtualenvwrapper</a> .</p>
+</div>
+<div class="section" id="montando-o-ambiente-com-virtualenv">
+<h2>MONTANDO O AMBIENTE COM VIRTUALENV</h2>
+<p>Agora construiremos nosso ambiente de desenvolvimento e criaremos os ambientes virtuais utilizando as ferramentas virtualenv e virtualenvwrapper.</p>
+<p>Como já dito, neste curso utilizaremos o projeto Anaconda para gerenciar os ambientes virtuais e os pacotes. Mesmo assim, me sinto no dever de ensinar a montar o ambiente utilizando a ferramenta virtualenv, até porque, essa ainda é a mais utilizada.</p>
+<p>Novamente, não existe melhor ou pior ambiente de trabalho, tudo é uma questão de costume e de preferência.</p>
+<p>O processo de instalação total compreende várias etapas, por isso, é super importante prestar atenção e ir fazendo exatamente como está sendo demonstrado.</p>
+<p>Por fim, é importante dizer que muitos alunos irão ter problemas dos mais diversos e isso é super natural. A primeira tentativa de resolução é fechar tudo, reiniciar o OS e iniciar o processo de instalação do zero.</p>
+<p>Mesmo assim, todos os eventuais erros que você vier a ter é interessante compartilhar em nosso grupo, até porque, pode ser a solução para o problema de outro aluno.</p>
+</div>
+<div class="section" id="instalando-o-virtualenv-e-instalando-kivy-no-ubuntu">
+<h2>INSTALANDO O VIRTUALENV E INSTALANDO KIVY NO UBUNTU</h2>
+<p>Vamos instalar e configurar nosso ambiente de trabalho no Ubuntu utilizando as ferramentas virtualenv e virtualenvwrapper. Para facilitar o estudo, dividi o processo de instalação e criação dos ambientes virtuais em 3 etapas.</p>
+<ol class="arabic simple">
+<li>Atualização e instalação de pacotes (Ubuntu)</li>
+<li>Atualização e instalação pacote (Python)</li>
+<li>Criação do ambientes virtuais
+a) k27
+a) k34</li>
+</ol>
+<ol class="arabic simple">
+<li>PACOTES UBUNTU</li>
+</ol>
+<p>Na página de <a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html">instalação do projeto Kivy contém a lista de pacotes que precisam ser instalados no Ubuntu</a> para que a biblioteca Kivy funcione. Esse material foi criado a partir dessa lista.</p>
+<p>Para facilitar, adicionei numa única lista todos os pacotes necessários, tanto para a versão 2x como 3x do Python. Você pode construir essa lista através da página oficial, porém, preferi lhe entregar tudo pronto pra facilitar nosso trabalho.</p>
+<div class="highlight"><pre><span></span><span class="c1">#atualização do sistema</span>
+sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade
+
+<span class="c1">#pacotes para python 2x e 3x</span>
+sudo apt-get install -y python-pip python3-pip build-essential git python python3  python-dev python3-dev libsdl2-dev  libsdl2-image-dev  libsdl2-mixer-dev  libsdl2-ttf-dev libportmidi-dev  libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev ffmpeg
+
+<span class="c1">#caso ocorra erro na instalação do ffmpeg</span>
+sudo apt-get install libav-tools
+
+<span class="c1">#em tese não é necessário executar os comandos abaixo</span>
+<span class="c1">#se o pacote libav-tools foi instalado</span>
+sudo add-apt-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install ffmpeg
+</pre></div>
+<p>Finalizamos a primeira fase da instalação da biblioteca Kivy no Ubuntu.</p>
+<p>Agora vamos iniciar a instalação das bibliotecas do Python propriamente ditas.</p>
+</div>
+<div class="section" id="instalacao-pacotes-python">
+<h2>2) INSTALAÇÃO PACOTES PYTHON</h2>
+<p>Para instalar os pacotes Python utilizaremos o gerenciador de pacotes pip.</p>
+<div class="highlight"><pre><span></span><span class="c1"># Instalação/atualização do pip, virtualenv e setuptools</span>
+sudo pip install --upgrade pip virtualenv setuptools
+
+<span class="c1">#instalação do virtualenvwrapper</span>
+<span class="nv">$sudo</span> pip install virtualenvwrapper
+
+<span class="c1">#adicionar no final do arquivo “~/.bashrc”</span>
+
+<span class="c1">#local onde os ambientes serão armazenados</span>
+<span class="nb">export</span> <span class="nv">WORKON_HOME</span><span class="o">=</span>~/.virtualenvs
+<span class="c1">#script de ativação do virtualenvwrapper</span>
+<span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+
+<span class="c1">#define que não será utilizado os pacotes instalados no python default</span>
+<span class="nb">export</span> <span class="nv">VIRTUALENVWRAPPER_VIRTUALENV_ARGS</span><span class="o">=</span><span class="s1">&#39;--no-site-packages&#39;</span>
+<span class="c1">#define que não é possível utilizar o pip fora de algum ambiente virtual</span>
+<span class="nb">export</span> <span class="nv">PIP_REQUIRE_VIRTUALENV</span><span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
+<div class="section" id="criacao-dos-ambientes-virtuais">
+<h2>3) CRIAÇÃO DOS AMBIENTES VIRTUAIS</h2>
+<div class="highlight"><pre><span></span><span class="c1"># Criação de um ambiente virtual de nome &quot;k27&quot; com Python 27</span>
+mkvirtualenv --no-site-packages -p /usr/bin/python2.7 k27
+
+<span class="c1"># instalação do pacote Cython</span>
+pip install <span class="nv">Cython</span><span class="o">==</span>0.23
+
+<span class="c1"># Instalação da biblioteca Kivy</span>
+pip install kivy
+
+<span class="c1"># Criação de um ambiente virtual de nome &quot;k34&quot; com Python34</span>
+mkvirtualenv --no-site-packages -p /usr/bin/python3.4 k34
+
+<span class="c1"># instalação do pacote Cython</span>
+pip install <span class="nv">Cython</span><span class="o">==</span>0.23
+
+<span class="c1"># Instalação da biblioteca Kivy</span>
+pip install kivy
+</pre></div>
+<p>Para ativar determinado ambiente virtual, utilize o comando abaixo.</p>
+<blockquote>
+# ativação do ambiente virtual
+workon k27
+workon k34</blockquote>
+<p>Se você desejar instalar a versão em desenvolvimento (não recomendável no início) utilize o comando abaixo.</p>
+<blockquote>
+# Instalação da biblioteca Kivy (versão desenvolvimento)
+# pip install git+https://github.com/kivy/kivy.git&#64;master</blockquote>
+</div>
+<div class="section" id="veja-tambem">
+<h2>VEJA TAMBÉM</h2>
+<p><a class="reference external" href="http://excript.com/python/instalacao-kivy-mac.html">Instalação no Mac OSX</a></p>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html">Manual de Instalação oficial no Linux (en)</a></li>
+<li><a class="reference external" href="https://virtualenv.pypa.io/">Página oficial virtualenv (en)</a>:</li>
+<li><a class="reference external" href="https://virtualenvwrapper.readthedocs.io/">Página oficial virtualenvwrapper (en)</a></li>
+<li><a class="reference external" href="https://www.continuum.io/">Projeto Anaconda (en)</a></li>
+</ul>
+</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
 
 <br>
 <br>

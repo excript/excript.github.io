@@ -130,6 +130,118 @@ eXcript            </a>
                 </div>
 
 
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a data-toggle="tab" href="#artigo">ARTIGO</a></li>
+		</ul>
+
+		<div class="tab-content">
+
+			<div class="tab-pane active" id="artigo">
+				<div class="row">
+					
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula aprenderemos a instalar a biblioteca Kivy no sistema operacional Mac OSX.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="mac-osx">
+<h2>MAC OSX</h2>
+<p>Neste artiogo aprenderemos a construir um ambiente de trabalho no Mac OSX, como também, estudaremos as várias ferramentas disponíveis e as várias maneiras diferentes de montar o nosso ambiente.</p>
+<p>De fábrica o Mac OSX 10 e as versões anteriores possuem a versão do Python 2x que é de uso exclusivo do SO e por isso, não deveríamos instalar pacotes ou mesmo, ficar utilizando essa versão no desenvolvimento.</p>
+<p>Neste curso trabalharemos com o Anaconda, portanto, não utilizaremos a versão do Python instalada por padrão no Mac para quase nada.</p>
+<p>É importante dizer que neste momento estamos construindo nosso ambiente de desenvolvimento, posteriormente, construiremos um ambiente para gerar executáveis, seja para o próprio Mac OSX, ou então, para o iOS. Então, vamos construir um ambiente voltado somente para o desenvolvimento.</p>
+<p>No momento em que essa aula está sendo gravada, a documentação oficial para a instalação da biblioteca Kivy no Mac contém alguns problemas, por isso, seguiremos um tutorial que eu mesmo desenvolvi. Junto a essa aula você encontrará um arquivo contendo os passos para a instalação e os comandos que devem ser digitados no Terminal.</p>
+</div>
+<div class="section" id="instalando-o-anaconda-no-mac-osx">
+<h2>INSTALANDO O ANACONDA NO MAC OSX</h2>
+<p>Se você não souber qual a sua versão do sistema operacional Mac, utilize o comando abaixo.</p>
+<div class="highlight"><pre><span></span><span class="c1">#retorna a versão do MacOS</span>
+sw_vers
+</pre></div>
+<div class="section" id="instalacao-do-gerenciador-brew">
+<h3>1) Instalação do gerenciador brew</h3>
+<div class="highlight"><pre><span></span>/usr/bin/ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="instalacao-das-dependencias">
+<h3>2) Instalação das dependencias</h3>
+<p>Os pacotes a seguir são necessários tanto pra versão 2x como 3x.</p>
+<div class="highlight"><pre><span></span><span class="c1">#não utilizar SUDO</span>
+brew install sdl sdl_image sdl_mixer sdl_ttf smpeg portmidi
+</pre></div>
+</div>
+<div class="section" id="download-anaconda">
+<h3>3) Download Anaconda</h3>
+<p>Para <a class="reference external" href="https://www.continuum.io/downloads#osx">fazer o donwload da instalação da Ananconda, utilize este link</a> .</p>
+</div>
+<div class="section" id="criacao-e-instalacao-dos-ambientes-virtuais-e-da-biblioteca-kivy">
+<h3>4) Criação e instalação dos ambientes virtuais e da biblioteca kivy</h3>
+<p>Agora, iremos criar 2 ambientes virtuais de nome k27 e k35 e instalaremos o framework kivy em cada ambiente. É importante dizer que iremos instalar ambas versões devido ao fato de que em alguma situações, o projeto Kivy fornece suporte somente a versão 2.7.</p>
+<div class="highlight"><pre><span></span><span class="c1">#criação do ambiente k27</span>
+conda create -p k27 <span class="nv">python</span><span class="o">=</span>2.7
+
+<span class="c1">#instalar pygame</span>
+pip install pygame
+
+<span class="c1">#biblioteca gráfica</span>
+conda install pillow
+
+
+<span class="c1">#biblioteca que compila código Python</span>
+conda install <span class="nv">cython</span><span class="o">=</span>0.23
+
+
+<span class="c1">#instalação da biblioteca Kivy</span>
+$ <span class="nv">USE_OSX_FRAMEWORKS</span><span class="o">=</span><span class="m">0</span> pip install -I --no-cache-dir --no-binary all kivy
+
+
+
+<span class="c1">#criação do ambiente k35</span>
+conda create -p k35 <span class="nv">python</span><span class="o">=</span>3.5
+
+<span class="c1">#instalar pygame</span>
+pip install pygame
+
+<span class="c1">#biblioteca gráfica</span>
+conda install pillow
+
+<span class="c1">#biblioteca que compila código Python</span>
+conda install <span class="nv">cython</span><span class="o">=</span>0.23
+
+<span class="c1">#instalação da biblioteca Kivy</span>
+$ <span class="nv">USE_OSX_FRAMEWORKS</span><span class="o">=</span><span class="m">0</span> pip install -I --no-cache-dir --no-binary all kivy
+</pre></div>
+</div>
+</div>
+<div class="section" id="veja-tambem">
+<h2>VEJA TAMBÉM</h2>
+<p><a class="reference external" href="http://excript.com/python/instalacao-kivy-ubuntu.html">Instalação no Ubuntu</a></p>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html">Manual de Instalação oficial no MacOSX (en)</a></li>
+<li><a class="reference external" href="https://kivy.org/docs/installation/installation-osx.html">Manual de instalação oficial (en)</a></li>
+<li><a class="reference external" href="https://www.continuum.io/">Projeto Anaconda (en)</a></li>
+</ul>
+</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
 
 <br>
 <br>

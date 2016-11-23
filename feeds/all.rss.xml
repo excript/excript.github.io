@@ -46,29 +46,24 @@
 &lt;p&gt;Kivy Design é um projeto de construção de uma IDE RAD para desenvolvimento de aplicações gráficas com Python utilizando a biblitoeca kivy. A proposta é a construção do sonho de todos programadores: um ambiente de  completo, estável, para a construção de aplições, seja para o Prompt de Comando, seja para aplicações gráfica para Desktop, Mobile e Web.&lt;/p&gt;
 &lt;p&gt;O projeto Kivy Design objetiva fazer jus a todo o trabalho e esforço empreendido na construção da biblioteca Kivy e fornecer um ambiente para a construção de aplicações gráfica que tenha tanta qualidade como a biblioteca Kivy.&lt;/p&gt;
 &lt;p&gt;A IDE vem sendo desenvolvido, obviamente, com o framework Kivy, então, talvez este venha a ser a primeira IDE RAD (Rapid Application Development) multiplaforma e multidispositivo do mundo. O mais legal é que temos a oportunidade de participar do desenvolimento da IDE e assim, trabalhar para construir uma ferramenta que seja como sempre desejamos que ela fosse.&lt;/p&gt;
-&lt;p&gt;Pode parecer num primeiro momento que o código da IDE é complicado ou então,  que você precisará estudar muito antes de começar a adicionar sua implementações. Se tiveres um pouco de paciência, lhe provarei, estudando o código e lhe explicando os detalhes o contrário e mostrareio como tudo é simples e lógico.&lt;/p&gt;
-&lt;p&gt;Veja bem, você não vai me ouvir falando o mesmo de outras IDE, como por exemplo o Code::Block, PyCharm e até mesmo o nosso amigo IDLE. Já estudei, por exemplo, o código-fonte do PyCharm, ou seja, a IDE que estamos utilizando neste curso e sério, é uma loucural.&lt;/p&gt;
-&lt;p&gt;Uma das razões do código do Kivy Design ser tão simples é que tudo ainda é muito simples, e essa é a parte boa, ou seja, temos a oportunidade de acompanhar o crescimento do código e ir assimilando naturalmente, sem contar o aprendizado ao interagir com código de desenvolvedores mais experientes.&lt;/p&gt;
+&lt;p&gt;Uma das razões do código do Kivy Design ser tão simples é que tudo ainda está no começo, por isso tanta simplicidade. E, essa é a parte boa, ou seja, temos a oportunidade de acompanhar o crescimento do código e ir assimilando naturalmente e participando da construção de um grande software!&lt;/p&gt;
 &lt;div class="section" id="estado-do-projeto"&gt;
 &lt;h3&gt;ESTADO DO PROJETO&lt;/h3&gt;
-&lt;p&gt;Neste momento, ainda que seja possível executar o projeto Kivy Design, não é recomendável sua utilização, até porque, o mesmo está caindo a todo momento.&lt;/p&gt;
-&lt;p&gt;Porém, caso queiras se divirtir, toda vez que Kivy Design travar, é impresso o local em que ocorreu o problema, logo, poder ir até lá e tentar corrigir.
-O interessante é que a maior parte das vezes em que o Kivy Design trava, o probelma não está em seu código, mas sim, no código da biblioteca Kivy.&lt;/p&gt;
-&lt;p&gt;Falando de maneira geral, o framework Kivy não faz um forte tratameto e verificação quando novos valores são atribuido para propriedades de um Widget. Então, se a propriedade estiver esperando uma Tupla e for enviado um dicionário, ocorre um erro na bibliocate, o que acaba por derrubar toda a IDE.&lt;/p&gt;
-&lt;p&gt;Porém, isso não é um problema grave e o pessoal do desenvolvimento já tem conhecimento do fato. Porém, sinceramente, não sei a razão pela qual não é resolvido! Até porque, a solução é fácil e se você se der ao trabalho de ir atrás, verás que em 90% das vezes o erro ocorrerá dentro de algum Container, quando este está definindo o tamalho e o posicionamento.&lt;/p&gt;
-&lt;p&gt;Por isso, o problema é simples, mas provavelmente, o projeto Kivy Design está esperando por alguma implementação do pessoal do projeto Kivy.&lt;/p&gt;
-&lt;p&gt;Por fim, é importante dizer que nosso objetivo agora é saber baixar e executar a IDE e também, ter um noção básica do seu funcionamento. Isso porque, o projeto ainda é muito imaturo para investirmos muito tempo estudando-o. Muito irá mudar num futuro próximo e assim, o que aprenderíamos hoje, teríamos que aprender novamente amanhã.&lt;/p&gt;
+&lt;p&gt;Neste momento, ainda que seja possível executar o projeto Kivy Design, não é recomendável sua utilização, até porque, o mesmo está caindo (travando) a todo momento.&lt;/p&gt;
+&lt;p&gt;Caso queiras se divertir, toda vez que Kivy Design travar, é impresso o local em que ocorreu o problema, logo, poder ir até lá e tentar corrigir.
+O interessante é que a maior parte das vezes em que o Kivy Design trava, o problema não está em seu código, mas sim, no código da biblioteca Kivy.&lt;/p&gt;
+&lt;p&gt;Falando de maneira geral, o framework Kivy não faz um forte tratamento e verificação quando novos valores são atribuido para propriedades de um Widget. Se a propriedade estiver esperando uma Tupla e for enviado um dicionário, ocorre um erro na biblioteca, o que acaba por derrubar toda a IDE. A princípio, e, pelo que entendi, os desenvolvedores não tem interesse de fazer esse tipo de tratamento por questões de performance.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="garden"&gt;
 &lt;h2&gt;garden&lt;/h2&gt;
-&lt;p&gt;O &lt;a class="reference external" href="https://github.com/kivy-garden"&gt;Projeto Garden&lt;/a&gt; centraliza componentes não oficiais de código-fonte aberto e distribuido sob a licença MIT. Pense neste projeto como um centralizador de códigos de diferentes usuários cuja finalidade é distribuir e compartilhar módulos.&lt;/p&gt;
+&lt;p&gt;O &lt;a class="reference external" href="https://github.com/kivy-garden"&gt;Projeto Garden&lt;/a&gt; centraliza componentes não oficiais de código-fonte aberto e distribuido sob a licença MIT desenvolvido por terceiros. Pense neste projeto como um centralizador de códigos de diferentes usuários cuja finalidade é distribuir e compartilhar módulos prontos para ser utilizado.&lt;/p&gt;
 &lt;p&gt;Todos os pacotes Garden estão armazenados no Github, dentro do projeto Kivy, ou seja, no mesmo local em que baixamos o código fonte da biblioteca Kivy.&lt;/p&gt;
-&lt;p&gt;Garden is a project to centralize addons for Kivy maintained by users. You can find more information at Kivy Garden. All the garden packages are centralized on the kivy-garden Github repository&lt;/p&gt;
-&lt;p&gt;Devido ao fato de que o projeto Garden não está mais sendo entregado junto com o código do framework, é necessário instala-lo manualmente. Para isso, vá no Prompt de Comando e digite:&lt;/p&gt;
+&lt;p&gt;O projeto Garden não está mais sendo entregue junto com o código do framework Kivy, por isso, agora, é necessário instala-lo manualmente. Para isso, vá no Terminal e digite:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install kivy-garden
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Vale dizer que todos são incentivados a colaborar com os pacotes existentes ou então, pela criação de novos módulos independentes. Inclusive, existe um sistema de premiação simbólica para aqueles que tenham colaborado.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/kivy-garden"&gt;Segue o link do repositório no Github&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
