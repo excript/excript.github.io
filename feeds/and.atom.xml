@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>eXcript</title><link>http://excript.com/</link><description></description><lastBuildDate>Tue, 03 Jun 2014 18:11:00 -0300</lastBuildDate><item><title>Operadores Lógicos em Python</title><link>http://excript.com/python/operadores-logicos-python.html</link><description>
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos os operadores lógicos na linguagem Python. Aprenderemos também a definição de valor lógica, a definição de conjunção, disjunção e de sub-expressões lógicas.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao-aos-operadores-logicos"&gt;
+&lt;h2&gt;INTRODUÇÃO AOS OPERADORES LÓGICOS&lt;/h2&gt;
+&lt;p&gt;Os &lt;strong&gt;operadores lógicos&lt;/strong&gt; unem expressões lógicas formando assim, uma nova expressão que é composta por 2 ou mais sub-expressões. O resultado lógico de expressões compostas será a relação entre as sub-expressões. Como estudamos, toda expressão lógica avaliada resultará num &lt;strong&gt;valor lógico&lt;/strong&gt; e a relação entre vários valores lógicos é um outro valor lógico.&lt;/p&gt;
+&lt;p&gt;Quando estudamos os &lt;a class="reference external" href="http://excript.com/python/operador-relacional-python.html"&gt;Operadores Relacionais&lt;/a&gt; aprendemos a obter o valor lógico entre 2 operandos, no caso, entre o operando que está a esquerda do operador e o operando que está a direita do Operador Relacional. Como resposta, obtemos valores do tipo Booleano, isto é, verdadeiro [&lt;strong&gt;True&lt;/strong&gt;] ou falso [&lt;strong&gt;False&lt;/strong&gt;].&lt;/p&gt;
+&lt;p&gt;Os &lt;strong&gt;operadores lógicos&lt;/strong&gt; por sua vez, permite-nos unir 2 expressões ligando-as com os conectivos lógicos matemáticos que são, o conectivo &lt;strong&gt;E&lt;/strong&gt; e o conectivo &lt;strong&gt;OU&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="valor-logico"&gt;
+&lt;h2&gt;VALOR LÓGICO&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;valor lógico&lt;/strong&gt; é um tipo de dado binário, isto é, assume um valor dentre duas opções: verdadeiro ou falso.&lt;/p&gt;
+&lt;p&gt;Os valores lógicos são de fato a base de toda a computação, até porque, temos que, o &lt;tt class="docutils literal"&gt;bit&lt;/tt&gt; está ligado ou o &lt;tt class="docutils literal"&gt;bit&lt;/tt&gt; está desligado. O valor lógico em sua forma mais primitiva assume o número 1 quando verdadeiro e assume o valor 0 quando falso.&lt;/p&gt;
+&lt;p&gt;Toda expressão avaliada na computação de maneira geral, resulta num &lt;strong&gt;valor lógico&lt;/strong&gt;, isto é, ou a expressão é verdadeira, ou a expressão é falsa. Como aprenderemos de agora em diante, todas as estruturas da linguagem Python baseiam-se nos 2 valores lógicos possíveis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-tipo-de-dado-booleano-bool"&gt;
+&lt;h2&gt;O TIPO DE DADO BOOLEANO (&lt;tt class="docutils literal"&gt;bool&lt;/tt&gt;)&lt;/h2&gt;
+&lt;p&gt;O tipo de dado Booleano, que em Python é representado pela classe &lt;cite&gt;bool&lt;/cite&gt; assume um valor dentre 2 valores constante: &lt;strong&gt;True&lt;/strong&gt; ou &lt;strong&gt;False&lt;/strong&gt;. A palavra &lt;a class="reference external" href="https://pt.wikipedia.org/wiki/Booliano"&gt;Booleano&lt;/a&gt; vem do sobrenome do filósofo e matemático &lt;a class="reference external" href="https://pt.wikipedia.org/wiki/George_Boole"&gt;George Boole&lt;/a&gt; o criado da &lt;a class="reference external" href="https://pt.wikipedia.org/wiki/%C3%81lgebra_booliana"&gt;Álgebra Booleana&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Se formos no IDLE e verificarmos com a instrução &lt;tt class="docutils literal"&gt;type()&lt;/tt&gt; o tipo dos valores lógicos ou então, o tipo de uma expressão lógica, teremos como resposta o valor &lt;tt class="docutils literal"&gt;&amp;lt;class 'bool'&amp;gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nc"&gt;bool&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;gt;&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nc"&gt;bool&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;gt;&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nc"&gt;bool&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como podemos ver acima o Python reconhece as 2 constantes como pertencentes ao tipo de dado &lt;cite&gt;bool&lt;/cite&gt;, no caso, as constantes &lt;strong&gt;True&lt;/strong&gt; e &lt;strong&gt;False&lt;/strong&gt;. É importante notar que ambas constantes iniciam com letra maiúscula, do contrário, o Python tratará como sendo uma referência desconhecida.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conectivos-logicos"&gt;
+&lt;h2&gt;CONECTIVOS LÓGICOS&lt;/h2&gt;
+&lt;p&gt;As linguagens de programação, utilizam os &lt;strong&gt;conectivos lógicos&lt;/strong&gt; da lógica formal, ou melhor da lógica Aristotélica, na construção de expressões lógicas. Existem 2 conectivos lógicos e, mesmo que não os conheçamos com o nome de &lt;strong&gt;conectivos lógicos&lt;/strong&gt;, utilizamo-os constantemente ao conversarmos ou então, para explicarmos qualquer disciplina a outra pessoa.&lt;/p&gt;
+&lt;p&gt;Os dois conectivos lógicos são:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Conectivo de &lt;strong&gt;conjunção&lt;/strong&gt;: &lt;strong&gt;E&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Conectivo de &lt;strong&gt;disjunção&lt;/strong&gt;: &lt;strong&gt;OU&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Por exemplo, a simples frase &lt;tt class="docutils literal"&gt;A e B são caracteres iguais&lt;/tt&gt; implica numa expressão lógica e acabamos de representar a mesma textualmente. Porém, a expressão pode ser facilmente escrita matematicamente, ou então, com o uso de uma linguagem de programação.&lt;/p&gt;
+&lt;p&gt;Por essa razão, devemos olhar para as Linguagens de Programação como sendo, antes de tudo,  formas ou estilos de &lt;strong&gt;Notação&lt;/strong&gt; lógica. Como sabemos, existe a notação matemática que possui suas próprias regras e sua própria sintaxe. Existem algumas linguagens de programação que por exemplo, suportam a sintaxe matemática na definição de expressões e na composição de sentenças lógicas.&lt;/p&gt;
+&lt;p&gt;Por fim, os &lt;strong&gt;conectivos lógicos&lt;/strong&gt; devem ser entendidos como ferramenta de notação utilizada para unir duas ou mais expressões, e como resultado da união, forma-se uma nova expressão.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="avaliacao-de-expressoes"&gt;
+&lt;h2&gt;AVALIAÇÃO DE EXPRESSÕES&lt;/h2&gt;
+&lt;p&gt;A avaliação de expressão em linguagens de programação é, o trabalho que o compilador ou interpretador faz, quando este, através de 2 expressões, avalia se a &lt;strong&gt;proposição&lt;/strong&gt;, isto é, a expressão avaliada é ou não verdadeira.&lt;/p&gt;
+&lt;p&gt;É importante observar que as expressões, são sempre avaliadas se são verdadeiras e é bom esse entendimento, até porque, podia ser o contrário, e as vezes será, quando assim desejarmos e utilizarmos uma notação especifica para isso.&lt;/p&gt;
+&lt;p&gt;Então, por padrão, &lt;strong&gt;todas as expressão são avaliadas&lt;/strong&gt; com a pergunta se são ou não verdadeiras.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tabela-de-valores-logicos"&gt;
+&lt;h2&gt;TABELA DE VALORES LÓGICOS&lt;/h2&gt;
+&lt;p&gt;A tabela de valor lógica é uma tabela que mostra o resultado da avaliação de 2 expressões lógicas. É importante observar que &lt;strong&gt;essa tabela NÃO é uma convenção&lt;/strong&gt;, mas sim, o resultado da dedução lógica e que você pode facilmente deduzi-la.&lt;/p&gt;
+&lt;p&gt;True &lt;strong&gt;E&lt;/strong&gt; True é True
+True &lt;strong&gt;E&lt;/strong&gt; False é False
+False &lt;strong&gt;E&lt;/strong&gt; True é False&lt;/p&gt;
+&lt;p&gt;True &lt;strong&gt;OU&lt;/strong&gt; False é True
+False &lt;strong&gt;OU&lt;/strong&gt; True é True
+True &lt;strong&gt;OU&lt;/strong&gt; True é True
+False &lt;strong&gt;OU&lt;/strong&gt; False é False&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-conectivo-de-conjuncao-e"&gt;
+&lt;h2&gt;O CONECTIVO DE CONJUNÇÃO &lt;tt class="docutils literal"&gt;E&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;conectivo lógico de conjunção E&lt;/strong&gt;, une a expressão a sua esquerda a expressão a sua direita. Expressões com o uso do &lt;strong&gt;conectivo de conjunção&lt;/strong&gt; originam frases em Português, mais ou menos assim: &lt;tt class="docutils literal"&gt;A é verdadeiro e B é verdadeiro&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Nas situações em que A for verdadeiro e B também, o resultado, segundo a tabela lógica, será também verdadeiro.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, temos uma &lt;tt class="docutils literal"&gt;expressão lógica composta&lt;/tt&gt; constituida por 2 expressões lógicas simples e, ligadas pelo &lt;tt class="docutils literal"&gt;conectivo de conjunção&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Primeira expressão simples: &lt;tt class="docutils literal"&gt;(var1 == 0)&lt;/tt&gt;
+Segunda expressão simples expressão: &lt;tt class="docutils literal"&gt;(var1 == 0)&lt;/tt&gt;
+Conectivo lógico de conjunção: &lt;strong&gt;and&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Para analisarmos uma &lt;tt class="docutils literal"&gt;expressão lógica composta&lt;/tt&gt;, precisamos antes, analisar suas &lt;tt class="docutils literal"&gt;expressões lógicas simples&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;No trecho de código acima, a primeira sub-expressão, analisas se o valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é maior do que 0. A variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; está declarada na linha anterior a expressão e inicializada com o valor 1, por isso, a primeira sub-expressão é verdadeira.&lt;/p&gt;
+&lt;p&gt;A segunda expressão, analisa se o valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é menor do que 100. O valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é igual a 1 e, por isso, menor do que 100. Por fim, obtivemos 2 valores lógicos e agora podemos deduzir o resultado lógica de toda expressão e o fazemos no trecho de código a seguir.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, temos a mesma expressão do exemplo anterior, porém, substituimos as duas &lt;strong&gt;expressões lógicas simples&lt;/strong&gt; por seus respectivos &lt;strong&gt;valores lógicos&lt;/strong&gt;, isto é, o valor decorrente da &lt;strong&gt;análise lógica&lt;/strong&gt; de cada sub-expressão.&lt;/p&gt;
+&lt;p&gt;A expressão &lt;tt class="docutils literal"&gt;(True) and (True)&lt;/tt&gt;, se comparada com a &lt;strong&gt;Tabela Lógica de Valores&lt;/strong&gt;, tem-se que o valor decorrente dessa segunda análise, será True, até porque, &lt;tt class="docutils literal"&gt;True and True == True&lt;/tt&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conectivo-de-disjuncao-ou"&gt;
+&lt;h2&gt;CONECTIVO DE DISJUNÇÃO &lt;tt class="docutils literal"&gt;OU&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;conectivo lógico de disjunção OU&lt;/strong&gt; liga a expressão a sua esquerda a expressão a sua direita. Expressões com o uso do &lt;strong&gt;conectivo de disjunção&lt;/strong&gt; dão origem a frases em Português  mais ou menos assim: &lt;tt class="docutils literal"&gt;A é verdadeiro OU B é verdadeiro&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;operador lógico OU&lt;/strong&gt; sempre precisará que uma das 2 &lt;strong&gt;sub-expressões&lt;/strong&gt; conectadas sejam verdadeiras para que, a expressão num todo seja verdadeira.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;ou&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A expressão lógica composta que temos no código acima, será desmembrada como estudado anteriormente, e agora, para que a avaliação seja verdadeira, uma das 2 expressões simples precisam ser verdadeiras.&lt;/p&gt;
+&lt;p&gt;A primeira expressão &lt;tt class="docutils literal"&gt;(x &amp;gt; 10)&lt;/tt&gt;, a variável``x`` está declarada na linha anterior e inicializada com o valor igual a 1, logo, essa expressão é falsa, até porque, o valor de &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; não é maior do que 10.&lt;/p&gt;
+&lt;p&gt;A segunda expressão &lt;tt class="docutils literal"&gt;(x &amp;lt; 100)&lt;/tt&gt; está perguntando se o valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é menor do que o número 100. Essa expressão é verdadeira, até porque, o número 1 é menor do que o número 100.&lt;/p&gt;
+&lt;p&gt;No código a seguir, temos a expressão originada a partir do código anterior.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Agora, temos que o primeiro &lt;strong&gt;valor lógico&lt;/strong&gt; é falso, enquanto o segundo é verdadeiro. Esse valores estão ligados pelo &lt;strong&gt;conectivo de disjunção&lt;/strong&gt; que será verdadeiro caso uma das sub-expressões o seja. Como o segundo valor lógico é verdadeiro, o valor decorrente dessa &lt;strong&gt;análise lógica&lt;/strong&gt; será verdadeiro.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="expressoes-simples-e-compostas"&gt;
+&lt;h2&gt;EXPRESSÕES SIMPLES E COMPOSTAS&lt;/h2&gt;
+&lt;p&gt;Os &lt;strong&gt;operadores relacionais&lt;/strong&gt; obtém a relação entre os operandos e, por isso, podemos chamar esse tipo de expressão como sendo, &lt;strong&gt;expressões simples&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;As &lt;strong&gt;expressões compostas&lt;/strong&gt;, por sua vez, são a união de 2 ou mais expressões simples e, ligadas por algum &lt;strong&gt;conectivo lógico&lt;/strong&gt;. A seguir, temos um exemplo utilizando o &lt;strong&gt;conectivo lógico de conjunção&lt;/strong&gt; que une 2 expressões e dá origem a uma nova &lt;strong&gt;expressão lógica&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+EXEMPLO 1
+isso E isso
+
+EXEMPLO 2
+x E y
+&lt;/pre&gt;
+&lt;p&gt;Em ambos exemplos, estamos unindo 2 membros, mas não estamos perguntando nada. Porém, a frase correta e que é utilizada pela grande maioria das linguagens de programação, senão todas, é a seguinte: &lt;tt class="docutils literal"&gt;A é verdadeiro e B é verdadeiro, logo ...&lt;/tt&gt;. Chamamos isso de &lt;tt class="docutils literal"&gt;expressão lógica&lt;/tt&gt; ou melhor, &lt;tt class="docutils literal"&gt;expressão lógica composta&lt;/tt&gt;, até porque, a expressão se origina de duas outras expressões, isto é, a que está ao lado esquerdo do operador relacional e a expressão que está ao seu lado direito.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Tue, 03 Jun 2014 18:11:00 -0300</pubDate><guid isPermaLink="false">tag:excript.com,2014-06-03:python/operadores-logicos-python.html</guid><category>curso</category><category>python</category><category>operadores</category><category>operadores lógicos</category><category>and</category><category>or</category><category>not</category><category>is</category><category>is not</category><category>in</category><category>not in</category><category>blog</category></item></channel></rss>

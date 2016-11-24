@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>eXcript</title><link>http://excript.com/</link><description></description><lastBuildDate>Sun, 21 Feb 2016 10:09:00 -0300</lastBuildDate><item><title>Sobrescrita de Funções em PHP</title><link>http://excript.com/php/sobrescrita-funcao-php.html</link><description>
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nessa aula estudaremos a sobrescrita de funções em classes derivadas. Essa é uma das formas de trabalharmos com polimorfismo atribuindo a funções de mesmo nome funcionalidades diferentes e também, é uma excelente maneira para especializarmos funcionalidades nas subclasses.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# SOBREESCRITA DE FUNÇÕES&lt;/span&gt;
+
+&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
+&lt;span class="x"&gt;    private $nome;&lt;/span&gt;
+&lt;span class="x"&gt;    private $sobrenome;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function getNome() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        return $this-&amp;gt;nome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function setNome(string $nome)&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;nome = $nome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function getSobrenome() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;    return $this-&amp;gt;sobrenome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function setSobrenome(string $sobrenome)&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;sobrenome = $sobrenome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function getNomeCompleto() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        return $this-&amp;gt;getNome() . &amp;quot; &amp;quot; . $this-&amp;gt;getSobrenome();&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;class PFisica extends Pessoa{&lt;/span&gt;
+
+&lt;span class="x"&gt;//    public function getNomeCompleto() : string&lt;/span&gt;
+&lt;span class="x"&gt;//    {&lt;/span&gt;
+&lt;span class="x"&gt;//        return &amp;quot;PFisica: {$this-&amp;gt;getNome()} {$this-&amp;gt;getSobrenome()}&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;//    }&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Sun, 21 Feb 2016 10:09:00 -0300</pubDate><guid isPermaLink="false">tag:excript.com,2016-02-21:php/sobrescrita-funcao-php.html</guid><category>curso</category><category>php</category><category>programação orientada a objetos</category><category>poo</category><category>oo</category><category>orientação a objetos</category><category>modificadores</category><category>modificador de acesso</category><category>classe</category><category>objeto</category><category>instância</category><category>herança</category><category>subclasse</category><category>superclasse</category><category>polimorfismo</category></item></channel></rss>

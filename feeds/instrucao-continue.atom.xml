@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>eXcript</title><link>http://excript.com/</link><description></description><lastBuildDate>Wed, 20 Jul 2016 13:23:00 -0300</lastBuildDate><item><title>Instrução continue em Python</title><link>http://excript.com/python/instrucao-continue-python.html</link><description>
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a instrução "continue", uma ferramenta a ser utilizada dentro das estruturas de repetição e que proporciona um maior controle sobre a iteração.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="instrucao-continue"&gt;
+&lt;h2&gt;INSTRUÇÃO &lt;code&gt;continue&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A instrução &lt;code&gt;continue&lt;/code&gt; interrompe a execução do ciclo sem interromper a execução do laço de repetição.&lt;/p&gt;
+&lt;p&gt;A instrução &lt;code&gt;break&lt;/code&gt; e a instrução &lt;code&gt;continue&lt;/code&gt; são ferramentas das estruturas de repetição permitindo a interrupção de um único ciclo ou do laço de repetição. É importante saber distinguir ambas instruções, por exemplo, a instrução &lt;code&gt;break&lt;/code&gt; interrompe não somente o ciclo em execução, mas sim, todo o laço, enquanto que a instrução &lt;code&gt;continue&lt;/code&gt; finaliza um único laço, fazendo com que o Cursor de execução vá para o cabeçalho da estrutura de repetição.&lt;/p&gt;
+&lt;p&gt;Então, nunca é demais repetir que instrução &lt;code&gt;contine&lt;/code&gt; interrompe somente o ciclo que está sendo executado fazendo com que o cursor de execução retorne ao cabeçalho da estrutura de repetição para dar início a execução do ciclo seguinte.&lt;/p&gt;
+&lt;p&gt;Caso não conheças a instrução &lt;code&gt;break&lt;/code&gt; &lt;a class="reference external" href="http://excript.com/python/instrucao-break-python.html"&gt;para a interrupção de laços&lt;/a&gt;, é interessante que o faça! E também, se &lt;a class="reference external" href="http://excript.com/python/iteracao-python.html"&gt;houver dúvidas sobre as estrutruras de repetição, estude a aula&lt;/a&gt; em que tratamos sobre as mesmas.&lt;/p&gt;
+&lt;p&gt;No código abaixo construimos um simples exemplo com o único propósito de demonstrar a interrupção da execução de um único ciclo com a instruçao &lt;code&gt;continue&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, declaramos a variável &lt;code&gt;x&lt;/code&gt; e a inicializamos com o valor 0. Em seguida, implementamos um laço de repetição &lt;a class="reference external" href="http://excript.com/python/while-else-python.html"&gt;while loop&lt;/a&gt; e definimos como condição para execução do bloco de instrução, que o valor de &lt;code&gt;x&lt;/code&gt; seja menor ou igual a 10.&lt;/p&gt;
+&lt;p&gt;Na linha seguinte, incrementamos uma unidade em &lt;code&gt;x&lt;/code&gt; e em seguida, utilizamos &lt;a class="reference external" href="http://excript.com/python/if-else-python.html"&gt;a instrução if&lt;/a&gt; &lt;a class="reference external" href="http://excript.com/python/modulo-da-divisao-python.html"&gt;definindo que se o módulo de x por 2 for igual a 0&lt;/a&gt; a instrução &lt;code&gt;continue&lt;/code&gt; será executada, o que ocasionará, a interrupção da execução do ciclo.&lt;/p&gt;
+&lt;p&gt;Em decorrência da lógica implementada, a última instrução do ciclo, &lt;code&gt;print(x)&lt;/code&gt;, não é executada quando o módulo é igual a 0, até porque, a execução é interrompida com o uso da  instrução &lt;code&gt;continue&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A seguir, temos o resultado obtido com a execução do código anterior.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+2
+4
+6
+8
+10
+&lt;/pre&gt;
+&lt;p&gt;Por fim, temos 2 situações que precisam ser entendidas:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;a instrução &lt;code&gt;break&lt;/code&gt; interrompe toda a execução da estrutura de repetição&lt;/li&gt;
+&lt;li&gt;a instrução &lt;code&gt;continue&lt;/code&gt; interrompe só e somente só, o ciclo que estava, ou seja, somente um ciclo é executado.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;!-- d
+Uma linda história com ``break`` e ``continue``
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Imagine-se numa situação em que o Gasparzinho lhe peça para caminhares ao redor de um quarteirão por 10 vezes. A origem é onde estás, e então, inicias a jornada de caminha 10 voltas ao redor do quarteirão. Ao invés falarmos volta, falaremos ciclo. Então, inicias a execução do primeiro ciclo de 10.
+
+Na metade da terceira volta, o Gasparzinho lhe aborda dizendo que algo aconteceu e ele não quer que você continue a execução do **terceiro ciclo** e assim, fostes magicamente levado a origem da jornada e então, dás continuidade a caminhada.
+
+SITUAÇÃO 1: na terceira volta, por alguma razão, a caminha foi interrompida e você foi levado magicamente para o ponto inicial do trajeto. Temos que o terceiro ciclo foi interrompido, MAS A JORNADA e a meta de caminhar 10 vezes ao redor do quarteirão continua.
+
+Ciclo 4 caminhado com sucesso...
+Ciclo 5 caminhado com sucesso...
+Ciclo 6 caminhado com sucesso...
+
+No ciclo 7, ou seja, na sétima vez que estavas caminhando ao redor do quarteirão, o Gasparzinho reaparece e lhe diz que a jornada deve ser interrompida, estás liberado para caminhares por onde quiseres, salvo ao redor do quarteirão.
+
+SITUAÇÃO 2: no ciclo 7, por alguma razão, o Gasparzinho resolveu interromper a jornada.
+
+CONCLUSÃO: No terceiro ciclo, por alguma razão, houve uma interrupção e não finalizastes o ciclo, onde fostes magicamente levado ao ponto inicial a joranda continua... é isso que a instrução ``continue`` desempenha: ela interrompe a execução do ciclo, e inicia a execução do ciclo seguinte.
+
+No sétimo ciclo também houve uma interrupção onde a jornada cancelada, isto é, não precisas e não deves continuar caminhando ao redor do quarteirão, a meta foi quebrada... por isso a instrução ``break``: a mesma finaliza a estrutura de repetição totalmente.
+``CONTINUE``: interrompe o ciclo
+``BREAK``: interrompe toda a execução --&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;inicio&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;else&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fim&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/iteracao-python.html"&gt;As estruturas de repetição (iteração)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/instrucao-break-python.html"&gt;Instrução break&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/while-else-python.html"&gt;Estrutura de Repetição while&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aula: &lt;a class="reference external" href="http://excript.com/python/for-in-range-python.html"&gt;Estrutura de Repetição for&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Wed, 20 Jul 2016 13:23:00 -0300</pubDate><guid isPermaLink="false">tag:excript.com,2016-07-20:python/instrucao-continue-python.html</guid><category>curso</category><category>python</category><category>continue</category><category>instrução continue</category><category>iteração</category><category>break</category><category>laço de repetição</category><category>estrutura de repetição</category></item></channel></rss>

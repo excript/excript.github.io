@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/tipo.rss.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-15T04:15:00-03:00</updated><entry><title>Valores de retornos de funções tipados em PHP</title><link href="http://excript.com/php/valor-retorno-funcao-tipada-php.html" rel="alternate"></link><published>2016-06-15T04:15:00-03:00</published><updated>2016-06-15T04:15:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:php/valor-retorno-funcao-tipada-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos como definir o tipo do valor a ser retornado pelas funções, bem como as vantagens dessa abordagens e os beneficios que podemos obter com o uso desse conceito implementado na versão 7 do PHP.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;A versão 7 do PHP permite a definição do tipo de cada parâmetro, como estudamos na aula anterior. O mesmo também disponibilizou uma notação para a definição do tipo do valor que será retornado pela função, ou seja, agora, podemos definir o valor que será recebido por uma função e o valor que está irá retornar.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="funcoes-com-retorno-tipados"&gt;
+&lt;h2&gt;FUNÇÕES COM RETORNO TIPADOS&lt;/h2&gt;
+&lt;p&gt;Função com retorno tipado é toda função que define explicitamente o tipo do valor que será retornado. Dessa maneira o PHP disponibilizou uma maneira de definirmos o tipo do valor que será recebido por uma função, como também, o valor que a mesma retornará.&lt;/p&gt;
+&lt;p&gt;A seguir, escrevemos um simples exemplo onde há uma função que define o tipo do valor que será retornado.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function getArea(int x, int y) : int {&lt;/span&gt;
+&lt;span class="x"&gt;    return x * y;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, definimos que o valor de retorno da função getArea() será um número inteiro.&lt;/p&gt;
+&lt;p&gt;Dessa forma, conseguimos manter um código mais integro e fazer com que os editores se tornem mais inteligentes, até porque, os mesmos saberão quais os valores que são esperados por parâmetros em alguma funções, como também, conseguem saber o valor que será retornado por outras funções.&lt;/p&gt;
+&lt;p&gt;É possível definir que os valores não sejam automaticamente convertidos pelo PHP, ou seja, podemos definir que, caso o valor passado não seja do tipo esperado, uma exceção seja levantada e a execução finalizada.&lt;/p&gt;
+&lt;p&gt;Para definir que desejamos que o PHP levante uma exceção caso o valor passado não seja do tipo esperado, temos que, através de um código, especificar que determinado módulo está trabalhando de maneira restrita, isto é, que os valores passados devem ser do tipo esperado. Do contrário, o Script será interrompido.&lt;/p&gt;
+&lt;p&gt;A instrução &lt;code&gt;declare(strict_types=1);&lt;/code&gt; deve ser colocada no início do arquivo para que o PHP trate o mesmo da forma estrita.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;declare(strict_types=1);//valor de retorno precisa ser do tipo definido&lt;/span&gt;
+
+&lt;span class="x"&gt;function getArea(int x, int y):int {&lt;/span&gt;
+&lt;span class="x"&gt;    return x * y;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;declare(strict_types=1);&lt;/span&gt;
+
+&lt;span class="x"&gt;#VALORES DE RETORNO TIPADO&lt;/span&gt;
+
+&lt;span class="x"&gt;function cubo(float $num) : float&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+&lt;span class="x"&gt;    return $num * $num * $num;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;function teste() : array&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+&lt;span class="x"&gt;    return [10, &amp;quot;eXcript&amp;quot;, 5.1];&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;function x() : int&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+&lt;span class="x"&gt;    return &amp;quot;aa&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;//echo cubo(10.5);&lt;/span&gt;
+
+&lt;span class="x"&gt;//var_dump( teste() );&lt;/span&gt;
+
+
+&lt;span class="x"&gt;x();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="tipo"></category><category term="função tipada"></category><category term="parâmetro"></category><category term="retorno tipado"></category><category term="return"></category><category term="blog"></category></entry><entry><title>Tipos Primitivos do C++</title><link href="http://excript.com/cpp/tipos-primitivos-cpp.html" rel="alternate"></link><published>2015-01-15T22:03:00-02:00</published><updated>2015-01-15T22:03:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-01-15:cpp/tipos-primitivos-cpp.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos os tipos primitivos da linguagem C++, ou seja, os tipos de informação mais simples e que serão utilizados na construção de tipos abstratos de dados dos mais variados tipos.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;p&gt;Você sabe a resposta para essa perguntas? Nessa aula iremos conhecer a resposta a essas perguntas.
+Pode-se dizer que agora aprenderemos um dos assuntos mais importante de qualquer linguagem, até porque, sem esses tipos de informações, não seria possível fazer praticamente nada.&lt;/p&gt;
+&lt;p&gt;Nós temos que os Tipos Primitivos são os tipos de informações primárias, ou seja, o tipo primitivo é um conjunto formador de todas as outras estruturas. Por exemplo, um número é um valor de tipo primitivo, até porque, os números não são compostos por mais de um tipo de informação, e sim, são compostos somente de elementos numéricos.&lt;/p&gt;
+&lt;p&gt;á um telefone ou CPF, também são estruturas numéricas, porém, essas estruturas possuem caracteres que não são números. Por exemplo: o traço, os três pontos num mesmo número, os parêntesis para isolar o DDD e assim por diante.&lt;/p&gt;
+&lt;p&gt;Então, diz-se que um valor é do tipo primitivo quando este não é formado pela união de outros tipos. A seguir, nós temos uma lista que contém todos os tipos primitivos da linguagem C++.&lt;/p&gt;
+&lt;div class="section" id="tipo-logico-bool"&gt;
+&lt;h2&gt;TIPO LÓGICO &lt;cite&gt;bool&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;Utilizado para guardar valores como true e false, por isso chamamos de tipo lógico&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="caractere-char"&gt;
+&lt;h2&gt;CARACTERE &lt;cite&gt;char&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;Um variável do tipo char pode conter um único carácter, porém, podemos ter uma estrutura, como um Array onde contém uma lista de caracteres, ou seja, uma string&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="inteiro-int"&gt;
+&lt;h2&gt;INTEIRO &lt;cite&gt;int&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;O tipo int é aquele que possui valores negativos ou positivos, porém, sem casas decimais, isto é, somente números inteiros&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ponto-flutuante-float"&gt;
+&lt;h2&gt;PONTO FLUTUANTE &lt;cite&gt;float&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;O tipo float é aquele que pode armazenar informações como o preço. Utilizamos o float para as situações onde o número que iremos armazenar é relativamente pequeno&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ponto-flutuante-double"&gt;
+&lt;h2&gt;PONTO FLUTUANTE &lt;cite&gt;double&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;O tipo double funciona de maneira análoga ao tipo float, porém, em um tipo double conseguimos armazenar números decimais com uma precisão muito maior do que o tipo primitivo float&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="sem-valor-void"&gt;
+&lt;h2&gt;SEM VALOR &lt;cite&gt;void&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;Por fim, temos o void, que significa a ausência de valores. Assim, quando precisarmos deixar explicito, por exemplo, que uma função não retorna valores, podemos utilizar o tipo void.&lt;/p&gt;
+&lt;p&gt;Os tipos primitivos são tão importantes pois estes formam os tipos compostos, ou seja, compostos de vários tipos primitivos. Uma classe, ou uma estrutura struct são exemplos onde teremos, algumas vezes, centenas de variáveis primitivas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="cpp"></category><category term="tipo"></category><category term="tipos primitivos"></category><category term="variavel"></category></entry></feed>

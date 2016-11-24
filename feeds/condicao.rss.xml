@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/condicao.rss.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-07-02T01:00:00-03:00</updated><entry><title>Operador Ternário do C - Exemplo prático</title><link href="http://excript.com/linguagem-c/operador-ternario-exemplo-c.html" rel="alternate"></link><published>2016-07-02T01:00:00-03:00</published><updated>2016-07-02T01:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-02:linguagem-c/operador-ternario-exemplo-c.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula vamos continuar o estudo do Operador Ternário desenvolvendo uma pequena aplicação onde substituiremos a estrutura de seleção múltipla Switch por uma expressão que irá concatenar o uso do operador ternário.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="operador-ternario-vs-instrucao-switch"&gt;
+&lt;h2&gt;OPERADOR TERNÁRIO vs INSTRUÇÃO &lt;tt class="docutils literal"&gt;switch&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;Vamos desenvolver um exemplo onde encadearemos várias &lt;strong&gt;Operações Ternárias&lt;/strong&gt; e &lt;a class="reference external" href="http://excript.com/linguagem-c/estrutura-selecao-multipla-c.html"&gt;produziremos um código semelhante a Estrutura de Seleção Múltipla o Switch&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O exemplo que faremos tem por objetivo só e somente o estudo do &lt;strong&gt;Operador Ternário&lt;/strong&gt;, até porque, na prática, a instrução &lt;tt class="docutils literal"&gt;switch&lt;/tt&gt; talvez seja mais indicada - talvez!&lt;/p&gt;
+&lt;p&gt;Porém, não há qualquer erro conceitual ou prático implementar com a estrutura que aqui será apresentada, salvo que não é comum esse tipo de implementação.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-programa"&gt;
+&lt;h2&gt;O PROGRAMA&lt;/h2&gt;
+&lt;p&gt;O programa que desenvolveremos irá solicitar que o usuário informe uma letra entre &lt;tt class="docutils literal"&gt;A&lt;/tt&gt; à &lt;tt class="docutils literal"&gt;G&lt;/tt&gt;. Feito isso, iremos imprimir na tela o código &lt;a class="reference external" href="https://pt.wikipedia.org/wiki/ASCII"&gt;ASCII&lt;/a&gt; do caractere.&lt;/p&gt;
+&lt;p&gt;O código ASCII é um código numérico que cada letra possui. A tabela ASCII foi substituída pelo sistema &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;UTF-8&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;O primeiro código que implementaremos, utilizará a &lt;strong&gt;Estrutura de Seleção Múltipla&lt;/strong&gt; &lt;tt class="docutils literal"&gt;switch&lt;/tt&gt;. Em seguida, implementaremos a mesma aplicação utilizando o &lt;strong&gt;Operador Ternário&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Como dito, o principal objetivo nesse momento é estudarmos o potencial do &lt;strong&gt;Operador Ternário&lt;/strong&gt; e as variações que podemos obter com o mesmo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="utilizando-a-instrucao-switch"&gt;
+&lt;h2&gt;UTILIZANDO A INSTRUÇÃO &lt;tt class="docutils literal"&gt;switch&lt;/tt&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="c1"&gt;//  ==========                 ==========&lt;/span&gt;
+&lt;span class="c1"&gt;//  ========== www.eXcript.com ==========&lt;/span&gt;
+&lt;span class="c1"&gt;//  ==========                 ==========&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um caractere entre A ate G: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;caractere&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;scanf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;%c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="k"&gt;switch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;65&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;66&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;67&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;68&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;E&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;69&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;70&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;G&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;71&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O codigo ASCII da letra digitada eh: %i&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;codigo&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="utilizando-o-operador-ternario"&gt;
+&lt;h2&gt;UTILIZANDO O OPERADOR TERNÁRIO&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="c1"&gt;//  ==========                 ==========&lt;/span&gt;
+&lt;span class="c1"&gt;//  ========== www.eXcript.com ==========&lt;/span&gt;
+&lt;span class="c1"&gt;//  ==========                 ==========&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um caractere entre A ate G: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;caractere&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;scanf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;%c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;codigo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;65&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;66&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;67&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;68&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;E&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;69&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;70&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;G&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;71&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O codigo ASCII da letra digitada eh: %i&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;codigo&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="c"></category><category term="operador"></category><category term="operador ternário"></category><category term="condição"></category><category term="blog"></category></entry><entry><title>Operador Ternário em C</title><link href="http://excript.com/linguagem-c/operador-ternario-c.html" rel="alternate"></link><published>2016-05-08T00:00:00-03:00</published><updated>2016-05-08T00:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-08:linguagem-c/operador-ternario-c.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos o Operador Ternário e aprenderemos como podemos escolher uma dentre 2 opções de forma menos verbosa, utilizando uma notação inline, isto é, uma notação onde toda a expressão será definida numa única linha.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="operador-ternario"&gt;
+&lt;h2&gt;OPERADOR TERNÁRIO&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;Operador Ternário&lt;/strong&gt; verifica uma condição e retorna um dentre dois valores pré-definidos em sua estrutura. Esta é uma notação chamada &lt;cite&gt;inline&lt;/cite&gt; para as vezes em que seja necessário avaliar expressões e decidir por um dentre 2 valores.&lt;/p&gt;
+&lt;p&gt;A principal razão da existência do Operador Ternário, é servir como uma atalho linguístico. Até porque, tudo que é feito com o Operador Ternário pode ser escrito utilizando a &lt;strong&gt;Tomada de Decisão&lt;/strong&gt;, ou seja, a instrução &lt;cite&gt;if&lt;/cite&gt;. Porém, com a instrução &lt;cite&gt;if&lt;/cite&gt;, utilizamos 4 linhas de código pra escolher uma dentre 2 opções, enquanto que com o operador ternário, sendo o mesmo um operador &lt;cite&gt;inline&lt;/cite&gt;, obtemos o mesmo resultado utilizando uma única linha.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="situacao-pratica"&gt;
+&lt;h2&gt;SITUAÇÃO PRÁTICA&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;Operador Ternário&lt;/strong&gt; se justifica em situações onde, por exemplo, temos 10 condições a serem verificadas e é necessário em todas, escolher um valor dentre 2 opções. Se, trabalharmos com a instrução &lt;cite&gt;if&lt;/cite&gt;, utilizaremos, no mínimo, 40 linhas de código. Porém, com a Operação Ternária, conseguimos o mesmo resultado, utilizando apenas 10 linhas.&lt;/p&gt;
+&lt;p&gt;É verdade que a instrução &lt;cite&gt;if&lt;/cite&gt; pode ser trabalhada de maneira &lt;cite&gt;inline&lt;/cite&gt;, ou seja, escrever toda a expressão numa única linha. Porém, ainda que seja funcional, a leitura é prejudicada e novamente, o &lt;strong&gt;Operador Ternário&lt;/strong&gt; se justifica.&lt;/p&gt;
+&lt;p&gt;A seguir, temos um exemplo onde inicialmente escolhemos um valor dentre 2 opções com a instrução &lt;cite&gt;if&lt;/cite&gt; e em seguida, vamos escrever a mesma expressão, porém, utilizando o &lt;strong&gt;Operador Ternário&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt;   &lt;span class="mi"&gt;65&lt;/span&gt;   &lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="mi"&gt;66&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt;     &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Inicialmente, estamos declarando uma variável de nome &lt;cite&gt;num&lt;/cite&gt; do tipo &lt;cite&gt;int&lt;/cite&gt; e estamos adicionando a mesma o valor resultante da resolução da estrutura do &lt;strong&gt;Operador Ternário&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;O sinal de interrogação deve ser lido como: &amp;quot;A expressão é verdadeira?&amp;quot;, ou seja, como o sinal denota, de fato estamos questionando o resultado da expressão lógica. Se o &lt;strong&gt;Valor Lógico&lt;/strong&gt; for &lt;cite&gt;True&lt;/cite&gt; o número 65 será retornado, senão, ou seja, o sinal de dois pontos &lt;cite&gt;:&lt;/cite&gt; está substituindo a instrução &lt;cite&gt;else&lt;/cite&gt;. Logo, devemos ler &amp;quot;senão&amp;quot;, retorna o segundo valor definido na estrutura da &lt;strong&gt;Operação Ternária&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Por fim, temos que ler a expressão da seguinte maneira: O &lt;strong&gt;Valor Lógico&lt;/strong&gt; da expressão é verdadeiro? Se sim, retorna o primeiro valor &lt;cite&gt;:&lt;/cite&gt; senão, retorna o segundo valor. A seguir, vamos temos dois códigos que estão realizando a mesma tarefa, porém, um está escrito com a instrução &lt;cite&gt;if&lt;/cite&gt;, enquanto o segundo, com o &lt;strong&gt;Operador Ternário&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//utilizando o Operador Ternário&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;65&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;66&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="c1"&gt;//utilizando a instrução &amp;quot;if&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;caractere&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;65&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;
+    &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;66&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Por fim, se você compreendeu o uso da Tomada de Decisão, ou seja, da instrução &lt;cite&gt;if&lt;/cite&gt;, conseguirás assimilar rapidamente essa notação. Até porque, a lógica de funcionamento é a mesma, a diferença está no &amp;quot;esquema&amp;quot; de cada estrutura.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;SITUAÇÃO PRÁTICA&lt;/h2&gt;
+&lt;p&gt;Agora, vamos desenvolver 2 códigos que realizam a mesma tarefa, porém, utilizando estruturas diferentes. Inicialmente, vamos trabalhar com a instrução &lt;cite&gt;if&lt;/cite&gt; e em seguida, escreveremos o mesmo programa, porém, utilizando o &lt;strong&gt;Operador Ternário&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;O programa que faremos, definirá uma variável do tipo char e inicializará a mesma com o caractere 'A' (maiúsculo). Em seguida, utilizando a instrução &lt;cite&gt;if&lt;/cite&gt; e o &lt;strong&gt;Operador Ternário&lt;/strong&gt;, avaliaremos uma expressão e retornaremos um valor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="implementando-com-a-instrucao-if"&gt;
+&lt;h2&gt;IMPLEMENTANDO COM A INSTRUÇÃO &lt;cite&gt;if&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;Vamos escrever um código onde é necessário verificar se o número que o usuário informou é menor do que 0. Caso o valor informado seja menor, iremos resetar o valor atribuindo zero para a variável, do contrário, não faremos nada.&lt;/p&gt;
+&lt;p&gt;Então, o nosso objetivo é definir 0 caso o valor seja menor do que 0.&lt;/p&gt;
+&lt;p&gt;Inicialmente, vamos desenvolver um código utilizando a estrutura de Tomada de Decisão if e em seguida, vamos alterar o nosso código utilizando o Operador Ternário.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Informe um numero: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="n"&gt;scanf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;%d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+  &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;num2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;else&lt;/span&gt;
+    &lt;span class="n"&gt;num2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O valor de num2 eh: %d &lt;/span&gt;&lt;span class="se"&gt;\n\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="implementando-com-o-operador-ternario"&gt;
+&lt;h2&gt;IMPLEMENTANDO COM O OPERADOR TERNÁRIO&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Informe um numero: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="n"&gt;scanf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;%d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="n"&gt;num2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="c1"&gt;//num &amp;gt;= 0 ? num++ : num--;&lt;/span&gt;
+
+  &lt;span class="n"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O valor de num2 e: %d &lt;/span&gt;&lt;span class="se"&gt;\n\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="c"></category><category term="operador"></category><category term="operador ternário"></category><category term="condição"></category><category term="blog"></category></entry></feed>

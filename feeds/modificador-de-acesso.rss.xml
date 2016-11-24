@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/modificador-de-acesso.rss.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-02-21T10:09:00-03:00</updated><entry><title>Sobrescrita de Funções em PHP</title><link href="http://excript.com/php/sobrescrita-funcao-php.html" rel="alternate"></link><published>2016-02-21T10:09:00-03:00</published><updated>2016-02-21T10:09:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-02-21:php/sobrescrita-funcao-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nessa aula estudaremos a sobrescrita de funções em classes derivadas. Essa é uma das formas de trabalharmos com polimorfismo atribuindo a funções de mesmo nome funcionalidades diferentes e também, é uma excelente maneira para especializarmos funcionalidades nas subclasses.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# SOBREESCRITA DE FUNÇÕES&lt;/span&gt;
+
+&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
+&lt;span class="x"&gt;    private $nome;&lt;/span&gt;
+&lt;span class="x"&gt;    private $sobrenome;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function getNome() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        return $this-&amp;gt;nome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function setNome(string $nome)&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;nome = $nome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function getSobrenome() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;    return $this-&amp;gt;sobrenome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function setSobrenome(string $sobrenome)&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;sobrenome = $sobrenome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function getNomeCompleto() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        return $this-&amp;gt;getNome() . &amp;quot; &amp;quot; . $this-&amp;gt;getSobrenome();&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;class PFisica extends Pessoa{&lt;/span&gt;
+
+&lt;span class="x"&gt;//    public function getNomeCompleto() : string&lt;/span&gt;
+&lt;span class="x"&gt;//    {&lt;/span&gt;
+&lt;span class="x"&gt;//        return &amp;quot;PFisica: {$this-&amp;gt;getNome()} {$this-&amp;gt;getSobrenome()}&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;//    }&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="oo"></category><category term="orientação a objetos"></category><category term="modificadores"></category><category term="modificador de acesso"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="herança"></category><category term="subclasse"></category><category term="superclasse"></category><category term="polimorfismo"></category></entry><entry><title>Visibilidade das Funções em PHP</title><link href="http://excript.com/php/visibilidade-funcao-php.html" rel="alternate"></link><published>2016-02-14T13:21:00-02:00</published><updated>2016-02-14T13:21:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-02-14:php/visibilidade-funcao-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a visibilidade das funções definidas numa classe e as razões pelas quais devemos restringir o acesso a todos os membros que possuem uso interno a classe.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# VISIBILIDADE DAS FUNÇÕES&lt;/span&gt;
+
+&lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
+
+&lt;span class="x"&gt;    public $uuu;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function funcPublica(){ echo &amp;quot;funcPublica\n&amp;quot;; }&lt;/span&gt;
+&lt;span class="x"&gt;    protected function funcProtegida(){ echo &amp;quot;funcProtegida\n&amp;quot;; }&lt;/span&gt;
+&lt;span class="x"&gt;    private function funcPrivada(){ echo &amp;quot;funcPrivada\n&amp;quot;; }&lt;/span&gt;
+
+&lt;span class="x"&gt;    function super(){&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;funcPublica();&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;funcProtegida();&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;funcPrivada();&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;$super = new SuperClasse();&lt;/span&gt;
+&lt;span class="x"&gt;//$super-&amp;gt;super();&lt;/span&gt;
+&lt;span class="x"&gt;$super-&amp;gt;funcPublica();&lt;/span&gt;
+&lt;span class="x"&gt;//$super-&amp;gt;funcProtegida();&lt;/span&gt;
+&lt;span class="x"&gt;//$super-&amp;gt;funcPrivada();&lt;/span&gt;
+
+&lt;span class="x"&gt;class SubClasse extends SuperClasse{&lt;/span&gt;
+
+&lt;span class="x"&gt;    function __construct(){&lt;/span&gt;
+
+&lt;span class="x"&gt;        $this-&amp;gt;funcPublica();&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;funcProtegida();&lt;/span&gt;
+&lt;span class="x"&gt;//        $this-&amp;gt;funcPrivada();&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;$sub = new SubClasse();&lt;/span&gt;
+&lt;span class="x"&gt;$sub-&amp;gt;funcPublica();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="modificadores"></category><category term="modificador de acesso"></category><category term="visibilidade dos membros de classe"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry><entry><title>Modificadores de Acesso em PHP</title><link href="http://excript.com/php/modificador-acesso-php.html" rel="alternate"></link><published>2016-02-13T11:13:00-02:00</published><updated>2016-02-13T11:13:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-02-13:php/modificador-acesso-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a definição e uso dos modificadores de acesso aos membros de classe. Em seguida, estudaremos a aplicação dos modificadores ao realizarmos um exemplo prático demonstrando assim, os conceitos teóricos dos modificadores de acesso junto a um exemplo prático.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao-aos-modificadores-de-acesso"&gt;
+&lt;h2&gt;INTRODUÇÃO AOS MODIFICADORES DE ACESSO&lt;/h2&gt;
+&lt;p&gt;Os membros de classe podem ter o seu nível de acesso alterado, ou seja, podemos definir que um membro de classe seja público, enquanto outro, tenha seu uso restrito a classe em que este foi declarado. Também é possível definir que um determinado membro esteja disponível somente dentro das classes derivadas.&lt;/p&gt;
+&lt;p&gt;É comum nós falarmos que os modificadores de acesso alteram a visibilidade dos membros de classe, até porque, cada modificador define o nível de visibilidade e assim, temos membros visíveis em diferentes partes de um código.&lt;/p&gt;
+&lt;p&gt;Cada membro de classe, implicitamente, possuirá um nível de acessibilidade que determinará onde o este poderá ser acessado.&lt;/p&gt;
+&lt;p&gt;O conceito de restringir o acesso aos membros de classe está diretamente relacionado ao conceito de encapsulamento e abstração de dados, até porque, é dessa forma que restringiremos a visibilidade dos membros de uso interno da classe e também, será assim que disponibilizaremos uma interface de acesso.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-conceito-de-interface-publica"&gt;
+&lt;h2&gt;O CONCEITO DE INTERFACE PÚBLICA&lt;/h2&gt;
+&lt;p&gt;Uma interface pública, nada tem a ver com a parte gráfica de uma aplicação. Este conceito está relacionado com a orientação a objetos e significa o conjunto de funções e atributos que estão definidos como sendo de utilização público, ou seja, estes podem ser utilizados por qualquer instância ou então, pelas subclasses.&lt;/p&gt;
+&lt;p&gt;Todo objeto irá possuir uma interface pública para que possamos interagir com o mesmo. Para a definição da interface pública, é recomendado o uso restritivo, isto é, sempre atribuir o maior grau de restrição possível a cada membro de classe. Isso faz com que tenhamos menos trabalho para testarmos cada estrutura, diminui a incompatibilidade entre futuras versões, garante coesão, abstração e encapsulamento da informação.&lt;/p&gt;
+&lt;p&gt;A linguagem PHP, disponibiliza 3 modificadores de acesso:&lt;/p&gt;
+&lt;p&gt;public (omissão) - o modificador que garante a visibilidade em qualquer lugar do nosso código
+protected - restringe o acesso às classes derivadas
+private. - restring o acesso a classe em que esta contido&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="os-conceitos-de-visibilidade-de-membros"&gt;
+&lt;h2&gt;OS CONCEITOS DE VISIBILIDADE DE MEMBROS&lt;/h2&gt;
+&lt;p&gt;A utilização dos modificadores de acesso é bastante simples, porém, há várias situações onde podemos nos confundir, e é por essa razão, que qualquer prova de orientação a objetos, tenha no mínimo uma questão sobre modificadores de acesso e por vezes, a questão é uma pegadinha.&lt;/p&gt;
+&lt;p&gt;A maneira mais fácil, e na minha concepção, a mais lógica, é pensar da seguinte maneira:&lt;/p&gt;
+&lt;p&gt;O que é público é de todos, então, uma membro público poderá ser acessado de qualquer lugar do nosso código, seja através de uma instância de classe, ou então, dentro de uma classe derivada.&lt;/p&gt;
+&lt;p&gt;O que é privado, por outro lado, é de uso exclusivo e por isso, ninguém deve ter acesso. Por isso, temos que membros privados só poderão ser acessados dentro da classe onde estes foram declarados.&lt;/p&gt;
+&lt;p&gt;Por fim temos o nível de acesso protegido. O que é protegido pode ser acessado, porém, com algumas ressalvas e devemos seguir algumas regras. Então, um membro protegido pode ser acessado, mas com uma condição: dentro das classes derivadas.&lt;/p&gt;
+&lt;p&gt;Então, quando um programador define um membro como protegido, o que ele está dizendo, é que as subclasses, isto é, todas as classes herdeiras, podem acessar o membro diretamente. Porém, as instâncias terão o acesso restringido. Dai vem o nome protegido, ou seja, somente quem pode acessar é o pai e seus filhos, no caso, o membro protegido está restrito a família em que este foi definido.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# MODIFICADORES DE ACESSO I - public e private&lt;/span&gt;
+
+&lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
+&lt;span class="x"&gt;    public $publico = 0;&lt;/span&gt;
+&lt;span class="x"&gt;    private $privada = 0;&lt;/span&gt;
+&lt;span class="x"&gt;    protected $protegido = 0;&lt;/span&gt;
+&lt;span class="x"&gt;    public function super(){&lt;/span&gt;
+&lt;span class="x"&gt;        echo $this-&amp;gt;publico;&lt;/span&gt;
+&lt;span class="x"&gt;        echo $this-&amp;gt;privada;&lt;/span&gt;
+&lt;span class="x"&gt;        echo $this-&amp;gt;protegido;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;class SubClasse extends SuperClasse{&lt;/span&gt;
+&lt;span class="x"&gt;    public $publico;&lt;/span&gt;
+&lt;span class="x"&gt;    private $privada;&lt;/span&gt;
+&lt;span class="x"&gt;    protected $protegido;&lt;/span&gt;
+&lt;span class="x"&gt;    public function sub(int $x){&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;publico = $x;&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;privada = $x;&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;protegido = $x;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;$sub = new SubClasse();&lt;/span&gt;
+&lt;span class="x"&gt;$sub-&amp;gt;sub(1);&lt;/span&gt;
+&lt;span class="x"&gt;$sub-&amp;gt;super();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="modificadores"></category><category term="modificador de acesso"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category></entry></feed>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/kivy.rss.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-11-23T05:00:00-02:00</updated><entry><title>Biblioteca Kivy</title><link href="http://excript.com/python/kivy.html" rel="alternate"></link><published>2016-11-23T05:00:00-02:00</published><updated>2016-11-23T05:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-23:python/kivy.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Neste artigo será apresentado o projeto que permite o desenvolvimento multiplataforma com Python utilizando o framework Kivy.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;img alt="Logo oficial do projeto Kivy" src="../images/blog/kivy-logo.png" /&gt;
+&lt;p&gt;A biblioteca Kivy é um framework para desenvolvimento multiplataforma, escrito majoritariamente com a linguagem Python e/ou Cython e que permite o desenvolvimento de aplicações para diversos sistemas operacionais, tais com, Microsoft Windows, Linux, Mac, Android, iOS, Raspberry utilizando um mesmo código.&lt;/p&gt;
+&lt;p&gt;O projeto Kivy é composto por vários subprojetos, cada um especializado numa determinada tarefa, como por exemplo, gerar executável para determinada plataforma ou então, uma interface que permite o acesso ao hardware em várias dispositivos com diferentes sistema operacional utilizando um mesmo código.&lt;/p&gt;
+&lt;p&gt;É importante não confundir a projeto Kivy com a biblioteca Kivy. O projeto Kivy, cujo site é &lt;a class="reference external" href="http://kivy.org"&gt;http://kivy.org&lt;/a&gt; é composto por vários subprojetos, dentre estes, a biblitoeca Kivy.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-biblioteca-kivy"&gt;
+&lt;h2&gt;A BIBLIOTECA KIVY&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/kivy/kivy/"&gt;A biblioteca Kivy contém o código de UI (User Interface) interface de usuário multiplataforma&lt;/a&gt; executado sob a biblioteca OpenGL. Toda parte gráfica da biblioteca é executado em cima da placa de vídeo, por essa razão, a performance em algumas situações chega a ser mais rápido do que a renderização da interface nativa de alguns sistemas operacionais.&lt;/p&gt;
+&lt;p&gt;Em vista de que a biblioteca OpenGL é multiplataforma, o projeto Kivy, construído em cima dessa camada, pode ser executado em qualquer dispositivo que possua suporte com a biblioteca OpenGL.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="opengl-2-0"&gt;
+&lt;h2&gt;OpenGL 2.0&lt;/h2&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;OpenGL&lt;/tt&gt; é uma API e uma linguagem de programação multiplataforma e o termo OpenGL vem de &lt;cite&gt;Open Graphics Library`&lt;/cite&gt;, numa tradução livre seria  &lt;tt class="docutils literal"&gt;Biblioteca Gráfica Aberta&lt;/tt&gt;. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D que podem ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplatamente utilizada em jogos e em tudo que esteja relacionado com gráficos.&lt;/p&gt;
+&lt;p&gt;O objetivo é tornar a comunicação transparente aos desenvolvedores, disponibilizando uma API que faz o &amp;quot;meio de campo&amp;quot; entre o programador que utiliza as funções da API e, os harwares de vídeo. Dessa forma, não precisamos nos preocupar se a placa de vídeo é Intel, Nvidia ou Xingling, pois a biblioteca OpenGL torna o desenvolvimento transparente.&lt;/p&gt;
+&lt;p&gt;O núcleo do OpenGL é conhecido como &amp;quot;rendering pipeline&amp;quot; ou dutos de renderização. Podemos utilizar a biblioteca tanto com o desenhos vetoriais, definidos por vértices, como com mapas de bits, desenhos construídos pixel-a-pixel.&lt;/p&gt;
+&lt;p&gt;Os desenvolvedores de hardware conseguem criar extensões, inovando e diferenciando o seus produtos, sem a necessidade de alterar a biblioteca e as atualizações raramente obrigam os usuários da API OpenGL a alterarem os seus códigos.&lt;/p&gt;
+&lt;p&gt;As extensões fornecem aos desenvolvedores de aplicativos os novos recursos de renderização e permite ir além das características especificadas na norma oficial do OpenGL. Extensões de OpenGL mantém a API OpenGL atual com as últimas inovações em hardware gráfico e algoritmos de processamento.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kivy-e-opengl"&gt;
+&lt;h2&gt;Kivy e OpenGL&lt;/h2&gt;
+&lt;p&gt;O framework Kivy está construido &lt;a class="reference external" href="https://www.opengl.org/"&gt;sob a API OpenGL 2.0&lt;/a&gt; e possui muito do seu código-fonte escrito com a linguagem OpenGL que possui sintaxe identica a linguagem C. Os módulos de integração com a API OpenGL podem ser considerados o núcleo da biblioteca Kivy e também, o código mais complexo a ser estudado.&lt;/p&gt;
+&lt;p&gt;O Kivy não utiliza funções gráficas do sistema operacinal hospedeiro, logo,  os componentes são desenhados do zero e portanto, aplicações Kivy, terão o mesmo visual em todas as plataformas. Essa é a parte boa. A parte ruim é que se desejarmos que o nosso App utilize o leiaute do sistema operacional hospeiro, teremos que desenvolver por conta própria.&lt;/p&gt;
+&lt;p&gt;Existe versões em desenvolvimento que implementam o padrão gráfico do Material Design, e muito provavelmente, alguém já está desenvolvendo uma versão que utilize os padrões do iOS. Porém, é importante saber que esses são projetos de terceiros, por isso, não há suporte oficial.&lt;/p&gt;
+&lt;p&gt;Por fim, é importante dizer que a biblioteca Kivy utiliza a API OpenGL 2.0, enquanto que a última versão da biblioteca OpenGL é a 4.5.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.opengl.org/sdk/docs/"&gt;Para consultar a documentação do projeto OpenGL utilize este link&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kivy-design"&gt;
+&lt;h2&gt;KIVY DESIGN&lt;/h2&gt;
+&lt;p&gt;Kivy Design é um projeto de construção de uma IDE RAD para desenvolvimento de aplicações gráficas com Python utilizando a biblitoeca kivy. A proposta é a construção do sonho de todos programadores: um ambiente de  completo, estável, para a construção de aplições, seja para o Prompt de Comando, seja para aplicações gráfica para Desktop, Mobile e Web.&lt;/p&gt;
+&lt;p&gt;O projeto Kivy Design objetiva fazer jus a todo o trabalho e esforço empreendido na construção da biblioteca Kivy e fornecer um ambiente para a construção de aplicações gráfica que tenha tanta qualidade como a biblioteca Kivy.&lt;/p&gt;
+&lt;p&gt;A IDE vem sendo desenvolvido, obviamente, com o framework Kivy, então, talvez este venha a ser a primeira IDE RAD (Rapid Application Development) multiplaforma e multidispositivo do mundo. O mais legal é que temos a oportunidade de participar do desenvolimento da IDE e assim, trabalhar para construir uma ferramenta que seja como sempre desejamos que ela fosse.&lt;/p&gt;
+&lt;p&gt;Uma das razões do código do Kivy Design ser tão simples é que tudo ainda está no começo, por isso tanta simplicidade. E, essa é a parte boa, ou seja, temos a oportunidade de acompanhar o crescimento do código e ir assimilando naturalmente e participando da construção de um grande software!&lt;/p&gt;
+&lt;div class="section" id="estado-do-projeto"&gt;
+&lt;h3&gt;ESTADO DO PROJETO&lt;/h3&gt;
+&lt;p&gt;Neste momento, ainda que seja possível executar o projeto Kivy Design, não é recomendável sua utilização, até porque, o mesmo está caindo (travando) a todo momento.&lt;/p&gt;
+&lt;p&gt;Caso queiras se divertir, toda vez que Kivy Design travar, é impresso o local em que ocorreu o problema, logo, poder ir até lá e tentar corrigir.
+O interessante é que a maior parte das vezes em que o Kivy Design trava, o problema não está em seu código, mas sim, no código da biblioteca Kivy.&lt;/p&gt;
+&lt;p&gt;Falando de maneira geral, o framework Kivy não faz um forte tratamento e verificação quando novos valores são atribuido para propriedades de um Widget. Se a propriedade estiver esperando uma Tupla e for enviado um dicionário, ocorre um erro na biblioteca, o que acaba por derrubar toda a IDE. A princípio, e, pelo que entendi, os desenvolvedores não tem interesse de fazer esse tipo de tratamento por questões de performance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="garden"&gt;
+&lt;h2&gt;garden&lt;/h2&gt;
+&lt;p&gt;O &lt;a class="reference external" href="https://github.com/kivy-garden"&gt;Projeto Garden&lt;/a&gt; centraliza componentes não oficiais de código-fonte aberto e distribuido sob a licença MIT desenvolvido por terceiros. Pense neste projeto como um centralizador de códigos de diferentes usuários cuja finalidade é distribuir e compartilhar módulos prontos para ser utilizado.&lt;/p&gt;
+&lt;p&gt;Todos os pacotes Garden estão armazenados no Github, dentro do projeto Kivy, ou seja, no mesmo local em que baixamos o código fonte da biblioteca Kivy.&lt;/p&gt;
+&lt;p&gt;O projeto Garden não está mais sendo entregue junto com o código do framework Kivy, por isso, agora, é necessário instala-lo manualmente. Para isso, vá no Terminal e digite:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install kivy-garden
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Vale dizer que todos são incentivados a colaborar com os pacotes existentes ou então, pela criação de novos módulos independentes. Inclusive, existe um sistema de premiação simbólica para aqueles que tenham colaborado.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/kivy-garden"&gt;Segue o link do repositório no Github&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/instalacao-kivy-mac.html"&gt;Instalação do Kivy no Mac OSX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/instalacao-kivy-ubuntu.html"&gt;Instalação do Kivy no Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://kivy.org/"&gt;Site do projeto Kivy (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/"&gt;Repositório no Github do projeto Kivy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/kivy/"&gt;Código da biblioteca Kivy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.opengl.org/"&gt;OpenGL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/buildozer"&gt;Repositório Buildozer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/plyer"&gt;Repositório Plyer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/pyjnius"&gt;Repositório Pyjnius&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/pyobjus"&gt;Repositório Pyobjus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/python-for-android"&gt;Repositório Python for Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/kivy-ios"&gt;Repositório Kivy iOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/audiostream"&gt;Repositório Audiostream&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/kivy-designer"&gt;Repositório Kivy Designer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy/kivent"&gt;Repositório KivEnt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/kivy-garden"&gt;Repositório Garden&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="python"></category><category term="kivy"></category><category term="kivy design"></category><category term="opengl"></category><category term="blog"></category></entry><entry><title>Aplicações Comerciais com Python</title><link href="http://excript.com/blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html" rel="alternate"></link><published>2016-11-22T18:50:00-02:00</published><updated>2016-11-22T18:50:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-22:blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Está disponível o primeiro Curso de Desenvolvimento de Aplicações Comerciais com Python e Kivy&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;APLICAÇÕES COMERCIAIS COM PYTHON&lt;/h2&gt;
+&lt;p&gt;Galera, é com muito orgulho que venho tornar público o Curso de Desenvolvimento de Aplicações Comerciais com Python e Kivy! Um treinamento que lhe ensinará a construir com Python aplicações que são executadas, nativamente, em Android e iOS, Windows, Linux e MacOSX.&lt;/p&gt;
+&lt;p&gt;Este também é o primeiro curso de Kivy em Português, e, sério, o framework foi abordado em detalhes, como também, são construídos centenas de exemplos. São mais de 10 horas de aula estudando só e somente só a biblioteca Kivy!!&lt;/p&gt;
+&lt;p&gt;Este é o resultado de mais de 1 ano de trabalho e também, hoje, já são 6 meses de gravações, um trabalho diário e integral, planejando cada aula, cada exercício de forma a ensinar da maneira mais fácil, com os melhores exemplos, e a melhor explicação!&lt;/p&gt;
+&lt;p&gt;Espero que gostem e sério mesmo, quero ver o nome da eXcript dentro das aplicações de vocês!!!&lt;/p&gt;
+&lt;div class="youtube"&gt;&lt;iframe src="https://www.youtube.com/embed/E0YU3d4Vvxs" width="800" height="500" allowfullscreen seamless frameBorder="0"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
+</summary><category term="python"></category><category term="kivy"></category><category term="blog"></category></entry><entry><title>Instalação do Kivy no Mac OSX</title><link href="http://excript.com/python/instalacao-kivy-mac.html" rel="alternate"></link><published>2016-11-22T18:50:00-02:00</published><updated>2016-11-22T18:50:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-22:python/instalacao-kivy-mac.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos a instalar a biblioteca Kivy no sistema operacional Mac OSX.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="mac-osx"&gt;
+&lt;h2&gt;MAC OSX&lt;/h2&gt;
+&lt;p&gt;Neste artiogo aprenderemos a construir um ambiente de trabalho no Mac OSX, como também, estudaremos as várias ferramentas disponíveis e as várias maneiras diferentes de montar o nosso ambiente.&lt;/p&gt;
+&lt;p&gt;De fábrica o Mac OSX 10 e as versões anteriores possuem a versão do Python 2x que é de uso exclusivo do SO e por isso, não deveríamos instalar pacotes ou mesmo, ficar utilizando essa versão no desenvolvimento.&lt;/p&gt;
+&lt;p&gt;Neste curso trabalharemos com o Anaconda, portanto, não utilizaremos a versão do Python instalada por padrão no Mac para quase nada.&lt;/p&gt;
+&lt;p&gt;É importante dizer que neste momento estamos construindo nosso ambiente de desenvolvimento, posteriormente, construiremos um ambiente para gerar executáveis, seja para o próprio Mac OSX, ou então, para o iOS. Então, vamos construir um ambiente voltado somente para o desenvolvimento.&lt;/p&gt;
+&lt;p&gt;No momento em que essa aula está sendo gravada, a documentação oficial para a instalação da biblioteca Kivy no Mac contém alguns problemas, por isso, seguiremos um tutorial que eu mesmo desenvolvi. Junto a essa aula você encontrará um arquivo contendo os passos para a instalação e os comandos que devem ser digitados no Terminal.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="instalando-o-anaconda-no-mac-osx"&gt;
+&lt;h2&gt;INSTALANDO O ANACONDA NO MAC OSX&lt;/h2&gt;
+&lt;p&gt;Se você não souber qual a sua versão do sistema operacional Mac, utilize o comando abaixo.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#retorna a versão do MacOS&lt;/span&gt;
+sw_vers
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="instalacao-do-gerenciador-brew"&gt;
+&lt;h3&gt;1) Instalação do gerenciador brew&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/usr/bin/ruby -e &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="instalacao-das-dependencias"&gt;
+&lt;h3&gt;2) Instalação das dependencias&lt;/h3&gt;
+&lt;p&gt;Os pacotes a seguir são necessários tanto pra versão 2x como 3x.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#não utilizar SUDO&lt;/span&gt;
+brew install sdl sdl_image sdl_mixer sdl_ttf smpeg portmidi
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="download-anaconda"&gt;
+&lt;h3&gt;3) Download Anaconda&lt;/h3&gt;
+&lt;p&gt;Para &lt;a class="reference external" href="https://www.continuum.io/downloads#osx"&gt;fazer o donwload da instalação da Ananconda, utilize este link&lt;/a&gt; .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="criacao-e-instalacao-dos-ambientes-virtuais-e-da-biblioteca-kivy"&gt;
+&lt;h3&gt;4) Criação e instalação dos ambientes virtuais e da biblioteca kivy&lt;/h3&gt;
+&lt;p&gt;Agora, iremos criar 2 ambientes virtuais de nome k27 e k35 e instalaremos o framework kivy em cada ambiente. É importante dizer que iremos instalar ambas versões devido ao fato de que em alguma situações, o projeto Kivy fornece suporte somente a versão 2.7.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#criação do ambiente k27&lt;/span&gt;
+conda create -p k27 &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;2.7
+
+&lt;span class="c1"&gt;#instalar pygame&lt;/span&gt;
+pip install pygame
+
+&lt;span class="c1"&gt;#biblioteca gráfica&lt;/span&gt;
+conda install pillow
+
+
+&lt;span class="c1"&gt;#biblioteca que compila código Python&lt;/span&gt;
+conda install &lt;span class="nv"&gt;cython&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0.23
+
+
+&lt;span class="c1"&gt;#instalação da biblioteca Kivy&lt;/span&gt;
+$ &lt;span class="nv"&gt;USE_OSX_FRAMEWORKS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; pip install -I --no-cache-dir --no-binary all kivy
+
+
+
+&lt;span class="c1"&gt;#criação do ambiente k35&lt;/span&gt;
+conda create -p k35 &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3.5
+
+&lt;span class="c1"&gt;#instalar pygame&lt;/span&gt;
+pip install pygame
+
+&lt;span class="c1"&gt;#biblioteca gráfica&lt;/span&gt;
+conda install pillow
+
+&lt;span class="c1"&gt;#biblioteca que compila código Python&lt;/span&gt;
+conda install &lt;span class="nv"&gt;cython&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0.23
+
+&lt;span class="c1"&gt;#instalação da biblioteca Kivy&lt;/span&gt;
+$ &lt;span class="nv"&gt;USE_OSX_FRAMEWORKS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; pip install -I --no-cache-dir --no-binary all kivy
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/instalacao-kivy-ubuntu.html"&gt;Instalação no Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html"&gt;Manual de Instalação oficial no MacOSX (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kivy.org/docs/installation/installation-osx.html"&gt;Manual de instalação oficial (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.continuum.io/"&gt;Projeto Anaconda (en)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="python"></category><category term="kivy"></category><category term="blog"></category></entry><entry><title>Instalação do Kivy no Linux (Ubuntu)</title><link href="http://excript.com/python/instalacao-kivy-ubuntu.html" rel="alternate"></link><published>2016-11-22T18:50:00-02:00</published><updated>2016-11-22T18:50:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-22:python/instalacao-kivy-ubuntu.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos a instalar a biblioteca Kivy no sistema operacional Ubuntu.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="ubuntu"&gt;
+&lt;h2&gt;UBUNTU&lt;/h2&gt;
+&lt;p&gt;Neste artigo aprenderemos como construir um ambiente de trabalho no Ubuntu, como também, as várias ferramentas disponíveis e as várias maneiras diferentes de configurar o nosso ambiente.&lt;/p&gt;
+&lt;p&gt;O sistema operacional Ubuntu recebeu atenção especial na documentação do projeto Kivy, por essa razão, ensinaremos em detalhes a construção de ambientes de trabalho no mesmo.&lt;/p&gt;
+&lt;p&gt;De fábrica o Ubuntu 16.04 e as versões anteriores possuem 2 versões do Python, a 2x e a 3x. Por padrão, o Ubuntu define o Python 2x. Então, para executarmos um Script no interpretador 3x temos que definir isso explicitamente.&lt;/p&gt;
+&lt;p&gt;O Ubuntu possui vários atalhos para um mesmo interpretador do Python, por exemplo, se digitarmos no Terminal python, python2 ou python2.7 o modo interativo do Python 2x é iniciado. O mesmo acontece com a versão 3x, ou seja, podemos digitar python3 ou python 3.4 que o modo interativo do Python da versão 3x será iniciado.&lt;/p&gt;
+&lt;p&gt;Esse mesmo sistema de link ocorre com a ferramenta pip. Assim, podemos instalar um pacote no Python2x com o comando pip ou pip2 e podemos instalar um pacote para o Python3x com o comando pip3.&lt;/p&gt;
+&lt;p&gt;A documentação oficial da biblioteca Kivy oferecer 2 formas para instalarmos a biblioteca e suas dependências no Ubuntu. A primeira opção instala a biblioteca nas instalações default do Python. Essa é uma forma de trabalho que você deve evitar, salvo em alguns poucos casos. A segunda forma, é fazer a instalação em um ambiente virtual.&lt;/p&gt;
+&lt;p&gt;Então, é importante que você saiba que nós construiremos 3 ambientes de trabalho. O primeiro e principal será utilizando o Anaconda. O segundo, será utilizando o virtualenv. E o terceiro e menos recomendado, instalaremos a biblioteca Kivy na instalação do Python default.&lt;/p&gt;
+&lt;p&gt;Sugerimos e recomendamos que você construa seu ambiente com o Anaconda, até porque, neste curso optamos por essa ferramenta. Porém, se houver algum problema, construa seu ambiente com a ferramenta virtualenv e virtualenvwrapper. Por fim, em últimos casos, ou então, caso você não possua privilégios, instale a biblioteca na instalação do Python.&lt;/p&gt;
+&lt;p&gt;Neste primeiro momento está ocorrendo uma incompatibilidade com a biblioteca Kivy e o Anaconda. Assim que a incompatibilidade for solucionada, as vídeos aulas ensinando a construção do ambiente com essas ferramentas será gravada e disponibilizada.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="instalacao-sem-ambiente-virtual"&gt;
+&lt;h2&gt;INSTALAÇÃO SEM AMBIENTE VIRTUAL&lt;/h2&gt;
+&lt;p&gt;Para instalarmos a biblioteca Kivy na instalação default do Ubuntu, basta adicionarmos o repositório ao nosso sistema, no caso, o PPA (Personal Package Archives), seja para a versão 2x, 3x ou a versão de desenvolvimento.&lt;/p&gt;
+&lt;p&gt;Ainda que essa seja a forma mais fácil para construirmos o ambiente de trabalho, é a menos recomendada. Isso porque, se utilizarmos a versão do Python que o SO utiliza e eventualmente corrompemos ou causamormos algum problema, nosso sistema operacional deixará de funcionar corretamente!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#adicionando o PPA ao sistema (stable builds)&lt;/span&gt;
+$ sudo add-apt-repository ppa:kivy-team/kivy
+&lt;span class="c1"&gt;#adicionando o PPA ao sistema (nightly builds)&lt;/span&gt;
+$ sudo add-apt-repository ppa:kivy-team/kivy-daily
+
+&lt;span class="c1"&gt;#atualizando o sistema&lt;/span&gt;
+$ sudo apt-get update
+
+&lt;span class="c1"&gt;#instalando o Kivy no Python 2x&lt;/span&gt;
+$ sudo apt-get install python-kivy
+&lt;span class="c1"&gt;#instalando o Kivy no Python 3x&lt;/span&gt;
+$ sudo apt-get install python3-kivy
+
+&lt;span class="c1"&gt;#instalando os códigos de exemplo&lt;/span&gt;
+$ sudo apt-get install python-kivy-examples
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="anaconda-virtualenv-e-ubuntu"&gt;
+&lt;h2&gt;ANACONDA, VIRTUALENV E UBUNTU&lt;/h2&gt;
+&lt;p&gt;No momento em que este manual está sendo escrito há uma incompatibilidade entre a biblioteca &lt;a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html"&gt;Kivy&lt;/a&gt; e os ambientes virtuais criados com &lt;a class="reference external" href="https://www.continuum.io/"&gt;Anaconda no Ubuntu&lt;/a&gt;. Por essa razão será ensinado a construir o ambiente de trabalho utilizando a ferramenta &lt;a class="reference external" href="https://virtualenv.pypa.io/"&gt;virtualenv&lt;/a&gt; e &lt;a class="reference external" href="https://virtualenvwrapper.readthedocs.io/"&gt;virtualenvwrapper&lt;/a&gt; .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="montando-o-ambiente-com-virtualenv"&gt;
+&lt;h2&gt;MONTANDO O AMBIENTE COM VIRTUALENV&lt;/h2&gt;
+&lt;p&gt;Agora construiremos nosso ambiente de desenvolvimento e criaremos os ambientes virtuais utilizando as ferramentas virtualenv e virtualenvwrapper.&lt;/p&gt;
+&lt;p&gt;Como já dito, neste curso utilizaremos o projeto Anaconda para gerenciar os ambientes virtuais e os pacotes. Mesmo assim, me sinto no dever de ensinar a montar o ambiente utilizando a ferramenta virtualenv, até porque, essa ainda é a mais utilizada.&lt;/p&gt;
+&lt;p&gt;Novamente, não existe melhor ou pior ambiente de trabalho, tudo é uma questão de costume e de preferência.&lt;/p&gt;
+&lt;p&gt;O processo de instalação total compreende várias etapas, por isso, é super importante prestar atenção e ir fazendo exatamente como está sendo demonstrado.&lt;/p&gt;
+&lt;p&gt;Por fim, é importante dizer que muitos alunos irão ter problemas dos mais diversos e isso é super natural. A primeira tentativa de resolução é fechar tudo, reiniciar o OS e iniciar o processo de instalação do zero.&lt;/p&gt;
+&lt;p&gt;Mesmo assim, todos os eventuais erros que você vier a ter é interessante compartilhar em nosso grupo, até porque, pode ser a solução para o problema de outro aluno.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="instalando-o-virtualenv-e-instalando-kivy-no-ubuntu"&gt;
+&lt;h2&gt;INSTALANDO O VIRTUALENV E INSTALANDO KIVY NO UBUNTU&lt;/h2&gt;
+&lt;p&gt;Vamos instalar e configurar nosso ambiente de trabalho no Ubuntu utilizando as ferramentas virtualenv e virtualenvwrapper. Para facilitar o estudo, dividi o processo de instalação e criação dos ambientes virtuais em 3 etapas.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Atualização e instalação de pacotes (Ubuntu)&lt;/li&gt;
+&lt;li&gt;Atualização e instalação pacote (Python)&lt;/li&gt;
+&lt;li&gt;Criação do ambientes virtuais
+a) k27
+a) k34&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;PACOTES UBUNTU&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Na página de &lt;a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html"&gt;instalação do projeto Kivy contém a lista de pacotes que precisam ser instalados no Ubuntu&lt;/a&gt; para que a biblioteca Kivy funcione. Esse material foi criado a partir dessa lista.&lt;/p&gt;
+&lt;p&gt;Para facilitar, adicionei numa única lista todos os pacotes necessários, tanto para a versão 2x como 3x do Python. Você pode construir essa lista através da página oficial, porém, preferi lhe entregar tudo pronto pra facilitar nosso trabalho.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#atualização do sistema&lt;/span&gt;
+sudo apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get upgrade
+
+&lt;span class="c1"&gt;#pacotes para python 2x e 3x&lt;/span&gt;
+sudo apt-get install -y python-pip python3-pip build-essential git python python3  python-dev python3-dev libsdl2-dev  libsdl2-image-dev  libsdl2-mixer-dev  libsdl2-ttf-dev libportmidi-dev  libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev ffmpeg
+
+&lt;span class="c1"&gt;#caso ocorra erro na instalação do ffmpeg&lt;/span&gt;
+sudo apt-get install libav-tools
+
+&lt;span class="c1"&gt;#em tese não é necessário executar os comandos abaixo&lt;/span&gt;
+&lt;span class="c1"&gt;#se o pacote libav-tools foi instalado&lt;/span&gt;
+sudo add-apt-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install ffmpeg
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finalizamos a primeira fase da instalação da biblioteca Kivy no Ubuntu.&lt;/p&gt;
+&lt;p&gt;Agora vamos iniciar a instalação das bibliotecas do Python propriamente ditas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="instalacao-pacotes-python"&gt;
+&lt;h2&gt;2) INSTALAÇÃO PACOTES PYTHON&lt;/h2&gt;
+&lt;p&gt;Para instalar os pacotes Python utilizaremos o gerenciador de pacotes pip.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Instalação/atualização do pip, virtualenv e setuptools&lt;/span&gt;
+sudo pip install --upgrade pip virtualenv setuptools
+
+&lt;span class="c1"&gt;#instalação do virtualenvwrapper&lt;/span&gt;
+&lt;span class="nv"&gt;$sudo&lt;/span&gt; pip install virtualenvwrapper
+
+&lt;span class="c1"&gt;#adicionar no final do arquivo “~/.bashrc”&lt;/span&gt;
+
+&lt;span class="c1"&gt;#local onde os ambientes serão armazenados&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;WORKON_HOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;~/.virtualenvs
+&lt;span class="c1"&gt;#script de ativação do virtualenvwrapper&lt;/span&gt;
+&lt;span class="nb"&gt;source&lt;/span&gt; /usr/local/bin/virtualenvwrapper.sh
+
+&lt;span class="c1"&gt;#define que não será utilizado os pacotes instalados no python default&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;VIRTUALENVWRAPPER_VIRTUALENV_ARGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;--no-site-packages&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;#define que não é possível utilizar o pip fora de algum ambiente virtual&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PIP_REQUIRE_VIRTUALENV&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="criacao-dos-ambientes-virtuais"&gt;
+&lt;h2&gt;3) CRIAÇÃO DOS AMBIENTES VIRTUAIS&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Criação de um ambiente virtual de nome &amp;quot;k27&amp;quot; com Python 27&lt;/span&gt;
+mkvirtualenv --no-site-packages -p /usr/bin/python2.7 k27
+
+&lt;span class="c1"&gt;# instalação do pacote Cython&lt;/span&gt;
+pip install &lt;span class="nv"&gt;Cython&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;0.23
+
+&lt;span class="c1"&gt;# Instalação da biblioteca Kivy&lt;/span&gt;
+pip install kivy
+
+&lt;span class="c1"&gt;# Criação de um ambiente virtual de nome &amp;quot;k34&amp;quot; com Python34&lt;/span&gt;
+mkvirtualenv --no-site-packages -p /usr/bin/python3.4 k34
+
+&lt;span class="c1"&gt;# instalação do pacote Cython&lt;/span&gt;
+pip install &lt;span class="nv"&gt;Cython&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;0.23
+
+&lt;span class="c1"&gt;# Instalação da biblioteca Kivy&lt;/span&gt;
+pip install kivy
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Para ativar determinado ambiente virtual, utilize o comando abaixo.&lt;/p&gt;
+&lt;blockquote&gt;
+# ativação do ambiente virtual
+workon k27
+workon k34&lt;/blockquote&gt;
+&lt;p&gt;Se você desejar instalar a versão em desenvolvimento (não recomendável no início) utilize o comando abaixo.&lt;/p&gt;
+&lt;blockquote&gt;
+# Instalação da biblioteca Kivy (versão desenvolvimento)
+# pip install git+https://github.com/kivy/kivy.git&amp;#64;master&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://excript.com/python/instalacao-kivy-mac.html"&gt;Instalação no Mac OSX&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html"&gt;Manual de Instalação oficial no Linux (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://virtualenv.pypa.io/"&gt;Página oficial virtualenv (en)&lt;/a&gt;:&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://virtualenvwrapper.readthedocs.io/"&gt;Página oficial virtualenvwrapper (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.continuum.io/"&gt;Projeto Anaconda (en)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="python"></category><category term="kivy"></category><category term="blog"></category></entry></feed>

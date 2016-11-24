@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>eXcript</title><link>http://excript.com/</link><description></description><lastBuildDate>Wed, 15 Jun 2016 04:30:00 -0300</lastBuildDate><item><title>Importação: include() e require() do PHP</title><link>http://excript.com/php/importacao-include-require-php.html</link><description>
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos a diferença entre as funções include() e require() e estudaremos em quais situações devemos importar bibliotecas PHP com cada uma das funções.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;Os programas que fizemos até agora, possuiam apenas um arquivo de código. Trabalhamos dessa maneira para simplificar o estudo e maximizar a visualização do código que estávamos implemento. Porém, o comum, é que uma aplicação escrita em PHP possua vários, senão, centenas de arquivos com código PHP.&lt;/p&gt;
+&lt;p&gt;Dessa forma, temos de ser capazes de dizer que um arquivo em especifico deve ser aberto antes que a execução do arquivo que estamos desenvolvendo seja interpretado. Por exemplo, podemos ter um arquivo onde definimos uma grande quantidade de funções e, quando formos utilizar determinada função, tratamos de antes importar o arquivo em que a mesma foi definida.&lt;/p&gt;
+&lt;p&gt;A capacidade de trabalhar com múltiplos arquivos é a forma mais primitiva de modularização do código PHP. Dessa forma, podíamos separar conjuntos de funções em arquivos diferentes, o que acabava fragmentando o código e, acabava por modularizar os nossos programas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="importacao-de-arquivos"&gt;
+&lt;h2&gt;IMPORTAÇÃO DE ARQUIVOS&lt;/h2&gt;
+&lt;p&gt;Todo programa PHP é constituido por um conjunto de arquivos que contém código PHP, HTML, JS, CSS ou então, qualquer outra informação que deve ser processada no lado do servidor.&lt;/p&gt;
+&lt;p&gt;O PHP disponibiliza 4 funções para importação e cada uma desempenha uma tarefa especifica, logo, temos que conhecer todas as maneiras disponíveis de importação!&lt;/p&gt;
+&lt;p&gt;Podemos importar um arquivo PHP através da função &lt;code&gt;include()&lt;/code&gt; ou então, &lt;code&gt;require()&lt;/code&gt;. Cada uma dessas 2 funções, possui uma função auxiliar que evita a importação de um arquivo que já tenha sido importado anteriormente.&lt;/p&gt;
+&lt;p&gt;O problema em importar um arquivo que já está importado, é que as variáveis contidas no escopo desse arquivo serão resetadas, logo, todos os valores que tivermos em variáveis que estão definidas em outro arquivo serão perdidos. Isso é somente um dos problemas, é possível elucidar vários.&lt;/p&gt;
+&lt;p&gt;Então, é uma boa prática a utilização das funções &amp;quot;_once()&amp;quot;, até porque, dessa maneira evitamos a importação de algo que já está carregado.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;função &lt;code&gt;include()&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;&lt;code&gt;include()&lt;/code&gt;: inclui o arquivo passado como parâmetro. Se o arquivo não for encontrado, o PHP irá lançar um &amp;quot;warning&amp;quot;, mas dará continuidade na execução.&lt;/p&gt;
+&lt;p class="last"&gt;&lt;code&gt;include_once()&lt;/code&gt;: o funcionamento dessa função é igual ao da função &lt;code&gt;include()&lt;/code&gt;, porém, o arquivo só será importado caso o mesmo ainda não tenha sido.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;função &lt;code&gt;require()&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;&lt;code&gt;require()&lt;/code&gt;: a função &lt;code&gt;require()&lt;/code&gt; importa arquivos, porém, caso o mesmo não seja encontrado, será levantado uma exceção e a execução é finalizada. Essa é uma maneira de interrompermos a execução dos scripts caso alguma anomalia ocorra.&lt;/p&gt;
+&lt;p class="last"&gt;&lt;code&gt;require_once()&lt;/code&gt;: o funcionamento é igual ao da função &lt;code&gt;require()&lt;/code&gt;, porém, um arquivo só será importado caso o mesmo ainda não tenha sido.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#IMPORTANDO ARQUIVOS PHP&lt;/span&gt;
+
+&lt;span class="x"&gt;include(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
+&lt;span class="x"&gt;include_once(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
+
+&lt;span class="x"&gt;require(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
+&lt;span class="x"&gt;require_once(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
+
+&lt;span class="x"&gt;echo $teste . &amp;quot;\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;$teste = 5;&lt;/span&gt;
+
+&lt;span class="x"&gt;require(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
+
+&lt;span class="x"&gt;echo $teste . &amp;quot;\n&amp;quot;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Wed, 15 Jun 2016 04:30:00 -0300</pubDate><guid isPermaLink="false">tag:excript.com,2016-06-15:php/importacao-include-require-php.html</guid><category>curso</category><category>php</category><category>importar</category><category>função</category><category>include</category><category>require</category><category>blog</category></item></channel></rss>

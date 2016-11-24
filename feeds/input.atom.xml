@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>eXcript</title><link>http://excript.com/</link><description></description><lastBuildDate>Sat, 07 May 2016 23:45:00 -0300</lastBuildDate><item><title>Entrada de Dados em Python</title><link>http://excript.com/python/entrada-dados-python.html</link><description>
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a entrada de dados numa aplicação e como o Python trata nativamente.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="entrada-de-dados"&gt;
+&lt;h2&gt;ENTRADA DE DADOS&lt;/h2&gt;
+&lt;p&gt;Entrada de Dados é a forma como enviamos informações para dentro de aplicações escritas em Python. A forma mais primitiva de enviar dados para uma aplicação é pelo Prompt de Comando, isto é, pelo Console propriamente dito.&lt;/p&gt;
+&lt;img alt="Imagem do Console para a entrada de dados em programa Python" src="../images/curso-de-python/console-python.png" /&gt;
+&lt;p&gt;Uma aplicação pode, a qualquer momento, pedir que o usuário informe uma determinada informação, para isto, basta invocar a função &lt;cite&gt;input()&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;A partir da versão 3 do Python, a função &lt;cite&gt;input()&lt;/cite&gt;, tem por objetivo de escrever a String passada como parâmetro e em seguida, ativar o modo de digitação, isto é, colocar o Console de uma determinada forma em que seja possível a digitação (entrada de dados). É importante observar que versões anteriores do Python funcionavam de maneira distinta, e também, que a função &lt;cite&gt;input()&lt;/cite&gt; nas versões 2x era utilizado para outro finalidade!&lt;/p&gt;
+&lt;p&gt;A seguir, temos um exemplo onde imprimimos uma frase na tela e em seguida, é aberto para o usuário, a capacidade para digitação de letras e números.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Escreva entre aspas alguma informação a ser impressa no Console &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O código acima, quando executado, irá imprimir o que está entre parêntesis no Console e em seguida, permitira ao usuário a digitação de qualquer tipo de dado alfanumérico. O conjunto de caracteres digitado pelo usuário, será retornado pela função &lt;cite&gt;input()&lt;/cite&gt;. É responsabilidade do programador armazenar esses caracteres numa variável, como fazemos no exemplo a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Digite um número:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, será impresso a frase definida entre aspas e então, o console entrará num modo que permitirá o usuário digitar texto e números. Após o usuário digitar o que desejar e pressionar a tecla Enter, os dados digitados serão retornados pela função &lt;cite&gt;input()&lt;/cite&gt;. No exemplo acima, estamos atribuindo o retorno da função para a variável num, logo, a mesma receberá aquilo que o usuário digitou no Console antes de pressionar a tecla Enter.&lt;/p&gt;
+&lt;p&gt;Por fim, imprimimos na tela os caracteres digitados pelo nosso usuário através da função &lt;cite&gt;print()&lt;/cite&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="outras-formas-para-entrada-de-dados"&gt;
+&lt;h2&gt;OUTRAS FORMAS PARA ENTRADA DE DADOS&lt;/h2&gt;
+&lt;p&gt;Uma aplicação pode receber dados através das mais distintas formas, como por exemplo, pela leitura de um arquivo, através dos protocolos TCP/IP, pelo uso de janelas gráficas, como por exemplo, a biblioteca TkInter, que é a forma nativa para a construção de Janelas Gráficas no Python e etc.&lt;/p&gt;
+&lt;p&gt;Há diversas maneiras para recebermos informações, porém, o princípio de como trataremos esses dados será, na maior parte da vezes o mesmo.&lt;/p&gt;
+
+    &lt;div class="admonitionblock important data-line-21"&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                &lt;td class="icon"&gt;
+                    &lt;i class="fa icon-important" title="Importante!"&gt;&lt;/i&gt;
+                &lt;/td&gt;
+                &lt;td class="content"&gt;
+                    &lt;div class="paragraph data-line-22"&gt;
+                        &lt;p&gt;Certifique-se estar utilizando a versão 3.x do Python, do contrário, a função input() terá funcionamento anomalo e a sua aplicação não será executada da maneira correta! Por isso lembre-se: se você estiver tendo problemas, averigue a versão do Python instalada em seu computador!&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;p&gt;A seguir, temos o exemplo feito na vídeo aulas do Curso de Python da eXcript:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+
+&lt;span class="n"&gt;login&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Login:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;senha&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Senha:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;O usuário informado foi: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;, e a senha digitada foi: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;senha&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Sat, 07 May 2016 23:45:00 -0300</pubDate><guid isPermaLink="false">tag:excript.com,2016-05-07:python/entrada-dados-python.html</guid><category>curso</category><category>python</category><category>entrada padrão</category><category>entrada de dados</category><category>input</category><category>blog</category></item></channel></rss>

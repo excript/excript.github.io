@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/oo.rss.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-02-21T10:09:00-03:00</updated><entry><title>Sobrescrita de Funções em PHP</title><link href="http://excript.com/php/sobrescrita-funcao-php.html" rel="alternate"></link><published>2016-02-21T10:09:00-03:00</published><updated>2016-02-21T10:09:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-02-21:php/sobrescrita-funcao-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nessa aula estudaremos a sobrescrita de funções em classes derivadas. Essa é uma das formas de trabalharmos com polimorfismo atribuindo a funções de mesmo nome funcionalidades diferentes e também, é uma excelente maneira para especializarmos funcionalidades nas subclasses.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# SOBREESCRITA DE FUNÇÕES&lt;/span&gt;
+
+&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
+&lt;span class="x"&gt;    private $nome;&lt;/span&gt;
+&lt;span class="x"&gt;    private $sobrenome;&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function getNome() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        return $this-&amp;gt;nome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function setNome(string $nome)&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;nome = $nome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function getSobrenome() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;    return $this-&amp;gt;sobrenome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    public function setSobrenome(string $sobrenome)&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        $this-&amp;gt;sobrenome = $sobrenome;&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+
+&lt;span class="x"&gt;    public function getNomeCompleto() : string&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        return $this-&amp;gt;getNome() . &amp;quot; &amp;quot; . $this-&amp;gt;getSobrenome();&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;class PFisica extends Pessoa{&lt;/span&gt;
+
+&lt;span class="x"&gt;//    public function getNomeCompleto() : string&lt;/span&gt;
+&lt;span class="x"&gt;//    {&lt;/span&gt;
+&lt;span class="x"&gt;//        return &amp;quot;PFisica: {$this-&amp;gt;getNome()} {$this-&amp;gt;getSobrenome()}&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;//    }&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="oo"></category><category term="orientação a objetos"></category><category term="modificadores"></category><category term="modificador de acesso"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="herança"></category><category term="subclasse"></category><category term="superclasse"></category><category term="polimorfismo"></category></entry></feed>

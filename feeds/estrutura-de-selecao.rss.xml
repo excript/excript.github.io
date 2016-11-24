@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/estrutura-de-selecao.rss.xml" rel="self"></link><id>http://excript.com/</id><updated>2015-11-18T22:08:00-02:00</updated><entry><title>Estrutura de Seleção Múltipla switch em PHP</title><link href="http://excript.com/php/estrutura-selecao-multipla-switch-php.html" rel="alternate"></link><published>2015-11-18T22:08:00-02:00</published><updated>2015-11-18T22:08:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-18:php/estrutura-selecao-multipla-switch-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a estrutura de seleção múltipla, isto é, uma forma de definirmos um conjunto de expressões e um determinado bloco que deve ser executado em cada situação.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#INSTRUÇÃO SWITCH&lt;/span&gt;
+
+&lt;span class="x"&gt;$num = 1;&lt;/span&gt;
+
+&lt;span class="x"&gt;switch($num){&lt;/span&gt;
+
+&lt;span class="x"&gt;    case 1:&lt;/span&gt;
+&lt;span class="x"&gt;        echo &amp;quot;O valor é igual a 1&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;        break;&lt;/span&gt;
+&lt;span class="x"&gt;    case 2:&lt;/span&gt;
+&lt;span class="x"&gt;        echo &amp;quot;O valor é igual a 2&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;        break;&lt;/span&gt;
+&lt;span class="x"&gt;//    default:&lt;/span&gt;
+&lt;span class="x"&gt;//        echo &amp;quot;Estrutura default executada&amp;quot;;&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="estrutura de seleção"></category><category term="estrutura de seleção múltipla"></category><category term="switch"></category></entry><entry><title>Estrutura de Seleção Múltipla switch em PHP (parte II)</title><link href="http://excript.com/php/estrutura-selecao-multipla-switch-php-parte2.html" rel="alternate"></link><published>2015-11-18T20:10:00-02:00</published><updated>2015-11-18T20:10:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-18:php/estrutura-selecao-multipla-switch-php-parte2.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta segunda aula sobre as estruturas de seleção múltipla, implementaremos um código que demonstra os beneficios da instrução switch.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
+
+&lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;    &amp;lt;title&amp;gt;Instrução Switch na prática - Curso PHP - eXcript&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+
+&lt;span class="x"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;isset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$_POST&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;cbxMES&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])){&lt;/span&gt;
+        &lt;span class="nv"&gt;$mes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$_POST&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;cbxMES&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+        &lt;span class="k"&gt;switch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$mes&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Janeiro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Fevereiro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Março&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Abril&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Maio&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Junho&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Julho&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Agosto&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Setembro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Outubro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Novembro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Dezembro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+
+&lt;span class="x"&gt;&amp;lt;form method=&amp;quot;post&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;    &amp;lt;select name=&amp;quot;cbxMES&amp;quot; &amp;gt;&lt;/span&gt;
+
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;1&amp;quot;&amp;gt;Janeiro&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;2&amp;quot;&amp;gt;Fevereiro&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;3&amp;quot;&amp;gt;Março&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;4&amp;quot;&amp;gt;Abril&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;5&amp;quot;&amp;gt;Maio&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;6&amp;quot;&amp;gt;Junho&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;7&amp;quot;&amp;gt;Julho&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;8&amp;quot;&amp;gt;Agosto&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;9&amp;quot;&amp;gt;Setembro&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;10&amp;quot;&amp;gt;Outubro&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;11&amp;quot;&amp;gt;Novembro&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;        &amp;lt;option value=&amp;quot;12&amp;quot;&amp;gt;Dezembro&amp;lt;/option&amp;gt;&lt;/span&gt;
+
+&lt;span class="x"&gt;    &amp;lt;/select&amp;gt;&lt;/span&gt;
+
+&lt;span class="x"&gt;    &amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;span class="x"&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+
+&lt;span class="x"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+
+
+&lt;span class="x"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="estrutura de seleção"></category><category term="estrutura de seleção múltipla"></category><category term="switch"></category></entry></feed>

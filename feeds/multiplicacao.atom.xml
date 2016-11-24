@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>eXcript</title><link>http://excript.com/</link><description></description><lastBuildDate>Sat, 07 May 2016 02:50:00 -0300</lastBuildDate><item><title>Operadores Aritméticos do Python</title><link>http://excript.com/python/operador-aritmetico-em-python.html</link><description>
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos os operadores aritméticos da linguagem Python, ou seja, os operadores que realizam as operações matemáticas elementares, com a soma, subtração, multiplicação, divisão, divisão inteira e módulo.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao-as-operacoes-matematicas"&gt;
+&lt;h2&gt;INTRODUÇÃO ÀS OPERAÇÕES MATEMÁTICAS&lt;/h2&gt;
+&lt;p&gt;O Python além de ser uma excelente linguagem para a construção de aplicações de forma geral, também é, uma excelente linguagem para ser utilizada junto com a matemática, como por exemplo, na geração de relatórios, gráficos, estatísticas e etc.&lt;/p&gt;
+&lt;p&gt;Atualmente, temos diversas bibliotecas matemáticas para serem utilizadas, e os recursos vão de simples análises e geração de gráficos a inteligência artificial, análise de sentimentos, estatísticas para compra e venda de ações, neurociência e muito, mas muitas outras áreas relacionadas a pesquisa e análise de informações.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="operadores-matematicos"&gt;
+&lt;h2&gt;OPERADORES MATEMÁTICOS&lt;/h2&gt;
+&lt;p&gt;O Python pode ser utilizado como uma calculadora matemática avançada. Praticamente, todos os operadores aritméticos funcionam da mesma forma como os conhecemos da matemática elementar. Por exemplo, para trabalharmos com as 4 principais funções matemáticas, a soma, subtração, multiplicação e divisão, temos os operadores conforme tabela a seguir.&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="63%" /&gt;
+&lt;col width="37%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Operação&lt;/td&gt;
+&lt;td&gt;Operador&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;adição&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;+&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;subtração&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;-&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;multiplicação&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;*&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;divisão&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;/&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Tempos também, operadores para exponenciação, obtenção da parte inteira de uma divisão, extração do módulo da divisão, conforme pode ser visto na tabela a seguir:&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="63%" /&gt;
+&lt;col width="37%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Operação&lt;/td&gt;
+&lt;td&gt;Operador&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;exponenciação&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;**&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;parte inteira&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;//&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;módulo&lt;/td&gt;
+&lt;td&gt;&lt;cite&gt;%&lt;/cite&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;O operador módulo &lt;cite&gt;%&lt;/cite&gt; sera estudado em detalhes em aulas futuras.&lt;/p&gt;
+&lt;p&gt;Podemos elevar um número a outro através da utilização de 2 sinais de multiplicação seguidos &lt;cite&gt;**&lt;/cite&gt;, isto é, o operador &lt;cite&gt;**&lt;/cite&gt; é o operador para exponenciação em Python. Também é possível obter a parte inteira da divisão, com o uso do sinal de divisão repetido, &lt;cite&gt;//&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;A seguir, temos algumas operações matemáticas utilizando os operadores que acabamos de estudar e seus respectivos resultados:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="c1"&gt;#soma&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="mi"&gt;10&lt;/span&gt;
+
+&lt;span class="c1"&gt;#subtração&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;8&lt;/span&gt;
+
+&lt;span class="c1"&gt;#multiplicação&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;
+
+&lt;span class="c1"&gt;#divisão&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;81&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;
+&lt;span class="mf"&gt;9.0&lt;/span&gt;
+
+&lt;span class="c1"&gt;#exponenciação&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="mi"&gt;32&lt;/span&gt;
+
+&lt;span class="c1"&gt;#extração da parte inteira da divisão&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Acabamos de utilizar 6 operadores matemáticas que estão definidos por padrão. Ainda que não tenha muita utilidade num primeiro momento, podemos alterar o funcionamento dos operadores, ou seja, podemos fazer com que o sinal de adição funcione da maneira como bem desejarmos.&lt;/p&gt;
+&lt;p&gt;Essa funcionalidade não possui utilidade quando estamos tratando de números inteiros, porém, é bastante útil, quando por exemplo, temos uma estrutura que seria interessante poder ser somada com outra. Logo, implementamos na classe dessa estrutura a funcionalidade de soma, subtração e etc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;p&gt;A seguir, temos o código escrito durante a aula.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Sat, 07 May 2016 02:50:00 -0300</pubDate><guid isPermaLink="false">tag:excript.com,2016-05-07:python/operador-aritmetico-em-python.html</guid><category>curso</category><category>python</category><category>operações matemáticas</category><category>operações aritméticas</category><category>soma</category><category>subtração</category><category>multiplicação</category><category>divisão</category><category>divisão inteira</category><category>módulo</category><category>blog</category></item></channel></rss>

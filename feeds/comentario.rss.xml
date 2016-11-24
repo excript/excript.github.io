@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/comentario.rss.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-15T01:30:00-03:00</updated><entry><title>Comentários em C++</title><link href="http://excript.com/cpp/comentario-cpp.html" rel="alternate"></link><published>2016-06-15T01:30:00-03:00</published><updated>2016-06-15T01:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-15:cpp/comentario-cpp.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos como marcar trechos de código como sendo comentários, ou seja, blocos de códigos que são ignorados pelo compilador e assim, podemos adiciona-los a qualquer local do nosso código.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao-ao-uso-de-comentarios"&gt;
+&lt;h2&gt;INTRODUÇÃO AO USO DE COMENTÁRIOS&lt;/h2&gt;
+&lt;p&gt;Comentário é todo conjunto de caracteres inserido dentro de um código e que não será avaliado pelo compilador ou interpretador. O C++ define 2 tipos de marcação de comentários, a forma inline e a forma multi-line.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="comentarios-inline"&gt;
+&lt;h2&gt;COMENTÁRIOS &lt;tt class="docutils literal"&gt;inline&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;Para adicionarmos um comentário após determinada instrução, basta utilizarmos duas barras e em seguida, estamos livres para escrevermos o que desejarmos, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; estudo &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//escreva o que desejares após as barras&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como podemos ver no exemplo acima, após a finalização da instrução com o uso de ponto e vírgula, adicionamos 2 barras &lt;tt class="docutils literal"&gt;//&lt;/tt&gt; e então, escrevemos um texto. Se mandassemos, por exemplo, compilar o código, veríamos que nenhuma mensagem de erro seria exibida.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="comentarios-multiline"&gt;
+&lt;h2&gt;COMENTÁRIOS &lt;tt class="docutils literal"&gt;multiline&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;Da mesma forma que podemos marcar que após determinada posição o compilador deve ignorar os caracteres, podemos definir que, um bloco de código, isto é, um conjunto de linhas, sejam ignoradas pelo compilador.&lt;/p&gt;
+&lt;p&gt;Para isso, utilizamos uma notação de abertura de bloco e finalização. A abertura é feita com os caracteres &lt;tt class="docutils literal"&gt;/*&lt;/tt&gt; barra asterisco e a finalização, com &lt;tt class="docutils literal"&gt;*/&lt;/tt&gt; asterisco barra. Esta notação permite-nos definir um trecho inline como sendo comentário ou então, todo um arquivo de código.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+
+&lt;span class="cm"&gt;    bloco de comentários&lt;/span&gt;
+
+&lt;span class="cm"&gt;*/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="cm"&gt;/*====================================&lt;/span&gt;
+&lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt;*          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt;* ====================================*/&lt;/span&gt;
+
+&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;* sdafasd asdfasdfasf asdfas&lt;/span&gt;
+&lt;span class="cm"&gt;* asfasdfasd asdfasd sdfasdf asdfasdf sf&lt;/span&gt;
+&lt;span class="cm"&gt;* asdfasd asdfasd&lt;/span&gt;
+&lt;span class="cm"&gt;*&lt;/span&gt;
+&lt;span class="cm"&gt;*&lt;/span&gt;
+&lt;span class="cm"&gt;* cout &amp;lt;&amp;lt; &amp;quot;ola&amp;quot;;&lt;/span&gt;
+&lt;span class="cm"&gt;*/&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;dddd&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//A mensagem que está entre aspas é o que será impresso na tela&lt;/span&gt;
+  &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Ola mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="cpp"></category><category term="comentário"></category><category term="blog"></category></entry></feed>

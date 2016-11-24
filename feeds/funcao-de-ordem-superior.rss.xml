@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/funcao-de-ordem-superior.rss.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-11T13:00:00-03:00</updated><entry><title>Funções Anônimas e Arrays com PHP</title><link href="http://excript.com/php/funcao-anonima-array-php.html" rel="alternate"></link><published>2016-06-11T13:00:00-03:00</published><updated>2016-06-11T13:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/funcao-anonima-array-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos as funções anonimas junto com as estruturas Arrays. Estudaremos as várias funções definidas pela linguagem PHP para serem utilizadas com uso de funções anonimas.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS E ARRAYS&lt;/span&gt;
+
+&lt;span class="x"&gt;#array_map(&amp;lt;f.anonima&amp;gt;, &amp;lt;array&amp;gt;)&lt;/span&gt;
+
+&lt;span class="x"&gt;$lista = [1,2,3,4,5];&lt;/span&gt;
+
+&lt;span class="x"&gt;$f = function($x){&lt;/span&gt;
+&lt;span class="x"&gt;    return $x  * $x;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$lista_proc = array_map($f, $lista);&lt;/span&gt;
+&lt;span class="x"&gt;print_r($lista_proc);&lt;/span&gt;
+
+
+&lt;span class="x"&gt;#array_filter(&amp;lt;array&amp;gt;, &amp;lt;f.anonima&amp;gt;)&lt;/span&gt;
+
+&lt;span class="x"&gt;$filtro = function($x){&lt;/span&gt;
+&lt;span class="x"&gt;    return $x &amp;lt; 3;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$lista_filtro = array_filter($lista, $filtro);&lt;/span&gt;
+
+&lt;span class="x"&gt;print_r($lista_filtro);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category></entry><entry><title>Funções Anônimas na Prática com PHP</title><link href="http://excript.com/php/funcao-anonima-pratica-php.html" rel="alternate"></link><published>2016-06-11T12:00:00-03:00</published><updated>2016-06-11T12:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/funcao-anonima-pratica-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nessa aula implementaremos um código utilizando os conceitos de funções anonimas estudadas nas aulas anteriores.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="funcoes-para-manipulacao-de-arrays-que-recebem-funcoes-anonima"&gt;
+&lt;h2&gt;FUNÇÕES PARA MANIPULAÇÃO DE ARRAYS QUE RECEBEM FUNÇÕES ANÔNIMA&lt;/h2&gt;
+&lt;p&gt;O PHP tem definido algumas funções para manipularmos Arrays que tem definido o envio de uma função anônima como parâmetro. Essa funções, implementão algumas características e funcionalidades encontradas em linguagens funcionais.&lt;/p&gt;
+&lt;p&gt;Nesse momento, vamos estudar as funções &lt;tt class="docutils literal"&gt;array_map()&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;array_filter()&lt;/tt&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="implementando-a-operacao-externamente"&gt;
+&lt;h2&gt;IMPLEMENTANDO A OPERAÇÃO EXTERNAMENTE&lt;/h2&gt;
+&lt;p&gt;Um dos grandes benefícios das funções anônimas, é a capacidade que nós temos de implementar externamente ações que irão interferir no processamento interno sem fazer qualquer alteração nessa função.&lt;/p&gt;
+&lt;p&gt;Vamos supor uma situação onde existe uma lista de valores e é necessário realizar algum processamento sobre os itens. Pra isso, nós utilizarmos um laço de repetição e a cada item realizarmos uma determinada operação. Essa é uma forma estática de percorrer os elemtnos e realizar um determinado tratamento sobre os mesmos.&lt;/p&gt;
+&lt;p&gt;Agora, nós podemos trabalhar de tal maneira onde não será implementado dentro da função o tratamento que sera dado a cada elemento da lista, o que será feito, é a passagem do elemento através de uma função anônima que será recebida como parâmetro. Dessa forma, nós temos que o processamento irá ocorrer externamente e quem irá implementar o mesmo, não precisa conhecer o funcionamento interno da função e nem ter acesso ao seu código.&lt;/p&gt;
+&lt;p&gt;Um detalhe das funções anônimas é que a expicação é complexa, enquanto a implementação geralmente é simples.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$quadrado = function($num){&lt;/span&gt;
+&lt;span class="x"&gt;    return $num * $num;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+&lt;span class="x"&gt;$cubo = function($num) use ($quadrado){&lt;/span&gt;
+&lt;span class="x"&gt;    return $quadrado($num) * $num;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+&lt;span class="x"&gt;$soma = function($num){&lt;/span&gt;
+&lt;span class="x"&gt;    return $num + $num;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;function processa_lista($lista, $func){&lt;/span&gt;
+&lt;span class="x"&gt;    foreach($lista as &amp;amp;$item)&lt;/span&gt;
+&lt;span class="x"&gt;        $item = $func($item);&lt;/span&gt;
+&lt;span class="x"&gt;    return $lista;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;print_r(processa_lista(range(1, 10), $soma));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="funcoes-php-e-funcoes-anonimas"&gt;
+&lt;h2&gt;FUNÇÕES PHP E FUNÇÕES ANÔNIMAS&lt;/h2&gt;
+&lt;p&gt;O PHP possui algumas funções em que é necessário passar como parâmetro uma função anônima. Por exemplo, existe algumas funções para manipulação de Arrays em que o PHP faz o trabalho pesado e assim, basta implementar uma função anônima e passarmos a mesma como parâmetro para obter algum resultado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="funcao-array-map"&gt;
+&lt;h2&gt;FUNÇÃO &lt;tt class="docutils literal"&gt;array_map()&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;A função &lt;tt class="docutils literal"&gt;array_map()&lt;/tt&gt; tem por objetivo executar uma determinada função em todos elementos contidos em nosso Array. Então, a função anônima que nós passarmos como parâmetro será aplicada para cada elemento da nossa estrutura.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="definicao"&gt;
+&lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;array array_map(callback $callback, array $arr1)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$arr = [1, 2, 3, 4, 5];&lt;/span&gt;
+
+&lt;span class="x"&gt;$f = function($x) {&lt;/span&gt;
+&lt;span class="x"&gt;    return $x * $x;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;span class="x"&gt;$var_arr = array_map(f, $arr);&lt;/span&gt;
+&lt;span class="x"&gt;var_dump($var_arr);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="funcao-array-filter"&gt;
+&lt;h2&gt;FUNÇÃO &lt;tt class="docutils literal"&gt;array_filter()&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;A função &lt;tt class="docutils literal"&gt;array_filter()&lt;/tt&gt; proporciona uma maneira fácil para filtrarmos elementos de um Array se baseando na condição implementada na função anônima que é passada como parâmetro.
+A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt class="docutils literal"&gt;true&lt;/tt&gt;,  o elemento fará parte do novo Array, do contrário, nós temos que o elemento não será adicionado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;array array_map(array $arr1, callback $callback)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//$lista = [1,2,3,4,5,6,7,8,9,10];&lt;/span&gt;
+&lt;span class="x"&gt;$lista = [1,2.21,&amp;quot;&amp;quot;,9,4];&lt;/span&gt;
+
+&lt;span class="x"&gt;$f = function ($v) {&lt;/span&gt;
+&lt;span class="x"&gt;    return is_int($v);&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$lista_filtrada = array_filter( $lista, $f );&lt;/span&gt;
+
+&lt;span class="x"&gt;print_r( $lista_filtrada );&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note que estamos definindo a função com sendo um parâmetro de outra e também, é interessante observar que a implementação da função, ocorre no local onde deve ser passado o parâmetro para outra função.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#PRÁTICA - FUNÇÕES ANÔNIMAS&lt;/span&gt;
+
+&lt;span class="x"&gt;$quadrado = function($item){&lt;/span&gt;
+&lt;span class="x"&gt;    return $item * $item;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+&lt;span class="x"&gt;$cubo = function($item)use($quadrado){&lt;/span&gt;
+&lt;span class="x"&gt;    return $quadrado($item) * $item;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+&lt;span class="x"&gt;$soma = function($item){&lt;/span&gt;
+&lt;span class="x"&gt;    return $item + $item;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;function processa_lista($lista, $func){&lt;/span&gt;
+&lt;span class="x"&gt;    foreach($lista as &amp;amp;$item){&lt;/span&gt;
+&lt;span class="x"&gt;        $item = $func($item);&lt;/span&gt;
+&lt;span class="x"&gt;    }&lt;/span&gt;
+&lt;span class="x"&gt;    return $lista;&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;echo &amp;quot;QUADRADO\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;print_r(processa_lista(range(1,10), $quadrado));&lt;/span&gt;
+
+&lt;span class="x"&gt;echo &amp;quot;\nCUBO\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;print_r(processa_lista(range(1,10), $cubo));&lt;/span&gt;
+
+&lt;span class="x"&gt;echo &amp;quot;\nSOMA\n&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;print_r(processa_lista(range(1,10), $soma));&lt;/span&gt;
+
+
+&lt;span class="x"&gt;//print_r(processa_lista(&lt;/span&gt;
+&lt;span class="x"&gt;//    range(1,10),&lt;/span&gt;
+&lt;span class="x"&gt;//    function($item){&lt;/span&gt;
+&lt;span class="x"&gt;//        return $item - 10;&lt;/span&gt;
+&lt;span class="x"&gt;//    }&lt;/span&gt;
+&lt;span class="x"&gt;//));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category></entry><entry><title>Escopo de nomes das funções anônimas em PHP</title><link href="http://excript.com/php/escopo-de-nome-das-funcoes-anonimas-php.html" rel="alternate"></link><published>2016-06-11T11:00:00-03:00</published><updated>2016-06-11T11:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/escopo-de-nome-das-funcoes-anonimas-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula entenderemos o escopo de nomes das funções anonimas, bem como as suas características e principais conceitos.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="escopo-de-nome-das-funcoes-anonimas"&gt;
+&lt;h2&gt;ESCOPO DE NOME DAS FUNÇÕES ANÔNIMAS&lt;/h2&gt;
+&lt;p&gt;Quando declaramos uma função anônima, geralmente, iremos atribuir a mesma a uma variável. A variável servirá como uma espécie de referência, até porque, através dessa variável é que poderemos invocar a função, ou melhor, &lt;strong&gt;somente&lt;/strong&gt; com essa variável é que o bloco de código da função anonima poderá ser executado!&lt;/p&gt;
+&lt;p&gt;Uma função anônima possui o seu escopo restrito, então, não é possível fazer acesso direto aos membros externos. Em suma, &lt;a class="reference external" href="http://excript.com/php/introducao-as-funcoes-php.html"&gt;o escopo de uma função anônima funciona de maneira análoga a de uma função convencional&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Dessa forma, para acessarmos variáveis externas a função anônima, temos que explicitamente declarar, no cabeçalho da função, que determinadas variáveis devem estar visíveis dentro da função que estamos definindo.&lt;/p&gt;
+&lt;p&gt;Para que seja possível essa manipulação no escopo das variáveis, foi definido a instrução &lt;code&gt;use&lt;/code&gt; que funciona como complemento da declaração das funções anonimas, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$func = function() use ($x) {&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$func();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, declaramos uma variável de nome &lt;code&gt;$x&lt;/code&gt; e inicializamo-a com o número inteiro 10. Em seguida, definimos uma função anonima e nesta declaramos, com a instrução &lt;code&gt;use&lt;/code&gt;, que a variável &lt;code&gt;$x&lt;/code&gt; deve estar acessível internamente.&lt;/p&gt;
+&lt;p&gt;Por essa razão é que conseguimos acessar a variável &lt;code&gt;$x&lt;/code&gt;, até porque, por padrão, funções anonimas não possuem acesso aos membros externos, como já estudado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="passagem-de-referencia-e-de-valor"&gt;
+&lt;h2&gt;PASSAGEM DE REFERÊNCIA E DE VALOR&lt;/h2&gt;
+&lt;p&gt;Funções anonimas funcionam de maneira análoga a qualquer outra função, logo, estas possuem o escopo restrito. Da mesma forma, temos que ao inserirmos variáveis no escopo de uma função, o que estamos de fato fazendo, é declarando uma variável de mesmo nome e inicializando-a com o valor igual a variável externa.&lt;/p&gt;
+&lt;p&gt;Desta forma, se alterarmos o valor das variáveis inseridas no escopo local, o que será alterado, é só e somente só a variável de mesmo nome re-declarada no escopo local da função anonima. Logo, se desejarmos alterar a variável cujo escopo é externo a função, temos de passar a sua referência e não o seu valor. Para isso, basta precedermos o seu nome pelo uso de um &amp;amp; comercial.&lt;/p&gt;
+&lt;p&gt;Vejamos o código a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$y = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$func = function() use ($x, &amp;amp;$y) {&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O valor de y é: $y&amp;quot;;&lt;/span&gt;
+
+&lt;span class="x"&gt;    $x = 0;&lt;/span&gt;
+&lt;span class="x"&gt;    $y = 0;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$func();&lt;/span&gt;
+
+&lt;span class="x"&gt;echo &amp;quot;-----&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;echo &amp;quot;O valor de y é: $y&amp;quot;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No exemplo acima, podemos facilmente observar que somente a variável externa &lt;code&gt;$y&lt;/code&gt; é que teve o seu valor alterado, isso porque, a referência da mesma foi inserida no escopo local da função anonima.&lt;/p&gt;
+&lt;p&gt;A seguir, implementamos mais um exemplo para avançarmos ainda mais em nosso estudo.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$var1 = 10;&lt;/span&gt;
+&lt;span class="x"&gt;$num = [&amp;quot;um&amp;quot;, &amp;quot;dois&amp;quot;, &amp;quot;três&amp;quot;];&lt;/span&gt;
+&lt;span class="x"&gt;$func = function() use ($var1, &amp;amp;$num) {&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;Variável externa $var1&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$func();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS - ESCOPO DE NOMES&lt;/span&gt;
+
+&lt;span class="x"&gt;$num = 100;&lt;/span&gt;
+&lt;span class="x"&gt;$num2 = 100;&lt;/span&gt;
+
+&lt;span class="x"&gt;$func = function() use(&amp;amp;$num, $num2) {&lt;/span&gt;
+&lt;span class="x"&gt;//    echo &amp;quot;Anônima: &amp;quot; . $num;&lt;/span&gt;
+&lt;span class="x"&gt;    $num = 1500;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;$func();&lt;/span&gt;
+
+&lt;span class="x"&gt;echo $num;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="use"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category><category term="blog"></category></entry><entry><title>Introdução às Funções Anônimas em PHP</title><link href="http://excript.com/php/introducao-funcao-anonima-php.html" rel="alternate"></link><published>2016-06-11T10:00:00-03:00</published><updated>2016-06-11T10:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:php/introducao-funcao-anonima-php.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula aprenderemos o conceito de função anonima e, como utiliza-las na linguagem PHP. Também faremos um exemplo onde será possível observar as vantagens dessa definição.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="funcoes-anonimas"&gt;
+&lt;h2&gt;FUNÇÕES ANONIMAS&lt;/h2&gt;
+&lt;p&gt;As &lt;strong&gt;funções anônimas&lt;/strong&gt;, também chamadas de &lt;strong&gt;closures&lt;/strong&gt;, &lt;strong&gt;lambda functions&lt;/strong&gt;, &lt;strong&gt;funções de primeira ordem&lt;/strong&gt;, &lt;strong&gt;funções de ordem superior&lt;/strong&gt;, são blocos de instruções que não possuem nome, podem receber parâmetros e são interpretadas pela linguagem como expressões.&lt;/p&gt;
+&lt;p&gt;Uma função anônima possui um bloco de instrução, porém, não possuem referência que as identifiquem e, por conseguinte, não estarão no escopo para que possamos invoca-las.&lt;/p&gt;
+&lt;p&gt;A vantagem das funções anônimas e, que as tornam especiais, é que podemos armazena-las e manipula-las como fazemos com variáveis, e assim, podemos envia-las como sendo um parâmetro de uma função. A função receptora por sua vez, será capaz de executar a função anônima que foi recebida como parâmetro e ainda, passar os argumentos definidos no cabeçalho da mesma e recebendo a resposta da execução.&lt;/p&gt;
+&lt;p&gt;Assim, temos que uma função anônima possui todas as características e, funciona com os mesmo princípios que qualquer função, porém, como o nome sugere, esta não possui um nome - por isso: anônima!&lt;/p&gt;
+&lt;p&gt;É comum a utilização de funções anônimas como &lt;tt class="docutils literal"&gt;callback&lt;/tt&gt;, isto é, passarmos a função anônima como parâmetro e num determinado momento, a função que a recebeu, invoque a função e de continuidade ao processamento.&lt;/p&gt;
+&lt;p&gt;Para atribuirmos uma função anonima a uma variável, basta declararmos um bloco e atribuirmos este, diretamente, a uma determinada variável, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# o bloco de instrução a seguir, será atribuido à&lt;/span&gt;
+&lt;span class="x"&gt;# variável de nome $func e, para executar o código&lt;/span&gt;
+&lt;span class="x"&gt;# utilizaremos o nome da variável&lt;/span&gt;
+&lt;span class="x"&gt;$func = function($num){&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;Valor do parâmetro recebido &amp;quot; . $num;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;# aqui, estamos invocando a função anonima&lt;/span&gt;
+&lt;span class="x"&gt;# declarada nas linhas acima&lt;/span&gt;
+&lt;span class="x"&gt;$func(10);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No bloco de código acima, definimos uma função anonima e, ainda na definição, atribuimos a sua referência à variável &lt;code&gt;$func&lt;/code&gt;. Em seguida, utilizamos a instrução que já estudamos para a definição de funções - &lt;code&gt;function&lt;/code&gt;, definimos um parâmetro de nome &lt;code&gt;$num&lt;/code&gt; e, por fim, definimos o bloco de instrução da função anonima com uma par de chaves. Feito isso, temos um bloco de instrução como qualquer outra, a única diferença é que podemos retornar valores com o uso da instrução &lt;code&gt;return&lt;/code&gt; que, também já foi estudada.&lt;/p&gt;
+&lt;p&gt;Funções anônimas são expressões como quaisquer outras (como atribuição de números ou manipulação de string), logo, estas podem ser adicionada a uma variável, atribuida a um array e etc.&lt;/p&gt;
+&lt;p&gt;Como prova de que as funções anonimas são expressões, somos obrigados a utilizar um ponto e vírgula após a definição do bloco de instrução, até porque, a mesma não é uma função, mas sim, uma expressão e, como sabemos, toda expressão é finalizada com ponto-e-vírgula.&lt;/p&gt;
+&lt;p&gt;Após atribuirmos a função a uma variável, para invoca-la, basta adicionarmos os parêntesis após o nome [da variável´] e, definir os parâmetros conforme a declaração.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS&lt;/span&gt;
+
+
+&lt;span class="x"&gt;$func = function($nome){&lt;/span&gt;
+&lt;span class="x"&gt;    echo &amp;quot;O nome enviado como parâmetro é: $nome&amp;quot;;&lt;/span&gt;
+&lt;span class="x"&gt;};&lt;/span&gt;
+
+&lt;span class="x"&gt;function teste($f){&lt;/span&gt;
+&lt;span class="x"&gt;    $f(&amp;quot;Cláudio&amp;quot;);&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;teste($func);&lt;/span&gt;
+&lt;span class="x"&gt;//$func(&amp;quot;eXcript&amp;quot;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category><category term="blog"></category></entry></feed>
