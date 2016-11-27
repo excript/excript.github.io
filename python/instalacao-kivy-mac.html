@@ -140,13 +140,12 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<div class="section" id="mac-osx">
-<h2>MAC OSX</h2>
-<p>Neste artiogo aprenderemos a construir um ambiente de trabalho no Mac OSX, como também, estudaremos as várias ferramentas disponíveis e as várias maneiras diferentes de montar o nosso ambiente.</p>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>Neste artigo aprenderemos a construir um ambiente de trabalho no Mac OSX, como também, estudaremos as várias ferramentas disponíveis e as várias maneiras diferentes de montar o nosso ambiente.</p>
 <p>De fábrica o Mac OSX 10 e as versões anteriores possuem a versão do Python 2x que é de uso exclusivo do SO e por isso, não deveríamos instalar pacotes ou mesmo, ficar utilizando essa versão no desenvolvimento.</p>
-<p>Neste curso trabalharemos com o Anaconda, portanto, não utilizaremos a versão do Python instalada por padrão no Mac para quase nada.</p>
 <p>É importante dizer que neste momento estamos construindo nosso ambiente de desenvolvimento, posteriormente, construiremos um ambiente para gerar executáveis, seja para o próprio Mac OSX, ou então, para o iOS. Então, vamos construir um ambiente voltado somente para o desenvolvimento.</p>
-<p>No momento em que essa aula está sendo gravada, a documentação oficial para a instalação da biblioteca Kivy no Mac contém alguns problemas, por isso, seguiremos um tutorial que eu mesmo desenvolvi. Junto a essa aula você encontrará um arquivo contendo os passos para a instalação e os comandos que devem ser digitados no Terminal.</p>
+<p>No momento em que essa aula está sendo gravada, a documentação oficial para a instalação da biblioteca Kivy no Mac contém alguns problemas, por isso, seguiremos um tutorial que eu mesmo desenvolvi.</p>
 </div>
 <div class="section" id="instalando-o-anaconda-no-mac-osx">
 <h2>INSTALANDO O ANACONDA NO MAC OSX</h2>
@@ -156,6 +155,7 @@ sw_vers
 </pre></div>
 <div class="section" id="instalacao-do-gerenciador-brew">
 <h3>1) Instalação do gerenciador brew</h3>
+<p>Segundo a <a class="reference external" href="http://brew.sh/">documentação do utilitário brew encontrado na página oficial</a>, para fazermos a instalação, devemos abrir o terminal e executar o seguinte comando.</p>
 <div class="highlight"><pre><span></span>/usr/bin/ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
@@ -168,7 +168,8 @@ brew install sdl sdl_image sdl_mixer sdl_ttf smpeg portmidi
 </div>
 <div class="section" id="download-anaconda">
 <h3>3) Download Anaconda</h3>
-<p>Para <a class="reference external" href="https://www.continuum.io/downloads#osx">fazer o donwload da instalação da Ananconda, utilize este link</a> .</p>
+<p>Para <a class="reference external" href="https://www.continuum.io/downloads#osx">fazer o donwload da instalação do Ananconda, utilize este link</a> .</p>
+<p>Após o download, basta fazer a instalação como se fosse qualquer outro programa.</p>
 </div>
 <div class="section" id="criacao-e-instalacao-dos-ambientes-virtuais-e-da-biblioteca-kivy">
 <h3>4) Criação e instalação dos ambientes virtuais e da biblioteca kivy</h3>
@@ -221,6 +222,7 @@ $ <span class="nv">USE_OSX_FRAMEWORKS</span><span class="o">=</span><span class=
 <li><a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html">Manual de Instalação oficial no MacOSX (en)</a></li>
 <li><a class="reference external" href="https://kivy.org/docs/installation/installation-osx.html">Manual de instalação oficial (en)</a></li>
 <li><a class="reference external" href="https://www.continuum.io/">Projeto Anaconda (en)</a></li>
+<li><a class="reference external" href="http://brew.sh/index_pt-br.html">Utilitário brew</a></li>
 </ul>
 </div>
 

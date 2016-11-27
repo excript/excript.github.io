@@ -32,6 +32,9 @@
 &lt;p&gt;O núcleo do OpenGL é conhecido como &amp;quot;rendering pipeline&amp;quot; ou dutos de renderização. Podemos utilizar a biblioteca tanto com o desenhos vetoriais, definidos por vértices, como com mapas de bits, desenhos construídos pixel-a-pixel.&lt;/p&gt;
 &lt;p&gt;Os desenvolvedores de hardware conseguem criar extensões, inovando e diferenciando o seus produtos, sem a necessidade de alterar a biblioteca e as atualizações raramente obrigam os usuários da API OpenGL a alterarem os seus códigos.&lt;/p&gt;
 &lt;p&gt;As extensões fornecem aos desenvolvedores de aplicativos os novos recursos de renderização e permite ir além das características especificadas na norma oficial do OpenGL. Extensões de OpenGL mantém a API OpenGL atual com as últimas inovações em hardware gráfico e algoritmos de processamento.&lt;/p&gt;
+&lt;p&gt;Por fim, a biblioteca OpenGL é vastamente utilizada, inclusive, podemos ver na foto a seguir, um sistema utilizado em automóveis brasileiros de nome LGE sendo utilizado como biblioteca gráfica.&lt;/p&gt;
+&lt;p&gt;Tirei a foto no carro do meu amigo Daniel Mello quando fomos buscar uma pizza.&lt;/p&gt;
+&lt;img alt="Sistema operacional LGE como item de fábrica em carros brasileiros." src="../images/blog/sistema-operacional-lge.jpg" /&gt;
 &lt;/div&gt;
 &lt;div class="section" id="kivy-e-opengl"&gt;
 &lt;h2&gt;Kivy e OpenGL&lt;/h2&gt;
@@ -126,13 +129,12 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;div class="section" id="mac-osx"&gt;
-&lt;h2&gt;MAC OSX&lt;/h2&gt;
-&lt;p&gt;Neste artiogo aprenderemos a construir um ambiente de trabalho no Mac OSX, como também, estudaremos as várias ferramentas disponíveis e as várias maneiras diferentes de montar o nosso ambiente.&lt;/p&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;Neste artigo aprenderemos a construir um ambiente de trabalho no Mac OSX, como também, estudaremos as várias ferramentas disponíveis e as várias maneiras diferentes de montar o nosso ambiente.&lt;/p&gt;
 &lt;p&gt;De fábrica o Mac OSX 10 e as versões anteriores possuem a versão do Python 2x que é de uso exclusivo do SO e por isso, não deveríamos instalar pacotes ou mesmo, ficar utilizando essa versão no desenvolvimento.&lt;/p&gt;
-&lt;p&gt;Neste curso trabalharemos com o Anaconda, portanto, não utilizaremos a versão do Python instalada por padrão no Mac para quase nada.&lt;/p&gt;
 &lt;p&gt;É importante dizer que neste momento estamos construindo nosso ambiente de desenvolvimento, posteriormente, construiremos um ambiente para gerar executáveis, seja para o próprio Mac OSX, ou então, para o iOS. Então, vamos construir um ambiente voltado somente para o desenvolvimento.&lt;/p&gt;
-&lt;p&gt;No momento em que essa aula está sendo gravada, a documentação oficial para a instalação da biblioteca Kivy no Mac contém alguns problemas, por isso, seguiremos um tutorial que eu mesmo desenvolvi. Junto a essa aula você encontrará um arquivo contendo os passos para a instalação e os comandos que devem ser digitados no Terminal.&lt;/p&gt;
+&lt;p&gt;No momento em que essa aula está sendo gravada, a documentação oficial para a instalação da biblioteca Kivy no Mac contém alguns problemas, por isso, seguiremos um tutorial que eu mesmo desenvolvi.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="instalando-o-anaconda-no-mac-osx"&gt;
 &lt;h2&gt;INSTALANDO O ANACONDA NO MAC OSX&lt;/h2&gt;
@@ -142,6 +144,7 @@ sw_vers
 &lt;/pre&gt;&lt;/div&gt;
 &lt;div class="section" id="instalacao-do-gerenciador-brew"&gt;
 &lt;h3&gt;1) Instalação do gerenciador brew&lt;/h3&gt;
+&lt;p&gt;Segundo a &lt;a class="reference external" href="http://brew.sh/"&gt;documentação do utilitário brew encontrado na página oficial&lt;/a&gt;, para fazermos a instalação, devemos abrir o terminal e executar o seguinte comando.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/usr/bin/ruby -e &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -154,7 +157,8 @@ brew install sdl sdl_image sdl_mixer sdl_ttf smpeg portmidi
 &lt;/div&gt;
 &lt;div class="section" id="download-anaconda"&gt;
 &lt;h3&gt;3) Download Anaconda&lt;/h3&gt;
-&lt;p&gt;Para &lt;a class="reference external" href="https://www.continuum.io/downloads#osx"&gt;fazer o donwload da instalação da Ananconda, utilize este link&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Para &lt;a class="reference external" href="https://www.continuum.io/downloads#osx"&gt;fazer o donwload da instalação do Ananconda, utilize este link&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Após o download, basta fazer a instalação como se fosse qualquer outro programa.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="criacao-e-instalacao-dos-ambientes-virtuais-e-da-biblioteca-kivy"&gt;
 &lt;h3&gt;4) Criação e instalação dos ambientes virtuais e da biblioteca kivy&lt;/h3&gt;
@@ -207,6 +211,7 @@ $ &lt;span class="nv"&gt;USE_OSX_FRAMEWORKS&lt;/span&gt;&lt;span class="o"&gt;=&
 &lt;li&gt;&lt;a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html"&gt;Manual de Instalação oficial no MacOSX (en)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://kivy.org/docs/installation/installation-osx.html"&gt;Manual de instalação oficial (en)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.continuum.io/"&gt;Projeto Anaconda (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://brew.sh/index_pt-br.html"&gt;Utilitário brew&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cláudio Rogério Carvalho Filho</dc:creator><pubDate>Tue, 22 Nov 2016 18:50:00 -0200</pubDate><guid isPermaLink="false">tag:excript.com,2016-11-22:python/instalacao-kivy-mac.html</guid><category>python</category><category>kivy</category><category>blog</category></item><item><title>Instalação do Kivy no Linux (Ubuntu)</title><link>http://excript.com/python/instalacao-kivy-ubuntu.html</link><description>
@@ -225,18 +230,26 @@ $ &lt;span class="nv"&gt;USE_OSX_FRAMEWORKS&lt;/span&gt;&lt;span class="o"&gt;=&
     &lt;/div&gt;
 &lt;div class="section" id="ubuntu"&gt;
 &lt;h2&gt;UBUNTU&lt;/h2&gt;
-&lt;p&gt;Neste artigo aprenderemos como construir um ambiente de trabalho no Ubuntu, como também, as várias ferramentas disponíveis e as várias maneiras diferentes de configurar o nosso ambiente.&lt;/p&gt;
+&lt;p&gt;Neste artigo aprenderemos como construir um ambiente de trabalho no Ubuntu, como também, as várias ferramentas disponíveis e as várias maneiras diferentes de configurar o nosso ambiente para o desenvolvimento de aplicações com Python e a biblitoeca Kivy.&lt;/p&gt;
 &lt;p&gt;O sistema operacional Ubuntu recebeu atenção especial na documentação do projeto Kivy, por essa razão, ensinaremos em detalhes a construção de ambientes de trabalho no mesmo.&lt;/p&gt;
 &lt;p&gt;De fábrica o Ubuntu 16.04 e as versões anteriores possuem 2 versões do Python, a 2x e a 3x. Por padrão, o Ubuntu define o Python 2x. Então, para executarmos um Script no interpretador 3x temos que definir isso explicitamente.&lt;/p&gt;
-&lt;p&gt;O Ubuntu possui vários atalhos para um mesmo interpretador do Python, por exemplo, se digitarmos no Terminal python, python2 ou python2.7 o modo interativo do Python 2x é iniciado. O mesmo acontece com a versão 3x, ou seja, podemos digitar python3 ou python 3.4 que o modo interativo do Python da versão 3x será iniciado.&lt;/p&gt;
-&lt;p&gt;Esse mesmo sistema de link ocorre com a ferramenta pip. Assim, podemos instalar um pacote no Python2x com o comando pip ou pip2 e podemos instalar um pacote para o Python3x com o comando pip3.&lt;/p&gt;
+&lt;p&gt;O Ubuntu possui vários atalhos para um mesmo interpretador do Python, por exemplo, se digitarmos no Terminal __python__, __python2__ ou __python2.7__ o modo interativo do Python 2x é iniciado. O mesmo acontece com a versão 3x, ou seja, podemos digitar __python__ ou __python34__ que o modo interativo do Python 3x será iniciado.&lt;/p&gt;
+&lt;p&gt;Esse mesmo sistema de link ocorre com a ferramenta pip. Assim, podemos instalar um pacote no Python2x com o comando __pip__ ou __pip2__ e podemos instalar um pacote para o Python3x com o comando __pip3__.&lt;/p&gt;
 &lt;p&gt;A documentação oficial da biblioteca Kivy oferecer 2 formas para instalarmos a biblioteca e suas dependências no Ubuntu. A primeira opção instala a biblioteca nas instalações default do Python. Essa é uma forma de trabalho que você deve evitar, salvo em alguns poucos casos. A segunda forma, é fazer a instalação em um ambiente virtual.&lt;/p&gt;
-&lt;p&gt;Então, é importante que você saiba que nós construiremos 3 ambientes de trabalho. O primeiro e principal será utilizando o Anaconda. O segundo, será utilizando o virtualenv. E o terceiro e menos recomendado, instalaremos a biblioteca Kivy na instalação do Python default.&lt;/p&gt;
-&lt;p&gt;Sugerimos e recomendamos que você construa seu ambiente com o Anaconda, até porque, neste curso optamos por essa ferramenta. Porém, se houver algum problema, construa seu ambiente com a ferramenta virtualenv e virtualenvwrapper. Por fim, em últimos casos, ou então, caso você não possua privilégios, instale a biblioteca na instalação do Python.&lt;/p&gt;
+&lt;p&gt;Neste momento construiremos o nosso ambiente de trabalho utilizando o virtualenv e o virtualenvwrapper. Vale dizer que sugerimos que você utilize a ferramenta Anaconda, porém, neste momento, existe uma incompatibilidade, por essa razão, será ensinado de uma outra maneira. Vamos aprender a  utilizar a ferramenta virtualenv e virtualenvwrapper e como gerenciar os ambientes utilizando a mesma.&lt;/p&gt;
 &lt;p&gt;Neste primeiro momento está ocorrendo uma incompatibilidade com a biblioteca Kivy e o Anaconda. Assim que a incompatibilidade for solucionada, as vídeos aulas ensinando a construção do ambiente com essas ferramentas será gravada e disponibilizada.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="maquinas-virtuais"&gt;
+&lt;h2&gt;MÁQUINAS VIRTUAIS&lt;/h2&gt;
+&lt;p&gt;Quem utiliza o Ubuntu Ubuntu numa máquina virtual criada com o VirtualBox, NÃO PODE MARCAR O ITENS a seguir:&lt;/p&gt;
+&lt;img alt="Logo oficial do projeto Kivy" src="../images/blog/virtualbox-kivy.png" /&gt;
 &lt;/div&gt;
 &lt;div class="section" id="instalacao-sem-ambiente-virtual"&gt;
 &lt;h2&gt;INSTALAÇÃO SEM AMBIENTE VIRTUAL&lt;/h2&gt;
+&lt;div class="caution"&gt;
+&lt;p class="first admonition-title"&gt;Caution!&lt;/p&gt;
+&lt;p class="last"&gt;Não trabalhar desta forma!&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Para instalarmos a biblioteca Kivy na instalação default do Ubuntu, basta adicionarmos o repositório ao nosso sistema, no caso, o PPA (Personal Package Archives), seja para a versão 2x, 3x ou a versão de desenvolvimento.&lt;/p&gt;
 &lt;p&gt;Ainda que essa seja a forma mais fácil para construirmos o ambiente de trabalho, é a menos recomendada. Isso porque, se utilizarmos a versão do Python que o SO utiliza e eventualmente corrompemos ou causamormos algum problema, nosso sistema operacional deixará de funcionar corretamente!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#adicionando o PPA ao sistema (stable builds)&lt;/span&gt;
@@ -266,7 +279,7 @@ $ sudo apt-get install python-kivy-examples
 &lt;p&gt;Como já dito, neste curso utilizaremos o projeto Anaconda para gerenciar os ambientes virtuais e os pacotes. Mesmo assim, me sinto no dever de ensinar a montar o ambiente utilizando a ferramenta virtualenv, até porque, essa ainda é a mais utilizada.&lt;/p&gt;
 &lt;p&gt;Novamente, não existe melhor ou pior ambiente de trabalho, tudo é uma questão de costume e de preferência.&lt;/p&gt;
 &lt;p&gt;O processo de instalação total compreende várias etapas, por isso, é super importante prestar atenção e ir fazendo exatamente como está sendo demonstrado.&lt;/p&gt;
-&lt;p&gt;Por fim, é importante dizer que muitos alunos irão ter problemas dos mais diversos e isso é super natural. A primeira tentativa de resolução é fechar tudo, reiniciar o OS e iniciar o processo de instalação do zero.&lt;/p&gt;
+&lt;p&gt;Por fim, é importante dizer que muitos alunos irão ter problemas dos mais diversos e isso é super natural. A primeira tentativa de resolução é fechar tudo, reiniciar o OS e (re)iniciar o processo de instalação do zero.&lt;/p&gt;
 &lt;p&gt;Mesmo assim, todos os eventuais erros que você vier a ter é interessante compartilhar em nosso grupo, até porque, pode ser a solução para o problema de outro aluno.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="instalando-o-virtualenv-e-instalando-kivy-no-ubuntu"&gt;
@@ -275,7 +288,7 @@ $ sudo apt-get install python-kivy-examples
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;Atualização e instalação de pacotes (Ubuntu)&lt;/li&gt;
 &lt;li&gt;Atualização e instalação pacote (Python)&lt;/li&gt;
-&lt;li&gt;Criação do ambientes virtuais
+&lt;li&gt;Criação dos ambientes virtuais
 a) k27
 a) k34&lt;/li&gt;
 &lt;/ol&gt;
@@ -283,7 +296,7 @@ a) k34&lt;/li&gt;
 &lt;li&gt;PACOTES UBUNTU&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Na página de &lt;a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html"&gt;instalação do projeto Kivy contém a lista de pacotes que precisam ser instalados no Ubuntu&lt;/a&gt; para que a biblioteca Kivy funcione. Esse material foi criado a partir dessa lista.&lt;/p&gt;
-&lt;p&gt;Para facilitar, adicionei numa única lista todos os pacotes necessários, tanto para a versão 2x como 3x do Python. Você pode construir essa lista através da página oficial, porém, preferi lhe entregar tudo pronto pra facilitar nosso trabalho.&lt;/p&gt;
+&lt;p&gt;Para facilitar, adicionei numa única linha todos os pacotes necessários, tanto para a versão 2x como 3x do Python. Você pode construir essa lista através da página oficial, porém, preferi lhe entregar tudo pronto pra facilitar nosso trabalho.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#atualização do sistema&lt;/span&gt;
 sudo apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get upgrade
 
