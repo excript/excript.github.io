@@ -140,6 +140,40 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
+
+    <div class="admonitionblock caution data-line">
+        <table>
+            <tbody>
+            <tr>
+                <td class="icon">
+                    <i class="fa icon-caution" title="Cuidado!"></i>
+                </td>
+                <td class="content">
+                    <div class="paragraph data-line">
+                        <p>Se você estiver executando o sistema operacional numa máquina virtual, pode ocorrer problemas que estão descritos neste tutorial.</p>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="admonitionblock caution data-line">
+        <table>
+            <tbody>
+            <tr>
+                <td class="icon">
+                    <i class="fa icon-caution" title="Cuidado!"></i>
+                </td>
+                <td class="content">
+                    <div class="paragraph data-line">
+                        <p>A instalação da biblioteca Kivy num ambiente virtual criado com a Anaconda não está funcionando. Caso você saiba como resolver, envie-nos, ficaremos super felizes em divulgar que você resolveu a incompatibilidade!</p>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 <div class="section" id="ubuntu">
 <h2>UBUNTU</h2>
 <p>Neste artigo aprenderemos como construir um ambiente de trabalho no Ubuntu, como também, as várias ferramentas disponíveis e as várias maneiras diferentes de configurar o nosso ambiente para o desenvolvimento de aplicações com Python e a biblitoeca Kivy.</p>
@@ -150,18 +184,65 @@ eXcript            </a>
 <p>A documentação oficial da biblioteca Kivy oferecer 2 formas para instalarmos a biblioteca e suas dependências no Ubuntu. A primeira opção instala a biblioteca nas instalações default do Python. Essa é uma forma de trabalho que você deve evitar, salvo em alguns poucos casos. A segunda forma, é fazer a instalação em um ambiente virtual.</p>
 <p>Neste momento construiremos o nosso ambiente de trabalho utilizando o virtualenv e o virtualenvwrapper. Vale dizer que sugerimos que você utilize a ferramenta Anaconda, porém, neste momento, existe uma incompatibilidade, por essa razão, será ensinado de uma outra maneira. Vamos aprender a  utilizar a ferramenta virtualenv e virtualenvwrapper e como gerenciar os ambientes utilizando a mesma.</p>
 <p>Neste primeiro momento está ocorrendo uma incompatibilidade com a biblioteca Kivy e o Anaconda. Assim que a incompatibilidade for solucionada, as vídeos aulas ensinando a construção do ambiente com essas ferramentas será gravada e disponibilizada.</p>
+
+    <div class="admonitionblock caution data-line">
+        <table>
+            <tbody>
+            <tr>
+                <td class="icon">
+                    <i class="fa icon-caution" title="Cuidado!"></i>
+                </td>
+                <td class="content">
+                    <div class="paragraph data-line">
+                        <p>Na instalação da biblioteca Kivy costuma ocorrer problemas com as dependências que devem ser instaladas. Portanto, caso ocorra algum problema, a primeira medida a ser tomada é a desintalação de tudo e a reinstalação.</p>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-<div class="section" id="maquinas-virtuais">
-<h2>MÁQUINAS VIRTUAIS</h2>
-<p>Quem utiliza o Ubuntu Ubuntu numa máquina virtual criada com o VirtualBox, NÃO PODE MARCAR O ITENS a seguir:</p>
+<div class="section" id="maquina-virtual">
+<h2>MÁQUINA VIRTUAL</h2>
+<p>Se você estiver executando o Ubuntu numa máquina virtual criada com o VirtualBox, NÃO PODE MARCAR O ITENS a seguir:</p>
 <img alt="Máquina Virtual criada utilizando o VirtualBox" src="../images/blog/virtualbox-kivy.png" />
+
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>Não foram feitos testes utilizando o VMWare, portanto, caso você tenha alguma informação, ficaríamos felizes se você compartilhastes conosco!</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 <div class="section" id="instalacao-sem-ambiente-virtual">
 <h2>INSTALAÇÃO SEM AMBIENTE VIRTUAL</h2>
-<div class="caution">
-<p class="first admonition-title">Caution!</p>
-<p class="last">Não trabalhar desta forma!</p>
-</div>
+
+    <div class="admonitionblock important data-line-21">
+        <table>
+            <tbody>
+                <tr>
+                <td class="icon">
+                    <i class="fa icon-important" title="Importante!"></i>
+                </td>
+                <td class="content">
+                    <div class="paragraph data-line-22">
+                        <p>Não trabalhar desta forma!</p>
+                    </div>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 <p>Para instalarmos a biblioteca Kivy na instalação default do Ubuntu, basta adicionarmos o repositório ao nosso sistema, no caso, o PPA (Personal Package Archives), seja para a versão 2x, 3x ou a versão de desenvolvimento.</p>
 <p>Ainda que essa seja a forma mais fácil para construirmos o ambiente de trabalho, é a menos recomendada. Isso porque, se utilizarmos a versão do Python que o SO utiliza e eventualmente corrompemos ou causamormos algum problema, nosso sistema operacional deixará de funcionar corretamente!</p>
 <div class="highlight"><pre><span></span><span class="c1">#adicionando o PPA ao sistema (stable builds)</span>
