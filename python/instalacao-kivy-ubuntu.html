@@ -27,7 +27,7 @@
         <meta property="og:description" content="Nesta aula aprenderemos a instalar a biblioteca Kivy no sistema operacional Ubuntu."/>
 
         <meta property="article:published_time" content="22-11-2016" />
-            <meta property="article:section" content="curso de python" />
+            <meta property="article:section" content="blog" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="kivy" />
             <meta property="article:tag" content="blog" />
@@ -51,8 +51,8 @@
               title="eXcript RSS Feed"/>
 
 
-        <link href="http://excript.com/feeds/curso-de-python.atom.xml" type="application/atom+xml" rel="alternate"
-              title="eXcript curso de python ATOM Feed"/>
+        <link href="http://excript.com/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate"
+              title="eXcript blog ATOM Feed"/>
 </head>
 <body>
 
@@ -204,8 +204,8 @@ eXcript            </a>
 <p>Neste artigo aprenderemos como construir um ambiente de trabalho no Ubuntu, como também, as várias ferramentas disponíveis e as várias maneiras diferentes de configurar o nosso ambiente para o desenvolvimento de aplicações com Python e a biblitoeca Kivy.</p>
 <p>O sistema operacional Ubuntu recebeu atenção especial na documentação do projeto Kivy, por essa razão, ensinaremos em detalhes a construção de ambientes de trabalho no mesmo.</p>
 <p>De fábrica o Ubuntu 16.04 e as versões anteriores possuem 2 versões do Python, a 2x e a 3x. Por padrão, o Ubuntu define o Python 2x. Então, para executarmos um Script no interpretador 3x temos que definir isso explicitamente.</p>
-<p>O Ubuntu possui vários atalhos para um mesmo interpretador do Python, por exemplo, se digitarmos no Terminal __python__, __python2__ ou __python2.7__ o modo interativo do Python 2x é iniciado. O mesmo acontece com a versão 3x, ou seja, podemos digitar __python__ ou __python34__ que o modo interativo do Python 3x será iniciado.</p>
-<p>Esse mesmo sistema de link ocorre com a ferramenta pip. Assim, podemos instalar um pacote no Python2x com o comando __pip__ ou __pip2__ e podemos instalar um pacote para o Python3x com o comando __pip3__.</p>
+<p>O Ubuntu possui vários atalhos para um mesmo interpretador do Python, por exemplo, se digitarmos no Terminal <tt class="docutils literal">python</tt>, <tt class="docutils literal">python2</tt> ou <tt class="docutils literal">python2.7</tt> o modo interativo do Python 2x é iniciado. O mesmo acontece com a versão 3x, ou seja, podemos digitar <tt class="docutils literal">python</tt> ou <tt class="docutils literal">python3.4</tt> que o modo interativo do Python 3x será iniciado.</p>
+<p>Esse mesmo sistema de link ocorre com a ferramenta pip. Assim, podemos instalar um pacote no Python2x com o comando <tt class="docutils literal">pip</tt> ou <tt class="docutils literal">pip2</tt> e podemos instalar um pacote para o Python3x com o comando <tt class="docutils literal">pip3</tt> .</p>
 <p>A documentação oficial da biblioteca Kivy oferecer 2 formas para instalarmos a biblioteca e suas dependências no Ubuntu. A primeira opção instala a biblioteca nas instalações default do Python. Essa é uma forma de trabalho que você deve evitar, salvo em alguns poucos casos. A segunda forma, é fazer a instalação em um ambiente virtual.</p>
 <p>Neste momento construiremos o nosso ambiente de trabalho utilizando o virtualenv e o virtualenvwrapper. Vale dizer que sugerimos que você utilize a ferramenta Anaconda, porém, neste momento, existe uma incompatibilidade, por essa razão, será ensinado de uma outra maneira. Vamos aprender a  utilizar a ferramenta virtualenv e virtualenvwrapper e como gerenciar os ambientes utilizando a mesma.</p>
 <p>Neste primeiro momento está ocorrendo uma incompatibilidade com a biblioteca Kivy e o Anaconda. Assim que a incompatibilidade for solucionada, as vídeos aulas ensinando a construção do ambiente com essas ferramentas será gravada e disponibilizada.</p>
@@ -332,11 +332,11 @@ $ sudo apt-get install python-kivy-examples
 <li>Atualização e instalação pacote (Python)</li>
 <li>Criação dos ambientes virtuais
 a) k27
-a) k34</li>
+b) k34</li>
 </ol>
-<ol class="arabic simple">
-<li>PACOTES UBUNTU</li>
-</ol>
+</div>
+<div class="section" id="pacotes-ubuntu">
+<h2>1) PACOTES UBUNTU</h2>
 <p>Na página de <a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html">instalação do projeto Kivy contém a lista de pacotes que precisam ser instalados no Ubuntu</a> para que a biblioteca Kivy funcione. Esse material foi criado a partir dessa lista.</p>
 <p>Para facilitar, adicionei numa única linha todos os pacotes necessários, tanto para a versão 2x como 3x do Python. Você pode construir essa lista através da página oficial, porém, preferi lhe entregar tudo pronto pra facilitar nosso trabalho.</p>
 <div class="highlight"><pre><span></span><span class="c1">#atualização do sistema</span>
