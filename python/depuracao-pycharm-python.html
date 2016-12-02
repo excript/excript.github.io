@@ -382,6 +382,7 @@ eXcript            </a>
 <h2>DEPURAÇÃO</h2>
 <img alt="IDE PyCharm em modo de depuração com um breakpoint na primeira linha" src="../images/curso-de-python/depuracao-pycharm.png" />
 <p>Depuração é uma técnica de programação em que é possível manipular a execução de cada linha e verificar os valores das variáveis (instâncias).</p>
+<p>Segundo o dicionário Aurélio, depurar significa <tt class="docutils literal">Procurar, detectar e corrigir erros em programa</tt>.</p>
 <p>A depuração é uma ferramenta presente nas IDE modernas e nos proporciona uma forma de executar nossa aplicação passo-a-passo e ir verificando o valor das variáveis e o que nosso programa vai executando.</p>
 <p>É correto dizer que depurar um código significa a execução de cada linha vagarosamente, onde o programador é quem diz quando que determinada instrução deve ser executada. E também, a cada linha executada, é possível verificar o valor das variáveis que estão no escopo local e global</p>
 <p>Algumas IDEs permitem a alteração do valor das variáveis e a executação de código paralelamente. Desta forma, conseguimos simular situações onde talvez, não fosse possível através do nosso programa.</p>
@@ -389,11 +390,48 @@ eXcript            </a>
 <p>Podemos dizer que é possível depurar qualquer código de qualquer linguagem, até porque, esse é um recurso atualmente considerado elementar para a correta construção de software. Algumas vezes a depuração é um recurso encontrado em determinada IDE, outras vezes, a capacidade de depuração acaba sendo uma ferramenta disponibilizada pela linguagem, isto é, a Máquina Virtual ou o Compilador da linguagem é quem disponibilizam esses recursos e capacidades.</p>
 <p>Neste Curso de Python, estamos utilizando a IDE <a class="reference external" href="https://www.jetbrains.com/pycharm/download/">PyCharm</a> e a mesma oferece-nos grande capacidade para depuração e análise interna em tempo de execução.</p>
 </div>
+<div class="section" id="performance">
+<h2>PERFORMANCE</h2>
+<p>A execução em modo de depuração só deve ser executada quando necessário, até porque, a perfomance é muito inferior ao que temos com a execução normal. Por isso, só execute um código em forma de depuaração quando houver um razão para isso.</p>
+</div>
+<div class="section" id="o-que-e-cursor-de-execucao">
+<h2>O QUE É <tt class="docutils literal">CURSOR DE EXECUÇÃO</tt>?</h2>
+<p>Cursor de execução é o termo que utilizamos para nos referirmos a linha de código em que estamos, ou melhor, na linha onde estamos.</p>
+<p>Na imagem a seguir podemos ver a execução de um simples código. Observe na linha 9, em azul, o cursor de execução e na linha 11 podemos ver o uso de um breakpoint. É importante lembrar que o sistema de cor pode ser personalizado, portanto, não existe um padrão e não podemos nos referir ao cursor ou ao breakpoint como sendo uma linha de uma determinada cor.</p>
+<img alt="IDE PyCharm com breakpoint e cursor de execução" src="../images/curso-de-python/pycharm-cursor-breakpoint.png" />
+</div>
 <div class="section" id="o-que-e-breakpoint">
 <h2>O QUE É <tt class="docutils literal">breakpoint</tt>?</h2>
 <p>A palavra <tt class="docutils literal">breakpoint</tt>, significa, na depuração de programas, o número da linha em que a execução do código será interrompido para o início da depuração.</p>
 <p>Esse é um recurso permite interrompermos a execução do nosso programa num determinado ponto. Assim, podemos marcar em qual local do programa desejamos iniciar a depuração e quando o cursor de execução chegar na linha demarcada, a execução será interrompida e a IDE trará o código em que ocorreu a interrupção.</p>
 <p>Na imagem acima, é possível ver um breakpoint na primeira linha da IDE PyCharm. Normalmente, os <tt class="docutils literal">breakpoints</tt> são representados por uma bola vermelha no canto esquerdo [margem] dos editores de código.</p>
+</div>
+<div class="section" id="modo-de-depuracao">
+<h2>MODO DE DEPURAÇÃO</h2>
+<p>Ao executarmos um código em modo de depuração, teremos uma tela semelhante a que temos na imagem a seguir. Como podemos ver, os menus estão habilitados, até porque, estamos executando em modo de depuração.</p>
+<img alt="IDE PyCharm em modo de depuração com um breakpoint e menu com as opções" src="../images/curso-de-python/pycharm-in-debug.png" />
+</div>
+<div class="section" id="opcoes-de-execucao">
+<h2>OPÇÕES DE EXECUÇÃO</h2>
+<p>Normalmente desejaremos somente executar a instrução em que o cursor está posicionado, outras vezes, desejaremos depurar a função que será executada e noutras vezes, desejaremos finalizar a depuração da função e voltar ao fluxo anterior.</p>
+<p>Pra todas essas situações há teclas de atalho que facilitam o trabalho e a verificação dos valores.</p>
+<ul class="simple">
+<li>Shift+F10 (Run): executa o script</li>
+<li>Shift+F9 (Debug): executa em modo de depuração (debug)</li>
+<li>Ctrl+F5 (Rerun): executa da mesma forma que a anterior</li>
+<li>Shift+Alt+F10 (Choose configuration and ru): exibe o menu que contém as configurações de execução e roda o script</li>
+<li>Shift+Alt+F9 (Choose configuration and debug): exibe o menu que contém as configurações de execução e roda o script em modo de depuração</li>
+<li>F8 (Step Over): executa a linha onde o cursor está</li>
+<li>F7 (Step Into): entra na função e posiciona o cursor na primeira linha</li>
+<li>Shift+F8(Step Out): termina a depuração da função e o cursor retorna ao local anterior</li>
+<li>Shift+Alt+F8 (Force Step Over): o cursor não entra no código da função mesmo que haja um breakpoint</li>
+</ul>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.jetbrains.com/help/pycharm/2016.1/running-and-debugging.html">Documentação oficial do PyCharm</a></li>
+</ul>
 </div>
 
 				</div>
