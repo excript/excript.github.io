@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/excriptfeeds/main.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-11-27T21:00:00-02:00</updated><entry><title>Aplicações Comerciais com Python</title><link href="http://excript.com/blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html" rel="alternate"></link><published>2016-11-27T21:00:00-02:00</published><updated>2016-11-27T21:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-27:blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/excriptfeeds/main.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-11-28T07:00:00-02:00</updated><entry><title>INTRODUÇÃO ÀS IDE'S</title><link href="http://excript.com/blog/introducao-ide.html" rel="alternate"></link><published>2016-11-28T07:00:00-02:00</published><updated>2016-11-28T07:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-28:blog/introducao-ide.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos como funcionam as IDE e como o PyCharm e o Python estão interligados.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;As IDE's (Integrated Development Environment) são programas de computador desenhados para auxiliar os programadores na construção de softwares. Atualmente há centenas de IDE's no mercado, tanto gratuitas como também pagas.&lt;/p&gt;
+&lt;p&gt;É comum e recorrente os iniciantes confundirem a linguagem de programação com a IDE de desenvolvimento, por exemplo, é comum encontrar em fóruns pessoas se referindo a IDE, enquanto desejam falar da linguagem.&lt;/p&gt;
+&lt;p&gt;Um exemplo atual e notável é o desenvolvimento de aplicações nativas com a IDE AndroidStudio e a linguagem Java. Temos que a linguagem para a construção de aplicações nativas é o Java, enquanto que a IDE, pode ser qualquer uma, inclusive o bloco de notas.&lt;/p&gt;
+&lt;p&gt;O mesmo ocorre com o Python, podemos construir aplicações com qualquer editor de texto em qualquer sistema operacional, até porque, indiferente do local, estaremos sempre utilizando a linguagem Python.&lt;/p&gt;
+&lt;img alt="Nesta imagem temos 4 editores de texto e 2 IDEs. Da esquerda para direita temos: PyCharm, Bloco de Notas, Notepad++ e Atom." src="../images/blog/editores-ide.png" /&gt;
+&lt;p&gt;Na imagem acima estamos escrevendo um mesmo programa em 4 editores de texto diferentes. Neste momento, não há diferença entre os vários editores, até porque, todos irão salvar o que é digitado no arquivo &lt;tt class="docutils literal"&gt;hello.py&lt;/tt&gt;. Então, a diferença, é que no primeiro editor, que no caso, é uma IDE, o PyCharm, nós podemos configurar uma versão do interpretador do Python e executar o nosso código facilmente.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="editores-de-texto"&gt;
+&lt;h2&gt;EDITORES DE TEXTO&lt;/h2&gt;
+&lt;p&gt;Toda IDE é antes de mais nada um editor de texto. É importante não confundir Professadores de Texto com Editores de Texto! O Microsoft Word e o BrOffice são processadores de texto, ou seja, podemos criar textos e definir opções de como este texto será exibido, como tamanho, cor e fonte.&lt;/p&gt;
+&lt;p&gt;Editores de Texto não permitem alterar a formatação do texto, ou seja, os mesmos podem até colorir palavras, porém, quando salvarmos os documentos, teremo um arquivo que contém somente texto.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ambiente-de-desenvolvimento-integrado"&gt;
+&lt;h2&gt;AMBIENTE DE DESENVOLVIMENTO INTEGRADO&lt;/h2&gt;
+&lt;p&gt;A principal funcionalidade que toda IDE possui é a capacidade de escrevermos e executarmos código-fonte através de itens de Menu ou teclas de atalho. Portanto, todo editor de texto que permita executar código é um editor de texto que possui recursos adicionais.&lt;/p&gt;
+&lt;p&gt;Atualmente, para um editor de texto ser chamado de IDE são necessários muitos outros recursos, como por exemplo, a capacidade e facilidade para depurarmos código.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pycharm-e-o-python"&gt;
+&lt;h2&gt;PYCHARM E O PYTHON&lt;/h2&gt;
+&lt;p&gt;O PyCharm permite que a gente defina vários interpretadores do Python. Pra isso, temos de ir nas configurações da IDE e em seguida, clicar na opção: &lt;cite&gt;Project -&amp;gt; Project Interpreter&lt;/cite&gt;. Nesta tela será exibido todos as versões dos interpretadores Python que o PyCharm conhece.&lt;/p&gt;
+&lt;img alt="Tela Settings do PyCharm" src="../images/blog/pycharm-settings-project-interpreter.png" /&gt;
+&lt;p&gt;Quando mandarmos executar um código Python, o PyCharm irá utilizar o interpretador que nós selecionamos na lista de interpretadores e enviará o nome do arquivo para o interpretador.&lt;/p&gt;
+&lt;p&gt;Observe que o processo entre executarmos o código pelo Terminal e pelo PyCharm, no final das contas é o mesmo, até porque, de ambas formas, estaremos enviando o nome do arquivo para um interpretador Python!&lt;/p&gt;
+&lt;p&gt;Na imagem a seguir podemos ver o arquivo de nome &lt;cite&gt;hello.py&lt;/cite&gt; sendo enviado para o interpretador Python utilizando o cmd do Microsoft Windows.&lt;/p&gt;
+&lt;img alt="Tela Settings do PyCharm" src="../images/blog/cmd-win-python.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="uma-ide-varios-interpretadores"&gt;
+&lt;h2&gt;UMA IDE VÁRIOS INTERPRETADORES&lt;/h2&gt;
+&lt;p&gt;Atualmente, o desenvolvimento de aplicações geralmente obriga-nos a utilizar várias versões do interpretador Python. Por essa razão, as IDEs precisaram se adequar a essa realidade.&lt;/p&gt;
+&lt;p&gt;O PyCharm permite-nos definir vários interpretadores num mesmo projeto, como a imagem acima, onde foi exibido a janela Settings do PyCharm demonstrou. Porém, também é possível definir que um mesmo código possa facilmente ser executado em vários interpretadores e eis que começa a confusão!&lt;/p&gt;
+&lt;p&gt;Toda as vezes que executarmos um código Python o PyCharm irá definir as configurações de como ocorrerá a execução. Observe que estamos falando da configuração de como determinado arquivo será executado!&lt;/p&gt;
+&lt;p&gt;Na imagem a seguir temos a tela Run/Debug Configuration e nesta podemos ver, na lista ao lado esquerdo, que o arquivo hello.py aparece. Isso significa que já mandamos executar este código e portanto, o PyCharm criou, automaticamente, as configurações de como a execução deveria ocorrer.&lt;/p&gt;
+&lt;img alt="Tela Run/Debug Configuration do PyCharm" src="../images/blog/pycharm-run-debug-configuration.png" /&gt;
+&lt;p&gt;Essa configuração é definida automaticamente pela IDE, porém, podemos alterar a forma como um arquivo será executado, basta somente definirmos isso na tela Run/Debug Configuration.&lt;/p&gt;
+&lt;p&gt;Para acessarmos essas configurações, temos que utilizar a barra de ferramentas principal do PyCharm, conforme podemos ver na imagem a seguir.&lt;/p&gt;
+&lt;img alt="Como abrir a tela que permite definir as configurações de execução" src="../images/blog/pycharm-toobar-run-debug-configuration.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusao"&gt;
+&lt;h2&gt;CONCLUSÃO&lt;/h2&gt;
+&lt;p&gt;O PyCharm permite a gente definir vários interpretadores com diferentes configurações de execução, e podemos fazer isso na tela Run/Debug Configuration.&lt;/p&gt;
+&lt;p&gt;Essa é a grande diferença entre as IDEs modernas e as IDEs antigas, a capacidade de trabalhar com vários interpretadores de uma mesma linguagem porém, com versões diferentes.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="curso"></category><category term="ide"></category><category term="pycharm"></category><category term="jetbrains"></category><category term="python"></category><category term="blog"></category></entry><entry><title>Aplicações Comerciais com Python</title><link href="http://excript.com/blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html" rel="alternate"></link><published>2016-11-27T21:00:00-02:00</published><updated>2016-11-27T21:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-27:blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -904,6 +962,7 @@ workon k34&lt;/blockquote&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www3.ifrn.edu.br/~jurandy/fdp/doc/aprenda-python/capitulo_07.html"&gt;Aprenda Computação com Python (pt)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.tutorialspoint.com/python/python_strings.htm"&gt;Tutorial Point (en)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://developers.google.com/edu/python/strings"&gt;Google Education - Python String (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://codingair.logdown.com/posts/179395-understand-common-sequence-data-types-in-python-string-tuple-and-list"&gt;Understand Common Sequence Data Types in Python – String, Tuple, and List&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category><category term="string"></category><category term="char"></category><category term="caractere"></category><category term="alfanumérico"></category><category term="concatenação"></category><category term="interpolação"></category><category term="blog"></category></entry><entry><title>Ordenamento de Listas em Python</title><link href="http://excript.com/python/ordenamento-lista-python.html" rel="alternate"></link><published>2016-08-30T10:26:00-03:00</published><updated>2016-08-30T10:26:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-08-30:python/ordenamento-lista-python.html</id><summary type="html">
@@ -4819,6 +4878,19 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/tuplas-python.html"&gt;Aula: Tuplas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/stdtypes.html?highlight=dict#dict"&gt;Documentação Oficial dos Dicionários (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://codingair.logdown.com/posts/179395-understand-common-sequence-data-types-in-python-string-tuple-and-list"&gt;Understand Common Sequence Data Types in Python – String, Tuple, and List (en)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category><category term="dicionário"></category></entry><entry><title>Lista de Parâmetros em PHP</title><link href="http://excript.com/php/lista-parametro-php.html" rel="alternate"></link><published>2016-05-28T10:00:00-03:00</published><updated>2016-05-28T10:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-28:php/lista-parametro-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -5137,7 +5209,7 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;Aula 26: Blocos de instrução&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;Aula: Blocos de instrução&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -13053,6 +13125,18 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;each&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/iteracao-python.html"&gt;Aula: Iteração&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/string.html"&gt;Documentação Oficial das Strings (en)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category></entry><entry><title>Introdução às Estruturas</title><link href="http://excript.com/cpp/introducao-as-estruturas-cpp.html" rel="alternate"></link><published>2015-07-23T17:14:00-03:00</published><updated>2015-07-23T17:14:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-07-23:cpp/introducao-as-estruturas-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -13814,9 +13898,18 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, declaramos inicialmente uma Tupla com uso da notação explicita, isto é, passamos um String como parâmetro na inicialização da estrutura &lt;tt class="docutils literal"&gt;tuple&lt;/tt&gt;. Em seguida, implementamos 2 códigos que possuem o mesmo resultado, utilizando assim, as 2 notação de &lt;tt class="docutils literal"&gt;tuple&lt;/tt&gt; implicitadas da linguagem Python.&lt;/p&gt;
-&lt;p&gt;Link interessante
-&lt;a class="reference external" href="http://codingair.logdown.com/posts/179395-understand-common-sequence-data-types-in-python-string-tuple-and-list"&gt;http://codingair.logdown.com/posts/179395-understand-common-sequence-data-types-in-python-string-tuple-and-list&lt;/a&gt;
-&lt;a class="reference external" href="http://codingair.logdown.com/"&gt;http://codingair.logdown.com/&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/tuplas-python.html"&gt;Aula: Tuplas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://codingair.logdown.com/posts/179395-understand-common-sequence-data-types-in-python-string-tuple-and-list"&gt;Understand Common Sequence Data Types in Python – String, Tuple, and List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </summary><category term="curso"></category><category term="python"></category></entry><entry><title>Operadores Aritméticos do C#</title><link href="http://excript.com/csharp/operador-aritmetico-csharp.html" rel="alternate"></link><published>2015-05-22T01:40:00-03:00</published><updated>2015-05-22T01:40:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-22:csharp/operador-aritmetico-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
