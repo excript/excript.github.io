@@ -2103,6 +2103,41 @@ DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;
 &lt;p&gt;Nós podemos ler o laço de repetição definido acima &lt;code&gt;for item in [3,4,5,6,7]:&lt;/code&gt; da seguinte maneira. Para cada elemento contido na lista &lt;code&gt;[3,4,5,6,7]&lt;/code&gt; execute o bloco de código a seguir e a cada execução, atribua à variável &lt;tt class="docutils literal"&gt;item&lt;/tt&gt; &lt;code&gt;for item in&lt;/code&gt; um item da lista.&lt;/p&gt;
 &lt;p&gt;Ou entao, podemos ler como estamos estudando... Acima, definimos a variável &lt;code&gt;item&lt;/code&gt; e uma lista com 5 elementos &lt;code&gt;[3,4,5,6,7]&lt;/code&gt;. A cada ciclo, o elemento seguinte é atribuido à variável &lt;code&gt;item&lt;/code&gt; e ao término, teremos executado um ciclo individual para cada elemento contido na lista.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class="section" id="a-instrucao-else"&gt;
+&lt;h2&gt;A INSTRUÇÃO &lt;code&gt;else&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A instrução &lt;code&gt;else&lt;/code&gt; pode ser utilizado com a instrução &lt;code&gt;for&lt;/code&gt; da mesma forma em que estudamos com a instrução &lt;code&gt;while&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Em vista de que á estrutura &lt;code&gt;for&lt;/code&gt; junto com a instrução &lt;code&gt;else&lt;/code&gt; possui funcionamento igual ao laço de repetição &lt;code&gt;while&lt;/code&gt;, não há necessidade de explicarmos novamento. Veja a aula sobre a estrutura &lt;code&gt;while&lt;/code&gt; para maiores informações.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="c1"&gt;#utilizando a instrução ELSE&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# break&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;else&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Acima, temos que a estrutura &lt;code&gt;for&lt;/code&gt; executou todos os ciclos definidos e no final, executou o bloco da instrução &lt;code&gt;else&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="c1"&gt;#Implementação sem o uso da instrução ELSE&lt;/span&gt;
+&lt;span class="n"&gt;break_executado&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;break_executado&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;break_executado&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;else&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Acima, temos que a estrutura &lt;code&gt;for&lt;/code&gt; o primeiro ciclo e neste a instrução &lt;code&gt;break&lt;/code&gt; foi invocada, portanto, o laço foi finalizado e o bloco &lt;code&gt;else&lt;/code&gt; não foi executado.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-1-imprimindo-todas-as-letras-de-uma-string"&gt;
 &lt;h2&gt;EXEMPLO 1: IMPRIMINDO TODAS AS LETRAS DE UMA STRING&lt;/h2&gt;
 &lt;p&gt;Uma String é um conjunto de caracteres e assim, podemos iterar qualquer texto, por exemplo.&lt;/p&gt;

@@ -402,6 +402,41 @@ eXcript            </a>
 <p>Nós podemos ler o laço de repetição definido acima <code>for item in [3,4,5,6,7]:</code> da seguinte maneira. Para cada elemento contido na lista <code>[3,4,5,6,7]</code> execute o bloco de código a seguir e a cada execução, atribua à variável <tt class="docutils literal">item</tt> <code>for item in</code> um item da lista.</p>
 <p>Ou entao, podemos ler como estamos estudando... Acima, definimos a variável <code>item</code> e uma lista com 5 elementos <code>[3,4,5,6,7]</code>. A cada ciclo, o elemento seguinte é atribuido à variável <code>item</code> e ao término, teremos executado um ciclo individual para cada elemento contido na lista.</p>
 </div>
+<div class="section" id="a-instrucao-else">
+<h2>A INSTRUÇÃO <code>else</code></h2>
+<p>A instrução <code>else</code> pode ser utilizado com a instrução <code>for</code> da mesma forma em que estudamos com a instrução <code>while</code>.</p>
+<p>Em vista de que á estrutura <code>for</code> junto com a instrução <code>else</code> possui funcionamento igual ao laço de repetição <code>while</code>, não há necessidade de explicarmos novamento. Veja a aula sobre a estrutura <code>while</code> para maiores informações.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="c1">#utilizando a instrução ELSE</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="c1"># break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;else&quot;</span><span class="p">)</span>
+
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="k">else</span>
+</pre></div>
+<p>Acima, temos que a estrutura <code>for</code> executou todos os ciclos definidos e no final, executou o bloco da instrução <code>else</code>.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="c1">#Implementação sem o uso da instrução ELSE</span>
+<span class="n">break_executado</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+        <span class="n">break_executado</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">break</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">break_executado</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;else&quot;</span><span class="p">)</span>
+
+<span class="mi">1</span>
+</pre></div>
+<p>Acima, temos que a estrutura <code>for</code> o primeiro ciclo e neste a instrução <code>break</code> foi invocada, portanto, o laço foi finalizado e o bloco <code>else</code> não foi executado.</p>
+</div>
 <div class="section" id="exemplo-1-imprimindo-todas-as-letras-de-uma-string">
 <h2>EXEMPLO 1: IMPRIMINDO TODAS AS LETRAS DE UMA STRING</h2>
 <p>Uma String é um conjunto de caracteres e assim, podemos iterar qualquer texto, por exemplo.</p>
