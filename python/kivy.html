@@ -26,7 +26,7 @@
 
         <meta property="og:description" content="Neste artigo será apresentado o projeto que permite o desenvolvimento multiplataforma com Python utilizando o framework Kivy."/>
 
-        <meta property="article:published_time" content="02-12-2016" />
+        <meta property="article:published_time" content="20-12-2016" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="kivy" />
@@ -158,21 +158,47 @@ eXcript            </a>
 </div>
 <div class="section" id="opengl-2-0">
 <h2>OpenGL 2.0</h2>
-<p><tt class="docutils literal">OpenGL</tt> é uma API e uma linguagem de programação multiplataforma e o termo OpenGL vem de <cite>Open Graphics Library`</cite>, numa tradução livre seria  <tt class="docutils literal">Biblioteca Gráfica Aberta</tt>. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D que podem ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplatamente utilizada em jogos e em tudo que esteja relacionado com gráficos.</p>
-<p>O objetivo é tornar a comunicação transparente aos desenvolvedores, disponibilizando uma API que faz o &quot;meio de campo&quot; entre o programador que utiliza as funções da API e os mais variados harwares de vídeo. Dessa forma, não precisamos nos preocupar se a placa de vídeo é Intel, Nvidia ou Xingling, pois a biblioteca OpenGL torna o desenvolvimento transparente.</p>
-<p>O núcleo do OpenGL é conhecido como &quot;rendering pipeline&quot; ou dutos de renderização. Podemos utilizar a biblioteca tanto com o desenhos vetoriais, definidos por vértices, como com mapas de bits, desenhos construídos pixel-a-pixel.</p>
+<p><tt class="docutils literal">OpenGL</tt> é uma API e uma linguagem de programação multiplataforma e OpenGL é um acrônimo de <cite>Open Graphics Library`</cite>, numa tradução livre seria <tt class="docutils literal">Biblioteca Gráfica Aberta</tt>. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D que podem ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplatamente utilizada em jogos e em tudo que esteja relacionado com gráficos.</p>
+<blockquote>
+OpenGL é um conjunto de padrões de processamento de alto desempenho de gráficos 2D e 3D na unidade de processamento (GPU) para vários aplicativos. O OpenGL permite a renderização rápida de visualizações (modo Rascunho rápido).
+<a class="reference external" href="https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html">https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html</a></blockquote>
+<p>Essa biblioteca tem como objetivo definir um padrão entre os desenvolvedores de hardware e os desenvolvedores de software, de forma a permitir a evolução contínua do hardware sem entrar em conflito com o software. Dessa forma, a API OpenGL faz o &quot;meio de campo&quot; entre o programador que utiliza as funções da API e os mais variados harwares de vídeo. Então, nós programadores de linguagens de alto nível (alto nível pois estamos longe do hardware) não precisamos nos preocupar se a placa de vídeo é Intel, Nvidia ou Xingling, pois a compatibilidade é trabalho da equipe que desenvolve e implementa a API.</p>
+<p>O núcleo do OpenGL é conhecido como &quot;rendering pipeline&quot; ou dutos de renderização. Podemos utilizar a biblioteca tanto para desenhos vetoriais, definidos por vértices, ou mapas de bits, desenhos construídos pixel-a-pixel.</p>
 <p>Os desenvolvedores de hardware conseguem criar extensões, inovando e diferenciando seus produtos, sem a necessidade de alterar a biblioteca e as atualizações, raramente obrigam os usuários da API OpenGL a alterarem os seus códigos.</p>
 <p>As extensões fornecem aos desenvolvedores de aplicativos os novos recursos de renderização e permite ir além das características especificadas na norma oficial do OpenGL (o padrão). Extensões da OpenGL mantém a API atual com as últimas inovações em hardware gráfico e algoritmos de processamento.</p>
-<p>Por fim, a biblioteca OpenGL é vastamente utilizada, inclusive, podemos ver na foto a seguir, um sistema utilizado em automóveis brasileiros de nome LGE sendo utilizado como biblioteca gráfica.</p>
+<p>Por fim, a biblioteca OpenGL é vastamente utilizada, seja por navegadores, seja por sistemas operacionais ou Engines de Games. Na foto abaixo, temos um sistema utilizado em automóveis brasileiros de nome LGE sendo utilizado como biblioteca gráfica.</p>
 <img alt="Sistema operacional LGE como item de fábrica em carros da Renault brasileiros. O sistema é comumente chamado de Media Nav." src="../images/blog/sistema-operacional-lge.jpg" />
-<p>Tirei a foto no carro do meu amigo Daniel Mello quando fomos buscar uma pizza. O sistema operacional a princípio parece ser proprietário e é desenvolvido pela LG, porém, o código fonte está disponível segundo a documentação oficial, porém, não encontrei onde. No Brasil o sistema vem sendo chamado de Media Nav.</p>
+<p>Tirei a foto no carro do meu amigo Daniel Mello quando esperavamos a pizza ficar pronta. O sistema operacional a princípio parece ser proprietário e é desenvolvido pela LG, porém, o código fonte está disponível segundo a documentação oficial, porém, não encontrei onde. No Brasil o sistema vem sendo chamado de Media Nav.</p>
 </div>
-<div class="section" id="kivy-e-opengl">
-<h2>Kivy e OpenGL</h2>
-<p>O framework Kivy está construido <a class="reference external" href="https://www.opengl.org/">sob a API OpenGL 2.0</a> e possui muito do seu código-fonte escrito com a linguagem OpenGL que possui sintaxe identica a linguagem C. Os módulos de integração com a API OpenGL podem ser considerados o núcleo da biblioteca Kivy e também, o código mais complexo a ser estudado.</p>
-<p>O Kivy não utiliza funções gráficas do sistema operacinal hospedeiro, logo,  os componentes são desenhados do zero e portanto, aplicações Kivy, terão o mesmo visual em todas as plataformas. Essa é a parte boa. A parte ruim é que se desejarmos que o nosso App utilize o leiaute do sistema operacional hospeiro, teremos que desenvolver por conta própria.</p>
+<div class="section" id="opengl-opengl-es-2-2-e-desktop-gl">
+<h2>OpenGL, OpenGL ES 2.2 e Desktop GL</h2>
+<p>O framework Kivy está construido <a class="reference external" href="https://www.opengl.org/">sob a API OpenGL ES 2.0</a> e possui muito do seu código-fonte escrito com a linguagem OpenGL que possui sintaxe identica a linguagem C. Os módulos de integração com a API OpenGL podem ser considerados o núcleo da biblioteca Kivy e também, o código mais complexo a ser estudado.</p>
+<blockquote>
+OpenGL® ES is a royalty-free, cross-platform API for full-function 2D and 3D graphics on embedded systems - including consoles, phones, appliances and vehicles. It consists of well-defined subsets of desktop OpenGL, creating a flexible and powerful low-level interface between software and graphics acceleration. OpenGL ES includes profiles for floating-point and fixed-point systems and the EGL™ specification for portably binding to native windowing systems. OpenGL ES 1.X is for fixed function hardware and offers acceleration, image quality and performance. OpenGL ES 2.X enables full programmable 3D graphics. OpenGL SC is tuned for the safety critical market.
+<a class="reference external" href="https://www.khronos.org/opengles/">https://www.khronos.org/opengles/</a></blockquote>
+<p>Atualmente há vários subsets (versões derivadas) da biblioteca OpenGL. Por padrão (convenção), os principais Sistemas Operacionais voltados a dispositivos móveis utlizam a biblioteca OpenGL ES 2.0. Portanto, é comum falarmos que o projeto Kivy está contruído sob a arquitetura OpenGL, porém, a biblioteca utiliza de fato uma versão derivada de OpenGL ES 2.0 e que é um acrônimo de <tt class="docutils literal">OpenGL for Embedded Systems</tt> que numa tradução livre seria:</p>
+<p>A seguir, temos os acrônimos seguido de seus nomes completos:</p>
+<pre class="literal-block">
+- OpenGL: Open Graphic Library
+- OpenGL ES: OpenGL for Embedded Systems
+- Desktop GL: Desktop Graphic Library
+</pre>
+<p>É comum nos referirmos ao OpenGL ES 2.0 como GLES2 e ao Desktop GL como OpenGL 2.0 minimum, então temos que:</p>
+<pre class="literal-block">
+- GLES2 = OpenGL ES 2.0
+- Desktop GL = OpenGL 2.0 minimum)
+</pre>
+<p>GLES2 é um subset de OpenGL 2.0, com alguns poucos simbolos diferentes. O Kivy <em>utiliza somente instrução instrução GLES2</em> que é compatível com GL.</p>
+<blockquote>
+<ul class="simple">
+<li>On Desktop (Win/Linux/OSX), a compilação é feita com <tt class="docutils literal">Desktop GL</tt> (salvo se os cabeçalhos do <tt class="docutils literal">GLES2</tt> forem encontrados). Utilizamos <tt class="docutils literal">PyGame</tt> e <tt class="docutils literal">SDL</tt> somente para inicializar uma janela em sistemas Desktop como <tt class="docutils literal">Mac</tt> e <tt class="docutils literal">Windows</tt>, isso porque, o <tt class="docutils literal">Kivy</tt> possui a sua própria Engine gráfica.</li>
+<li>No Android, temos o Java bootstrap que inicializa o contexto da janela/<tt class="docutils literal">GLES2</tt>.</li>
+<li>No <tt class="docutils literal">iOS</tt>, utilizamos o <tt class="docutils literal">SDL 2.0</tt>, que suporta o contexto do <tt class="docutils literal">iOS</tt> e do <tt class="docutils literal">GLES2</tt>.</li>
+</ul>
+</blockquote>
+<p>O Kivy não utiliza funções gráficas do sistema operacinal hospedeiro, logo, os componentes/Widgets são desenhados do zero e portanto, aplicações Kivy, terão o mesmo visual em todas as plataformas. Essa é a parte boa. A parte ruim é que se desejarmos que o nosso App utilize o leiaute do sistema operacional hospeiro, teremos que desenvolver por conta própria.</p>
 <p>Existe versões em desenvolvimento que implementam o padrão gráfico do <a class="reference external" href="https://kivymd.github.io/">Material Design</a>, e muito provavelmente, alguém já está desenvolvendo uma versão que utilize os padrões do iOS. Porém, é importante saber que esses são projetos de terceiros, por isso, não há suporte oficial.</p>
-<p>É importante dizer que a biblioteca Kivy utiliza a API OpenGL 2.0, enquanto que a última versão da biblioteca OpenGL é a 4.5.</p>
+<p>É importante dizer que a biblioteca Kivy utiliza a API <tt class="docutils literal">OpenGL ES 2.0</tt>, porém, está não é a última versão disponibilizada pela fabricante.</p>
 <p><a class="reference external" href="https://www.opengl.org/sdk/docs/">Para consultar a documentação do projeto OpenGL utilize este link</a>.</p>
 
     <div class="admonitionblock note data-line">
@@ -184,14 +210,13 @@ eXcript            </a>
                     </td>
                     <td class="content">
                         <div class="paragraph data-line">
-                            <p>A biblioteca Kivy é multiplataforma por causa que a biblioteca OpenGL.</p>
+                            <p>A biblioteca Kivy é multiplataforma devido principalmente a biblioteca OpenGL.</p>
                         </div>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-<p>d</p>
 </div>
 <div class="section" id="o-python">
 <h2>O PYTHON</h2>
@@ -235,7 +260,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>O suporte a outras plataformas está previsto, porém, não existe qualquer informação adicional publicada, muito menos data prevista.</p>
 </div>
 <div class="section" id="projeto-python-for-android">
-<h2>PROJETO <cite>python-for-android</cite></h2>
+<h2>PROJETO python-for-android</h2>
 <p>O projeto <cite>python-for-android</cite> é um subprojeto do projeto Kivy e seu objetivo é gerar executáveis para a plataforma Android.</p>
 <p>Este projeto utiliza várias linguagens de programação, como por exemplo, C, C++, Cython, Python e Java. O C e o C++ são utilizados para trabalhar nativamente com a API do Android, o <a class="reference external" href="https://developer.android.com/ndk/index.html">Android NDK</a> . O Cython faz a conversão do código Python para código C nativo e o código Java é utilizado para acessar a API nativa do Android.</p>
 <p>O App para a plataforma Android é gerada através de um projeto construído com o <a class="reference external" href="https://developer.android.com/studio/index.html">AndroidStudio</a> onde uma parte é nativa, ou seja, escrita com C e C++, outra parte utiliza a linguagem Java, outra parte utiliza o projeto <a class="reference external" href="https://github.com/kivy/PyJNIus">PyJNIus</a> e claro, tudo isso está integrado com a linguagem Python.</p>
@@ -295,6 +320,41 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 </pre></div>
 <p>Como podemos ver, é importado a classe NSString e em seguida é armazenado o texto Hello World na mesma. Ou seja, desta forma, estamos trabalhando com a API nativa do iOS utilizando a linguagem Python! Portanto, conseguimos desenvolver aplicações que utilizam toda a API nativa da plataforma utilizando código Python.</p>
 </div>
+<div class="section" id="componentes-widget">
+<h2>COMPONENTES (WIDGET)</h2>
+<p>O framework Kivy contém um conjunto de componentes de telas, chamados de Widgets para fácil e rápida construção de janelas que interam gráficamente com o usuário. Todos widgets possuem excelente integração com os OS compatíveis.</p>
+<p>De fábrica, encontramos os principais controles, como caixas para entrada de texto, botões, rótulos (label), imagem e etc. PORÉM, tratando de quantidade de recursos não há comparação com plataformas como VisualStudio, Embarcadero Delphi/C++, Qt5 ou Xamarin.</p>
+<p>Mesmo assim, há bibliotecas de terceiros como o <a class="reference external" href="kivyMD.github.io">KivyMD</a>, acrônimo de <tt class="docutils literal">Kivy Material Design</tt> que entregam um conjunto bastante rico de elementos visuais seguindo a normatização definida oficialmente.</p>
+<p>Por fim, é importante lembrar que o ponto forte do projeto Kivy é sua fácil integração com a API gráfica tornando uma ferramenta fácil para o desenvolvimento gráfico, seja de controles de telas ou mesmo de jogos.</p>
+</div>
+<div class="section" id="games">
+<h2>GAMES</h2>
+<p>O framework Kivy, como já dito várias vezes, foi desenhado para ser executado sob a placa gráfica e inclusive, no modo de aceleração gráfica. A biblioteca entrega um módulo para a construção gráfica bastante completo estando assim, uma camada acima da API OpenGL.</p>
+<p>O módulo gráfico que fornece as classes e funções para o desenho vetorial 2D pode ser utilizado com a linguagem Kivy, o que nos permite por exemplo, declarar um círculo e definir a propriedade raio. Ou seja, criamos imagens vetoriais facilmente e com uma linguagem de marcação, semelhante ao que temos com o formato de <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag">imagem SVG (Scalable Vector Graphics)</a>.</p>
+<p>O suporte a renderização de imagem é excelente e, tendo como aliado bibliotecas gráficas como <cite>OpenCV (Open Source Computer Vision Library)</cite> é possível tratar imagem sendo o limite a imaginação.</p>
+</div>
+<div class="section" id="audio-e-video">
+<h2>ÁUDIO E VÍDEO</h2>
+<p>O suporte a áudio e a vídeo são implementações estáveis e bastante testadas. Há inclusive player musicais construidos só com as bibliotecas nativas do Python. Inclusive, há suporte a Stream, tanto de áudio como de vídeo.</p>
+<p>Um exemplo interessante é o Widget Image que renderiza imagens no Path local ou remoto, abstraindo todo o donwload e abertura dos desenvolvedores finais.</p>
+</div>
+<div class="section" id="projeto-kivent">
+<h2>PROJETO KivEnt</h2>
+<p>O projeto <a class="reference external" href="http://kivent.org/">KivEnt</a> é um subprojeto do projeto Kivy voltado para o desenvolvimento de games e aplicações gráficas interativas em tempo real.</p>
+<p>Esse é uma projeto que vem sendo desenvolvido, principalmente, por outro grupo de desenvolvedores, porém, é um repositório do projeto Kivy.</p>
+<p>Toda a biblioteca vem sendo construida com a linguagem Python e os módulos que normalmente são responsáveis pelos gargalos, utilizam a linguagem Cython, conseguindo assim, performance semelhante ao que temos com a linguagem C.</p>
+<p>O núcleo do KivEnt é a biblioteca Kivy, ou seja, a parte principal da Engine não possui dependencias.</p>
+<p>Alguns módulos em especifico utilizam a biblioteca <a class="reference external" href="https://chipmunk-physics.net/">Chipmunk2D</a> que é um uma simples, leve e rápida plataforma para corpos 2D rígido e que facilita a implementação da matemática, ou seja, a física do game.</p>
+<p>Sendo o Chipmunk2D escrito em C, há uma versão em Cython disponibilizando um bind fácil e rápido para utilização com Python. A plataforma está disponibilizada com a licença MIT.</p>
+</div>
+<div class="section" id="livros-publicados">
+<h2>LIVROS PUBLICADOS</h2>
+<p><a class="reference external" href="http://shop.oreilly.com/product/0636920032595.do">*Creating Apps in Kivy - Mobile with Python* (Dusty Phillips) (2014) (O'Reilly Media)</a>
+<a class="reference external" href="https://www.packtpub.com/application-development/kivy-blueprints">*Kivy Blueprints* (Mark Vasilkov) (2015) (PacktPub)</a>
+<a class="reference external" href="https://www.packtpub.com/application-development/kivy-cookbook">*Kivy Cookbook* (Hugo Solis) (2015) (PacktPub)</a>
+<a class="reference external" href="https://www.packtpub.com/application-development/kivy-interactive-applications-python">*Kivy: Interactive Applications in Python* (Roberto Ulloa) (2013) (PacktPub)</a>
+<a class="reference external" href="https://www.packtpub.com/application-development/kivy-%E2%80%93-interactive-applications-and-games-python-second-edition">*Kivy - Interactive Applications and Games in Python* (Second Edition) (Roberto Ulloa) (2015) (PacktPub)</a></p>
+</div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>
 <ul class="simple">
@@ -336,10 +396,28 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <ul class="simple">
 <li><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm (en)</a></li>
 <li><a class="reference external" href="https://developer.android.com/studio/index.html">AndroidStudio (en)</a></li>
-<li><a class="reference external" href="..__:https://developer.apple.com/xcode/">Xcode (en)</a></li>
-<li><a class="reference external" href="http://http://cython.org/">Cython (en)</a></li>
+<li><a class="reference external" href="https://developer.apple.com/xcode/">Xcode (en)</a></li>
+<li><a class="reference external" href="http://cython.org/">Cython (en)</a></li>
 <li><a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/">JNI (Java Native Interface) (en)</a></li>
 <li><a class="reference external" href="https://docs.python.org/2/library/2to3.html">2to3: Conversor de código escrito em Python2x para Python3x (en)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://khronos.org/">khronos</a></li>
+<li><a class="reference external" href="https://jp.khronos.org/webgl/">WebGL</a></li>
+<li><a class="reference external" href="https://www.khronos.org/webgl/wiki/WebGL_and_OpenGL">Wiki do WebGL e OpenGL ES 2.0</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://www.ft.unicamp.br/~magic/opengl/index2006.html">Introdução à computação gráfica com OpenGL - Marco Antonio G. Carvalho</a></li>
+<li><a class="reference external" href="http://www.inf.pucrs.br/~pinho/CG/Aulas/OpenGL/OpenGL.html">Computação Gráfica - Biblioteca Gráfica OpenGL - Márcio Sarroglia Pinho</a></li>
+<li><a class="reference external" href="http://www.inf.pucrs.br/~manssour/OpenGL/Tutorial.html">Introdução à OpenGL - Isabel Harb Manssour</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag">SVG - Scalable Vector Graphics</a></li>
+<li><a class="reference external" href="http://opencv.org/">OpenCV (Open Source Computer Vision Library)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://chipmunk-physics.net/">Chipmunk2D</a></li>
+<li><a class="reference external" href="https://cymunk.readthedocs.io/en/latest/">Cymunk</a></li>
 </ul>
 </div>
 

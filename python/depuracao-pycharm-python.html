@@ -383,19 +383,31 @@ eXcript            </a>
 <img alt="IDE PyCharm em modo de depuração com um breakpoint na primeira linha" src="../images/curso-de-python/depuracao-pycharm.png" />
 <p>Depuração é uma técnica de programação em que é possível manipular a execução de cada linha e verificar os valores das variáveis (instâncias).</p>
 <p>Segundo o dicionário Aurélio, depurar significa <tt class="docutils literal">Procurar, detectar e corrigir erros em programa</tt>.</p>
-<p>A depuração é uma ferramenta presente nas IDE modernas e nos proporciona uma forma de executar nossa aplicação passo-a-passo e ir verificando o valor das variáveis e o que nosso programa vai executando.</p>
+<p>Hoje em dia, ferramenta para depuração de código, estão presente nas IDE modernas e nos proporciona uma forma de executar nossa aplicação passo-a-passo e ir verificando o valor das variáveis e o que nosso programa vai executando, ou seja, quais funções vão sendo invocadas.</p>
 <p>É correto dizer que depurar um código significa a execução de cada linha vagarosamente, onde o programador é quem diz quando que determinada instrução deve ser executada. E também, a cada linha executada, é possível verificar o valor das variáveis que estão no escopo local e global</p>
 <p>Algumas IDEs permitem a alteração do valor das variáveis e a executação de código paralelamente. Desta forma, conseguimos simular situações onde talvez, não fosse possível através do nosso programa.</p>
-<p>A depuração é comumente utilizada para na detecção de erros e para entender o estado do programa e de suas variáveis antes do problema ocorrer de fato, ou após o erro ter ocorrido.</p>
+<p>A depuração é comumente utilizada para na detecção de erros e para entender o estado do programa e de suas variáveis num determinado instânte, ou numa determinada função.</p>
 <p>Podemos dizer que é possível depurar qualquer código de qualquer linguagem, até porque, esse é um recurso atualmente considerado elementar para a correta construção de software. Algumas vezes a depuração é um recurso encontrado em determinada IDE, outras vezes, a capacidade de depuração acaba sendo uma ferramenta disponibilizada pela linguagem, isto é, a Máquina Virtual ou o Compilador da linguagem é quem disponibilizam esses recursos e capacidades.</p>
 <p>Neste Curso de Python, estamos utilizando a IDE <a class="reference external" href="https://www.jetbrains.com/pycharm/download/">PyCharm</a> e a mesma oferece-nos grande capacidade para depuração e análise interna em tempo de execução.</p>
+</div>
+<div class="section" id="o-recurso-de-depuracao">
+<h2>O RECURSO DE DEPURAÇÃO</h2>
+<p>A depuração é um recurso disponibilizado pelo compilador ou interpretador da linguagem. Portanto, nativamente, conseguimos depurar o código através da linha de comando, semelhate a forma como executamos o código.</p>
+<p>As IDE ao implementarem os recursos de depuração estão de fato negociando com o compilador ou interpretador o local em que deve haver interrupções e todos os demais recursos.</p>
+<p>É importante sabermos que não são as IDE que implementam a capacidade de depurar o código, elas apenas dialogam com o compilador ou interpretador e fornecem uma forma gráfica para depuração.</p>
+</div>
+<div class="section" id="primordios-da-depuracao">
+<h2>PRIMÓRDIOS DA DEPURAÇÃO</h2>
+<p>Todas as vezes em que utilizamos a função <code>print()</code> para enviar à saída padrão o valor de variáveis estamos depurando nosso código de forma primitiva. Ou seja, estamos inspecionando o valor das variáveis e o estado do programa utilizando a função print.</p>
+<p>É comum que novas linguagens de programação não tragam a funcionalidade de depurar o código implementado, portanto, o programar é obrigado a trabalhar enviando para a saída padrão o valor dos membros que ele deseja conhecer os valores.</p>
+<p>Linguagens como JavaScript, PHP e ASP são exemplos notáveis de linguagens que foram lançadas no mercado sem que os desenvolvedores disponibilizassem uma forma de depurar o código de forma eficiente.</p>
 </div>
 <div class="section" id="performance">
 <h2>PERFORMANCE</h2>
 <p>A execução em modo de depuração só deve ser executada quando necessário, até porque, a perfomance é muito inferior ao que temos com a execução normal. Por isso, só execute um código em forma de depuaração quando houver um razão para isso.</p>
 </div>
 <div class="section" id="o-que-e-cursor-de-execucao">
-<h2>O QUE É <tt class="docutils literal">CURSOR DE EXECUÇÃO</tt>?</h2>
+<h2>O QUE É <cite>CURSOR DE EXECUÇÃO</cite>?</h2>
 <p>Cursor de execução é o termo que utilizamos para nos referirmos a linha de código em que estamos, ou melhor, na linha onde estamos.</p>
 <p>Na imagem a seguir podemos ver a execução de um simples código. Observe na linha 9, em azul, o cursor de execução e na linha 11 podemos ver o uso de um breakpoint. É importante lembrar que o sistema de cor pode ser personalizado, portanto, não existe um padrão e não podemos nos referir ao cursor ou ao breakpoint como sendo uma linha de uma determinada cor.</p>
 <img alt="IDE PyCharm com breakpoint e cursor de execução" src="../images/curso-de-python/pycharm-cursor-breakpoint.png" />
