@@ -395,10 +395,44 @@ eXcript            </a>
 </div>
 <div class="section" id="estrutura-else">
 <h2>ESTRUTURA <code>else</code></h2>
-<p>A linguagem Python define a instrução <code>else</code> como uma subestrutura da instrução <code>while</code>. Essa instrução define um bloco de código que será executado uma única vez, quando a expressão definida no cabeçalho da instrução <code>while</code>, deixar de ser verdadeira.</p>
-<p>Vale repetir, que o bloco da instrução <code>else</code> será executado uma única vez, devido ao fato de que a estrutura interrompe a execução dos ciclos quando a expressão deixar de ser verdadeira.</p>
+<p>A linguagem Python define a instrução <code>else</code> como uma estrutura dependente da instrução <code>while</code>, igual estudado na instrução <tt class="docutils literal">if</tt>. Desta forma, em Python, há 3 estruturas em que a instrução <code>else</code> pode ser utilizado para definirmos o bloco de instrução a ser executando quando a condição verificada <strong>deixar de ser verdadeira</strong>.</p>
+<p>No caso, temos a instrução <code>if</code>, instrução <code>while</code> e a instrução <code>for</code> que será estudado na sequência.</p>
+<p>Vamos analisar uma primeira situação.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="n">condicao</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">while</span><span class="p">(</span><span class="n">condicao</span><span class="p">):</span><span class="c1">#&lt;1&gt;</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;BLOCO while() e condicao==True&quot;</span><span class="p">)</span><span class="c1">#&lt;2&gt;</span>
+    <span class="n">condicao</span> <span class="o">=</span> <span class="bp">False</span><span class="c1">#&lt;2&gt;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;BLOCO ELSE e condicao==False&quot;</span><span class="p">)</span>
+</pre></div>
+<p>A execução do código acima envia o seguinte resultado pra saida padrão:</p>
+<div class="highlight"><pre><span></span><span class="n">BLOCO</span> <span class="k">while</span><span class="p">()</span> <span class="n">e</span> <span class="n">condicao</span><span class="o">==</span><span class="bp">True</span>
+<span class="n">BLOCO</span> <span class="n">ELSE</span> <span class="n">e</span> <span class="n">condicao</span><span class="o">==</span><span class="bp">False</span>
+</pre></div>
+<p>O que podemos concluir é que:
+- <tt class="docutils literal">#&lt;1&gt;</tt>: O bloco verdadeiro da estrutura <code>while</code> foi executado, pois, a lógica é repetir até deixar de ser verdadeiro
+- <tt class="docutils literal">#&lt;2&gt;</tt>: a função print() é executada
+- <tt class="docutils literal">#&lt;3&gt;</tt>: e então, a variável <tt class="docutils literal">condicao</tt> é definida como <code>False</code>
+- <tt class="docutils literal">#&lt;1&gt;</tt>: o cursor de execução volta para o cabeçalho da estrutura <code>while</code>, analisa a condição definida e, como o resultado é igual a <code>False</code> o bloco de instrução <code>else</code> será executado, POIS, igualmente ocorre com a instrução <code>if</code>, o bloco <code>else</code> é executado nas vezes em que a condição NÃO for verdadeira.</p>
+<p>Agora, se por alguma razão a instrução <code>break</code> for invocada, o bloco <code>else</code> não será executado, pois, a lógica estabelecida é que o bloco <code>else</code> só será executado nass vezes em que a condição for <code>False</code> e no caso, isso não aconteceu.</p>
+<p>A seguir, temos o mesmo exemplo, porém agora, a instrução <code>break</code> será invocada.</p>
+<div class="highlight"><pre><span></span><span class="n">condicao</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">while</span><span class="p">(</span><span class="n">condicao</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;BLOCO while() e condicao==True&quot;</span><span class="p">)</span>
+    <span class="n">condicao</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">break</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;BLOCO ELSE e condicao==False&quot;</span><span class="p">)</span>
+</pre></div>
+<p>A execução do código acima envia o seguinte resultado pra saida padrão:</p>
+<div class="highlight"><pre><span></span><span class="n">BLOCO</span> <span class="k">while</span><span class="p">()</span> <span class="n">e</span> <span class="n">condicao</span><span class="o">==</span><span class="bp">True</span>
+</pre></div>
+<p>Ou seja, o bloco <code>True</code> da instrução <code>while</code> foi executado, porém, como a instrução <code>break</code> interrompeu a execução de todo o ciclo, o bloco <code>else</code>, isto é, o bloco que é executado nas vezes em que a condição não é verdadeira não foi executado.</p>
+<p>Assim, o bloco <code>else</code> pode ser executado uma única vez, nos casos em que a expressão definida no cabeçalho da instrução <code>while</code>, deixar de ser verdadeira.</p>
 <p>Àqueles que entenderam a <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">Tomada de Decisão</a>, isto é, a instrução <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">if</a>, deverão ter facilidade em manipular Laços de Repetição <code>while</code>, como também, conseguirão facilmente implementar a instrução <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">while</a> . Isso porque, como já dito, a instrução <code>while</code> funciona da mesma forma que a instrução <code>if</code>, e o que diferencia as mesmas é só e somente só a quantidade de vezes que o <tt class="docutils literal">Bloco de Instrução</tt> será executado.</p>
-<p>A seguir, temos o exemplo feito anteriormente, porém, agora, estamos implementando o <tt class="docutils literal">Bloco de Instrução</tt> para quando a expressão definida no cabeçalho da instrução <code>while</code> deixar de ser verdadeira.</p>
+<p>A seguir, temos um exemplo semelhante ao que fizemos anteriormente, porém agora, numa situação que acontece na vida real.</p>
 <div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span>

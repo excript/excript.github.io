@@ -2330,10 +2330,44 @@ DEFINIÇÃO MATEMÁTICA: &lt;tt class="docutils literal"&gt;[0,5[&lt;/tt&gt;&lt;
 &lt;/div&gt;
 &lt;div class="section" id="estrutura-else"&gt;
 &lt;h2&gt;ESTRUTURA &lt;code&gt;else&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;A linguagem Python define a instrução &lt;code&gt;else&lt;/code&gt; como uma subestrutura da instrução &lt;code&gt;while&lt;/code&gt;. Essa instrução define um bloco de código que será executado uma única vez, quando a expressão definida no cabeçalho da instrução &lt;code&gt;while&lt;/code&gt;, deixar de ser verdadeira.&lt;/p&gt;
-&lt;p&gt;Vale repetir, que o bloco da instrução &lt;code&gt;else&lt;/code&gt; será executado uma única vez, devido ao fato de que a estrutura interrompe a execução dos ciclos quando a expressão deixar de ser verdadeira.&lt;/p&gt;
+&lt;p&gt;A linguagem Python define a instrução &lt;code&gt;else&lt;/code&gt; como uma estrutura dependente da instrução &lt;code&gt;while&lt;/code&gt;, igual estudado na instrução &lt;tt class="docutils literal"&gt;if&lt;/tt&gt;. Desta forma, em Python, há 3 estruturas em que a instrução &lt;code&gt;else&lt;/code&gt; pode ser utilizado para definirmos o bloco de instrução a ser executando quando a condição verificada &lt;strong&gt;deixar de ser verdadeira&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;No caso, temos a instrução &lt;code&gt;if&lt;/code&gt;, instrução &lt;code&gt;while&lt;/code&gt; e a instrução &lt;code&gt;for&lt;/code&gt; que será estudado na sequência.&lt;/p&gt;
+&lt;p&gt;Vamos analisar uma primeira situação.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;condicao&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;condicao&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="c1"&gt;#&amp;lt;1&amp;gt;&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;BLOCO while() e condicao==True&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;#&amp;lt;2&amp;gt;&lt;/span&gt;
+    &lt;span class="n"&gt;condicao&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="c1"&gt;#&amp;lt;2&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;BLOCO ELSE e condicao==False&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A execução do código acima envia o seguinte resultado pra saida padrão:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;BLOCO&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="n"&gt;condicao&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="n"&gt;BLOCO&lt;/span&gt; &lt;span class="n"&gt;ELSE&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="n"&gt;condicao&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O que podemos concluir é que:
+- &lt;tt class="docutils literal"&gt;#&amp;lt;1&amp;gt;&lt;/tt&gt;: O bloco verdadeiro da estrutura &lt;code&gt;while&lt;/code&gt; foi executado, pois, a lógica é repetir até deixar de ser verdadeiro
+- &lt;tt class="docutils literal"&gt;#&amp;lt;2&amp;gt;&lt;/tt&gt;: a função print() é executada
+- &lt;tt class="docutils literal"&gt;#&amp;lt;3&amp;gt;&lt;/tt&gt;: e então, a variável &lt;tt class="docutils literal"&gt;condicao&lt;/tt&gt; é definida como &lt;code&gt;False&lt;/code&gt;
+- &lt;tt class="docutils literal"&gt;#&amp;lt;1&amp;gt;&lt;/tt&gt;: o cursor de execução volta para o cabeçalho da estrutura &lt;code&gt;while&lt;/code&gt;, analisa a condição definida e, como o resultado é igual a &lt;code&gt;False&lt;/code&gt; o bloco de instrução &lt;code&gt;else&lt;/code&gt; será executado, POIS, igualmente ocorre com a instrução &lt;code&gt;if&lt;/code&gt;, o bloco &lt;code&gt;else&lt;/code&gt; é executado nas vezes em que a condição NÃO for verdadeira.&lt;/p&gt;
+&lt;p&gt;Agora, se por alguma razão a instrução &lt;code&gt;break&lt;/code&gt; for invocada, o bloco &lt;code&gt;else&lt;/code&gt; não será executado, pois, a lógica estabelecida é que o bloco &lt;code&gt;else&lt;/code&gt; só será executado nass vezes em que a condição for &lt;code&gt;False&lt;/code&gt; e no caso, isso não aconteceu.&lt;/p&gt;
+&lt;p&gt;A seguir, temos o mesmo exemplo, porém agora, a instrução &lt;code&gt;break&lt;/code&gt; será invocada.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;condicao&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;condicao&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;BLOCO while() e condicao==True&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;condicao&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+    &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;BLOCO ELSE e condicao==False&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A execução do código acima envia o seguinte resultado pra saida padrão:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;BLOCO&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="n"&gt;condicao&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ou seja, o bloco &lt;code&gt;True&lt;/code&gt; da instrução &lt;code&gt;while&lt;/code&gt; foi executado, porém, como a instrução &lt;code&gt;break&lt;/code&gt; interrompeu a execução de todo o ciclo, o bloco &lt;code&gt;else&lt;/code&gt;, isto é, o bloco que é executado nas vezes em que a condição não é verdadeira não foi executado.&lt;/p&gt;
+&lt;p&gt;Assim, o bloco &lt;code&gt;else&lt;/code&gt; pode ser executado uma única vez, nos casos em que a expressão definida no cabeçalho da instrução &lt;code&gt;while&lt;/code&gt;, deixar de ser verdadeira.&lt;/p&gt;
 &lt;p&gt;Àqueles que entenderam a &lt;a class="reference external" href="http://excript.com/python/tomada-decisao-python.html"&gt;Tomada de Decisão&lt;/a&gt;, isto é, a instrução &lt;a class="reference external" href="http://excript.com/python/tomada-decisao-python.html"&gt;if&lt;/a&gt;, deverão ter facilidade em manipular Laços de Repetição &lt;code&gt;while&lt;/code&gt;, como também, conseguirão facilmente implementar a instrução &lt;a class="reference external" href="http://excript.com/python/tomada-decisao-python.html"&gt;while&lt;/a&gt; . Isso porque, como já dito, a instrução &lt;code&gt;while&lt;/code&gt; funciona da mesma forma que a instrução &lt;code&gt;if&lt;/code&gt;, e o que diferencia as mesmas é só e somente só a quantidade de vezes que o &lt;tt class="docutils literal"&gt;Bloco de Instrução&lt;/tt&gt; será executado.&lt;/p&gt;
-&lt;p&gt;A seguir, temos o exemplo feito anteriormente, porém, agora, estamos implementando o &lt;tt class="docutils literal"&gt;Bloco de Instrução&lt;/tt&gt; para quando a expressão definida no cabeçalho da instrução &lt;code&gt;while&lt;/code&gt; deixar de ser verdadeira.&lt;/p&gt;
+&lt;p&gt;A seguir, temos um exemplo semelhante ao que fizemos anteriormente, porém agora, numa situação que acontece na vida real.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
 
 &lt;span class="n"&gt;conta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
