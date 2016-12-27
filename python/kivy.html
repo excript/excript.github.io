@@ -357,6 +357,30 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <li><a class="reference external" href="https://www.packtpub.com/application-development/kivy-%E2%80%93-interactive-applications-and-games-python-second-edition">*Kivy - Interactive Applications and Games in Python* (Second Edition) (Roberto Ulloa) (2015) (PacktPub)</a></li>
 </ul>
 </div>
+<div class="section" id="pontos-negativos">
+<h2>PONTOS NEGATIVOS</h2>
+<p>Há inúmeros pontos negativos no framework Kivy e o objetivo da eXcript não é em momento algum mascara-los ou então, promover cegamente determinada tecnologia. A seguir, pretendemos discutir e sempre mostrar os 2 lados da discussão.</p>
+<div class="section" id="o-que-significa-aplicacao-nativa">
+<h3>O QUE SIGNIFICA APLICAÇÃO NATIVA?</h3>
+<p>Executáveis gerados com as ferramentas do projeto Kivy realmente são aplicações nativas, até porque, o sistema operacional para o qual o executável foi gerado executa o arquivo sem a necessidade de qualquer aplicativo.</p>
+<p>Porém, talvez seja importante nos perguntarmos o que é uma aplicação nativa e quais seriam as características que essas aplicações deveriam ter para serem assim classificadas.</p>
+<p>Uma aplicação pode ser considerada nativa somente porque seu executável é reconhecido pelo SO hospedeiro?</p>
+<p>Uma aplicação para ser considerada nativa, deve utilizar as bibliotecas e recursos do SO hospedeiro?</p>
+</div>
+<div class="section" id="quao-nativo-sao-os-executaveis-gerados-pelo-projeto-kivy">
+<h3>QUÃO NATIVO SÃO OS EXECUTÁVEIS GERADOS PELO PROJETO KIVY?</h3>
+<p>Visando o desenvolvimento de aplicações multiplataforma, a biblioteca Kivy <strong>NÃO</strong> utiliza a maior parte das bibliotecas fornecidas pelo SO hospedeiro. Até porque, cada plataforma disponibiliza uma interface de acesso diferente e assim, o projeto Kivy precisaria conhecer e se adaptar a cada SO a fim de utilizar suas bibliotecas.</p>
+<p>Utilizar as bibliotecas nativas de cada plataforma, normalmente é, a melhor forma de construção de aplicações para a mesma. Ou seja, a melhor forma de criarmos aplicações para o SO Microsoft Windows é utilizando por exemplo suas bibliotecas gráficas, o seu sistema de arquivo, as suas caixas de diálogo nativas e etc.</p>
+<p>O projeto Kivy raramente utiliza as ferramentas disponibilizadas pela plataforma hospedeira! Em cada executável gerado pelas ferramentas do projeto Kivy, é adicionado TODAS AS ferramentas que a aplicação precisará ou possa vir a precisar. Isso é comumente chamado como &quot;reinvenção da roda&quot;, até porque, pra que refazer o que já está pronto? Pra que tornar o executável mais &quot;pesado&quot; adicionando implementações que podem ser acessadas diretamente na plataforma?</p>
+<p>Na minha opinião, este é o maior problema do projeto Kivy, até porque, podemos dizer que estamos utilizando uma gambiarra! Pois, ao invés dos nossos programas funcionarem como o fabricamente determina, estamos fazendo tudo ao nosso modo e da nossa maneira!</p>
+<p>MAS CALMA AI! <strong>TODO DESENVOLVIMENTO</strong> híbrido é por <strong>natureza, definição e implementação</strong> uma gambiarra.</p>
+<p>A verdade é que na maior parte das vezes, a melhor forma de utilizarmos um produto, é seguir as diretrizes do fabricante, até porque, assim temos garantias, estamos utilizando uma metodologia mundialmente testada e por engenheiros consagrados desenhado e implementado.</p>
+<p>Essa é uma verdade que não podemos ignorar. Ou seja, a melhor maneira de utilizar os produtos é seguindo as normas do fabricante!</p>
+<p>Então, quando dizemos que é gerado um executável nativo, estamos realmente falando a verdade, porém, de nativo há somente a tela inicial, pois o restante, trata-se de simulação e emulação.</p>
+<p>Gigantes como <a class="reference external" href="http://www.microsoft.com/">Microsoft</a>, <a class="reference external" href="http://www.adobe.com/">Adobe</a> e <a class="reference external" href="http://www.intel.com">Intel</a> possuem suas próprias &quot;gambiarras&quot; e comercializam ferramentas que geram executáveis híbridos da mesma forma, mas de uma maneira diferente que o projeto Kivy o faz!</p>
+<p>A pergunta que devemos responder é: &quot;uma aplicação pra ser realmente nativa, deve gerar um executável através da ferramenta do fabricante e utilizar as bibliotecas por este disponibilizado&quot;?</p>
+</div>
+</div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>
 <ul class="simple">
@@ -420,6 +444,11 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <ul class="simple">
 <li><a class="reference external" href="https://chipmunk-physics.net/">Chipmunk2D</a></li>
 <li><a class="reference external" href="https://cymunk.readthedocs.io/en/latest/">Cymunk</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://www.microsoft.com/">Microsoft</a></li>
+<li><a class="reference external" href="http://www.adobe.com/">Adobe</a></li>
+<li><a class="reference external" href="http://www.intel.com">Intel</a></li>
 </ul>
 </div>
 

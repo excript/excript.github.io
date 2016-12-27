@@ -203,6 +203,7 @@ eXcript            </a>
     </div>
 <div class="section" id="id1">
 <h2>SQLITE INTERNAMENTE</h2>
+<img alt="Diagrama de funcionamento interno do Banco de Dados SQLite." src="../images/curso-python-sqlite/diagrama-sqlite1.png" />
 <p>Antes de iniciarmos a análise interna do SQLite é importante ressaltar que que não é necessário o estudo do funcionamento interno do banco de dados para trabalhar com o mesmo. Desta forma, o entendimento dos conceitos aqui descritos não se faz, teoricamente necessários. Fato é que está aula é resultante de um estudo pessoal qu eu Cláudio realizei, logo, decidi produzir este material, haja vista que informações e conhecimento nunca é demais!</p>
 <p>O banco de dados SQLite, além de armazenar informações, gerenciar os relacionamentos, armazenar procedimentos, gerenciar os índices e etc, ainda possui um interpretador de código SQL que, tem por objetivo, gerar código para a máquina virtual interna do SQLite. Desta forma, ao manipularmos informações, nossas queries são convertidas para uma linguagem própria e posteriormente, interpretada pela máquina virtual do banco de dados.</p>
 <p>Ainda que o executável do SQLite possua um tamanho ínfimo e, para o seu funcionamento não existe a necessidade de manter uma instância em execução, a quantidade de processos que ocorrem desde recebimento de uma Query até o retorno de um conjunto de registro é impressionante!</p>
@@ -212,12 +213,14 @@ eXcript            </a>
 </div>
 <div class="section" id="o-que-e-a-interface">
 <h2>O QUE É A INTERFACE?</h2>
+<img alt="Diagrama de funcionamento interno do Banco de Dados SQLite." src="../images/curso-python-sqlite/diagrama-sqlite2.png" />
 <p>Podemos dizer que é a API que utilizamos para integrar o nosso programa em Python, com a biblioteca do SQLite em C.</p>
 <p>O SQLite possui uma interface de acesso público para bibliotecas que terceiros consigam acessar de forma simples e segura. Por padrão, todas as funções e métodos da interface de integração iniciam como o nome sqlite3. Assim, consegue-se distinguir facilmente qual a versão do banco de dados e da biblioteca de acesso.
 Tokenizer</p>
 </div>
 <div class="section" id="o-que-e-o-tokenizer">
 <h2>O QUE É O TOKENIZER?</h2>
+<img alt="Diagrama de funcionamento interno do Banco de Dados SQLite." src="../images/curso-python-sqlite/diagrama-sqlite3.png" />
 <p>Converte a nossa query em simbolos de forma a facilitar os processor de interpretação da query enviada.</p>
 <p>Ao enviar uma string com códigos SQL para as bibliotecas SQLite, a interface de acesso recebe a string e na sequência passa a mesma para o Tokenizer.</p>
 <p>O trabalho do tokenizador será quebrar a string de código SQL em tokens (simbolo) para que então, estes sejam enviados para ao parser (analisador).</p>
