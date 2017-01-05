@@ -908,7 +908,7 @@ Classe-base: sinônimo a SuperClasse&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class="section" id="subclasse"&gt;
 &lt;h2&gt;SUBCLASSE&lt;/h2&gt;
-&lt;p&gt;Chamamos de &lt;strong&gt;Sub Classe&lt;/strong&gt; todas as classes herdeiras. O conceito de SubClasse é o da especialização, isto é, a SubClasse possui todas as características e funcionalidades da Super e agora irá definir um outro conjunto de funções e propriedades a fim de especializar algum conceito. É importante observar que toda SubClasse possui acesso aos membros públicos e protegidos da SuperClasse, porém o inverso não é verdadeiro.&lt;/p&gt;
+&lt;p&gt;Chamamos de &lt;strong&gt;Sub Classe&lt;/strong&gt; todas as classes herdeiras. O conceito de SubClasse é o da especialização, isto é, a SubClasse possui todas as características e funcionalidades da Super e agora irá definir um outro conjunto de funções e propriedades a fim de especializar alguma funcionalidade. É importante observar que toda SubClasse possui acesso aos membros públicos e protegidos da SuperClasse, porém o inverso não é verdadeiro.&lt;/p&gt;
 &lt;p&gt;Toda SubClasse recebe os membros não privados e protegidos da super classe. Isso faz com que a subclasse torne-se capaz de fazer uso de todas funções, como também, atribuir valores às variáveis definidas na super. Toda SubClasse, por definição, será &lt;strong&gt;também&lt;/strong&gt; do tipo da SuperClasse, ou seja, se tivermos as classe A e B, onde B é subclasse de A, nós temos que B será do tipo B, e também do tipo A.&lt;/p&gt;
 &lt;p&gt;Num primeiro momento a definição e utilização de SubClasse não possui quaisquer diferença no que estudamos até agora, isso porque, temos que sempre ter em mente que &lt;strong&gt;TODA&lt;/strong&gt; classe deriva obrigatoriamente de alguma SuperClasse, até porque, toda classe possui propriedades e funcionalidades por padrão, mesmo que estas sejam conceitos implicitos.&lt;/p&gt;
 &lt;p&gt;Fato é que não haverá maiores problemas na SubClasse se está não vier a estender as definições da sua SuperClasse. Do contrário, isto é, se a Sub implementar uma variável o função de mesmo nome implementado na Super, o que acontecerá? Há diversas situações onde a SubClasse precisará alterar somente o funcionamento de uma função, isto é, precisará modificar o funcionamento de uma função. Outras vezes, a função não precisará ser redefinida, somente estendida. Como sabemos, a herança é uma característica das classes e não das funções e propriedades.&lt;/p&gt;
@@ -953,7 +953,6 @@ c) ambos construtores serão invocados?&lt;/blockquote&gt;
 &lt;span class="x"&gt;        this-&amp;gt;$a = 10;&lt;/span&gt;
 &lt;span class="x"&gt;    }&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
-
 
 &lt;span class="x"&gt;$sub = new SubClasse();&lt;/span&gt;
 &lt;span class="x"&gt;$sub-&amp;gt;sub();&lt;/span&gt;
@@ -1110,7 +1109,7 @@ c) ambos construtores serão invocados?&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="conceitos-importantes"&gt;
 &lt;h2&gt;CONCEITOS IMPORTANTES&lt;/h2&gt;
-&lt;p&gt;Em qualquer disciplina que estudamos há um conjunto de princípios a serem estudados e entendidos e, com a orientação a objetos não é diferente. A grande maioria dos conceitos que estudaremos terão significado igual a de outras disciplinas, como por exemplo, o conceito de herança, logo, o que precisamos realmente entender e memorizar forma um conjunto bastante diminuto.&lt;/p&gt;
+&lt;p&gt;Em qualquer disciplina que estudamos há um conjunto de princípios a serem estudados e entendidos e, com a orientação a objetos não é diferente. A grande maioria dos conceitos que estudaremos terão significado igual a de outras disciplinas, como por exemplo, o conceito de herança, logo, o que precisamos realmente entender e memorizar constitui um conjunto bastante diminuto.&lt;/p&gt;
 &lt;p&gt;A seguir temos a definição de 3 conceitos e, talvez, os mais importantes, haja vista que todos os demais, derivam destes.&lt;/p&gt;
 &lt;p&gt;a) &lt;strong&gt;CLASSE&lt;/strong&gt;
 Projeto composto por código de programação. Quando executado executado origina um objeto.&lt;/p&gt;
@@ -1307,9 +1306,9 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;div class="section" id="os-objetos-e-o-php"&gt;
 &lt;h2&gt;OS OBJETOS E O PHP&lt;/h2&gt;
 &lt;p&gt;Nesta aula iniciaremos o estudo da Orientação a Objetos utilizando a linguagem PHP.&lt;/p&gt;
-&lt;p&gt;Inicialmente temos de saber que o PHP incorporou os conceitos da orientação a objetos e não o contrário. Ou seja, POO é uma definição para o desenvolvimento de software e que é utilizado por várias linguagens de programação de computadores. A verdade é que POO não é uma linguagem e não possui nenhuma sintaxe definida. A mesma é um conceito em que utiliza a definição de objetos do mundo real para a construção de entidades representativas que contenham informações e um conjunto de funções e métodos para a sua manipulação dessa informações.&lt;/p&gt;
-&lt;p&gt;Inicialmente, o PHP dispunha somente do paradigma de programação procedural, onde as aplicações eram construídas pela definição de funções em um ou diversos arquivos e conforme necessário as funções iam sendo invocadas.&lt;/p&gt;
-&lt;p&gt;Esse paradigma de programação continua sendo válido na construção de códigos e, geralmente, é a porta de entrada dos novos programadores. Até porque, num primeiro momento, a literatura e os professores de PHP ensinam a utilizar funções sem nem ao menos declararmos uma função. Ou seja, colocamos todas as funções no corpo do arquivo que possui extensão *.php e executamos no browser.&lt;/p&gt;
+&lt;p&gt;Inicialmente temos de saber que o PHP incorporou os conceitos da orientação a objetos e não o contrário. Ou seja, POO é uma definição para o desenvolvimento de software e que é utilizado por várias linguagens de programação de computadores. Programação Orientada a Objetos não é uma linguagem e não possui sintaxe definida. Trata-se de um conceito que utiliza a definição de objetos do mundo real para a construção de entidades representativas que contenham informações e um conjunto de funções e métodos para manipulação dos dados internos.&lt;/p&gt;
+&lt;p&gt;Inicialmente, o PHP dispunha somente do paradigma de programação procedural, onde as aplicações eram construídas pela definição de funções em diversos arquivos e conforme necessário as funções iam sendo invocadas.&lt;/p&gt;
+&lt;p&gt;Esse paradigma de programação, ou melhor, essa prática de desenvolvimento continua sendo válida na construção de códigos e, geralmente, é a porta de entrada dos novos programadores. Até porque, num primeiro momento, a literatura e os professores de PHP ensinam a utilizar funções sem nem ao menos declararmos uma função. Ou seja, colocamos todas as funções no corpo do arquivo que possui extensão *.php e executamos no browser.&lt;/p&gt;
 &lt;p&gt;Assim, é comum em PHP utilizarmos os 2 paradigmas de programação e mais um terceiro, o paradigma de programação funcional. Logo, temos que o PHP suporta, basicamente, 3 paradigmas para o desenvolvimento de Scripts e aplicativos, são eles:&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;Paradigma de programação procedural&lt;/li&gt;
@@ -1332,7 +1331,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;/div&gt;
 &lt;div class="section" id="primeira-classe"&gt;
 &lt;h2&gt;PRIMEIRA CLASSE&lt;/h2&gt;
-&lt;p&gt;Agora vamos criar a nossa primeira classe em PHP. Para isso, faremos uso da palavra-chave &lt;tt class="docutils literal"&gt;class&lt;/tt&gt; que, do Inglês, significa classe. Após o uso da instrução &lt;tt class="docutils literal"&gt;class&lt;/tt&gt;, temos que abrir e fechar chaves, definindo assim, o escopo de nomes público da classe.&lt;/p&gt;
+&lt;p&gt;Vamos criar a nossa primeira classe em PHP. Para isso, faremos uso da palavra-chave &lt;tt class="docutils literal"&gt;class&lt;/tt&gt; que, do Inglês, significa classe. Após o uso da instrução &lt;tt class="docutils literal"&gt;class&lt;/tt&gt;, temos que abrir e fechar chaves, definindo assim, o escopo de nomes público da classe.&lt;/p&gt;
 &lt;p&gt;Isso quer dizer que todas as variáveis e funções deverão, obrigatoriamente, serem definidas entre os parêntesis que compreendem o bloco de instrução da classe, por exemplo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class &amp;lt; nome &amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
@@ -1384,7 +1383,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
     &lt;/div&gt;
 &lt;div class="section" id="adicionando-membros-a-nossa-classe-pessoa"&gt;
 &lt;h2&gt;ADICIONANDO MEMBROS À NOSSA CLASSE &lt;tt class="docutils literal"&gt;PESSOA&lt;/tt&gt;&lt;/h2&gt;
-&lt;p&gt;Estudamos que uma classe é um projeto e que quando executada se tornará num objeto. Assim, ao criarmos uma instância da classe, teremos um objeto construido a partir do código implementado nessa classe. Todo objeto, virtual ou físico, possui por definição do termo &amp;quot;objeto&amp;quot; atributos, ou seja, um objeto físico sempre possui uma cor, um peso, um formato e etc, já, uma objeto virtual pode ter esses atributos ou então, qualquer outro.&lt;/p&gt;
+&lt;p&gt;Estudamos que uma classe é um projeto e que quando executada se tornará num objeto. Assim, ao criarmos uma instância da classe, teremos um objeto construido a partir do código implementado nessa classe. Todo objeto, virtual ou físico, possui por definição do termo &amp;quot;objeto&amp;quot; atributos, ou seja, um objeto físico sempre possui uma cor, um peso, um formato e etc, já, um objeto virtual pode ter esses atributos ou então, qualquer outro.&lt;/p&gt;
 &lt;p&gt;Como estudamos, podemos definir variáveis em quaisquer parte do nosso código e utilizar estas para armazenarmos o que bem entendermos. O conceito por detrás da definição de variáveis dentro do escopo de classe é fazer com que a informação dessa variável esteja relacionada a outras informação de determinado objeto. Por isso a definição de propriedades e por isso a utilização de variáveis.&lt;/p&gt;
 &lt;p&gt;Cada instância terá todas as variáveis definidas em seu projeto, isto é, em sua classe. Logo, a alteração de uma variável na instância A não implica na alteração da variável de mesmo nome na instância B. Ambas instâncias forma criadas de um mesmo projeto, no entanto, são objetos distintos e a unica relação entre ambos é o projeto de sua construção.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Pessoa {&lt;/span&gt;

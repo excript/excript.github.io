@@ -419,7 +419,22 @@ eXcript            </a>
 <p>Dessa forma, funções são objetos do tipo <tt class="docutils literal">types.FunctionType</tt> ou então, <tt class="docutils literal">types.LambdaType</tt>. Por isso a importância em entender as funções como sendo objetos executáveis.</p>
 <p>Uma referência seguida por um par de parêntesis é a notação que distingue o uso de variáveis e de objetos invocáveis. Essa notação implica na execução da função __call__(). A função <tt class="docutils literal">__call__</tt> também receberá os argumentos definidos entre parêntesis. Por fim, a função <tt class="docutils literal">__call__</tt> tem definido a capacidade de retornar valores.</p>
 <p>Dessa definição, concluimos que objetos capazes de serem invocados poderão receber parâmetros, como também, poderão retornar valores.</p>
-<p>Quando falamos de objetos que podem ser invocados é normal pensarmos em funções, porém, classes também são objetos invocaveis, até porque, a notação utilizada é a mesma.</p>
+<p>Quando falamos de objetos que podem ser invocados é normal pensarmos em funções, porém, classes também são objetos invocaveis, até porque, a notação utilizada é a mesma e inclusive, é possível utilizar classes como sendo funções.</p>
+</div>
+<div class="section" id="objetos-invocaveis">
+<h2>OBJETOS INVOCÁVEIS</h2>
+<p>A seguir temos os tipos de objetos que podem ser invocáveis, isto é, objetos que funcionam como funções. Sintaticamente falando, objetos invocáveis fazem uso do <cite>call operator ()</cite> (operador de invocação).</p>
+<ul class="simple">
+<li>User-defined functions</li>
+<li>Instance methods</li>
+<li>Generator functions</li>
+<li>Coroutine functions</li>
+<li>Asynchronous generator functions</li>
+<li>Built-in functions</li>
+<li>Built-in methods</li>
+<li>Classes</li>
+<li>Class Instances</li>
+</ul>
 <div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">():</span>
     <span class="k">def</span> <span class="nf">self</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">arg</span><span class="p">):</span>
         <span class="k">pass</span>
@@ -459,6 +474,14 @@ eXcript            </a>
 <span class="k">def</span> <span class="nf">minha_func</span><span class="p">():</span>
     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Fala galera!!&quot;</span><span class="p">)</span>
 </pre></div>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.python.org/3/reference/compound_stmts.html#function-definitions">Function Definition</a></li>
+<li><a class="reference external" href="https://docs.python.org/3/reference/datamodel.html#the-standard-type-hierarchy">Python Data Model - The standard type hierarchy</a></li>
+<li><a class="reference external" href="https://docs.python.org/3/reference/expressions.html#calls">Calls</a></li>
+</ul>
 </div>
 
 				</div>

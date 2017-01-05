@@ -505,7 +505,7 @@ eXcript            </a>
     </div>
 <div class="section" id="subclasse">
 <h2>SUBCLASSE</h2>
-<p>Chamamos de <strong>Sub Classe</strong> todas as classes herdeiras. O conceito de SubClasse é o da especialização, isto é, a SubClasse possui todas as características e funcionalidades da Super e agora irá definir um outro conjunto de funções e propriedades a fim de especializar algum conceito. É importante observar que toda SubClasse possui acesso aos membros públicos e protegidos da SuperClasse, porém o inverso não é verdadeiro.</p>
+<p>Chamamos de <strong>Sub Classe</strong> todas as classes herdeiras. O conceito de SubClasse é o da especialização, isto é, a SubClasse possui todas as características e funcionalidades da Super e agora irá definir um outro conjunto de funções e propriedades a fim de especializar alguma funcionalidade. É importante observar que toda SubClasse possui acesso aos membros públicos e protegidos da SuperClasse, porém o inverso não é verdadeiro.</p>
 <p>Toda SubClasse recebe os membros não privados e protegidos da super classe. Isso faz com que a subclasse torne-se capaz de fazer uso de todas funções, como também, atribuir valores às variáveis definidas na super. Toda SubClasse, por definição, será <strong>também</strong> do tipo da SuperClasse, ou seja, se tivermos as classe A e B, onde B é subclasse de A, nós temos que B será do tipo B, e também do tipo A.</p>
 <p>Num primeiro momento a definição e utilização de SubClasse não possui quaisquer diferença no que estudamos até agora, isso porque, temos que sempre ter em mente que <strong>TODA</strong> classe deriva obrigatoriamente de alguma SuperClasse, até porque, toda classe possui propriedades e funcionalidades por padrão, mesmo que estas sejam conceitos implicitos.</p>
 <p>Fato é que não haverá maiores problemas na SubClasse se está não vier a estender as definições da sua SuperClasse. Do contrário, isto é, se a Sub implementar uma variável o função de mesmo nome implementado na Super, o que acontecerá? Há diversas situações onde a SubClasse precisará alterar somente o funcionamento de uma função, isto é, precisará modificar o funcionamento de uma função. Outras vezes, a função não precisará ser redefinida, somente estendida. Como sabemos, a herança é uma característica das classes e não das funções e propriedades.</p>
@@ -550,7 +550,6 @@ c) ambos construtores serão invocados?</blockquote>
 <span class="x">        this-&gt;$a = 10;</span>
 <span class="x">    }</span>
 <span class="x">}</span>
-
 
 <span class="x">$sub = new SubClasse();</span>
 <span class="x">$sub-&gt;sub();</span>

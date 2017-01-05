@@ -196,11 +196,14 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
+<div class="section" id="banco-de-dados">
+<h2>BANCO DE DADOS</h2>
 <p>Banco de dados é uma ferramenta especializada no armazenamento de informações estruturadas. Normalmente, o banco de dados possui uma linguagem especializada para a manipulação de suas estruturas. Inclusão, alteração, exclusão e pesquisa são funções de todo banco de dados e essas ações normalmente são realizadas, pela linguagem que o banco de dados disponibiliza.</p>
 <p>Devido a quantidade de informação que as empresas precisam administrar atualmente, torna-se a cada dia maior a necessidade de bancos de dados mais robustos para suportar esse acúmulo de informações. Consequentemente, a dificuldade em manter toda a estrutura torna-se a cada dia mais complexa, fazendo com que os bancos de dados acabem por ser tornar, sistemas muito maiores do que aqueles que os acessam.</p>
 <p>Temos que uma empresa precisa armazenar desde o seu cadastro de clientes, fornecedores, faturamento, contas à pagar e etc, até as informações da utilização de seu website ou então, de suas redes sociais. E também, a nossa realidade hoje, é que nos próximos 20 anos, as empresas estarão armazenando uma quantidade de informações digital que atualmente, talvez poucos sistema suportariam. Por essa razão, quando um sistema está em fase de projeto, a escolha do banco de dados estará entre as mais importantes.</p>
 <p>Nesse curso, nós estudaremos a estrutura de armazenamento relacional, até porque, essa ainda é a estrutura mais utilizada no mundo. O modelo relacional, armazena dados em tabelas onde alguns campos mantem relações com campos de outras tabelas. Hoje, os bancos de dados relacionais, fornecem como forma de acesso às informações, principalmente através da linguagem de programação declarativa, chamada de SQL - Structured Query Language ou em português, Linguagem de Consulta Estruturada.</p>
 <p>Normalmente, cada linguagem de programação possui uma biblioteca que especifica o acesso a banco de dados relacionais ou então, possui um biblioteca especifica para cada banco de dados. Em Python, nós iremos fazer acesso através do módulu DB-API, que é o acrônimo para Database Application Programming Interface (DB-API). Assim, pense na biblioteca DB-API como uma interface de acesso a banco de dados relacionais e não como uma forma de acesso ao SQLite especificamente. Ou seja, nós temos que a bilbioteca do SQLite3 implementou a interface estabelecida no padrão DB-API. Então, através dessa biblioteca e sua API é que nós trabalharemos e assim, praticamente tudo que fizermos em código Python para manipular uma base SQLite, poderá também ser feito com uma base MySql ou então PostgreSql.</p>
+</div>
 <div class="section" id="o-que-e-um-sgbd-sistema-gerenciador-de-banco-de-dados">
 <h2>O QUE É UM SGBD - SISTEMA GERENCIADOR DE BANCO DE DADOS?</h2>
 <p>SGBD é um acrônimo de Sistema de Gerenciamento de Banco de Dados (SGBD) – do inglês Data Base Management System (DBMS). É um sistema especializado em gerenciar uma grande quantidade de informação. Normalmente, um SGBD é um produto vendido a parte do sistema operacional. Porém, devido ao alto grau de complexidade em manter a coesão entre todas as centenas de milhares de registros, um SGBD, acaba sendo responsável por verificar não somente se o seu trabalho está sendo feito de maneira adequada, mas sim, o mesmo precisa checar se diversas partes do sistema operacional estão funcionando corretamente a fim de garantir a integridade das informações.
@@ -210,22 +213,26 @@ Essa é a razão de hoje haver tantas empresas e tantos diferentes banco de dado
 </div>
 <div class="section" id="padrao-acid">
 <h2>PADRÃO ACID</h2>
-</div>
 <div class="section" id="atomicidade">
-<h2>Atomicidade</h2>
+<h3>ATOMICIDADE</h3>
 <p>Atomicidade é um conceito que determina que todo um conjunto de transações devem ter sido concluída com sucesso ou então, aborta-se toda a operação. O conceito de atomicidade vem da suposta indivisibilidade atômica. O objetivo do conceito é que nenhuma informação de uma determinada transação pode ser modificada separadamente do conjunto. Um excelente exemplo ocorre numa transferência bancária, ou seja, ou o dinheiro é debitado e creditado em outra conta, ou então, nada ocorre. Desta forma, ou todos os processos da transferência devem ser concluído com sucesso para que a operação seja então validada, até porque, se por ventura o dinheiro de uma conta for debitado, este deve obrigatoriamente possuir um destino.</p>
 </div>
 <div class="section" id="consistenicia">
-<h2>CONSISTÊNICIA</h2>
+<h3>CONSISTÊNICIA</h3>
 <p>Consistência é o conceito que determina que em caso de varias transações tentarem alterar o mesmo registro, haverá uma ordem onde cada operação deve ser finalizada em sua plenitude para que outra possa então ocorrer. Desta forma, evita-se que um cliente enxergue o que o outro está fazendo em um determinado momento. Isso porque, a operação do outro usuário pode vir a não ser concluída, logo, o cliente que está assistindo, não pode ter acesso a um registro ou um campo deste, antes da operação ter sido totalmente finalizada.</p>
 </div>
 <div class="section" id="isolamento">
-<h2>ISOLAMENTO</h2>
+<h3>ISOLAMENTO</h3>
 <p>O isolamento é o conceito que determina que na presença de varios clientes acessarem, e modificarem o mesmo registro simultaneamente, a mudança deverá ocorrer numa ordem na qual o resultado final do registro seja o mesmo caso uma operação estivesse sido executada antes ou após a outra.</p>
 </div>
 <div class="section" id="durabilidade">
-<h2>DURABILIDADE</h2>
+<h3>DURABILIDADE</h3>
 <p>Durabilidade é o conceito que determina que após a efetivação de uma operação, ou seja, após a confirmação de que o registro foi salvo com sucesso, este deve assim persistir indefinidamente. Este conceito estabelece que fatores internos ou externos, como a interrupção de energia ou então, ou um possível erro no sistema operacional não comprometam o sucesso de uma ou um conjunto de operações.</p>
+</div>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<p><a class="reference external" href="http://www.sqlite.org/">Site Oficial do SQLite</a></p>
 </div>
 
 				</div>
