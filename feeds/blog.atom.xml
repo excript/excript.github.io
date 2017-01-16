@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/blog.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-11-28T07:00:00-02:00</updated><entry><title>Introdução às IDE's</title><link href="http://excript.com/blog/introducao-ide.html" rel="alternate"></link><published>2016-11-28T07:00:00-02:00</published><updated>2016-11-28T07:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-28:blog/introducao-ide.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/blog.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-01-16T07:00:00-02:00</updated><entry><title>Código Python com Acentuação</title><link href="http://excript.com/blog/codigo-python-com-acentuacao.html" rel="alternate"></link><published>2017-01-16T07:00:00-02:00</published><updated>2017-01-16T07:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-01-16:blog/codigo-python-com-acentuacao.html</id><summary type="html">&lt;div class="section" id="caracteres-latinos"&gt;
+&lt;h2&gt;CARACTERES LATINOS&lt;/h2&gt;
+&lt;p&gt;Recentemente estava dando suporte ao curso que está a venda na Udemy: &lt;a class="reference external" href="http://excript.com/blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html"&gt;Desenvolvimento de Alicações Comerciais com Python e Kivy&lt;/a&gt; e um aluno me perguntou algo relacionado a acentuação com código Python e num primeiro momento, pensei que o mesmo estava se referindo a Strings que contenham caracteres especiais.&lt;/p&gt;
+&lt;p&gt;Continuando a ler a dúvida do meu aluno, percebi que o mesmo não estava se referindo a caracteres acentuados em Strings e sim, o uso de por exemplo, acentuação de variáveis, por exemplo.&lt;/p&gt;
+&lt;p&gt;Me lembrei que já havia lido algo a respeito, porém, é tão óbvio pra todos que programam há muitos anos que caracteres latinos não são aceitos que quando li algum comentário não dei muita importância e não fui realizar quaisquer teste.&lt;/p&gt;
+&lt;p&gt;Mas após um aluno questionar algo que realmente não consegui entender o que estava sendo perguntando, resolvi realizar um simples teste e me surpreendi com a descoberta que fiz!&lt;/p&gt;
+&lt;p&gt;Veja o código a seguir, o mesmo pode ser executado por qualquer interpretador do Python 3x.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
+
+&lt;span class="n"&gt;até_mais&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="n"&gt;amanhã_vai_chover&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+
+&lt;span class="err"&gt;é&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.1&lt;/span&gt;
+&lt;span class="err"&gt;ç&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;até_mais&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;amanhã_vai_chover&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Sendo o código acima executável sem quaisquer problema, sem qualquer aviso ou mensagem, temos todo um conhecimento legado que em tese não possui mais validade. Ou seja, a história de que não podemos utilizar acentuação na declaração de entidade não é mais verdadeira e agora, qualquer caractere da tabela UTF-8 pode ser utilizado, desde que não seja um caractere considerado especial, ou caractere matemático e etc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="consequencias"&gt;
+&lt;h2&gt;CONSEQUÊNCIAS&lt;/h2&gt;
+&lt;p&gt;Essa alteração não deve ser vista, no meu ponto de vista, como algo benéfico! Muito pelo contrário, é trazer novos problemas para dentro do nosso código. É realmente muito legal essas novas possibilidades, no entanto, na prática, na construção de software, o melhor ainda é escrever com os caracteres da tabela ASCII.&lt;/p&gt;
+&lt;p&gt;E justifico o meu posicionamento pela questão de internacionalização, ou seja, salvo se você viver num mundo em que existam somente latinos deverias trabalhar desta forma. Porém, a realidade é que a cada dia estamos mais conectados com pessoas de todos os cantos do mundo e trabalhar com caracteres latinos é, sem qualquer dúvida, assumir um hábito que um dia terá que ser substituido.&lt;/p&gt;
+&lt;p&gt;Até hoje conseguimos sobreviver sem o uso de caracteres acentuados e a cedilha, portanto, não consigo enxergar absolutamente nada que justifique o seu uso, salvo brincadeiras e estudos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/curso-de-python.html"&gt;Curso de Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html"&gt;Desenvolvimento de Alicações Comerciais com Python e Kivy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="python"></category><category term="utf8"></category><category term="encoding"></category><category term="código"></category><category term="acento"></category><category term="programação"></category></entry><entry><title>Introdução às IDE's</title><link href="http://excript.com/blog/introducao-ide.html" rel="alternate"></link><published>2016-11-28T07:00:00-02:00</published><updated>2016-11-28T07:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-11-28:blog/introducao-ide.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
