@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+
+
+<html lang="pt-br"  xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head>
+    <title>DB Browser SQL - eXcript</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="Vi7WdSsBR9oK2RjK_6E8OrtAfzA_mVlNrhlDjt7LXZ0" />
+	<!--<link href="https://plus.google.com/" rel="publisher">	-->
+
+
+
+<link rel="canonical" href="http://excript.com/blog/db-browser-sql.html">
+
+        <meta name="author" content="Cláudio Rogério Carvalho Filho" />
+        <meta name="keywords" content="DB Browser sql,sql,sqlite,blog" />
+    <meta name="description" content="Neste artigo seremos introduzidos a uma aplicação gráfica para criação e manipulação de banco de dados SQLite." />
+
+        <meta property="og:site_name" content="eXcript" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="DB Browser SQL"/>
+        <meta property="og:url" content="http://excript.com/blog/db-browser-sql.html"/>
+
+        <meta property="og:description" content="Neste artigo seremos introduzidos a uma aplicação gráfica para criação e manipulação de banco de dados SQLite."/>
+
+        <meta property="article:published_time" content="16-01-2017" />
+            <meta property="article:section" content="blog" />
+            <meta property="article:tag" content="DB Browser sql" />
+            <meta property="article:tag" content="sql" />
+            <meta property="article:tag" content="sqlite" />
+            <meta property="article:tag" content="blog" />
+            <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
+            <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
+
+
+    <link rel="stylesheet" href="http://excript.com/theme/css/asciidoctor-default.css" type="text/css"/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://excript.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://excript.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://excript.com/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://excript.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://excript.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="eXcript ATOM Feed"/>
+
+        <link href="http://excript.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="eXcript RSS Feed"/>
+
+
+        <link href="http://excript.com/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate"
+              title="eXcript blog ATOM Feed"/>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://excript.com/" class="navbar-brand">
+eXcript            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://excript.com/tag/blog.html">blog</a></li>
+                    <li><a href="http://excript.com/cursos.html">cursos</a></li>
+                    <li><a href="http://excript.com/pages/about.html">quem somos</a></li>
+                    <li><a href="http://doe.excript.com/">DOE</a></li>
+                    <li><a href="http://excript.com/pages/contato.html">contato</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://excript.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container container-content">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://excript.com/blog/db-browser-sql.html"
+                       rel="bookmark"
+                       title="Permalink to DB Browser SQL">
+                        DB BROWSER SQL
+                    </a>
+                </h1>
+
+            </header>
+            <div class="entry-content">
+
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+
+
+
+
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a data-toggle="tab" href="#artigo">ARTIGO</a></li>
+		</ul>
+
+		<div class="tab-content">
+
+			<div class="tab-pane active" id="artigo">
+				<div class="row">
+					
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Neste artigo seremos introduzidos a uma aplicação gráfica para criação e manipulação de banco de dados SQLite.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="db-browser-for-sqlite">
+<h2>DB Browser for SQLite</h2>
+<img alt="A imagem exibe um printscreen do programa DB Browser for SQLite." src="../images/blog/db-browser-sql.png" />
+<p>O <a class="reference external" href="http://sqlitebrowser.org/">DB Browser for SQLite</a> é uma ferramenta visual para manipulação de bases de dados SQLite. O programa vem sendo escrito em C++, constrói a parte gráfica com a biblioteca QT, multiplaforma, opensource e seu código está disponível para download no GitHub.</p>
+<p>O programa é bastante simples e intuitivo, está construído numa única janela com algumas abas que apresentam formas diferentes de interagir com a estrutura do banco de dados SQLite ou com os registros contidos.</p>
+<p>Essa ferramenta permite que programadores não familiariados com os comandos e variações consigamos modificar a estrutura, altera-la, adicionar, alterar e excluir registros e também, possui algumas poucas funcionalidades para manutenção de bases SQLite.</p>
+<p>Por detrás dos panos, o <tt class="docutils literal">DB Browser</tt> se comunicando com o arquivo como se o estivessemos fazendo via linha de comado, porém, o mesmo nos permite o manuseio de dados atráves de uma janela gráfica e um editor de código.</p>
+<p>O <tt class="docutils literal">DB Browser</tt> pode ter seu código baixado diretamente do <a class="reference external" href="http://www.github.com/">GitHub</a> e o projeto aceita implementações de terceiros, bastando somente envia-las e caso aprovadas, as mesmas serão adicionadas ao repositório oficial.</p>
+<p>O programa <tt class="docutils literal">DB Browser</tt> possui uma quantia mínima de botões e Menus, o que faz dele simples e poderoso. Todas as funcionalidade que podem ser feito através do uso de comandos pelo terminal teve uma adaptação gráfica.</p>
+<p>Sendo o <tt class="docutils literal">DB Browser</tt> uma ferramentea uma l, é possível acessar arquivos SQLite sem o conhecimento da linguagem declarativa SQL.</p>
+</div>
+<div class="section" id="principais-recursos">
+<h2>PRINCIPAIS RECURSOS</h2>
+<img alt="A imagem exibe um printscreen onde pode ser visto alguns do recursos citados." src="../images/blog/db-browser-sql2.png" />
+<p>Abaixo temos uma listagem com os principais recursos.</p>
+<ol class="arabic simple">
+<li>Criar e compactar arquivos de banco de dados</li>
+<li>Criar, definir, modificar e excluir tabelas</li>
+<li>Criar, definir e excluir índices</li>
+<li>Procurar, editar, adicionar e excluir registros</li>
+<li>Registros de pesquisa</li>
+<li>Importar e exportar registros como texto</li>
+<li>Importar e exportar tabelas de / para arquivos CSV</li>
+<li>Importar e exportar bases de dados de / para arquivos de despejo do SQL</li>
+<li>Emita consultas SQL e inspecione os resultados</li>
+<li>Examine um log de todos os comandos SQL emitidos pelo aplicativo</li>
+</ol>
+</div>
+<div class="section" id="editor-de-tabelas">
+<h2>EDITOR DE TABELAS</h2>
+<p>O aba &quot;Executar SQL&quot; permite o envio de código SQL a base de dados e abaixo do editor é exibido a resposta referente a execução do código, conforme a imagem a seguir.</p>
+<img alt="Editor de código SQL do DB Broser fo SQLite" src="../images/blog/db-browser-sql3-create-table.png" />
+</div>
+<div class="section" id="editor-de-sql">
+<h2>EDITOR DE SQL</h2>
+<p>As últimas versões do programam possuem junto ao editor de código SQL o recurso de Code Complete que nos mostra toda a lista de comando da linguagem, nome das tabelas ou então o a lista de nome das colunas.</p>
+<img alt="Editor gráfico para a construção e alteração da estrutura de tabelas" src="../images/blog/db-browser-sql-editor.png" />
+</div>
+<div class="section" id="veja-tambem">
+<h2>VEJA TAMBÉM</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://excript.com/drafts/blog/database-navigator.html">Plug-in Database Navigation no PyCharm</a></li>
+</ul>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://sqlitebrowser.org/">DB Browser for SQLite (en)</a></li>
+<li><a class="reference external" href="https://github.com/sqlitebrowser/sqlitebrowser">Repositório de Códigos no Github (en)</a></li>
+</ul>
+</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+<br>
+<br>
+<span class="label label-default"></span>
+Tags
+	<a href="http://excript.com/tag/db-browser-sql.html">DB Browser sql</a>, 	<a href="http://excript.com/tag/sql.html">sql</a>, 	<a href="http://excript.com/tag/sqlite.html">sqlite</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comentários</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'blog/db-browser-sql';
+                var disqus_url = 'http://excript.com/blog/db-browser-sql.html';
+
+            var disqus_config = function () {
+                this.language = "pt";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Por favor, ative o JavaScript para visualizar os comentários <a href="http://disqus.com/?ref_noscript"> disponibilizado por Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+	    <li class="li-sidebar">
+			<div class="fb-page" data-href="https://www.facebook.com/excript/" data-width="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/excript/"><a href="https://www.facebook.com/excript/">eXcript</a></blockquote></div></div>
+	    </li>
+
+	    <li class="li-sidebar">
+			<script src="https://apis.google.com/js/platform.js"></script>
+
+			<script>
+			  function onYtEvent(payload) {
+			    if (payload.eventType == 'subscribe') {
+			      // Add code to handle subscribe event.
+			    } else if (payload.eventType == 'unsubscribe') {
+			      // Add code to handle unsubscribe event.
+			    }
+			    if (window.console) { // for debugging only
+			      window.console.log('YT event: ', payload);
+			    }
+			  }
+			</script>
+
+			<div class="g-ytsubscribe" data-channel="excriptvideo" data-layout="full" data-count="default" data-onytevent="onYtEvent"></div>
+	    </li>
+
+	    <li class="li-sidebar">
+
+		    <!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+			<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'pt-BR'}
+			</script>
+
+			<!-- Posicione esta tag onde você deseja que o widget apareça. -->
+			<div class="g-page" data-width="200" data-href="//plus.google.com/u/0/102371115481264098253" data-rel="publisher"></div>
+
+	    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+	<div class="container">
+		
+
+		<div class="row">
+			<p class="site-info text-center">
+
+			</p><div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h5>eXcript</h5>
+						<p>
+							A eXcript é um projeto de produção audiovisual de conteúdo técnico com foco no autodidatismo.
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>CURSOS</h5>
+						<ul>
+							<li><a href="http://excript.com/curso-de-python.html">PYTHON</a></li>
+							<li><a href="http://excript.com/curso-de-java.html">JAVA</a></li>
+							<li><a href="http://excript.com/curso-php.html">PHP</a></li>
+							<li><a href="http://excript.com/curso-cpp.html">C++</a></li>
+							<li><a href="http://excript.com/curso-c.html">C</a></li>
+							<li><a href="http://excript.com/curso-de-android.html">ANDROID</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>SOCIAL</h5>
+						<ul>
+							<li><a href="http://plus.google.com/+excriptvideo">GOOGLE+</a></li>
+							<li><a href="http://www.facebook.com/excript">FACEBOOK</a></li>
+							<li><a href="http://twitter.com/eXcriptBrasil">TWITTER</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<p></p>
+		</div>
+	</div>
+</footer>
+<script src="http://excript.com/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://excript.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://excript.com/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-72583776-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1684671528414521";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>
