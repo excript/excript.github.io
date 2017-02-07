@@ -354,6 +354,60 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>Alguns módulos em especifico utilizam a biblioteca <a class="reference external" href="https://chipmunk-physics.net/">Chipmunk2D</a> que é um uma simples, leve e rápida plataforma para corpos 2D rígido e que facilita a implementação da matemática, ou seja, a física do game.</p>
 <p>Sendo o Chipmunk2D escrito em C, há uma versão em Cython disponibilizando um bind fácil e rápido para utilização com Python. A plataforma está disponibilizada com a licença MIT.</p>
 </div>
+<div class="section" id="a-magica-do-cython">
+<h2>A MÁGICA DO CYTHON</h2>
+<p>Cython é um superconjunto da linguagem de programação Python e o objetivo é converter código Python para código C (nativo). Cython é tanto um compilador como tamnbém uma linguagem de programação que estende a linguagem Python com a finalidade de mesclar as estruturas da linguagem C com as estrutura da linguagem Python.</p>
+<p>O Cython compila qualquer código Python, ou seja, o mesmo transforma qualquer código Python para código C nativo. Em seguida, o GCC faz o restante do trabalho, compilando código C e gerando um executável nativo à plataforma onde está sendo executado.</p>
+<p>A linguagem Cython trabalha com tipagem estática e dinâmica, porém, quando mais tipado for o código, mais otimizado será sua execução. Um código Python otimizado com a linguagem Cython pode rodar até 5000 vezes mais rápido. Na página do projeto você pode encontar mais gráficos e testes de permormances.</p>
+<p>A seguir, temos um exemplo de um simples trecho de código utilizando somente a linguagem Cython.</p>
+<div class="section" id="declaracao-de-variaveis-com-cython">
+<h3>DECLARAÇÃO DE VARIÁVEIS COM CYTHON</h3>
+<div class="highlight"><pre><span></span><span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span><span class="p">,</span> <span class="nf">j</span><span class="p">,</span> <span class="nf">k</span>
+<span class="k">cdef</span> <span class="kt">float</span> <span class="nf">f</span><span class="p">,</span> <span class="kt">g</span>[42], *<span class="nf">h</span>
+
+<span class="k">cdef</span> <span class="k">struct</span> <span class="nf">Grail</span><span class="p">:</span>
+    <span class="nb">int</span> <span class="n">age</span>
+    <span class="nb">float</span> <span class="n">volume</span>
+</pre></div>
+</div>
+<div class="section" id="declaracao-de-classe-e-funcao-em-cython">
+<h3>DECLARAÇÃO DE CLASSE E FUNÇÃO EM CYTHON</h3>
+<div class="highlight"><pre><span></span><span class="k">cdef</span> <span class="k">class</span> <span class="nf">A</span><span class="p">:</span>
+    <span class="k">cdef</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;A&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="alocacao-de-memorica-em-cython">
+<h3>Alocação de memórica em Cython</h3>
+<div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">random</span>
+<span class="k">from</span> <span class="nn">libc.stdlib</span> <span class="k">cimport</span> <span class="n">malloc</span><span class="p">,</span> <span class="n">free</span>
+
+<span class="k">def</span> <span class="nf">random_noise</span><span class="p">(</span><span class="nb">int</span> <span class="n">number</span><span class="o">=</span><span class="mf">1</span><span class="p">):</span>
+    <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span>
+    <span class="c"># allocate number * sizeof(double) bytes of memory</span>
+    <span class="k">cdef</span> <span class="kt">double</span> *<span class="nf">my_array</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">double</span> <span class="o">*&gt;</span><span class="n">malloc</span><span class="p">(</span><span class="n">number</span> <span class="o">*</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">double</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">my_array</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">MemoryError</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ran</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+            <span class="n">my_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ran</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">[</span> <span class="n">my_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="p">]</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="c"># return the previously allocated memory to the system</span>
+        <span class="n">free</span><span class="p">(</span><span class="n">my_array</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="o-kivy-e-o-cython">
+<h3>O KIVY E O CYTHON</h3>
+<p>A biblioteca Kivy está debruçada sobre o Cython e todo código que escrevemos será compilado para código C. Os principais módulos da biblioteca estão escritos com Cython e utilizando tipagem estática com a finalidade e obter máxima performance.</p>
+<p>Porém, a maior parte da biblioteca não possui qualquer otimização, até porque, o objetivo é utilizar a linguagem Python. Por isso, podemos melhorar a performance das aplicações construídas com Kivy, bastando somente, converter as principais estruturas da biblioteca Kivy para código Cython.</p>
+<p>Converter código Python para Cython com a finalidade de obter uma melhor performance é uma atividade relativamente simples e pouco sujeito a erros, é uma solução para aqueles momento em que realmente precisamos de muita performance e, acredito que num futuro breve, várias partes da biblioteca serão convertidas a cada nova versão se houver empresas interessas em obter uma excelente performance.</p>
+<p>Essa é mais uma das vantagens de trabalhar com a biblioteca Kivy! Temos a capacidade de melhorar a performance facilmente da nossa aplicação, o que normalmente não acontece com outras biblitoecas.</p>
+</div>
+</div>
 <div class="section" id="livros-publicados">
 <h2>LIVROS PUBLICADOS</h2>
 <ul class="simple">
@@ -392,6 +446,18 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>Aplicações escritas com o framework Kivy utilizam mais recursos do dispositivo e aplicações que precisam ser executadas em background devem realizar testes de consumo de energético antes de iniciar o desenvolvimento.</p>
 <p>A biblioteca Kivy é executada em cima da placa de vídeo com a aceleração de vídeo ligada. Se o código fosse executado em cima do processador do dispositivo, haveria garga-los na renderização e é graças a aceleração de vídeo que há tantas ferramentas de desenvolvimento híbridas.</p>
 <p>Por fim, uma aplicação construída com o Kivy irá consumir maior carga energética e utlizará aproximadamente 40mg de memória RAM. Com relação a memória RAM não há preocupação, até porque, a maior parte dos dispositivos atuais possuem quantidades generosas de memória RAM. Porém, o uso da bateria deve ser considerado e a única forma que você possui pra realmente ter certeza se o seu projeto pode ser construído com o Kivy será através da realização de testes.</p>
+</div>
+<div class="section" id="tempo-de-abertura">
+<h3>TEMPO DE ABERTURA</h3>
+<p>Aplicações Kivy possuem um tempo de carregamento maior quando comparado a aplicações nativas. A razão pelo tempo adicional se deve ao carregamento de bibliotecas e a inicialização de uma Máquina Virtual Python, ou seja, uma versão compacta do interpretador do Python.</p>
+<p>O tempo de abertura da aplicação tende a desaparecer com o tempo em vista da evolução do hardware</p>
+</div>
+<div class="section" id="widgets-nativos">
+<h3>WIDGETS NATIVOS</h3>
+<p>A biblioteca Kivy, ao contrário de outras biblioteca gráficas, não disponibiliza um conjunto de Widgets amplo e robusto para a construção de telas que permitam a entrada de dados pelo usuário.</p>
+<p>O foco da equipe é disponibilizar um framework que possas ser executado em várias plataformas nativamente e uma interface para acesso ao hardware simples e padronizada. Por isso, num primeiro momento, alguns usuários podem se decepcionar ao conhecer o catalogo de componentes.</p>
+<p>Há alguns projetos paralelos como o KivyMD que estão construindo mega pacotes de componentes seguindo um esquema de cores e estilos como por exemplo, o Material Design da Google.</p>
+<p>Portanto, a pequena quantidade de Widgets e a sua simplicidade não são um problema, mesmo assim, num primeiro momento, muitos usuários acabam frustrados com a pequena gama de opções.</p>
 </div>
 </div>
 <div class="section" id="veja-tambem">
