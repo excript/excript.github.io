@@ -1,5 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - Cláudio Rogério Carvalho Filho</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/claudio-rogerio-carvalho-filho.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-01-16T10:00:00-02:00</updated><entry><title>Código Python com Acentuação</title><link href="http://excript.com/blog/codigo-python-com-acentuacao.html" rel="alternate"></link><published>2017-01-16T10:00:00-02:00</published><updated>2017-01-16T10:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-01-16:/blog/codigo-python-com-acentuacao.html</id><summary type="html">&lt;div class="section" id="caracteres-latinos"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - Cláudio Rogério Carvalho Filho</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/claudio-rogerio-carvalho-filho.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-02-02T09:00:00-02:00</updated><entry><title>Gerenciado de Pacotes pip</title><link href="http://excript.com/blog/gerenciador-pacotes-python-pip.html" rel="alternate"></link><published>2017-02-02T09:00:00-02:00</published><updated>2017-02-02T09:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-02-02:/blog/gerenciador-pacotes-python-pip.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Neste artigo estudaremos a ferramenta que permite instalar pacotes do Python&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="gerenciador-de-pacotes-pip"&gt;
+&lt;h2&gt;GERENCIADOR DE PACOTES &lt;cite&gt;pip&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;O Python possui um conjunto de pacotes, classes e funções em sua biblioteca padrão bastante amplo. Ainda assim, é comum precisarmos de bibliotecas mais especificas, como por exemplo a biblioteca kivy, ou o Django, Selenium …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Neste artigo estudaremos a ferramenta que permite instalar pacotes do Python&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="gerenciador-de-pacotes-pip"&gt;
+&lt;h2&gt;GERENCIADOR DE PACOTES &lt;cite&gt;pip&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;O Python possui um conjunto de pacotes, classes e funções em sua biblioteca padrão bastante amplo. Ainda assim, é comum precisarmos de bibliotecas mais especificas, como por exemplo a biblioteca kivy, ou o Django, Selenium entre outras.&lt;/p&gt;
+&lt;p&gt;Para trabalharmos com bibliotecas de terceiros temos 2 opções. A primeira é ir até o site ou repositório do desenvolvedor, fazer o download e em seguida instalar em nosso ambiente de trabalho.&lt;/p&gt;
+&lt;p&gt;A segunda forma é utilizar um gerenciador de pacotes.&lt;/p&gt;
+&lt;p&gt;Junto ao site do Python existe um repositório de códigos com pacotes construídos por terceiros que podemos utilizar instalar e utilizar em nossas aplicações. Este repositório é chamado de &lt;a class="reference external" href="https://pypi.python.org/pypi"&gt;Python Package Index&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Atualmente, toda a instalação do Python instala um utilitário de nome &lt;cite&gt;pip&lt;/cite&gt;. O termo pip é um acrônimo de &lt;strong&gt;Índice de Pacotes Python&lt;/strong&gt;. Essa é uma forma de acessarmos o repositório de código oficial através da linha de comando e somos capazes de instalar, atualizar e remover pacote.z&lt;/p&gt;
+&lt;p&gt;Em algumas distribuições Linux que trazem o Python instalado pode acontecer do utilitário pip não ser disponibilizado. No Ubuntu por exemplo, para instalarmos, basta executarmos o seguinte código:&lt;/p&gt;
+&lt;p&gt;Debian/UBUNTU/Linux Mint:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Fedora:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Via yum:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;CentOS&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Primeiro ative o repositório EPEL e em seguida execute no terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ArchLinux:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo pacman -S python-pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="versao"&gt;
+&lt;h2&gt;VERSÃO&lt;/h2&gt;
+&lt;p&gt;Pra descobrirmos a versão do &lt;cite&gt;pip&lt;/cite&gt; instalada em nosso ambiente, devemos executar o comando:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip --version
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="atualizando-o-pip"&gt;
+&lt;h2&gt;ATUALIZANDO O &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;É importante atualizarmos o utilitário &lt;cite&gt;pip&lt;/cite&gt; antes de utiliza-lo. Para atualizamos o &lt;cite&gt;pip&lt;/cite&gt; utilizamos o próprio &lt;cite&gt;pip&lt;/cite&gt;. Para isso, digite no terminal o código a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install --upgrade pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Feito isso, temos a certeza de estarmos utilizando a última versão do instalador de pacotes oficial do Python o &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="instalando-pacotes-com-o-pip"&gt;
+&lt;h2&gt;INSTALANDO PACOTES COM O &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;A instalação de pacotes com o &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; é relativamente simples e é feito através da linha de comando. Para talarmos um pacote, temos que abrir o terminal e digitar:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install algum-nome-de-pacote
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Em seguida, o pacote será baixado e instalado junto a instalação do Python em que o &lt;cite&gt;pip&lt;/cite&gt; está contido. Para desinstalar pacotes, utilizamos um comando similar, porém, ao invés de utilizarmos a instrução &lt;tt class="docutils literal"&gt;install&lt;/tt&gt; utilizaremos &lt;tt class="docutils literal"&gt;uninstall&lt;/tt&gt;, por exemplo:&lt;/p&gt;
+&lt;p&gt;Alguma vezes desejaremos instalar um pacote com uma determinada versão, pra isso, fazermos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install algum-nome-de-pacote&lt;span class="o"&gt;==&lt;/span&gt;0.0
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip uninstall algum-nome-de-pacote
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="lista-de-pacotes-instalados"&gt;
+&lt;h2&gt;LISTA DE PACOTES INSTALADOS&lt;/h2&gt;
+&lt;p&gt;Para sabermos todos os pacotes instalados, utilizamos a instrução &lt;tt class="docutils literal"&gt;freeze&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip freeze
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exportando-lista-de-pacotes-instalados"&gt;
+&lt;h2&gt;EXPORTANDO LISTA DE PACOTES INSTALADOS&lt;/h2&gt;
+&lt;p&gt;Algumas vezes desejaremos exportar os pacotes instalados num ambiente virtual para por exemplo, fazermos backup ou então, para adicionarmos a documentação de algum Script os pacotes que devem ser instalados.&lt;/p&gt;
+&lt;p&gt;Pra exportarmos todos os nomes para um arquivo, devemos executar o seguinte comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip freeze &amp;gt; requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Por padrão, arquivos de nome &lt;cite&gt;requirements.txt&lt;/cite&gt; contidos na raiz de um projetos contém a listagem de pacotes que precisa ser instalados.&lt;/p&gt;
+&lt;p&gt;Da mesma forma que conseguimos exportar para um arquivos os pacotes instalados, também conseguimos instalar uma lista de pacotes através de um arquivo, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="obtendo-informacoes-do-pacote"&gt;
+&lt;h2&gt;OBTENDO INFORMAÇÕES DO PACOTE&lt;/h2&gt;
+&lt;p&gt;Todo pacote possui um conjunto de metadados que identificam o autor, a empresa, a versão, a licença e várias outras informações. Para ver esses metadados, devemos executar o seguinte comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip show pacote
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;OBTENDO INFORMAÇÕES DO PACOTE&lt;/h2&gt;
+&lt;p&gt;Para buscarmos por um nome dentro do repositório de código, devemos proceder da seguinte forma:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip search &amp;lt;query&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="python"></category><category term="pip"></category></entry><entry><title>Código Python com Acentuação</title><link href="http://excript.com/blog/codigo-python-com-acentuacao.html" rel="alternate"></link><published>2017-01-16T10:00:00-02:00</published><updated>2017-01-16T10:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-01-16:/blog/codigo-python-com-acentuacao.html</id><summary type="html">&lt;div class="section" id="caracteres-latinos"&gt;
 &lt;h2&gt;CARACTERES LATINOS&lt;/h2&gt;
 &lt;p&gt;Recentemente estava dando suporte ao curso que está a venda na Udemy: &lt;a class="reference external" href="http://excript.com/blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html"&gt;Desenvolvimento de Alicações Comerciais com Python e Kivy&lt;/a&gt; e um aluno me perguntou algo relacionado a acentuação com código Python e num primeiro momento, pensei que o mesmo estava se referindo a Strings que contenham caracteres …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="caracteres-latinos"&gt;
 &lt;h2&gt;CARACTERES LATINOS&lt;/h2&gt;
@@ -605,6 +726,11 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;p&gt;Essa é mais uma das vantagens de trabalhar com a biblioteca Kivy! Temos a capacidade de melhorar a performance facilmente da nossa aplicação, o que normalmente não acontece com outras biblitoecas.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="section" id="codigo-fonte"&gt;
+&lt;h2&gt;CÓDIGO-FONTE&lt;/h2&gt;
+&lt;p&gt;É comum a dúvida em relação se o código fonte está ou não disponível numa aplicação construida com a biblioteca Kivy. Como dito acima, o código-fonte do Python é compilado utilizando o Cython, portanto, somente códigos enviados como sendo por exemplo, uma String é que não seriam compilados pelo Cython!&lt;/p&gt;
+&lt;p&gt;Portanto, não é possível acessar o código-fonte da aplicação, salvo se o mesmo for descompilado de C, mas dúvido que alguém faça isso.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="livros-publicados"&gt;
 &lt;h2&gt;LIVROS PUBLICADOS&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -656,6 +782,11 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;p&gt;Há alguns projetos paralelos como o KivyMD que estão construindo mega pacotes de componentes seguindo um esquema de cores e estilos como por exemplo, o Material Design da Google.&lt;/p&gt;
 &lt;p&gt;Portanto, a pequena quantidade de Widgets e a sua simplicidade não são um problema, mesmo assim, num primeiro momento, muitos usuários acabam frustrados com a pequena gama de opções.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="visao-geral"&gt;
+&lt;h2&gt;VISÃO GERAL&lt;/h2&gt;
+&lt;p&gt;O blog &lt;a class="reference external" href="http://cadernodelaboratorio.com.br/category/kivy/"&gt;Caderno de Laboratório&lt;/a&gt; foi o primeiro blog brasileiro a disponiblizar vários tutorias e diversos exemplos sobre como utilizar a biblioteca Kivy. O pessoal continua produzindo mais artigos sobre o Kivy e em Português, por isso, vale a pena conferir!&lt;/p&gt;
+&lt;p&gt;O site &lt;a class="reference external" href="https://mavins.com.br/blog/desenvolva-aplicativos-para-android-ios-com-python-e-kivy"&gt;Mavins produziu um artigo&lt;/a&gt; explicando rapídamente as principais funcionalidades da biblioteca Kivy, vale a pena conferir!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
@@ -5314,6 +5445,14 @@ TCP/IP --&gt;
 &lt;p&gt;Uma IDE, normalmente é constituida por um editor de texto especializado numa determinada linguagem, com um compilador acoplado e integrado de tal forma, que basta pressionarmos uma tecla ou clicarmos num item de menu para compilarmos, &amp;quot;linkarmos&amp;quot; e executarmos um projeto.&lt;/p&gt;
 &lt;p&gt;Uma IDE deve ser entendida como uma ferramenta que auxilia no desenvolvimento de software. Atualmente, as IDE contém cada vez mais recursos e ferramentas acopladas e também, as mesmas possuem a capacidade para a construção de plugins, ou seja, pequenos programas utilitários que são acoplados a IDE.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class="section" id="tuio"&gt;
+&lt;h2&gt;TUIO&lt;/h2&gt;
+&lt;p&gt;O termos TUIO é um acrônimo de &lt;cite&gt;Tangible User Interface Objects&lt;/cite&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pep"&gt;
+&lt;h2&gt;PEP&lt;/h2&gt;
+&lt;p&gt;Python Enhancement Proposal&lt;/p&gt;
+&lt;/div&gt;
 </content><category term="dicionário"></category><category term="glossário"></category><category term="termos técnicos"></category></entry><entry><title>Herança em PHP</title><link href="http://excript.com/php/heranca-php.html" rel="alternate"></link><published>2016-06-11T06:10:00-03:00</published><updated>2016-06-11T06:10:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:/php/heranca-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -9567,10 +9706,15 @@ Alt + N - para avançar. O 'N' vem de &amp;quot;Next&amp;quot;.&lt;/p&gt;
 &lt;p&gt;A seguir, temos as teclas de atalho que estudamos nessa aula e também, os atalhos que podem ser considerados os principais da utilização básica do IDLE.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol class="arabic simple"&gt;
-&lt;li&gt;Alt + P -&amp;gt; retorna a última instrução&lt;/li&gt;
-&lt;li&gt;Alt + N -&amp;gt; retorna a instrução seguinte&lt;/li&gt;
+&lt;li&gt;Alt + P -&amp;gt; retorna última instrução&lt;/li&gt;
+&lt;li&gt;Alt + N -&amp;gt; avança para a próxima instrução&lt;/li&gt;
 &lt;li&gt;Ctrl + F6 -&amp;gt; Reinicia o IDLE&lt;/li&gt;
 &lt;li&gt;Ctrl + N -&amp;gt; Abre o editor de Script´s de várias linhas&lt;/li&gt;
+&lt;li&gt;Ctrl + Enter -&amp;gt;&lt;/li&gt;
+&lt;li&gt;Ctrl + C -&amp;gt; interrompe a execução (Script em looping)&lt;/li&gt;
+&lt;li&gt;Ctrl + Espaço -&amp;gt; abre o Code Complete&lt;/li&gt;
+&lt;li&gt;Tab -&amp;gt; abre o Code Complete&lt;/li&gt;
+&lt;li&gt;Ctrl + J -&amp;gt; adiciona linha e move o cursor para a mesma&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
@@ -10018,15 +10162,15 @@ O que faz da linguagem Python_ ser especial? --&gt;
 &lt;/div&gt;
 &lt;div class="section" id="faq"&gt;
 &lt;h2&gt;FAQ&lt;/h2&gt;
-&lt;/div&gt;
 &lt;div class="section" id="posso-usar-o-dev"&gt;
-&lt;h2&gt;POSSO USAR O DEV++?&lt;/h2&gt;
+&lt;h3&gt;POSSO USAR O DEV++?&lt;/h3&gt;
 &lt;p&gt;Sim! Você pode utilizar quaisquer IDE ou mesmo software que permita salvar documento em modo texto.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="posso-utilizar-outra-ide"&gt;
-&lt;h2&gt;POSSO UTILIZAR OUTRA IDE?&lt;/h2&gt;
+&lt;h3&gt;POSSO UTILIZAR OUTRA IDE?&lt;/h3&gt;
 &lt;p&gt;Sim! É possível acompanhar as aulas utilizando quaisquer IDE do mercado. Porém, esteja certo de que as configurações da IDE estejam corretas, como por exemplo, qual compilador utilizar para compilar e executar o código.&lt;/p&gt;
 &lt;p&gt;Nunca é demais repetir que não existe um programa que deve ser utilizado obrigatoriamente para construir outros programas. Todas as IDE são, em sua definição mais primitiva, editores de texto puro. Porém, esses software incorporaram uma série de funcionalidades que ajudam no desenvolvimento de software e assim, acabam sendo utilizadas pelos desenvolvedores.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="qual-a-diferenca-entre-a-linguagem-c-e-a-linguagem-c"&gt;
 &lt;h3&gt;QUAL A DIFERENÇA ENTRE A LINGUAGEM C E A LINGUAGEM C++?&lt;/h3&gt;
 &lt;p&gt;O C++ é uma extensão da linguagem C. Inclusive, o &lt;tt class="docutils literal"&gt;++&lt;/tt&gt; significa incremento e quer dizer que, o &lt;tt class="docutils literal"&gt;C++&lt;/tt&gt; é a evolução da &lt;tt class="docutils literal"&gt;Linguagem C&lt;/tt&gt;. Evolução &lt;strong&gt;NÃO É&lt;/strong&gt; sinônimo de melhor! O C++ é uma linguagem que permite um desenvolvimento melhor estruturado, porém, essa estruturação faz com que o mesmo seja mais lento do que a linguagem C. Até hoje, a linguagem C é amplamente utilizada, bem como o C++ e, há situações em que o C é a melhor opção mas, na maioria das vezes, o C++ é quem será.&lt;/p&gt;
@@ -10055,13 +10199,25 @@ Não existe linguagem melhor do que a outra, o que existe são linguagens que po
 &lt;p&gt;Em programação, uma biblioteca é normalmente um conjunto de arquivos dentro de uma mesma pasta e que contém dezenas e/ou centenas de arquivos com código-fonte, e dentro destes há milhares de métodos, funções, variáveis, constates e que possui um propósito bem definido. O objetivo é proporcionar a outros programadores um conjunto de recursos para a realização de uma determinada tarefa, como por exemplo, o Desenvolvimento de Jogos, Desenvolvimento Gráfico, Desenvolvimento WEB e etc.&lt;/p&gt;
 &lt;p&gt;Para o programador que irá utilizar determinada biblioteca, bastará somente ter conhecimento das funcionalidades, isto é, Classe, Funções, Métodos internos e também, ter um pouco de conhecimento sobre a organização dessa biblioteca para que o mesmo seja capaz de utiliza-la.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
 &lt;div class="section" id="e-possivel-construir-janelas-como-botoes-e-etc"&gt;
-&lt;h2&gt;É POSSÍVEL CONSTRUIR JANELAS COMO BOTÕES E ETC?&lt;/h2&gt;
+&lt;h3&gt;É POSSÍVEL CONSTRUIR JANELAS COMO BOTÕES E ETC?&lt;/h3&gt;
 &lt;p&gt;Sim e não!&lt;/p&gt;
 &lt;p&gt;Linguagens de programação como C, C++, Java, Python, PHP, Ruby, JavaScript e etc, são linguagens GENÉRICAS, isto é, servem para vários propósito, como por exemplo, manipular banco de dados, manipular a memória diretamente, OU ENTÃO, manipular a parte gráfica.&lt;/p&gt;
 &lt;p&gt;Cada plataforma existente, por exemplo, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;MS-DOS&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Linux&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Windows&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;MacOSX&lt;/tt&gt; e etc, implementam bibliotecas para facilitar o desenho de janelas, botões, caixas de entradas e etc. Essas bibliotecas, desenvolvida pelo fabricante de cada plataforma, são inicialmente utilizado no desenvolvimento do próprio Sistema Operacional e, num momento posterior, é disponibilizado aos programadores uma maneira de acessar esses códigos através da linguagem que eles preferirem.&lt;/p&gt;
 &lt;p&gt;Por isso, linguagens de programação não possuem relação com as bibliotecas gráficas. Uma linguagem só será capaz de construir janelas e botões num sistema operacional se algum programador desenvolver um código que interaja com as bibliotecas gráficas nativas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="porque-atribuir-zero-na-declaracao-de-variaveis-inteiras"&gt;
+&lt;h3&gt;PORQUE ATRIBUIR ZERO NA DECLARAÇÃO DE VARIÁVEIS INTEIRAS?&lt;/h3&gt;
+&lt;p&gt;Muitos alunos questionam a razão pela qual atribuímos o valor zero na declaração de variáveis inteiras, por exemplo, vamos escrever um simples trecho de código para exemplificar melhor.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, declaramos uma variavel &lt;code&gt;var&lt;/code&gt; do tipo &lt;code&gt;int&lt;/code&gt; e atribuimos o valor &lt;code&gt;0&lt;/code&gt; a mesma ainda no momento da declaração, por qual razão fizemos isso?&lt;/p&gt;
+&lt;p&gt;Variáveis são regiões na memória do computador que acessamos através do nome que utilizamos no código, neste caso, utilizamos o nome &lt;code&gt;var&lt;/code&gt;. Quando a nossa aplicação registra uma nova variável, essa poderá ter qualquer valor.&lt;/p&gt;
+&lt;p&gt;Com o objetivo de normatizarmos nosso código, sempre inicializamos as variáveis inteiras com o valor zero, logo, teremos uma certa garantia de qual valor que uma variável possui se esta ainda não foi utilizada.&lt;/p&gt;
+&lt;p&gt;O C++ não obriga a inicialização, porém, essa é uma boa prática de programação e você deve utiliza-la!&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="lista-das-aulas"&gt;
 &lt;h2&gt;LISTA DAS AULAS&lt;/h2&gt;
@@ -18401,7 +18557,7 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
     &lt;/div&gt;
 &lt;div class="section" id="definicao-de-tupla"&gt;
 &lt;h2&gt;DEFINIÇÃO DE TUPLA&lt;/h2&gt;
-&lt;p&gt;Tupla é uma Lista imutável. O que diferencia a Estrutura de Dados Lista da Estrutura de Dados Tupla é que a primeira pode ter elementos adicionados a qualquer momento, enquanto que …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+&lt;p&gt;Tupla é uma Lista imutável. O que diferencia a &lt;a class="reference external" href="http://excript.com/python/list-class-python.html"&gt;Estrutura de Dados Lista&lt;/a&gt; da Estrutura de Dados Tupla é que a primeira pode ter elementos adicionados a qualquer momento, enquanto que …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -18417,12 +18573,17 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
     &lt;/div&gt;
 &lt;div class="section" id="definicao-de-tupla"&gt;
 &lt;h2&gt;DEFINIÇÃO DE TUPLA&lt;/h2&gt;
-&lt;p&gt;Tupla é uma Lista imutável. O que diferencia a Estrutura de Dados Lista da Estrutura de Dados Tupla é que a primeira pode ter elementos adicionados a qualquer momento, enquanto que a segunda estrutura, após definida, não permite a adição ou remoção de elementos.&lt;/p&gt;
-&lt;p&gt;Devemos pensar num primeiro momento, que a Tupla é uma lista que restringe a adição, alteração, remoção e o ordenamento do elementos. No entanto, pensar numa tupla como sendo somente como lista imutável, acaba por ser um erro, até porque, a função de ambas ainda que semelhantes, não é igual. Ou seja, uma tupla possui as mesmas características que fundamentam as Listas, mas um propósito diferente das 2 estruturas e a razão pela qual ambas estão definidas, é bastante diferente e muitas vezes, levamos bastante tempo para realmente perceber tamanha sutileza.&lt;/p&gt;
-&lt;p&gt;Segundo Phillip J. Eby, contribuidor de diversos projetos do Python e criador da ferramenta Setuptools, numa discussão sobre a remoção das tuplas para a versão 3x do Python, trouxe uma argumentação bastante interessante, diz ele:
-&amp;quot;É um equívoco pensar nas tuplas como listas constantes. As listas são destinadas a serem sequências homogêneas, enquanto que os Tuplas são estruturas de dados heterogêneas.&amp;quot;&lt;/p&gt;
-&lt;p&gt;Em outras palavras, ele disse que em uma lista, as informações, geralmente são de um mesmo tipo, por exemplo, uma lista de e-mails. Enquanto que numa tupla, os elementos são de tipos distintos, por exemplo, o dia, o dia da semana, o mês e o ano e etc.&lt;/p&gt;
-&lt;p&gt;Tudo que nós estudamos até o momento a respeito de listas, pode ser utilizado para manipular e controlar uma Tupla, salvo a alteração da lista ou de seus elementos.&lt;/p&gt;
+&lt;p&gt;Tupla é uma Lista imutável. O que diferencia a &lt;a class="reference external" href="http://excript.com/python/list-class-python.html"&gt;Estrutura de Dados Lista&lt;/a&gt; da Estrutura de Dados Tupla é que a primeira pode ter elementos adicionados a qualquer momento, enquanto que a segunda estrutura, após definida, não permite a adição ou remoção de elementos.&lt;/p&gt;
+&lt;p&gt;Devemos pensar num primeiro momento, que a Tupla é uma lista que restringe a adição, alteração, remoção e o ordenamento do elementos. No entanto, pensar numa tupla como sendo somente uma lista imutável não está totalmente correto.&lt;/p&gt;
+&lt;p&gt;Tuplas possuem muitas características das listas Listas, porém, possui um propósito diferente e não raramente levamos um tempo para conseguir realmente perceber a sutil diferença.&lt;/p&gt;
+&lt;p&gt;Segundo Phillip J. Eby, contribuidor de diversos projetos do Python e criador da ferramenta Setuptools, numa discussão sobre a remoção das tuplas para a versão 3x do Python, trouxe uma argumentação bastante interessante, diz ele:&lt;/p&gt;
+&lt;blockquote&gt;
+É um equívoco pensar nas tuplas como listas constantes. As listas são destinadas a serem sequências homogêneas, enquanto que os Tuplas são estruturas de dados heterogêneas.
+Phillip J. Eby&lt;/blockquote&gt;
+&lt;p&gt;Em outras palavras, ele disse que em uma lista, as informações, geralmente são de um mesmo tipo, por exemplo, uma lista de e-mails. Enquanto que numa tupla, os elementos são de tipos distintos, por exemplo, uma Tupla que contém o dia, o dia da semana, o mês e o ano.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;segunda-feita&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Fevereiro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2022&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O que estudamos até o momento a respeito de listas, pode ser utilizado para manipular e controlar Tuplas, salvo a alteração da lista ou de seus elementos.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -18434,14 +18595,37 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;y&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ol class="arabic simple"&gt;
-&lt;li&gt;Uma Tupla é definida da mesma forma que uma lista, o que as diferencias, são os caracteres que as delimitam. Uma Lista, tem seus elementos delimitados por colchetes, enquanto que um Tupla, tem seus elementos delimitados por parêntesis.&lt;/li&gt;
-&lt;li&gt;A ordem dos elementos numa Tupla será a ordem na qual os elementos foram definidos, ou seja, não é possível ordenar em tempo de execução os elementos.&lt;/li&gt;
+&lt;li&gt;Uma Tupla é definida da mesma forma que uma lista, o que as diferencias, são os caracteres que as delimitam. Uma Lista, tem seus elementos delimitados por colchetes, enquanto que a Tupla, tem seus elementos delimitados por parêntesis.&lt;/li&gt;
+&lt;li&gt;A ordem dos elementos numa Tupla será a ordem na qual estes foram definidos, ou seja, não é possível ordenar em tempo de execução os elementos.&lt;/li&gt;
 &lt;li&gt;O primeiro elemento de uma Tupla também possui índice igual a 0 e o último índice igual a -1. Assim o acesso a elementos, bem como o fatiamentos funciona da mesma forma como já estudado no fatiamento de Listas.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class="section" id="notacao"&gt;
 &lt;h2&gt;NOTAÇÃO&lt;/h2&gt;
-&lt;p&gt;O parêntesis é a notação que determina um conjunto de elementos pertencentes a Tupla, essa é a definição padrão. No entanto, na prática, toda sequência de elementos separados por vírgula será reconhecido pela linguagem como sendo uma Tupla.&lt;/p&gt;
+&lt;p&gt;É comum diferenciarmos a lista da tupla pelo seus caracteres delimitadores. Por exemplo, os elementos de uma lista são delimitados por colchetes, enquanto que os elementos de uma tupla por parêntesis.&lt;/p&gt;
+&lt;p&gt;Distinguir as estruturas pelo seus caracteres delimitadores não é um erro, porém, na documentação oficial do Python consta que uma tupla é declarada pela utilização do operador vírgula, e que é utilizado para separar os elementos.&lt;/p&gt;
+&lt;p&gt;A única exceção é na declaração de tuplas vazias. No código a seguir iremos declarar algumas tuplas e adicionaremos comentários em cima de cada declaração.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#tupla declarada sem o uso de parentesis&lt;/span&gt;
+&lt;span class="n"&gt;t1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="c1"&gt;#tupla declarada com o uso de parentesis&lt;/span&gt;
+&lt;span class="n"&gt;t2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;#tupla com um único elemento&lt;/span&gt;
+&lt;span class="n"&gt;t3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+&lt;span class="c1"&gt;#tupla vazia&lt;/span&gt;
+&lt;span class="n"&gt;t4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Inicialmente declaramos as variáveis &lt;code&gt;t1&lt;/code&gt; e &lt;code&gt;t2&lt;/code&gt; e associamos a cada uma tupla contendo 3 elementos. Ambas declarações são identicas e possuem um mesmo resultado.&lt;/p&gt;
+&lt;p&gt;Em seguida declaramos uma terceira tupla &lt;code&gt;t3&lt;/code&gt; que possui um único elemento. Observe que a declaração é finalizada com uma vírgula! É dessa forma que declaramos tuplas com um único elemento.&lt;/p&gt;
+&lt;p&gt;Por fim, declaramos uma tupla vazia &lt;code&gt;t4&lt;/code&gt; e nesta situação foram os parentesis que determinam o tipo do objeto declarado. Essa é a única situação onde é obrigatório a utilização dos parentesis na declaração da tupla.&lt;/p&gt;
+&lt;p&gt;Vejamos agora o que a documentação do Python trás sobre a declaração de tuplas:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Observe que é a vírgula que é realmente define uma tupla, não os parênteses. Os parênteses são opcionais, exceto no caso da tupla vazia, ou quando são necessários para evitar a ambigüidade sintática. Por exemplo, :code:`f(a, b, c)` é uma chamada de função com três argumentos, enquanto :code:`f((a, b, c))` é uma chamada de função com uma tupla-3 como único argumento.
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-tiplo-tuple"&gt;
+&lt;h2&gt;O TIPLO &lt;code&gt;tuple&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;No código a seguir, vamos obter o tipo reconhecido pelo Python.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nc"&gt;tuple&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;gt;&lt;/span&gt;
@@ -18467,15 +18651,15 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
 &lt;/div&gt;
 &lt;div class="section" id="declaracao-de-tuplas"&gt;
 &lt;h2&gt;DECLARAÇÃO DE TUPLAS&lt;/h2&gt;
-&lt;p&gt;Uma Tupla é uma estrutura que contém nenhum ou vários elementos. Os elementos de uma Tupla devem ser separados por vírgulas e delimitados por parêntesis. Uma sequência qualquer, onde cada os elementos estão separados por parêntesis é reconhecido pela linguagem como sendo um tupla, mesmo que os elementos não estejam delimitados por colchetes.&lt;/p&gt;
-&lt;p&gt;As tuplas são declaradas de maneira bastante semelhante as Listas, onde os elementos são separados pelo uso de vírgulas e ambas as estruturas são delimitadas por uma simbologia e está acaba por definir a estrutura. Para a VM do Python, uma série de objetos separados por vírgula e na ausência de um delimitador nas extremidades será considerado uma Tupla.&lt;/p&gt;
+&lt;p&gt;Uma Tupla é uma estrutura que contém nenhum ou vários elementos. Os elementos de uma Tupla devem ser separados por vírgulas e podem ser delimitados por parêntesis. Uma sequência qualquer, onde os elementos estão separados por vírgula é reconhecido pela linguagem como sendo um tupla, mesmo que os elementos não estejam delimitados por parentesis.&lt;/p&gt;
+&lt;p&gt;As tuplas são declaradas de maneira bastante semelhante as Listas, onde os elementos são separados pelo uso de vírgulas e ambas as estruturas são delimitadas por uma simbologia e esta acaba por definir a estrutura.&lt;/p&gt;
 &lt;p&gt;No código abaixo, definiremos uma Tupla contendo alguns dias da semana.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dias_da_semana&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;domingo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;segunda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;terça&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;quarta&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dias_da_semana&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;domingo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;segunda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;terça&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;quarta&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Podemos rapidamente perceber a enorme semelhança entre a definições de Listas e Tuplas.&lt;/p&gt;
-&lt;p&gt;Podemos declarar as Tuplas de maneira implícita e explicita, como podemos ver no exemplo a seguir:&lt;/p&gt;
+&lt;p&gt;É possível declarar as Tuplas de maneira implícita e explicita, como temos no código a seguir:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#declaração explicita&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;abc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t1&lt;/span&gt;
@@ -18491,17 +18675,18 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t3&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, declaramos inicialmente uma Tupla com uso da notação explicita, isto é, passamos um String como parâmetro na inicialização da estrutura &lt;tt class="docutils literal"&gt;tuple&lt;/tt&gt;. Em seguida, implementamos 2 códigos que possuem o mesmo resultado, utilizando assim, as 2 notação de &lt;tt class="docutils literal"&gt;tuple&lt;/tt&gt; implicitadas da linguagem Python.&lt;/p&gt;
+&lt;p&gt;No código acima, declaramos inicialmente uma Tupla com uso da notação explicita, isto é, passamos um String como parâmetro na inicialização da estrutura &lt;cite&gt;tuple&lt;/cite&gt;. Em seguida, implementamos 2 códigos que possuem o mesmo resultado, utilizando assim, as 2 notação de &lt;cite&gt;tuple&lt;/cite&gt; implicitadas da linguagem Python.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/tuplas-python.html"&gt;Aula: Tuplas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/list-class-python.html"&gt;Aula: Listas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
 &lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
 &lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple"&gt;Tuple&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://codingair.logdown.com/posts/179395-understand-common-sequence-data-types-in-python-string-tuple-and-list"&gt;Understand Common Sequence Data Types in Python – String, Tuple, and List&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -18798,8 +18983,10 @@ Por fim, incrementamos a lista mais uma vez a letra &lt;tt class="docutils liter
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="definicao"&gt;
+&lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
 &lt;p&gt;Nessa aula, aprenderemos algumas definições a respeito dos &lt;cite&gt;Arrays&lt;/cite&gt;, bem como, diversas características que os definem e os fazem tão especiais.
-Inicialmente, temos que um Array pode ser chamado de diversas maneiras …&lt;/p&gt;</summary><content type="html">
+Inicialmente, temos que um Array pode ser chamado de diversas …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -18813,11 +19000,14 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras …&lt;/p
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="definicao"&gt;
+&lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
 &lt;p&gt;Nessa aula, aprenderemos algumas definições a respeito dos &lt;cite&gt;Arrays&lt;/cite&gt;, bem como, diversas características que os definem e os fazem tão especiais.
 Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exemplo, &lt;cite&gt;Array&lt;/cite&gt;, Vetor, Tabela, Matriz, tudo está se referindo a estrutura &lt;cite&gt;Array&lt;/cite&gt;, porém, com nomes diferentes, mas que fazem menção a uma mesma estrutura.&lt;/p&gt;
 &lt;p&gt;Todo array é constituído por elementos, isto é, toda estrutura Arrays contém uma série de elementos encadeados.&lt;/p&gt;
 &lt;p&gt;Quando declaramos um Array, devemos especificar, a quantidade de elementos que precisamos, assim, todo &lt;cite&gt;Array&lt;/cite&gt; possui a quantidade de elementos que o mesmo terá, ainda no momento da sua declaração.&lt;/p&gt;
 &lt;p&gt;Todo &lt;cite&gt;Array&lt;/cite&gt; sempre possuirá um índice, bem como, cada elemento do &lt;cite&gt;Array&lt;/cite&gt;, sempre terá um valor numérico, não negativo associado. O índice, as vezes, também é chamado de subíndice.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
@@ -18951,8 +19141,10 @@ O sqlite sempre trabalha dentro da home do seu usuário que estiver em execuçã
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="declaracao"&gt;
+&lt;h2&gt;DECLARAÇÃO&lt;/h2&gt;
 &lt;p&gt;A declaração de Array se distingue da declaração de variáveis pela utilização de uma par de colchetes após a definição do nome, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;valor …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -18966,6 +19158,8 @@ O sqlite sempre trabalha dentro da home do seu usuário que estiver em execuçã
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="declaracao"&gt;
+&lt;h2&gt;DECLARAÇÃO&lt;/h2&gt;
 &lt;p&gt;A declaração de Array se distingue da declaração de variáveis pela utilização de uma par de colchetes após a definição do nome, por exemplo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -18975,6 +19169,7 @@ O sqlite sempre trabalha dentro da home do seu usuário que estiver em execuçã
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Aqui utilizamos a barra para definir, até porque, nos comentários do YouTube não é permitido a utilização dos símbolos de maior e menor.&lt;/p&gt;
 &lt;p&gt;Nós podemos declarar Arrays de qualquer tipo, primitivo ou composto, sendo que com o tipo composto, seremos obrigados a criar uma nova instância e atribuí-la a uma determinada posição.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
@@ -24659,6 +24854,18 @@ Um programa em C pode ser facilmente migrado para C++, até porque, o seu códig
 &lt;p&gt;No código acima, definimos inicialmente, uma variável de nome &lt;tt class="docutils literal"&gt;lista_mista&lt;/tt&gt; e atribuimos a mesma uma lista contendo 7 elementos de tipos diferentes. O primeiro elemento é um caractere, o segundo é um valor lógico, o terceiro é um número e assim por diante.&lt;/p&gt;
 &lt;p&gt;Por fim concluimos que listas em Python não definem o tipo de seus elementos, como ocorre com os Array em linguagem como Java, C e C++.
 Assim, ainda que o funcionamento das lista em seja similar a um Array em C, C++, Pascal, numa lista só iremos ter objetos e por isso, o tipo do objeto é indiferente até porque, todo objeto, indiferente da sua declaração, descende de uma mesma estrutura implicita a linguagem.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/tuplas-python.html"&gt;Aula: Tuplas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#lists"&gt;List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category></entry><entry><title>Lista, Pilha, Array, Set em Python</title><link href="http://excript.com/python/lista-pilha-array-set-python.html" rel="alternate"></link><published>2014-11-05T23:11:00-02:00</published><updated>2014-11-05T23:11:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-11-05:/python/lista-pilha-array-set-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;

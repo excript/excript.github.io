@@ -285,15 +285,15 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
 &lt;/div&gt;
 &lt;div class="section" id="faq"&gt;
 &lt;h2&gt;FAQ&lt;/h2&gt;
-&lt;/div&gt;
 &lt;div class="section" id="posso-usar-o-dev"&gt;
-&lt;h2&gt;POSSO USAR O DEV++?&lt;/h2&gt;
+&lt;h3&gt;POSSO USAR O DEV++?&lt;/h3&gt;
 &lt;p&gt;Sim! Você pode utilizar quaisquer IDE ou mesmo software que permita salvar documento em modo texto.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="posso-utilizar-outra-ide"&gt;
-&lt;h2&gt;POSSO UTILIZAR OUTRA IDE?&lt;/h2&gt;
+&lt;h3&gt;POSSO UTILIZAR OUTRA IDE?&lt;/h3&gt;
 &lt;p&gt;Sim! É possível acompanhar as aulas utilizando quaisquer IDE do mercado. Porém, esteja certo de que as configurações da IDE estejam corretas, como por exemplo, qual compilador utilizar para compilar e executar o código.&lt;/p&gt;
 &lt;p&gt;Nunca é demais repetir que não existe um programa que deve ser utilizado obrigatoriamente para construir outros programas. Todas as IDE são, em sua definição mais primitiva, editores de texto puro. Porém, esses software incorporaram uma série de funcionalidades que ajudam no desenvolvimento de software e assim, acabam sendo utilizadas pelos desenvolvedores.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="qual-a-diferenca-entre-a-linguagem-c-e-a-linguagem-c"&gt;
 &lt;h3&gt;QUAL A DIFERENÇA ENTRE A LINGUAGEM C E A LINGUAGEM C++?&lt;/h3&gt;
 &lt;p&gt;O C++ é uma extensão da linguagem C. Inclusive, o &lt;tt class="docutils literal"&gt;++&lt;/tt&gt; significa incremento e quer dizer que, o &lt;tt class="docutils literal"&gt;C++&lt;/tt&gt; é a evolução da &lt;tt class="docutils literal"&gt;Linguagem C&lt;/tt&gt;. Evolução &lt;strong&gt;NÃO É&lt;/strong&gt; sinônimo de melhor! O C++ é uma linguagem que permite um desenvolvimento melhor estruturado, porém, essa estruturação faz com que o mesmo seja mais lento do que a linguagem C. Até hoje, a linguagem C é amplamente utilizada, bem como o C++ e, há situações em que o C é a melhor opção mas, na maioria das vezes, o C++ é quem será.&lt;/p&gt;
@@ -322,13 +322,25 @@ Não existe linguagem melhor do que a outra, o que existe são linguagens que po
 &lt;p&gt;Em programação, uma biblioteca é normalmente um conjunto de arquivos dentro de uma mesma pasta e que contém dezenas e/ou centenas de arquivos com código-fonte, e dentro destes há milhares de métodos, funções, variáveis, constates e que possui um propósito bem definido. O objetivo é proporcionar a outros programadores um conjunto de recursos para a realização de uma determinada tarefa, como por exemplo, o Desenvolvimento de Jogos, Desenvolvimento Gráfico, Desenvolvimento WEB e etc.&lt;/p&gt;
 &lt;p&gt;Para o programador que irá utilizar determinada biblioteca, bastará somente ter conhecimento das funcionalidades, isto é, Classe, Funções, Métodos internos e também, ter um pouco de conhecimento sobre a organização dessa biblioteca para que o mesmo seja capaz de utiliza-la.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
 &lt;div class="section" id="e-possivel-construir-janelas-como-botoes-e-etc"&gt;
-&lt;h2&gt;É POSSÍVEL CONSTRUIR JANELAS COMO BOTÕES E ETC?&lt;/h2&gt;
+&lt;h3&gt;É POSSÍVEL CONSTRUIR JANELAS COMO BOTÕES E ETC?&lt;/h3&gt;
 &lt;p&gt;Sim e não!&lt;/p&gt;
 &lt;p&gt;Linguagens de programação como C, C++, Java, Python, PHP, Ruby, JavaScript e etc, são linguagens GENÉRICAS, isto é, servem para vários propósito, como por exemplo, manipular banco de dados, manipular a memória diretamente, OU ENTÃO, manipular a parte gráfica.&lt;/p&gt;
 &lt;p&gt;Cada plataforma existente, por exemplo, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;MS-DOS&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Linux&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Windows&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;MacOSX&lt;/tt&gt; e etc, implementam bibliotecas para facilitar o desenho de janelas, botões, caixas de entradas e etc. Essas bibliotecas, desenvolvida pelo fabricante de cada plataforma, são inicialmente utilizado no desenvolvimento do próprio Sistema Operacional e, num momento posterior, é disponibilizado aos programadores uma maneira de acessar esses códigos através da linguagem que eles preferirem.&lt;/p&gt;
 &lt;p&gt;Por isso, linguagens de programação não possuem relação com as bibliotecas gráficas. Uma linguagem só será capaz de construir janelas e botões num sistema operacional se algum programador desenvolver um código que interaja com as bibliotecas gráficas nativas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="porque-atribuir-zero-na-declaracao-de-variaveis-inteiras"&gt;
+&lt;h3&gt;PORQUE ATRIBUIR ZERO NA DECLARAÇÃO DE VARIÁVEIS INTEIRAS?&lt;/h3&gt;
+&lt;p&gt;Muitos alunos questionam a razão pela qual atribuímos o valor zero na declaração de variáveis inteiras, por exemplo, vamos escrever um simples trecho de código para exemplificar melhor.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima, declaramos uma variavel &lt;code&gt;var&lt;/code&gt; do tipo &lt;code&gt;int&lt;/code&gt; e atribuimos o valor &lt;code&gt;0&lt;/code&gt; a mesma ainda no momento da declaração, por qual razão fizemos isso?&lt;/p&gt;
+&lt;p&gt;Variáveis são regiões na memória do computador que acessamos através do nome que utilizamos no código, neste caso, utilizamos o nome &lt;code&gt;var&lt;/code&gt;. Quando a nossa aplicação registra uma nova variável, essa poderá ter qualquer valor.&lt;/p&gt;
+&lt;p&gt;Com o objetivo de normatizarmos nosso código, sempre inicializamos as variáveis inteiras com o valor zero, logo, teremos uma certa garantia de qual valor que uma variável possui se esta ainda não foi utilizada.&lt;/p&gt;
+&lt;p&gt;O C++ não obriga a inicialização, porém, essa é uma boa prática de programação e você deve utiliza-la!&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="lista-das-aulas"&gt;
 &lt;h2&gt;LISTA DAS AULAS&lt;/h2&gt;
@@ -796,8 +808,10 @@ Não existe linguagem melhor do que a outra, o que existe são linguagens que po
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="definicao"&gt;
+&lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
 &lt;p&gt;Nessa aula, aprenderemos algumas definições a respeito dos &lt;cite&gt;Arrays&lt;/cite&gt;, bem como, diversas características que os definem e os fazem tão especiais.
-Inicialmente, temos que um Array pode ser chamado de diversas maneiras …&lt;/p&gt;</summary><content type="html">
+Inicialmente, temos que um Array pode ser chamado de diversas …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -811,11 +825,14 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras …&lt;/p
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="definicao"&gt;
+&lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
 &lt;p&gt;Nessa aula, aprenderemos algumas definições a respeito dos &lt;cite&gt;Arrays&lt;/cite&gt;, bem como, diversas características que os definem e os fazem tão especiais.
 Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exemplo, &lt;cite&gt;Array&lt;/cite&gt;, Vetor, Tabela, Matriz, tudo está se referindo a estrutura &lt;cite&gt;Array&lt;/cite&gt;, porém, com nomes diferentes, mas que fazem menção a uma mesma estrutura.&lt;/p&gt;
 &lt;p&gt;Todo array é constituído por elementos, isto é, toda estrutura Arrays contém uma série de elementos encadeados.&lt;/p&gt;
 &lt;p&gt;Quando declaramos um Array, devemos especificar, a quantidade de elementos que precisamos, assim, todo &lt;cite&gt;Array&lt;/cite&gt; possui a quantidade de elementos que o mesmo terá, ainda no momento da sua declaração.&lt;/p&gt;
 &lt;p&gt;Todo &lt;cite&gt;Array&lt;/cite&gt; sempre possuirá um índice, bem como, cada elemento do &lt;cite&gt;Array&lt;/cite&gt;, sempre terá um valor numérico, não negativo associado. O índice, as vezes, também é chamado de subíndice.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
@@ -846,8 +863,10 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="declaracao"&gt;
+&lt;h2&gt;DECLARAÇÃO&lt;/h2&gt;
 &lt;p&gt;A declaração de Array se distingue da declaração de variáveis pela utilização de uma par de colchetes após a definição do nome, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;valor …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -861,6 +880,8 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="declaracao"&gt;
+&lt;h2&gt;DECLARAÇÃO&lt;/h2&gt;
 &lt;p&gt;A declaração de Array se distingue da declaração de variáveis pela utilização de uma par de colchetes após a definição do nome, por exemplo:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -870,6 +891,7 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Aqui utilizamos a barra para definir, até porque, nos comentários do YouTube não é permitido a utilização dos símbolos de maior e menor.&lt;/p&gt;
 &lt;p&gt;Nós podemos declarar Arrays de qualquer tipo, primitivo ou composto, sendo que com o tipo composto, seremos obrigados a criar uma nova instância e atribuí-la a uma determinada posição.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;

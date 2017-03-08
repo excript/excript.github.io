@@ -140,15 +140,15 @@ eXcript            </a>
 </div>
 <div class="section" id="faq">
 <h2>FAQ</h2>
-</div>
 <div class="section" id="posso-usar-o-dev">
-<h2>POSSO USAR O DEV++?</h2>
+<h3>POSSO USAR O DEV++?</h3>
 <p>Sim! Você pode utilizar quaisquer IDE ou mesmo software que permita salvar documento em modo texto.</p>
 </div>
 <div class="section" id="posso-utilizar-outra-ide">
-<h2>POSSO UTILIZAR OUTRA IDE?</h2>
+<h3>POSSO UTILIZAR OUTRA IDE?</h3>
 <p>Sim! É possível acompanhar as aulas utilizando quaisquer IDE do mercado. Porém, esteja certo de que as configurações da IDE estejam corretas, como por exemplo, qual compilador utilizar para compilar e executar o código.</p>
 <p>Nunca é demais repetir que não existe um programa que deve ser utilizado obrigatoriamente para construir outros programas. Todas as IDE são, em sua definição mais primitiva, editores de texto puro. Porém, esses software incorporaram uma série de funcionalidades que ajudam no desenvolvimento de software e assim, acabam sendo utilizadas pelos desenvolvedores.</p>
+</div>
 <div class="section" id="qual-a-diferenca-entre-a-linguagem-c-e-a-linguagem-c">
 <h3>QUAL A DIFERENÇA ENTRE A LINGUAGEM C E A LINGUAGEM C++?</h3>
 <p>O C++ é uma extensão da linguagem C. Inclusive, o <tt class="docutils literal">++</tt> significa incremento e quer dizer que, o <tt class="docutils literal">C++</tt> é a evolução da <tt class="docutils literal">Linguagem C</tt>. Evolução <strong>NÃO É</strong> sinônimo de melhor! O C++ é uma linguagem que permite um desenvolvimento melhor estruturado, porém, essa estruturação faz com que o mesmo seja mais lento do que a linguagem C. Até hoje, a linguagem C é amplamente utilizada, bem como o C++ e, há situações em que o C é a melhor opção mas, na maioria das vezes, o C++ é quem será.</p>
@@ -177,13 +177,25 @@ Não existe linguagem melhor do que a outra, o que existe são linguagens que po
 <p>Em programação, uma biblioteca é normalmente um conjunto de arquivos dentro de uma mesma pasta e que contém dezenas e/ou centenas de arquivos com código-fonte, e dentro destes há milhares de métodos, funções, variáveis, constates e que possui um propósito bem definido. O objetivo é proporcionar a outros programadores um conjunto de recursos para a realização de uma determinada tarefa, como por exemplo, o Desenvolvimento de Jogos, Desenvolvimento Gráfico, Desenvolvimento WEB e etc.</p>
 <p>Para o programador que irá utilizar determinada biblioteca, bastará somente ter conhecimento das funcionalidades, isto é, Classe, Funções, Métodos internos e também, ter um pouco de conhecimento sobre a organização dessa biblioteca para que o mesmo seja capaz de utiliza-la.</p>
 </div>
-</div>
 <div class="section" id="e-possivel-construir-janelas-como-botoes-e-etc">
-<h2>É POSSÍVEL CONSTRUIR JANELAS COMO BOTÕES E ETC?</h2>
+<h3>É POSSÍVEL CONSTRUIR JANELAS COMO BOTÕES E ETC?</h3>
 <p>Sim e não!</p>
 <p>Linguagens de programação como C, C++, Java, Python, PHP, Ruby, JavaScript e etc, são linguagens GENÉRICAS, isto é, servem para vários propósito, como por exemplo, manipular banco de dados, manipular a memória diretamente, OU ENTÃO, manipular a parte gráfica.</p>
 <p>Cada plataforma existente, por exemplo, <tt class="docutils literal"><span class="pre">MS-DOS</span></tt>, <tt class="docutils literal">Linux</tt>, <tt class="docutils literal">Windows</tt>, <tt class="docutils literal">MacOSX</tt> e etc, implementam bibliotecas para facilitar o desenho de janelas, botões, caixas de entradas e etc. Essas bibliotecas, desenvolvida pelo fabricante de cada plataforma, são inicialmente utilizado no desenvolvimento do próprio Sistema Operacional e, num momento posterior, é disponibilizado aos programadores uma maneira de acessar esses códigos através da linguagem que eles preferirem.</p>
 <p>Por isso, linguagens de programação não possuem relação com as bibliotecas gráficas. Uma linguagem só será capaz de construir janelas e botões num sistema operacional se algum programador desenvolver um código que interaja com as bibliotecas gráficas nativas.</p>
+</div>
+<div class="section" id="porque-atribuir-zero-na-declaracao-de-variaveis-inteiras">
+<h3>PORQUE ATRIBUIR ZERO NA DECLARAÇÃO DE VARIÁVEIS INTEIRAS?</h3>
+<p>Muitos alunos questionam a razão pela qual atribuímos o valor zero na declaração de variáveis inteiras, por exemplo, vamos escrever um simples trecho de código para exemplificar melhor.</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">var</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>No código acima, declaramos uma variavel <code>var</code> do tipo <code>int</code> e atribuimos o valor <code>0</code> a mesma ainda no momento da declaração, por qual razão fizemos isso?</p>
+<p>Variáveis são regiões na memória do computador que acessamos através do nome que utilizamos no código, neste caso, utilizamos o nome <code>var</code>. Quando a nossa aplicação registra uma nova variável, essa poderá ter qualquer valor.</p>
+<p>Com o objetivo de normatizarmos nosso código, sempre inicializamos as variáveis inteiras com o valor zero, logo, teremos uma certa garantia de qual valor que uma variável possui se esta ainda não foi utilizada.</p>
+<p>O C++ não obriga a inicialização, porém, essa é uma boa prática de programação e você deve utiliza-la!</p>
+</div>
 </div>
 <div class="section" id="lista-das-aulas">
 <h2>LISTA DAS AULAS</h2>

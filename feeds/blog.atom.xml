@@ -1,5 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - blog</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/blog.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-01-16T10:00:00-02:00</updated><entry><title>Código Python com Acentuação</title><link href="http://excript.com/blog/codigo-python-com-acentuacao.html" rel="alternate"></link><published>2017-01-16T10:00:00-02:00</published><updated>2017-01-16T10:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-01-16:/blog/codigo-python-com-acentuacao.html</id><summary type="html">&lt;div class="section" id="caracteres-latinos"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - blog</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/blog.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-02-02T09:00:00-02:00</updated><entry><title>Gerenciado de Pacotes pip</title><link href="http://excript.com/blog/gerenciador-pacotes-python-pip.html" rel="alternate"></link><published>2017-02-02T09:00:00-02:00</published><updated>2017-02-02T09:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-02-02:/blog/gerenciador-pacotes-python-pip.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Neste artigo estudaremos a ferramenta que permite instalar pacotes do Python&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="gerenciador-de-pacotes-pip"&gt;
+&lt;h2&gt;GERENCIADOR DE PACOTES &lt;cite&gt;pip&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;O Python possui um conjunto de pacotes, classes e funções em sua biblioteca padrão bastante amplo. Ainda assim, é comum precisarmos de bibliotecas mais especificas, como por exemplo a biblioteca kivy, ou o Django, Selenium …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Neste artigo estudaremos a ferramenta que permite instalar pacotes do Python&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="gerenciador-de-pacotes-pip"&gt;
+&lt;h2&gt;GERENCIADOR DE PACOTES &lt;cite&gt;pip&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;O Python possui um conjunto de pacotes, classes e funções em sua biblioteca padrão bastante amplo. Ainda assim, é comum precisarmos de bibliotecas mais especificas, como por exemplo a biblioteca kivy, ou o Django, Selenium entre outras.&lt;/p&gt;
+&lt;p&gt;Para trabalharmos com bibliotecas de terceiros temos 2 opções. A primeira é ir até o site ou repositório do desenvolvedor, fazer o download e em seguida instalar em nosso ambiente de trabalho.&lt;/p&gt;
+&lt;p&gt;A segunda forma é utilizar um gerenciador de pacotes.&lt;/p&gt;
+&lt;p&gt;Junto ao site do Python existe um repositório de códigos com pacotes construídos por terceiros que podemos utilizar instalar e utilizar em nossas aplicações. Este repositório é chamado de &lt;a class="reference external" href="https://pypi.python.org/pypi"&gt;Python Package Index&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Atualmente, toda a instalação do Python instala um utilitário de nome &lt;cite&gt;pip&lt;/cite&gt;. O termo pip é um acrônimo de &lt;strong&gt;Índice de Pacotes Python&lt;/strong&gt;. Essa é uma forma de acessarmos o repositório de código oficial através da linha de comando e somos capazes de instalar, atualizar e remover pacote.z&lt;/p&gt;
+&lt;p&gt;Em algumas distribuições Linux que trazem o Python instalado pode acontecer do utilitário pip não ser disponibilizado. No Ubuntu por exemplo, para instalarmos, basta executarmos o seguinte código:&lt;/p&gt;
+&lt;p&gt;Debian/UBUNTU/Linux Mint:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Fedora:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Via yum:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;CentOS&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Primeiro ative o repositório EPEL e em seguida execute no terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ArchLinux:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo pacman -S python-pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="versao"&gt;
+&lt;h2&gt;VERSÃO&lt;/h2&gt;
+&lt;p&gt;Pra descobrirmos a versão do &lt;cite&gt;pip&lt;/cite&gt; instalada em nosso ambiente, devemos executar o comando:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip --version
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="atualizando-o-pip"&gt;
+&lt;h2&gt;ATUALIZANDO O &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;É importante atualizarmos o utilitário &lt;cite&gt;pip&lt;/cite&gt; antes de utiliza-lo. Para atualizamos o &lt;cite&gt;pip&lt;/cite&gt; utilizamos o próprio &lt;cite&gt;pip&lt;/cite&gt;. Para isso, digite no terminal o código a seguir:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install --upgrade pip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Feito isso, temos a certeza de estarmos utilizando a última versão do instalador de pacotes oficial do Python o &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="instalando-pacotes-com-o-pip"&gt;
+&lt;h2&gt;INSTALANDO PACOTES COM O &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;A instalação de pacotes com o &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; é relativamente simples e é feito através da linha de comando. Para talarmos um pacote, temos que abrir o terminal e digitar:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install algum-nome-de-pacote
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Em seguida, o pacote será baixado e instalado junto a instalação do Python em que o &lt;cite&gt;pip&lt;/cite&gt; está contido. Para desinstalar pacotes, utilizamos um comando similar, porém, ao invés de utilizarmos a instrução &lt;tt class="docutils literal"&gt;install&lt;/tt&gt; utilizaremos &lt;tt class="docutils literal"&gt;uninstall&lt;/tt&gt;, por exemplo:&lt;/p&gt;
+&lt;p&gt;Alguma vezes desejaremos instalar um pacote com uma determinada versão, pra isso, fazermos:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install algum-nome-de-pacote&lt;span class="o"&gt;==&lt;/span&gt;0.0
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip uninstall algum-nome-de-pacote
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="lista-de-pacotes-instalados"&gt;
+&lt;h2&gt;LISTA DE PACOTES INSTALADOS&lt;/h2&gt;
+&lt;p&gt;Para sabermos todos os pacotes instalados, utilizamos a instrução &lt;tt class="docutils literal"&gt;freeze&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip freeze
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exportando-lista-de-pacotes-instalados"&gt;
+&lt;h2&gt;EXPORTANDO LISTA DE PACOTES INSTALADOS&lt;/h2&gt;
+&lt;p&gt;Algumas vezes desejaremos exportar os pacotes instalados num ambiente virtual para por exemplo, fazermos backup ou então, para adicionarmos a documentação de algum Script os pacotes que devem ser instalados.&lt;/p&gt;
+&lt;p&gt;Pra exportarmos todos os nomes para um arquivo, devemos executar o seguinte comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip freeze &amp;gt; requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Por padrão, arquivos de nome &lt;cite&gt;requirements.txt&lt;/cite&gt; contidos na raiz de um projetos contém a listagem de pacotes que precisa ser instalados.&lt;/p&gt;
+&lt;p&gt;Da mesma forma que conseguimos exportar para um arquivos os pacotes instalados, também conseguimos instalar uma lista de pacotes através de um arquivo, por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="obtendo-informacoes-do-pacote"&gt;
+&lt;h2&gt;OBTENDO INFORMAÇÕES DO PACOTE&lt;/h2&gt;
+&lt;p&gt;Todo pacote possui um conjunto de metadados que identificam o autor, a empresa, a versão, a licença e várias outras informações. Para ver esses metadados, devemos executar o seguinte comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip show pacote
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;OBTENDO INFORMAÇÕES DO PACOTE&lt;/h2&gt;
+&lt;p&gt;Para buscarmos por um nome dentro do repositório de código, devemos proceder da seguinte forma:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip search &amp;lt;query&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="python"></category><category term="pip"></category></entry><entry><title>Código Python com Acentuação</title><link href="http://excript.com/blog/codigo-python-com-acentuacao.html" rel="alternate"></link><published>2017-01-16T10:00:00-02:00</published><updated>2017-01-16T10:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-01-16:/blog/codigo-python-com-acentuacao.html</id><summary type="html">&lt;div class="section" id="caracteres-latinos"&gt;
 &lt;h2&gt;CARACTERES LATINOS&lt;/h2&gt;
 &lt;p&gt;Recentemente estava dando suporte ao curso que está a venda na Udemy: &lt;a class="reference external" href="http://excript.com/blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html"&gt;Desenvolvimento de Alicações Comerciais com Python e Kivy&lt;/a&gt; e um aluno me perguntou algo relacionado a acentuação com código Python e num primeiro momento, pensei que o mesmo estava se referindo a Strings que contenham caracteres …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="caracteres-latinos"&gt;
 &lt;h2&gt;CARACTERES LATINOS&lt;/h2&gt;

@@ -488,6 +488,11 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;p&gt;Essa é mais uma das vantagens de trabalhar com a biblioteca Kivy! Temos a capacidade de melhorar a performance facilmente da nossa aplicação, o que normalmente não acontece com outras biblitoecas.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="section" id="codigo-fonte"&gt;
+&lt;h2&gt;CÓDIGO-FONTE&lt;/h2&gt;
+&lt;p&gt;É comum a dúvida em relação se o código fonte está ou não disponível numa aplicação construida com a biblioteca Kivy. Como dito acima, o código-fonte do Python é compilado utilizando o Cython, portanto, somente códigos enviados como sendo por exemplo, uma String é que não seriam compilados pelo Cython!&lt;/p&gt;
+&lt;p&gt;Portanto, não é possível acessar o código-fonte da aplicação, salvo se o mesmo for descompilado de C, mas dúvido que alguém faça isso.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="livros-publicados"&gt;
 &lt;h2&gt;LIVROS PUBLICADOS&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -539,6 +544,11 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;p&gt;Há alguns projetos paralelos como o KivyMD que estão construindo mega pacotes de componentes seguindo um esquema de cores e estilos como por exemplo, o Material Design da Google.&lt;/p&gt;
 &lt;p&gt;Portanto, a pequena quantidade de Widgets e a sua simplicidade não são um problema, mesmo assim, num primeiro momento, muitos usuários acabam frustrados com a pequena gama de opções.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="visao-geral"&gt;
+&lt;h2&gt;VISÃO GERAL&lt;/h2&gt;
+&lt;p&gt;O blog &lt;a class="reference external" href="http://cadernodelaboratorio.com.br/category/kivy/"&gt;Caderno de Laboratório&lt;/a&gt; foi o primeiro blog brasileiro a disponiblizar vários tutorias e diversos exemplos sobre como utilizar a biblioteca Kivy. O pessoal continua produzindo mais artigos sobre o Kivy e em Português, por isso, vale a pena conferir!&lt;/p&gt;
+&lt;p&gt;O site &lt;a class="reference external" href="https://mavins.com.br/blog/desenvolva-aplicativos-para-android-ios-com-python-e-kivy"&gt;Mavins produziu um artigo&lt;/a&gt; explicando rapídamente as principais funcionalidades da biblioteca Kivy, vale a pena conferir!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
@@ -5369,10 +5379,15 @@ Alt + N - para avançar. O 'N' vem de &amp;quot;Next&amp;quot;.&lt;/p&gt;
 &lt;p&gt;A seguir, temos as teclas de atalho que estudamos nessa aula e também, os atalhos que podem ser considerados os principais da utilização básica do IDLE.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol class="arabic simple"&gt;
-&lt;li&gt;Alt + P -&amp;gt; retorna a última instrução&lt;/li&gt;
-&lt;li&gt;Alt + N -&amp;gt; retorna a instrução seguinte&lt;/li&gt;
+&lt;li&gt;Alt + P -&amp;gt; retorna última instrução&lt;/li&gt;
+&lt;li&gt;Alt + N -&amp;gt; avança para a próxima instrução&lt;/li&gt;
 &lt;li&gt;Ctrl + F6 -&amp;gt; Reinicia o IDLE&lt;/li&gt;
 &lt;li&gt;Ctrl + N -&amp;gt; Abre o editor de Script´s de várias linhas&lt;/li&gt;
+&lt;li&gt;Ctrl + Enter -&amp;gt;&lt;/li&gt;
+&lt;li&gt;Ctrl + C -&amp;gt; interrompe a execução (Script em looping)&lt;/li&gt;
+&lt;li&gt;Ctrl + Espaço -&amp;gt; abre o Code Complete&lt;/li&gt;
+&lt;li&gt;Tab -&amp;gt; abre o Code Complete&lt;/li&gt;
+&lt;li&gt;Ctrl + J -&amp;gt; adiciona linha e move o cursor para a mesma&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
@@ -6480,7 +6495,7 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
     &lt;/div&gt;
 &lt;div class="section" id="definicao-de-tupla"&gt;
 &lt;h2&gt;DEFINIÇÃO DE TUPLA&lt;/h2&gt;
-&lt;p&gt;Tupla é uma Lista imutável. O que diferencia a Estrutura de Dados Lista da Estrutura de Dados Tupla é que a primeira pode ter elementos adicionados a qualquer momento, enquanto que …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+&lt;p&gt;Tupla é uma Lista imutável. O que diferencia a &lt;a class="reference external" href="http://excript.com/python/list-class-python.html"&gt;Estrutura de Dados Lista&lt;/a&gt; da Estrutura de Dados Tupla é que a primeira pode ter elementos adicionados a qualquer momento, enquanto que …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -6496,12 +6511,17 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
     &lt;/div&gt;
 &lt;div class="section" id="definicao-de-tupla"&gt;
 &lt;h2&gt;DEFINIÇÃO DE TUPLA&lt;/h2&gt;
-&lt;p&gt;Tupla é uma Lista imutável. O que diferencia a Estrutura de Dados Lista da Estrutura de Dados Tupla é que a primeira pode ter elementos adicionados a qualquer momento, enquanto que a segunda estrutura, após definida, não permite a adição ou remoção de elementos.&lt;/p&gt;
-&lt;p&gt;Devemos pensar num primeiro momento, que a Tupla é uma lista que restringe a adição, alteração, remoção e o ordenamento do elementos. No entanto, pensar numa tupla como sendo somente como lista imutável, acaba por ser um erro, até porque, a função de ambas ainda que semelhantes, não é igual. Ou seja, uma tupla possui as mesmas características que fundamentam as Listas, mas um propósito diferente das 2 estruturas e a razão pela qual ambas estão definidas, é bastante diferente e muitas vezes, levamos bastante tempo para realmente perceber tamanha sutileza.&lt;/p&gt;
-&lt;p&gt;Segundo Phillip J. Eby, contribuidor de diversos projetos do Python e criador da ferramenta Setuptools, numa discussão sobre a remoção das tuplas para a versão 3x do Python, trouxe uma argumentação bastante interessante, diz ele:
-&amp;quot;É um equívoco pensar nas tuplas como listas constantes. As listas são destinadas a serem sequências homogêneas, enquanto que os Tuplas são estruturas de dados heterogêneas.&amp;quot;&lt;/p&gt;
-&lt;p&gt;Em outras palavras, ele disse que em uma lista, as informações, geralmente são de um mesmo tipo, por exemplo, uma lista de e-mails. Enquanto que numa tupla, os elementos são de tipos distintos, por exemplo, o dia, o dia da semana, o mês e o ano e etc.&lt;/p&gt;
-&lt;p&gt;Tudo que nós estudamos até o momento a respeito de listas, pode ser utilizado para manipular e controlar uma Tupla, salvo a alteração da lista ou de seus elementos.&lt;/p&gt;
+&lt;p&gt;Tupla é uma Lista imutável. O que diferencia a &lt;a class="reference external" href="http://excript.com/python/list-class-python.html"&gt;Estrutura de Dados Lista&lt;/a&gt; da Estrutura de Dados Tupla é que a primeira pode ter elementos adicionados a qualquer momento, enquanto que a segunda estrutura, após definida, não permite a adição ou remoção de elementos.&lt;/p&gt;
+&lt;p&gt;Devemos pensar num primeiro momento, que a Tupla é uma lista que restringe a adição, alteração, remoção e o ordenamento do elementos. No entanto, pensar numa tupla como sendo somente uma lista imutável não está totalmente correto.&lt;/p&gt;
+&lt;p&gt;Tuplas possuem muitas características das listas Listas, porém, possui um propósito diferente e não raramente levamos um tempo para conseguir realmente perceber a sutil diferença.&lt;/p&gt;
+&lt;p&gt;Segundo Phillip J. Eby, contribuidor de diversos projetos do Python e criador da ferramenta Setuptools, numa discussão sobre a remoção das tuplas para a versão 3x do Python, trouxe uma argumentação bastante interessante, diz ele:&lt;/p&gt;
+&lt;blockquote&gt;
+É um equívoco pensar nas tuplas como listas constantes. As listas são destinadas a serem sequências homogêneas, enquanto que os Tuplas são estruturas de dados heterogêneas.
+Phillip J. Eby&lt;/blockquote&gt;
+&lt;p&gt;Em outras palavras, ele disse que em uma lista, as informações, geralmente são de um mesmo tipo, por exemplo, uma lista de e-mails. Enquanto que numa tupla, os elementos são de tipos distintos, por exemplo, uma Tupla que contém o dia, o dia da semana, o mês e o ano.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;segunda-feita&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Fevereiro&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2022&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O que estudamos até o momento a respeito de listas, pode ser utilizado para manipular e controlar Tuplas, salvo a alteração da lista ou de seus elementos.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -6513,14 +6533,37 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;y&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;ol class="arabic simple"&gt;
-&lt;li&gt;Uma Tupla é definida da mesma forma que uma lista, o que as diferencias, são os caracteres que as delimitam. Uma Lista, tem seus elementos delimitados por colchetes, enquanto que um Tupla, tem seus elementos delimitados por parêntesis.&lt;/li&gt;
-&lt;li&gt;A ordem dos elementos numa Tupla será a ordem na qual os elementos foram definidos, ou seja, não é possível ordenar em tempo de execução os elementos.&lt;/li&gt;
+&lt;li&gt;Uma Tupla é definida da mesma forma que uma lista, o que as diferencias, são os caracteres que as delimitam. Uma Lista, tem seus elementos delimitados por colchetes, enquanto que a Tupla, tem seus elementos delimitados por parêntesis.&lt;/li&gt;
+&lt;li&gt;A ordem dos elementos numa Tupla será a ordem na qual estes foram definidos, ou seja, não é possível ordenar em tempo de execução os elementos.&lt;/li&gt;
 &lt;li&gt;O primeiro elemento de uma Tupla também possui índice igual a 0 e o último índice igual a -1. Assim o acesso a elementos, bem como o fatiamentos funciona da mesma forma como já estudado no fatiamento de Listas.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class="section" id="notacao"&gt;
 &lt;h2&gt;NOTAÇÃO&lt;/h2&gt;
-&lt;p&gt;O parêntesis é a notação que determina um conjunto de elementos pertencentes a Tupla, essa é a definição padrão. No entanto, na prática, toda sequência de elementos separados por vírgula será reconhecido pela linguagem como sendo uma Tupla.&lt;/p&gt;
+&lt;p&gt;É comum diferenciarmos a lista da tupla pelo seus caracteres delimitadores. Por exemplo, os elementos de uma lista são delimitados por colchetes, enquanto que os elementos de uma tupla por parêntesis.&lt;/p&gt;
+&lt;p&gt;Distinguir as estruturas pelo seus caracteres delimitadores não é um erro, porém, na documentação oficial do Python consta que uma tupla é declarada pela utilização do operador vírgula, e que é utilizado para separar os elementos.&lt;/p&gt;
+&lt;p&gt;A única exceção é na declaração de tuplas vazias. No código a seguir iremos declarar algumas tuplas e adicionaremos comentários em cima de cada declaração.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#tupla declarada sem o uso de parentesis&lt;/span&gt;
+&lt;span class="n"&gt;t1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="c1"&gt;#tupla declarada com o uso de parentesis&lt;/span&gt;
+&lt;span class="n"&gt;t2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;#tupla com um único elemento&lt;/span&gt;
+&lt;span class="n"&gt;t3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+&lt;span class="c1"&gt;#tupla vazia&lt;/span&gt;
+&lt;span class="n"&gt;t4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Inicialmente declaramos as variáveis &lt;code&gt;t1&lt;/code&gt; e &lt;code&gt;t2&lt;/code&gt; e associamos a cada uma tupla contendo 3 elementos. Ambas declarações são identicas e possuem um mesmo resultado.&lt;/p&gt;
+&lt;p&gt;Em seguida declaramos uma terceira tupla &lt;code&gt;t3&lt;/code&gt; que possui um único elemento. Observe que a declaração é finalizada com uma vírgula! É dessa forma que declaramos tuplas com um único elemento.&lt;/p&gt;
+&lt;p&gt;Por fim, declaramos uma tupla vazia &lt;code&gt;t4&lt;/code&gt; e nesta situação foram os parentesis que determinam o tipo do objeto declarado. Essa é a única situação onde é obrigatório a utilização dos parentesis na declaração da tupla.&lt;/p&gt;
+&lt;p&gt;Vejamos agora o que a documentação do Python trás sobre a declaração de tuplas:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Observe que é a vírgula que é realmente define uma tupla, não os parênteses. Os parênteses são opcionais, exceto no caso da tupla vazia, ou quando são necessários para evitar a ambigüidade sintática. Por exemplo, :code:`f(a, b, c)` é uma chamada de função com três argumentos, enquanto :code:`f((a, b, c))` é uma chamada de função com uma tupla-3 como único argumento.
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-tiplo-tuple"&gt;
+&lt;h2&gt;O TIPLO &lt;code&gt;tuple&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;No código a seguir, vamos obter o tipo reconhecido pelo Python.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nc"&gt;tuple&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;gt;&lt;/span&gt;
@@ -6546,15 +6589,15 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
 &lt;/div&gt;
 &lt;div class="section" id="declaracao-de-tuplas"&gt;
 &lt;h2&gt;DECLARAÇÃO DE TUPLAS&lt;/h2&gt;
-&lt;p&gt;Uma Tupla é uma estrutura que contém nenhum ou vários elementos. Os elementos de uma Tupla devem ser separados por vírgulas e delimitados por parêntesis. Uma sequência qualquer, onde cada os elementos estão separados por parêntesis é reconhecido pela linguagem como sendo um tupla, mesmo que os elementos não estejam delimitados por colchetes.&lt;/p&gt;
-&lt;p&gt;As tuplas são declaradas de maneira bastante semelhante as Listas, onde os elementos são separados pelo uso de vírgulas e ambas as estruturas são delimitadas por uma simbologia e está acaba por definir a estrutura. Para a VM do Python, uma série de objetos separados por vírgula e na ausência de um delimitador nas extremidades será considerado uma Tupla.&lt;/p&gt;
+&lt;p&gt;Uma Tupla é uma estrutura que contém nenhum ou vários elementos. Os elementos de uma Tupla devem ser separados por vírgulas e podem ser delimitados por parêntesis. Uma sequência qualquer, onde os elementos estão separados por vírgula é reconhecido pela linguagem como sendo um tupla, mesmo que os elementos não estejam delimitados por parentesis.&lt;/p&gt;
+&lt;p&gt;As tuplas são declaradas de maneira bastante semelhante as Listas, onde os elementos são separados pelo uso de vírgulas e ambas as estruturas são delimitadas por uma simbologia e esta acaba por definir a estrutura.&lt;/p&gt;
 &lt;p&gt;No código abaixo, definiremos uma Tupla contendo alguns dias da semana.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dias_da_semana&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;domingo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;segunda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;terça&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;quarta&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dias_da_semana&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;domingo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;segunda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;terça&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;quarta&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Podemos rapidamente perceber a enorme semelhança entre a definições de Listas e Tuplas.&lt;/p&gt;
-&lt;p&gt;Podemos declarar as Tuplas de maneira implícita e explicita, como podemos ver no exemplo a seguir:&lt;/p&gt;
+&lt;p&gt;É possível declarar as Tuplas de maneira implícita e explicita, como temos no código a seguir:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#declaração explicita&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;abc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t1&lt;/span&gt;
@@ -6570,17 +6613,18 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t3&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No código acima, declaramos inicialmente uma Tupla com uso da notação explicita, isto é, passamos um String como parâmetro na inicialização da estrutura &lt;tt class="docutils literal"&gt;tuple&lt;/tt&gt;. Em seguida, implementamos 2 códigos que possuem o mesmo resultado, utilizando assim, as 2 notação de &lt;tt class="docutils literal"&gt;tuple&lt;/tt&gt; implicitadas da linguagem Python.&lt;/p&gt;
+&lt;p&gt;No código acima, declaramos inicialmente uma Tupla com uso da notação explicita, isto é, passamos um String como parâmetro na inicialização da estrutura &lt;cite&gt;tuple&lt;/cite&gt;. Em seguida, implementamos 2 códigos que possuem o mesmo resultado, utilizando assim, as 2 notação de &lt;cite&gt;tuple&lt;/cite&gt; implicitadas da linguagem Python.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/tuplas-python.html"&gt;Aula: Tuplas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/list-class-python.html"&gt;Aula: Listas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
 &lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
 &lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple"&gt;Tuple&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://codingair.logdown.com/posts/179395-understand-common-sequence-data-types-in-python-string-tuple-and-list"&gt;Understand Common Sequence Data Types in Python – String, Tuple, and List&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -7204,6 +7248,18 @@ referência[ &amp;lt;inicio&amp;gt; : &amp;lt;fim&amp;gt; : &amp;lt;intervalo&am
 &lt;p&gt;No código acima, definimos inicialmente, uma variável de nome &lt;tt class="docutils literal"&gt;lista_mista&lt;/tt&gt; e atribuimos a mesma uma lista contendo 7 elementos de tipos diferentes. O primeiro elemento é um caractere, o segundo é um valor lógico, o terceiro é um número e assim por diante.&lt;/p&gt;
 &lt;p&gt;Por fim concluimos que listas em Python não definem o tipo de seus elementos, como ocorre com os Array em linguagem como Java, C e C++.
 Assim, ainda que o funcionamento das lista em seja similar a um Array em C, C++, Pascal, numa lista só iremos ter objetos e por isso, o tipo do objeto é indiferente até porque, todo objeto, indiferente da sua declaração, descende de uma mesma estrutura implicita a linguagem.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/tuplas-python.html"&gt;Aula: Tuplas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#lists"&gt;List&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category></entry><entry><title>Lista, Pilha, Array, Set em Python</title><link href="http://excript.com/python/lista-pilha-array-set-python.html" rel="alternate"></link><published>2014-11-05T23:11:00-02:00</published><updated>2014-11-05T23:11:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-11-05:/python/lista-pilha-array-set-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
