@@ -995,7 +995,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;div class="section" id="as-string-sao-listas-imutaveis"&gt;
 &lt;h2&gt;As &lt;tt class="docutils literal"&gt;string&lt;/tt&gt; SÃO LISTAS IMUTÁVEIS&lt;/h2&gt;
 &lt;p&gt;Para o Python, toda &lt;tt class="docutils literal"&gt;string&lt;/tt&gt; é uma lista imutável, semelhante a uma &lt;a class="reference external" href="http://excript.com/python/tuplas-python.html"&gt;Tupla&lt;/a&gt;, porém, com funcionalidade bastante especificas. A manipulação de &lt;tt class="docutils literal"&gt;string&lt;/tt&gt;, tuplas e &lt;a class="reference external" href="http://excript.com/python/list-class-python.html"&gt;listas&lt;/a&gt; é bastante semelhante, e, a definição em Python de Tupla e String é quase que identico. Isso porque, toda String após definida NÃO pode ser alterada, ou seja, você não pode alterar um caractere dentro de uma String. Então, ao fazermos alguma alteração numa determinada parte de uma String, o que de fato ocorrerá é a definição de uma nova &lt;tt class="docutils literal"&gt;String&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;A várias razões pela quais as &lt;tt class="docutils literal"&gt;Strings&lt;/tt&gt; não podem ser alteradas, algumas delas são que, internamente, quando uma &lt;tt class="docutils literal"&gt;string&lt;/tt&gt; é definida, uma série de otimizações são feitas, de tal forma, que é mais rápido destruir a instância existente e criar uma nova, do que reaproveitar as otimizações existentes. Por isso, por exemplo, a concatenação, interpolação ou qualquer manipulação de &lt;tt class="docutils literal"&gt;string&lt;/tt&gt;, resulta, invariavelmente, numa nova instância que é criada e que possui as modificações.&lt;/p&gt;
+&lt;p&gt;Há várias razões pela quais as &lt;tt class="docutils literal"&gt;Strings&lt;/tt&gt; não podem ser alteradas, algumas delas são que, internamente, quando uma &lt;tt class="docutils literal"&gt;string&lt;/tt&gt; é definida, uma série de otimizações são feitas, de tal forma, que é mais rápido destruir a instância existente e criar uma nova, do que reaproveitar as otimizações existentes. Por isso, por exemplo, a concatenação, interpolação ou qualquer manipulação de &lt;tt class="docutils literal"&gt;string&lt;/tt&gt;, resulta, invariavelmente, numa nova instância que é criada e que possui as modificações.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
@@ -7248,6 +7248,16 @@ referência[ &amp;lt;inicio&amp;gt; : &amp;lt;fim&amp;gt; : &amp;lt;intervalo&am
 &lt;p&gt;No código acima, definimos inicialmente, uma variável de nome &lt;tt class="docutils literal"&gt;lista_mista&lt;/tt&gt; e atribuimos a mesma uma lista contendo 7 elementos de tipos diferentes. O primeiro elemento é um caractere, o segundo é um valor lógico, o terceiro é um número e assim por diante.&lt;/p&gt;
 &lt;p&gt;Por fim concluimos que listas em Python não definem o tipo de seus elementos, como ocorre com os Array em linguagem como Java, C e C++.
 Assim, ainda que o funcionamento das lista em seja similar a um Array em C, C++, Pascal, numa lista só iremos ter objetos e por isso, o tipo do objeto é indiferente até porque, todo objeto, indiferente da sua declaração, descende de uma mesma estrutura implicita a linguagem.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="vetores-e-listas"&gt;
+&lt;h2&gt;VETORES E LISTAS&lt;/h2&gt;
+&lt;p&gt;Alunos que estudaram linguagens como o C/C++, Java, Pascal as vezes imaginam o tipo lista como sendo um vetor, porém, conceitualmente, a única relação entre ambas estruturas é que as 2 contém um conjunto de elementos indexados.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+1) Vetores possuem uma quantidade limitada de elementos
+2) TODOS os elementos devem ser do mesmo tipo
+3) Não permitem slice/fatiamento
+4) Não possuem índices negativos,
+&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
