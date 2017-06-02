@@ -1,5 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - curso cpp</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/curso-cpp.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2016-06-22T03:00:00-03:00</updated><entry><title>Primeiro Programa em C++</title><link href="http://excript.com/cpp/primeiro-programa-cpp.html" rel="alternate"></link><published>2016-06-22T03:00:00-03:00</published><updated>2016-06-22T03:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-22:/cpp/primeiro-programa-cpp.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - curso cpp</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/curso-cpp.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-06-01T23:00:00-03:00</updated><entry><title>Estrutura de Repetição for do C++</title><link href="http://excript.com/cpp/estrutura-repeticao-for-cpp.html" rel="alternate"></link><published>2017-06-01T23:00:00-03:00</published><updated>2017-06-01T23:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-06-01:/cpp/estrutura-repeticao-for-cpp.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a estrutura de repetição for - uma estrutura dita como completa, haja vista que declaramos uma variável, verificamos uma condição e incrementamos ou decrementamos valores - tudo no cabeçalho da estrutura.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="estrutura-for"&gt;
+&lt;h2&gt;ESTRUTURA &lt;tt class="docutils literal"&gt;FOR&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;O laço de repetição for é considerado uma estrutura de repetição completa. Isso porque, em seu …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a estrutura de repetição for - uma estrutura dita como completa, haja vista que declaramos uma variável, verificamos uma condição e incrementamos ou decrementamos valores - tudo no cabeçalho da estrutura.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="estrutura-for"&gt;
+&lt;h2&gt;ESTRUTURA &lt;tt class="docutils literal"&gt;FOR&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;O laço de repetição for é considerado uma estrutura de repetição completa. Isso porque, em seu cabeçalho somos capazes de declarar uma variável, estabelecer uma condição e incrementar ou decrementar valores a uma determinada variável.&lt;/p&gt;
+&lt;p&gt;A seguir temos a estrutura for dividida em suas 3 partes:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;variável&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;condição&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;incremento&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Cada parte da estrutura for é finalizada com um ponto-e-vírgula, salvo a última parte.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;variável&lt;/dt&gt;
+&lt;dd&gt;A parte que chamamos de &lt;strong&gt;variável&lt;/strong&gt; é o local em que podemos declarar e inicializar uma variável para ser utilizada como um contador durante os ciclos. Essa variável que declaramos e vamos incrementando ou decrementando é talvez a parte mais importante, pois será o número que utilizaremos para por exemplo, acessar estruturas tipo Array.&lt;/dd&gt;
+&lt;dt&gt;condição&lt;/dt&gt;
+&lt;dd&gt;A segunda parte, que chamamos de &lt;strong&gt;condição&lt;/strong&gt; é o local que definimos a condição para que o laço de repetição seja interrompido. Observe que se a condição nunca for atendida, a nossa aplicação entrará em um looping infinito de forma que o usuário não consiga mais utiliza-la, salvo se fechar e abrir novamente o programa.&lt;/dd&gt;
+&lt;dt&gt;incremento&lt;/dt&gt;
+&lt;dd&gt;A última parte que chamamos de &lt;strong&gt;incremento&lt;/strong&gt; é o local em que modificaremos o valor da variável que foi declarada na primeira parte. Observe que podemos incrementar valores ou então decrementar, isso dependerá da lógica que estamos implementando.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-1"&gt;
+&lt;h2&gt;EXEMPLO 1&lt;/h2&gt;
+&lt;p&gt;Vamos implementar um laço de repetição com a estrutura for que imprima os números de 0 até 10 na tela.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pause&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima implementamos um estrutura de repetição for e nesta declaramos inicialmente uma variável de nome &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; e inicializamos a mesma com o valor 0.&lt;/p&gt;
+&lt;p&gt;Feito isso, definimos a condição na qual o laço de repetição deve ser executado, no caso, dissemos que &lt;tt class="docutils literal"&gt;n &amp;lt;= 9;&lt;/tt&gt;. Observe que estamos inicializando a variável em 0, portanto, para imprimirmos os 10 primeiros valores devemos imprimir do 0 até o 9. Se por acaso definissemos o valor 10, iríamos imprimir 11 números, até porque, no intervalo de 0 até 10 há 11 números!&lt;/p&gt;
+&lt;p&gt;Por fim, incrementamos uma unidade à variável &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; com a expressão &lt;tt class="docutils literal"&gt;n++&lt;/tt&gt;. Ainda não estudamos o operador de incremento e decremento, porém, pense nessa expressão como sendo igual à: &lt;tt class="docutils literal"&gt;n = n +1&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Vamos fazer mais um exemplo, porém agora, vamos imprimir os números na ordem inversa, ou seja, vamos iniciar em 9 e vamos até 0.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pause&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O código acima é basicamente o mesmo código que fizemos anteriormente, porém agora, ao invés de incrementarmos uma unidade na variável &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; estamos decrementando. Observe que também tivemos que inicializar a variável &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; atribuindo o valor 9 e, por fim, definimos a condição (a estrutura central) dizendo que o laço deve ser finalizado quando o valor de &lt;tt class="docutils literal"&gt;n &amp;lt;= 0&lt;/tt&gt;. Por fim, decrementamos uma unidade a variável &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; utilizando a expressão &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;n--&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;A seguir, veja a comparação entre o laço for do primeiro e do segundo exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#comparação entre o exemplo de incremento e decremento&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplo-feito-em-aula"&gt;
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+
+&lt;span class="cm"&gt;/*====================================&lt;/span&gt;
+&lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt;*          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt;* ====================================*/&lt;/span&gt;
+
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;O valor de i eh igual: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pause&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="curso"></category><category term="cpp"></category><category term="laço de repetição"></category><category term="looping"></category><category term="for"></category></entry><entry><title>Primeiro Programa em C++</title><link href="http://excript.com/cpp/primeiro-programa-cpp.html" rel="alternate"></link><published>2016-06-22T03:00:00-03:00</published><updated>2016-06-22T03:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-22:/cpp/primeiro-programa-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2420,69 +2530,6 @@ variavel --;&lt;/blockquote&gt;
     &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Pos = &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;i2&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//pos-decrementar&lt;/span&gt;
     &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Pos = &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;i2&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-    &lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pause&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</content><category term="curso"></category><category term="cpp"></category></entry><entry><title>Estrutura de Repetição for do C++</title><link href="http://excript.com/cpp/estrutura-repeticao-for-cpp.html" rel="alternate"></link><published>2015-03-10T00:20:00-03:00</published><updated>2015-03-10T00:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-03-10:/cpp/estrutura-repeticao-for-cpp.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a estrutura de repetição for, isto é, uma estrutura de repetição especializada e compacta, sendo a mais utilizada pela comunidade de desenvolvimento.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;p&gt;A estrutura FOR, ou então, laço de repetição &lt;cite&gt;for&lt;/cite&gt;, é o iterador mais utilizado na programação C++. Com esta instrução, conseguimos repetir uma bloco de …&lt;/p&gt;</summary><content type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a estrutura de repetição for, isto é, uma estrutura de repetição especializada e compacta, sendo a mais utilizada pela comunidade de desenvolvimento.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;p&gt;A estrutura FOR, ou então, laço de repetição &lt;cite&gt;for&lt;/cite&gt;, é o iterador mais utilizado na programação C++. Com esta instrução, conseguimos repetir uma bloco de instrução durante um período preestabelecido.&lt;/p&gt;
-&lt;p&gt;A estrutura for possui um cabeçalho, onde nós definimos os parâmetros para a execução desse laço.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;variável&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;condição&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;incremento&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No cabeçalho, 3 parâmetros são pedidos:&lt;/p&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;Variável&lt;/li&gt;
-&lt;li&gt;Condição&lt;/li&gt;
-&lt;li&gt;Incremento&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;A variável é o local onde iremos declarar uma variável, geralmente do tipo inteiro e já iremos inicializar a mesma com algum valor. É importante observar, que podemos inicializar quantas variáveis desejarmos - o normal é a utilização de uma única.&lt;/p&gt;
-&lt;p&gt;O segundo parâmetro é a condição.
-A condição define o intervalo no qual a instrução deve ser executada.a&lt;/p&gt;
-&lt;div class="section" id="incremento"&gt;
-&lt;h2&gt;INCREMENTO&lt;/h2&gt;
-&lt;p&gt;O incremento, como o nome sugere, é o local onde iremos incrementar alguma valor a variável.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-
-&lt;span class="cm"&gt;/*====================================&lt;/span&gt;
-&lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
-&lt;span class="cm"&gt;*          fb.com/eXcript&lt;/span&gt;
-&lt;span class="cm"&gt;* ====================================*/&lt;/span&gt;
-
-&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pause&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;

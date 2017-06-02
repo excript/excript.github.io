@@ -1,5 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - curso de python</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/curso-de-python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-04-25T07:00:00-03:00</updated><entry><title>Tradução da Documentação do Kivy para o Português</title><link href="http://excript.com/python/doc-kivy-ptbr.html" rel="alternate"></link><published>2017-04-25T07:00:00-03:00</published><updated>2017-04-25T07:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-04-25:/python/doc-kivy-ptbr.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - curso de python</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/curso-de-python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-05-26T23:50:00-03:00</updated><entry><title>O PYTHON NA LINHA DE COMANDO</title><link href="http://excript.com/blog/python-na-linha-de-comando.html" rel="alternate"></link><published>2017-05-26T23:50:00-03:00</published><updated>2017-05-26T23:50:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-05-26:/blog/python-na-linha-de-comando.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a relação entre o Python e a linha de comando, seja no Windows, Linux ou Mac&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;É importante entendermos o modo de funcionamento do Python para que consigamos entender a relação existente entre a IDE, o Sistema Operacional e o interpretador do Python.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-python-como-linguagem"&gt;
+&lt;h2&gt;O PYTHON COMO …&lt;/h2&gt;&lt;/div&gt;</summary><content type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Nesta aula estudaremos a relação entre o Python e a linha de comando, seja no Windows, Linux ou Mac&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="introducao"&gt;
+&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
+&lt;p&gt;É importante entendermos o modo de funcionamento do Python para que consigamos entender a relação existente entre a IDE, o Sistema Operacional e o interpretador do Python.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-python-como-linguagem"&gt;
+&lt;h2&gt;O PYTHON COMO LINGUAGEM&lt;/h2&gt;
+&lt;p&gt;O Python é uma linguagem de programação de alto nível e sua especificação, ou seja, sua sintaxe e semântica são definidas por um grupo de desenvolvimento internacional e podem ser encontradas no site oficial da linguagem &lt;a class="reference external" href="http://www.python.org"&gt;http://www.python.org&lt;/a&gt; .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-python-como-interpretador"&gt;
+&lt;h2&gt;O PYTHON COMO INTERPRETADOR&lt;/h2&gt;
+&lt;p&gt;O mesmo grupo internacional que desenvolve a linguagem Python também desenvolve um interpretador para códigos Python.&lt;/p&gt;
+&lt;p&gt;É importante observar a diferença entre estabelecer as normas de uma linguagem e o desenvolvimento de um interpretador ou compilador para a mesma.&lt;/p&gt;
+&lt;p&gt;Atualmente é normal que o mesmo grupo que desenvolve a sintaxe de uma linguagem de programação também forneça um compilador ou interpretador, mas isso não é uma regra.&lt;/p&gt;
+&lt;p&gt;Então eu lhe pergunto: quando alguém se refere ao Python, o mesmo estará querendo se referir a linguagem ou ao interpretador?&lt;/p&gt;
+&lt;p&gt;É correto dizer que o Python é uma linguagem lenta?&lt;/p&gt;
+&lt;p&gt;A verdade é que no dia-a-dia acabamos nos referindo ao compilador e a linguagem como sendo Python o que geralmente não acarreta em problemas, porém, dizer que o Python é uma linguagem lenta é por definição um erro.&lt;/p&gt;
+&lt;p&gt;O que pode ser lento é o interpretador da linguagem Python escrito pelo grupo oficial, porém, a linguagem Python também pode ser compilada e sua performance quando executada chega bastante perto de um código implementado pela linguagem C!&lt;/p&gt;
+&lt;p&gt;Portanto, vamos agora estabelecer alguns conceitos:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Python é uma linguagem&lt;/li&gt;
+&lt;li&gt;Interpretador é uma aplicação que entende a linguagem Python&lt;/li&gt;
+&lt;li&gt;Compilador é uma aplicação que transforma código Python em outro código, como por exemplo, o código de máquina&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="linha-de-comando"&gt;
+&lt;h2&gt;LINHA DE COMANDO&lt;/h2&gt;
+&lt;p&gt;O interpretador do Python é uma grande aplicação que contém um arquivo com o mesmo nome da linguagem na pasta em que foi instalado.&lt;/p&gt;
+&lt;p&gt;Se fores até o diretório da instalação do Python e supondo que estás num ambiente Windows, encontrarás um arquivo de nome &lt;tt class="docutils literal"&gt;python.exe&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Se deres um duplo clique sobre o executável será aberto uma janela com o Prompt de Comando do Windows e nesta encontrarás o Modo Interativo do Python, ou seja, o local onde você pode digitar instruções Python, pressionar a tecla Enter que a instrução será processada e o resultado impresso na sequência.&lt;/p&gt;
+&lt;img alt="Interpretador do Python sendo executado no Prompt de Comando do Windows" src="../images/blog/python-interpretador.png" /&gt;
+&lt;p&gt;Sendo o interpretador do Python uma aplicação executada na linha de comando, podemos executar através do prompt e dessa forma definir alguns parâmetros, como por exemplo, o nome do arquivo que contém código Python e que desejamos executar.&lt;/p&gt;
+&lt;p&gt;Inicialmente, crie um arquivo de nome &lt;tt class="docutils literal"&gt;codigo.py&lt;/tt&gt; em qualquer diretório do seu computador. Em seguida, abra este arquivo com o Bloco de Notas ou então, qualquer outro editor de texto.&lt;/p&gt;
+&lt;img alt="Arquivo de nome codigo.py criado num diretório do Windows" src="../images/blog/python-arquivo-codigo.png" /&gt;
+&lt;p&gt;Insira uma única linha dentro do arquivo &lt;tt class="docutils literal"&gt;codigo.py&lt;/tt&gt;&lt;/p&gt;
+&lt;!-- code-block::sh
+
+print("Arquivo Python executado com sucesso!!") --&gt;
+&lt;img alt="Arquivo de nome codigo.py contendo uma instrução Python que será executada no Prompt do Windows" src="../images/blog/python-arquivo-codigo-notepad.png" /&gt;
+&lt;p&gt;Em seguida, salve as alterações que fizemos no arquivo &lt;tt class="docutils literal"&gt;codigo.py&lt;/tt&gt;, abra o Prompt de Comando do Windows, vá até o diretório em que você salvou o arquivo Python que acabamos de criar e digite a seguinte instrução no Prompt de Comando:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python codigo.py
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="Arquivo contendo código Python sendo executado no Prompt do Windows" src="../images/blog/python-arquivo-codigo-cmd.png" /&gt;
+&lt;p&gt;Se todos os passos anteriores foram executados com sucesso, será impresso no Prompt de Comando a frase que colocamos dentro da instrução &lt;code&gt;print()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;O exemplo que acabamos de realizar tem por objetivo demonstrar que arquivos Python são interpretados pelo executável do Python. Toda vez que desejarmos executar arquivos contendo código Python teremos que executar o executável &lt;tt class="docutils literal"&gt;python.exe&lt;/tt&gt; e em seguida informar o nome do arquivo a ser interpretado.&lt;/p&gt;
+&lt;p&gt;É super importante entender que somente o arquivo &lt;tt class="docutils literal"&gt;python.exe&lt;/tt&gt; é capaz de interpretar código Python. E também, é super importante entender, que todas as mensagens de erro que recebemos quando após a execução de algum código Python, foi enviado pelo interpretador da linguagem para a saída padrão.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-python-e-as-ide-s"&gt;
+&lt;h2&gt;O PYTHON E AS IDE's&lt;/h2&gt;
+&lt;p&gt;Desenvolver aplicações pode se tornar uma atividade bastante complexa e demorada. Por exemplo, se estivermos escrevendo uma aplicação utilizando um editor de texto simples como o Notepad do Windows, as palavras da linguagem não serão coloridas e todas as vezes que desejarmos executar o código, teremos que abrir o Prompt de Comando, ir até o diretório em que estamos salvando os arquivos e por fim, executar o arquivo principal que contém código Python.&lt;/p&gt;
+&lt;p&gt;No intento de evitar esse trabalho repetitivo foram criados aplicações para processamento de códigos cada vez mais avançados. Uma das características desses editores avançados, foi o envio de arquivos contendo códigos para o interpretador da linguagem com o pressionar de um única tecla.&lt;/p&gt;
+&lt;p&gt;Eis que nascia o termo IDE (Ambiente de Desenvolvimento Integrado).&lt;/p&gt;
+&lt;p&gt;A maior parte dos cursos de desenvolvimento de aplicações utiliza desde as primeiras aulas IDEs potentes que além de facilitar o desenvolvimento, também facilitam o aprendizado e o estudo da linguagem.&lt;/p&gt;
+&lt;p&gt;A comodidade e facilidade que as IDEs proporcionam tem um lado negativo, que é o desconhecimento do processo fundamental da execução de código-fonte.&lt;/p&gt;
+&lt;p&gt;É comum ler em fóruns ou então ouvir alunos confundindo a linguagem, o interpretador/compilador e a IDE! Por exemplo:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&amp;quot;O PyCharm está exibindo uma mensagem de erro&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;Esse código não é executado no meu PyCharm&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Num primeiro momento pode parecer uma problema bobo, porém, enquanto o estudante não entende de fato os conceitos, toda a sua forma de pensar será prejudicada e toda a visão sobre como os computadores funcionam estará debilitado.&lt;/p&gt;
+&lt;p&gt;Portanto, indiferente da IDE que você utilize, a mesma NUNCA terá acoplado junto ao seu código o interpretador da linguagem. A função da IDE nada tem a ver com a linguagem e portanto a função da IDE é enviar o arquivo contendo código como parâmetro para o interpretador da linguagem. Inclusive, isso pode ser observado na IDE PyCharm bem facilmente, veja a imagem a seguir:&lt;/p&gt;
+&lt;img alt="Tela de configuração de execução e depuração do PyCharm" src="../images/blog/python-pycharm-run-debug-configurations.png" /&gt;
+&lt;p&gt;Na imagem acima há 3 marcações, a seguir e definição de cada parte.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Nome do arquivo que será enviado para o interpretador&lt;/li&gt;
+&lt;li&gt;Nome do interpretador do Python selecionado&lt;/li&gt;
+&lt;li&gt;Caminho para o local que contém os arquivos deste projeto&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusao"&gt;
+&lt;h2&gt;CONCLUSÃO&lt;/h2&gt;
+&lt;p&gt;O objetivo desde breve trabalho é demonstrar que &lt;strong&gt;toda&lt;/strong&gt; IDE envia o nosso código para o interpretador/compilador. Em seguida, a mesma lê a resposta que o interpretador/compilador envia para a saída padrão e exibe para o programador.&lt;/p&gt;
+&lt;p&gt;Portanto, uma IDE é uma camada de abstração entre o desenvolvedor e o interpretador/compilador. Essa camada tem por objetivo facilitar o desenvolvimento, porém, a mesma não se faz obrigatória e jamais fará parte do nosso software, ou seja, a IDE nunca estará contida na aplicação que iremos distribuir.&lt;/p&gt;
+&lt;p&gt;De agora em diante, indiferente da linguagem, observe que TODAS possuem um ou vários interpretador/compiladores e também, possuem uma ou várias IDEs para o desenvolvimento de aplicações.&lt;/p&gt;
+&lt;p&gt;Por fim, veja nas imagens finais as várias IDEs desenvolvidas pela JetBrains. Observe que &lt;strong&gt;todas&lt;/strong&gt; são muito parecidas, porém, cada uma é destinada ao desenvolvimento de uma linguagem. A JetBrains reutiliza um mesmo projeto para o desenvolvimento de várias IDEs, inclusive a JetBrains é a desenvolvedor da conceituada IDE do AndroidStudio!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ide-intellij-idea"&gt;
+&lt;h2&gt;IDE IntelliJ IDEA&lt;/h2&gt;
+&lt;img alt="IDE de Desenvolvimento de Aplicações com a Linguagem Python IntelliJ IDEA" src="../images/blog/python-ide-intellij-idea.png" /&gt;
+&lt;p&gt;Clique &lt;a class="reference external" href="https://www.jetbrains.com/idea/"&gt;aqui para ir ao site do IntelliJ IDEA&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ide-pycharm"&gt;
+&lt;h2&gt;IDE PyCharm&lt;/h2&gt;
+&lt;img alt="IDE de Desenvolvimento de Aplicações com a Linguagem Python PyCharm" src="../images/blog/python-ide-pycharm.png" /&gt;
+&lt;p&gt;Clique &lt;a class="reference external" href="https://www.jetbrains.com/pycharm/"&gt;aqui para ir ao site do PyCharm&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.jetbrains.com/idea/"&gt;IDE IntelliJ IDEA&lt;/a&gt;
+&lt;a class="reference external" href="https://www.jetbrains.com/pycharm/"&gt;IDE PyCharm&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="curso"></category><category term="python"></category><category term="cmd"></category><category term="linha de comando"></category><category term="blog"></category></entry><entry><title>Tradução da Documentação do Kivy para o Português</title><link href="http://excript.com/python/doc-kivy-ptbr.html" rel="alternate"></link><published>2017-04-25T07:00:00-03:00</published><updated>2017-04-25T07:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-04-25:/python/doc-kivy-ptbr.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1269,7 +1396,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
     &lt;/div&gt;
 &lt;p&gt;A biblioteca padrão do Python contém centenas de funções que possuem parâmetros com valores associados, uma delas é a função range() já estudada.&lt;/p&gt;
 &lt;p&gt;Em aulas anteriores, invocamos, algumas vezes, funções que continham &lt;tt class="docutils literal"&gt;parâmetros default&lt;/tt&gt;,  por exemplo, a função &lt;code&gt;range()&lt;/code&gt;, cuja notação pode ser vista no trecho de código a seguir.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;pass&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A função &lt;code&gt;range()&lt;/code&gt; é, na verdade, uma classe, por isso que o nome da função é &lt;code&gt;__init__()&lt;/code&gt;, isto é, essa função é a função que é invocada quando uma nova instância está sendo criada.&lt;/p&gt;
@@ -2959,7 +3086,7 @@ beltrano
 &lt;li&gt;Class Instances&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;A&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="k"&gt;pass&lt;/span&gt;
 
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -5719,12 +5846,12 @@ Alt + N - para avançar. O 'N' vem de &amp;quot;Next&amp;quot;.&lt;/p&gt;
 &lt;p&gt;O texto que impresso deverá ser semelhante ao ao texto a seguir:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;... python
 
-Python 3.5 &lt;span class="o"&gt;(&lt;/span&gt;default, Mar  - YYYY, hh:mm:ss&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;MSC v.1600 &lt;span class="m"&gt;64&lt;/span&gt; bit &lt;span class="o"&gt;(&lt;/span&gt;AMD64&lt;span class="o"&gt;)]&lt;/span&gt; on win32
+Python &lt;span class="m"&gt;3&lt;/span&gt;.5 &lt;span class="o"&gt;(&lt;/span&gt;default, Mar  - YYYY, hh:mm:ss&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;MSC v.1600 &lt;span class="m"&gt;64&lt;/span&gt; bit &lt;span class="o"&gt;(&lt;/span&gt;AMD64&lt;span class="o"&gt;)]&lt;/span&gt; on win32
 Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span class="s2"&gt;&amp;quot;credits&amp;quot;&lt;/span&gt; or &lt;span class="s2"&gt;&amp;quot;license()&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; more information.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;OU ENTÃO:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;... python
-Python 3.6 &lt;span class="p"&gt;|&lt;/span&gt;Anaconda 2.2.0 &lt;span class="o"&gt;(&lt;/span&gt;64-bit&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;default, Mar  YYYY, hh:mm:ss&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;MSC v.1600 &lt;span class="m"&gt;64&lt;/span&gt; bit &lt;span class="o"&gt;(&lt;/span&gt;AMD64&lt;span class="o"&gt;)]&lt;/span&gt; on win32
+Python &lt;span class="m"&gt;3&lt;/span&gt;.6 &lt;span class="p"&gt;|&lt;/span&gt;Anaconda &lt;span class="m"&gt;2&lt;/span&gt;.2.0 &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;64&lt;/span&gt;-bit&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;default, Mar  YYYY, hh:mm:ss&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;MSC v.1600 &lt;span class="m"&gt;64&lt;/span&gt; bit &lt;span class="o"&gt;(&lt;/span&gt;AMD64&lt;span class="o"&gt;)]&lt;/span&gt; on win32
 Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span class="s2"&gt;&amp;quot;credits&amp;quot;&lt;/span&gt; or &lt;span class="s2"&gt;&amp;quot;license()&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; more information.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -7332,6 +7459,10 @@ Assim, ainda que o funcionamento das lista em seja similar a um Array em C, C++,
 4) Não possuem índices negativos,
 &lt;/pre&gt;
 &lt;/div&gt;
+&lt;div class="section" id="notacao-subscrita"&gt;
+&lt;h2&gt;NOTAÇÃO SUBSCRITA&lt;/h2&gt;
+&lt;p&gt;A notação para acesso a elementos de uma lista é chamado no glossário do Python de &lt;strong&gt;notação subscrita&lt;/strong&gt;, em Inglês &lt;a class="reference external" href="https://docs.python.org/3/reference/expressions.html?highlight=subscript#subscriptions"&gt;subscript notation&lt;/a&gt; .&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -7342,6 +7473,7 @@ Assim, ainda que o funcionamento das lista em seja similar a um Array em C, C++,
 &lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#lists"&gt;List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/reference/expressions.html?highlight=subscript#subscriptions"&gt;Subscript Notation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category></entry><entry><title>Lista, Pilha, Array, Set em Python</title><link href="http://excript.com/python/lista-pilha-array-set-python.html" rel="alternate"></link><published>2014-11-05T23:11:00-02:00</published><updated>2014-11-05T23:11:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-11-05:/python/lista-pilha-array-set-python.html</id><summary type="html">

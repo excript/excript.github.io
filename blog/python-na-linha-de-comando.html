@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+
+
+<html lang="pt-br"  xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head>
+    <title>O PYTHON NA LINHA DE COMANDO - eXcript</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="Vi7WdSsBR9oK2RjK_6E8OrtAfzA_mVlNrhlDjt7LXZ0" />
+	<!--<link href="https://plus.google.com/" rel="publisher">	-->
+
+
+
+<link rel="canonical" href="http://excript.com/blog/python-na-linha-de-comando.html">
+
+        <meta name="author" content="Cláudio Rogério Carvalho Filho" />
+        <meta name="keywords" content="curso,python,cmd,linha de comando,blog" />
+    <meta name="description" content="Nesta aula estudaremos a relação entre o Python e a linha de comando, seja no Windows, Linux ou Mac" />
+
+        <meta property="og:site_name" content="eXcript" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="O PYTHON NA LINHA DE COMANDO"/>
+        <meta property="og:url" content="http://excript.com/blog/python-na-linha-de-comando.html"/>
+
+        <meta property="og:description" content="Nesta aula estudaremos a relação entre o Python e a linha de comando, seja no Windows, Linux ou Mac"/>
+
+        <meta property="article:published_time" content="26-05-2017" />
+            <meta property="article:section" content="curso de python" />
+            <meta property="article:tag" content="curso" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="cmd" />
+            <meta property="article:tag" content="linha de comando" />
+            <meta property="article:tag" content="blog" />
+            <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
+            <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
+
+
+    <link rel="stylesheet" href="http://excript.com/theme/css/asciidoctor-default.css" type="text/css"/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://excript.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://excript.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://excript.com/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://excript.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://excript.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="eXcript ATOM Feed"/>
+
+        <link href="http://excript.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="eXcript RSS Feed"/>
+
+
+        <link href="http://excript.com/feeds/curso-de-python.atom.xml" type="application/atom+xml" rel="alternate"
+              title="eXcript curso de python ATOM Feed"/>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://excript.com/" class="navbar-brand">
+eXcript            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://excript.com/tag/blog.html">blog</a></li>
+                    <li><a href="http://excript.com/cursos.html">cursos</a></li>
+                    <li><a href="http://excript.com/pages/about.html">quem somos</a></li>
+                    <li><a href="http://doe.excript.com/">DOE</a></li>
+                    <li><a href="http://excript.com/pages/contato.html">contato</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://excript.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container container-content">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://excript.com/blog/python-na-linha-de-comando.html"
+                       rel="bookmark"
+                       title="Permalink to O PYTHON NA LINHA DE COMANDO">
+                        O PYTHON NA LINHA DE COMANDO
+                    </a>
+                </h1>
+
+            </header>
+            <div class="entry-content">
+
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+
+
+
+
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a data-toggle="tab" href="#artigo">ARTIGO</a></li>
+		</ul>
+
+		<div class="tab-content">
+
+			<div class="tab-pane active" id="artigo">
+				<div class="row">
+					
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Nesta aula estudaremos a relação entre o Python e a linha de comando, seja no Windows, Linux ou Mac</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>É importante entendermos o modo de funcionamento do Python para que consigamos entender a relação existente entre a IDE, o Sistema Operacional e o interpretador do Python.</p>
+</div>
+<div class="section" id="o-python-como-linguagem">
+<h2>O PYTHON COMO LINGUAGEM</h2>
+<p>O Python é uma linguagem de programação de alto nível e sua especificação, ou seja, sua sintaxe e semântica são definidas por um grupo de desenvolvimento internacional e podem ser encontradas no site oficial da linguagem <a class="reference external" href="http://www.python.org">http://www.python.org</a> .</p>
+</div>
+<div class="section" id="o-python-como-interpretador">
+<h2>O PYTHON COMO INTERPRETADOR</h2>
+<p>O mesmo grupo internacional que desenvolve a linguagem Python também desenvolve um interpretador para códigos Python.</p>
+<p>É importante observar a diferença entre estabelecer as normas de uma linguagem e o desenvolvimento de um interpretador ou compilador para a mesma.</p>
+<p>Atualmente é normal que o mesmo grupo que desenvolve a sintaxe de uma linguagem de programação também forneça um compilador ou interpretador, mas isso não é uma regra.</p>
+<p>Então eu lhe pergunto: quando alguém se refere ao Python, o mesmo estará querendo se referir a linguagem ou ao interpretador?</p>
+<p>É correto dizer que o Python é uma linguagem lenta?</p>
+<p>A verdade é que no dia-a-dia acabamos nos referindo ao compilador e a linguagem como sendo Python o que geralmente não acarreta em problemas, porém, dizer que o Python é uma linguagem lenta é por definição um erro.</p>
+<p>O que pode ser lento é o interpretador da linguagem Python escrito pelo grupo oficial, porém, a linguagem Python também pode ser compilada e sua performance quando executada chega bastante perto de um código implementado pela linguagem C!</p>
+<p>Portanto, vamos agora estabelecer alguns conceitos:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>Python é uma linguagem</li>
+<li>Interpretador é uma aplicação que entende a linguagem Python</li>
+<li>Compilador é uma aplicação que transforma código Python em outro código, como por exemplo, o código de máquina</li>
+</ol>
+</blockquote>
+</div>
+<div class="section" id="linha-de-comando">
+<h2>LINHA DE COMANDO</h2>
+<p>O interpretador do Python é uma grande aplicação que contém um arquivo com o mesmo nome da linguagem na pasta em que foi instalado.</p>
+<p>Se fores até o diretório da instalação do Python e supondo que estás num ambiente Windows, encontrarás um arquivo de nome <tt class="docutils literal">python.exe</tt>.</p>
+<p>Se deres um duplo clique sobre o executável será aberto uma janela com o Prompt de Comando do Windows e nesta encontrarás o Modo Interativo do Python, ou seja, o local onde você pode digitar instruções Python, pressionar a tecla Enter que a instrução será processada e o resultado impresso na sequência.</p>
+<img alt="Interpretador do Python sendo executado no Prompt de Comando do Windows" src="../images/blog/python-interpretador.png" />
+<p>Sendo o interpretador do Python uma aplicação executada na linha de comando, podemos executar através do prompt e dessa forma definir alguns parâmetros, como por exemplo, o nome do arquivo que contém código Python e que desejamos executar.</p>
+<p>Inicialmente, crie um arquivo de nome <tt class="docutils literal">codigo.py</tt> em qualquer diretório do seu computador. Em seguida, abra este arquivo com o Bloco de Notas ou então, qualquer outro editor de texto.</p>
+<img alt="Arquivo de nome codigo.py criado num diretório do Windows" src="../images/blog/python-arquivo-codigo.png" />
+<p>Insira uma única linha dentro do arquivo <tt class="docutils literal">codigo.py</tt></p>
+<!-- code-block::sh
+
+print("Arquivo Python executado com sucesso!!") -->
+<img alt="Arquivo de nome codigo.py contendo uma instrução Python que será executada no Prompt do Windows" src="../images/blog/python-arquivo-codigo-notepad.png" />
+<p>Em seguida, salve as alterações que fizemos no arquivo <tt class="docutils literal">codigo.py</tt>, abra o Prompt de Comando do Windows, vá até o diretório em que você salvou o arquivo Python que acabamos de criar e digite a seguinte instrução no Prompt de Comando:</p>
+<div class="highlight"><pre><span></span>python codigo.py
+</pre></div>
+<img alt="Arquivo contendo código Python sendo executado no Prompt do Windows" src="../images/blog/python-arquivo-codigo-cmd.png" />
+<p>Se todos os passos anteriores foram executados com sucesso, será impresso no Prompt de Comando a frase que colocamos dentro da instrução <code>print()</code>.</p>
+<p>O exemplo que acabamos de realizar tem por objetivo demonstrar que arquivos Python são interpretados pelo executável do Python. Toda vez que desejarmos executar arquivos contendo código Python teremos que executar o executável <tt class="docutils literal">python.exe</tt> e em seguida informar o nome do arquivo a ser interpretado.</p>
+<p>É super importante entender que somente o arquivo <tt class="docutils literal">python.exe</tt> é capaz de interpretar código Python. E também, é super importante entender, que todas as mensagens de erro que recebemos quando após a execução de algum código Python, foi enviado pelo interpretador da linguagem para a saída padrão.</p>
+</div>
+<div class="section" id="o-python-e-as-ide-s">
+<h2>O PYTHON E AS IDE's</h2>
+<p>Desenvolver aplicações pode se tornar uma atividade bastante complexa e demorada. Por exemplo, se estivermos escrevendo uma aplicação utilizando um editor de texto simples como o Notepad do Windows, as palavras da linguagem não serão coloridas e todas as vezes que desejarmos executar o código, teremos que abrir o Prompt de Comando, ir até o diretório em que estamos salvando os arquivos e por fim, executar o arquivo principal que contém código Python.</p>
+<p>No intento de evitar esse trabalho repetitivo foram criados aplicações para processamento de códigos cada vez mais avançados. Uma das características desses editores avançados, foi o envio de arquivos contendo códigos para o interpretador da linguagem com o pressionar de um única tecla.</p>
+<p>Eis que nascia o termo IDE (Ambiente de Desenvolvimento Integrado).</p>
+<p>A maior parte dos cursos de desenvolvimento de aplicações utiliza desde as primeiras aulas IDEs potentes que além de facilitar o desenvolvimento, também facilitam o aprendizado e o estudo da linguagem.</p>
+<p>A comodidade e facilidade que as IDEs proporcionam tem um lado negativo, que é o desconhecimento do processo fundamental da execução de código-fonte.</p>
+<p>É comum ler em fóruns ou então ouvir alunos confundindo a linguagem, o interpretador/compilador e a IDE! Por exemplo:</p>
+<ul class="simple">
+<li>&quot;O PyCharm está exibindo uma mensagem de erro&quot;</li>
+<li>&quot;Esse código não é executado no meu PyCharm&quot;</li>
+</ul>
+<p>Num primeiro momento pode parecer uma problema bobo, porém, enquanto o estudante não entende de fato os conceitos, toda a sua forma de pensar será prejudicada e toda a visão sobre como os computadores funcionam estará debilitado.</p>
+<p>Portanto, indiferente da IDE que você utilize, a mesma NUNCA terá acoplado junto ao seu código o interpretador da linguagem. A função da IDE nada tem a ver com a linguagem e portanto a função da IDE é enviar o arquivo contendo código como parâmetro para o interpretador da linguagem. Inclusive, isso pode ser observado na IDE PyCharm bem facilmente, veja a imagem a seguir:</p>
+<img alt="Tela de configuração de execução e depuração do PyCharm" src="../images/blog/python-pycharm-run-debug-configurations.png" />
+<p>Na imagem acima há 3 marcações, a seguir e definição de cada parte.</p>
+<blockquote>
+<ol class="arabic simple">
+<li>Nome do arquivo que será enviado para o interpretador</li>
+<li>Nome do interpretador do Python selecionado</li>
+<li>Caminho para o local que contém os arquivos deste projeto</li>
+</ol>
+</blockquote>
+</div>
+<div class="section" id="conclusao">
+<h2>CONCLUSÃO</h2>
+<p>O objetivo desde breve trabalho é demonstrar que <strong>toda</strong> IDE envia o nosso código para o interpretador/compilador. Em seguida, a mesma lê a resposta que o interpretador/compilador envia para a saída padrão e exibe para o programador.</p>
+<p>Portanto, uma IDE é uma camada de abstração entre o desenvolvedor e o interpretador/compilador. Essa camada tem por objetivo facilitar o desenvolvimento, porém, a mesma não se faz obrigatória e jamais fará parte do nosso software, ou seja, a IDE nunca estará contida na aplicação que iremos distribuir.</p>
+<p>De agora em diante, indiferente da linguagem, observe que TODAS possuem um ou vários interpretador/compiladores e também, possuem uma ou várias IDEs para o desenvolvimento de aplicações.</p>
+<p>Por fim, veja nas imagens finais as várias IDEs desenvolvidas pela JetBrains. Observe que <strong>todas</strong> são muito parecidas, porém, cada uma é destinada ao desenvolvimento de uma linguagem. A JetBrains reutiliza um mesmo projeto para o desenvolvimento de várias IDEs, inclusive a JetBrains é a desenvolvedor da conceituada IDE do AndroidStudio!</p>
+</div>
+<div class="section" id="ide-intellij-idea">
+<h2>IDE IntelliJ IDEA</h2>
+<img alt="IDE de Desenvolvimento de Aplicações com a Linguagem Python IntelliJ IDEA" src="../images/blog/python-ide-intellij-idea.png" />
+<p>Clique <a class="reference external" href="https://www.jetbrains.com/idea/">aqui para ir ao site do IntelliJ IDEA</a></p>
+</div>
+<div class="section" id="ide-pycharm">
+<h2>IDE PyCharm</h2>
+<img alt="IDE de Desenvolvimento de Aplicações com a Linguagem Python PyCharm" src="../images/blog/python-ide-pycharm.png" />
+<p>Clique <a class="reference external" href="https://www.jetbrains.com/pycharm/">aqui para ir ao site do PyCharm</a></p>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<p><a class="reference external" href="https://www.jetbrains.com/idea/">IDE IntelliJ IDEA</a>
+<a class="reference external" href="https://www.jetbrains.com/pycharm/">IDE PyCharm</a></p>
+</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+<br>
+<br>
+<span class="label label-default"></span>
+Tags
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/cmd.html">cmd</a>, 	<a href="http://excript.com/tag/linha-de-comando.html">linha de comando</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comentários</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'blog/python-na-linha-de-comando';
+                var disqus_url = 'http://excript.com/blog/python-na-linha-de-comando.html';
+
+            var disqus_config = function () {
+                this.language = "pt";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Por favor, ative o JavaScript para visualizar os comentários <a href="http://disqus.com/?ref_noscript"> disponibilizado por Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+	    <li class="li-sidebar">
+			<div class="fb-page" data-href="https://www.facebook.com/excript/" data-width="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/excript/"><a href="https://www.facebook.com/excript/">eXcript</a></blockquote></div></div>
+	    </li>
+
+	    <li class="li-sidebar">
+			<script src="https://apis.google.com/js/platform.js"></script>
+
+			<script>
+			  function onYtEvent(payload) {
+			    if (payload.eventType == 'subscribe') {
+			      // Add code to handle subscribe event.
+			    } else if (payload.eventType == 'unsubscribe') {
+			      // Add code to handle unsubscribe event.
+			    }
+			    if (window.console) { // for debugging only
+			      window.console.log('YT event: ', payload);
+			    }
+			  }
+			</script>
+
+			<div class="g-ytsubscribe" data-channel="excriptvideo" data-layout="full" data-count="default" data-onytevent="onYtEvent"></div>
+	    </li>
+
+	    <li class="li-sidebar">
+
+		    <!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+			<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'pt-BR'}
+			</script>
+
+			<!-- Posicione esta tag onde você deseja que o widget apareça. -->
+			<div class="g-page" data-width="200" data-href="//plus.google.com/u/0/102371115481264098253" data-rel="publisher"></div>
+
+	    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+	<div class="container">
+		
+
+		<div class="row">
+			<p class="site-info text-center">
+
+			</p><div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h5>eXcript</h5>
+						<p>
+							A eXcript é um projeto de produção audiovisual de conteúdo técnico com foco no autodidatismo.
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>CURSOS</h5>
+						<ul>
+							<li><a href="http://excript.com/curso-de-python.html">PYTHON</a></li>
+							<li><a href="http://excript.com/curso-de-java.html">JAVA</a></li>
+							<li><a href="http://excript.com/curso-php.html">PHP</a></li>
+							<li><a href="http://excript.com/curso-cpp.html">C++</a></li>
+							<li><a href="http://excript.com/curso-c.html">C</a></li>
+							<li><a href="http://excript.com/curso-de-android.html">ANDROID</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>SOCIAL</h5>
+						<ul>
+							<li><a href="http://plus.google.com/+excriptvideo">GOOGLE+</a></li>
+							<li><a href="http://www.facebook.com/excript">FACEBOOK</a></li>
+							<li><a href="http://twitter.com/eXcriptBrasil">TWITTER</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<p></p>
+		</div>
+	</div>
+</footer>
+<script src="http://excript.com/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://excript.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://excript.com/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-72583776-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1684671528414521";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>
