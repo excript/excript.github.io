@@ -16,7 +16,7 @@
 <link rel="canonical" href="http://excript.com/java/estrutura-repeticao-java.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,java" />
+        <meta name="keywords" content="curso,java,laço de repetição,looping,laço for" />
     <meta name="description" content="Nesta aula iniciaremos o estudo a respeito das estruturas de repetição, também chamados de laço de repetição, laços condicionais, loopings e etc." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -30,6 +30,9 @@
             <meta property="article:section" content="curso de java" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="java" />
+            <meta property="article:tag" content="laço de repetição" />
+            <meta property="article:tag" content="looping" />
+            <meta property="article:tag" content="laço for" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -351,40 +354,34 @@ eXcript            </a>
     </div>
 <div class="section" id="lacos-de-repeticoes-for">
 <h2>LAÇOS DE REPETIÇÕES <cite>FOR</cite></h2>
-</div>
-<div class="section" id="introducao">
-<h2>INTRODUÇÃO</h2>
-<p>Os laços de repetição <cite>for</cite> são os mais utilizados pelas mais diferentes linguagens de programação. Isso é um fenômeno que se observa rapidamente quando começamos a estudar códigos de outros programadores. Assim, a minha afirmação de que é a estrutura de repetição mais utilizada está baseada em minha esperiencia, e não num estudo ou estatística.</p>
-<p>Assim, nós encontramos a estrutura <cite>for</cite> em praticamente todas as linguagem de programação estruturadas e ainda que exista diferença na declaração entre as linguanges, ha um princípio comum a todos: é um ciclo e será executado por um tempo determinado na declaração da estrutura. Ou seja, ao contrário do laço de repetição “while”, que sempre será executado até que uma condição satisfaça a sentença proposta, com o looping <cite>for</cite>, já no cabeçalho é definido o intervalo no qual o looping será executado.</p>
-<p>Talvez, a segurança de que há um intervalo finito ao utilizarmos a instrução <cite>for</cite> seja a razão pela ampla adoção desta estrutura. Uma outra caracteristica bastante importante se deve pelo fato de que no cabeçalho da instrução nós sempre fornecemos todas as informações necessárias para a execução de todos os ciclos, como também, em algumas linguanges conseguimos declarar e até incrementar valores às variáveis de acumulação.</p>
-<p>É importante saber que o looping <cite>for</cite> será a nossa melhor ferramenta para todas as situações onde nós conhecemos previamente quantos itens de uma lista nós precisamos percorrer, ou então, em situações onde precisamos executar diversas instruções em um intervalo pré-definido, como exemplo:</p>
-<p>execute o ciclo no intervalo de 1 até 100
-execute o ciclo no intervalo de 0 a 1000 incrementando sempre 2 unidades numéricas à nossa variável acumuladora</p>
+<p>Os laços de repetição <tt class="docutils literal">for</tt> são os mais utilizados pelas mais diferentes linguagens de programação. Isso é um fenômeno que se observa rapidamente quando começamos a estudar códigos de outros programadores.</p>
+<p>A sintaxe do laço de repetição for do <tt class="docutils literal">Java</tt> é igual a sintaxe do laço de repetição do <tt class="docutils literal">C</tt> e do <tt class="docutils literal">C++</tt>.</p>
+<p>Encontramos a estrutura <tt class="docutils literal">for</tt> em praticamente todas as linguagem de programação estruturadas e ainda que existam diferenças na declaração entre as diversas linguagens, ha um princípio comum a todos: é um ciclo e será executado por um tempo <strong>pré-determinado na declaração</strong> da estrutura. Ao contrário do laço de repetição <a class="reference external" href="http://excript.com/java/estrutura-while-java.html">while</a>, que é executado até que uma condição satisfaça a sentença proposta e compete ao programador promover alguma ação para que em algum momento a condição seja estabelecida e o ciclo finalizado.</p>
+<p>A utilização da estrutura <tt class="docutils literal">for</tt> garante uma maior segurança de que a aplicação não entrará em looping. Outra caracteristica bastante importante deve-se ao fato de que ainda no cabeçalho da instrução fornecemos todos os valores necessários para a execução dos ciclos.</p>
+<p>Portanto, o looping <tt class="docutils literal">for</tt> será a nossa melhor ferramenta para todas as situações onde conhecemos de antemão a quantidade de ciclos devem ser executados, ou então, nas situações onde precisamos executar diversas instruções em um intervalo pré-definido.</p>
 </div>
 <div class="section" id="estrutura-for-em-outras-linguagens">
 <h2>ESTRUTURA <cite>for</cite> EM OUTRAS LINGUAGENS</h2>
-<p>No Python, nós utilizamos a instrução <cite>for</cite> de maneira bastante particular. Como já vimos, a ideia por detrás da instrução <cite>for</cite> é igual em todas as linguagens de programação, mas a sua estrutura de declaração ainda que sejam diferentes, possuem partes iguais.</p>
+<p>No Python, nós utilizamos a instrução <tt class="docutils literal">for</tt> de maneira bastante particular. Como já vimos, a ideia por detrás da instrução <tt class="docutils literal">for</tt> é igual em todas as linguagens de programação, mas a sua estrutura de declaração ainda que sejam diferentes, possuem partes iguais.</p>
 </div>
 <div class="section" id="o-que-e-um-ciclo-de-repeticao">
 <h2>O QUE É UM CICLO DE REPETIÇÃO?</h2>
-<p>Ciclo é um fenômeno pertencente a uma série ou então, a uma determinada situação / evento. Logo, todo ciclo é por definição, a execução de um elemento, intervalo e é único, até porque, todo ciclo possui características que o distinguem dos demais. A exemplo, temos que se houverem 10 ciclos seguidos, cada um será executado após o outro. Logo, temos que os ciclos são ordenados e assim, são fenômenos independentes, mas que pertencem a um mesmo evento ou série.</p>
+<p>Ciclo é um fenômeno pertencente a uma série ou então, a uma determinada situação/evento. Na programação chamamos de ciclo a execução de um bloco de código que será executado várias vezes. Cada execução desse bloco é um ciclo.</p>
+<p>Por exemplo, se determinado código precisar ser executado várias vezes, cada execução será um ciclo e todo ciclo é único.</p>
 <p>O mais importante a saber é que um ciclo pode ou não repetir as mesmas instruções, na mesma ordem ou em ordem diferente, contendo as mesmas caracteristicas ou mesmo, contendo caracteristicas únicas ao seu ciclo.</p>
 <p>Agora, todo ciclo na programação irá, obrigatoriamente, executar um mesmo bloco de instrução, mas esse bloco pode conter diversos controles de fluxos que alteram a execução das instruções o que acaba por obter resultados diferentes e únicos de um determinado ciclo.</p>
-<p>Por exemplo, em C, C++ e Java, nós utilizamos a seguinte estrutura:</p>
-<blockquote>
-for( &lt;parte1&gt;; &lt;parte2&gt;; &lt;parte3&gt; )</blockquote>
+<p>Se seguir temos a estrutura fundamental de um laço de repetição <tt class="docutils literal">for</tt>:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span><span class="o">(</span> <span class="o">&lt;</span><span class="n">parte1</span><span class="o">&gt;;</span> <span class="o">&lt;</span><span class="n">parte2</span><span class="o">&gt;;</span> <span class="o">&lt;</span><span class="n">parte3</span><span class="o">&gt;</span> <span class="o">)</span>
+</pre></div>
 <dl class="docutils">
 <dt>&lt;parte1&gt; declaração da(s) variável(is) acumuladora(s).</dt>
-<dd>Assim, temos que a parte1 da declaração da estrutura <cite>for</cite> é o local onde nós declaramos uma ou mais variáveis, definimos o nome e atribuímos os valores iniciais a uma ou então ao conjunto de variáveis.</dd>
+<dd>A <strong>parte1</strong> da declaração da estrutura <tt class="docutils literal">for</tt> é o local onde  declaramos uma ou mais variáveis. O normal é a declaração de um única variável, porém, não existe limite e também, não há qualquer regra.</dd>
 <dt>&lt;parte2&gt; condição para o término do laço de repetição</dt>
-<dd>O segunda parte a ser declarada em uma estrutura <cite>for</cite> é aquela que define a condição para a repetição do ciclo. Assim, temos que o meio do cabeçalho da estrutura <cite>for</cite> é onde nós colocamos a condição e essa muito provavelmente estabelecerá a condição verificando a &lt;parte1&gt; com a <cite>&lt;parte3&gt;</cite> da nossa estrutura.</dd>
+<dd>A <strong>parte2</strong> é uma condição que determina o término da execução do laço de repetição. Podemos definir uma condição simples um mesmo uma condição composta por várias expressões. A única regra é o retorno de uma valor booleano como resultado da(s) expressões.</dd>
 <dt>&lt;parte3&gt; incremento ou decremento da variável(is)</dt>
-<dd>Será na parte 3 onde nós modificaremos o valor da(s) variável(is) acumuladoras. Fato é que a terceira parte da estrutura é responsável pelo “andamento” do laço. Em outras palavras, podemos dizer que a terceira parte tem a responsabilidade de estabelecer qual será a mudança nas variáveis acumuladoras.</dd>
+<dd>Será na <strong>parte 3</strong> onde modificaremos o valor da(s) variável(is) acumuladoras. Esta parte também será a responsável pelo “andamento” do laço. Em outras palavras, podemos dizer que a terceira parte tem a responsabilidade de estabelecer qual será a mudança nas variáveis acumuladoras.</dd>
 </dl>
-<p>Se, por alguma razão a terceira parte for omitida ou então, mau implementada, o resultado será que os ciclos se repetiram e muito raras serão as vezes em que precisamos repetir um ciclo!</p>
-<p>PARA PENSAR: as estruturas de repetição normalmente repetem instruções, porém, com parâmetros diferentes. Isto é, as instruções são sempre as mesmas, mas os paramêtros que são passados a cada instrução, normalmente são diferentes e é por essa razão que executamos as instruções através de um ciclo de repetição.
-Então, não confunda: ciclo de repetição repete as instruções, mas não necessáriamente os atributos e parâmetros que são na maioria das vezes, diferentes e pertencem a um único ciclo.</p>
-<p>Por fim, temos que as linguagens que possuem a sintaxe do C herdaram as caracteristicas do ciclo de repetição <cite>for</cite>, que como vimos, é compostos por 3 partes distintas.</p>
+<p>PARA PENSAR: as estruturas de repetição normalmente repetem instruções, porém, com parâmetros diferentes. Isto é, as instruções são sempre as mesmas, mas os parâmetros que são passados a cada instrução, normalmente são diferentes e é por essa razão que executamos as instruções através de um ciclo de repetição.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
@@ -400,6 +397,18 @@ Então, não confunda: ciclo de repetição repete as instruções, mas não nec
     <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
+</div>
+<div class="section" id="veja-tambem">
+<h2>VEJA TAMBÉM</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://excript.com/java/estrutura-while-java.html">Aula: Laço de Repetição While</a></li>
+</ul>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html">The for Statement (en)</a></li>
+</ul>
 </div>
 
 				</div>
@@ -428,7 +437,7 @@ Então, não confunda: ciclo de repetição repete as instruções, mas não nec
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/java.html">java</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/java.html">java</a>, 	<a href="http://excript.com/tag/laco-de-repeticao.html">laço de repetição</a>, 	<a href="http://excript.com/tag/looping.html">looping</a>, 	<a href="http://excript.com/tag/laco-for.html">laço for</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

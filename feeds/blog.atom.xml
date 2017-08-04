@@ -1,5 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - blog</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/blog.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-03-07T09:00:00-03:00</updated><entry><title>A distopia dos anuncios de emprego em TI</title><link href="http://excript.com/blog/distopia-anuncio-emprego-ti.html" rel="alternate"></link><published>2017-03-07T09:00:00-03:00</published><updated>2017-03-07T09:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-03-07:/blog/distopia-anuncio-emprego-ti.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - blog</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/blog.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-07-31T09:00:00-03:00</updated><entry><title>Diferença entre o operador is e o ==</title><link href="http://excript.com/blog/diferenca-operador-is-equal-python.html" rel="alternate"></link><published>2017-07-31T09:00:00-03:00</published><updated>2017-07-31T09:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-07-31:/blog/diferenca-operador-is-equal-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Vamos examinar agora a diferença entre 2 operadores do Python o operador is e o operador == (igual)&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="analisando-a-igualdade-entre-valores-e-identidades"&gt;
+&lt;h2&gt;ANALISANDO A IGUALDADE ENTRE VALORES E IDENTIDADES&lt;/h2&gt;
+&lt;p&gt;A linguagem Python possui 2 operadores que não raramente causam confusão, são eles, o operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; e o operador &lt;tt class="docutils literal"&gt;==&lt;/tt&gt;. Ambos operadores são utilizados para comparar 2 …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Vamos examinar agora a diferença entre 2 operadores do Python o operador is e o operador == (igual)&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="analisando-a-igualdade-entre-valores-e-identidades"&gt;
+&lt;h2&gt;ANALISANDO A IGUALDADE ENTRE VALORES E IDENTIDADES&lt;/h2&gt;
+&lt;p&gt;A linguagem Python possui 2 operadores que não raramente causam confusão, são eles, o operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; e o operador &lt;tt class="docutils literal"&gt;==&lt;/tt&gt;. Ambos operadores são utilizados para comparar 2 variáveis, porém, a igualdade verificada é diferente como é de se imaginar.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-operadores-is"&gt;
+&lt;h2&gt;O OPERADORES &lt;tt class="docutils literal"&gt;is&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;O operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; verifica se 2 identificadores (variáveis) apontam para um mesmo objetos. Por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima associamos uma lista à variável &lt;tt class="docutils literal"&gt;a&lt;/tt&gt;. Em seguida, associamos o objeto associado a variável &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; com a variável &lt;tt class="docutils literal"&gt;b&lt;/tt&gt;. Por fim utilizamos o operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; para verificar se o identificar &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; e o identificador &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; estão associados a um mesmo objeto. Neste caso o resultado é verdadeiro, até porque, tanto a variável &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; como a variável &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; estão associadas ao mesmo objeto na memória.&lt;/p&gt;
+&lt;p&gt;Agora, continuemos o estudo considerando o código anterior.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Utilizamos a função built-in &lt;tt class="docutils literal"&gt;list()&lt;/tt&gt; com a finalidade de não utilizar a mesma instância que os identificadores &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; estão associados. Assim conseguimos garantir que teremos uma mesma lista porém, ocupando um outro local na memória.&lt;/p&gt;
+&lt;p&gt;Concluímos assim que o operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; verifica se 2 identificadores (variáveis) estão associados (apontam) para o mesmo objeto na memória.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-operador"&gt;
+&lt;h2&gt;O OPERADOR &lt;tt class="docutils literal"&gt;==&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;O operador &lt;tt class="docutils literal"&gt;==&lt;/tt&gt; irá verificar se o valor contido no membro a esquerda é igual ao valor do membro a sua direita. Para o operador &lt;tt class="docutils literal"&gt;==&lt;/tt&gt; é indiferente se ambos operandos estão ou não estão associados ao mesmo objeto na memória.&lt;/p&gt;
+&lt;p&gt;Continuando o código escrito anteriormente, temos que:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No trecho de código acima que continua o código anteriormente estudado estamos verificando agora se o valor que o identificador &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; está associado é igual ao valor que o identificador &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; está associado e a resposta é verdadeira, até porque, ambos identificadores apontam para o mesmo objeto na memória.&lt;/p&gt;
+&lt;p&gt;Em seguida verificamos se o valor do identificador &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; é igual ao valor do identificador &lt;tt class="docutils literal"&gt;c&lt;/tt&gt; e novamente obtivemos como resposta sim, até porque, o valor de &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; é &lt;tt class="docutils literal"&gt;[1, 2, 3]&lt;/tt&gt; enquanto que o valor do identificador &lt;tt class="docutils literal"&gt;c&lt;/tt&gt; também é uma lista, contendo os mesmos 3 membros &lt;tt class="docutils literal"&gt;[1, 2, 3]&lt;/tt&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusao"&gt;
+&lt;h2&gt;CONCLUSÃO&lt;/h2&gt;
+&lt;p&gt;Podemos concluir do estudo acima que o operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; verifica se os 2 membros apontam para o mesmo objeto na memória, ou então, se o &lt;tt class="docutils literal"&gt;id&lt;/tt&gt; de ambos operandos é igual.&lt;/p&gt;
+&lt;p&gt;O operador &lt;tt class="docutils literal"&gt;==&lt;/tt&gt; por sua vez irá verificar se os valores de ambos os membros são iguais, indiferentes se os membros são o mesmo objeto na memória.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/132988/is-there-a-difference-between-and-is-in-python"&gt;https://stackoverflow.com/questions/132988/is-there-a-difference-between-and-is-in-python&lt;/a&gt;
+&lt;a class="reference external" href="https://stackoverflow.com/questions/21478442/python-what-difference-between-is-and"&gt;https://stackoverflow.com/questions/21478442/python-what-difference-between-is-and&lt;/a&gt;
+&lt;a class="reference external" href="https://stackoverflow.com/questions/15008380/double-equals-vs-is-in-python"&gt;https://stackoverflow.com/questions/15008380/double-equals-vs-is-in-python&lt;/a&gt;
+&lt;a class="reference external" href="https://dbader.org/blog/difference-between-is-and-equals-in-python"&gt;https://dbader.org/blog/difference-between-is-and-equals-in-python&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="python"></category><category term="operador"></category><category term="is"></category><category term="equal"></category></entry><entry><title>A distopia dos anuncios de emprego em TI</title><link href="http://excript.com/blog/distopia-anuncio-emprego-ti.html" rel="alternate"></link><published>2017-03-07T09:00:00-03:00</published><updated>2017-03-07T09:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-03-07:/blog/distopia-anuncio-emprego-ti.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -312,9 +395,12 @@
 &lt;div class="section" id="introducao"&gt;
 &lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
 &lt;p&gt;As IDE's (Integrated Development Environment) são programas de computador desenhados para auxiliar os programadores na construção de softwares. Atualmente há centenas de IDE's no mercado, tanto gratuitas como também pagas.&lt;/p&gt;
-&lt;p&gt;É comum e recorrente os iniciantes confundirem a linguagem de programação com a IDE de desenvolvimento, por exemplo, é comum encontrar em fóruns pessoas se referindo a IDE, enquanto desejam falar da linguagem.&lt;/p&gt;
-&lt;p&gt;Um exemplo atual e notável é o desenvolvimento de aplicações nativas com a IDE AndroidStudio e a linguagem Java. Temos que a linguagem para a construção de aplicações nativas é o Java, enquanto que a IDE, pode ser qualquer uma, inclusive o bloco de notas.&lt;/p&gt;
-&lt;p&gt;O mesmo ocorre com o Python, podemos construir aplicações com qualquer editor de texto em qualquer sistema operacional, até porque, indiferente do local, estaremos sempre utilizando a linguagem Python.&lt;/p&gt;
+&lt;p&gt;É comum e recorrente os iniciantes confundirem a linguagem de programação com a IDE de desenvolvimento, por exemplo, é comum encontrar em fóruns pessoas se referindo a IDE, enquanto desejam falar da linguagem ou então do interpretador.&lt;/p&gt;
+&lt;p&gt;Um exemplo atual e notável é o desenvolvimento de aplicações nativas com a IDE AndroidStudio na qual é utilizado a linguagem Java.&lt;/p&gt;
+&lt;p&gt;O desenvolvimento que é considerado nativo para Android é feito com uso da linguagem Java. Atualmente a IDE disponibilizada para a construção de Apps é o AndroidStudio e o interpretador da linguagem Java que foi desenvolvido pela Google é o Dalvik.&lt;/p&gt;
+&lt;p&gt;Mesmo assim, é comum ler comentários de iniciantes afirmando haver problema num determinado código utilizando o AndroidStudio. A questão é a seguinte: &lt;strong&gt;o AndroidStudio não é responsável por examinar o código, portanto, dizer que o erro ocorre utilizando o AndroidStudio não possui lógica&lt;/strong&gt; . O que realmente está acontecendo é que o interpretador, que no caso é o Dalvik, ao ler o código desse usuário detecta um problema e retorna uma mensagem de erro. Essa mensagem é capturada pela IDE (AndroidStudio) e este irá exibir para o usuário. Por essa razão parece que é o AndroidStudio é quem diz haver problemas com o código, mas devemos lembrar que o mesmo está chamando o interpretador e passando como parâmetro o nosso código. Portanto, o correto é dizer que um determinado código Java voltado para Android está exibindo a mensagem X, Y, Z informando um determinado erro.&lt;/p&gt;
+&lt;p&gt;O mesmo ocorre com o Python! Seja com a linguagem Java ou Python é possível a construção de aplicações com qualquer editor de texto e em qualquer sistema operacional, até porque, indiferente do local, estaremos sempre utilizando a linguagem Python, ou então Java. Logo, é comum lermos em fóruns usuários se queixando que determinado código Python não está executando no PyCharm, o que não possui sentido.&lt;/p&gt;
+&lt;p&gt;O funcionamento do Python se dá de forma análoga ao que temos com o Java. Existe um interpretador, o usuário utiliza uma IDE e todas as vezes que o usuário desejar executar o código, a IDE passará os arquivo como argumento para o interpretador, este irá analisar o código, caso encontre algum erro, retornará para a IDE PyCharm e então, o editor mostrará a mensagem de erro. Novamente, quem está acusando um erro não é a IDE, e sim o interpretador do Python e portanto, dizer que o PyCharm não está rodando determinado código não possui qualquer sentido!&lt;/p&gt;
 &lt;img alt="Nesta imagem temos 4 editores de texto e 2 IDEs. Da esquerda para direita temos: PyCharm, Bloco de Notas, Notepad++ e Atom." src="../images/blog/editores-ide.png" /&gt;
 &lt;p&gt;Na imagem acima estamos escrevendo um mesmo programa em 4 editores de texto diferentes. Neste momento, não há diferença entre os vários editores, até porque, todos irão salvar o que é digitado no arquivo &lt;tt class="docutils literal"&gt;hello.py&lt;/tt&gt;. Então, a diferença, é que no primeiro editor, que no caso, é uma IDE, o PyCharm, nós podemos configurar uma versão do interpretador do Python e executar o nosso código facilmente.&lt;/p&gt;
 &lt;/div&gt;
@@ -329,7 +415,7 @@
 &lt;p&gt;Atualmente, para um editor de texto ser chamado de IDE são necessários muitos outros recursos, como por exemplo, a capacidade e facilidade para depurarmos código.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="pycharm-e-o-python"&gt;
-&lt;h2&gt;PYCHARM E O PYTHON&lt;/h2&gt;
+&lt;h2&gt;PyCharm E O PYTHON&lt;/h2&gt;
 &lt;p&gt;O PyCharm permite que a gente defina vários interpretadores do Python. Pra isso, temos de ir nas configurações da IDE e em seguida, clicar na opção: &lt;cite&gt;Project -&amp;gt; Project Interpreter&lt;/cite&gt;. Nesta tela será exibido todos as versões dos interpretadores Python que o PyCharm conhece.&lt;/p&gt;
 &lt;img alt="Tela Settings do PyCharm" src="../images/blog/pycharm-settings-project-interpreter.png" /&gt;
 &lt;p&gt;Quando mandarmos executar um código Python, o PyCharm irá utilizar o interpretador que nós selecionamos na lista de interpretadores e enviará o nome do arquivo para o interpretador.&lt;/p&gt;
@@ -927,6 +1013,40 @@ workon k34&lt;/blockquote&gt;
 
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;kivy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__version__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="fedora"&gt;
+&lt;h2&gt;FEDORA&lt;/h2&gt;
+&lt;p&gt;O &lt;tt class="docutils literal"&gt;virtualenvwrapper&lt;/tt&gt; está disponivel no proprio repositorio do Fedora.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo dnf install python-virtualenvwrapper
+
+adicionar as duas proximas linhas no ~/.bashrc
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;WORKON_HOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$HOME&lt;/span&gt;/.virtualenvs
+&lt;span class="nb"&gt;source&lt;/span&gt; virtualenvwrapper.sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Essa dica foi fornecida pelo aluno Paulo Guilherme Venancio.&lt;/p&gt;
+&lt;p&gt;Dependências do SDL2 no Ubuntu e pacotes correspondente no Fedora (Testado no Fedora 25)
+Disponíveis no repositório &amp;quot;Fedora 25&amp;quot;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+      Ubuntu               Fedora
+build-essential   &amp;gt;&amp;gt;&amp;gt; grupo &amp;quot;C Development Tools and Libraries&amp;quot;
+python-dev        &amp;gt;&amp;gt;&amp;gt; python-devel
+python            &amp;gt;&amp;gt;&amp;gt; python
+python-pip        &amp;gt;&amp;gt;&amp;gt; python-pip
+git               &amp;gt;&amp;gt;&amp;gt; git
+libsdl2-dev       &amp;gt;&amp;gt;&amp;gt; SDL2-devel
+libsdl2-image-dev &amp;gt;&amp;gt;&amp;gt; SDL2_image-devel
+libsdl2-mixer-dev &amp;gt;&amp;gt;&amp;gt; SDL2_mixer-devel
+libsdl2-ttf-dev   &amp;gt;&amp;gt;&amp;gt; SDL2_ttf-devel
+libportmidi-dev   &amp;gt;&amp;gt;&amp;gt; portmidi-devel
+zlib1g-dev        &amp;gt;&amp;gt;&amp;gt; zlib-devel
+Disponíveis no repositório &amp;quot;RPM Fusion for Fedora 25&amp;quot;
+
+      Ubuntu               Fedora
+ffmpeg            &amp;gt;&amp;gt;&amp;gt; ffmpeg
+libswscale-dev    &amp;gt;&amp;gt;&amp;gt; ffmpeg-libs
+libavformat-dev   &amp;gt;&amp;gt;&amp;gt; ffmpeg-libs
+libavcodec-dev    &amp;gt;&amp;gt;&amp;gt; ffmpeg-libs
+&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;

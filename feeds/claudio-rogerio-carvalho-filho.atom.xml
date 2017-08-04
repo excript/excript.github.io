@@ -1,5 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - Cláudio Rogério Carvalho Filho</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/claudio-rogerio-carvalho-filho.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-06-01T23:00:00-03:00</updated><entry><title>Estrutura de Repetição for do C++</title><link href="http://excript.com/cpp/estrutura-repeticao-for-cpp.html" rel="alternate"></link><published>2017-06-01T23:00:00-03:00</published><updated>2017-06-01T23:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-06-01:/cpp/estrutura-repeticao-for-cpp.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - Cláudio Rogério Carvalho Filho</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/claudio-rogerio-carvalho-filho.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-07-31T09:00:00-03:00</updated><entry><title>Diferença entre o operador is e o ==</title><link href="http://excript.com/blog/diferenca-operador-is-equal-python.html" rel="alternate"></link><published>2017-07-31T09:00:00-03:00</published><updated>2017-07-31T09:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-07-31:/blog/diferenca-operador-is-equal-python.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Vamos examinar agora a diferença entre 2 operadores do Python o operador is e o operador == (igual)&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="analisando-a-igualdade-entre-valores-e-identidades"&gt;
+&lt;h2&gt;ANALISANDO A IGUALDADE ENTRE VALORES E IDENTIDADES&lt;/h2&gt;
+&lt;p&gt;A linguagem Python possui 2 operadores que não raramente causam confusão, são eles, o operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; e o operador &lt;tt class="docutils literal"&gt;==&lt;/tt&gt;. Ambos operadores são utilizados para comparar 2 …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Vamos examinar agora a diferença entre 2 operadores do Python o operador is e o operador == (igual)&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="analisando-a-igualdade-entre-valores-e-identidades"&gt;
+&lt;h2&gt;ANALISANDO A IGUALDADE ENTRE VALORES E IDENTIDADES&lt;/h2&gt;
+&lt;p&gt;A linguagem Python possui 2 operadores que não raramente causam confusão, são eles, o operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; e o operador &lt;tt class="docutils literal"&gt;==&lt;/tt&gt;. Ambos operadores são utilizados para comparar 2 variáveis, porém, a igualdade verificada é diferente como é de se imaginar.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-operadores-is"&gt;
+&lt;h2&gt;O OPERADORES &lt;tt class="docutils literal"&gt;is&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;O operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; verifica se 2 identificadores (variáveis) apontam para um mesmo objetos. Por exemplo:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No código acima associamos uma lista à variável &lt;tt class="docutils literal"&gt;a&lt;/tt&gt;. Em seguida, associamos o objeto associado a variável &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; com a variável &lt;tt class="docutils literal"&gt;b&lt;/tt&gt;. Por fim utilizamos o operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; para verificar se o identificar &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; e o identificador &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; estão associados a um mesmo objeto. Neste caso o resultado é verdadeiro, até porque, tanto a variável &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; como a variável &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; estão associadas ao mesmo objeto na memória.&lt;/p&gt;
+&lt;p&gt;Agora, continuemos o estudo considerando o código anterior.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Utilizamos a função built-in &lt;tt class="docutils literal"&gt;list()&lt;/tt&gt; com a finalidade de não utilizar a mesma instância que os identificadores &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; estão associados. Assim conseguimos garantir que teremos uma mesma lista porém, ocupando um outro local na memória.&lt;/p&gt;
+&lt;p&gt;Concluímos assim que o operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; verifica se 2 identificadores (variáveis) estão associados (apontam) para o mesmo objeto na memória.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-operador"&gt;
+&lt;h2&gt;O OPERADOR &lt;tt class="docutils literal"&gt;==&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;O operador &lt;tt class="docutils literal"&gt;==&lt;/tt&gt; irá verificar se o valor contido no membro a esquerda é igual ao valor do membro a sua direita. Para o operador &lt;tt class="docutils literal"&gt;==&lt;/tt&gt; é indiferente se ambos operandos estão ou não estão associados ao mesmo objeto na memória.&lt;/p&gt;
+&lt;p&gt;Continuando o código escrito anteriormente, temos que:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No trecho de código acima que continua o código anteriormente estudado estamos verificando agora se o valor que o identificador &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; está associado é igual ao valor que o identificador &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; está associado e a resposta é verdadeira, até porque, ambos identificadores apontam para o mesmo objeto na memória.&lt;/p&gt;
+&lt;p&gt;Em seguida verificamos se o valor do identificador &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; é igual ao valor do identificador &lt;tt class="docutils literal"&gt;c&lt;/tt&gt; e novamente obtivemos como resposta sim, até porque, o valor de &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; é &lt;tt class="docutils literal"&gt;[1, 2, 3]&lt;/tt&gt; enquanto que o valor do identificador &lt;tt class="docutils literal"&gt;c&lt;/tt&gt; também é uma lista, contendo os mesmos 3 membros &lt;tt class="docutils literal"&gt;[1, 2, 3]&lt;/tt&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusao"&gt;
+&lt;h2&gt;CONCLUSÃO&lt;/h2&gt;
+&lt;p&gt;Podemos concluir do estudo acima que o operador &lt;tt class="docutils literal"&gt;is&lt;/tt&gt; verifica se os 2 membros apontam para o mesmo objeto na memória, ou então, se o &lt;tt class="docutils literal"&gt;id&lt;/tt&gt; de ambos operandos é igual.&lt;/p&gt;
+&lt;p&gt;O operador &lt;tt class="docutils literal"&gt;==&lt;/tt&gt; por sua vez irá verificar se os valores de ambos os membros são iguais, indiferentes se os membros são o mesmo objeto na memória.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/132988/is-there-a-difference-between-and-is-in-python"&gt;https://stackoverflow.com/questions/132988/is-there-a-difference-between-and-is-in-python&lt;/a&gt;
+&lt;a class="reference external" href="https://stackoverflow.com/questions/21478442/python-what-difference-between-is-and"&gt;https://stackoverflow.com/questions/21478442/python-what-difference-between-is-and&lt;/a&gt;
+&lt;a class="reference external" href="https://stackoverflow.com/questions/15008380/double-equals-vs-is-in-python"&gt;https://stackoverflow.com/questions/15008380/double-equals-vs-is-in-python&lt;/a&gt;
+&lt;a class="reference external" href="https://dbader.org/blog/difference-between-is-and-equals-in-python"&gt;https://dbader.org/blog/difference-between-is-and-equals-in-python&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="python"></category><category term="operador"></category><category term="is"></category><category term="equal"></category></entry><entry><title>Alteração no uso da instrução global no Python 3.6</title><link href="http://excript.com/blog/variaveis-local-non-local.html" rel="alternate"></link><published>2017-07-31T04:00:00-03:00</published><updated>2017-07-31T04:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-07-31:/blog/variaveis-local-non-local.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Neste artigo veremos a alteração ocorrida na versão 3.6 do Python que estabelece um novo funcionamento para a instrução global.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;p&gt;A versão 3.6 do Python trouxe alterações que afetam códigos legados. Agora, para definir variáveis com a instrução &lt;tt class="docutils literal"&gt;global&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;nonlocal&lt;/tt&gt; é necessário que a mesma já esteja …&lt;/p&gt;</summary><content type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Neste artigo veremos a alteração ocorrida na versão 3.6 do Python que estabelece um novo funcionamento para a instrução global.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;p&gt;A versão 3.6 do Python trouxe alterações que afetam códigos legados. Agora, para definir variáveis com a instrução &lt;tt class="docutils literal"&gt;global&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;nonlocal&lt;/tt&gt; é necessário que a mesma já esteja declarada no escopo externo.&lt;/p&gt;
+&lt;p&gt;A não utilização desta prática resulta numa  exceção SintaxError e a aplicação é finalizada.&lt;/p&gt;
+&lt;p&gt;A seguir, há um exemplo de código legal que deixou de funcionar.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+
+    &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+    &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O código acima se executado produz a seguinte exceção:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;main.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+    &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt;
+
+&lt;span class="ne"&gt;SyntaxError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;var&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;assigned&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;declaration&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;É interessante observar que a exceção é levantada no momento da execução do código. O Python geralmente levanta a exceção quando o cursor passa pelo local em que existe problema, porém, este caso foi tratado de maneira diferente.&lt;/p&gt;
+&lt;p&gt;É provavel que fora dado um tratamento diferencial para que possamos, ainda no momento da execução, corrigir nossos códigos. Sem dúvida essa é a melhor solução, do contrário, teríamos pacotes e scripts quebrando em todos os lugares.&lt;/p&gt;
+&lt;p&gt;A notificação dessa alteração pode ser vista &lt;a class="reference external" href="https://docs.python.org/3/whatsnew/3.6.html#other-language-changes"&gt;nesta página&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;A PEP que propos a alteração é a &lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0526/#id11"&gt;PEP 526&lt;/a&gt; .&lt;/p&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/whatsnew/3.6.html#other-language-changes"&gt;Notificação de alteração na versão 3.6 (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0526/#id11"&gt;PEP 526 (en)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="python"></category><category term="python36"></category><category term="local"></category><category term="nonlocal"></category></entry><entry><title>Estrutura de Repetição for do C++</title><link href="http://excript.com/cpp/estrutura-repeticao-for-cpp.html" rel="alternate"></link><published>2017-06-01T23:00:00-03:00</published><updated>2017-06-01T23:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-06-01:/cpp/estrutura-repeticao-for-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -642,7 +778,7 @@ print("Arquivo Python executado com sucesso!!") --&gt;
 &lt;h2&gt;PRÉ-INTRODUÇÃO&lt;/h2&gt;
 &lt;p&gt;Se estás chegando agora ao mundo do desenvolvimento de software, preste atenção num pequeno detalhe: &lt;em&gt;NÃO ESTUDE 2 LINGUAGENS AO MESMO TEMPO!&lt;/em&gt; Escolha uma e siga adiante. É preciso dizer isso pois, este é o efeito colateral de haver cursos gratuitos de vários temas a um clique de distância! Esse é o &lt;em&gt;maior problema da era digital&lt;/em&gt;, da era da informação.&lt;/p&gt;
 &lt;p&gt;Escolha uma linguagem e então, veja todos os vídeos no YouTube, compre todos os livros que puderes, faça curso, faça o que for conveniente e tudo que a sua disposição e dinheiro permitirem, porém, mantenha o foco numa única linguagem e acredite, há uma razão &lt;em&gt;NÃO&lt;/em&gt; óbvia do porque estou falando isso.&lt;/p&gt;
-&lt;p&gt;Já respondendo o que queres pergutar: não há melhor linguagem e você terá que tomar a decisão sozinho! Se não conseguires chegar numa conclusão, se realmente ficares perdido, iniciei pelo Python, há curso gratuito no YouTube, há curso pago na Udemy e há livros a venda com preços que variam de ~30 a ~200 reais!&lt;/p&gt;
+&lt;p&gt;Já respondendo o que queres perguntar: não há melhor linguagem e você terá que tomar a decisão sozinho! Se não conseguires chegar numa conclusão, se realmente ficares perdido, iniciei pelo Python, há curso gratuito no YouTube, há curso pago na Udemy e há livros a venda com preços que variam de ~30 a ~200 reais!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="introducao"&gt;
 &lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
@@ -826,7 +962,7 @@ Ao longo dos anos, MAC2166 utilizou diversas linguagens de programação: Fortra
 &lt;div class="section" id="introducao"&gt;
 &lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
 &lt;img alt="Logo oficial do projeto Kivy" src="../images/blog/kivy-logo.png" /&gt;
-&lt;p&gt;A biblioteca Kivy é um framework para desenvolvimento multiplataforma, escrito majoritariamente com a linguagem Python e/ou Cython e que permite o desenvolvimento de aplicações para diversos sistemas operacionais, tais com, Microsoft …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+&lt;p&gt;A biblioteca Kivy é um framework para desenvolvimento multiplataforma, escrito majoritariamente com a linguagem Python/Cython, permite o desenvolvimento de aplicações para diversos sistemas operacionais, tais com, Microsoft Windows, Linux, Mac, Android …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -843,18 +979,18 @@ Ao longo dos anos, MAC2166 utilizou diversas linguagens de programação: Fortra
 &lt;div class="section" id="introducao"&gt;
 &lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
 &lt;img alt="Logo oficial do projeto Kivy" src="../images/blog/kivy-logo.png" /&gt;
-&lt;p&gt;A biblioteca Kivy é um framework para desenvolvimento multiplataforma, escrito majoritariamente com a linguagem Python e/ou Cython e que permite o desenvolvimento de aplicações para diversos sistemas operacionais, tais com, Microsoft Windows, Linux, Mac, Android, iOS, Raspberry utilizando um mesmo código.&lt;/p&gt;
-&lt;p&gt;O projeto Kivy é composto por vários subprojetos, cada um especializado numa determinada tarefa, como por exemplo, gerar executável para determinada plataforma ou então, uma interface que permite o acesso ao hardware em várias dispositivos com diferentes sistema operacional utilizando um mesmo código.&lt;/p&gt;
-&lt;p&gt;É importante não confundir a projeto Kivy com a biblioteca Kivy. O projeto Kivy, cujo site é &lt;a class="reference external" href="http://kivy.org"&gt;http://kivy.org&lt;/a&gt; é composto por vários subprojetos, dentre estes, a biblitoeca Kivy.&lt;/p&gt;
+&lt;p&gt;A biblioteca Kivy é um framework para desenvolvimento multiplataforma, escrito majoritariamente com a linguagem Python/Cython, permite o desenvolvimento de aplicações para diversos sistemas operacionais, tais com, Microsoft Windows, Linux, Mac, Android, iOS, Raspberry utilizando um mesmo código.&lt;/p&gt;
+&lt;p&gt;O projeto é composto por vários sub-projetos, cada um especializado numa determinada tarefa, como por exemplo, a geração de executáveis para determinada plataforma ou então, uma API genérica para facilmente acessarmos o hardware em qualquer dispositivos e em diferentes plataformas sem a necessidade de escrevermos uma única linha de código a mais.&lt;/p&gt;
+&lt;p&gt;É importante não confundir o projeto Kivy com a biblioteca Kivy. O projeto Kivy, cujo site é &lt;a class="reference external" href="http://kivy.org"&gt;http://kivy.org&lt;/a&gt; é composto por vários subprojetos, dentre estes, a biblitoeca Kivy.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="a-biblioteca-kivy"&gt;
 &lt;h2&gt;A BIBLIOTECA KIVY&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/kivy/kivy/"&gt;A biblioteca Kivy contém o código de UI (User Interface) interface de usuário multiplataforma&lt;/a&gt; executado sob a biblioteca OpenGL. Toda parte gráfica da biblioteca é executado em cima da placa de vídeo, por essa razão, a performance em algumas situações chega a ser superior a renderização nativa de alguns sistemas operacionais.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/kivy/kivy/"&gt;A biblioteca Kivy contém o código de UI (User Interface) Interface de Usuário multiplataforma&lt;/a&gt; executado sob a biblioteca OpenGL. Isso quer dizer que todo código será executado pelos interpretadores da placa de vídeo e é por essa razão é possível obter  performance igual e não raramente superior se comparado com as aplicações nativas.&lt;/p&gt;
 &lt;p&gt;Em vista de que a biblioteca OpenGL é multiplataforma, o projeto Kivy, construído em cima dessa camada, pode ser executado em qualquer dispositivo que possua suporte com a biblioteca OpenGL.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="opengl-2-0"&gt;
 &lt;h2&gt;OpenGL 2.0&lt;/h2&gt;
-&lt;p&gt;&lt;tt class="docutils literal"&gt;OpenGL&lt;/tt&gt; é uma API e uma linguagem de programação multiplataforma e OpenGL é um acrônimo de &lt;cite&gt;Open Graphics Library`&lt;/cite&gt;, numa tradução livre seria &lt;tt class="docutils literal"&gt;Biblioteca Gráfica Aberta&lt;/tt&gt;. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D que podem ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplatamente utilizada em jogos e em tudo que esteja relacionado com gráficos.&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;OpenGL&lt;/tt&gt; é uma API e uma linguagem de programação multiplataforma e OpenGL é um acrônimo de &lt;cite&gt;Open Graphics Library`&lt;/cite&gt;, numa tradução livre seria &lt;tt class="docutils literal"&gt;Biblioteca Gráfica Aberta&lt;/tt&gt;. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D que podem ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplamente utilizada na construção de jogos, ferramentas 3D ou qualquer aplicação que faça uso intensivo do hardware gráfico.&lt;/p&gt;
 &lt;blockquote&gt;
 OpenGL é um conjunto de padrões de processamento de alto desempenho de gráficos 2D e 3D na unidade de processamento (GPU) para vários aplicativos. O OpenGL permite a renderização rápida de visualizações (modo Rascunho rápido).
 &lt;a class="reference external" href="https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html"&gt;https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html&lt;/a&gt;&lt;/blockquote&gt;
@@ -872,7 +1008,7 @@ OpenGL é um conjunto de padrões de processamento de alto desempenho de gráfic
 &lt;blockquote&gt;
 OpenGL® ES is a royalty-free, cross-platform API for full-function 2D and 3D graphics on embedded systems - including consoles, phones, appliances and vehicles. It consists of well-defined subsets of desktop OpenGL, creating a flexible and powerful low-level interface between software and graphics acceleration. OpenGL ES includes profiles for floating-point and fixed-point systems and the EGL™ specification for portably binding to native windowing systems. OpenGL ES 1.X is for fixed function hardware and offers acceleration, image quality and performance. OpenGL ES 2.X enables full programmable 3D graphics. OpenGL SC is tuned for the safety critical market.
 &lt;a class="reference external" href="https://www.khronos.org/opengles/"&gt;https://www.khronos.org/opengles/&lt;/a&gt;&lt;/blockquote&gt;
-&lt;p&gt;Atualmente há vários subsets (versões derivadas) da biblioteca OpenGL. Por padrão (convenção), os principais Sistemas Operacionais voltados a dispositivos móveis utlizam a biblioteca OpenGL ES 2.0. Portanto, é comum falarmos que o projeto Kivy está contruído sob a arquitetura OpenGL, porém, a biblioteca utiliza de fato uma versão derivada de OpenGL ES 2.0 e que é um acrônimo de &lt;tt class="docutils literal"&gt;OpenGL for Embedded Systems&lt;/tt&gt; que numa tradução livre seria:&lt;/p&gt;
+&lt;p&gt;Atualmente há vários subsets (versões derivadas) da biblioteca OpenGL. Por padrão (convenção), os principais Sistemas Operacionais voltados a dispositivos móveis utilizam a biblioteca OpenGL ES 2.0. Portanto, é comum falarmos que o projeto Kivy está construido sob a arquitetura OpenGL, porém, a biblioteca utiliza de fato uma versão derivada de OpenGL ES 2.0 e que é um acrônimo de &lt;tt class="docutils literal"&gt;OpenGL for Embedded Systems&lt;/tt&gt; que numa tradução livre seria:&lt;/p&gt;
 &lt;p&gt;A seguir, temos os acrônimos seguido de seus nomes completos:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 - OpenGL: Open Graphic Library
@@ -915,22 +1051,44 @@ OpenGL® ES is a royalty-free, cross-platform API for full-function 2D and 3D gr
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="o-python"&gt;
-&lt;h2&gt;O PYTHON&lt;/h2&gt;
+&lt;h2&gt;O Python&lt;/h2&gt;
 &lt;p&gt;A biblioteca inicialmente foi escrita para a versão 2x do &lt;a class="reference external" href="https://blog.kivy.org/2016/01/python-for-android-now-supports-python-3%C2%A0apks/"&gt;Python e recentemente (2016) foi publicado o suporte experimental à versão 3x&lt;/a&gt; . Ainda que o suporte seja experimental, há casos de sucesso utilizando a versão 3x.&lt;/p&gt;
 &lt;p&gt;Mesmo assim, a versão do Python amplamente suportada ainda é a 2x e algumas plataformas, como por exemplo o Mac OSX, ainda não possuem suporte para gerar executáveis utilizando as últimas versões.&lt;/p&gt;
 &lt;p&gt;O desenvolvimento utilizando a versão 2x e 3x são iguais, salvo a manipulação de String que, na versão 2x do Python possui um tratamento diferente, ou seja, as cadeias de caracteres não são Unicode por padrão.&lt;/p&gt;
 &lt;p&gt;Projetos escritos com a versão 3x do Python podem ser convertidos para a versão 2x utilizando utilitários como por exemplo o &lt;a class="reference external" href="https://docs.python.org/2/library/2to3.html"&gt;2to3&lt;/a&gt; que, mesmo não sendo perfeito, resolve a maioria dos problemas de conversão.&lt;/p&gt;
 &lt;p&gt;Por fim, é importante dizer que o buildozer, projeto que gera executáveis para as mais diversas plataformas pode ser baixado junto com uma versão do Lubuntu para as versões 2x, ou seja, a forma mais utilizada na geração de executáveis ainda é a versão 2x.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class="section" id="a-linguagem-kivy-ou-entao-a-kvlang"&gt;
+&lt;h2&gt;A LINGUAGEM KIVY OU ENTÃO A kvlang&lt;/h2&gt;
+&lt;p&gt;O projeto Kivy desenvolveu uma linguagem especializada e semelhante a linguagem Python para a construção de interfaces gráficas. O objetivo é facilitar a adição e remoção de Widgets (componentes visuais) ao mesmo tempo que separa o código utilizado para construção gráfica (View) do código Python, ou a lógica de negócios.&lt;/p&gt;
+&lt;p&gt;Num primeiro momento é impossível não pensarmos se realmente existe a necessidade de criar mais uma linguagem sendo que já existem tantas. Talvez somente na prática é que conseguimos perceber o quão útil foi o estabelecimento dessa nova linguagem que de fato não passa de uma linguagem de marcação, haja vista que somente pequenas expressões podem ser utilizadas.&lt;/p&gt;
+&lt;p&gt;Abaixo temos um trecho de código utilizando a kvlang e em seguida a tela que iremos obter quando executarmos.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;FloatLayout:
+    TextInput:
+        text: &amp;quot;eXcript&amp;quot;
+        height: &amp;quot;30px&amp;quot;
+        width: 350
+        top: 100
+        size_hint: None, None
+        pos_hint: {&amp;#39;center_x&amp;#39;: 0.5,}
+    Button:
+        text: &amp;quot;Confirmar&amp;quot;
+        height: 30
+        top: 60
+        size_hint: None, None
+        pos_hint: {&amp;#39;center_x&amp;#39;: 0.5,}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="Tela construida com o framework Kivy contendo um TextEdit e um Botão" src="../images/blog/kivy-exemplo-textinput-button.png" /&gt;
+&lt;/div&gt;
 &lt;div class="section" id="kivy-design"&gt;
-&lt;h2&gt;KIVY DESIGN&lt;/h2&gt;
+&lt;h2&gt;Kivy Design&lt;/h2&gt;
 &lt;img alt="Imagem do editor Kivy Design" src="../images/blog/kivy-design.png" /&gt;
-&lt;p&gt;Kivy Design é um projeto de construção de uma IDE RAD para desenvolvimento de aplicações gráficas com Python utilizando a biblitoeca kivy. A proposta é a construção do sonho de todos programadores: um ambiente de  completo, estável, para a construção de aplições, seja para o Prompt de Comando, seja para aplicações gráfica para Desktop, Mobile e Web.&lt;/p&gt;
+&lt;p&gt;Kivy Design é um projeto de construção de uma IDE RAD para desenvolvimento de aplicações gráficas com Python utilizando a biblioteca kivy. A proposta é a construção do sonho de todos programadores: um ambiente de  completo, estável, para a construção de aplicações, seja para o Prompt de Comando, seja para aplicações gráfica para Desktop, Mobile e Web.&lt;/p&gt;
 &lt;p&gt;O projeto Kivy Design objetiva fazer jus a todo o trabalho e esforço empreendido na construção da biblioteca Kivy e fornecer um ambiente para a construção de aplicações gráfica que tenha tanta qualidade como a biblioteca Kivy.&lt;/p&gt;
-&lt;p&gt;A IDE vem sendo desenvolvido, obviamente, com o framework Kivy, então, talvez este venha a ser a primeira IDE RAD (Rapid Application Development) multiplaforma e multidispositivo do mundo. O mais legal é que temos a oportunidade de participar do desenvolimento da IDE e assim, trabalhar para construir uma ferramenta que seja como sempre desejamos que ela fosse.&lt;/p&gt;
+&lt;p&gt;A IDE vem sendo desenvolvido, obviamente, com o framework Kivy, então, talvez este venha a ser a primeira IDE RAD (Rapid Application Development) multiplataforma e multidispositivo do mundo. O mais legal é que temos a oportunidade de participar do desenvolvimento da IDE e assim, trabalhar para construir uma ferramenta que seja como sempre desejamos que ela fosse.&lt;/p&gt;
 &lt;p&gt;Uma das razões do código do Kivy Design ser tão simples é que tudo ainda está no começo, por isso tanta simplicidade. E, essa é a parte boa, ou seja, temos a oportunidade de acompanhar o crescimento do código e ir assimilando naturalmente e participando da construção de um grande software!&lt;/p&gt;
 &lt;div class="section" id="estado-do-projeto-kivy-design"&gt;
-&lt;h3&gt;ESTADO DO PROJETO KIVY DESIGN&lt;/h3&gt;
+&lt;h3&gt;ESTADO DO PROJETO Kivy Design&lt;/h3&gt;
 &lt;p&gt;Neste momento, ainda que seja possível executar o projeto Kivy Design, não é recomendável sua utilização, até porque, o mesmo está caindo (travando) a todo momento.&lt;/p&gt;
 &lt;p&gt;Caso queiras se divertir, toda vez que Kivy Design travar, é impresso o local em que ocorreu o problema, logo, poder ir até lá e tentar corrigir.
 O interessante é que a maior parte das vezes em que o Kivy Design trava, o problema não está em seu código, mas sim, no código da biblioteca Kivy.&lt;/p&gt;
@@ -1045,9 +1203,11 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;/div&gt;
 &lt;div class="section" id="a-magica-do-cython"&gt;
 &lt;h2&gt;A MÁGICA DO CYTHON&lt;/h2&gt;
-&lt;p&gt;Cython é um superconjunto da linguagem de programação Python e o objetivo é converter código Python para código C (nativo). Cython é tanto um compilador como tamnbém uma linguagem de programação que estende a linguagem Python com a finalidade de mesclar as estruturas da linguagem C com as estrutura da linguagem Python.&lt;/p&gt;
-&lt;p&gt;O Cython compila qualquer código Python, ou seja, o mesmo transforma qualquer código Python para código C nativo. Em seguida, o GCC faz o restante do trabalho, compilando código C e gerando um executável nativo à plataforma onde está sendo executado.&lt;/p&gt;
-&lt;p&gt;A linguagem Cython trabalha com tipagem estática e dinâmica, porém, quando mais tipado for o código, mais otimizado será sua execução. Um código Python otimizado com a linguagem Cython pode rodar até 5000 vezes mais rápido. Na página do projeto você pode encontar mais gráficos e testes de permormances.&lt;/p&gt;
+&lt;p&gt;Cython é um superconjunto da linguagem Python e seu objetivo é a conversão de  código Python para código C (nativo). Cython é o nome de uma linguagem e seu compilador. A linguagem Cython estende a linguagem Python utilizando a mesma sintaxe porém, trazendo um conjunto de instruções que otimizam a conversão para código C, aumentando a performance em alguma situações em dezenas, centenas e até, acredite, milhares de vezes! O principal objetivo da linguagem Cython é a otimização de trechos especificos que requerem alta performance sem quebrar a compatibilidade. Como o código Python nativo é reconhecido pelo compilador Cython, é possível a conversão de módeulos ou mesmo funções sem perder a compatibilidade.&lt;/p&gt;
+&lt;p&gt;O Cython fornece suporte a versão 2x e 3x do Python, ou seja, conseguimos facilmente transformar as estruturas simplificadas do Python para código C nativo e sendo capaz de otimizar trechos especificos através de um processo muito semelhante a refatoração de código. A refatoração neste caso deve ser entendida como a alteração de instruções, tipagem de variáveis e parâmetros e etc.&lt;/p&gt;
+&lt;p&gt;Após converter o código de Python para C, o resultado é enviado para o GCC e o mesmo produz o executável compatível com a plataforma em que estiver sendo utilizada, pela simples compilação de código C, de forma semelhante e com performance que chega muito próxima a um código que foi de fato escrito nativamente em C.&lt;/p&gt;
+&lt;p&gt;Como principais características, podemos citar que a linguagem Cython utiliza tipagem estática e dinâmica, e, como sabemos, quando mais tipado for, mais otimizado a execução será.&lt;/p&gt;
+&lt;p&gt;Por fim, conseguiremos em algumas situações uma melhora na performance de até 5000 vezes! Inclusive, na página do projeto é possível encontrar várias ferramentas e códigos para que possamos mensurar em nosso computador.&lt;/p&gt;
 &lt;p&gt;A seguir, temos um exemplo de um simples trecho de código utilizando somente a linguagem Cython.&lt;/p&gt;
 &lt;div class="section" id="declaracao-de-variaveis-com-cython"&gt;
 &lt;h3&gt;DECLARAÇÃO DE VARIÁVEIS COM CYTHON&lt;/h3&gt;
@@ -1094,13 +1254,20 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;p&gt;A biblioteca Kivy está debruçada sobre o Cython e todo código que escrevemos será compilado para código C. Os principais módulos da biblioteca estão escritos com Cython e utilizando tipagem estática com a finalidade e obter máxima performance.&lt;/p&gt;
 &lt;p&gt;Porém, a maior parte da biblioteca não possui qualquer otimização, até porque, o objetivo é utilizar a linguagem Python. Por isso, podemos melhorar a performance das aplicações construídas com Kivy, bastando somente, converter as principais estruturas da biblioteca Kivy para código Cython.&lt;/p&gt;
 &lt;p&gt;Converter código Python para Cython com a finalidade de obter uma melhor performance é uma atividade relativamente simples e pouco sujeito a erros, é uma solução para aqueles momento em que realmente precisamos de muita performance e, acredito que num futuro breve, várias partes da biblioteca serão convertidas a cada nova versão se houver empresas interessas em obter uma excelente performance.&lt;/p&gt;
-&lt;p&gt;Essa é mais uma das vantagens de trabalhar com a biblioteca Kivy! Temos a capacidade de melhorar a performance facilmente da nossa aplicação, o que normalmente não acontece com outras biblitoecas.&lt;/p&gt;
+&lt;p&gt;Essa é mais uma das vantagens de trabalhar com a biblioteca Kivy! Temos a capacidade de melhorar a performance facilmente da nossa aplicação, o que normalmente não acontece com outras bibliotecas.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="codigo-fonte"&gt;
 &lt;h2&gt;CÓDIGO-FONTE&lt;/h2&gt;
-&lt;p&gt;É comum a dúvida em relação se o código fonte está ou não disponível numa aplicação construida com a biblioteca Kivy. Como dito acima, o código-fonte do Python é compilado utilizando o Cython, portanto, somente códigos enviados como sendo por exemplo, uma String é que não seriam compilados pelo Cython!&lt;/p&gt;
-&lt;p&gt;Portanto, não é possível acessar o código-fonte da aplicação, salvo se o mesmo for descompilado de C, mas dúvido que alguém faça isso.&lt;/p&gt;
+&lt;p&gt;Uma das principais dúvidas em relação ao uso da biblioteca Kivy é o acesso e eventual roubo do código-fonte da nossa aplicação por terceiros. A resposta a essa dúvida é: o código Python ou o bytecode gerado (código otimizado) não precisa ser distribuído junto com a sua aplicação, pois o projeto Kivy disponibiliza ferramentas que geram executáveis nativo - código binários e otimizado para cada plataforma. Resumidamente, temos que o Python foi concebido como sendo uma linguagem interpretada, ou seja, todo computador capaz de rodar um Script Python, precisa antes instalar o interpretador. Um interpretador, como o nome sugere, é um programa nativo, especializado no reconhecimento de código Python, é executado em segundo plano (background), inicializado junto com o sistema operacional, por padrão fica inativo esperando o recebimento de código. Essa é a forma tradicional de execução de programas ou Scripts Python.&lt;/p&gt;
+&lt;p&gt;Comumente dizemos que o interpretador do Python executado código Python, mas isso não é verdade. Por padrão, o código Python é transformado numa estrutura hierarquica otimizada chamada de bytecode. A geração de bytecode é realizada na primeira execução do Script e armazenada numa pasta que será criada no mesmo diretório em que o arquivo que contém código Python está armazenado.&lt;/p&gt;
+&lt;p&gt;A metodologia de gerar bytecode com a finalidade de otimização e armazena-lo num arquivo no mesmo diretório é um padrão utilizado por diversos interpretadores de outras linguagens. Ainda que essa prática melhore significativamente o desempenho, fica muito distante se comparado com a execução de código nativo.&lt;/p&gt;
+&lt;p&gt;Como dito, as aplicações Kivy são executadas pelos processadores de aceleração gráfica e portanto, é preciso converter todos os nossos códigos para o &amp;quot;idioma&amp;quot; do mundo gráfico.&lt;/p&gt;
+&lt;p&gt;É importante dizer que o fato do código Python ser interpretado se deve a uma opção de projeto e não de uma imposição inerente a tecnologia ou a linguagem! Simplesmente, num primeiro momento, optou-se por interpretar, ao invés de gerar um executável. Portanto, conforme a linguagem foi sendo desenvolvida e sua sintaxe criada, o pessoal do projeto foi desenvolvendo com a C uma aplicação capaz de interpretar as instruções e a sintaxe da linguagem.&lt;/p&gt;
+&lt;p&gt;O tempo passou, a linguagem se popularizou, e surgiram propostas de, ao invés de interpretar o código, porque não transformar o mesmo em executáveis?&lt;/p&gt;
+&lt;p&gt;Ao desenvolvermos com Kivy, temos que o nosso código é interpretado durante o desenvolvimento, porém, quando formos distribuir a nossa aplicação, por exemplo, para a plataforma Android, o código Python que escrevemos e código  Python/Cython do framework Kivy serão transformados em código C puro!&lt;/p&gt;
+&lt;p&gt;Concluído a conversão, o código C produzido poderá ser compilado por qualqauer compilador C de sua preferência.&lt;/p&gt;
+&lt;p&gt;Por fim e reafirmando o que já foi dito, a biblioteca Kivy possui ferramentas para que o código seja ocultado naturalmente.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="livros-publicados"&gt;
 &lt;h2&gt;LIVROS PUBLICADOS&lt;/h2&gt;
@@ -1157,7 +1324,6 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;div class="section" id="visao-geral"&gt;
 &lt;h2&gt;VISÃO GERAL&lt;/h2&gt;
 &lt;p&gt;O blog &lt;a class="reference external" href="http://cadernodelaboratorio.com.br/category/kivy/"&gt;Caderno de Laboratório&lt;/a&gt; foi o primeiro blog brasileiro a disponiblizar vários tutorias e diversos exemplos sobre como utilizar a biblioteca Kivy. O pessoal continua produzindo mais artigos sobre o Kivy e em Português, por isso, vale a pena conferir!&lt;/p&gt;
-&lt;p&gt;O site &lt;a class="reference external" href="https://mavins.com.br/blog/desenvolva-aplicativos-para-android-ios-com-python-e-kivy"&gt;Mavins produziu um artigo&lt;/a&gt; explicando rapídamente as principais funcionalidades da biblioteca Kivy, vale a pena conferir!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
@@ -1263,9 +1429,12 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;div class="section" id="introducao"&gt;
 &lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
 &lt;p&gt;As IDE's (Integrated Development Environment) são programas de computador desenhados para auxiliar os programadores na construção de softwares. Atualmente há centenas de IDE's no mercado, tanto gratuitas como também pagas.&lt;/p&gt;
-&lt;p&gt;É comum e recorrente os iniciantes confundirem a linguagem de programação com a IDE de desenvolvimento, por exemplo, é comum encontrar em fóruns pessoas se referindo a IDE, enquanto desejam falar da linguagem.&lt;/p&gt;
-&lt;p&gt;Um exemplo atual e notável é o desenvolvimento de aplicações nativas com a IDE AndroidStudio e a linguagem Java. Temos que a linguagem para a construção de aplicações nativas é o Java, enquanto que a IDE, pode ser qualquer uma, inclusive o bloco de notas.&lt;/p&gt;
-&lt;p&gt;O mesmo ocorre com o Python, podemos construir aplicações com qualquer editor de texto em qualquer sistema operacional, até porque, indiferente do local, estaremos sempre utilizando a linguagem Python.&lt;/p&gt;
+&lt;p&gt;É comum e recorrente os iniciantes confundirem a linguagem de programação com a IDE de desenvolvimento, por exemplo, é comum encontrar em fóruns pessoas se referindo a IDE, enquanto desejam falar da linguagem ou então do interpretador.&lt;/p&gt;
+&lt;p&gt;Um exemplo atual e notável é o desenvolvimento de aplicações nativas com a IDE AndroidStudio na qual é utilizado a linguagem Java.&lt;/p&gt;
+&lt;p&gt;O desenvolvimento que é considerado nativo para Android é feito com uso da linguagem Java. Atualmente a IDE disponibilizada para a construção de Apps é o AndroidStudio e o interpretador da linguagem Java que foi desenvolvido pela Google é o Dalvik.&lt;/p&gt;
+&lt;p&gt;Mesmo assim, é comum ler comentários de iniciantes afirmando haver problema num determinado código utilizando o AndroidStudio. A questão é a seguinte: &lt;strong&gt;o AndroidStudio não é responsável por examinar o código, portanto, dizer que o erro ocorre utilizando o AndroidStudio não possui lógica&lt;/strong&gt; . O que realmente está acontecendo é que o interpretador, que no caso é o Dalvik, ao ler o código desse usuário detecta um problema e retorna uma mensagem de erro. Essa mensagem é capturada pela IDE (AndroidStudio) e este irá exibir para o usuário. Por essa razão parece que é o AndroidStudio é quem diz haver problemas com o código, mas devemos lembrar que o mesmo está chamando o interpretador e passando como parâmetro o nosso código. Portanto, o correto é dizer que um determinado código Java voltado para Android está exibindo a mensagem X, Y, Z informando um determinado erro.&lt;/p&gt;
+&lt;p&gt;O mesmo ocorre com o Python! Seja com a linguagem Java ou Python é possível a construção de aplicações com qualquer editor de texto e em qualquer sistema operacional, até porque, indiferente do local, estaremos sempre utilizando a linguagem Python, ou então Java. Logo, é comum lermos em fóruns usuários se queixando que determinado código Python não está executando no PyCharm, o que não possui sentido.&lt;/p&gt;
+&lt;p&gt;O funcionamento do Python se dá de forma análoga ao que temos com o Java. Existe um interpretador, o usuário utiliza uma IDE e todas as vezes que o usuário desejar executar o código, a IDE passará os arquivo como argumento para o interpretador, este irá analisar o código, caso encontre algum erro, retornará para a IDE PyCharm e então, o editor mostrará a mensagem de erro. Novamente, quem está acusando um erro não é a IDE, e sim o interpretador do Python e portanto, dizer que o PyCharm não está rodando determinado código não possui qualquer sentido!&lt;/p&gt;
 &lt;img alt="Nesta imagem temos 4 editores de texto e 2 IDEs. Da esquerda para direita temos: PyCharm, Bloco de Notas, Notepad++ e Atom." src="../images/blog/editores-ide.png" /&gt;
 &lt;p&gt;Na imagem acima estamos escrevendo um mesmo programa em 4 editores de texto diferentes. Neste momento, não há diferença entre os vários editores, até porque, todos irão salvar o que é digitado no arquivo &lt;tt class="docutils literal"&gt;hello.py&lt;/tt&gt;. Então, a diferença, é que no primeiro editor, que no caso, é uma IDE, o PyCharm, nós podemos configurar uma versão do interpretador do Python e executar o nosso código facilmente.&lt;/p&gt;
 &lt;/div&gt;
@@ -1280,7 +1449,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;p&gt;Atualmente, para um editor de texto ser chamado de IDE são necessários muitos outros recursos, como por exemplo, a capacidade e facilidade para depurarmos código.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="pycharm-e-o-python"&gt;
-&lt;h2&gt;PYCHARM E O PYTHON&lt;/h2&gt;
+&lt;h2&gt;PyCharm E O PYTHON&lt;/h2&gt;
 &lt;p&gt;O PyCharm permite que a gente defina vários interpretadores do Python. Pra isso, temos de ir nas configurações da IDE e em seguida, clicar na opção: &lt;cite&gt;Project -&amp;gt; Project Interpreter&lt;/cite&gt;. Nesta tela será exibido todos as versões dos interpretadores Python que o PyCharm conhece.&lt;/p&gt;
 &lt;img alt="Tela Settings do PyCharm" src="../images/blog/pycharm-settings-project-interpreter.png" /&gt;
 &lt;p&gt;Quando mandarmos executar um código Python, o PyCharm irá utilizar o interpretador que nós selecionamos na lista de interpretadores e enviará o nome do arquivo para o interpretador.&lt;/p&gt;
@@ -1916,6 +2085,40 @@ workon k34&lt;/blockquote&gt;
 
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;kivy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__version__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="fedora"&gt;
+&lt;h2&gt;FEDORA&lt;/h2&gt;
+&lt;p&gt;O &lt;tt class="docutils literal"&gt;virtualenvwrapper&lt;/tt&gt; está disponivel no proprio repositorio do Fedora.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo dnf install python-virtualenvwrapper
+
+adicionar as duas proximas linhas no ~/.bashrc
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;WORKON_HOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$HOME&lt;/span&gt;/.virtualenvs
+&lt;span class="nb"&gt;source&lt;/span&gt; virtualenvwrapper.sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Essa dica foi fornecida pelo aluno Paulo Guilherme Venancio.&lt;/p&gt;
+&lt;p&gt;Dependências do SDL2 no Ubuntu e pacotes correspondente no Fedora (Testado no Fedora 25)
+Disponíveis no repositório &amp;quot;Fedora 25&amp;quot;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+      Ubuntu               Fedora
+build-essential   &amp;gt;&amp;gt;&amp;gt; grupo &amp;quot;C Development Tools and Libraries&amp;quot;
+python-dev        &amp;gt;&amp;gt;&amp;gt; python-devel
+python            &amp;gt;&amp;gt;&amp;gt; python
+python-pip        &amp;gt;&amp;gt;&amp;gt; python-pip
+git               &amp;gt;&amp;gt;&amp;gt; git
+libsdl2-dev       &amp;gt;&amp;gt;&amp;gt; SDL2-devel
+libsdl2-image-dev &amp;gt;&amp;gt;&amp;gt; SDL2_image-devel
+libsdl2-mixer-dev &amp;gt;&amp;gt;&amp;gt; SDL2_mixer-devel
+libsdl2-ttf-dev   &amp;gt;&amp;gt;&amp;gt; SDL2_ttf-devel
+libportmidi-dev   &amp;gt;&amp;gt;&amp;gt; portmidi-devel
+zlib1g-dev        &amp;gt;&amp;gt;&amp;gt; zlib-devel
+Disponíveis no repositório &amp;quot;RPM Fusion for Fedora 25&amp;quot;
+
+      Ubuntu               Fedora
+ffmpeg            &amp;gt;&amp;gt;&amp;gt; ffmpeg
+libswscale-dev    &amp;gt;&amp;gt;&amp;gt; ffmpeg-libs
+libavformat-dev   &amp;gt;&amp;gt;&amp;gt; ffmpeg-libs
+libavcodec-dev    &amp;gt;&amp;gt;&amp;gt; ffmpeg-libs
+&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
@@ -5610,10 +5813,12 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;span class="x"&gt;//$func(&amp;quot;eXcript&amp;quot;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category><category term="blog"></category></entry><entry><title>DICIONÁRIO TÉCNICO DE PROGRAMAÇÃO</title><link href="http://excript.com/dicionario/indice.html" rel="alternate"></link><published>2016-06-11T07:00:00-03:00</published><updated>2016-06-11T07:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:/dicionario/indice.html</id><summary type="html">&lt;div class="section" id="dicionario-excript"&gt;
+</content><category term="curso"></category><category term="php"></category><category term="função"></category><category term="função anonima"></category><category term="lambda"></category><category term="closures"></category><category term="função lambda"></category><category term="função de primeira ordem"></category><category term="função de ordem superior"></category><category term="blog"></category></entry><entry><title>DICIONÁRIO TÉCNICO DE PROGRAMAÇÃO</title><link href="http://excript.com/dicionario/indice.html" rel="alternate"></link><published>2016-06-11T07:00:00-03:00</published><updated>2016-06-11T07:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-11:/dicionario/indice.html</id><summary type="html">&lt;!-- MELHOR DICICIONÁRIO - https://www.symantec.com/pt/br/security_response/glossary/ --&gt;
+&lt;div class="section" id="dicionario-excript"&gt;
 &lt;h2&gt;DICIONÁRIO &lt;strong&gt;eXcript&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;O &lt;strong&gt;Dicionário Técnico de Programação e Desenvolvimento de Software eXcript&lt;/strong&gt; objetiva, mas não se limita a: &lt;strong&gt;a)&lt;/strong&gt; documentar os termos utilizados por programadores e desenvolvedores de software; &lt;strong&gt;b)&lt;/strong&gt; listar as tecnologias que utilizam o objeto definido; &lt;strong&gt;c)&lt;/strong&gt; citar fontes e propor leituras adicionais.&lt;/p&gt;
-&lt;p&gt;Todos os termos do dicionário …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="dicionario-excript"&gt;
+&lt;p&gt;Todos os termos do dicionário …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;!-- MELHOR DICICIONÁRIO - https://www.symantec.com/pt/br/security_response/glossary/ --&gt;
+&lt;div class="section" id="dicionario-excript"&gt;
 &lt;h2&gt;DICIONÁRIO &lt;strong&gt;eXcript&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;O &lt;strong&gt;Dicionário Técnico de Programação e Desenvolvimento de Software eXcript&lt;/strong&gt; objetiva, mas não se limita a: &lt;strong&gt;a)&lt;/strong&gt; documentar os termos utilizados por programadores e desenvolvedores de software; &lt;strong&gt;b)&lt;/strong&gt; listar as tecnologias que utilizam o objeto definido; &lt;strong&gt;c)&lt;/strong&gt; citar fontes e propor leituras adicionais.&lt;/p&gt;
 &lt;p&gt;Todos os termos do dicionário trazem, como primeira definição, o significado da terminologia ou nomenclatura segundo nossa interpretação. As definições seguintes terão, &lt;strong&gt;obrigatoriamente&lt;/strong&gt;, a fonte de onde foram extraídas e, quando possível, trarão o link de onde retiramos a definição.&lt;/p&gt;
@@ -5624,6 +5829,14 @@ Procedimento
 Método
 socket
 TCP/IP --&gt;
+&lt;/div&gt;
+&lt;div class="section" id="blob"&gt;
+&lt;h2&gt;BLOB&lt;/h2&gt;
+&lt;p&gt;​BLOB (binary large object) - o termo BLOB é um acrônimo de (binary large object), e é pronunciado BLAHB o seu objetivo quando relacionado a Banco de Dados é SEMPRE o armazenamento de grandes quantidade de dados no formato de bytes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tipado"&gt;
+&lt;h2&gt;Tipado&lt;/h2&gt;
+&lt;p&gt;Na programação, tipado significa uma variável ou algum valor que possui um tipo pré-determinado.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="recursividade"&gt;
 &lt;h2&gt;Recursividade&lt;/h2&gt;
@@ -5695,7 +5908,7 @@ TCP/IP --&gt;
 &lt;dd&gt;A linguagem C++ é um &lt;strong&gt;superset&lt;/strong&gt; de C.&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
-&lt;div class="section" id="tipado"&gt;
+&lt;div class="section" id="id1"&gt;
 &lt;h2&gt;tipado&lt;/h2&gt;
 &lt;p&gt;Aquilo que possui um tipo pré-definido.&lt;/p&gt;
 &lt;/div&gt;
@@ -7457,9 +7670,13 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;p&gt;No bloco de código a seguir, fazemos um simples programa que utiliza vários blocos de instrução, junto com a tomada de decisão.&lt;/p&gt;
+&lt;div class="section" id="bloco-de-instrucao"&gt;
+&lt;h2&gt;BLOCO DE INSTRUÇÃO&lt;/h2&gt;
+&lt;p&gt;Está aula é uma continuação da &lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;aula anterior&lt;/a&gt;, portanto, não há teoria disponível.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA …&lt;/h2&gt;&lt;/div&gt;</summary><content type="html">
+&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;p&gt;No bloco de código a seguir …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -7473,9 +7690,13 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;p&gt;No bloco de código a seguir, fazemos um simples programa que utiliza vários blocos de instrução, junto com a tomada de decisão.&lt;/p&gt;
+&lt;div class="section" id="bloco-de-instrucao"&gt;
+&lt;h2&gt;BLOCO DE INSTRUÇÃO&lt;/h2&gt;
+&lt;p&gt;Está aula é uma continuação da &lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;aula anterior&lt;/a&gt;, portanto, não há teoria disponível.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
+&lt;p&gt;No bloco de código a seguir, fazemos um simples programa que utiliza vários blocos de instrução, junto com a tomada de decisão.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
 
 &lt;span class="c1"&gt;#=====================================&lt;/span&gt;
@@ -7502,6 +7723,19 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
         &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;O valor é menor do que 5.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;Aula: Blocos de instrução&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/tutorial/introduction.html#an-informal-introduction-to-python"&gt;Documentação oficial (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#comments"&gt;PEP 8 -- Style Guide for Python Code (en)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="blog"></category></entry><entry><title>Blocos de Instrução em Python (Parte II)</title><link href="http://excript.com/python/blocos-de-instrucoes-python.html" rel="alternate"></link><published>2016-05-21T01:00:00-03:00</published><updated>2016-05-21T01:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-21:/python/blocos-de-instrucoes-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -7516,7 +7750,10 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="blocos"&gt;
+&lt;h2&gt;BLOCOS&lt;/h2&gt;
 &lt;p&gt;Esta aula &lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;é a continuação da aula anterior&lt;/a&gt; e não possui um texto especifico.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -7544,7 +7781,10 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="blocos"&gt;
+&lt;h2&gt;BLOCOS&lt;/h2&gt;
 &lt;p&gt;Esta aula &lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;é a continuação da aula anterior&lt;/a&gt; e não possui um texto especifico.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -7906,6 +8146,13 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
     &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;O número digitado não é &amp;#39;1&amp;#39; e nem &amp;#39;2&amp;#39;!!!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/tutorial/controlflow.html"&gt;Control Flow (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.tutorialspoint.com/python/python_if_else.htm"&gt;IF...ELIF...ELSE Statements (en)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="if"></category><category term="tomada de decisão"></category><category term="se"></category><category term="senão"></category><category term="blog"></category></entry><entry><title>Tomada de Decisão em Python</title><link href="http://excript.com/python/tomada-decisao-python.html" rel="alternate"></link><published>2016-05-16T23:00:00-03:00</published><updated>2016-05-16T23:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-16:/python/tomada-decisao-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -8872,7 +9119,7 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
 
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A operação acima está calculado o valor de 2 elevado a quita potência. Feito isso, o valor retornado é passado como parâmetro para a função &lt;cite&gt;input()&lt;/cite&gt; que imprime o resultado no Console.&lt;/p&gt;
+&lt;p&gt;A operação acima está calculado o valor de 2 elevado a quita potência. Feito isso, o valor retornado é passado como parâmetro para a função &lt;cite&gt;print()&lt;/cite&gt; que imprime o resultado no Console.&lt;/p&gt;
 &lt;p&gt;O operador de potenciação em Python é um operador binário, isto é, temos que definir 2 valores para a sua utilização. A esquerda definimos o número a ser elevado, e a direita do operador, o potência desejada.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="radiciacao"&gt;
@@ -9589,10 +9836,9 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
 &lt;p&gt;A seguir, temos o exemplo feito durante aula sobre a utilização de comentários.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#coding: utf-8&lt;/span&gt;
 
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Aprendendo&lt;/span&gt; &lt;span class="n"&gt;como&lt;/span&gt; &lt;span class="n"&gt;utilizar&lt;/span&gt; &lt;span class="n"&gt;comentários&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;segunda&lt;/span&gt; &lt;span class="n"&gt;linha&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;terceira&lt;/span&gt; &lt;span class="n"&gt;linha&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;aqui&lt;/span&gt; &lt;span class="err"&gt;é&lt;/span&gt; &lt;span class="n"&gt;um&lt;/span&gt; &lt;span class="n"&gt;comentário&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="n"&gt;não&lt;/span&gt; &lt;span class="n"&gt;será&lt;/span&gt; &lt;span class="n"&gt;interpretado&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Aprendendo como utilizar comentários.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;segunda linha&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;terceira linha&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;#aqui é um comentário que não será interpretado&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -9771,10 +10017,10 @@ Enquanto o SQL utiliza o paradigma declarativo, podemos dizer que o código gera
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;span class="mi"&gt;20&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bem&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vindo&lt;/span&gt; &lt;span class="n"&gt;ao&lt;/span&gt; &lt;span class="n"&gt;curso&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Bem-vindo ao curso de Python!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Bem&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vindo&lt;/span&gt; &lt;span class="n"&gt;ao&lt;/span&gt; &lt;span class="n"&gt;curso&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="err"&gt;!&lt;/span&gt;
 
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bem&lt;/span&gt; &lt;span class="n"&gt;vindo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Bem vindo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="ne"&gt;SyntaxError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;invalid&lt;/span&gt; &lt;span class="n"&gt;syntax&lt;/span&gt;
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -10332,19 +10578,19 @@ Alt + N - para avançar. O 'N' vem de &amp;quot;Next&amp;quot;.&lt;/p&gt;
 &lt;div class="section" id="qual-a-minha-versao-do-python"&gt;
 &lt;h2&gt;QUAL A MINHA VERSÃO DO PYTHON?&lt;/h2&gt;
 &lt;p&gt;Vá no prompt/shell/bash e digite:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;... python
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Se nada acontecer, tente digitar somente a palavra:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;... py
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;py
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O texto que impresso deverá ser semelhante ao ao texto a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;... python
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python
 
 Python &lt;span class="m"&gt;3&lt;/span&gt;.5 &lt;span class="o"&gt;(&lt;/span&gt;default, Mar  - YYYY, hh:mm:ss&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;MSC v.1600 &lt;span class="m"&gt;64&lt;/span&gt; bit &lt;span class="o"&gt;(&lt;/span&gt;AMD64&lt;span class="o"&gt;)]&lt;/span&gt; on win32
 Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span class="s2"&gt;&amp;quot;credits&amp;quot;&lt;/span&gt; or &lt;span class="s2"&gt;&amp;quot;license()&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; more information.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;OU ENTÃO:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;... python
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python
 Python &lt;span class="m"&gt;3&lt;/span&gt;.6 &lt;span class="p"&gt;|&lt;/span&gt;Anaconda &lt;span class="m"&gt;2&lt;/span&gt;.2.0 &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;64&lt;/span&gt;-bit&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;default, Mar  YYYY, hh:mm:ss&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;MSC v.1600 &lt;span class="m"&gt;64&lt;/span&gt; bit &lt;span class="o"&gt;(&lt;/span&gt;AMD64&lt;span class="o"&gt;)]&lt;/span&gt; on win32
 Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span class="s2"&gt;&amp;quot;credits&amp;quot;&lt;/span&gt; or &lt;span class="s2"&gt;&amp;quot;license()&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; more information.
 &lt;/pre&gt;&lt;/div&gt;
@@ -17799,7 +18045,7 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</content><category term="curso"></category><category term="python"></category><category term="dicionário"></category></entry><entry><title>Utilizando struct</title><link href="http://excript.com/cpp/utilizando-struct-cpp.html" rel="alternate"></link><published>2015-08-02T13:07:00-03:00</published><updated>2015-08-02T13:07:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-08-02:/cpp/utilizando-struct-cpp.html</id><summary type="html">
+</content><category term="curso"></category><category term="python"></category><category term="dicionário"></category></entry><entry><title>Utilizando struct em C++</title><link href="http://excript.com/cpp/utilizando-struct-cpp.html" rel="alternate"></link><published>2015-08-02T13:07:00-03:00</published><updated>2015-08-02T13:07:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-08-02:/cpp/utilizando-struct-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -17939,14 +18185,14 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
 &lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/string.html"&gt;Documentação Oficial das Strings (en)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="python"></category></entry><entry><title>Introdução às Estruturas</title><link href="http://excript.com/cpp/introducao-as-estruturas-cpp.html" rel="alternate"></link><published>2015-07-23T17:14:00-03:00</published><updated>2015-07-23T17:14:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-07-23:/cpp/introducao-as-estruturas-cpp.html</id><summary type="html">
+</content><category term="curso"></category><category term="python"></category></entry><entry><title>Introdução às Estruturas em C++</title><link href="http://excript.com/cpp/introducao-as-estruturas-cpp.html" rel="alternate"></link><published>2015-07-23T17:14:00-03:00</published><updated>2015-07-23T17:14:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-07-23:/cpp/introducao-as-estruturas-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula teremos uma introdução as estruturas, struct. Veremos quais as características dessa definição e em quais situações devemos fazer uso das mesmas.&lt;/p&gt;
+                            &lt;p&gt; Nesta aula teremos uma introdução sobre como utilizar as estruturas em C++. Veremos quais as características dessa definição e em quais situações devemos fazer uso das mesmas.&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
@@ -17960,7 +18206,7 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
                 &lt;tr&gt;
                     &lt;td class="content" style="border-left: 0"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula teremos uma introdução as estruturas, struct. Veremos quais as características dessa definição e em quais situações devemos fazer uso das mesmas.&lt;/p&gt;
+                            &lt;p&gt; Nesta aula teremos uma introdução sobre como utilizar as estruturas em C++. Veremos quais as características dessa definição e em quais situações devemos fazer uso das mesmas.&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
@@ -18023,7 +18269,7 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</content><category term="curso"></category><category term="java"></category></entry><entry><title>Manipulando Planilhas</title><link href="http://excript.com/cpp/manipulando-planilhas-cpp.html" rel="alternate"></link><published>2015-07-19T20:37:00-03:00</published><updated>2015-07-19T20:37:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-07-19:/cpp/manipulando-planilhas-cpp.html</id><summary type="html">
+</content><category term="curso"></category><category term="java"></category></entry><entry><title>Manipulando Planilhas em C++</title><link href="http://excript.com/cpp/manipulando-planilhas-cpp.html" rel="alternate"></link><published>2015-07-19T20:37:00-03:00</published><updated>2015-07-19T20:37:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-07-19:/cpp/manipulando-planilhas-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -21058,7 +21304,9 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;p&gt;A instrução &lt;cite&gt;continue&lt;/cite&gt; em C++ funciona de maneira análoga a instrução &lt;cite&gt;break&lt;/cite&gt; a diferença é que ao …&lt;/p&gt;</summary><content type="html">
+&lt;div class="section" id="a-instrucao-continue"&gt;
+&lt;h2&gt;A INSTRUÇÃO &lt;tt class="docutils literal"&gt;continue&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;A instrução &lt;cite&gt;continue&lt;/cite&gt; em C++ funciona de maneira análoga a instrução &lt;cite&gt;break&lt;/cite&gt; a diferença …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -21072,11 +21320,16 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="a-instrucao-continue"&gt;
+&lt;h2&gt;A INSTRUÇÃO &lt;tt class="docutils literal"&gt;continue&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;A instrução &lt;cite&gt;continue&lt;/cite&gt; em C++ funciona de maneira análoga a instrução &lt;cite&gt;break&lt;/cite&gt; a diferença é que ao invés de finalizar o laço de repetição inteiro, somente um único ciclo será finalizado. Ou seja: a instrução &lt;cite&gt;continue&lt;/cite&gt; finaliza o ciclo que está sendo executado pulando diretamente ao próximo.&lt;/p&gt;
-&lt;p&gt;Os laços de repetição possui 2 instruções para auxiliar a sua boa execução, são elas:
-- break
-- continue&lt;/p&gt;
+&lt;p&gt;Os laços de repetição possui 2 instruções para auxiliar a sua boa execução, são elas:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;break&lt;/li&gt;
+&lt;li&gt;continue&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;A instrução &lt;cite&gt;continue&lt;/cite&gt; como o nome em inglês sugere, não é pra finalizar, mas sim, continuar na próxima execução, ou melhor, continuar no próximo ciclo de repetição.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
@@ -21546,7 +21799,9 @@ A seguir, temos um exemplo de utilização da condição ternária:&lt;/p&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;p&gt;Um bloco de instrução, é uma estrutura que está delimitada por chaves, ou seja, todo o …&lt;/p&gt;</summary><content type="html">
+&lt;div class="section" id="bloco-de-instrucao"&gt;
+&lt;h2&gt;BLOCO DE INSTRUÇÃO&lt;/h2&gt;
+&lt;p&gt;Um bloco de instrução, é uma estrutura que está delimitada por chaves, ou …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -21560,8 +21815,11 @@ A seguir, temos um exemplo de utilização da condição ternária:&lt;/p&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="bloco-de-instrucao"&gt;
+&lt;h2&gt;BLOCO DE INSTRUÇÃO&lt;/h2&gt;
 &lt;p&gt;Um bloco de instrução, é uma estrutura que está delimitada por chaves, ou seja, todo o código que estiver contido entre os caracteres &lt;cite&gt;{&lt;/cite&gt; &lt;cite&gt;}&lt;/cite&gt; constituem um bloco de instrução.&lt;/p&gt;
 &lt;p&gt;Utilizamos blocos de instrução em C++ para agrupar nosso código - para definir, demarcar, quais instruções devem ser executadas naquele bloco.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
@@ -22290,7 +22548,7 @@ Não tenha dúvida! Essas são situações onde o melhor a se fazer é inspecion
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="cpp"></category></entry><entry><title>Executando Scripts PHP</title><link href="http://excript.com/php/executar-script-php.html" rel="alternate"></link><published>2015-03-16T02:31:00-03:00</published><updated>2015-03-16T02:31:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-03-16:/php/executar-script-php.html</id><summary type="html">
+</content><category term="curso"></category><category term="cpp"></category></entry><entry><title>Executando Scripts em PHP</title><link href="http://excript.com/php/executar-script-php.html" rel="alternate"></link><published>2015-03-16T02:31:00-03:00</published><updated>2015-03-16T02:31:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-03-16:/php/executar-script-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -22304,7 +22562,9 @@ Não tenha dúvida! Essas são situações onde o melhor a se fazer é inspecion
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;p&gt;Nesse episódio aprenderemos como configurar o PHPStorm para que este execute nossos códigos PHP automaticamente, ou seja, a partir de agora, não precisaremos fazer o processo de salvar o arquivo …&lt;/p&gt;</summary><content type="html">
+&lt;div class="section" id="scripts-em-php"&gt;
+&lt;h2&gt;SCRIPTS EM PHP&lt;/h2&gt;
+&lt;p&gt;Nesse episódio aprenderemos como configurar o PHPStorm para que este execute nossos códigos PHP automaticamente, ou seja, a partir de agora, não precisaremos fazer o processo de …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -22318,9 +22578,12 @@ Não tenha dúvida! Essas são situações onde o melhor a se fazer é inspecion
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="scripts-em-php"&gt;
+&lt;h2&gt;SCRIPTS EM PHP&lt;/h2&gt;
 &lt;p&gt;Nesse episódio aprenderemos como configurar o PHPStorm para que este execute nossos códigos PHP automaticamente, ou seja, a partir de agora, não precisaremos fazer o processo de salvar o arquivo no diretório do servidor, digitar o local no navegador, informar o nome do arquivo que contém o código e somente após essa rotina ter o nosso script executado.&lt;/p&gt;
 &lt;p&gt;Então, a partir de agora bastar pressionarmos Shift + F10 que o nosso script será executado e o navegador já será aberto.&lt;/p&gt;
-</content><category term="curso"></category><category term="php"></category></entry><entry><title>Programa em Looping em C++</title><link href="http://excript.com/cpp/programa-looping-cpp.html" rel="alternate"></link><published>2015-03-15T23:30:00-03:00</published><updated>2015-03-15T23:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-03-15:/cpp/programa-looping-cpp.html</id><summary type="html">
+&lt;/div&gt;
+</content><category term="curso"></category><category term="php"></category><category term="script"></category></entry><entry><title>Programa em Looping em C++</title><link href="http://excript.com/cpp/programa-looping-cpp.html" rel="alternate"></link><published>2015-03-15T23:30:00-03:00</published><updated>2015-03-15T23:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-03-15:/cpp/programa-looping-cpp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -22457,7 +22720,9 @@ Não tenha dúvida! Essas são situações onde o melhor a se fazer é inspecion
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;p&gt;A instrução &lt;cite&gt;while&lt;/cite&gt; funciona de maneira semelhante a instrução &lt;cite&gt;for&lt;/cite&gt;. A diferença é que com a instrução &lt;cite&gt;while&lt;/cite&gt; nós conseguimos construir laços de …&lt;/p&gt;</summary><content type="html">
+&lt;div class="section" id="laco-de-repeticao"&gt;
+&lt;h2&gt;LAÇO DE REPETIÇÃO&lt;/h2&gt;
+&lt;p&gt;A instrução &lt;cite&gt;while&lt;/cite&gt; funciona de maneira semelhante a instrução &lt;cite&gt;for&lt;/cite&gt;. A diferença é que com a instrução &lt;cite&gt;while&lt;/cite&gt; nós conseguimos …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -22471,6 +22736,8 @@ Não tenha dúvida! Essas são situações onde o melhor a se fazer é inspecion
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="laco-de-repeticao"&gt;
+&lt;h2&gt;LAÇO DE REPETIÇÃO&lt;/h2&gt;
 &lt;p&gt;A instrução &lt;cite&gt;while&lt;/cite&gt; funciona de maneira semelhante a instrução &lt;cite&gt;for&lt;/cite&gt;. A diferença é que com a instrução &lt;cite&gt;while&lt;/cite&gt; nós conseguimos construir laços de repetição indefinidos ou então, laços que sejam executados enquanto uma condição for verdadeira.&lt;/p&gt;
 &lt;p&gt;Por exemplo, a seguir, o bloco de instrução será repetido até que a condição definida no cabeçalho da estrutura deixe de ser verdadeiro:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -22481,6 +22748,7 @@ Não tenha dúvida! Essas são situações onde o melhor a se fazer é inspecion
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Assim, nós temos que a cada laço a variável &lt;cite&gt;x&lt;/cite&gt; será incrementada em uma unidade e em seguida, ira imprimir na tela o valor da variável &lt;cite&gt;x&lt;/cite&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
@@ -30488,6 +30756,7 @@ x--;&lt;/p&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;p&gt;Nenhum texto a ser exibido neste momento.&lt;/p&gt;
 </summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -30502,6 +30771,7 @@ x--;&lt;/p&gt;
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;p&gt;Nenhum texto a ser exibido neste momento.&lt;/p&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Console Application em C#</title><link href="http://excript.com/csharp/console-application-csharp.html" rel="alternate"></link><published>2014-02-27T06:20:00-03:00</published><updated>2014-02-27T06:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-27:/csharp/console-application-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -30711,6 +30981,7 @@ Assim, temos que podemos ler o que um usuário digita através da função &lt;c
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;p&gt;Nenhum texto a ser exibido neste momento.&lt;/p&gt;
 </summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -30725,6 +30996,7 @@ Assim, temos que podemos ler o que um usuário digita através da função &lt;c
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;p&gt;Nenhum texto a ser exibido neste momento.&lt;/p&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Variáveis em C#</title><link href="http://excript.com/csharp/variavel-csharp.html" rel="alternate"></link><published>2014-02-27T06:20:00-03:00</published><updated>2014-02-27T06:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-27:/csharp/variavel-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -30739,6 +31011,7 @@ Assim, temos que podemos ler o que um usuário digita através da função &lt;c
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;p&gt;Nenhum texto a ser exibido neste momento.&lt;/p&gt;
 </summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -30753,6 +31026,7 @@ Assim, temos que podemos ler o que um usuário digita através da função &lt;c
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;p&gt;Nenhum texto a ser exibido neste momento.&lt;/p&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Operadores relacionais do C</title><link href="http://excript.com/linguagem-c/operador-relacional-c.html" rel="alternate"></link><published>2014-02-26T19:27:00-03:00</published><updated>2014-02-26T19:27:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-26:/linguagem-c/operador-relacional-c.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -31700,6 +31974,18 @@ Com a instrução WHILE o funcionamento é semelhante, porém, nós ficaremos re
 
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/java/estrutura-repeticao-java.html"&gt;Aula: Estrutura for&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html"&gt;The while and do-while Statements (en)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="java"></category></entry><entry><title>Precedência de Operadores em Java</title><link href="http://excript.com/java/precedencia-operador-java.html" rel="alternate"></link><published>2014-02-25T10:25:00-03:00</published><updated>2014-02-25T10:25:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-25:/java/precedencia-operador-java.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -33000,10 +33286,7 @@ gênero é igual a mulher &lt;cite&gt;E&lt;/cite&gt; idade é maior ou igual a 1
     &lt;/div&gt;
 &lt;div class="section" id="lacos-de-repeticoes-for"&gt;
 &lt;h2&gt;LAÇOS DE REPETIÇÕES &lt;cite&gt;FOR&lt;/cite&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div class="section" id="introducao"&gt;
-&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
-&lt;p&gt;Os laços de repetição &lt;cite&gt;for&lt;/cite&gt; são os mais utilizados pelas mais diferentes linguagens de programação. Isso é um fenômeno que se observa rapidamente …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+&lt;p&gt;Os laços de repetição &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; são os mais utilizados pelas mais diferentes linguagens de programação. Isso é um fenômeno que se observa rapidamente quando …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -33019,40 +33302,34 @@ gênero é igual a mulher &lt;cite&gt;E&lt;/cite&gt; idade é maior ou igual a 1
     &lt;/div&gt;
 &lt;div class="section" id="lacos-de-repeticoes-for"&gt;
 &lt;h2&gt;LAÇOS DE REPETIÇÕES &lt;cite&gt;FOR&lt;/cite&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div class="section" id="introducao"&gt;
-&lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
-&lt;p&gt;Os laços de repetição &lt;cite&gt;for&lt;/cite&gt; são os mais utilizados pelas mais diferentes linguagens de programação. Isso é um fenômeno que se observa rapidamente quando começamos a estudar códigos de outros programadores. Assim, a minha afirmação de que é a estrutura de repetição mais utilizada está baseada em minha esperiencia, e não num estudo ou estatística.&lt;/p&gt;
-&lt;p&gt;Assim, nós encontramos a estrutura &lt;cite&gt;for&lt;/cite&gt; em praticamente todas as linguagem de programação estruturadas e ainda que exista diferença na declaração entre as linguanges, ha um princípio comum a todos: é um ciclo e será executado por um tempo determinado na declaração da estrutura. Ou seja, ao contrário do laço de repetição “while”, que sempre será executado até que uma condição satisfaça a sentença proposta, com o looping &lt;cite&gt;for&lt;/cite&gt;, já no cabeçalho é definido o intervalo no qual o looping será executado.&lt;/p&gt;
-&lt;p&gt;Talvez, a segurança de que há um intervalo finito ao utilizarmos a instrução &lt;cite&gt;for&lt;/cite&gt; seja a razão pela ampla adoção desta estrutura. Uma outra caracteristica bastante importante se deve pelo fato de que no cabeçalho da instrução nós sempre fornecemos todas as informações necessárias para a execução de todos os ciclos, como também, em algumas linguanges conseguimos declarar e até incrementar valores às variáveis de acumulação.&lt;/p&gt;
-&lt;p&gt;É importante saber que o looping &lt;cite&gt;for&lt;/cite&gt; será a nossa melhor ferramenta para todas as situações onde nós conhecemos previamente quantos itens de uma lista nós precisamos percorrer, ou então, em situações onde precisamos executar diversas instruções em um intervalo pré-definido, como exemplo:&lt;/p&gt;
-&lt;p&gt;execute o ciclo no intervalo de 1 até 100
-execute o ciclo no intervalo de 0 a 1000 incrementando sempre 2 unidades numéricas à nossa variável acumuladora&lt;/p&gt;
+&lt;p&gt;Os laços de repetição &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; são os mais utilizados pelas mais diferentes linguagens de programação. Isso é um fenômeno que se observa rapidamente quando começamos a estudar códigos de outros programadores.&lt;/p&gt;
+&lt;p&gt;A sintaxe do laço de repetição for do &lt;tt class="docutils literal"&gt;Java&lt;/tt&gt; é igual a sintaxe do laço de repetição do &lt;tt class="docutils literal"&gt;C&lt;/tt&gt; e do &lt;tt class="docutils literal"&gt;C++&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Encontramos a estrutura &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; em praticamente todas as linguagem de programação estruturadas e ainda que existam diferenças na declaração entre as diversas linguagens, ha um princípio comum a todos: é um ciclo e será executado por um tempo &lt;strong&gt;pré-determinado na declaração&lt;/strong&gt; da estrutura. Ao contrário do laço de repetição &lt;a class="reference external" href="http://excript.com/java/estrutura-while-java.html"&gt;while&lt;/a&gt;, que é executado até que uma condição satisfaça a sentença proposta e compete ao programador promover alguma ação para que em algum momento a condição seja estabelecida e o ciclo finalizado.&lt;/p&gt;
+&lt;p&gt;A utilização da estrutura &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; garante uma maior segurança de que a aplicação não entrará em looping. Outra caracteristica bastante importante deve-se ao fato de que ainda no cabeçalho da instrução fornecemos todos os valores necessários para a execução dos ciclos.&lt;/p&gt;
+&lt;p&gt;Portanto, o looping &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; será a nossa melhor ferramenta para todas as situações onde conhecemos de antemão a quantidade de ciclos devem ser executados, ou então, nas situações onde precisamos executar diversas instruções em um intervalo pré-definido.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="estrutura-for-em-outras-linguagens"&gt;
 &lt;h2&gt;ESTRUTURA &lt;cite&gt;for&lt;/cite&gt; EM OUTRAS LINGUAGENS&lt;/h2&gt;
-&lt;p&gt;No Python, nós utilizamos a instrução &lt;cite&gt;for&lt;/cite&gt; de maneira bastante particular. Como já vimos, a ideia por detrás da instrução &lt;cite&gt;for&lt;/cite&gt; é igual em todas as linguagens de programação, mas a sua estrutura de declaração ainda que sejam diferentes, possuem partes iguais.&lt;/p&gt;
+&lt;p&gt;No Python, nós utilizamos a instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; de maneira bastante particular. Como já vimos, a ideia por detrás da instrução &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; é igual em todas as linguagens de programação, mas a sua estrutura de declaração ainda que sejam diferentes, possuem partes iguais.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="o-que-e-um-ciclo-de-repeticao"&gt;
 &lt;h2&gt;O QUE É UM CICLO DE REPETIÇÃO?&lt;/h2&gt;
-&lt;p&gt;Ciclo é um fenômeno pertencente a uma série ou então, a uma determinada situação / evento. Logo, todo ciclo é por definição, a execução de um elemento, intervalo e é único, até porque, todo ciclo possui características que o distinguem dos demais. A exemplo, temos que se houverem 10 ciclos seguidos, cada um será executado após o outro. Logo, temos que os ciclos são ordenados e assim, são fenômenos independentes, mas que pertencem a um mesmo evento ou série.&lt;/p&gt;
+&lt;p&gt;Ciclo é um fenômeno pertencente a uma série ou então, a uma determinada situação/evento. Na programação chamamos de ciclo a execução de um bloco de código que será executado várias vezes. Cada execução desse bloco é um ciclo.&lt;/p&gt;
+&lt;p&gt;Por exemplo, se determinado código precisar ser executado várias vezes, cada execução será um ciclo e todo ciclo é único.&lt;/p&gt;
 &lt;p&gt;O mais importante a saber é que um ciclo pode ou não repetir as mesmas instruções, na mesma ordem ou em ordem diferente, contendo as mesmas caracteristicas ou mesmo, contendo caracteristicas únicas ao seu ciclo.&lt;/p&gt;
 &lt;p&gt;Agora, todo ciclo na programação irá, obrigatoriamente, executar um mesmo bloco de instrução, mas esse bloco pode conter diversos controles de fluxos que alteram a execução das instruções o que acaba por obter resultados diferentes e únicos de um determinado ciclo.&lt;/p&gt;
-&lt;p&gt;Por exemplo, em C, C++ e Java, nós utilizamos a seguinte estrutura:&lt;/p&gt;
-&lt;blockquote&gt;
-for( &amp;lt;parte1&amp;gt;; &amp;lt;parte2&amp;gt;; &amp;lt;parte3&amp;gt; )&lt;/blockquote&gt;
+&lt;p&gt;Se seguir temos a estrutura fundamental de um laço de repetição &lt;tt class="docutils literal"&gt;for&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;parte1&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;parte2&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;parte3&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;dl class="docutils"&gt;
 &lt;dt&gt;&amp;lt;parte1&amp;gt; declaração da(s) variável(is) acumuladora(s).&lt;/dt&gt;
-&lt;dd&gt;Assim, temos que a parte1 da declaração da estrutura &lt;cite&gt;for&lt;/cite&gt; é o local onde nós declaramos uma ou mais variáveis, definimos o nome e atribuímos os valores iniciais a uma ou então ao conjunto de variáveis.&lt;/dd&gt;
+&lt;dd&gt;A &lt;strong&gt;parte1&lt;/strong&gt; da declaração da estrutura &lt;tt class="docutils literal"&gt;for&lt;/tt&gt; é o local onde  declaramos uma ou mais variáveis. O normal é a declaração de um única variável, porém, não existe limite e também, não há qualquer regra.&lt;/dd&gt;
 &lt;dt&gt;&amp;lt;parte2&amp;gt; condição para o término do laço de repetição&lt;/dt&gt;
-&lt;dd&gt;O segunda parte a ser declarada em uma estrutura &lt;cite&gt;for&lt;/cite&gt; é aquela que define a condição para a repetição do ciclo. Assim, temos que o meio do cabeçalho da estrutura &lt;cite&gt;for&lt;/cite&gt; é onde nós colocamos a condição e essa muito provavelmente estabelecerá a condição verificando a &amp;lt;parte1&amp;gt; com a &lt;cite&gt;&amp;lt;parte3&amp;gt;&lt;/cite&gt; da nossa estrutura.&lt;/dd&gt;
+&lt;dd&gt;A &lt;strong&gt;parte2&lt;/strong&gt; é uma condição que determina o término da execução do laço de repetição. Podemos definir uma condição simples um mesmo uma condição composta por várias expressões. A única regra é o retorno de uma valor booleano como resultado da(s) expressões.&lt;/dd&gt;
 &lt;dt&gt;&amp;lt;parte3&amp;gt; incremento ou decremento da variável(is)&lt;/dt&gt;
-&lt;dd&gt;Será na parte 3 onde nós modificaremos o valor da(s) variável(is) acumuladoras. Fato é que a terceira parte da estrutura é responsável pelo “andamento” do laço. Em outras palavras, podemos dizer que a terceira parte tem a responsabilidade de estabelecer qual será a mudança nas variáveis acumuladoras.&lt;/dd&gt;
+&lt;dd&gt;Será na &lt;strong&gt;parte 3&lt;/strong&gt; onde modificaremos o valor da(s) variável(is) acumuladoras. Esta parte também será a responsável pelo “andamento” do laço. Em outras palavras, podemos dizer que a terceira parte tem a responsabilidade de estabelecer qual será a mudança nas variáveis acumuladoras.&lt;/dd&gt;
 &lt;/dl&gt;
-&lt;p&gt;Se, por alguma razão a terceira parte for omitida ou então, mau implementada, o resultado será que os ciclos se repetiram e muito raras serão as vezes em que precisamos repetir um ciclo!&lt;/p&gt;
-&lt;p&gt;PARA PENSAR: as estruturas de repetição normalmente repetem instruções, porém, com parâmetros diferentes. Isto é, as instruções são sempre as mesmas, mas os paramêtros que são passados a cada instrução, normalmente são diferentes e é por essa razão que executamos as instruções através de um ciclo de repetição.
-Então, não confunda: ciclo de repetição repete as instruções, mas não necessáriamente os atributos e parâmetros que são na maioria das vezes, diferentes e pertencem a um único ciclo.&lt;/p&gt;
-&lt;p&gt;Por fim, temos que as linguagens que possuem a sintaxe do C herdaram as caracteristicas do ciclo de repetição &lt;cite&gt;for&lt;/cite&gt;, que como vimos, é compostos por 3 partes distintas.&lt;/p&gt;
+&lt;p&gt;PARA PENSAR: as estruturas de repetição normalmente repetem instruções, porém, com parâmetros diferentes. Isto é, as instruções são sempre as mesmas, mas os parâmetros que são passados a cada instrução, normalmente são diferentes e é por essa razão que executamos as instruções através de um ciclo de repetição.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
@@ -33069,7 +33346,19 @@ Então, não confunda: ciclo de repetição repete as instruções, mas não nec
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="java"></category></entry><entry><title>Tipos Primitivos do Java (parte II)</title><link href="http://excript.com/java/tipo-primitivo-java-parte2.html" rel="alternate"></link><published>2014-02-24T23:54:00-03:00</published><updated>2014-02-24T23:54:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-24:/java/tipo-primitivo-java-parte2.html</id><summary type="html">
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/java/estrutura-while-java.html"&gt;Aula: Laço de Repetição While&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html"&gt;The for Statement (en)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="curso"></category><category term="java"></category><category term="laço de repetição"></category><category term="looping"></category><category term="laço for"></category></entry><entry><title>Tipos Primitivos do Java (parte II)</title><link href="http://excript.com/java/tipo-primitivo-java-parte2.html" rel="alternate"></link><published>2014-02-24T23:54:00-03:00</published><updated>2014-02-24T23:54:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-24:/java/tipo-primitivo-java-parte2.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;

@@ -425,6 +425,40 @@ workon k34</blockquote>
 <span class="k">print</span><span class="p">(</span><span class="n">kivy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="section" id="fedora">
+<h2>FEDORA</h2>
+<p>O <tt class="docutils literal">virtualenvwrapper</tt> está disponivel no proprio repositorio do Fedora.</p>
+<div class="highlight"><pre><span></span>sudo dnf install python-virtualenvwrapper
+
+adicionar as duas proximas linhas no ~/.bashrc
+<span class="nb">export</span> <span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
+<span class="nb">source</span> virtualenvwrapper.sh
+</pre></div>
+<p>Essa dica foi fornecida pelo aluno Paulo Guilherme Venancio.</p>
+<p>Dependências do SDL2 no Ubuntu e pacotes correspondente no Fedora (Testado no Fedora 25)
+Disponíveis no repositório &quot;Fedora 25&quot;</p>
+<pre class="literal-block">
+      Ubuntu               Fedora
+build-essential   &gt;&gt;&gt; grupo &quot;C Development Tools and Libraries&quot;
+python-dev        &gt;&gt;&gt; python-devel
+python            &gt;&gt;&gt; python
+python-pip        &gt;&gt;&gt; python-pip
+git               &gt;&gt;&gt; git
+libsdl2-dev       &gt;&gt;&gt; SDL2-devel
+libsdl2-image-dev &gt;&gt;&gt; SDL2_image-devel
+libsdl2-mixer-dev &gt;&gt;&gt; SDL2_mixer-devel
+libsdl2-ttf-dev   &gt;&gt;&gt; SDL2_ttf-devel
+libportmidi-dev   &gt;&gt;&gt; portmidi-devel
+zlib1g-dev        &gt;&gt;&gt; zlib-devel
+Disponíveis no repositório &quot;RPM Fusion for Fedora 25&quot;
+
+      Ubuntu               Fedora
+ffmpeg            &gt;&gt;&gt; ffmpeg
+libswscale-dev    &gt;&gt;&gt; ffmpeg-libs
+libavformat-dev   &gt;&gt;&gt; ffmpeg-libs
+libavcodec-dev    &gt;&gt;&gt; ffmpeg-libs
+</pre>
+</div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>
 <p><a class="reference external" href="http://excript.com/python/instalacao-kivy-mac.html">Instalação no Mac OSX</a></p>

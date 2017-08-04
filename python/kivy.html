@@ -154,18 +154,18 @@ eXcript            </a>
 <div class="section" id="introducao">
 <h2>INTRODUÇÃO</h2>
 <img alt="Logo oficial do projeto Kivy" src="../images/blog/kivy-logo.png" />
-<p>A biblioteca Kivy é um framework para desenvolvimento multiplataforma, escrito majoritariamente com a linguagem Python e/ou Cython e que permite o desenvolvimento de aplicações para diversos sistemas operacionais, tais com, Microsoft Windows, Linux, Mac, Android, iOS, Raspberry utilizando um mesmo código.</p>
-<p>O projeto Kivy é composto por vários subprojetos, cada um especializado numa determinada tarefa, como por exemplo, gerar executável para determinada plataforma ou então, uma interface que permite o acesso ao hardware em várias dispositivos com diferentes sistema operacional utilizando um mesmo código.</p>
-<p>É importante não confundir a projeto Kivy com a biblioteca Kivy. O projeto Kivy, cujo site é <a class="reference external" href="http://kivy.org">http://kivy.org</a> é composto por vários subprojetos, dentre estes, a biblitoeca Kivy.</p>
+<p>A biblioteca Kivy é um framework para desenvolvimento multiplataforma, escrito majoritariamente com a linguagem Python/Cython, permite o desenvolvimento de aplicações para diversos sistemas operacionais, tais com, Microsoft Windows, Linux, Mac, Android, iOS, Raspberry utilizando um mesmo código.</p>
+<p>O projeto é composto por vários sub-projetos, cada um especializado numa determinada tarefa, como por exemplo, a geração de executáveis para determinada plataforma ou então, uma API genérica para facilmente acessarmos o hardware em qualquer dispositivos e em diferentes plataformas sem a necessidade de escrevermos uma única linha de código a mais.</p>
+<p>É importante não confundir o projeto Kivy com a biblioteca Kivy. O projeto Kivy, cujo site é <a class="reference external" href="http://kivy.org">http://kivy.org</a> é composto por vários subprojetos, dentre estes, a biblitoeca Kivy.</p>
 </div>
 <div class="section" id="a-biblioteca-kivy">
 <h2>A BIBLIOTECA KIVY</h2>
-<p><a class="reference external" href="https://github.com/kivy/kivy/">A biblioteca Kivy contém o código de UI (User Interface) interface de usuário multiplataforma</a> executado sob a biblioteca OpenGL. Toda parte gráfica da biblioteca é executado em cima da placa de vídeo, por essa razão, a performance em algumas situações chega a ser superior a renderização nativa de alguns sistemas operacionais.</p>
+<p><a class="reference external" href="https://github.com/kivy/kivy/">A biblioteca Kivy contém o código de UI (User Interface) Interface de Usuário multiplataforma</a> executado sob a biblioteca OpenGL. Isso quer dizer que todo código será executado pelos interpretadores da placa de vídeo e é por essa razão é possível obter  performance igual e não raramente superior se comparado com as aplicações nativas.</p>
 <p>Em vista de que a biblioteca OpenGL é multiplataforma, o projeto Kivy, construído em cima dessa camada, pode ser executado em qualquer dispositivo que possua suporte com a biblioteca OpenGL.</p>
 </div>
 <div class="section" id="opengl-2-0">
 <h2>OpenGL 2.0</h2>
-<p><tt class="docutils literal">OpenGL</tt> é uma API e uma linguagem de programação multiplataforma e OpenGL é um acrônimo de <cite>Open Graphics Library`</cite>, numa tradução livre seria <tt class="docutils literal">Biblioteca Gráfica Aberta</tt>. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D que podem ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplatamente utilizada em jogos e em tudo que esteja relacionado com gráficos.</p>
+<p><tt class="docutils literal">OpenGL</tt> é uma API e uma linguagem de programação multiplataforma e OpenGL é um acrônimo de <cite>Open Graphics Library`</cite>, numa tradução livre seria <tt class="docutils literal">Biblioteca Gráfica Aberta</tt>. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D que podem ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplamente utilizada na construção de jogos, ferramentas 3D ou qualquer aplicação que faça uso intensivo do hardware gráfico.</p>
 <blockquote>
 OpenGL é um conjunto de padrões de processamento de alto desempenho de gráficos 2D e 3D na unidade de processamento (GPU) para vários aplicativos. O OpenGL permite a renderização rápida de visualizações (modo Rascunho rápido).
 <a class="reference external" href="https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html">https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html</a></blockquote>
@@ -183,7 +183,7 @@ OpenGL é um conjunto de padrões de processamento de alto desempenho de gráfic
 <blockquote>
 OpenGL® ES is a royalty-free, cross-platform API for full-function 2D and 3D graphics on embedded systems - including consoles, phones, appliances and vehicles. It consists of well-defined subsets of desktop OpenGL, creating a flexible and powerful low-level interface between software and graphics acceleration. OpenGL ES includes profiles for floating-point and fixed-point systems and the EGL™ specification for portably binding to native windowing systems. OpenGL ES 1.X is for fixed function hardware and offers acceleration, image quality and performance. OpenGL ES 2.X enables full programmable 3D graphics. OpenGL SC is tuned for the safety critical market.
 <a class="reference external" href="https://www.khronos.org/opengles/">https://www.khronos.org/opengles/</a></blockquote>
-<p>Atualmente há vários subsets (versões derivadas) da biblioteca OpenGL. Por padrão (convenção), os principais Sistemas Operacionais voltados a dispositivos móveis utlizam a biblioteca OpenGL ES 2.0. Portanto, é comum falarmos que o projeto Kivy está contruído sob a arquitetura OpenGL, porém, a biblioteca utiliza de fato uma versão derivada de OpenGL ES 2.0 e que é um acrônimo de <tt class="docutils literal">OpenGL for Embedded Systems</tt> que numa tradução livre seria:</p>
+<p>Atualmente há vários subsets (versões derivadas) da biblioteca OpenGL. Por padrão (convenção), os principais Sistemas Operacionais voltados a dispositivos móveis utilizam a biblioteca OpenGL ES 2.0. Portanto, é comum falarmos que o projeto Kivy está construido sob a arquitetura OpenGL, porém, a biblioteca utiliza de fato uma versão derivada de OpenGL ES 2.0 e que é um acrônimo de <tt class="docutils literal">OpenGL for Embedded Systems</tt> que numa tradução livre seria:</p>
 <p>A seguir, temos os acrônimos seguido de seus nomes completos:</p>
 <pre class="literal-block">
 - OpenGL: Open Graphic Library
@@ -226,22 +226,44 @@ OpenGL® ES is a royalty-free, cross-platform API for full-function 2D and 3D gr
     </div>
 </div>
 <div class="section" id="o-python">
-<h2>O PYTHON</h2>
+<h2>O Python</h2>
 <p>A biblioteca inicialmente foi escrita para a versão 2x do <a class="reference external" href="https://blog.kivy.org/2016/01/python-for-android-now-supports-python-3%C2%A0apks/">Python e recentemente (2016) foi publicado o suporte experimental à versão 3x</a> . Ainda que o suporte seja experimental, há casos de sucesso utilizando a versão 3x.</p>
 <p>Mesmo assim, a versão do Python amplamente suportada ainda é a 2x e algumas plataformas, como por exemplo o Mac OSX, ainda não possuem suporte para gerar executáveis utilizando as últimas versões.</p>
 <p>O desenvolvimento utilizando a versão 2x e 3x são iguais, salvo a manipulação de String que, na versão 2x do Python possui um tratamento diferente, ou seja, as cadeias de caracteres não são Unicode por padrão.</p>
 <p>Projetos escritos com a versão 3x do Python podem ser convertidos para a versão 2x utilizando utilitários como por exemplo o <a class="reference external" href="https://docs.python.org/2/library/2to3.html">2to3</a> que, mesmo não sendo perfeito, resolve a maioria dos problemas de conversão.</p>
 <p>Por fim, é importante dizer que o buildozer, projeto que gera executáveis para as mais diversas plataformas pode ser baixado junto com uma versão do Lubuntu para as versões 2x, ou seja, a forma mais utilizada na geração de executáveis ainda é a versão 2x.</p>
 </div>
+<div class="section" id="a-linguagem-kivy-ou-entao-a-kvlang">
+<h2>A LINGUAGEM KIVY OU ENTÃO A kvlang</h2>
+<p>O projeto Kivy desenvolveu uma linguagem especializada e semelhante a linguagem Python para a construção de interfaces gráficas. O objetivo é facilitar a adição e remoção de Widgets (componentes visuais) ao mesmo tempo que separa o código utilizado para construção gráfica (View) do código Python, ou a lógica de negócios.</p>
+<p>Num primeiro momento é impossível não pensarmos se realmente existe a necessidade de criar mais uma linguagem sendo que já existem tantas. Talvez somente na prática é que conseguimos perceber o quão útil foi o estabelecimento dessa nova linguagem que de fato não passa de uma linguagem de marcação, haja vista que somente pequenas expressões podem ser utilizadas.</p>
+<p>Abaixo temos um trecho de código utilizando a kvlang e em seguida a tela que iremos obter quando executarmos.</p>
+<div class="highlight"><pre><span></span>FloatLayout:
+    TextInput:
+        text: &quot;eXcript&quot;
+        height: &quot;30px&quot;
+        width: 350
+        top: 100
+        size_hint: None, None
+        pos_hint: {&#39;center_x&#39;: 0.5,}
+    Button:
+        text: &quot;Confirmar&quot;
+        height: 30
+        top: 60
+        size_hint: None, None
+        pos_hint: {&#39;center_x&#39;: 0.5,}
+</pre></div>
+<img alt="Tela construida com o framework Kivy contendo um TextEdit e um Botão" src="../images/blog/kivy-exemplo-textinput-button.png" />
+</div>
 <div class="section" id="kivy-design">
-<h2>KIVY DESIGN</h2>
+<h2>Kivy Design</h2>
 <img alt="Imagem do editor Kivy Design" src="../images/blog/kivy-design.png" />
-<p>Kivy Design é um projeto de construção de uma IDE RAD para desenvolvimento de aplicações gráficas com Python utilizando a biblitoeca kivy. A proposta é a construção do sonho de todos programadores: um ambiente de  completo, estável, para a construção de aplições, seja para o Prompt de Comando, seja para aplicações gráfica para Desktop, Mobile e Web.</p>
+<p>Kivy Design é um projeto de construção de uma IDE RAD para desenvolvimento de aplicações gráficas com Python utilizando a biblioteca kivy. A proposta é a construção do sonho de todos programadores: um ambiente de  completo, estável, para a construção de aplicações, seja para o Prompt de Comando, seja para aplicações gráfica para Desktop, Mobile e Web.</p>
 <p>O projeto Kivy Design objetiva fazer jus a todo o trabalho e esforço empreendido na construção da biblioteca Kivy e fornecer um ambiente para a construção de aplicações gráfica que tenha tanta qualidade como a biblioteca Kivy.</p>
-<p>A IDE vem sendo desenvolvido, obviamente, com o framework Kivy, então, talvez este venha a ser a primeira IDE RAD (Rapid Application Development) multiplaforma e multidispositivo do mundo. O mais legal é que temos a oportunidade de participar do desenvolimento da IDE e assim, trabalhar para construir uma ferramenta que seja como sempre desejamos que ela fosse.</p>
+<p>A IDE vem sendo desenvolvido, obviamente, com o framework Kivy, então, talvez este venha a ser a primeira IDE RAD (Rapid Application Development) multiplataforma e multidispositivo do mundo. O mais legal é que temos a oportunidade de participar do desenvolvimento da IDE e assim, trabalhar para construir uma ferramenta que seja como sempre desejamos que ela fosse.</p>
 <p>Uma das razões do código do Kivy Design ser tão simples é que tudo ainda está no começo, por isso tanta simplicidade. E, essa é a parte boa, ou seja, temos a oportunidade de acompanhar o crescimento do código e ir assimilando naturalmente e participando da construção de um grande software!</p>
 <div class="section" id="estado-do-projeto-kivy-design">
-<h3>ESTADO DO PROJETO KIVY DESIGN</h3>
+<h3>ESTADO DO PROJETO Kivy Design</h3>
 <p>Neste momento, ainda que seja possível executar o projeto Kivy Design, não é recomendável sua utilização, até porque, o mesmo está caindo (travando) a todo momento.</p>
 <p>Caso queiras se divertir, toda vez que Kivy Design travar, é impresso o local em que ocorreu o problema, logo, poder ir até lá e tentar corrigir.
 O interessante é que a maior parte das vezes em que o Kivy Design trava, o problema não está em seu código, mas sim, no código da biblioteca Kivy.</p>
@@ -356,9 +378,11 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 </div>
 <div class="section" id="a-magica-do-cython">
 <h2>A MÁGICA DO CYTHON</h2>
-<p>Cython é um superconjunto da linguagem de programação Python e o objetivo é converter código Python para código C (nativo). Cython é tanto um compilador como tamnbém uma linguagem de programação que estende a linguagem Python com a finalidade de mesclar as estruturas da linguagem C com as estrutura da linguagem Python.</p>
-<p>O Cython compila qualquer código Python, ou seja, o mesmo transforma qualquer código Python para código C nativo. Em seguida, o GCC faz o restante do trabalho, compilando código C e gerando um executável nativo à plataforma onde está sendo executado.</p>
-<p>A linguagem Cython trabalha com tipagem estática e dinâmica, porém, quando mais tipado for o código, mais otimizado será sua execução. Um código Python otimizado com a linguagem Cython pode rodar até 5000 vezes mais rápido. Na página do projeto você pode encontar mais gráficos e testes de permormances.</p>
+<p>Cython é um superconjunto da linguagem Python e seu objetivo é a conversão de  código Python para código C (nativo). Cython é o nome de uma linguagem e seu compilador. A linguagem Cython estende a linguagem Python utilizando a mesma sintaxe porém, trazendo um conjunto de instruções que otimizam a conversão para código C, aumentando a performance em alguma situações em dezenas, centenas e até, acredite, milhares de vezes! O principal objetivo da linguagem Cython é a otimização de trechos especificos que requerem alta performance sem quebrar a compatibilidade. Como o código Python nativo é reconhecido pelo compilador Cython, é possível a conversão de módeulos ou mesmo funções sem perder a compatibilidade.</p>
+<p>O Cython fornece suporte a versão 2x e 3x do Python, ou seja, conseguimos facilmente transformar as estruturas simplificadas do Python para código C nativo e sendo capaz de otimizar trechos especificos através de um processo muito semelhante a refatoração de código. A refatoração neste caso deve ser entendida como a alteração de instruções, tipagem de variáveis e parâmetros e etc.</p>
+<p>Após converter o código de Python para C, o resultado é enviado para o GCC e o mesmo produz o executável compatível com a plataforma em que estiver sendo utilizada, pela simples compilação de código C, de forma semelhante e com performance que chega muito próxima a um código que foi de fato escrito nativamente em C.</p>
+<p>Como principais características, podemos citar que a linguagem Cython utiliza tipagem estática e dinâmica, e, como sabemos, quando mais tipado for, mais otimizado a execução será.</p>
+<p>Por fim, conseguiremos em algumas situações uma melhora na performance de até 5000 vezes! Inclusive, na página do projeto é possível encontrar várias ferramentas e códigos para que possamos mensurar em nosso computador.</p>
 <p>A seguir, temos um exemplo de um simples trecho de código utilizando somente a linguagem Cython.</p>
 <div class="section" id="declaracao-de-variaveis-com-cython">
 <h3>DECLARAÇÃO DE VARIÁVEIS COM CYTHON</h3>
@@ -405,13 +429,20 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>A biblioteca Kivy está debruçada sobre o Cython e todo código que escrevemos será compilado para código C. Os principais módulos da biblioteca estão escritos com Cython e utilizando tipagem estática com a finalidade e obter máxima performance.</p>
 <p>Porém, a maior parte da biblioteca não possui qualquer otimização, até porque, o objetivo é utilizar a linguagem Python. Por isso, podemos melhorar a performance das aplicações construídas com Kivy, bastando somente, converter as principais estruturas da biblioteca Kivy para código Cython.</p>
 <p>Converter código Python para Cython com a finalidade de obter uma melhor performance é uma atividade relativamente simples e pouco sujeito a erros, é uma solução para aqueles momento em que realmente precisamos de muita performance e, acredito que num futuro breve, várias partes da biblioteca serão convertidas a cada nova versão se houver empresas interessas em obter uma excelente performance.</p>
-<p>Essa é mais uma das vantagens de trabalhar com a biblioteca Kivy! Temos a capacidade de melhorar a performance facilmente da nossa aplicação, o que normalmente não acontece com outras biblitoecas.</p>
+<p>Essa é mais uma das vantagens de trabalhar com a biblioteca Kivy! Temos a capacidade de melhorar a performance facilmente da nossa aplicação, o que normalmente não acontece com outras bibliotecas.</p>
 </div>
 </div>
 <div class="section" id="codigo-fonte">
 <h2>CÓDIGO-FONTE</h2>
-<p>É comum a dúvida em relação se o código fonte está ou não disponível numa aplicação construida com a biblioteca Kivy. Como dito acima, o código-fonte do Python é compilado utilizando o Cython, portanto, somente códigos enviados como sendo por exemplo, uma String é que não seriam compilados pelo Cython!</p>
-<p>Portanto, não é possível acessar o código-fonte da aplicação, salvo se o mesmo for descompilado de C, mas dúvido que alguém faça isso.</p>
+<p>Uma das principais dúvidas em relação ao uso da biblioteca Kivy é o acesso e eventual roubo do código-fonte da nossa aplicação por terceiros. A resposta a essa dúvida é: o código Python ou o bytecode gerado (código otimizado) não precisa ser distribuído junto com a sua aplicação, pois o projeto Kivy disponibiliza ferramentas que geram executáveis nativo - código binários e otimizado para cada plataforma. Resumidamente, temos que o Python foi concebido como sendo uma linguagem interpretada, ou seja, todo computador capaz de rodar um Script Python, precisa antes instalar o interpretador. Um interpretador, como o nome sugere, é um programa nativo, especializado no reconhecimento de código Python, é executado em segundo plano (background), inicializado junto com o sistema operacional, por padrão fica inativo esperando o recebimento de código. Essa é a forma tradicional de execução de programas ou Scripts Python.</p>
+<p>Comumente dizemos que o interpretador do Python executado código Python, mas isso não é verdade. Por padrão, o código Python é transformado numa estrutura hierarquica otimizada chamada de bytecode. A geração de bytecode é realizada na primeira execução do Script e armazenada numa pasta que será criada no mesmo diretório em que o arquivo que contém código Python está armazenado.</p>
+<p>A metodologia de gerar bytecode com a finalidade de otimização e armazena-lo num arquivo no mesmo diretório é um padrão utilizado por diversos interpretadores de outras linguagens. Ainda que essa prática melhore significativamente o desempenho, fica muito distante se comparado com a execução de código nativo.</p>
+<p>Como dito, as aplicações Kivy são executadas pelos processadores de aceleração gráfica e portanto, é preciso converter todos os nossos códigos para o &quot;idioma&quot; do mundo gráfico.</p>
+<p>É importante dizer que o fato do código Python ser interpretado se deve a uma opção de projeto e não de uma imposição inerente a tecnologia ou a linguagem! Simplesmente, num primeiro momento, optou-se por interpretar, ao invés de gerar um executável. Portanto, conforme a linguagem foi sendo desenvolvida e sua sintaxe criada, o pessoal do projeto foi desenvolvendo com a C uma aplicação capaz de interpretar as instruções e a sintaxe da linguagem.</p>
+<p>O tempo passou, a linguagem se popularizou, e surgiram propostas de, ao invés de interpretar o código, porque não transformar o mesmo em executáveis?</p>
+<p>Ao desenvolvermos com Kivy, temos que o nosso código é interpretado durante o desenvolvimento, porém, quando formos distribuir a nossa aplicação, por exemplo, para a plataforma Android, o código Python que escrevemos e código  Python/Cython do framework Kivy serão transformados em código C puro!</p>
+<p>Concluído a conversão, o código C produzido poderá ser compilado por qualqauer compilador C de sua preferência.</p>
+<p>Por fim e reafirmando o que já foi dito, a biblioteca Kivy possui ferramentas para que o código seja ocultado naturalmente.</p>
 </div>
 <div class="section" id="livros-publicados">
 <h2>LIVROS PUBLICADOS</h2>
@@ -468,7 +499,6 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <div class="section" id="visao-geral">
 <h2>VISÃO GERAL</h2>
 <p>O blog <a class="reference external" href="http://cadernodelaboratorio.com.br/category/kivy/">Caderno de Laboratório</a> foi o primeiro blog brasileiro a disponiblizar vários tutorias e diversos exemplos sobre como utilizar a biblioteca Kivy. O pessoal continua produzindo mais artigos sobre o Kivy e em Português, por isso, vale a pena conferir!</p>
-<p>O site <a class="reference external" href="https://mavins.com.br/blog/desenvolva-aplicativos-para-android-ios-com-python-e-kivy">Mavins produziu um artigo</a> explicando rapídamente as principais funcionalidades da biblioteca Kivy, vale a pena conferir!</p>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>
