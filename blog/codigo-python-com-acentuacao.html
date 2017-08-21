@@ -4,7 +4,7 @@
 
 <html lang="pt-br"  xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" >
 <head>
-    <title>Monitorando Solicitações WiFi - eXcript</title>
+    <title>Código Python com Acentuação - eXcript</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -17,21 +17,25 @@
 <link rel="canonical" href="http://excript.com/blog/codigo-python-com-acentuacao.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="python,wifi,monitorar" />
-    <meta name="description" content="Neste artigo conheceremos uma aplicação feita em Python para monitorar a quantidade de pessoas estão próximas a você através da rede WiFi" />
+        <meta name="keywords" content="python,utf8,encoding,código,acento,programação,blog" />
+    <meta name="description" content="Neste artigo teremos uma visão das novas possibilidade que as linguagens que processam texto do tipo UTF-8 podem oferecer." />
 
         <meta property="og:site_name" content="eXcript" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Monitorando Solicitações WiFi"/>
+        <meta property="og:title" content="Código Python com Acentuação"/>
         <meta property="og:url" content="http://excript.com/blog/codigo-python-com-acentuacao.html"/>
 
-        <meta property="og:description" content="Neste artigo conheceremos uma aplicação feita em Python para monitorar a quantidade de pessoas estão próximas a você através da rede WiFi"/>
+        <meta property="og:description" content="Neste artigo teremos uma visão das novas possibilidade que as linguagens que processam texto do tipo UTF-8 podem oferecer."/>
 
-        <meta property="article:published_time" content="21-08-2017" />
+        <meta property="article:published_time" content="16-01-2017" />
             <meta property="article:section" content="blog" />
             <meta property="article:tag" content="python" />
-            <meta property="article:tag" content="wifi" />
-            <meta property="article:tag" content="monitorar" />
+            <meta property="article:tag" content="utf8" />
+            <meta property="article:tag" content="encoding" />
+            <meta property="article:tag" content="código" />
+            <meta property="article:tag" content="acento" />
+            <meta property="article:tag" content="programação" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -95,8 +99,8 @@ eXcript            </a>
                 <h1>
                     <a href="http://excript.com/blog/codigo-python-com-acentuacao.html"
                        rel="bookmark"
-                       title="Permalink to Monitorando Solicitações WiFi">
-                        MONITORANDO SOLICITAÇÕES WIFI
+                       title="Permalink to Código Python com Acentuação">
+                        CÓDIGO PYTHON COM ACENTUAÇÃO
                     </a>
                 </h1>
 
@@ -113,9 +117,7 @@ eXcript            </a>
 
 
 
-    <span class="label label-default">Lang</span>
-	<a href="http://excript.com/blog/codigo-python-com-acentuacao.html">pt</a>
-
+    
 </footer><!-- /.post-info -->                    </div>
                 </div>
 
@@ -129,32 +131,37 @@ eXcript            </a>
 
 			<div class="tab-pane active" id="artigo">
 				<div class="row">
-					<div class="section" id="how-many-people-are-around">
-<h2>How Many People are Around</h2>
-<p>Conheça uma biblioteca para o Python de nome <a class="reference external" href="https://github.com/schollz/howmanypeoplearearound">howmanypeoplearearound</a> que numa tradução seria: Quantas pessoas Estão em Volta. Com esse código é possível sondar o número de aparelhos WiFi que estão buscando uma rede para se conectar.</p>
-<p>Vi no Twitter uma chamada para uma postagem de como contabilizar a quantidade de pessoas próximas a você através de um pacote do Python. Resolvi ir atrás e entender o funcionamento da &quot;brincadeira&quot;.</p>
-<p>Tudo ocorre através do WiFi! Isso porque, dispositivos como celulares ficam a todo momento enviando sinais na busca de redes WiFi e é através dessa requisição que um desenvolvedor escreveu uma biblioteca para contabilizar quantas requisições estão sendo disparadas.</p>
-<p>O mais interessante é que essa é uma forma de invadir a privacidade de pessoas anônimas e possui muito mais utilidade do que você possas supor num primeiro momento, até porque, o experimento não acabou nesta simples aplicação.</p>
-<p>Essa tecnologia pode ser utilizada para contabilizar o número de pessoas em um show, numa manifestação ou num aglomerado de pessoas.</p>
-<p>Também poderíamos mensurar a quantidade de pessoas que estão próximas a determinada loja.</p>
-<p>No entanto, pensando, a melhor utilidade que achei que pudesse ser feita com uma ferramenta dessas é verificar se num determinado lugar, como por exemplo, em exames e provas, existe dispositivos móveis ligados e fazendo solicitações.</p>
-<p>O gráfico em anexo mostra os colegas de trabalho chegando pela manhã :D</p>
-<img alt="Monitoramento de solicitações via WiFi" src="../images/blog/monitorando-redes-wifi1.png" />
-<img alt="Monitoramento de solicitações via WiFi" src="../images/blog/monitorando-redes-wifi2.png" />
-<p>É importante lembrar que para poder utilizar essa ferramenta você precisa de um tipo especifico de adaptador WiFi que pode ser adquirido, segundo o autor, por aproximadamente $10.</p>
-<p>Para maiores informações, <a class="reference external" href="https://github.com/schollz/howmanypeoplearearound">acesse o link no Github</a>, faça um clone, utilize e deixe um comentário posteriormente contando a sua experiência!</p>
+					<div class="section" id="caracteres-latinos">
+<h2>CARACTERES LATINOS</h2>
+<p>Recentemente estava dando suporte ao curso que está a venda na Udemy: <a class="reference external" href="http://excript.com/blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html">Desenvolvimento de Alicações Comerciais com Python e Kivy</a> e um aluno me perguntou algo relacionado a acentuação com código Python e num primeiro momento, pensei que o mesmo estava se referindo a Strings que contenham caracteres especiais.</p>
+<p>Continuando a ler a dúvida do meu aluno, percebi que o mesmo não estava se referindo a caracteres acentuados em Strings e sim, o uso de por exemplo, acentuação de variáveis, por exemplo.</p>
+<p>Me lembrei que já havia lido algo a respeito, porém, é tão óbvio pra todos que programam há muitos anos que caracteres latinos não são aceitos que quando li algum comentário não dei muita importância e não fui realizar quaisquer teste.</p>
+<p>Mas após um aluno questionar algo que realmente não consegui entender o que estava sendo perguntando, resolvi realizar um simples teste e me surpreendi com a descoberta que fiz!</p>
+<p>Veja o código a seguir, o mesmo pode ser executado por qualquer interpretador do Python 3x.</p>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+
+<span class="n">até_mais</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">amanhã_vai_chover</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="err">é</span> <span class="o">=</span> <span class="mf">1.1</span>
+<span class="err">ç</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">até_mais</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">amanhã_vai_chover</span><span class="p">)</span>
+</pre></div>
+<p>Sendo o código acima executável sem quaisquer problema, sem qualquer aviso ou mensagem, temos todo um conhecimento legado que em tese não possui mais validade. Ou seja, a história de que não podemos utilizar acentuação na declaração de entidade não é mais verdadeira e agora, qualquer caractere da tabela UTF-8 pode ser utilizado, desde que não seja um caractere considerado especial, ou caractere matemático e etc.</p>
 </div>
-<div class="section" id="determinando-a-localizacao-exata">
-<h2>DETERMINANDO A LOCALIZAÇÃO EXATA</h2>
-<p>O mesmo programador foi além e produziu um outro software em Python para conhecer a localização exata das pessoas dentro de casa!</p>
-<p>Esta é uma extensão da FIND, o Framework for Internal Navigation and Discovery , que se baseia na idéia do sistema de sonar de Lucius Fox em The Dark Knight que é usado para rastrear celulares.</p>
-<p>Ambas aplicações são OpenSource, o código pode ser baixado do Github!!</p>
+<div class="section" id="consequencias">
+<h2>CONSEQUÊNCIAS</h2>
+<p>Essa alteração não deve ser vista, no meu ponto de vista, como algo benéfico! Muito pelo contrário, é trazer novos problemas para dentro do nosso código. É realmente muito legal essas novas possibilidades, no entanto, na prática, na construção de software, o melhor ainda é escrever com os caracteres da tabela ASCII.</p>
+<p>E justifico o meu posicionamento pela questão de internacionalização, ou seja, salvo se você viver num mundo em que existam somente latinos deverias trabalhar desta forma. Porém, a realidade é que a cada dia estamos mais conectados com pessoas de todos os cantos do mundo e trabalhar com caracteres latinos é, sem qualquer dúvida, assumir um hábito que um dia terá que ser substituido.</p>
+<p>Até hoje conseguimos sobreviver sem o uso de caracteres acentuados e a cedilha, portanto, não consigo enxergar absolutamente nada que justifique o seu uso, salvo brincadeiras e estudos.</p>
 </div>
-<div class="section" id="links-externos">
-<h2>LINKS EXTERNOS</h2>
+<div class="section" id="veja-tambem">
+<h2>VEJA TAMBÉM</h2>
 <ul class="simple">
-<li>howmanypeoplearearound - <a class="reference external" href="https://github.com/schollz/howmanypeoplearearound">https://github.com/schollz/howmanypeoplearearound</a></li>
-<li>find-lf - <a class="reference external" href="https://github.com/schollz/find-lf">https://github.com/schollz/find-lf</a></li>
+<li><a class="reference external" href="http://excript.com/curso-de-python.html">Curso de Python</a></li>
+<li><a class="reference external" href="http://excript.com/blog/curso-de-desenvolvimento-de-aplicacoes-comerciais-com-python-e-kivy.html">Desenvolvimento de Alicações Comerciais com Python e Kivy</a></li>
 </ul>
 </div>
 
@@ -170,7 +177,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/wifi.html">wifi</a>, 	<a href="http://excript.com/tag/monitorar.html">monitorar</a>            </div>
+	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/utf8.html">utf8</a>, 	<a href="http://excript.com/tag/encoding.html">encoding</a>, 	<a href="http://excript.com/tag/codigo.html">código</a>, 	<a href="http://excript.com/tag/acento.html">acento</a>, 	<a href="http://excript.com/tag/programacao.html">programação</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
