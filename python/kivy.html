@@ -156,7 +156,7 @@ eXcript            </a>
 <img alt="Logo oficial do projeto Kivy" src="../images/blog/kivy-logo.png" />
 <p>A biblioteca Kivy é um framework para desenvolvimento multiplataforma, escrito majoritariamente com a linguagem Python/Cython, permite o desenvolvimento de aplicações para diversos sistemas operacionais, tais com, Microsoft Windows, Linux, Mac, Android, iOS, Raspberry utilizando um mesmo código.</p>
 <p>O projeto é composto por vários sub-projetos, cada um especializado numa determinada tarefa, como por exemplo, a geração de executáveis para determinada plataforma ou então, uma API genérica para facilmente acessarmos o hardware em qualquer dispositivos e em diferentes plataformas sem a necessidade de escrevermos uma única linha de código a mais.</p>
-<p>É importante não confundir o projeto Kivy com a biblioteca Kivy. O projeto Kivy, cujo site é <a class="reference external" href="http://kivy.org">http://kivy.org</a> é composto por vários subprojetos, dentre estes, a biblitoeca Kivy.</p>
+<p>É importante não confundir o projeto Kivy com a biblioteca Kivy. O projeto Kivy, cujo site é <a class="reference external" href="http://kivy.org">http://kivy.org</a> é composto por vários sub-projetos, dentre estes, a biblioteca Kivy.</p>
 </div>
 <div class="section" id="a-biblioteca-kivy">
 <h2>A BIBLIOTECA KIVY</h2>
@@ -169,7 +169,7 @@ eXcript            </a>
 <blockquote>
 OpenGL é um conjunto de padrões de processamento de alto desempenho de gráficos 2D e 3D na unidade de processamento (GPU) para vários aplicativos. O OpenGL permite a renderização rápida de visualizações (modo Rascunho rápido).
 <a class="reference external" href="https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html">https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html</a></blockquote>
-<p>Essa biblioteca tem como objetivo definir um padrão entre os desenvolvedores de hardware e os desenvolvedores de software, de forma a permitir a evolução contínua do hardware sem entrar em conflito com o software. Dessa forma, a API OpenGL faz o &quot;meio de campo&quot; entre o programador que utiliza as funções da API e os mais variados harwares de vídeo. Então, nós programadores de linguagens de alto nível (alto nível pois estamos longe do hardware) não precisamos nos preocupar se a placa de vídeo é Intel, Nvidia ou Xingling, pois a compatibilidade é trabalho da equipe que desenvolve e implementa a API.</p>
+<p>Essa biblioteca tem como objetivo definir um padrão entre os desenvolvedores de hardware e os desenvolvedores de software, de forma a permitir a evolução contínua do hardware sem entrar em conflito com o software. Dessa forma, a API OpenGL faz o &quot;meio de campo&quot; entre o programador que utiliza as funções da API e os mais variados hardwares de vídeo. Então, nós programadores de linguagens de alto nível (alto nível pois estamos longe do hardware) não precisamos nos preocupar se a placa de vídeo é <a class="reference external" href="https://www.intel.com.br/">Intel</a>, <a class="reference external" href="http://www.nvidia.com/">NVidia</a> ou Xingling, pois a compatibilidade é trabalho da equipe que desenvolve e implementa a API.</p>
 <p>O núcleo do OpenGL é conhecido como &quot;rendering pipeline&quot; ou dutos de renderização. Podemos utilizar a biblioteca tanto para desenhos vetoriais, definidos por vértices, ou mapas de bits, desenhos construídos pixel-a-pixel.</p>
 <p>Os desenvolvedores de hardware conseguem criar extensões, inovando e diferenciando seus produtos, sem a necessidade de alterar a biblioteca e as atualizações, raramente obrigam os usuários da API OpenGL a alterarem os seus códigos.</p>
 <p>As extensões fornecem aos desenvolvedores de aplicativos os novos recursos de renderização e permite ir além das características especificadas na norma oficial do OpenGL (o padrão). Extensões da OpenGL mantém a API atual com as últimas inovações em hardware gráfico e algoritmos de processamento.</p>
@@ -203,7 +203,7 @@ OpenGL® ES is a royalty-free, cross-platform API for full-function 2D and 3D gr
 <li>No <tt class="docutils literal">iOS</tt>, utilizamos o <tt class="docutils literal">SDL 2.0</tt>, que suporta o contexto do <tt class="docutils literal">iOS</tt> e do <tt class="docutils literal">GLES2</tt>.</li>
 </ul>
 </blockquote>
-<p>O Kivy não utiliza funções gráficas do sistema operacinal hospedeiro, logo, os componentes/Widgets são desenhados do zero e portanto, aplicações Kivy, terão o mesmo visual em todas as plataformas. Essa é a parte boa. A parte ruim é que se desejarmos que o nosso App utilize o leiaute do sistema operacional hospeiro, teremos que desenvolver por conta própria.</p>
+<p>O Kivy não utiliza funções gráficas do sistema operacional hospedeiro, logo, os componentes/Widgets são desenhados do zero e portanto, aplicações Kivy, terão o mesmo visual em todas as plataformas. Essa é a parte boa. A parte ruim é que se desejarmos que o nosso App utilize o leiaute do sistema operacional hospedeiro, teremos que desenvolver por conta própria.</p>
 <p>Existe versões em desenvolvimento que implementam o padrão gráfico do <a class="reference external" href="https://kivymd.github.io/">Material Design</a>, e muito provavelmente, alguém já está desenvolvendo uma versão que utilize os padrões do iOS. Porém, é importante saber que esses são projetos de terceiros, por isso, não há suporte oficial.</p>
 <p>É importante dizer que a biblioteca Kivy utiliza a API <tt class="docutils literal">OpenGL ES 2.0</tt>, porém, está não é a última versão disponibilizada pela fabricante.</p>
 <p><a class="reference external" href="https://www.opengl.org/sdk/docs/">Para consultar a documentação do projeto OpenGL utilize este link</a>.</p>
@@ -255,8 +255,8 @@ OpenGL® ES is a royalty-free, cross-platform API for full-function 2D and 3D gr
 </pre></div>
 <img alt="Tela construida com o framework Kivy contendo um TextEdit e um Botão" src="../images/blog/kivy-exemplo-textinput-button.png" />
 </div>
-<div class="section" id="kivy-design">
-<h2>Kivy Design</h2>
+<div class="section" id="a-ide-kivy-design">
+<h2>A IDE Kivy Design</h2>
 <img alt="Imagem do editor Kivy Design" src="../images/blog/kivy-design.png" />
 <p>Kivy Design é um projeto de construção de uma IDE RAD para desenvolvimento de aplicações gráficas com Python utilizando a biblioteca kivy. A proposta é a construção do sonho de todos programadores: um ambiente de  completo, estável, para a construção de aplicações, seja para o Prompt de Comando, seja para aplicações gráfica para Desktop, Mobile e Web.</p>
 <p>O projeto Kivy Design objetiva fazer jus a todo o trabalho e esforço empreendido na construção da biblioteca Kivy e fornecer um ambiente para a construção de aplicações gráfica que tenha tanta qualidade como a biblioteca Kivy.</p>
@@ -302,7 +302,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 </div>
 <div class="section" id="projeto-pyjnius">
 <h2>PROJETO PyJNIus</h2>
-<p>O projeto PyJNIus permite acessar a API nativa do Android disponibilizada em classes escritas em Java e que por detrás utiliza a linguagem C++. O PyJNIus acessa as classes em Java, portanto, podemos criar uma class Java e &quot;mapea-la&quot; com o projeto PyJNIus para ser utilizada com a lingaugem Python.</p>
+<p>O projeto PyJNIus permite acessar a API nativa do Android disponibilizada em classes escritas em Java e que por detrás utiliza a linguagem C++. O PyJNIus acessa as classes em Java, portanto, podemos criar uma class Java e &quot;mapea-la&quot; com o projeto PyJNIus para ser utilizada com a linguagem Python.</p>
 <p>Este projeto é semelhante ao <a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/">JNI (Java Native Interface)</a> que permite o acesso às classes escritas em Java por outras linguagens.</p>
 <p>Dessa forma, conseguimos por exemplo, acessar a classe <a class="reference external" href="https://developer.android.com/reference/android/content/Intent.html">Intent</a> do Android, ou então, a classe <a class="reference external" href="https://developer.android.com/reference/android/app/Activity.html">Activity</a> e inclusive, conseguimos desenvolver uma aplicação que rode nativamente em cima da API Java do Android.</p>
 <p>A seguir, temos um exemplo, retirado da documentação oficial do PyJNIus em que é feito o acesso a Activity do Android.</p>
@@ -351,10 +351,10 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 </div>
 <div class="section" id="componentes-widget">
 <h2>COMPONENTES (WIDGET)</h2>
-<p>O framework Kivy contém um conjunto de componentes de telas, chamados de Widgets para fácil e rápida construção de janelas que interam gráficamente com o usuário. Todos widgets possuem excelente integração com os OS compatíveis.</p>
-<p>De fábrica, encontramos os principais controles, como caixas para entrada de texto, botões, rótulos (label), imagem e etc. PORÉM, tratando de quantidade de recursos não há comparação com plataformas como VisualStudio, Embarcadero Delphi/C++, Qt5 ou Xamarin.</p>
-<p>Mesmo assim, há bibliotecas de terceiros como o <a class="reference external" href="kivyMD.github.io">KivyMD</a>, acrônimo de <tt class="docutils literal">Kivy Material Design</tt> que entregam um conjunto bastante rico de elementos visuais seguindo a normatização definida oficialmente.</p>
-<p>Por fim, é importante lembrar que o ponto forte do projeto Kivy é sua fácil integração com a API gráfica tornando uma ferramenta fácil para o desenvolvimento gráfico, seja de controles de telas ou mesmo de jogos.</p>
+<p>O framework Kivy contém um conjunto de componentes gráficos para a construção das telas de interação com o usuário. A documentação do Kivy chama os componentes de Widgets, ou seja, um botão é um Widget, um caixa de entrada de texto é um Widget e assim por diante.</p>
+<p>Existe um conjunto de Widgets bastante amplo que vem de fábrica. Os componentes visuais estão em pleno desenvolvimento e portanto, a cada nova versão, muitos recursos são adicionados. Neste momento, se compararmos os recursos da biblioteca Kivy com plataformas comerciais e consagradas tais como o <a class="reference external" href="https://www.embarcadero.com/br/products/rad-studio">Embarcadero Delphi (Rad Studio)</a>, <a class="reference external" href="http://qt-project.org/qt5">Qt5</a> ou <a class="reference external" href="https://www.xamarin.com/">Xamarin</a>, o Kivy fica numa posição bem inferior, porém, isso é uma questão de tempo e de desenvolvimento. A capacidade para que o Kivy disponha de componentes visuais tais como o Xamarin ou então o Embarcadero Delphi é uma questão de tempo!</p>
+<p>Há iniciativas de construção de bibliotecas gráficas independentes como por exemplo o <a class="reference external" href="kivyMD.github.io">KivyMD</a>, acrônimo de <tt class="docutils literal">Kivy Material Design</tt>. Essa biblioteca está construída em cima do framework Kivy e entrega um conjunto de componentes ricos em recursos e propriedades utilizando o visual nativo do Android, no caso, o <a class="reference external" href="https://material.io/">Material Design</a>.</p>
+<p>Por fim, é importante lembrar que o foco dos grupo que desenvolve o framework Kivy é, num primeiro momento, fornecer total compatibilidade com as plataformas suportadas. Por essa razão, o foco do desenvolvimento não está direcionado com a aparência dos Widgets e nem na quantidade de recursos que cada componente possui. Ao que tudo indica, o principal objetivo é fazer com que todos os recursos de todas as plataformas funcionem sem quaisquer problema - o que é excelente!</p>
 </div>
 <div class="section" id="games">
 <h2>GAMES</h2>
@@ -469,8 +469,8 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>Visando o desenvolvimento de aplicações multiplataforma, a biblioteca Kivy <strong>NÃO</strong> utiliza a maior parte das bibliotecas fornecidas pelo SO hospedeiro. Até porque, cada plataforma disponibiliza uma interface de acesso diferente e assim, o projeto Kivy precisaria conhecer e se adaptar a cada SO a fim de utilizar suas bibliotecas.</p>
 <p>Utilizar as bibliotecas nativas de cada plataforma, normalmente é, a melhor forma de construção de aplicações para a mesma. Ou seja, a melhor forma de criarmos aplicações para o SO Microsoft Windows é utilizando, por exemplo, suas bibliotecas gráficas, o seu sistema de arquivo, as suas caixas de diálogo nativas e etc.</p>
 <p>O projeto Kivy raramente utiliza as ferramentas disponibilizadas pela plataforma hospedeira! Em cada executável gerado pelas ferramentas do projeto Kivy, é adicionado TODAS AS ferramentas que a aplicação precisará ou possa vir a precisar. Isso é comumente chamado de &quot;reinvenção da roda&quot;, até porque, pra que refazer o que já está pronto? Pra que tornar o executável mais &quot;pesado&quot; adicionando implementações que podem ser acessadas diretamente na plataforma?</p>
-<p>Na minha opinião, este é o maior problema do projeto Kivy, até porque, podemos dizer que estamos utilizando uma gambiarra! Pois, ao invés dos nossos programas funcionarem como o fabricamente do Sistema Operacional determinou, estamos fazendo tudo ao nosso modo e da nossa maneira.</p>
-<p>MAS CALMA AI! <strong>TODO DESENVOLVIMENTO</strong> híbrido é por <strong>natureza, definição e implementação</strong> uma gambiarra. Portanto, o Kivy é somente mais uma gambiarra, tecnologias como Xamrian, Sencha Touch, Phonegap, Intel XDK e tantas outras opções...</p>
+<p>Na minha opinião, este é o maior problema do projeto Kivy, até porque, podemos dizer que estamos utilizando uma gambiarra! Pois, ao invés dos nossos programas funcionarem como o fabricante do Sistema Operacional determinou, estamos fazendo tudo ao nosso modo e da nossa maneira.</p>
+<p>MAS CALMA AI! <strong>TODO DESENVOLVIMENTO</strong> híbrido é por <strong>natureza, definição e implementação</strong> uma gambiarra. Portanto, o Kivy é somente mais uma gambiarra, tecnologias como <a class="reference external" href="https://www.xamarin.com/">Xamrian</a>, <a class="reference external" href="https://www.sencha.com/products/touch/">Sencha Touch</a>, <a class="reference external" href="https://phonegap.com/">Phonegap</a>, <a class="reference external" href="https://software.intel.com/en-us/intel-xdk/documentation">Intel XDK</a> e tantas outras opções...</p>
 <p>Podemos dizer que a melhor forma de usar um produto é seguindo as normas do fabricante, como também, utilizar as ferramentas por ele disponibilizado. Ainda que essa ideia não possa ser considerado um regra, na maior parte dos caso é. As ferramentas produzidas pelo fabricante foram feitas pelas mesmas pessoas ou por uma equipe próxima ao engenheiros responsáveis da plataforma e estes são, sem qualquer duvida, especialistas no funcionamento da tecnologia.</p>
 <p>Portanto, isso é uma verdade que não podemos ignorar! A melhor maneira de construir aplicações para uma plataforma é utilizando as ferramentas nativas ou seguindo as especificações e diretrizes oficiais do fabricante.</p>
 <p>Então, quando dizemos que é gerado um executável nativo, estamos realmente falando a verdade, porém, de nativo há somente a tela inicial, pois o restante, trata-se de simulação e emulação.</p>
@@ -481,7 +481,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <h3>CONSUMO DE RECURSO</h3>
 <p>Aplicações escritas com o framework Kivy utilizam mais recursos do dispositivo e aplicações que precisam ser executadas em background devem realizar testes de consumo de energético antes de iniciar o desenvolvimento.</p>
 <p>A biblioteca Kivy é executada em cima da placa de vídeo com a aceleração de vídeo ligada. Se o código fosse executado em cima do processador do dispositivo, haveria garga-los na renderização e é graças a aceleração de vídeo que há tantas ferramentas de desenvolvimento híbridas.</p>
-<p>Por fim, uma aplicação construída com o Kivy irá consumir maior carga energética e utlizará aproximadamente 40mg de memória RAM. Com relação a memória RAM não há preocupação, até porque, a maior parte dos dispositivos atuais possuem quantidades generosas de memória RAM. Porém, o uso da bateria deve ser considerado e a única forma que você possui pra realmente ter certeza se o seu projeto pode ser construído com o Kivy será através da realização de testes.</p>
+<p>Por fim, uma aplicação construída com o Kivy irá consumir maior carga energética e utilizará aproximadamente 40mg de memória RAM. Com relação a memória RAM não há preocupação, até porque, a maior parte dos dispositivos atuais possuem quantidades generosas de memória RAM. Porém, o uso da bateria deve ser considerado e a única forma que você possui pra realmente ter certeza se o seu projeto pode ser construído com o Kivy será através da realização de testes.</p>
 </div>
 <div class="section" id="tempo-de-abertura">
 <h3>TEMPO DE ABERTURA</h3>
@@ -495,6 +495,14 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>Há alguns projetos paralelos como o KivyMD que estão construindo mega pacotes de componentes seguindo um esquema de cores e estilos como por exemplo, o Material Design da Google.</p>
 <p>Portanto, a pequena quantidade de Widgets e a sua simplicidade não são um problema, mesmo assim, num primeiro momento, muitos usuários acabam frustrados com a pequena gama de opções.</p>
 </div>
+</div>
+<div class="section" id="o-kivy-e-um-projeto-experimental">
+<h2>O KIVY É UM PROJETO EXPERIMENTAL?</h2>
+<p>É comum que algumas pessoas sugiram que o framework Kivy seja um trabalho experimental ou então, um projeto que ainda está no início e ninguém sabe exatamente o seu futuro.</p>
+<p>O Kivy não pode mais ser considerado um projeto experimental! Nesse momento, a única coisa que o projeto não possui é uma grande empresa por detrás financiando-o (ainda).</p>
+<p>Na atual conjuntura, softwares desenvolvidos com o framework Kivy rodam em todas as plataformas que possuem suporte e nenhum problema de ordem maior vem sendo relatado. Obviamente que ainda existe muito a ser feito, principalmente em relação a compatibilidade entre todas as plataformas igualmente. No entanto, o desenvolvimento é contínuo e estável e, para ter certeza disso, basta analisar a <a class="reference external" href="https://github.com/kivy/kivy/commits/master">lista de Commits do projeto no Github</a> e analisar a quantidade de problemas relatados.</p>
+<p>O autor entende por experimental aquilo que não possui um funcionamento estável e previsível e portanto não deveria ser utilizado em projetos comerciais e sérios.</p>
+<p>Inclusive, neste momento, há grandes aplicações escritas em Kivy e que estão funcionando perfeitamente, vide o projeto <a class="reference external" href="https://github.com/ODiogoSilva/TriFusion">TriFusion</a> .</p>
 </div>
 <div class="section" id="visao-geral">
 <h2>VISÃO GERAL</h2>
@@ -568,6 +576,12 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <li><a class="reference external" href="http://www.microsoft.com/">Microsoft</a></li>
 <li><a class="reference external" href="http://www.adobe.com/">Adobe</a></li>
 <li><a class="reference external" href="http://www.intel.com">Intel</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://www.xamarin.com/">Xamarin</a></li>
+<li><a class="reference external" href="https://www.sencha.com/products/touch/">Sencha Touch</a></li>
+<li><a class="reference external" href="https://phonegap.com/">Phonegap</a></li>
+<li><a class="reference external" href="https://software.intel.com/en-us/intel-xdk/documentation">Intel XDK</a></li>
 </ul>
 </div>
 
