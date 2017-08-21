@@ -1958,20 +1958,24 @@ No sétimo ciclo também houve uma interrupção onde a jornada cancelada, isto 
 &lt;h3&gt;String&lt;/h3&gt;
 &lt;p&gt;Na programação String representa um conjunto de caracteres disposto numa determinada ordem. A partir de agora, todas as vezes em que falarmos o termo String, estaremos nos referindo a um conjunto de caracteres.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="numerico"&gt;
-&lt;h3&gt;Numérico&lt;/h3&gt;
-&lt;p&gt;Um segundo tipo de informação são os dados compostos por caracteres numéricos. Os números são dividos em 2 partes:&lt;/p&gt;
-&lt;p&gt;inteiros - chamados de &lt;strong&gt;integer&lt;/strong&gt; ou &lt;strong&gt;int&lt;/strong&gt;
-ponto flutuante - chamado de &lt;strong&gt;float&lt;/strong&gt; ou &lt;strong&gt;double&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="section" id="inteiro"&gt;
+&lt;h3&gt;Inteiro&lt;/h3&gt;
+&lt;p&gt;Um segundo tipo de informação são os dados compostos por caracteres numéricos (algarismo). Os números são divididos em 2 partes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;inteiros - chamados de &lt;strong&gt;integer&lt;/strong&gt; ou &lt;strong&gt;int&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;ponto flutuante - chamado de &lt;strong&gt;float&lt;/strong&gt; ou &lt;strong&gt;double&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplos-de-informacao"&gt;
 &lt;h3&gt;Exemplos de informação&lt;/h3&gt;
-&lt;p&gt;A título de exemplo, vamos citar alguns tipos de informação e em seguida, vamos definir o tipo de cada uma.&lt;/p&gt;
+&lt;p&gt;A título de exemplo, vamos citar alguns tipos de informação e em seguida, vamos definir o tipo que precisaríamos utilizar para armazenar um valor correspondente a informação.&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Nome - dado tipo String&lt;/li&gt;
 &lt;li&gt;Idade - dado tipo Integer&lt;/li&gt;
 &lt;li&gt;Conta bancária - dado composto por números, pontos e traços&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;As informações são classificadas devido ao fato de seguirem regras e estruturas iguais. Ou seja, um número de telefone possui uma regra para todo o território nacional, logo, é possível classificar esse tipo de dado, até porque, há uma regra que o define.&lt;/p&gt;
 
     &lt;div class="admonitionblock tip data-line"&gt;
@@ -2001,7 +2005,7 @@ ponto flutuante - chamado de &lt;strong&gt;float&lt;/strong&gt; ou &lt;strong&gt
                     &lt;/td&gt;
                     &lt;td class="content"&gt;
                         &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt;Digito verificar é aquele número contido no final, geralmente após um traço ou então, após um ponto. A função deste digito é proporcinar um meio para chegar se os digitos anteriores estão corretos, até porque, o digito verificador é obtido através de uma fórmula matemática que utiliza todos os números e no final, gera um digito de confirmação. Por exemplo, o CPF é composto de 9 digitos, mais 2 digitos verificador, por exemplo: ``CPF: 123.456.789-09``.&lt;/p&gt;
+                            &lt;p&gt;Digito verificar é aquele número contido no final, geralmente após um traço ou então, após um ponto. A função deste digito é proporcionar um meio para chegar se os digitos anteriores estão corretos, até porque, o digito verificador é obtido através de uma fórmula matemática que utiliza todos os números e no final, gera um digito de confirmação. Por exemplo, o CPF é composto de 9 digitos, mais 2 digitos verificador, por exemplo: ``CPF: 123.456.789-09``.&lt;/p&gt;
                         &lt;/div&gt;
                     &lt;/td&gt;
                 &lt;/tr&gt;
@@ -2027,12 +2031,12 @@ Exemplos de informações que possuem digito verificador são: o número da cont
 &lt;li&gt;str - para conjunto de caracteres&lt;/li&gt;
 &lt;li&gt;bool - armazena True ou False&lt;/li&gt;
 &lt;li&gt;list - para agrupar um conjunto de elementos&lt;/li&gt;
-&lt;li&gt;tupla - igual ao tipo &lt;cite&gt;list&lt;/cite&gt;, porém, imutável&lt;/li&gt;
-&lt;li&gt;dic - para agrupar elementos que serão recuperados por uma &lt;cite&gt;chave&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;tupla - semelhante ao tipo &lt;strong&gt;list&lt;/strong&gt;, porém, imutável&lt;/li&gt;
+&lt;li&gt;dic - para agrupar elementos que serão recuperados por uma &lt;strong&gt;chave&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;O Python fornece um conjunto de tipos básicos bastante amplo e que normalmente, atendem a maioria das necessidades. Cada tipo citado, possui um conjunto de funções e métodos que permitem manipularmos as informações, contidas na variável, de maneira bastante eficiente.&lt;/p&gt;
-&lt;p&gt;Sempre que formos criar um novo &lt;strong&gt;tipo de dados&lt;/strong&gt;, acabaremos utilizando os tipos básicos da linguagem, como por exemplo, o tipo &lt;cite&gt;int&lt;/cite&gt;, ou então, o tipo &lt;cite&gt;str&lt;/cite&gt; e assim por diante.&lt;/p&gt;
+&lt;p&gt;Sempre que formos criar um novo &lt;strong&gt;tipo de dados&lt;/strong&gt;, acabaremos utilizando os tipos básicos da linguagem, como por exemplo, o tipo &lt;strong&gt;`int`&lt;/strong&gt;, ou então, o tipo &lt;strong&gt;`str`&lt;/strong&gt; e assim por diante.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="diferenca-entre-tipo-e-valor"&gt;
 &lt;h2&gt;DIFERENÇA ENTRE TIPO E VALOR&lt;/h2&gt;
@@ -2079,6 +2083,9 @@ Exemplos de informações que possuem digito verificador são: o número da cont
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;No &lt;a class="reference external" href="http://www.ibm.com/developerworks/br/library/os-python1/"&gt;link a seguir há mais informações sobre os tipos de dados do Python&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="tipos"></category><category term="tipo de dados"></category><category term="int"></category><category term="float"></category><category term="string"></category><category term="date"></category><category term="bool"></category><category term="str"></category><category term="blog"></category></entry><entry><title>Instrução break do Python</title><link href="http://excript.com/python/instrucao-break-python.html" rel="alternate"></link><published>2016-07-17T13:20:00-03:00</published><updated>2016-07-17T13:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-07-17:/python/instrucao-break-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
