@@ -143,18 +143,28 @@ eXcript            </a>
 <p>É importante lembrar que para poder utilizar essa ferramenta você precisa de um tipo especifico de adaptador WiFi que pode ser adquirido, segundo o autor, por aproximadamente $10.</p>
 <p>Para maiores informações, <a class="reference external" href="https://github.com/schollz/howmanypeoplearearound">acesse o link no Github</a>, faça um clone, utilize e deixe um comentário posteriormente contando a sua experiência!</p>
 </div>
-<div class="section" id="determinando-a-localizacao-exata">
-<h2>DETERMINANDO A LOCALIZAÇÃO EXATA</h2>
-<p>O mesmo programador foi além e produziu um outro software em Python para conhecer a localização exata das pessoas dentro de casa!</p>
-<p>Esta é uma extensão da FIND, o Framework for Internal Navigation and Discovery , que se baseia na idéia do sistema de sonar de Lucius Fox em The Dark Knight que é usado para rastrear celulares.</p>
-<p>Ambas aplicações são OpenSource, o código pode ser baixado do Github!!</p>
+<div class="section" id="determinando-a-localizacao-como-dispositivos-raspberry-pi">
+<h2>DETERMINANDO A LOCALIZAÇÃO COMO DISPOSITIVOS Raspberry PI</h2>
+<p>Se não fosse o bastante, ainda é possível ir muito além! Pela rede WiFi também é possível e de várias formas, calcular com precisão o posicionamento geográfico do aparelho envia solicitações à rede WiFi.</p>
+<p>O desenvolvedor explica como obtém o posicionamento que, de forma bastante resumida, podemos dizer que a localização é determinada através do posicionamento de alguns Raspberry PI contendo a aplicação <a class="reference external" href="https://github.com/schollz/find">find-lf</a> que é, na verdade, um plugin, uma extensão do módulo <a class="reference external" href="https://github.com/schollz/find-lf">FIND</a>. Ambos projetos foram escritos em Python.</p>
+<p>Veja na imagem abaixo o posicionamento em que os dispositivos estão dispostos.</p>
+<img alt="Calculando o posicionamento geográfico com o plugin FIND-lf" src="../images/blog/monitorando-redes-wifi3.png" />
+<img alt="Imagem contendo outra representação da disposição dos Raspberry PI" src="../images/blog/monitorando-redes-wifi4.png" />
+</div>
+<div class="section" id="find-the-framework-for-internal-navigation-and-discovery">
+<h2>FIND: THE FRAMEWORK FOR INTERNAL NAVIGATION AND DISCOVERY</h2>
+<p>O <a class="reference external" href="https://github.com/schollz/find">FIND</a> é um acrônimo de <strong>Framework for Internal Navigation and Discovery</strong> e trata-se do framework principal e fornece suporte aos outros que acabamos de ver.</p>
+<p>Segundo a documentação oficial, temos que o mesmo é uma biblioteca para possibilitar a Navegação Interna e a Descoberta (FIND). Através de uma simples antena WiFi é possível determinar o posicionamento de um Smartphone (Android) dentro de uma casa ou escritório bastando somente habilitar a rede WiFi (laptop ou Raspberry Pi ou etc.)</p>
+<p>A documentação sugere o uso deste sistema ao invés da utilização de sensores de movimento. Isso porque, a sua resolução permitirá que o teu telefone distingua se estás na sala de estar, na cozinha ou no quarto, etc. A informação da posição poderá ser usada de várias maneiras, incluindo no uso de automação residencial.</p>
+<p>O sistema foi construído através de dois componentes principais: um servidor e um dispositivo de impressão digital. O dispositivo de impressão digital ( programa de computador ou aplicativo Android ) envia os dados especificados para o servidor que utilizar Machine Learning para armazenar as impressões digitais e para analisa-las. Em seguida, o mesmo retorna o resultado do dispositivo e armazena o resultado no servidor para por exemplo, poder acessar via um navegador Web.</p>
+<img alt="Calculando o posicionamento geográfico com o plugin FIND-lf" src="../images/blog/monitorando-redes-wifi3.png" />
+<p>Por fim, é importante lembrar que todo o sistema faz uso de tecnologias abertas e o seu código fonte está disponível no Github.</p>
+<p>O projeto além de possuir sua <a class="reference external" href="https://www.internalpositioning.com/">documentação no Github, também possui um site</a> que contém basicamente as mesmas informações mas com uma apresentação mais comercial.</p>
 </div>
 <div class="section" id="links-externos">
 <h2>LINKS EXTERNOS</h2>
-<ul class="simple">
-<li>howmanypeoplearearound - <a class="reference external" href="https://github.com/schollz/howmanypeoplearearound">https://github.com/schollz/howmanypeoplearearound</a></li>
-<li>find-lf - <a class="reference external" href="https://github.com/schollz/find-lf">https://github.com/schollz/find-lf</a></li>
-</ul>
+<p><a class="reference external" href="https://github.com/schollz/howmanypeoplearearound">howmanypeoplearearound</a> - Permite contabilizar as requisições na rede WiFi
+<a class="reference external" href="https://github.com/schollz/find-lf">find-lf</a> - Possibilita determinar a localização exata do aparelho através da rede WiFi</p>
 </div>
 
 				</div>

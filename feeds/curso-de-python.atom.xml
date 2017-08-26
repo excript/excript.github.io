@@ -517,16 +517,17 @@ Ao longo dos anos, MAC2166 utilizou diversas linguagens de programação: Fortra
 &lt;/div&gt;
 &lt;div class="section" id="a-biblioteca-kivy"&gt;
 &lt;h2&gt;A BIBLIOTECA KIVY&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/kivy/kivy/"&gt;A biblioteca Kivy contém o código de UI (User Interface) Interface de Usuário multiplataforma&lt;/a&gt; executado sob a biblioteca OpenGL. Isso quer dizer que todo código será executado pelos interpretadores da placa de vídeo e é por essa razão é possível obter  performance igual e não raramente superior se comparado com as aplicações nativas.&lt;/p&gt;
-&lt;p&gt;Em vista de que a biblioteca OpenGL é multiplataforma, o projeto Kivy, construído em cima dessa camada, pode ser executado em qualquer dispositivo que possua suporte com a biblioteca OpenGL.&lt;/p&gt;
+&lt;p&gt;Uma aplicação desenvolvida com a &lt;a class="reference external" href="https://github.com/kivy/kivy/"&gt;biblioteca Kivy&lt;/a&gt; será executado diretamente sob a placa gráfica do hardware através do uso da biblioteca OpenGL. Em vista de que a biblioteca OpenGL possui suporte em praticamente todas as plataformas, pois, a mesma reduz a complexidade em fornecer suporte às diversas placas de vídeo ao mesmo tempo que disponibiliza recursos avançados para o desenho gráfico, temos que uma aplicação que é executada sob essa camada será, por definição, multiplataforma.&lt;/p&gt;
+&lt;p&gt;Em outras palavras, todo o código será executado em cima dos processadores da placa de vídeo, e é por essa razão que em muitos casos, é possível que aplicações Kivy tenham  performance igual, ou então superior a aplicações nativas!&lt;/p&gt;
+&lt;p&gt;Sendo a biblioteca OpenGL multiplataforma, o projeto Kivy, construído em cima dessa camada, pode ser executado em qualquer dispositivo que suporte a biblioteca e, como praticamente todos dispositivos oferecem suporte devido a amplitude, a quantidade e a complexidade de trabalhar com o hardware e aplicações gráficas, aplicações Kivy são compatíveis com uma grande quantidade de dispositivos.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="opengl-2-0"&gt;
 &lt;h2&gt;OpenGL 2.0&lt;/h2&gt;
-&lt;p&gt;&lt;tt class="docutils literal"&gt;OpenGL&lt;/tt&gt; é uma API e uma linguagem de programação multiplataforma e OpenGL é um acrônimo de &lt;cite&gt;Open Graphics Library`&lt;/cite&gt;, numa tradução livre seria &lt;tt class="docutils literal"&gt;Biblioteca Gráfica Aberta&lt;/tt&gt;. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D que podem ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplamente utilizada na construção de jogos, ferramentas 3D ou qualquer aplicação que faça uso intensivo do hardware gráfico.&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;OpenGL&lt;/tt&gt; é uma API de desenvolvimento de aplicações gráficas e, ao mesmo tempo, o nome de uma linguagem de programação semelhante ao C++. A palavra OpenGL é um acrônimo de &lt;cite&gt;Open Graphics Library`&lt;/cite&gt;, que, numa tradução livre teríamos &lt;tt class="docutils literal"&gt;Biblioteca Gráfica Aberta&lt;/tt&gt;. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D que podem ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplamente utilizada na construção de jogos, ferramentas 3D ou qualquer aplicação que faça uso intensivo do hardware gráfico.&lt;/p&gt;
 &lt;blockquote&gt;
 OpenGL é um conjunto de padrões de processamento de alto desempenho de gráficos 2D e 3D na unidade de processamento (GPU) para vários aplicativos. O OpenGL permite a renderização rápida de visualizações (modo Rascunho rápido).
 &lt;a class="reference external" href="https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html"&gt;https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html&lt;/a&gt;&lt;/blockquote&gt;
-&lt;p&gt;Essa biblioteca tem como objetivo definir um padrão entre os desenvolvedores de hardware e os desenvolvedores de software, de forma a permitir a evolução contínua do hardware sem entrar em conflito com o software. Dessa forma, a API OpenGL faz o &amp;quot;meio de campo&amp;quot; entre o programador que utiliza as funções da API e os mais variados hardwares de vídeo. Então, nós programadores de linguagens de alto nível (alto nível pois estamos longe do hardware) não precisamos nos preocupar se a placa de vídeo é &lt;a class="reference external" href="https://www.intel.com.br/"&gt;Intel&lt;/a&gt;, &lt;a class="reference external" href="http://www.nvidia.com/"&gt;NVidia&lt;/a&gt; ou Xingling, pois a compatibilidade é trabalho da equipe que desenvolve e implementa a API.&lt;/p&gt;
+&lt;p&gt;A construção da biblioteca OpenGL era definir um padrão entre os desenvolvedores de hardware e os desenvolvedores de software, de forma a permitir a evolução contínua do hardware sem entrar em conflito com o software. Dessa forma, a API OpenGL faz o &amp;quot;meio de campo&amp;quot; entre o programador que utiliza as funções da API e os mais variados hardwares de vídeo. Então, nós programadores de linguagens de alto nível (alto nível pois estamos longe do hardware) não precisamos nos preocupar se a placa de vídeo é &lt;a class="reference external" href="https://www.intel.com.br/"&gt;Intel&lt;/a&gt;, &lt;a class="reference external" href="http://www.nvidia.com/"&gt;NVidia&lt;/a&gt; ou Xingling, pois a compatibilidade é trabalho da equipe que desenvolve e implementa a API.&lt;/p&gt;
 &lt;p&gt;O núcleo do OpenGL é conhecido como &amp;quot;rendering pipeline&amp;quot; ou dutos de renderização. Podemos utilizar a biblioteca tanto para desenhos vetoriais, definidos por vértices, ou mapas de bits, desenhos construídos pixel-a-pixel.&lt;/p&gt;
 &lt;p&gt;Os desenvolvedores de hardware conseguem criar extensões, inovando e diferenciando seus produtos, sem a necessidade de alterar a biblioteca e as atualizações, raramente obrigam os usuários da API OpenGL a alterarem os seus códigos.&lt;/p&gt;
 &lt;p&gt;As extensões fornecem aos desenvolvedores de aplicativos os novos recursos de renderização e permite ir além das características especificadas na norma oficial do OpenGL (o padrão). Extensões da OpenGL mantém a API atual com as últimas inovações em hardware gráfico e algoritmos de processamento.&lt;/p&gt;
@@ -4193,7 +4194,7 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;h2&gt;DEPURAÇÃO&lt;/h2&gt;
 &lt;img alt="IDE PyCharm em modo de depuração com um breakpoint na primeira linha" src="../images/curso-de-python/depuracao-pycharm.png" /&gt;
 &lt;p&gt;Depuração é uma técnica de programação em que é possível manipular a execução de cada linha e verificar os valores das variáveis (instâncias).&lt;/p&gt;
-&lt;p&gt;Segundo o dicionário Aurélio, depurar significa &lt;tt class="docutils literal"&gt;Procurar …&lt;/tt&gt;&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+&lt;p&gt;Segundo o dicionário Aurélio, depurar significa: &lt;strong&gt;Procurar …&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -4211,8 +4212,8 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;h2&gt;DEPURAÇÃO&lt;/h2&gt;
 &lt;img alt="IDE PyCharm em modo de depuração com um breakpoint na primeira linha" src="../images/curso-de-python/depuracao-pycharm.png" /&gt;
 &lt;p&gt;Depuração é uma técnica de programação em que é possível manipular a execução de cada linha e verificar os valores das variáveis (instâncias).&lt;/p&gt;
-&lt;p&gt;Segundo o dicionário Aurélio, depurar significa &lt;tt class="docutils literal"&gt;Procurar, detectar e corrigir erros em programa&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;Hoje em dia, ferramenta para depuração de código, estão presente nas IDE modernas e nos proporciona uma forma de executar nossa aplicação passo-a-passo e ir verificando o valor das variáveis e o que nosso programa vai executando, ou seja, quais funções vão sendo invocadas.&lt;/p&gt;
+&lt;p&gt;Segundo o dicionário Aurélio, depurar significa: &lt;strong&gt;Procurar, detectar e corrigir erros em programa&lt;/strong&gt; .&lt;/p&gt;
+&lt;p&gt;Hoje em dia, ferramenta para depuração de código estão presente nas IDE modernas e nos proporcionam uma forma de executar nossa aplicação passo-a-passo e ir verificando o valor das variáveis e o que nosso programa vai executando, ou seja, quais funções vão sendo invocadas.&lt;/p&gt;
 &lt;p&gt;É correto dizer que depurar um código significa a execução de cada linha vagarosamente, onde o programador é quem diz quando que determinada instrução deve ser executada. E também, a cada linha executada, é possível verificar o valor das variáveis que estão no escopo local e global&lt;/p&gt;
 &lt;p&gt;Algumas IDEs permitem a alteração do valor das variáveis e a executação de código paralelamente. Desta forma, conseguimos simular situações onde talvez, não fosse possível através do nosso programa.&lt;/p&gt;
 &lt;p&gt;A depuração é comumente utilizada para na detecção de erros e para entender o estado do programa e de suas variáveis num determinado instânte, ou numa determinada função.&lt;/p&gt;
@@ -4235,20 +4236,20 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;h2&gt;PERFORMANCE&lt;/h2&gt;
 &lt;p&gt;A execução em modo de depuração só deve ser executada quando necessário, até porque, a perfomance é muito inferior ao que temos com a execução normal. Por isso, só execute um código em forma de depuaração quando houver um razão para isso.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="o-que-e-cursor-de-execucao"&gt;
-&lt;h2&gt;O QUE É &lt;cite&gt;CURSOR DE EXECUÇÃO&lt;/cite&gt;?&lt;/h2&gt;
+&lt;div class="section" id="o-que-significa-cursor-de-execucao"&gt;
+&lt;h2&gt;O QUE SIGNIFICA &lt;cite&gt;CURSOR DE EXECUÇÃO&lt;/cite&gt;?&lt;/h2&gt;
 &lt;p&gt;Cursor de execução é o termo que utilizamos para nos referirmos a linha de código em que estamos, ou melhor, na linha onde estamos.&lt;/p&gt;
 &lt;p&gt;Na imagem a seguir podemos ver a execução de um simples código. Observe na linha 9, em azul, o cursor de execução e na linha 11 podemos ver o uso de um breakpoint. É importante lembrar que o sistema de cor pode ser personalizado, portanto, não existe um padrão e não podemos nos referir ao cursor ou ao breakpoint como sendo uma linha de uma determinada cor.&lt;/p&gt;
 &lt;img alt="IDE PyCharm com breakpoint e cursor de execução" src="../images/curso-de-python/pycharm-cursor-breakpoint.png" /&gt;
 &lt;/div&gt;
-&lt;div class="section" id="o-que-e-breakpoint"&gt;
-&lt;h2&gt;O QUE É &lt;tt class="docutils literal"&gt;breakpoint&lt;/tt&gt;?&lt;/h2&gt;
+&lt;div class="section" id="o-que-significa-breakpoint"&gt;
+&lt;h2&gt;O QUE SIGNIFICA &lt;tt class="docutils literal"&gt;breakpoint&lt;/tt&gt;?&lt;/h2&gt;
 &lt;p&gt;A palavra &lt;tt class="docutils literal"&gt;breakpoint&lt;/tt&gt;, significa, na depuração de programas, o número da linha em que a execução do código será interrompido para o início da depuração.&lt;/p&gt;
 &lt;p&gt;Esse é um recurso permite interrompermos a execução do nosso programa num determinado ponto. Assim, podemos marcar em qual local do programa desejamos iniciar a depuração e quando o cursor de execução chegar na linha demarcada, a execução será interrompida e a IDE trará o código em que ocorreu a interrupção.&lt;/p&gt;
 &lt;p&gt;Na imagem acima, é possível ver um breakpoint na primeira linha da IDE PyCharm. Normalmente, os &lt;tt class="docutils literal"&gt;breakpoints&lt;/tt&gt; são representados por uma bola vermelha no canto esquerdo [margem] dos editores de código.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="modo-de-depuracao"&gt;
-&lt;h2&gt;MODO DE DEPURAÇÃO&lt;/h2&gt;
+&lt;div class="section" id="o-modo-de-depuracao"&gt;
+&lt;h2&gt;O MODO DE DEPURAÇÃO&lt;/h2&gt;
 &lt;p&gt;Ao executarmos um código em modo de depuração, teremos uma tela semelhante a que temos na imagem a seguir. Como podemos ver, os menus estão habilitados, até porque, estamos executando em modo de depuração.&lt;/p&gt;
 &lt;img alt="IDE PyCharm em modo de depuração com um breakpoint e menu com as opções" src="../images/curso-de-python/pycharm-in-debug.png" /&gt;
 &lt;/div&gt;
@@ -4267,6 +4268,12 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;li&gt;Shift+F8(Step Out): termina a depuração da função e o cursor retorna ao local anterior&lt;/li&gt;
 &lt;li&gt;Shift+Alt+F8 (Force Step Over): o cursor não entra no código da função mesmo que haja um breakpoint&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-depuracao-como-estudo"&gt;
+&lt;h2&gt;A DEPURAÇÃO COMO ESTUDO&lt;/h2&gt;
+&lt;p&gt;Neste artigo tratamos a depuração principalmente como uma ferramenta para o desenvolvimento e correção de problemas em nossos códigos, o que de fato está correto, porém, utilizar somente para isso é não aproveitar ao máximo o poder da ferramenta.&lt;/p&gt;
+&lt;p&gt;A depuração deve ser utilizada durante toda a fase de estudo e, posteriormente, quando desejarmos entender como o interpretador do Python está lidando com determinada situação.&lt;/p&gt;
+&lt;p&gt;Em vista de que temos a disposição todas as variáveis e que podemos criar e/ou invocar funções, devemos ver a depuração como um recurso que vai muito além de simplesmente procurar por erros e sim, como uma ferramenta que devemos utilizar durante todo o estudo do desenvolvimento de software.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
 &lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;

@@ -352,10 +352,79 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<p>Quais símbolos representam os operadores aritméticos em C++? Como fazer uma soma em C++? Como fazer uma subtração em C++? Como fazer uma divisão em C++? Como fazer uma multiplicação em C++?</p>
-<p>Essas perguntam serão respondidas nessa aula do nosso curso de C++ e também, você aprendera a executar operações e atribuir o resultado a uma variável. Logo, ao término deste episódio, saberemos como escrever fórmulas matemáticas para que nossos programas resolvam.</p>
-<p>O C++ utiliza uma outra notação matemática. Ainda assim, somos capazes de resolver qualquer problema ou equação, desde que conheçamos a notação que o C++ utiliza.</p>
-<p>Inicialmente, pode parecer que a notação do C++ é totalmente diferente da notação matemática, porém, como estudaremos, para &quot;convertermos&quot; expressões matemáticas é bastante simples e com um pouco de prática, iremos fazer esse trabalho naturalmente.</p>
+<div class="section" id="operadores-aritmeticos">
+<h2>OPERADORES ARITMÉTICOS</h2>
+<p>Os <strong>Operadores Aritméticos</strong> utilizados pelo C++ são, basicamente, os mesmos encontrados na matemática basica, ou seja, utilizar o sinal de <tt class="docutils literal">+</tt> para realizar a soma, o sinal de <tt class="docutils literal">-</tt> para a subtração, o sinal de <tt class="docutils literal">*</tt> para a multiplicação e o sinal de <tt class="docutils literal">/</tt> para a divisão entre 2 operandos.</p>
+<p>Na lista a seguir, é possível encontrar todos esses operadores.</p>
+<blockquote>
+<ul class="simple">
+<li><ul class="first">
+<li>(soma)</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>(subtração)</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>(multiplicação)</li>
+</ul>
+</li>
+<li>/ (divisão)</li>
+</ul>
+</blockquote>
+<p>Na tabela a seguir, temos a lista de operadores e o nome da função.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="37%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Operação</td>
+<td>Operador</td>
+</tr>
+<tr><td>adição</td>
+<td><tt class="docutils literal">+</tt></td>
+</tr>
+<tr><td>subtração</td>
+<td><tt class="docutils literal">-</tt></td>
+</tr>
+<tr><td>multiplicação</td>
+<td><tt class="docutils literal">*</tt></td>
+</tr>
+<tr><td>divisão</td>
+<td><tt class="docutils literal">/</tt></td>
+</tr>
+<tr><td>módulo</td>
+<td><tt class="docutils literal">%</tt></td>
+</tr>
+</tbody>
+</table>
+<p>O <strong>Operador Módulo</strong> contido na tabela acima <tt class="docutils literal">%</tt> ainda não foi estudado, porém, pense no mesmo como sendo um operador que nos possibilita obter o resto de uma divisão.</p>
+</div>
+<div class="section" id="notacao-matematica">
+<h2>NOTAÇÃO MATEMÁTICA</h2>
+<p>A forma em que escrevemos equações em C++ é diferente da notação utilizada na matemática tradicional. Mesmos assim, há bastante semelhança de forma que rapidamente conseguimos assimilar e construir equações mais complexas.</p>
+</div>
+<div class="section" id="exemplos">
+<h2>EXEMPLOS</h2>
+<div class="highlight"><pre><span></span><span class="c1">//soma</span>
+<span class="kt">int</span> <span class="n">soma</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="c1">//subtraçao</span>
+<span class="kt">int</span> <span class="n">soma</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="c1">//multiplicação</span>
+<span class="kt">int</span> <span class="n">multi</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="c1">//divisão</span>
+<span class="kt">int</span> <span class="n">divi</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+<p>note:</p>
+<pre class="literal-block">
+Tome cuidado para não realizar divisões por zero, pois, a o C++ levantará uma mensagem de erro informando que não é possível realizar determinada operação matemática!
+</pre>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>

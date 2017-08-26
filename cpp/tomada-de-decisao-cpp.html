@@ -16,7 +16,7 @@
 <link rel="canonical" href="http://excript.com/cpp/tomada-de-decisao-cpp.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,cpp" />
+        <meta name="keywords" content="curso,cpp,tomada de decisão,if,estrutura condicional,blog" />
     <meta name="description" content="Nesta aula iniciaremos o estudo da toma de decisão, isto é, da instrução condicional if que nos possibilita definir quais instruções devem ser executados caso determinada expressão seja verdadeira." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -30,6 +30,10 @@
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
+            <meta property="article:tag" content="tomada de decisão" />
+            <meta property="article:tag" content="if" />
+            <meta property="article:tag" content="estrutura condicional" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -352,19 +356,45 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<p>Para que servem as tomadas de decisões? Tomadas de decisão ou então estrutura condicional é utilizada para alterar o fluxo de execução do nosso código.</p>
-<p>É normal verificarmos condições, fazermos comparações e verificarmos se os requisitos para uma ação foram cumpridos. Em C++ podemos alterar o fluxo de execução do nosso programa todas as vezes em que uma ou uma série de condições estiverem satisfeitas.</p>
-<p>Fato é, que a tomada de decisão faz com que nosso programas sejam inteligentes e tenham a capacidade de decidir o que fazer a cada instante. Geralmente iremos programar 2 condições, ou seja,  a primeira para caso a nossa verificação seja cumprida e a segunda para caso os prerequisitos não tenham sido cumpridos.</p>
-<p>Em C++, para verificarmos uma condição, temos a disposição a instrução &quot;if&quot;, que do Inglês, significa &quot;SE&quot;. Então por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="n">SE</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">10</span><span class="p">){</span>
-  <span class="n">faca_isso</span><span class="p">();</span>
+<div class="section" id="introducao-a-tomada-de-decisao">
+<h2>INTRODUÇÃO À TOMADA DE DECISÃO</h2>
+<p>A <strong>Tomada de Decisão</strong> também chamado de <strong>Tomada de Decisão</strong> é a estrutura para verificar uma condição e decidir se um bloco de código será executado. A estrutura <tt class="docutils literal">if</tt> é um padrão em praticamente todas as linguagens e o seu funcionamento também não possui muitas variações.</p>
+<p>Tomar uma decisão, ou então, utilizar um <strong>Desvio Condicional</strong>, é uma prática comum no <strong>desenvolvimento de software</strong> e será com essa estrutura que verificaremos expressões e decidiremos: qual <strong>Bloco de Instrução</strong> será executado.</p>
+</div>
+<div class="section" id="estrutura">
+<h2>ESTRUTURA</h2>
+<p>A <strong>Tomada de Decisão</strong> possui uma sintaxe simples mas que será utilizada por outras estruturas. É super importante entender que definimos uma condição para determinar se um conjunto de códigos serão executados.</p>
+<object data="../images/curso-cpp/tomada-de-decisao.svg" type="image/svg+xml">
+Imagem demonstrando a utilização da estrutura condiciona if com a linguagem C++.</object>
+</div>
+<div class="section" id="a-instrucao-if">
+<h2>A INSTRUÇÃO <tt class="docutils literal">if</tt></h2>
+<p>Do inglês, a palavra <tt class="docutils literal">if</tt> significa <tt class="docutils literal">SE</tt>. Com a estrutura condicional <tt class="docutils literal">if</tt> podemos determinar o que deve acontecer caso a expressão verificada for verdadeira, ou então, o que deve acontecer, caso a expressão seja falsa.</p>
+<p>Analise o exemplo a seguir. Vamos verificar uma situação, porém, utilizando a Lingua Portuguesa:</p>
+<div class="highlight"><pre><span></span><span class="n">SE</span><span class="p">(</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">){</span>
+    <span class="n">faça_isso</span><span class="p">()</span>
+    <span class="n">faça_e_mais_isso</span><span class="p">()</span>
+    <span class="n">faça_aquilo</span><span class="p">()</span>
 <span class="p">}</span>
 </pre></div>
-<p>Em C++ temos:</p>
-<div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">10</span><span class="p">){</span>
-  <span class="n">faca_isso</span><span class="p">();</span>
-<span class="p">}</span>
-</pre></div>
+<p>No código acima, inicialmente verificamos uma condição que sempre será verdadeira, pois, 1 sempre será igual a 1.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">É comum chamarmos a expressão entre parêntesis de Cabeçalho da Estrutura.</p>
+</div>
+<p>Em seguida, utilizar o caractere <tt class="docutils literal">{</tt> para iniciar um bloco de código. Feito isso, adicionamos instrução e finalizamos o bloco com o caractere <tt class="docutils literal">}</tt>. Tudo que estiver delimitado pelas chaves será chamado de Bloco de Instrução.</p>
+<p>No exemplo anterior, definimos um Bloco de Instrução e dentro deste colocamos hipotéticas invocações a funções, somente para ilustrar.</p>
+<p>O que é realmente importante entender neste momento é:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>a condição será analisada</li>
+<li>caso seja verdadeira, o Bloco de Código será executado</li>
+<li>caso seja falso, a execução pulará por cima</li>
+</ol>
+</blockquote>
+<p>Nesse primeiro momento, temos que entender que na situação em que a expressão definida no cabeçalho da estrutura <tt class="docutils literal">SE</tt>, isto é, entre parêntesis, for verdadeira, tudo que estiver nas linhas seguintes, entre chaves, normalmente com a indentação avançada, é que será executado. A instrução <tt class="docutils literal">faça_isso()</tt>, é a primeira instrução do <strong>Bloco de Instrução</strong> que será executado todas as vezes que a expressão definida no cabeçalho da estrutura <tt class="docutils literal">if</tt> for verdadeira.</p>
+<p>Caso a expressão contida entre parêntesis não seja verdadeira, nada acontecerá, e a execução das linhas após a estrutura de <tt class="docutils literal">Tomada de Decisão</tt> ocorrerá normalmente.</p>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
@@ -424,7 +454,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/tomada-de-decisao.html">tomada de decisão</a>, 	<a href="http://excript.com/tag/if.html">if</a>, 	<a href="http://excript.com/tag/estrutura-condicional.html">estrutura condicional</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

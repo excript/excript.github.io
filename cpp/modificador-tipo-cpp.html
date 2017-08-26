@@ -16,7 +16,7 @@
 <link rel="canonical" href="http://excript.com/cpp/modificador-tipo-cpp.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,cpp" />
+        <meta name="keywords" content="curso,cpp,modificadores,modificador de tipo,signed,unsigned,int,char,blog" />
     <meta name="description" content="Nesta aula estudaremos os modificadores de tipo da linguagem C++. Aprenderemos o que é um modificador, quais estão disponíveis, e como utiliza-los corretamente." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -30,6 +30,13 @@
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
+            <meta property="article:tag" content="modificadores" />
+            <meta property="article:tag" content="modificador de tipo" />
+            <meta property="article:tag" content="signed" />
+            <meta property="article:tag" content="unsigned" />
+            <meta property="article:tag" content="int" />
+            <meta property="article:tag" content="char" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -352,12 +359,20 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<p>O que são os modificadores de tipo? Em suma, são instruções que antecedem a declaração de variáveis e conferem a está uma característica especial.</p>
-<p>Em C++ temos 4 modificadores de tipo:
-- short
-- long
-- signed
-- unsigned</p>
+<div class="section" id="introducao-aos-modificadores">
+<h2>INTRODUÇÃO AOS MODIFICADORES</h2>
+<p>Os <strong>Modificadores de Tipo</strong> são instruções que antecedem a declaração do tipo das variáveis como o seu nome sugere, a variável sofrerá alguma alteração. Seja essa alteração na capacidade de armazenamento ou então, alguma restrição de como lidar com número negativos e positivos.</p>
+<p>Em C++ temos 4 modificadores de tipo:</p>
+<blockquote>
+<ul class="simple">
+<li>short</li>
+<li>long</li>
+<li>signed</li>
+<li>unsigned</li>
+</ul>
+</blockquote>
+<p>É importante observar que todos os <strong>Modificadores de Tipos</strong> alterar o funcionamento de tipos inteiros. Não há modificadores para tipos como os de ponto flutuante e etc.</p>
+</div>
 <div class="section" id="modificador-short">
 <h2>MODIFICADOR <cite>short</cite></h2>
 <p>O modificador short é utilizado quando queremos que a variável possua um tamanho menor, até porque, não precisamos que a mesma contenha números grandes.</p>
@@ -374,8 +389,8 @@ eXcript            </a>
 <h2>MODIFICADOR <cite>unsigned</cite></h2>
 <p>O modificador unsigned é o oposto de unsigned, assim, dizemos para  o compilador que desejamos trabalhar somente com números positivos. Logo, a nossa variável irá possuir mair capacidade de armazenamento, até porque, o bit que seria utilizado para armazenar o sinal, agora poderá ser utilizado para armazenar números.</p>
 </div>
-<div class="section" id="codigo-envido-por-aluno">
-<h2>CÓDIGO ENVIDO POR ALUNO</h2>
+<div class="section" id="codigo-enviado-por-aluno">
+<h2>CÓDIGO ENVIADO POR ALUNO</h2>
 <p>Nome: Matheus Souza - <a class="reference external" href="https://plus.google.com/b/102371115481264098253/103032760058774924445/posts">https://plus.google.com/b/102371115481264098253/103032760058774924445/posts</a></p>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
@@ -475,7 +490,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/modificadores.html">modificadores</a>, 	<a href="http://excript.com/tag/modificador-de-tipo.html">modificador de tipo</a>, 	<a href="http://excript.com/tag/signed.html">signed</a>, 	<a href="http://excript.com/tag/unsigned.html">unsigned</a>, 	<a href="http://excript.com/tag/int.html">int</a>, 	<a href="http://excript.com/tag/char.html">char</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

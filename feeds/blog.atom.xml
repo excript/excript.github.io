@@ -1,5 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - blog</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/blog.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-08-21T03:00:00-03:00</updated><entry><title>Monitorando Solicitações WiFi</title><link href="http://excript.com/blog/python-monitorando-solicitacoes-wifi.html" rel="alternate"></link><published>2017-08-21T03:00:00-03:00</published><updated>2017-08-21T03:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-08-21:/blog/python-monitorando-solicitacoes-wifi.html</id><summary type="html">&lt;div class="section" id="how-many-people-are-around"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - blog</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/blog.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-08-22T03:00:00-03:00</updated><entry><title>python.c: o Entry Point do Python</title><link href="http://excript.com/blog/entry-point-python-c.html" rel="alternate"></link><published>2017-08-22T03:00:00-03:00</published><updated>2017-08-22T03:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-08-22:/blog/entry-point-python-c.html</id><summary type="html">&lt;div class="section" id="o-codigo-fonte-do-python"&gt;
+&lt;h2&gt;O CÓDIGO FONTE DO PYTHON&lt;/h2&gt;
+&lt;p&gt;Muitos desenvolvedores trabalham com uma linguagem por anos sem nunca baixar o código-fonte do interpretador ou compilador mesmo estando disponível a todos e, podemos tanto acessá-lo pelo navegador, baixa-lo num arquivo compactado ou então, o que é o mais recomendado, utilizar o &lt;a class="reference external" href="https://git-scm.com/"&gt;git&lt;/a&gt; para baixar …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="o-codigo-fonte-do-python"&gt;
+&lt;h2&gt;O CÓDIGO FONTE DO PYTHON&lt;/h2&gt;
+&lt;p&gt;Muitos desenvolvedores trabalham com uma linguagem por anos sem nunca baixar o código-fonte do interpretador ou compilador mesmo estando disponível a todos e, podemos tanto acessá-lo pelo navegador, baixa-lo num arquivo compactado ou então, o que é o mais recomendado, utilizar o &lt;a class="reference external" href="https://git-scm.com/"&gt;git&lt;/a&gt; para baixar todos os arquivos e módulos para o nosso computador.&lt;/p&gt;
+&lt;p&gt;Conheço essa realidade por experiência própria! Raríssimas foram as vezes em que baixei e analisei o código das ferramentas de código aberto que utilizo e, na maioria das vezes em que fiz o downloads do fontes para o disco local, foi porque o tutorial que estava utilizando exigia.&lt;/p&gt;
+&lt;p&gt;Até pouco tempo o Python utiliza o sistema de gerenciamento de versão Mercurial, porém, em vista de que o git se tornou por livre adoção dos desenvolvedores quase que um padrão, o código de todo o interpretador do Python e suas bibliotecas agora estão no Github e o mesmo se tornou o repositório oficial do projeto.&lt;/p&gt;
+&lt;p&gt;Antes de acessarmos os repositório, é importante dizer, ou então relembrar, que o interpretador oficial do Python se chama CPython. Não é difícil de perceber que o caractere C a frente do nome Python indica que essa versão do interpretador foi&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-entry-point"&gt;
+&lt;h2&gt;O ENTRY POINT&lt;/h2&gt;
+&lt;p&gt;O &lt;tt class="docutils literal"&gt;Entry Point&lt;/tt&gt; ou o ponto de entrada de uma aplicação é a nomenclatura utilizada para se referir a primeira função que é invocada na execução de um Script ou de uma aplicação.&lt;/p&gt;
+&lt;p&gt;O interpretador do Python, por padrão, foi e continua sendo desenvolvido em C. No entanto, nem todos os módulos que chamamos de nativos são desenvolvidos em C e também, nem todos os módulos contidos numa instalação padrão foram escritos pela equipe de desenvolvedores do Python.&lt;/p&gt;
+&lt;p&gt;Por exemplo, o SQLite está contido por padrão em todas versões do Python, o mesmo utiliza somente código C, porém, o seu desenvolvimento é feito por outro grupo de desenvolvedores.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;wchar_t&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;argv_copy&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="cm"&gt;/* We need a second copy, as Python might modify the first one. */&lt;/span&gt;
+    &lt;span class="kt"&gt;wchar_t&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;argv_copy2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;oldloc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="cm"&gt;/* Force malloc() allocator to bootstrap Python */&lt;/span&gt;
+&lt;span class="cp"&gt;#ifdef Py_DEBUG&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;_PyMem_SetupAllocators&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;malloc_debug&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="cp"&gt;#  else&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;_PyMem_SetupAllocators&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;malloc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="cp"&gt;#  endif&lt;/span&gt;
+
+    &lt;span class="n"&gt;argv_copy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;wchar_t&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;PyMem_RawMalloc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;sizeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;wchar_t&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="n"&gt;argv_copy2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;wchar_t&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;PyMem_RawMalloc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;sizeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;wchar_t&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;argv_copy&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;argv_copy2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;fprintf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;out of memory&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="cm"&gt;/* 754 requires that FP exceptions run in &amp;quot;no stop&amp;quot; mode by default,&lt;/span&gt;
+&lt;span class="cm"&gt;     * and until C vendors implement C99&amp;#39;s ways to control FP exceptions,&lt;/span&gt;
+&lt;span class="cm"&gt;     * Python requires non-stop mode.  Alas, some platforms enable FP&lt;/span&gt;
+&lt;span class="cm"&gt;     * exceptions by default.  Here we disable them.&lt;/span&gt;
+&lt;span class="cm"&gt;     */&lt;/span&gt;
+&lt;span class="cp"&gt;#ifdef __FreeBSD__&lt;/span&gt;
+    &lt;span class="n"&gt;fedisableexcept&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FE_OVERFLOW&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="cp"&gt;#endif&lt;/span&gt;
+
+    &lt;span class="n"&gt;oldloc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_PyMem_RawStrdup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;setlocale&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LC_ALL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;oldloc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;fprintf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;out of memory&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="cp"&gt;#ifdef __ANDROID__&lt;/span&gt;
+    &lt;span class="cm"&gt;/* Passing &amp;quot;&amp;quot; to setlocale() on Android requests the C locale rather&lt;/span&gt;
+&lt;span class="cm"&gt;     * than checking environment variables, so request C.UTF-8 explicitly&lt;/span&gt;
+&lt;span class="cm"&gt;     */&lt;/span&gt;
+    &lt;span class="n"&gt;setlocale&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LC_ALL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;C.UTF-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="cp"&gt;#else&lt;/span&gt;
+    &lt;span class="cm"&gt;/* Reconfigure the locale to the default for this process */&lt;/span&gt;
+    &lt;span class="n"&gt;setlocale&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LC_ALL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="cp"&gt;#endif&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_Py_LegacyLocaleDetected&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;_Py_CoerceLegacyLocale&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="cm"&gt;/* Convert from char to wchar_t based on the locale settings */&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;argv_copy&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Py_DecodeLocale&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;argv_copy&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;PyMem_RawFree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;oldloc&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;fprintf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Fatal Python error: &amp;quot;&lt;/span&gt;
+                            &lt;span class="s"&gt;&amp;quot;unable to decode the command line argument #%i&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                            &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="n"&gt;argv_copy2&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;argv_copy&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;argv_copy2&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;argv_copy&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+    &lt;span class="n"&gt;setlocale&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LC_ALL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;oldloc&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;PyMem_RawFree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;oldloc&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Py_Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;argv_copy&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+    &lt;span class="cm"&gt;/* Force again malloc() allocator to release memory blocks allocated&lt;/span&gt;
+&lt;span class="cm"&gt;       before Py_Main() */&lt;/span&gt;
+&lt;span class="cp"&gt;#ifdef Py_DEBUG&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;_PyMem_SetupAllocators&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;malloc_debug&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="cp"&gt;#  else&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;_PyMem_SetupAllocators&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;malloc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="cp"&gt;#  endif&lt;/span&gt;
+
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;PyMem_RawFree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argv_copy2&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;PyMem_RawFree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argv_copy&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;PyMem_RawFree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argv_copy2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="cp"&gt;#endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/python/cpython/blob/master/Programs/python.c#L34"&gt;https://github.com/python/cpython/blob/master/Programs/python.c#L34&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="python"></category><category term="c"></category><category term="cpp"></category><category term="python.c"></category><category term="entry point"></category><category term="ponto de entrada"></category></entry><entry><title>Monitorando Solicitações WiFi</title><link href="http://excript.com/blog/python-monitorando-solicitacoes-wifi.html" rel="alternate"></link><published>2017-08-21T03:00:00-03:00</published><updated>2017-08-21T03:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-08-21:/blog/python-monitorando-solicitacoes-wifi.html</id><summary type="html">&lt;div class="section" id="how-many-people-are-around"&gt;
 &lt;h2&gt;How Many People are Around&lt;/h2&gt;
 &lt;p&gt;Conheça uma biblioteca para o Python de nome &lt;a class="reference external" href="https://github.com/schollz/howmanypeoplearearound"&gt;howmanypeoplearearound&lt;/a&gt; que numa tradução seria: Quantas pessoas Estão em Volta. Com esse código é possível sondar o número de aparelhos WiFi que estão buscando uma rede para se conectar.&lt;/p&gt;
 &lt;p&gt;Vi no Twitter uma chamada para uma postagem …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="how-many-people-are-around"&gt;
@@ -17,18 +120,28 @@
 &lt;p&gt;É importante lembrar que para poder utilizar essa ferramenta você precisa de um tipo especifico de adaptador WiFi que pode ser adquirido, segundo o autor, por aproximadamente $10.&lt;/p&gt;
 &lt;p&gt;Para maiores informações, &lt;a class="reference external" href="https://github.com/schollz/howmanypeoplearearound"&gt;acesse o link no Github&lt;/a&gt;, faça um clone, utilize e deixe um comentário posteriormente contando a sua experiência!&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="determinando-a-localizacao-exata"&gt;
-&lt;h2&gt;DETERMINANDO A LOCALIZAÇÃO EXATA&lt;/h2&gt;
-&lt;p&gt;O mesmo programador foi além e produziu um outro software em Python para conhecer a localização exata das pessoas dentro de casa!&lt;/p&gt;
-&lt;p&gt;Esta é uma extensão da FIND, o Framework for Internal Navigation and Discovery , que se baseia na idéia do sistema de sonar de Lucius Fox em The Dark Knight que é usado para rastrear celulares.&lt;/p&gt;
-&lt;p&gt;Ambas aplicações são OpenSource, o código pode ser baixado do Github!!&lt;/p&gt;
+&lt;div class="section" id="determinando-a-localizacao-como-dispositivos-raspberry-pi"&gt;
+&lt;h2&gt;DETERMINANDO A LOCALIZAÇÃO COMO DISPOSITIVOS Raspberry PI&lt;/h2&gt;
+&lt;p&gt;Se não fosse o bastante, ainda é possível ir muito além! Pela rede WiFi também é possível e de várias formas, calcular com precisão o posicionamento geográfico do aparelho envia solicitações à rede WiFi.&lt;/p&gt;
+&lt;p&gt;O desenvolvedor explica como obtém o posicionamento que, de forma bastante resumida, podemos dizer que a localização é determinada através do posicionamento de alguns Raspberry PI contendo a aplicação &lt;a class="reference external" href="https://github.com/schollz/find"&gt;find-lf&lt;/a&gt; que é, na verdade, um plugin, uma extensão do módulo &lt;a class="reference external" href="https://github.com/schollz/find-lf"&gt;FIND&lt;/a&gt;. Ambos projetos foram escritos em Python.&lt;/p&gt;
+&lt;p&gt;Veja na imagem abaixo o posicionamento em que os dispositivos estão dispostos.&lt;/p&gt;
+&lt;img alt="Calculando o posicionamento geográfico com o plugin FIND-lf" src="../images/blog/monitorando-redes-wifi3.png" /&gt;
+&lt;img alt="Imagem contendo outra representação da disposição dos Raspberry PI" src="../images/blog/monitorando-redes-wifi4.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="find-the-framework-for-internal-navigation-and-discovery"&gt;
+&lt;h2&gt;FIND: THE FRAMEWORK FOR INTERNAL NAVIGATION AND DISCOVERY&lt;/h2&gt;
+&lt;p&gt;O &lt;a class="reference external" href="https://github.com/schollz/find"&gt;FIND&lt;/a&gt; é um acrônimo de &lt;strong&gt;Framework for Internal Navigation and Discovery&lt;/strong&gt; e trata-se do framework principal e fornece suporte aos outros que acabamos de ver.&lt;/p&gt;
+&lt;p&gt;Segundo a documentação oficial, temos que o mesmo é uma biblioteca para possibilitar a Navegação Interna e a Descoberta (FIND). Através de uma simples antena WiFi é possível determinar o posicionamento de um Smartphone (Android) dentro de uma casa ou escritório bastando somente habilitar a rede WiFi (laptop ou Raspberry Pi ou etc.)&lt;/p&gt;
+&lt;p&gt;A documentação sugere o uso deste sistema ao invés da utilização de sensores de movimento. Isso porque, a sua resolução permitirá que o teu telefone distingua se estás na sala de estar, na cozinha ou no quarto, etc. A informação da posição poderá ser usada de várias maneiras, incluindo no uso de automação residencial.&lt;/p&gt;
+&lt;p&gt;O sistema foi construído através de dois componentes principais: um servidor e um dispositivo de impressão digital. O dispositivo de impressão digital ( programa de computador ou aplicativo Android ) envia os dados especificados para o servidor que utilizar Machine Learning para armazenar as impressões digitais e para analisa-las. Em seguida, o mesmo retorna o resultado do dispositivo e armazena o resultado no servidor para por exemplo, poder acessar via um navegador Web.&lt;/p&gt;
+&lt;img alt="Calculando o posicionamento geográfico com o plugin FIND-lf" src="../images/blog/monitorando-redes-wifi3.png" /&gt;
+&lt;p&gt;Por fim, é importante lembrar que todo o sistema faz uso de tecnologias abertas e o seu código fonte está disponível no Github.&lt;/p&gt;
+&lt;p&gt;O projeto além de possuir sua &lt;a class="reference external" href="https://www.internalpositioning.com/"&gt;documentação no Github, também possui um site&lt;/a&gt; que contém basicamente as mesmas informações mas com uma apresentação mais comercial.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
 &lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;howmanypeoplearearound - &lt;a class="reference external" href="https://github.com/schollz/howmanypeoplearearound"&gt;https://github.com/schollz/howmanypeoplearearound&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;find-lf - &lt;a class="reference external" href="https://github.com/schollz/find-lf"&gt;https://github.com/schollz/find-lf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/schollz/howmanypeoplearearound"&gt;howmanypeoplearearound&lt;/a&gt; - Permite contabilizar as requisições na rede WiFi
+&lt;a class="reference external" href="https://github.com/schollz/find-lf"&gt;find-lf&lt;/a&gt; - Possibilita determinar a localização exata do aparelho através da rede WiFi&lt;/p&gt;
 &lt;/div&gt;
 </content><category term="python"></category><category term="wifi"></category><category term="monitorar"></category><category term="blog"></category></entry><entry><title>Gerenciador de Pacotes pip</title><link href="http://excript.com/blog/gerenciador-pacotes-python-pip.html" rel="alternate"></link><published>2017-08-02T09:00:00-03:00</published><updated>2017-08-02T09:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-08-02:/blog/gerenciador-pacotes-python-pip.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -229,10 +342,12 @@
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
 &lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/132988/is-there-a-difference-between-and-is-in-python"&gt;https://stackoverflow.com/questions/132988/is-there-a-difference-between-and-is-in-python&lt;/a&gt;
-&lt;a class="reference external" href="https://stackoverflow.com/questions/21478442/python-what-difference-between-is-and"&gt;https://stackoverflow.com/questions/21478442/python-what-difference-between-is-and&lt;/a&gt;
-&lt;a class="reference external" href="https://stackoverflow.com/questions/15008380/double-equals-vs-is-in-python"&gt;https://stackoverflow.com/questions/15008380/double-equals-vs-is-in-python&lt;/a&gt;
-&lt;a class="reference external" href="https://dbader.org/blog/difference-between-is-and-equals-in-python"&gt;https://dbader.org/blog/difference-between-is-and-equals-in-python&lt;/a&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/132988/is-there-a-difference-between-and-is-in-python"&gt;https://stackoverflow.com/questions/132988/is-there-a-difference-between-and-is-in-python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/21478442/python-what-difference-between-is-and"&gt;https://stackoverflow.com/questions/21478442/python-what-difference-between-is-and&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://stackoverflow.com/questions/15008380/double-equals-vs-is-in-python"&gt;https://stackoverflow.com/questions/15008380/double-equals-vs-is-in-python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://dbader.org/blog/difference-between-is-and-equals-in-python"&gt;https://dbader.org/blog/difference-between-is-and-equals-in-python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="python"></category><category term="operador"></category><category term="is"></category><category term="equal"></category><category term="blog"></category></entry><entry><title>A distopia dos anuncios de emprego em TI</title><link href="http://excript.com/blog/distopia-anuncio-emprego-ti.html" rel="alternate"></link><published>2017-03-07T09:00:00-03:00</published><updated>2017-03-07T09:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-03-07:/blog/distopia-anuncio-emprego-ti.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;

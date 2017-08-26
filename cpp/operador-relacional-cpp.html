@@ -16,7 +16,7 @@
 <link rel="canonical" href="http://excript.com/cpp/operador-relacional-cpp.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,cpp" />
+        <meta name="keywords" content="curso,cpp,operadores,operadores relacionais,blog" />
     <meta name="description" content="Nesta aula iniciaremos o estudo dos Operadores Relacionais da Linguagem C++. Inicialmente, estudaremos os operadores simples, para que nas próximas aulas, possamos estudar os operadores relacionais compostos." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -30,6 +30,9 @@
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
+            <meta property="article:tag" content="operadores" />
+            <meta property="article:tag" content="operadores relacionais" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -352,9 +355,82 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<p>Para que devemos utilizar estes operadores? Operadores relacionais são aqueles que utilizamos para obter a relação entre dois operandos.</p>
-<p>Por exemplo, vamos supor que nós tenhamos duas variáveis, a e b e então, nós desejamos saber qual destas é maior. Para isso, podemos utilizar o operador relacional maior. Logo, se a expressão for verdadeira, o valor de retorno será True, senão, o valor será False.</p>
-<p>Assim, nós temos que com este operadores, conseguimos obter a relação entre um ou vários operandos e baseado neste, podemos decidir o que a aplicação deve fazer em cada momento.</p>
+<div class="section" id="operadores-relacionais">
+<h2>OPERADORES RELACIONAIS</h2>
+<p>Os <strong>Operadores Relacionais</strong> estabelecem a relação entre 2 membros. Os mesmos determinaram, em suma, qual membro é mair, menor ou então, se ambos são iguais.</p>
+<p>O que existe de mais simples e corriqueiro no desenvolvimento de software é o estabelecimento de relação entre operandos. O C++ utiliza os mesmos operadores que a linguagem C. A maioria das principais linguagens que utilizamos atualmente utilizam como base a simbologia dos operadores relacionais herdados da linguagem C.</p>
+</div>
+<div class="section" id="operadores-relacionais-simples">
+<h2>OPERADORES RELACIONAIS SIMPLES</h2>
+<p>Na teoria não encontramos o termo Operadores Relacionais Simples, porém, eu assim os chamo, pois são os operadores formados por um único símbolo relevante, são eles: <tt class="docutils literal">&gt;</tt>, <tt class="docutils literal">&lt;</tt>, <tt class="docutils literal">==</tt> e <tt class="docutils literal">!=</tt>. Note que a simbologia utilizada pelo sinal de igual e diferente, ainda que seja formada por 2 caracteres, possui um único sentido e faz uma única verificação.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="55%" />
+<col width="45%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Operação</td>
+<td>Operador</td>
+</tr>
+<tr><td>Maior que</td>
+<td><tt class="docutils literal">&gt;</tt></td>
+</tr>
+<tr><td>Menor que</td>
+<td><tt class="docutils literal">&lt;</tt></td>
+</tr>
+<tr><td>Igual que</td>
+<td><tt class="docutils literal">==</tt></td>
+</tr>
+<tr><td>Diferente de</td>
+<td><tt class="docutils literal">!=</tt></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="esquema-de-uso">
+<h2>ESQUEMA DE USO</h2>
+<p>Para obtermos a relação entre 2 membros, temos que utilizar a seguinte estrutura:</p>
+<blockquote>
+&lt;<tt class="docutils literal">membro a esquerda</tt>&gt; <strong>OPERADOR</strong> &lt;<tt class="docutils literal">membro a direita</tt>&gt;</blockquote>
+<p>note:</p>
+<pre class="literal-block">
+A alteração da ordem em que os operandos estão dispostos altera a análise da sua relação, salvo se ambos forem iguais.
+</pre>
+<p>Vamos realizar algumas operações na prática para que possamos ver os resultados lógicos que o compilador do C++ enviará para a saída padrão. Digite as seguintes operações, uma após outra e analise o valor enviado para a saída.</p>
+<p>Feito esses exemplos, sinta-se livre para testar o compilador!</p>
+<div class="highlight"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="s">&quot;a&quot;</span> <span class="o">&gt;</span> <span class="s">&quot;b&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">200</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="section" id="operadores-relacionais-compostos">
+<h2>OPERADORES RELACIONAIS COMPOSTOS</h2>
+<p>A linguagem C++ possui 2 outros operadores que são formados pela junção de 2 operadores relacionais simples. Esses operadores funcionam como atalhos e evitam que tenhamos que concatenar 2 expressões com conectivos lógicos.</p>
+<p>Ou seja, podemos verificar se um membro é maior ou menor, porém, verificamos também se os membros são iguais. Dessa forma, estamos fazendo verificações utilizando um único operador.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="61%" />
+<col width="39%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Operação</td>
+<td>Operador</td>
+</tr>
+<tr><td>Maior ou igual a</td>
+<td><tt class="docutils literal">&gt;=</tt></td>
+</tr>
+<tr><td>Menor ou igual a</td>
+<td><tt class="docutils literal">&lt;=</tt></td>
+</tr>
+</tbody>
+</table>
+<p>A seguir, vamos realizar alguns exemplos na prática para estudar os resultados que o compilador enviará para a saída padrão. Digite as seguintes expressões e, obviamente, sinta-se livre para criar as suas próprias!</p>
+<div class="highlight"><pre><span></span><span class="n">cout</span> <span class="p">&lt;&lt;</span> <span class="p">(</span><span class="m">1</span> <span class="p">&gt;=</span> <span class="m">1</span><span class="p">)</span> <span class="p">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="p">&lt;&lt;</span> <span class="p">(</span><span class="s">&quot;x&quot;</span> <span class="p">&gt;</span> <span class="s">&quot;y&quot;</span><span class="p">)</span> <span class="p">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="p">&lt;&lt;</span> <span class="p">(</span><span class="s">&quot;10&quot;</span> <span class="p">&gt;</span> <span class="s">&quot;10&quot;</span><span class="p">)</span> <span class="p">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</pre></div>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
@@ -415,7 +491,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/operadores.html">operadores</a>, 	<a href="http://excript.com/tag/operadores-relacionais.html">operadores relacionais</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

@@ -16,7 +16,7 @@
 <link rel="canonical" href="http://excript.com/cpp/operador-logico-cpp.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="curso,cpp" />
+        <meta name="keywords" content="curso,cpp,operador,operador lógico,conectivo,conectivo lógico,and,or,blog" />
     <meta name="description" content="Nesta aula estudaremos os operadores lógicos da linguagem C++, ou seja, aprenderemos como podemos construir expressões que contenham sub-expressões e assim, obter o valor lógico da relação entre várias expressões lógicas." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -30,6 +30,13 @@
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
+            <meta property="article:tag" content="operador" />
+            <meta property="article:tag" content="operador lógico" />
+            <meta property="article:tag" content="conectivo" />
+            <meta property="article:tag" content="conectivo lógico" />
+            <meta property="article:tag" content="and" />
+            <meta property="article:tag" content="or" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -352,24 +359,192 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<p>Operadores lógicos ou então, conectivos lógicos, representam o cerne da lógica fundamental. O C++ utiliza basicamente 2 conectivos lógicos emprestado da matemática, são eles:</p>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<p>Os <strong>Operadores Lógicos</strong>, também chamados de <strong>Conectivos Lógicos</strong> formam, junto com os <strong>Operadores Relacionais</strong>, a base lógica da filosofia, matemática e programação. Por isso, estes conceitos são as ferramentas que utilizaremos na construção de todas expressões lógicas. Compreender e saber aplicar ambos conceitos, significa que temos domínio da lógica elementar e, por conseguinte, o entendimento da programação.</p>
+<p>Enquanto os <strong>Operadores Relacionais</strong> estabelecem as relações, os <strong>Conectivos</strong> irão ligar as <strong>Expressões Lógicas</strong> das relações, dando origem a novas expressões compostas por 2 ou mais sub-expressões.</p>
+<p>Por fim, temos que programar <strong>é dizer ao computador o que deve ser feito</strong> e, os <strong>Conectivos Lógicos</strong> e os <strong>Operadores Relacionais</strong> serão os responsáveis por decidirem, ao analisar os valores, quais blocos de códigos deverão ser executados.</p>
+</div>
+<div class="section" id="conectivos-logicos">
+<h2>CONECTIVOS LÓGICOS</h2>
+<p>Os <strong>Operadores Lógicos</strong> unem 2 ou mais expressões, dando origem a uma nova expressão que será avaliada independentemente. O resultado lógico será a avaliação de cada sub-expressão. Toda expressão lógica avaliada resulta num valor chamado de valor lógico.</p>
+<p>Com os operadores relacionais verificamos relações entre o operando a esquerda com o operando a direita do operador relacional. Como resposta a cada expressão avaliada, teremos um valor Booleano, isto é, verdadeiro (True) ou falso (False).</p>
+<p>Os <strong>conectivos lógicos</strong> permitem a união de 2 ou mais expressões, e assim, temos uma nova expressão e seu valor lógico será o resultado das sub-expressões juntas.</p>
+</div>
+<div class="section" id="valor-logico">
+<h2>VALOR LÓGICO</h2>
+<p>O <strong>valor lógico</strong> é a base de toda a computação. Há 2 valores lógicos possíveis: verdadeiro ou falso, também chamado de ligado ou desligado. Os 2 valores lógicos possíveis são representados matematicamente pelos números 0 (falso) e 1 (true).</p>
+<p>Toda expressão avaliada na computação de maneira geral, resulta num <strong>valor lógico</strong>, isto é, ou a expressão é verdadeira, ou a expressão é falsa.</p>
+</div>
+<div class="section" id="id1">
+<h2>CONECTIVOS LÓGICOS</h2>
+<p>As linguagens de programação utilizam os <strong>Conectivos Lógicos</strong> da lógica formal, ou melhor, da lógica Aristotélica para a construção de expressões. Existem 2 conectivos e, mesmo que não os conheçamos formalmente, fazemos uso dos <strong>conectivos lógicos</strong> constantemente.</p>
+<blockquote>
 <ol class="arabic simple">
-<li>Conectivo de conjunção - <cite>^</cite> - <cite>E</cite></li>
-<li>Conectivo de disjunção - <cite>v</cite> - <cite>OU</cite></li>
+<li>Conectivo de conjunção</li>
+<li>Conectivo de disjunção</li>
 </ol>
-<div class="section" id="conectivo-e">
-<h2>CONECTIVO ( E )</h2>
-<p>O conectivo E é utilizado nas expressões em que desejamos que todas as condições sejam verdadeiras, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="n">var1</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">E</span> <span class="n">var2</span> <span class="o">==</span> <span class="mi">100</span>
+</blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="31%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Expressão</td>
+<td>Português</td>
+<td>C#</td>
+</tr>
+<tr><td>conjunção</td>
+<td><tt class="docutils literal">E</tt></td>
+<td><tt class="docutils literal">&amp;&amp;</tt></td>
+</tr>
+<tr><td>disjunção</td>
+<td><tt class="docutils literal">OU</tt></td>
+<td><tt class="docutils literal">||</tt></td>
+</tr>
+</tbody>
+</table>
+<p>Por exemplo, a simples frase <tt class="docutils literal">A e B são caracteres iguais</tt> implica numa expressão lógica que foi representada textualmente. Porém, está pode ser facilmente escrita matematicamente, ou então, com o uso qualquer linguagem de programação.</p>
+<p>É por isso que temos que olhar para as Linguagens de Programação, como sendo formas ou estilos de <strong>Notação</strong>, que utilizamos para representar e em seguida executar expressões numa sequência determinada.</p>
+<p>A notação matemática não é diferente, porém, a mesma é comumente utilizada para representar <strong>sentenças matemáticas</strong>, logo, é uma notação que possui um objetivo diferente e que tem um propósito diferente. A linguagem C# não permite não contempla a notação matemática, por isso, temos que utilizar a notação aqui estudada.</p>
+<p>Por fim, os <strong>conectivos lógicos</strong> devem ser entendidos como ferramentas de notação utilizadas para unir expressões.</p>
+</div>
+<div class="section" id="avaliacao-de-expressoes">
+<h2>AVALIAÇÃO DE EXPRESSÕES</h2>
+<p>O interpretador .NET avalia cada proposição (expressão) isoladamente e atribui a esta um dos 2 valores lógicos.</p>
+<p>Por padrão, <strong>todas as expressão são avaliadas</strong> se são ou não verdadeiras.</p>
+</div>
+<div class="section" id="tabela-de-valores-logicos">
+<h2>TABELA DE VALORES LÓGICOS</h2>
+<p>A <strong>Tabela de Valores Lógicos</strong> é uma tabela que mostra o resultado da avaliação de 2 valores lógicos. É importante observar que <strong>essa tabela NÃO uma convenção</strong>, mas sim, o resultado da dedução lógica e que você pode facilmente comprovar cada resultado através da analise de cada proposições.</p>
+<div class="section" id="tabela-com-o-conectivo-de-conjuncao-e">
+<h3>TABELA COM O CONECTIVO DE CONJUNÇÃO <tt class="docutils literal">E</tt></h3>
+<p>Na tabela a seguir está sendo comparado 2 valores lógicos unidos pelo conectivo <tt class="docutils literal">E</tt>. Devemos ler cada linha da seguinte maneira:</p>
+<p>O valor lógico de (<strong>X</strong> e <strong>Y</strong>) é <strong>Z</strong>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="55%" />
+<col width="45%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Expressão</td>
+<td>Resultado</td>
+</tr>
+<tr><td>True <strong>E</strong> True</td>
+<td><strong>True</strong></td>
+</tr>
+<tr><td>True <strong>E</strong> False</td>
+<td><strong>False</strong></td>
+</tr>
+<tr><td>False <strong>E</strong> True</td>
+<td><strong>False</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tabela-com-o-conectivo-de-disjuncao-ou">
+<h3>TABELA COM O CONECTIVO DE DISJUNÇÃO <tt class="docutils literal">OU</tt></h3>
+<p>Na tabela a seguir está sendo comparado 2 valores lógicos unidos pelo conectivo <tt class="docutils literal">OU</tt>. Devemos ler cada linha da seguinte maneira:</p>
+<p>O valor lógico de (<strong>X</strong> ou <strong>Y</strong>) é <strong>Z</strong>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="60%" />
+<col width="40%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Expressão</td>
+<td>Resultado</td>
+</tr>
+<tr><td>True <strong>OU</strong> False</td>
+<td><strong>True</strong></td>
+</tr>
+<tr><td>False <strong>OU</strong> True</td>
+<td><strong>True</strong></td>
+</tr>
+<tr><td>True <strong>OU</strong> True</td>
+<td><strong>True</strong></td>
+</tr>
+<tr><td>False <strong>OU</strong> False</td>
+<td><strong>False</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="o-conectivo-de-conjuncao-e">
+<h2>O CONECTIVO DE CONJUNÇÃO <tt class="docutils literal">E</tt></h2>
+<p>O <strong>Conectivo Lógico de Conjunção</strong> <tt class="docutils literal">||</tt> une a expressão a sua esquerda com a expressão a sua direita. Expressões com o uso do <strong>Conectivo de Conjunção</strong> dão origem a frases em Português, mais ou menos assim: <strong>X</strong> é verdadeiro e <strong>Y</strong> é verdadeiro?</p>
+<p>Nas situações em que <strong>A</strong> for verdadeiro e <strong>B</strong> também, o resultado, segundo a tabela lógica, será também verdadeiro.</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">);</span>
 </pre></div>
-<p>Temos que a primeira condição deve ser verdadeira <cite>(var1 == 0)</cite> como também a segunda condição <cite>(var2 == 100)</cite>. Caso uma das condições não seja verdadeiro, o valor lógico ser falso. Assim, o conectivo E exige que todas as condições sejam verdadeiras para que o valor lógico da expressão seja verdadeiro.a</p>
+<p>No exemplo acima, temos uma <tt class="docutils literal">expressão lógica composta</tt> constituida por 2 expressões lógicas simples e ligadas pelo <tt class="docutils literal">conectivo de conjunção</tt>.</p>
+<p>Primeira expressão simples : (var1 == 0)
+Segunda expressão simples: (var1 == 0)
+Conectivo lógico de conjunção: <strong>&amp;&amp;</strong></p>
+<p>Para analisarmos uma <tt class="docutils literal">expressão lógica composta</tt>, precisamos antes, analisar suas <tt class="docutils literal">expressões lógicas simples</tt>.</p>
+<p>A primeira expressão, está perguntando se o valor da variável <tt class="docutils literal">x</tt> é maior do que zero. A variável <tt class="docutils literal">x</tt> está declarada na linha acima e inicializada com o valor 1, por isso, a primeira expressão é verdadeira.</p>
+<p>A segunda expressão, pergunta se o valor da variável <tt class="docutils literal">x</tt> é menor do que 100. O valor da variável <tt class="docutils literal">x</tt> é igual a 1 e por isso é menor do que 100. Analisado ambas expressões,acabamos por ter uma nova expressão, como pode ser visto abaixo.</p>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="n">True</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span>
+</pre></div>
+<p>No código acima, temos a mesma expressão do exemplo anterior, porém, substituirmos as duas <strong>expressões lógicas simples</strong> pelos seus respectivos <strong>valores lógicos</strong>, isto é, o valor decorrente da <strong>análise lógica</strong>.</p>
+<p>A expressão <tt class="docutils literal">(True) &amp;&amp; (True)</tt> se comparada com a <strong>Tabela Lógica de Valores</strong>, tem-se que o valor decorrente dessa segunda análise, constituida por 2 valores lógicos ligados pelo <strong>conectivo de ligação E</strong>, será o <strong>valor lógico</strong> <tt class="docutils literal">True</tt>.</p>
 </div>
 <div class="section" id="conectivo-ou">
 <h2>CONECTIVO ( OU )</h2>
-<p>O conectivo OU diz que uma das expressões deve ser verdadeira, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="n">var1</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">OU</span> <span class="n">var2</span> <span class="o">==</span> <span class="mi">100</span>
+<p>O <strong>conectivo lógico de disjunção</strong> <strong>OU</strong> liga a expressão a sua esquerda a expressão a sua direita. Expressões com o uso do <strong>conectivo de disjunção</strong> dão origem a frases em Português, mais ou menos assim: <strong>X</strong> é verdadeiro ou <strong>Y</strong> é verdadeiro?</p>
+<p>O <strong>operador lógico OU</strong> sempre precisará que uma das 2 <strong>expressões simples</strong> avaliadas sejam verdadeiras para que avaliação seja verdadeira. No caso onde ambas <strong>expressões simples</strong> forem verdadeiras, o resultado também será verdadeiro, porém, se ambas expressões forem falsas, o resultado lógico será falso.</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
-<p>Assim, temos que se a primeira condição for verdadeira <cite>(var1 == 0)</cite> ou então, a segunda condição <cite>(var2 == 100)</cite>, então o valor de toda a expressão será verdadeiro.</p>
+<p>A <strong>expressão lógica composta</strong> que temos no código acima, será desmembrada como estudado anteriormente, e agora, para que a avaliação seja verdadeira, uma das 2 expressões precisam ser verdadeiras.</p>
+<p>A primeira expressão verifica se <tt class="docutils literal">(x &gt; 10)</tt>. A variável``x`` está declarada na linha acima e inicializada com o valor igual a 1, logo, essa expressão é falsa, até porque, o valor de <tt class="docutils literal">x</tt> <strong>não é maior</strong> do que 10.</p>
+<p>A segunda expressão <tt class="docutils literal">(x &lt; 100)</tt> está perguntando se o valor da variável <tt class="docutils literal">x</tt> <strong>é menor</strong> do que o número 100. Essa expressão é verdadeira, até porque, o número 1 <strong>é menor</strong> do que o número 100.</p>
+<p>No código a seguir, temos a expressão que será originadas a partir do código anterior.</p>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="n">False</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span>
+</pre></div>
+<p>Agora, temos que o primeiro <strong>valor lógico</strong> é falso, enquanto o segundo é verdadeiro. Esses valores estão ligados pelo <strong>conectivo de disjunção</strong> utilizado para avaliar se uma das expressões é verdadeira. Como o segundo valor lógico é verdadeiro, o valor decorrente dessa <strong>análise lógica</strong> será verdadeiro.</p>
+</div>
+<div class="section" id="expressoes-simples-e-compostas">
+<h2>EXPRESSÕES SIMPLES E COMPOSTAS</h2>
+<p>Os <strong>operadores relacionais</strong> obtém a relação entre os operandos e por isso, podemos chamar esse tipo de expressão como sendo, <strong>expressões simples</strong>.</p>
+<p>As <strong>expressões compostas</strong>, por sua vez, são a união de 2 ou mais expressões simples e ligadas por um <strong>conectivo lógico</strong>. A seguir, temos um exemplo utilizando o <strong>conectivo lógico de conjunção</strong> unindo assim, 2 expressões e dando origem a uma nova <strong>expressão lógica</strong>.</p>
+<div class="highlight"><pre><span></span><span class="c1">//  EXEMPLO</span>
+<span class="p">(</span><span class="n">isso</span><span class="p">)</span> <span class="n">E</span> <span class="p">(</span><span class="n">isso</span><span class="p">)</span>
+
+<span class="c1">// A EXPRESSAO ACIMA ORIGINOU:</span>
+<span class="n">x</span> <span class="n">E</span> <span class="n">y</span>
+</pre></div>
+<p>Como podemos ver, em ambos exemplos, estamos unindo 2 membros, mas não estamos perguntando nada. Porém, a frase correta e que é utilizada pela grande maioria das linguagens de programação, senão todas, é a seguinte:</p>
+<p><tt class="docutils literal">&quot;A&quot; é verdadeiro e &quot;B&quot; é verdadeiro</tt>. Chamamos isso de <tt class="docutils literal">expressão lógica</tt> ou melhor, <tt class="docutils literal">expressão lógica composta</tt> até porque, a expressão se origina de duas outras expressões.</p>
+</div>
+<div class="section" id="construindo-expressoes">
+<h2>CONSTRUINDO EXPRESSÕES</h2>
+<p>A linguagem C# possui algumas regras sintáticas para uso dos <strong>Conectivos Lógicos</strong>.
+Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com parêntesis, por exemplo:</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>No código acima, no cabeçalho da tomada de decisão, definimos 2 expressões. A primeira <tt class="docutils literal">num &gt;= 0</tt> e a segunda <tt class="docutils literal">num &lt;= 10</tt>. Devido ao fato que ambas expressões foram ligadas com um <strong>Conectivo Lógico</strong>, foi necessário envolver a expressão originada com parêntesis.</p>
+<p>Da mesma forma, não é permitido isolar cada expressão sem não envolver ambas com parêntesis. O código a seguir não compila, até porque, as expressões que estão sendo ligadas pelo operador <tt class="docutils literal">&amp;&amp;</tt> não estão agrupadas com parêntesis.</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+<p>O código a seguir, corrige o problema do código acima, isolando cada expressão com parêntesis e delimitando a expressão resultante também.</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">)</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
@@ -439,7 +614,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>            </div>
+	<a href="http://excript.com/tag/curso.html">curso</a>, 	<a href="http://excript.com/tag/cpp.html">cpp</a>, 	<a href="http://excript.com/tag/operador.html">operador</a>, 	<a href="http://excript.com/tag/operador-logico.html">operador lógico</a>, 	<a href="http://excript.com/tag/conectivo.html">conectivo</a>, 	<a href="http://excript.com/tag/conectivo-logico.html">conectivo lógico</a>, 	<a href="http://excript.com/tag/and.html">and</a>, 	<a href="http://excript.com/tag/or.html">or</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">

@@ -130,7 +130,7 @@
 &lt;/div&gt;
 &lt;div class="section" id="divisao-por-zero"&gt;
 &lt;h2&gt;DIVISÃO POR ZERO&lt;/h2&gt;
-&lt;p&gt;É importante tomar cuidado com a divisão por zero, até porque, o C# levantará uma excessão se tentarmos dividir qualquer número por zero, veja o exemplo a seguir:&lt;/p&gt;
+&lt;p&gt;É importante tomar cuidado com a divisão por zero, até porque, o C# levantará uma exceção se tentarmos dividir qualquer número por zero, veja o exemplo a seguir:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//soma&lt;/span&gt;
 &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;divi&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;20&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -657,7 +657,7 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
     &lt;/div&gt;
 &lt;div class="section" id="operadores-relacionais-ou-operadores-comparativos"&gt;
 &lt;h2&gt;OPERADORES RELACIONAIS ou OPERADORES COMPARATIVOS&lt;/h2&gt;
-&lt;p&gt;O &lt;strong&gt;Operador Relacional&lt;/strong&gt; é aquele que …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+&lt;p&gt;O &lt;strong&gt;Operador Relacional&lt;/strong&gt; é quem estabelece …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -673,12 +673,12 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
     &lt;/div&gt;
 &lt;div class="section" id="operadores-relacionais-ou-operadores-comparativos"&gt;
 &lt;h2&gt;OPERADORES RELACIONAIS ou OPERADORES COMPARATIVOS&lt;/h2&gt;
-&lt;p&gt;O &lt;strong&gt;Operador Relacional&lt;/strong&gt; é aquele que obtém a relação entre 2 membros, isto é, entre o  membro a esquerda com o membro a direita.&lt;/p&gt;
-&lt;p&gt;É comum a necessidade de estabelecer a relação entre operandos para que então, o nosso programa decida o que deve ser feito. A linguagem C# trabalha com os operadores relacionais, também chamados de operadores comparativos, da mesma forma que a maioria das outras linguagens, tais como C, C++, Java, Python e etc.&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;Operador Relacional&lt;/strong&gt; é quem estabelece a relação entre 2 membros, isto é, entre o membro a esquerda com o membro a direita.&lt;/p&gt;
+&lt;p&gt;É comum a necessidade de estabelecer a relação entre operandos para que então, nossos programas decidam o que deve ser feito. A linguagem C# trabalha com os operadores relacionais, também chamados de operadores comparativos, da mesma forma que a maioria das outras linguagens, tais como C, C++, Java, Python e etc.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="operadores-relacionais-simples"&gt;
 &lt;h2&gt;OPERADORES RELACIONAIS SIMPLES&lt;/h2&gt;
-&lt;p&gt;Chamamos de &lt;strong&gt;Operador Relacional Simples&lt;/strong&gt; todo operador constituído por um único simbolo, por exemplo, o operador &lt;strong&gt;maior que&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&amp;gt;&lt;/tt&gt; , &lt;strong&gt;menor que&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&amp;lt;&lt;/tt&gt; ou &lt;strong&gt;igual que&lt;/strong&gt; &lt;tt class="docutils literal"&gt;==&lt;/tt&gt;. Na tabela a seguir temos os operadores e a operação que o mesmo realiza.&lt;/p&gt;
+&lt;p&gt;Chamamos de &lt;strong&gt;Operador Relacional Simples&lt;/strong&gt; todo operador constituído por um único símbolo, por exemplo, o operador &lt;strong&gt;maior que&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&amp;gt;&lt;/tt&gt; , &lt;strong&gt;menor que&lt;/strong&gt; &lt;tt class="docutils literal"&gt;&amp;lt;&lt;/tt&gt; ou &lt;strong&gt;igual que&lt;/strong&gt; &lt;tt class="docutils literal"&gt;==&lt;/tt&gt;. Na tabela a seguir temos os operadores e a operação que o mesmo realiza.&lt;/p&gt;
 &lt;table border="1" class="docutils"&gt;
 &lt;colgroup&gt;
 &lt;col width="57%" /&gt;
@@ -708,7 +708,7 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
 &lt;p&gt;Para obtermos a relação entre 2 membros, temos que utilizar a seguinte estrutura:&lt;/p&gt;
 &lt;blockquote&gt;
 &amp;lt;&lt;tt class="docutils literal"&gt;membro a esquerda&lt;/tt&gt;&amp;gt; &lt;strong&gt;OPERADOR&lt;/strong&gt; &amp;lt;&lt;tt class="docutils literal"&gt;membro a direita&lt;/tt&gt;&amp;gt;&lt;/blockquote&gt;
-&lt;p&gt;A alteração da ordem em que os operandos estão dispostos altera a relação, salvo se ambos forem iguais.&lt;/p&gt;
+&lt;p&gt;A alteração da ordem em que os operandos estão dispostos altera a análise da sua relação, salvo se ambos forem iguais.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;a&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;b&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
@@ -718,7 +718,7 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
 &lt;/div&gt;
 &lt;div class="section" id="operadores-relacionais-compostos"&gt;
 &lt;h2&gt;OPERADORES RELACIONAIS COMPOSTOS&lt;/h2&gt;
-&lt;p&gt;A linguagem C# possui 2 outros operadores que são formados com a junção de 2 operadores relacionais simples. Esses operadores funcionam como atalhos e evita que tenhamos que concatenar sempre 2 expressões. Como aprenderemos nas próximas aulas, as relações compostas utilizam os conectores lógicos &lt;tt class="docutils literal"&gt;e&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;ou&lt;/tt&gt;, ou então, &lt;tt class="docutils literal"&gt;$$&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;||&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;A linguagem C# possui 2 outros operadores que são formados com a junção de 2 operadores relacionais simples. Esses operadores funcionam como atalhos e evita que tenhamos que concatenar 2 expressões com conectivos lógicos. Como aprenderemos nas próximas aulas, as relações compostas utilizam os conectores lógicos &lt;tt class="docutils literal"&gt;e&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;ou&lt;/tt&gt;, ou então, &lt;tt class="docutils literal"&gt;$$&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;||&lt;/tt&gt;.&lt;/p&gt;
 &lt;table border="1" class="docutils"&gt;
 &lt;colgroup&gt;
 &lt;col width="64%" /&gt;
