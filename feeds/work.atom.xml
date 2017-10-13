@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - work</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/work.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-10-02T10:00:00-03:00</updated><entry><title>Gerenciando marcações TODO com a IDE PyCharm</title><link href="http://excript.com/python/pycharm-todo.html" rel="alternate"></link><published>2017-10-02T10:00:00-03:00</published><updated>2017-10-02T10:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-10-02:/python/pycharm-todo.html</id><summary type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Neste artigo aprenderemos como adicionar marcações dentro do nosso código e gerenciar essas marcações pela View ToDo do PyCharm&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="view-todo-do-pycharm"&gt;
+&lt;h2&gt;VIEW TODO DO PyCharm&lt;/h2&gt;
+&lt;img alt="View ToDo do PyCharm" src="../images/blog/pycharm-todo.png" /&gt;
+&lt;p&gt;O PyCharm possui um excelente recurso para organizar nosso trabalho pela adição de uma palavra chave em comentários e a descrição do que devemos fazer. Este recurso …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
+        &lt;table style="margin: 0"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td class="content" style="border-left: 0"&gt;
+                        &lt;div class="paragraph data-line"&gt;
+                            &lt;p&gt; Neste artigo aprenderemos como adicionar marcações dentro do nosso código e gerenciar essas marcações pela View ToDo do PyCharm&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;div class="section" id="view-todo-do-pycharm"&gt;
+&lt;h2&gt;VIEW TODO DO PyCharm&lt;/h2&gt;
+&lt;img alt="View ToDo do PyCharm" src="../images/blog/pycharm-todo.png" /&gt;
+&lt;p&gt;O PyCharm possui um excelente recurso para organizar nosso trabalho pela adição de uma palavra chave em comentários e a descrição do que devemos fazer. Este recurso ainda que simples de ser utilizado causa bastante dúvidas e problemas pelo fato de que muitos tentam inserir tarefas dentro de projetos gigantes e o PyCharm não sabe por qual projeto se orientar.&lt;/p&gt;
+&lt;p&gt;Portanto, para que possamos testar o recurso de adicionarmos marcações dentro do nosso código e esses itens irem sendo adicionados na lista ToDo, façamos o seguinte.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Inicialmente, crie um novo diretório&lt;/li&gt;
+&lt;li&gt;Criado o diretório, vamos no PyCharm em File -&amp;gt; New Project e em seguida, vamos até o diretório que acavamos de criar&lt;/li&gt;
+&lt;li&gt;Após o projeto criado, vamos adicionar um arquivo de nome main.py&lt;/li&gt;
+&lt;li&gt;No arquivo main.py vamos adicionar as seguintes linhas de código:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#todo: o que fazer 1&lt;/span&gt;
+&lt;span class="c1"&gt;#todo: o que fazer 2&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;testando o recurso ToDo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;#todo: o que fazer 3&lt;/span&gt;
+&lt;span class="c1"&gt;#todo: o que fazer 4&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Feito isso, pressione as teclas Alt + 6 ou vá no menu View -&amp;gt; TODO. Feito isso, será aberta uma View na parte inferior do PyCharm, semelhante ao que temos na imagem a seguir:&lt;/p&gt;
+&lt;img alt="View ToDo do PyCharm" src="../images/blog/pycharm-todo2.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="personalizando-a-marcacao"&gt;
+&lt;h2&gt;PERSONALIZANDO A MARCAÇÃO&lt;/h2&gt;
+&lt;p&gt;Estudamos a ferramenta principal para o gerenciamento de marcações que adicionamos em nosso código, porém, podemos ir muito mais longe adicionando marcações personalizadas e até, definindo diferentes estilizações.&lt;/p&gt;
+&lt;p&gt;Por exemplo, podemos definir a marcação &amp;quot;estudo:&amp;quot;, logo, sempre que essa palavra for reconhecida dentro dos arquivos do nosso projeto, a linha será adicionado à View TODO do PyCharm.&lt;/p&gt;
+&lt;p&gt;Vamos adicionar a marcação estudo. Pra isso, vamos abrir a telas de configurações do PyCharm. Pressione as tecals Ctrl + Alt + S ou então, vá no menu File -&amp;gt; Settings. Feito isso, a tela contendo todas as configurações do PyCharm será a aberta. O primeiro campo permite que façamos uma busca dentro das várias seções de configuração, vamos digitar a palavra &amp;quot;todo&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Feito isso, a sua tela deverá se parecer com a imagem que temos abaixo:&lt;/p&gt;
+&lt;img alt="View ToDo do PyCharm para adicionarmos marcações personalizadasz\" src="../images/blog/pycharm-todo-personalizado1.png" /&gt;
+&lt;/div&gt;
+</content><category term="python"></category><category term="pycharm"></category></entry></feed>

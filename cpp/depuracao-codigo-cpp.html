@@ -319,7 +319,7 @@ eXcript            </a>
                             <td><a href="http://excript.com/cpp/lacos-aninhados-cpp.html" >Laços Aninhados</a></td>
                             <td><a href="http://excript.com/cpp/lacos-aninhados-cpp.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/cpp/funcao-matricial-cpp.html" >Função Matricial</a></td>
+                            <td><a href="http://excript.com/cpp/funcao-matricial-cpp.html" >Função Matricial em C++</a></td>
                             <td><a href="http://excript.com/cpp/funcao-matricial-cpp.html" ></a></td>
                         </tr><tr>
                             <td><a href="http://excript.com/cpp/manipulando-planilhas-cpp.html" >Manipulando Planilhas em C++</a></td>
@@ -352,28 +352,94 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<p>Em programação, depurar, ou então, depuração, é a ação de inspecionar internamente a execução de um programa, bem como, o valor de suas variáveis e todas as outras informações que programa estiver manipulando em um determinado momento.</p>
-<p>A depuração não é uma ferramenta comumente utilizada durante o estudo, porém, achei válido ensinar essa técnica desde o início do curso porque conseguimos entender como que um programa funciona internamente.</p>
-<p>Na programação, é comum ocorrem erros devido ao fato de algumas variáveis estarem armazenando valores que foram utilizados numa outra operação. Logo, o emprego desses valores numa outra execução, não possui sentido e pode ocasionar os mais diversos tipos de erros.</p>
-<p>Essa é uma das tantas situações onde precisamos depurar o nosso programa, ou seja: nosso programa está contendo sujeira em algumas variáveis em determinadas ocasiões. Como podemos saber que valores são esses? Ou melhor, como podemos saber que o erro está sendo ocasionado por sujeira na memória?
-Não tenha dúvida! Essas são situações onde o melhor a se fazer é inspecionar as variáveis em tempo de execução.</p>
-<div class="section" id="exemplo-feito-em-aula">
-<h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
-
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<div class="section" id="nota">
+<h2>NOTA</h2>
+<p>O texto a seguir foi adaptado <a class="reference external" href="http://excript.com/python/depuracao-pycharm-python.html">a partir da aula de depuração em Python com o PyCharm</a>.</p>
+</div>
+<div class="section" id="depuracao">
+<h2>DEPURAÇÃO</h2>
+<img alt="IDE PyCharm em modo de depuração com um breakpoint na primeira linha" src="../images/curso-de-python/depuracao-pycharm.png" />
+<p>Depurar é a técnica de programação que possibilita manipular a execução do programa e dizer qual linha deve ser executada para verificar os valores das variáveis.</p>
+<p>O dicionário Aurélio, diz que depurar significa: <strong>Procurar, detectar e corrigir erros em programa</strong> .</p>
+<p>Atualmente, ferramenta que permitem a depuração de código estão presente em qualquer IDE para proporcionarem a inspeção interna do código durante a execução da aplicação. Há diversos recursos que permitem executar todo o código passo-a-passo e a cada etapa verificar o valor das variáveis e o que o nosso programa está de fato executando, ou seja, quais funções são  invocadas e em qual momento serão.</p>
+<p>É correto dizer que depurar um código significa a execução de cada linha vagarosamente, onde o programador é quem diz quando que determinada instrução deve ser executada. E também, a cada linha executada, é possível verificar o valor das variáveis que estão no escopo local e global</p>
+<p>Algumas IDEs permitem a alteração do valor das variáveis e a execução de código paralelamente. Desta forma, conseguimos simular situações onde talvez, não fosse possível através do nosso programa.</p>
+<p>A depuração é comumente utilizada na detecção de erros e no entendimento do estado da nossa aplicação, do valor contido em cada variável, num determinado instante, numa determinada função ou objeto.</p>
+<p>Podemos dizer que é possível depurar qualquer código de qualquer linguagem, até porque, esse é recurso é, atualmente, considerado elementar para a correta construção de software. Algumas vezes, a depuração consiste num recurso disponibilizado por uma determinada IDE, noutras vezes, a capacidade de depuração acaba sendo uma ferramenta disponibilizada pela linguagem, isto é, a Máquina Virtual ou o Compilador da linguagem é quem disponibilizam esses recursos e capacidades.</p>
+<p>Neste Curso de C++, estamos utilizando tanto a <a class="reference external" href="https://www.jetbrains.com/clion/">IDE CLion</a> como também o <a class="reference external" href="http://www.codeblocks.org/">Code::Blocks</a> e ambas IDE's oferecem grande capacidade para depuração e análise interna em tempo de execução.</p>
+</div>
+<div class="section" id="o-recurso-de-depuracao">
+<h2>O RECURSO DE DEPURAÇÃO</h2>
+<p>A depuração é um recurso disponibilizado pelo compilador ou interpretador da linguagem. Portanto, nativamente, conseguimos depurar o código através da linha de comando, semelhante a forma como executamos o código.</p>
+<p>As IDE, ao implementarem os recursos de depuração, estão de fato negociando com o compilador ou interpretador o local em que deverá haver interrupções e todos os demais recursos.</p>
+<p>É importante sabermos que não são as IDE que implementam a capacidade de depurar o código, elas apenas dialogam com o compilador ou interpretador e fornecem uma forma gráfica para depuração.</p>
+</div>
+<div class="section" id="primordios-da-depuracao">
+<h2>PRIMÓRDIOS DA DEPURAÇÃO</h2>
+<p>Todas as vezes em que utilizamos a função <code>cout()</code> enviando valores à saída padrão, estamos de certa forma, depurando &quot;inspecionando&quot; nosso código de forma arcaica. Ou seja, estamos inspecionando o valor das variáveis e o estado do programa utilizando a função print.</p>
+<p>É comum que novas linguagens de programação não tragam a funcionalidade de depurar o código implementado, portanto, o programar é obrigado a trabalhar enviando para a saída padrão o valor dos membros que ele deseja conhecer os valores.</p>
+<p>Linguagens como JavaScript, PHP e ASP são exemplos notáveis de linguagens que foram lançadas no mercado sem que os desenvolvedores disponibilizassem uma forma de depurar o código de forma eficiente.</p>
+</div>
+<div class="section" id="performance">
+<h2>PERFORMANCE</h2>
+<p>A execução em modo de depuração só deve ser executada quando necessário, até porque, a perfomance é muito inferior ao que temos com a execução normal. Por isso, só execute um código em forma de depuração quando houver um razão para isso.</p>
+</div>
+<div class="section" id="o-que-significa-cursor-de-execucao">
+<h2>O QUE SIGNIFICA <cite>CURSOR DE EXECUÇÃO</cite>?</h2>
+<p>Cursor de execução é o termo que utilizamos para nos referirmos a linha de código em que estamos, ou melhor, na linha onde estamos.</p>
+<p>Na imagem a seguir podemos ver a execução de um simples código. Observe na linha 9, em azul, o cursor de execução e na linha 11 podemos ver o uso de um breakpoint. É importante lembrar que o sistema de cor pode ser personalizado, portanto, não existe um padrão e não podemos nos referir ao cursor ou ao breakpoint como sendo uma linha de uma determinada cor.</p>
+<img alt="IDE PyCharm com breakpoint e cursor de execução" src="../images/curso-de-python/pycharm-cursor-breakpoint.png" />
+</div>
+<div class="section" id="o-que-significa-breakpoint">
+<h2>O QUE SIGNIFICA <tt class="docutils literal">breakpoint</tt>?</h2>
+<p>A palavra <tt class="docutils literal">breakpoint</tt>, significa, na depuração de programas, o número da linha em que a execução do código será interrompido para o início da depuração.</p>
+<p>Esse é um recurso permite interrompermos a execução do nosso programa num determinado ponto. Assim, podemos marcar em qual local do programa desejamos iniciar a depuração e quando o cursor de execução chegar na linha demarcada, a execução será interrompida e a IDE trará o código em que ocorreu a interrupção.</p>
+<p>Na imagem acima, é possível ver um breakpoint na primeira linha da IDE PyCharm. Normalmente, os <tt class="docutils literal">breakpoints</tt> são representados por uma bola vermelha no canto esquerdo [margem] dos editores de código.</p>
+</div>
+<div class="section" id="o-modo-de-depuracao">
+<h2>O MODO DE DEPURAÇÃO</h2>
+<p>Ao executarmos um código em modo de depuração, teremos uma tela semelhante a que temos na imagem a seguir. Como podemos ver, os menus estão habilitados, até porque, estamos executando em modo de depuração.</p>
+<img alt="IDE PyCharm em modo de depuração com um breakpoint e menu com as opções" src="../images/curso-de-python/pycharm-in-debug.png" />
+</div>
+<div class="section" id="opcoes-de-execucao">
+<h2>OPÇÕES DE EXECUÇÃO</h2>
+<p>Normalmente, desejaremos somente executar a instrução em que o cursor está posicionado, noutras vezes, desejaremos depurar determinada função que será executada e noutras vezes, desejaremos finalizar a depuração da função e voltar ao fluxo anterior.</p>
+<p>Pra todas essas situações, há teclas de atalho que facilitam o trabalho e a verificação dos valores.</p>
+<p>Neste artigo utilizamos imagens da IDE PyCharm que possui a mesma base do CLion, portanto, todas as imagens e teclas de atalho são iguais ou então, muito semelhantes.</p>
+<ul class="simple">
+<li>Shift+F10 (Run): executa o script</li>
+<li>Shift+F9 (Debug): executa em modo de depuração (debug)</li>
+<li>Ctrl+F5 (Rerun): executa da mesma forma que a anterior</li>
+<li>Shift+Alt+F10 (Choose configuration and ru): exibe o menu que contém as configurações de execução e roda o script</li>
+<li>Shift+Alt+F9 (Choose configuration and debug): exibe o menu que contém as configurações de execução e roda o script em modo de depuração</li>
+<li>F8 (Step Over): executa a linha onde o cursor está</li>
+<li>F7 (Step Into): entra na função e posiciona o cursor na primeira linha</li>
+<li>Shift+F8(Step Out): termina a depuração da função e o cursor retorna ao local anterior</li>
+<li>Shift+Alt+F8 (Force Step Over): o cursor não entra no código da função mesmo que haja um breakpoint</li>
+</ul>
+</div>
+<div class="section" id="a-depuracao-como-estudo">
+<h2>A DEPURAÇÃO COMO ESTUDO</h2>
+<p>Neste artigo tratamos a depuração principalmente como uma ferramenta para o desenvolvimento e correção de problemas em nossos códigos, o que de fato está correto, porém, utilizar somente para isso é não aproveitar ao máximo o poder da ferramenta.</p>
+<p>A depuração deve ser utilizada durante toda a fase de estudo e, posteriormente, quando desejarmos entender como o interpretador do Python está lidando com determinada situação.</p>
+<p>Em vista de que temos a disposição todas as variáveis e que podemos criar e/ou invocar funções, devemos ver a depuração como um recurso que vai muito além de simplesmente procurar por erros e sim, como uma ferramenta que devemos utilizar durante todo o estudo do desenvolvimento de software.</p>
+</div>
+<div class="section" id="veja-tambem">
+<h2>VEJA TAMBÉM</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://excript.com/cpp/depuracao-codigo-cpp.html">Aula 35: Depuração de Código C++</a></li>
+<li><a class="reference external" href="http://excript.com/cpp/depuracao-codigo-cpp-parte2.html">Aula 36: Depuração de Código C++ (parte II)</a></li>
+<li><a class="reference external" href="http://excript.com/cpp/depurar-clion-cpp.html">Aula 37: Depurando com o Clion Código C++</a></li>
+<li><a class="reference external" href="http://excript.com/cpp/depurar-codeblock-cpp.html">Aula 38: Depurando com o Code::Block Código C++</a></li>
+</ul>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.jetbrains.com/help/pycharm/2016.1/running-and-debugging.html">Documentação oficial do PyCharm</a></li>
+<li><a class="reference external" href="https://www.jetbrains.com/clion/">IDE CLion</a></li>
+<li><a class="reference external" href="http://www.codeblocks.org/">IDE Code::Blocks</a></li>
+</ul>
 </div>
 
 				</div>

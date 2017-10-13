@@ -132,16 +132,17 @@ eXcript            </a>
 				<div class="row">
 					<div class="section" id="o-codigo-fonte-do-python">
 <h2>O CÓDIGO FONTE DO PYTHON</h2>
-<p>Muitos desenvolvedores trabalham com uma linguagem por anos sem nunca baixar o código-fonte do interpretador ou compilador mesmo estando disponível a todos e, podemos tanto acessá-lo pelo navegador, baixa-lo num arquivo compactado ou então, o que é o mais recomendado, utilizar o <a class="reference external" href="https://git-scm.com/">git</a> para baixar todos os arquivos e módulos para o nosso computador.</p>
-<p>Conheço essa realidade por experiência própria! Raríssimas foram as vezes em que baixei e analisei o código das ferramentas de código aberto que utilizo e, na maioria das vezes em que fiz o downloads do fontes para o disco local, foi porque o tutorial que estava utilizando exigia.</p>
+<p>Muitos desenvolvedores trabalham com uma linguagem por anos sem nunca baixar o código-fonte do interpretador ou compilador, mesmo estando disponível a todos. Podemos tanto acessar o código  pelo navegador, ou baixa-lo com alguma ferramenta de versionamento de código como o <a class="reference external" href="https://git-scm.com/">Git</a> ou então o Mercurial. Também existe a opção de baixar todo o pacote num arquivo compactado no site oficial do repositório onde os códigos estão disponibilizados.</p>
+<p>Conheço essa realidade por experiência própria! Raríssimas foram as vezes em que baixei e analisei o código das ferramentas de código aberto que utilizei e, na maioria das vezes em que fiz o downloads do fontes para o disco local, foi porque o tutorial que estava utilizando exigia.</p>
 <p>Até pouco tempo o Python utiliza o sistema de gerenciamento de versão Mercurial, porém, em vista de que o git se tornou por livre adoção dos desenvolvedores quase que um padrão, o código de todo o interpretador do Python e suas bibliotecas agora estão no Github e o mesmo se tornou o repositório oficial do projeto.</p>
-<p>Antes de acessarmos os repositório, é importante dizer, ou então relembrar, que o interpretador oficial do Python se chama CPython. Não é difícil de perceber que o caractere C a frente do nome Python indica que essa versão do interpretador foi</p>
+<p>Antes de acessarmos os repositório, é importante dizer, ou então relembrar, que o interpretador oficial do Python se chama CPython. Não é difícil de perceber que o caractere C a frente do nome Python indica que essa versão do interpretador foi escrita com a linguagem C.</p>
 </div>
 <div class="section" id="o-entry-point">
 <h2>O ENTRY POINT</h2>
 <p>O <tt class="docutils literal">Entry Point</tt> ou o ponto de entrada de uma aplicação é a nomenclatura utilizada para se referir a primeira função que é invocada na execução de um Script ou de uma aplicação.</p>
 <p>O interpretador do Python, por padrão, foi e continua sendo desenvolvido em C. No entanto, nem todos os módulos que chamamos de nativos são desenvolvidos em C e também, nem todos os módulos contidos numa instalação padrão foram escritos pela equipe de desenvolvedores do Python.</p>
 <p>Por exemplo, o SQLite está contido por padrão em todas versões do Python, o mesmo utiliza somente código C, porém, o seu desenvolvimento é feito por outro grupo de desenvolvedores.</p>
+<p>O código a seguir é o ponto inicial do interpretador do Python, ou seja, é por essa função que o interpretador inicia a execução.</p>
 <div class="highlight"><pre><span></span><span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">wchar_t</span> <span class="o">**</span><span class="n">argv_copy</span><span class="p">;</span>
@@ -229,7 +230,7 @@ eXcript            </a>
 <span class="p">}</span>
 <span class="cp">#endif</span>
 </pre></div>
-<p><a class="reference external" href="https://github.com/python/cpython/blob/master/Programs/python.c#L34">https://github.com/python/cpython/blob/master/Programs/python.c#L34</a></p>
+<p>Caso queiras ir no repositório onde estão os códigos fontes do Python e analisar todo o módulo, <a class="reference external" href="https://github.com/python/cpython/blob/master/Programs/python.c#L34">utilize este link que lhe direcionará a função em C que imprimimos acima</a>.</p>
 </div>
 
 				</div>

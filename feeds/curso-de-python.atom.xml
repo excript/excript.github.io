@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - curso de python</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/curso-de-python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-07-31T04:00:00-03:00</updated><entry><title>Alteração no uso da instrução global no Python 3.6</title><link href="http://excript.com/blog/variaveis-local-non-local.html" rel="alternate"></link><published>2017-07-31T04:00:00-03:00</published><updated>2017-07-31T04:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-07-31:/blog/variaveis-local-non-local.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - curso de python</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/curso-de-python.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2017-08-30T04:00:00-03:00</updated><entry><title>Alteração no uso da instrução global no Python 3.6</title><link href="http://excript.com/blog/variaveis-local-non-local.html" rel="alternate"></link><published>2017-08-30T04:00:00-03:00</published><updated>2017-08-30T04:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-08-30:/blog/variaveis-local-non-local.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -13,7 +13,9 @@
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;p&gt;A versão 3.6 do Python trouxe alterações que afetam códigos legados. Agora, para definir variáveis com a instrução &lt;tt class="docutils literal"&gt;global&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;nonlocal&lt;/tt&gt; é necessário que a mesma já esteja …&lt;/p&gt;</summary><content type="html">
+&lt;div class="section" id="instrucao-global"&gt;
+&lt;h2&gt;INSTRUÇÃO &lt;tt class="docutils literal"&gt;global&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;A &lt;a class="reference external" href="https://www.python.org/downloads/release/python-360/"&gt;versão 3.6 do Python&lt;/a&gt; trouxe alterações que afetam nossos códigos legados fazendo com que os mesmos deixem de ser executado. Ao definir variáveis com uso …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -27,32 +29,49 @@
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;p&gt;A versão 3.6 do Python trouxe alterações que afetam códigos legados. Agora, para definir variáveis com a instrução &lt;tt class="docutils literal"&gt;global&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;nonlocal&lt;/tt&gt; é necessário que a mesma já esteja declarada no escopo externo.&lt;/p&gt;
-&lt;p&gt;A não utilização desta prática resulta numa  exceção SintaxError e a aplicação é finalizada.&lt;/p&gt;
-&lt;p&gt;A seguir, há um exemplo de código legal que deixou de funcionar.&lt;/p&gt;
+&lt;div class="section" id="instrucao-global"&gt;
+&lt;h2&gt;INSTRUÇÃO &lt;tt class="docutils literal"&gt;global&lt;/tt&gt;&lt;/h2&gt;
+&lt;p&gt;A &lt;a class="reference external" href="https://www.python.org/downloads/release/python-360/"&gt;versão 3.6 do Python&lt;/a&gt; trouxe alterações que afetam nossos códigos legados fazendo com que os mesmos deixem de ser executado. Ao definir variáveis com uso da instrução &lt;tt class="docutils literal"&gt;global&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;nonlocal&lt;/tt&gt; será necessário que a mesma (a variável) já esteja declarada no escopo externo.&lt;/p&gt;
+&lt;p&gt;Código legados ou a não utilização desta nova norma resultará numa  exceção &lt;a class="reference external" href="https://docs.python.org/3/tutorial/errors.html#syntax-errors"&gt;SintaxError&lt;/a&gt;, fazendo com que a aplicação seja finalizada.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemplos-reais"&gt;
+&lt;h2&gt;EXEMPLOS REAIS&lt;/h2&gt;
+&lt;p&gt;Vamos estudar as mudanças analisando o que ocorrerá ao tentarmos executar um código antigo que não tenha ainda se adequado ou então, caso não trabalharmos seguindo as novas regras:&lt;/p&gt;
+&lt;p&gt;O exemplo a seguir mostra um código legado não adaptado.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
 
     &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
     &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;O código acima se executado produz a seguinte exceção:&lt;/p&gt;
+&lt;p&gt;O código acima, se executado, produzirá a seguinte exceção:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;main.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
     &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt;
 
 &lt;span class="ne"&gt;SyntaxError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;var&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;assigned&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;declaration&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;É interessante observar que a exceção é levantada no momento da execução do código. O Python geralmente levanta a exceção quando o cursor passa pelo local em que existe problema, porém, este caso foi tratado de maneira diferente.&lt;/p&gt;
-&lt;p&gt;É provavel que fora dado um tratamento diferencial para que possamos, ainda no momento da execução, corrigir nossos códigos. Sem dúvida essa é a melhor solução, do contrário, teríamos pacotes e scripts quebrando em todos os lugares.&lt;/p&gt;
+&lt;p&gt;É interessante observar que a exceção será levantada no momento da execução do código --- o que é muito bom! O Python geralmente levanta a exceção quando o Cursor de Execução executa uma expressão problemática. Ainda que nada tenha sido dito, muito provavelmente a execução da aplicação será interrompida ainda no seu lançamento para que os desenvolvedores consigam facilmente identificar e não corram o risco de liberar códigos que não estejam adaptados.&lt;/p&gt;
+&lt;p&gt;Por essa razão é que muito provavelmente fora dado um tratamento diferencial --- para que possamos, ainda nos testes, identificar e corrigir. Sem dúvida que o quanto antes o código se mostrar problemático, melhor será nossas vidas como desenvolvedores! Essa é, na minha opinião, a melhor solução --- do contrário, teríamos pacotes e scripts quebrando em todos os lugares.&lt;/p&gt;
 &lt;p&gt;A notificação dessa alteração pode ser vista &lt;a class="reference external" href="https://docs.python.org/3/whatsnew/3.6.html#other-language-changes"&gt;nesta página&lt;/a&gt; .&lt;/p&gt;
-&lt;p&gt;A PEP que propos a alteração é a &lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0526/#id11"&gt;PEP 526&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;A PEP que propôs a alteração &lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0526/#id11"&gt;pode ser acessada PEP 526&lt;/a&gt; .&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusao"&gt;
+&lt;h2&gt;CONCLUSÃO&lt;/h2&gt;
+&lt;p&gt;Sendo este site voltado majoritariamente (no momento em que escrevo) destinado ao público estudante, poucos terão código legados para alterarem.&lt;/p&gt;
+&lt;p&gt;Aos que tiverem códigos escritos e vierem a ter problemas, facilmente conseguirão corrigir.&lt;/p&gt;
+&lt;p&gt;A minha situação é diferente de ambos os casos acima, pois, fazem 2 meses que lancei uma aula especial explicando a utilização das instruções &lt;tt class="docutils literal"&gt;local&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;nonlocal&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Alterar uma aula nunca é fácil, pois, você precisa falar algo que será encaixado no meio de um contexto. Não corrigir a aula e deixar o problema é aparentemente muito mais fácil, porém, após anos, comprovarás que a quantidade de perguntas realizadas pelos seus alunos lhe consumiu mais tempo do que a difícil, chata e ingrata missão de alterar uma aula --- quem acaba de ser lançada.&lt;/p&gt;
+&lt;p&gt;Isso é trabalhar com tecnologia. Viver mudando e fazendo os outros mudarem pelas nossas mudanças.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
 &lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
 &lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.python.org/downloads/release/python-360/"&gt;Lançamento da Versão 3.6 do Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/whatsnew/3.6.html#other-language-changes"&gt;Notificação de alteração na versão 3.6 (en)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0526/#id11"&gt;PEP 526 (en)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/tutorial/errors.html#syntax-errors"&gt;SintaxError&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="python"></category><category term="python36"></category><category term="local"></category><category term="nonlocal"></category></entry><entry><title>O Python na Linha de Comando</title><link href="http://excript.com/blog/python-na-linha-de-comando.html" rel="alternate"></link><published>2017-05-26T23:50:00-03:00</published><updated>2017-05-26T23:50:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-05-26:/blog/python-na-linha-de-comando.html</id><summary type="html">
+</content><category term="python"></category><category term="python36"></category><category term="local"></category><category term="nonlocal"></category><category term="blog"></category></entry><entry><title>O Python na Linha de Comando</title><link href="http://excript.com/blog/python-na-linha-de-comando.html" rel="alternate"></link><published>2017-05-26T23:50:00-03:00</published><updated>2017-05-26T23:50:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-05-26:/blog/python-na-linha-de-comando.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -197,7 +216,7 @@ print("Arquivo Python executado com sucesso!!") --&gt;
 &lt;h2&gt;LANÇAMENTO&lt;/h2&gt;
 &lt;p&gt;Hoje é um dia especial!&lt;/p&gt;
 &lt;p&gt;Estamos disponibilizando publicamente o PDF contendo a documentação da biblioteca Kivy em Português a quem interessar!&lt;/p&gt;
-&lt;p&gt;A tradução da documentação do projeto Kivy para o português é uma iniciativa da …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
+&lt;p&gt;A tradução da documentação do projeto Kivy para o Português é uma iniciativa da …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -215,11 +234,9 @@ print("Arquivo Python executado com sucesso!!") --&gt;
 &lt;h2&gt;LANÇAMENTO&lt;/h2&gt;
 &lt;p&gt;Hoje é um dia especial!&lt;/p&gt;
 &lt;p&gt;Estamos disponibilizando publicamente o PDF contendo a documentação da biblioteca Kivy em Português a quem interessar!&lt;/p&gt;
-&lt;p&gt;A tradução da documentação do projeto Kivy para o português é uma iniciativa da &lt;a class="reference external" href="http://excript.com/"&gt;eXcript Brasil&lt;/a&gt;, idealizada e gerenciada por Cláudio Rogério Carvalho Filho junto com a comunidade brasileira.&lt;/p&gt;
-&lt;dl class="docutils"&gt;
-&lt;dt&gt;A &lt;a class="reference external" href="http://excript.com/"&gt;eXcript&lt;/a&gt; também tem o muito orgulho de disponibilizar o primeiro treinamento de Kivy em Português com mais de 3500 cópias vendidas!&lt;/dt&gt;
-&lt;dd&gt;&lt;a class="reference external" href="https://www.udemy.com/python-para-android-ios-windows-linux-mac/learn/v4/?couponCode=PRELANCAMENTOB"&gt;Curso de Desenvolvimento Multiplataforma com Python e Kivy&lt;/a&gt;.&lt;/dd&gt;
-&lt;/dl&gt;
+&lt;p&gt;A tradução da documentação do projeto Kivy para o Português é uma iniciativa da &lt;a class="reference external" href="http://excript.com/"&gt;eXcript Brasil&lt;/a&gt;, idealizada e gerenciada por Cláudio Rogério Carvalho Filho junto com a comunidade brasileira.&lt;/p&gt;
+&lt;p&gt;A &lt;a class="reference external" href="http://excript.com/"&gt;eXcript&lt;/a&gt; também tem o orgulho de disponibilizar o primeiro treinamento de Kivy em Português com mais de 3500 cópias vendidas!&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.udemy.com/python-para-android-ios-windows-linux-mac/learn/v4/?couponCode=PRELANCAMENTOB"&gt;Curso de Desenvolvimento Multiplataforma com Python e Kivy&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="colaboradores"&gt;
 &lt;h2&gt;COLABORADORES&lt;/h2&gt;
@@ -3416,6 +3433,19 @@ beltrano
 &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-aritmetico-em-python.html"&gt;Aula 16: Operadores Aritméticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-python.html"&gt;Aula 19: Operadores Relacionais&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-composto-python.html"&gt;Aula 23: Operadores Relacionais Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-relacionais-na-pratica-python.html"&gt;Aula 24: Operadores Relacionais na Prática&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-logicos-python.html"&gt;Aula 25: Operadores Lógicos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-de-atribuicao-python.html"&gt;Aula 30: Operadores de Atribuição&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/atribuicao-multipla-python.html"&gt;Aula 31: Operador de Atribuição Múltipla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-de-atribuicao-compostos-python.html"&gt;Aula 32: Operador de Atribuição Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="operadores"></category><category term="operadores de atribuição"></category><category term="operadores de atribuição compostos"></category><category term="blog"></category></entry><entry><title>Atribuição Múltipla em Python</title><link href="http://excript.com/python/atribuicao-multipla-python.html" rel="alternate"></link><published>2016-06-01T01:30:00-03:00</published><updated>2016-06-01T01:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-01:/python/atribuicao-multipla-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -3509,6 +3539,19 @@ beltrano
         &lt;/table&gt;
     &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-aritmetico-em-python.html"&gt;Aula 16: Operadores Aritméticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-python.html"&gt;Aula 19: Operadores Relacionais&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-composto-python.html"&gt;Aula 23: Operadores Relacionais Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-relacionais-na-pratica-python.html"&gt;Aula 24: Operadores Relacionais na Prática&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-logicos-python.html"&gt;Aula 25: Operadores Lógicos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-de-atribuicao-python.html"&gt;Aula 30: Operadores de Atribuição&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/atribuicao-multipla-python.html"&gt;Aula 31: Operador de Atribuição Múltipla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-de-atribuicao-compostos-python.html"&gt;Aula 32: Operador de Atribuição Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="atribuição"></category><category term="atribuição múltipla"></category><category term="blog"></category></entry><entry><title>Estrutura de Atribuição Simples do Python</title><link href="http://excript.com/python/operador-de-atribuicao-python.html" rel="alternate"></link><published>2016-06-01T01:00:00-03:00</published><updated>2016-06-01T01:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-01:/python/operador-de-atribuicao-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -3573,6 +3616,19 @@ beltrano
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, declaramos 3 variáveis. A primeira, chamamos de &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; e atribuimos o valor 1. A segunda e a terceira, chamamos de &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;c&lt;/tt&gt;, separando-as por vírgula e iniciando-as com o valor igual a 2.&lt;/p&gt;
 &lt;p&gt;Podemos iniciar mais de uma variável numa mesma atribuição, ou então, em outras palavras, podemos atribuir valores a várias variáveis ao mesmo tempo e a notação utilizada nessas 2 situações foi a mesma, salvo o uso da vírgula na separação da primeira e da segunda variável que receberão um novo valor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-aritmetico-em-python.html"&gt;Aula 16: Operadores Aritméticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-python.html"&gt;Aula 19: Operadores Relacionais&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-composto-python.html"&gt;Aula 23: Operadores Relacionais Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-relacionais-na-pratica-python.html"&gt;Aula 24: Operadores Relacionais na Prática&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-logicos-python.html"&gt;Aula 25: Operadores Lógicos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-de-atribuicao-python.html"&gt;Aula 30: Operadores de Atribuição&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/atribuicao-multipla-python.html"&gt;Aula 31: Operador de Atribuição Múltipla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-de-atribuicao-compostos-python.html"&gt;Aula 32: Operador de Atribuição Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="operador"></category><category term="operador de atribuição"></category><category term="atribuicao simples"></category><category term="blog"></category></entry><entry><title>Introdução aos Dicionários do Python</title><link href="http://excript.com/python/introducao-aos-dicionarios-python.html" rel="alternate"></link><published>2016-06-01T00:00:00-03:00</published><updated>2016-06-01T00:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-06-01:/python/introducao-aos-dicionarios-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -3860,6 +3916,7 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/blocos-de-instrucoes-python.html"&gt;Aula 27: Continuação sobre os Blocos de instrução&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/blocos-de-instrucao-python-na-pratica.html"&gt;Aula 28: Blocos de instrução na Prática&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -3939,7 +3996,8 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;Aula: Blocos de instrução&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;Aula 26: Blocos de Instrução em Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/blocos-de-instrucoes-python.html"&gt;Aula 27: Continuação sobre os Blocos de instrução&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -3970,17 +4028,14 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;Aula: Blocos de instrução&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;Aula 26: Blocos de Instrução em Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/blocos-de-instrucao-python-na-pratica.html"&gt;Aula 28: Blocos de instrução na Prática&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
 &lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/tutorial/introduction.html#an-informal-introduction-to-python"&gt;Documentação oficial (en)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#comments"&gt;PEP 8 -- Style Guide for Python Code (en)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</summary><content type="html">
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/tutorial/introduction.html#an-informal-introduction-to-python"&gt;Documentação oficial (en …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -4001,7 +4056,8 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;div class="section" id="veja-tambem"&gt;
 &lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;Aula: Blocos de instrução&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/bloco-de-instrucao-python.html"&gt;Aula 26: Blocos de Instrução em Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/blocos-de-instrucao-python-na-pratica.html"&gt;Aula 28: Blocos de instrução na Prática&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -4073,6 +4129,19 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numero1&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="n"&gt;numero2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="c1"&gt;#menor ou igual que&lt;/span&gt;
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;O número &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; é menor ou igual que &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numero1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numero2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-aritmetico-em-python.html"&gt;Aula 16: Operadores Aritméticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-python.html"&gt;Aula 19: Operadores Relacionais&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-composto-python.html"&gt;Aula 23: Operadores Relacionais Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-relacionais-na-pratica-python.html"&gt;Aula 24: Operadores Relacionais na Prática&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-logicos-python.html"&gt;Aula 25: Operadores Lógicos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-de-atribuicao-python.html"&gt;Aula 30: Operadores de Atribuição&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/atribuicao-multipla-python.html"&gt;Aula 31: Operador de Atribuição Múltipla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-de-atribuicao-compostos-python.html"&gt;Aula 32: Operador de Atribuição Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="operadores"></category><category term="operadores relacionais"></category><category term="operadores relacionais compostos"></category><category term="blog"></category></entry><entry><title>Operadores Relacionais Compostos do Python</title><link href="http://excript.com/python/operador-relacional-composto-python.html" rel="alternate"></link><published>2016-05-17T02:30:00-03:00</published><updated>2016-05-17T02:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-17:/python/operador-relacional-composto-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -4175,6 +4244,25 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;span class="k"&gt;elif&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;idade&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Você precita ter mais do que 18 anos!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-aritmetico-em-python.html"&gt;Aula 16: Operadores Aritméticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-python.html"&gt;Aula 19: Operadores Relacionais&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-composto-python.html"&gt;Aula 23: Operadores Relacionais Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-relacionais-na-pratica-python.html"&gt;Aula 24: Operadores Relacionais na Prática&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-logicos-python.html"&gt;Aula 25: Operadores Lógicos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-de-atribuicao-python.html"&gt;Aula 30: Operadores de Atribuição&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/atribuicao-multipla-python.html"&gt;Aula 31: Operador de Atribuição Múltipla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-de-atribuicao-compostos-python.html"&gt;Aula 32: Operador de Atribuição Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="links-externos"&gt;
+&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/operator.html#mapping-operators-to-functions"&gt;Lista de Operadores do Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="operador"></category><category term="operadores relacionais"></category><category term="operadores relacionais compostos"></category><category term="blog"></category></entry><entry><title>Depurando código Python</title><link href="http://excript.com/python/depuracao-pycharm-python.html" rel="alternate"></link><published>2016-05-17T01:30:00-03:00</published><updated>2016-05-17T01:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-17:/python/depuracao-pycharm-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -4373,6 +4461,12 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;li&gt;&lt;a class="reference external" href="https://www.tutorialspoint.com/python/python_if_else.htm"&gt;IF...ELIF...ELSE Statements (en)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/tomada-decisao-python.html"&gt;Aula 20: Tomada de Decisão em Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="if"></category><category term="tomada de decisão"></category><category term="se"></category><category term="senão"></category><category term="blog"></category></entry><entry><title>Tomada de Decisão em Python</title><link href="http://excript.com/python/tomada-decisao-python.html" rel="alternate"></link><published>2016-05-16T23:00:00-03:00</published><updated>2016-05-16T23:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-16:/python/tomada-decisao-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -4444,6 +4538,12 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;p&gt;No exemplo acima, utilizamos a função &lt;tt class="docutils literal"&gt;input()&lt;/tt&gt; para imprimirmos uma mensagem na tela e em seguida colocar o Console no modo de edição, isto é, colocar o Console de tal forma que seja  possível ao nosso usuário digitar e pressionar Enter.&lt;/p&gt;
 &lt;p&gt;Após o usuário digitar um valor e pressionar a tecla Enter, o valor digitado é passado para a variável &lt;tt class="docutils literal"&gt;num&lt;/tt&gt;. Em seguida, o valor contido na variável &lt;tt class="docutils literal"&gt;num&lt;/tt&gt; é comparada ao número 0. Caso o valor de &lt;tt class="docutils literal"&gt;num&lt;/tt&gt; seja maior do que zero, o bloco de instrução verdadeiro será executado, do contrário, nada acontecerá.&lt;/p&gt;
 &lt;p&gt;É importante observar que caso nada seja digitado, ou então, não seja digitado um número válido, uma exceção é levantada e a execução do programa é interrompida.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/if-else-python.html"&gt;Aula 21: Estrutura if e else em Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="if"></category><category term="tomada de decisão"></category><category term="se"></category><category term="blog"></category></entry><entry><title>Entrada de Dados em Python</title><link href="http://excript.com/python/entrada-dados-python.html" rel="alternate"></link><published>2016-05-07T23:45:00-03:00</published><updated>2016-05-07T23:45:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-07:/python/entrada-dados-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -4688,6 +4788,19 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-aritmetico-em-python.html"&gt;Aula 16: Operadores Aritméticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-python.html"&gt;Aula 19: Operadores Relacionais&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-composto-python.html"&gt;Aula 23: Operadores Relacionais Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-relacionais-na-pratica-python.html"&gt;Aula 24: Operadores Relacionais na Prática&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-logicos-python.html"&gt;Aula 25: Operadores Lógicos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-de-atribuicao-python.html"&gt;Aula 30: Operadores de Atribuição&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/atribuicao-multipla-python.html"&gt;Aula 31: Operador de Atribuição Múltipla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-de-atribuicao-compostos-python.html"&gt;Aula 32: Operador de Atribuição Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="operadores"></category><category term="relacional"></category><category term="operadores relacionais"></category><category term="blog"></category></entry><entry><title>Potenciação e Radiciação em Python</title><link href="http://excript.com/python/potenciacao-radiciacao-python.html" rel="alternate"></link><published>2016-05-07T03:20:00-03:00</published><updated>2016-05-07T03:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-07:/python/potenciacao-radiciacao-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -4973,6 +5086,19 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-aritmetico-em-python.html"&gt;Aula 16: Operadores Aritméticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-python.html"&gt;Aula 19: Operadores Relacionais&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-composto-python.html"&gt;Aula 23: Operadores Relacionais Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-relacionais-na-pratica-python.html"&gt;Aula 24: Operadores Relacionais na Prática&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-logicos-python.html"&gt;Aula 25: Operadores Lógicos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-de-atribuicao-python.html"&gt;Aula 30: Operadores de Atribuição&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/atribuicao-multipla-python.html"&gt;Aula 31: Operador de Atribuição Múltipla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-de-atribuicao-compostos-python.html"&gt;Aula 32: Operador de Atribuição Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="operações matemáticas"></category><category term="operações aritméticas"></category><category term="soma"></category><category term="subtração"></category><category term="multiplicação"></category><category term="divisão"></category><category term="divisão inteira"></category><category term="módulo"></category><category term="blog"></category></entry><entry><title>Variáveis do tipo Ponto Flutuante do Python</title><link href="http://excript.com/python/ponto-flutuante-python.html" rel="alternate"></link><published>2016-05-06T23:00:00-03:00</published><updated>2016-05-06T23:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:/python/ponto-flutuante-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -5525,6 +5651,17 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;texto 2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeira-aula-python.html"&gt;Aula 1: Introdução ao Curso de Python da eXcript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/como-instalar-o-python-windows.html"&gt;Aula 2: Como instalar o Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/caracteristica-python.html"&gt;Aula 3: Características do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/recursos-python.html"&gt;Aula 4: Recursos do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/instalando-o-pycharm-windows.html"&gt;Aula 6: Instalando a IDE PyCharm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeiro-programa-em-python.html"&gt;Aula 7: Primeiro programa em Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="primeiro programa"></category><category term="hello world"></category><category term="blog"></category><category term="print"></category></entry><entry><title>Instalando o PyCharm no Windows</title><link href="http://excript.com/python/instalando-o-pycharm-windows.html" rel="alternate"></link><published>2016-05-06T17:00:00-03:00</published><updated>2016-05-06T17:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-06:/python/instalando-o-pycharm-windows.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -5633,6 +5770,17 @@ Assim, temos que a chave de cada elemento deve ser um objeto imutável, porém, 
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeira-aula-python.html"&gt;Aula 1: Introdução ao Curso de Python da eXcript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/como-instalar-o-python-windows.html"&gt;Aula 2: Como instalar o Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/caracteristica-python.html"&gt;Aula 3: Características do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/recursos-python.html"&gt;Aula 4: Recursos do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/instalando-o-pycharm-windows.html"&gt;Aula 6: Instalando a IDE PyCharm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeiro-programa-em-python.html"&gt;Aula 7: Primeiro programa em Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="pycharm"></category><category term="jetbrains"></category><category term="ide"></category><category term="blog"></category></entry><entry><title>IDLE - Modo Interativo do Python</title><link href="http://excript.com/python/idle-python.html" rel="alternate"></link><published>2016-05-02T01:50:00-03:00</published><updated>2016-05-02T01:50:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-02:/python/idle-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -5859,6 +6007,17 @@ Alt + N - para avançar. O 'N' vem de &amp;quot;Next&amp;quot;.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Nesse momento, finalizamos nosso estudo sobre as principais características e recurso da linguagem Python! Poderíamos enumerar muitos outros recursos, porém, nesse momento, citamos os principais e as mais importantes características da linguagem.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeira-aula-python.html"&gt;Aula 1: Introdução ao Curso de Python da eXcript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/como-instalar-o-python-windows.html"&gt;Aula 2: Como instalar o Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/caracteristica-python.html"&gt;Aula 3: Características do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/recursos-python.html"&gt;Aula 4: Recursos do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/instalando-o-pycharm-windows.html"&gt;Aula 6: Instalando a IDE PyCharm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeiro-programa-em-python.html"&gt;Aula 7: Primeiro programa em Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="caracteristica do python"></category><category term="recursos do python"></category><category term="blog"></category></entry><entry><title>Características do Python</title><link href="http://excript.com/python/caracteristica-python.html" rel="alternate"></link><published>2016-05-01T21:00:00-03:00</published><updated>2016-05-01T21:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:/python/caracteristica-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -5919,6 +6078,17 @@ Alt + N - para avançar. O 'N' vem de &amp;quot;Next&amp;quot;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Os tópicos aqui elucidados estão longe de esgotar os recursos do Python! Por essa razão, continuaremos o nosso estudo sobre as principais características e recursos da linguagem na próxima aula.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeira-aula-python.html"&gt;Aula 1: Introdução ao Curso de Python da eXcript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/como-instalar-o-python-windows.html"&gt;Aula 2: Como instalar o Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/caracteristica-python.html"&gt;Aula 3: Características do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/recursos-python.html"&gt;Aula 4: Recursos do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/instalando-o-pycharm-windows.html"&gt;Aula 6: Instalando a IDE PyCharm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeiro-programa-em-python.html"&gt;Aula 7: Primeiro programa em Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="caracteristica do python"></category><category term="recursos do python"></category><category term="blog"></category></entry><entry><title>Como Instalar o Python no Windows</title><link href="http://excript.com/python/como-instalar-o-python-windows.html" rel="alternate"></link><published>2016-05-01T18:00:00-03:00</published><updated>2016-05-01T18:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:/python/como-instalar-o-python-windows.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -6006,6 +6176,17 @@ Type &lt;span class="s2"&gt;&amp;quot;copyright&amp;quot;&lt;/span&gt;, &lt;span
 &lt;h2&gt;SE EU TIVER O PYTHON INSTALADO E NADA ACONTECER?&lt;/h2&gt;
 &lt;p&gt;Isso ocorre nas situações quando o local de instalação do Python não está nas variáveis do sistema. As variáveis do sistema apontam para diretórios onde o SO que estamos utilizando irá buscar os programas que devem ser reconhecidos na linha de comando ou por outros softwares de maneira automática.&lt;/p&gt;
 &lt;p&gt;Nos sistemas Linux, raramente a instalação não é encontrada, mas nas versões do Windows, isso ocorre muito mais facilmente, até porque, é possível, nas instalações do Python, pedir que o mesmo não adicione o PATH [caminho ou diretório] da instalação atual, nas variáveis do sistema. Logo, você terá que ir nas opções do sistema, no caso, em Programas Instalados e procurar por alguma instalação do Python. Se nada for encontrado, e você não tiver feito a instalação via compilação através do fontes, então o Python não está instalado.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeira-aula-python.html"&gt;Aula 1: Introdução ao Curso de Python da eXcript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/como-instalar-o-python-windows.html"&gt;Aula 2: Como instalar o Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/caracteristica-python.html"&gt;Aula 3: Características do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/recursos-python.html"&gt;Aula 4: Recursos do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/instalando-o-pycharm-windows.html"&gt;Aula 6: Instalando a IDE PyCharm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeiro-programa-em-python.html"&gt;Aula 7: Primeiro programa em Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="download"></category><category term="instalação"></category><category term="windows"></category><category term="instalação no windows"></category><category term="blog"></category></entry><entry><title>Primeira Aula de Python</title><link href="http://excript.com/python/primeira-aula-python.html" rel="alternate"></link><published>2016-05-01T17:50:00-03:00</published><updated>2016-05-01T17:50:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:/python/primeira-aula-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -6110,6 +6291,17 @@ O Python_ realmente é uma boa linguagem?
 Quais os recursos do Python?
 O que faz da linguagem Python_ ser especial? --&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeira-aula-python.html"&gt;Aula 1: Introdução ao Curso de Python da eXcript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/como-instalar-o-python-windows.html"&gt;Aula 2: Como instalar o Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/caracteristica-python.html"&gt;Aula 3: Características do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/recursos-python.html"&gt;Aula 4: Recursos do Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/instalando-o-pycharm-windows.html"&gt;Aula 6: Instalando a IDE PyCharm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/primeiro-programa-em-python.html"&gt;Aula 7: Primeiro programa em Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="curso de python"></category><category term="eXcript"></category><category term="eXcript Brasil"></category><category term="blog"></category></entry><entry><title>Curso de Python</title><link href="http://excript.com/curso-de-python.html" rel="alternate"></link><published>2016-05-01T17:00:00-03:00</published><updated>2016-05-01T17:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-05-01:/curso-de-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -7839,5 +8031,18 @@ EXEMPLO 2
 x E y
 &lt;/pre&gt;
 &lt;p&gt;Em ambos exemplos, estamos unindo 2 membros, mas não estamos perguntando nada. Porém, a frase correta e que é utilizada pela grande maioria das linguagens de programação, senão todas, é a seguinte: &lt;tt class="docutils literal"&gt;A é verdadeiro e B é verdadeiro, logo ...&lt;/tt&gt;. Chamamos isso de &lt;tt class="docutils literal"&gt;expressão lógica&lt;/tt&gt; ou melhor, &lt;tt class="docutils literal"&gt;expressão lógica composta&lt;/tt&gt;, até porque, a expressão se origina de duas outras expressões, isto é, a que está ao lado esquerdo do operador relacional e a expressão que está ao seu lado direito.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="veja-tambem"&gt;
+&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-aritmetico-em-python.html"&gt;Aula 16: Operadores Aritméticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-python.html"&gt;Aula 19: Operadores Relacionais&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-relacional-composto-python.html"&gt;Aula 23: Operadores Relacionais Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-relacionais-na-pratica-python.html"&gt;Aula 24: Operadores Relacionais na Prática&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-logicos-python.html"&gt;Aula 25: Operadores Lógicos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operador-de-atribuicao-python.html"&gt;Aula 30: Operadores de Atribuição&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/atribuicao-multipla-python.html"&gt;Aula 31: Operador de Atribuição Múltipla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://excript.com/python/operadores-de-atribuicao-compostos-python.html"&gt;Aula 32: Operador de Atribuição Compostos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="python"></category><category term="operadores"></category><category term="operadores lógicos"></category><category term="and"></category><category term="or"></category><category term="not"></category><category term="is"></category><category term="is not"></category><category term="in"></category><category term="not in"></category><category term="blog"></category></entry></feed>

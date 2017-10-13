@@ -17,7 +17,7 @@
 <link rel="canonical" href="http://excript.com/blog/variaveis-local-non-local.html">
 
         <meta name="author" content="Cláudio Rogério Carvalho Filho" />
-        <meta name="keywords" content="python,python36,local,nonlocal" />
+        <meta name="keywords" content="python,python36,local,nonlocal,blog" />
     <meta name="description" content="Neste artigo veremos a alteração ocorrida na versão 3.6 do Python que estabelece um novo funcionamento para a instrução global." />
 
         <meta property="og:site_name" content="eXcript" />
@@ -27,12 +27,13 @@
 
         <meta property="og:description" content="Neste artigo veremos a alteração ocorrida na versão 3.6 do Python que estabelece um novo funcionamento para a instrução global."/>
 
-        <meta property="article:published_time" content="31-07-2017" />
+        <meta property="article:published_time" content="30-08-2017" />
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="python36" />
             <meta property="article:tag" content="local" />
             <meta property="article:tag" content="nonlocal" />
+            <meta property="article:tag" content="blog" />
             <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
             <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
 
@@ -142,29 +143,46 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<p>A versão 3.6 do Python trouxe alterações que afetam códigos legados. Agora, para definir variáveis com a instrução <tt class="docutils literal">global</tt> ou <tt class="docutils literal">nonlocal</tt> é necessário que a mesma já esteja declarada no escopo externo.</p>
-<p>A não utilização desta prática resulta numa  exceção SintaxError e a aplicação é finalizada.</p>
-<p>A seguir, há um exemplo de código legal que deixou de funcionar.</p>
+<div class="section" id="instrucao-global">
+<h2>INSTRUÇÃO <tt class="docutils literal">global</tt></h2>
+<p>A <a class="reference external" href="https://www.python.org/downloads/release/python-360/">versão 3.6 do Python</a> trouxe alterações que afetam nossos códigos legados fazendo com que os mesmos deixem de ser executado. Ao definir variáveis com uso da instrução <tt class="docutils literal">global</tt> ou <tt class="docutils literal">nonlocal</tt> será necessário que a mesma (a variável) já esteja declarada no escopo externo.</p>
+<p>Código legados ou a não utilização desta nova norma resultará numa  exceção <a class="reference external" href="https://docs.python.org/3/tutorial/errors.html#syntax-errors">SintaxError</a>, fazendo com que a aplicação seja finalizada.</p>
+</div>
+<div class="section" id="exemplos-reais">
+<h2>EXEMPLOS REAIS</h2>
+<p>Vamos estudar as mudanças analisando o que ocorrerá ao tentarmos executar um código antigo que não tenha ainda se adequado ou então, caso não trabalharmos seguindo as novas regras:</p>
+<p>O exemplo a seguir mostra um código legado não adaptado.</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fun</span><span class="p">():</span>
 
     <span class="n">var</span> <span class="o">=</span> <span class="mi">10</span>
     <span class="k">global</span> <span class="n">var</span>
 </pre></div>
-<p>O código acima se executado produz a seguinte exceção:</p>
+<p>O código acima, se executado, produzirá a seguinte exceção:</p>
 <div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;main.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">5</span>
     <span class="k">global</span> <span class="n">var</span>
 
 <span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;var&#39;</span> <span class="ow">is</span> <span class="n">assigned</span> <span class="n">to</span> <span class="n">before</span> <span class="k">global</span> <span class="n">declaration</span>
 </pre></div>
-<p>É interessante observar que a exceção é levantada no momento da execução do código. O Python geralmente levanta a exceção quando o cursor passa pelo local em que existe problema, porém, este caso foi tratado de maneira diferente.</p>
-<p>É provavel que fora dado um tratamento diferencial para que possamos, ainda no momento da execução, corrigir nossos códigos. Sem dúvida essa é a melhor solução, do contrário, teríamos pacotes e scripts quebrando em todos os lugares.</p>
+<p>É interessante observar que a exceção será levantada no momento da execução do código --- o que é muito bom! O Python geralmente levanta a exceção quando o Cursor de Execução executa uma expressão problemática. Ainda que nada tenha sido dito, muito provavelmente a execução da aplicação será interrompida ainda no seu lançamento para que os desenvolvedores consigam facilmente identificar e não corram o risco de liberar códigos que não estejam adaptados.</p>
+<p>Por essa razão é que muito provavelmente fora dado um tratamento diferencial --- para que possamos, ainda nos testes, identificar e corrigir. Sem dúvida que o quanto antes o código se mostrar problemático, melhor será nossas vidas como desenvolvedores! Essa é, na minha opinião, a melhor solução --- do contrário, teríamos pacotes e scripts quebrando em todos os lugares.</p>
 <p>A notificação dessa alteração pode ser vista <a class="reference external" href="https://docs.python.org/3/whatsnew/3.6.html#other-language-changes">nesta página</a> .</p>
-<p>A PEP que propos a alteração é a <a class="reference external" href="https://www.python.org/dev/peps/pep-0526/#id11">PEP 526</a> .</p>
+<p>A PEP que propôs a alteração <a class="reference external" href="https://www.python.org/dev/peps/pep-0526/#id11">pode ser acessada PEP 526</a> .</p>
+</div>
+<div class="section" id="conclusao">
+<h2>CONCLUSÃO</h2>
+<p>Sendo este site voltado majoritariamente (no momento em que escrevo) destinado ao público estudante, poucos terão código legados para alterarem.</p>
+<p>Aos que tiverem códigos escritos e vierem a ter problemas, facilmente conseguirão corrigir.</p>
+<p>A minha situação é diferente de ambos os casos acima, pois, fazem 2 meses que lancei uma aula especial explicando a utilização das instruções <tt class="docutils literal">local</tt> e <tt class="docutils literal">nonlocal</tt>.</p>
+<p>Alterar uma aula nunca é fácil, pois, você precisa falar algo que será encaixado no meio de um contexto. Não corrigir a aula e deixar o problema é aparentemente muito mais fácil, porém, após anos, comprovarás que a quantidade de perguntas realizadas pelos seus alunos lhe consumiu mais tempo do que a difícil, chata e ingrata missão de alterar uma aula --- quem acaba de ser lançada.</p>
+<p>Isso é trabalhar com tecnologia. Viver mudando e fazendo os outros mudarem pelas nossas mudanças.</p>
+</div>
 <div class="section" id="links-externos">
 <h2>LINKS EXTERNOS</h2>
 <ul class="simple">
+<li><a class="reference external" href="https://www.python.org/downloads/release/python-360/">Lançamento da Versão 3.6 do Python</a></li>
 <li><a class="reference external" href="https://docs.python.org/3/whatsnew/3.6.html#other-language-changes">Notificação de alteração na versão 3.6 (en)</a></li>
 <li><a class="reference external" href="https://www.python.org/dev/peps/pep-0526/#id11">PEP 526 (en)</a></li>
+<li><a class="reference external" href="https://docs.python.org/3/tutorial/errors.html#syntax-errors">SintaxError</a></li>
 </ul>
 </div>
 
@@ -180,7 +198,7 @@ eXcript            </a>
 <br>
 <span class="label label-default"></span>
 Tags
-	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/python36.html">python36</a>, 	<a href="http://excript.com/tag/local.html">local</a>, 	<a href="http://excript.com/tag/nonlocal.html">nonlocal</a>            </div>
+	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/python36.html">python36</a>, 	<a href="http://excript.com/tag/local.html">local</a>, 	<a href="http://excript.com/tag/nonlocal.html">nonlocal</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
