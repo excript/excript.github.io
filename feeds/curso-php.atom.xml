@@ -7075,14 +7075,9 @@ print_r($cores4);
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-
-&lt;span class="nv"&gt;$x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-
-&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$x&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-    &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;A vari …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="section" id="tomada-de-decisao"&gt;
+&lt;h2&gt;TOMADA DE DECISÃO&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;Tomada de Decisão&lt;/strong&gt;, ou então, &lt;strong&gt;Estrutura Condicional&lt;/strong&gt;, é o …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -7096,6 +7091,32 @@ print_r($cores4);
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="tomada-de-decisao"&gt;
+&lt;h2&gt;TOMADA DE DECISÃO&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;Tomada de Decisão&lt;/strong&gt;, ou então, &lt;strong&gt;Estrutura Condicional&lt;/strong&gt;, é o julgamento de uma expressão lógica e a consequente decisão de qual bloco de código que deve ser executado. Essa é a maneira em que os nossos programas tomam decisões, no caos, sempre baseando-se em condições pré-determinadas.&lt;/p&gt;
+&lt;p&gt;Utilizamos a instrução &lt;strong&gt;if&lt;/strong&gt;, para verificar se uma condição é ou não verdadeira. Nós temos que &lt;strong&gt;if&lt;/strong&gt; do inglês, significa &lt;strong&gt;SE&lt;/strong&gt; ou então, &lt;strong&gt;CASO&lt;/strong&gt;. A instrução &lt;strong&gt;if&lt;/strong&gt; é a responsável por decidir que: se for verdadeiro, execute esse bloco de instrução, do contrário, não faça nada ou então, execute este outro bloco de instrução.&lt;/p&gt;
+&lt;p&gt;A seguir, nós temos a estrutura da instrução &lt;strong&gt;if&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;se( condição ){&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+
+&lt;span class="x"&gt;if( condição ){&lt;/span&gt;
+
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Se o valor avaliado for verdadeiro, a execução do programa executará as instruções contidas nas chaves, do contrário, nada acontece.&lt;/p&gt;
+&lt;p&gt;Fato é, que com a instrução &lt;strong&gt;if&lt;/strong&gt; conseguimos manipular a execução dos nossos código, podendo desviar o fluxo de execução quando uma determinada condição for satisfeita.&lt;/p&gt;
+&lt;p&gt;Podemos dizer que o funcionamento da instrução &lt;strong&gt;if&lt;/strong&gt; se resume a avaliar a expressão contida entre os parêntesis. Se a condição for igual a &lt;strong&gt;True&lt;/strong&gt;, ou seja, se o valor avaliado for verdadeiro, o bloco de instrução que está definido pelo uso de um par de chaves será executado.&lt;/p&gt;
+&lt;p&gt;A leitura correta da instrução &lt;strong&gt;if&lt;/strong&gt; é:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;if( condição == true)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O sinal de igual, seguido de outro sinal de igual, significa que estamos querendo verificar se o valor a esquerda é &lt;strong&gt;igual&lt;/strong&gt; ao valor da direita.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;if( 1&amp;gt;1 == true)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O exemplo acima deve ser lido da seguinte maneira:&lt;/p&gt;
+&lt;p&gt;SE o número 1 for maior do que o número 1, então execute o bloco definido a seguir.&lt;/p&gt;
+&lt;p&gt;É muito comum, os programadores omitirem a comparação com True [ == true ], até porque, a condição &lt;strong&gt;if&lt;/strong&gt; sempre verificará se o valor é verdadeiro. Ou seja, toda expressão colocada entre os parêntesis está, implicitamente, sendo comparada a &lt;strong&gt;True&lt;/strong&gt;. Como estudaremos, nós podemos inverter esse funcionamento, mas o princípio nunca será alterado.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;

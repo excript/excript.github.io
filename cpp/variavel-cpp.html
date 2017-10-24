@@ -354,9 +354,100 @@ eXcript            </a>
             </tbody>
         </table>
     </div>
-<p>Variáveis são regiões na memória que utilizamos para armazenar dados temporariamente. Essas são as estruturas mais utilizadas na programação, e em todos programas que desenvolvermos faremos uso das mesmas. Por isso, não basta conhecer, temos que dominar o conceito, entender como elas funcionam e as melhores maneiras para manipularmos.</p>
-<p>Cada variável possui um nome e este faz um link entre o nosso programa e a memória do nosso computador. Todas as vezes que iremos manipular valores em C++, antes, teremos que carregar esses valores para a memória e sem dúvida, a maneira mais simples para carregar valores na memória RAM é declarando e atribuindo variáveis.</p>
-<p>Essa é a nossa primeira aula a respeito das variáveis, porém, nós iremos estuda-las diversas vezes durante o curso!</p>
+<div class="section" id="nomenclatura">
+<h2>NOMENCLATURA</h2>
+<p>Em C++ as variáveis são representadas, normaolmente, por uma sequência de caracteres que a identifica e a torna única em seu escopo. Podemos definir o nome que desejarmos a uma variável, porém, existem algumas poucas regras que devemos seguir, do contrário, nossos códigos não funcionaram.</p>
+<p>Se você está estudando essa aula utilizando  uma IDE, como por exemplo, o Code::Block ou o CLion, ao digitar um nome de variável inválida, o editor já acusará um problema na linha e facilmente  perceberemos que existe algo de errado. Se estivermos estudando com um editor simples, teremos que manter a atenção redobrada, até porque, só saberemos que o nome é invalido quando o compilador imprimir uma mensagem de erro na saída padrão no momento em que mandarmos compilar o nosso código.</p>
+<p>As regras que aqui estudaremos também servirão para a definição de nomes de todas as demais estruturas do C++, isto é, existe, basicamente um padrão que serve para a composição de nomes de maneira geral e, as regras que aqui estudaremos servirão futuramente quando formos definir nomes de outras estruturas.</p>
+</div>
+<div class="section" id="composicao-do-nome">
+<h2>COMPOSIÇÃO DO NOME</h2>
+<p>Na construção de referências, pode-se utilizar, quaisquer letras, sejam elas maiúsculas ou minúsculas. Variáveis não devem utilizar nomes de classes ou pacotes, ou seja, não devemos declarar uma variável de nome &quot;int&quot;, ou então, &quot;String&quot;, até porque, esses são nomes de tipos primitivos ou que estão contidos em outros pacotes do C++ e não devem ser utilizados. Porém, como veremos, há soluções para esse tipos de situações, não podemos utilizar a palavra &quot;int&quot;, porém, se precedermos a referência por um underline <tt class="docutils literal">_</tt>, temos que o nome torna-se válido, por exemplo: <tt class="docutils literal">_int</tt> ou <tt class="docutils literal">int_</tt>.</p>
+<p>De maneira geral, temos a disposição todo o alfabeto para criarmos nomes de variáveis. Também podemos compor o nome das variáveis utilizando números, o que estudaremos nos tópicos a seguir.</p>
+</div>
+<div class="section" id="caracteres-numericos">
+<h2>CARACTERES NUMÉRICOS</h2>
+<p>Uma referência pode ser composta por letras e números, desde que a mesma não inicie com um dos 10 algarismos númericos. Ou seja, podemos utilizar quaisquer número na composição do nome da variável, desde que este não esteja o primeiro caractere, como por exemplo: <cite>9num</cite>, ou então, <cite>1var</cite>.</p>
+<p>Se precedermos o nome com números ocorrerá uma situação em que o compilador não conseguirá distinguir se estamos trabalhando com um número, como por exemplo, um número complexo, ou então, se este nome é de fato uma variável.</p>
+<p>Assim, temos que a utilização de números é permitida, porém, somente após o primeiro caractere, como podemos ver nos exemplos a seguir:</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">caractere</span> <span class="o">=</span> <span class="sc">&#39;x&#39;</span><span class="p">;</span>
+<span class="n">boolean</span> <span class="n">flag</span> <span class="o">=</span> <span class="n">True</span><span class="p">;</span>
+</pre></div>
+<p>A seguir, temos uma  lista contendo os caracteres especiais que não podem ser utilizados como o primeiro caractere do nome de uma referência.</p>
+</div>
+<div class="section" id="caracteres-especiais">
+<h2>CARACTERES ESPECIAIS</h2>
+<p>Caracteres especiais, como por exemplo, os caracteres latinos, como o c-cedilha <tt class="docutils literal">ç</tt>, o tio <tt class="docutils literal">~</tt> e etc, não são permitidos na composição de nomes de referência. O único caractere tido como especial e que pode ser utilizado é o underline <cite>_</cite>. A seguir, temos uma lista com os caracteres que <strong>NÃO</strong> podem ser utilizados na composição de referências e aprendremos a razão nas aulas seguintes, haja vista que os mesmos desempenham funções especificas na linguagem.</p>
+<blockquote>
+<ul class="simple">
+<li>ç</li>
+<li><ul class="first">
+<li></li>
+</ul>
+</li>
+<li><ul class="first">
+<li></li>
+</ul>
+</li>
+<li><ul class="first">
+<li></li>
+</ul>
+</li>
+<li>/</li>
+<li>=</li>
+<li>!</li>
+<li>&#64;</li>
+<li>#</li>
+<li>$</li>
+<li>%</li>
+<li>&amp;</li>
+<li>/</li>
+<li>( )</li>
+<li>[ ]</li>
+<li>^</li>
+<li>~</li>
+<li>´</li>
+</ul>
+</blockquote>
+<p>Novamente, é importante dizer que caracteres especiais não podem ser utilizados, seja qual for a posição em que estes aparecerem na definição da referência!</p>
+<p>A seguir, temos mais um exemplo dos caracteres que não podem estar na primeira posição de um nome de variável.</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="mi">4</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//ERRO</span>
+<span class="n">String</span> <span class="mi">3</span> <span class="o">=</span> <span class="s">&quot;informe seu nome&quot;</span><span class="p">;</span> <span class="c1">//ERRO</span>
+<span class="kt">float</span> <span class="mi">2</span><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1">//ERRO</span>
+</pre></div>
+<p>As referências utilizadas no código acima são <strong>TODAS</strong> invalidas, e a razão, deve-se ao fato destas iniciarem com caracteres numéricos. Como já dito, o primeiro caractere deve, <strong>obrigatoriamente</strong>, ser um letra do alfabeto.</p>
+<p>Podemos concluir também que uma variável <strong>jamais</strong> será composta por somente números, haja vista que o primeiro caractere precisa ser uma letra.</p>
+<p>Para definirmos o nome de variáveis, temos que iniciar utilizando um caractere que esteja no intervalo de <cite>a</cite> à <cite>z</cite> ou <cite>A</cite> à <cite>Z</cite> e a única exceção a esta regra é o caractere underline <cite>_</cite>. A seguir, temos alguns nomes de variáveis <strong>válidos</strong>:</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i8nt</span> <span class="n">vvar</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">_vVar</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">__________idade</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="section" id="palavras-reservadas-keyword">
+<h2>PALAVRAS RESERVADAS (KEYWORD)</h2>
+<p>A linguagem C++ tem definido um conjunto de palavras reservadas que possuem uso especifico na linguagem. Estes nomes não poderão ser utilizados como nomes de variáveis, até porque se assim form, haverá conflito e o interpretador não conseguirá distinguir se a palavra é uma instrução ou então uma variável.</p>
+<p>Nesse momento não precisamos nos preocupar com as palavras reservada e também, estas serão estudadas em detalhes nas aulas futuras.</p>
+</div>
+<div class="section" id="a-excecao-a-regra">
+<h2>A EXCEÇÃO A REGRA</h2>
+<p>Como já foi dito, porém, para formalizar a regra temos que o único caractere especial, que pode ser utilizado na composição de nomes, e que também pode estar situando em qualquer posição, é o caractere underline <tt class="docutils literal">_</tt>.</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">_minhaVar</span> <span class="o">=</span> <span class="mi">55</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="section" id="macetezinho">
+<h2>MACETEZINHO</h2>
+<p>Na dúvida sobre quais caracteres são permitidos, utilize só e somente só letras sem acentuação,sem espaços em branco, e pra garantir, não utilize nomes em Inglês. Por isso, na dúvida quanto a validade da referência, utilize somente letras que terás, com certeza absoluta, um nome de variável válido.</p>
+<p>Se você quer decorar o que pode e o que não pode, pense da seguinte maneira:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>números só se for o segundo caractere</li>
+<li>letras que não estejam no alfabeto Inglês NÃO permitidos</li>
+<li>caracteres que não são letras e não são número não podem ser utilizados!</li>
+<li>há 50 palavras reservadas, porém, todas são em Inglês, logo, evite termos em Inglês num primeiro momento.</li>
+</ol>
+</blockquote>
+</div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
