@@ -40,9 +40,9 @@
 &lt;/div&gt;
 &lt;div class="section" id="a-biblioteca-kivy"&gt;
 &lt;h2&gt;A BIBLIOTECA KIVY&lt;/h2&gt;
-&lt;p&gt;Uma aplicação desenvolvida com a &lt;a class="reference external" href="https://github.com/kivy/kivy/"&gt;biblioteca Kivy&lt;/a&gt; será executada diretamente em cima da biblioteca gráfica &lt;tt class="docutils literal"&gt;OpenGL&lt;/tt&gt; que normalmente é executado em cima da placa gráfica. O OpenGL possui suporte nativo para as principais plataformas, e, estando o Kivy desenvolvido em cima do mesmo,  toda plataforma que oferece suporte ao OpenGL poderá executar uma aplicação escrita com o framework Kivy.&lt;/p&gt;
+&lt;p&gt;Uma aplicação desenvolvida com a &lt;a class="reference external" href="https://github.com/kivy/kivy/"&gt;biblioteca Kivy&lt;/a&gt; será executada diretamente em cima da biblioteca gráfica &lt;tt class="docutils literal"&gt;OpenGL&lt;/tt&gt; que normalmente é executado em cima da placa gráfica. O OpenGL possui suporte nativo para as principais plataformas, e, estando o Kivy desenvolvido em cima do mesmo, toda plataforma que oferece suporte ao OpenGL poderá executar uma aplicação escrita com o framework Kivy.&lt;/p&gt;
 &lt;p&gt;Em outras palavras, todo o código será executado em cima dos processadores da placa de vídeo, e é por essa razão que em muitos casos, é possível que aplicações Kivy tenham performance igual, ou então superior a aplicações nativas!&lt;/p&gt;
-&lt;p&gt;Como o OpenGL é multiplataforma, o projeto Kivy, construído em cima dessa camada, pode ser executado em qualquer dispositivo que suporte a biblioteca e, como praticamente todos dispositivos oferecem suporte devido a amplitude, a quantidade e a complexidade de trabalhar com o hardware e aplicações gráficas, aplicações Kivy são compatíveis com uma grande quantidade de dispositivos.&lt;/p&gt;
+&lt;p&gt;Como o OpenGL é multiplataforma, o projeto Kivy, construído em cima dessa camada, pode ser executado em qualquer dispositivo que suporte a biblioteca e, como praticamente todos dispositivos oferecem suporte devido a sua amplitude, a quantidade e a complexidade de trabalhar com o hardware e aplicações gráficas, aplicações Kivy são compatíveis com uma grande quantidade de dispositivos.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="opengl-2-0"&gt;
 &lt;h2&gt;OpenGL 2.0&lt;/h2&gt;
@@ -211,7 +211,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;p&gt;Assim concluímos que a capacidade de desenvolvimento é ilimitada, até porque, podemos acessar nativamente tudo que a plataforma Android disponibiliza, seja através das classe em C++ pelo acesso via &lt;a class="reference external" href="https://developer.android.com/ndk/index.html"&gt;NDK&lt;/a&gt;,&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="projeto-kivy-for-ios"&gt;
-&lt;h2&gt;PROJETO Kivy for iOS&lt;/h2&gt;
+&lt;h2&gt;PROJETO kivy-for-iOS&lt;/h2&gt;
 &lt;p&gt;O projeto &lt;a class="reference external" href="https://github.com/kivy/kivy-ios"&gt;Kivy for iOS&lt;/a&gt; é semelhante ao projeto Python for Android a diferença é o suporte à plataforma &lt;a class="reference external" href="https://www.apple.com/ios/"&gt;iOS&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;O App gerado para iOS é feito através de um projeto desenvolvido com o &lt;a class="reference external" href="https://developer.apple.com/xcode/"&gt;Xcode&lt;/a&gt;, portanto, no final, teremos uma aplicação nativa, da mesma forma que temos com o Android.&lt;/p&gt;
 &lt;p&gt;Internamente, o executável gerado também carregará uma versão otimizada o Python e por isso, é possível executar código Python no dispositivo em que a nossa aplicação estiver sendo executada. Normalmente, o nosso código será compilado com o &lt;a class="reference external" href="http://http://cython.org/"&gt;Cython&lt;/a&gt; o que impedirá terceiros de ler e entender nossos códigos (facilmente), até porque, será gerado código C nativo.&lt;/p&gt;
@@ -259,7 +259,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;/div&gt;
 &lt;div class="section" id="a-magica-do-cython"&gt;
 &lt;h2&gt;A MÁGICA DO CYTHON&lt;/h2&gt;
-&lt;p&gt;Cython é um superconjunto da linguagem Python e seu objetivo é a conversão de  código Python para código C (nativo). Cython é o nome de uma linguagem e seu compilador. A linguagem Cython estende a linguagem Python utilizando a mesma sintaxe porém, trazendo um conjunto de instruções que otimizam a conversão para código C, aumentando a performance em alguma situações em dezenas, centenas e até, acredite, milhares de vezes! O principal objetivo da linguagem Cython é a otimização de trechos especificos que requerem alta performance sem quebrar a compatibilidade. Como o código Python nativo é reconhecido pelo compilador Cython, é possível a conversão de módeulos ou mesmo funções sem perder a compatibilidade.&lt;/p&gt;
+&lt;p&gt;Cython é um superconjunto da linguagem Python e seu objetivo é a conversão de código Python para código C (nativo). Cython é o nome de uma linguagem e também, o nome do compilador. A linguagem Cython estende a linguagem Python utilizando a mesma sintaxe, porém, trazendo um conjunto de instruções que otimizam a conversão para código C, aumentando a performance em alguma situações em dezenas, centenas e até, acredite, milhares de vezes! O principal objetivo da linguagem Cython é a otimização de trechos especificos que requerem alta performance sem quebrar a compatibilidade. Como o código Python nativo é reconhecido pelo compilador Cython, é possível a conversão de módulos ou mesmo funções sem perder a compatibilidade.&lt;/p&gt;
 &lt;p&gt;O Cython fornece suporte a versão 2x e 3x do Python, ou seja, conseguimos facilmente transformar as estruturas simplificadas do Python para código C nativo e sendo capaz de otimizar trechos especificos através de um processo muito semelhante a refatoração de código. A refatoração neste caso deve ser entendida como a alteração de instruções, tipagem de variáveis e parâmetros e etc.&lt;/p&gt;
 &lt;p&gt;Após converter o código de Python para C, o resultado é enviado para o GCC e o mesmo produz o executável compatível com a plataforma em que estiver sendo utilizada, pela simples compilação de código C, de forma semelhante e com performance que chega muito próxima a um código que foi de fato escrito nativamente em C.&lt;/p&gt;
 &lt;p&gt;Como principais características, podemos citar que a linguagem Cython utiliza tipagem estática e dinâmica, e, como sabemos, quando mais tipado for, mais otimizado a execução será.&lt;/p&gt;
@@ -468,7 +468,29 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;li&gt;&lt;a class="reference external" href="https://software.intel.com/en-us/intel-xdk/documentation"&gt;Intel XDK&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="python"></category><category term="kivy"></category><category term="android"></category><category term="ios"></category><category term="kivy design"></category><category term="opengl"></category><category term="blog"></category></entry><entry><title>Alteração no uso da instrução global no Python 3.6</title><link href="http://excript.com/blog/variaveis-local-non-local.html" rel="alternate"></link><published>2017-08-30T04:00:00-03:00</published><updated>2017-08-30T04:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-08-30:/blog/variaveis-local-non-local.html</id><summary type="html">
+</content><category term="python"></category><category term="kivy"></category><category term="android"></category><category term="ios"></category><category term="kivy design"></category><category term="opengl"></category><category term="blog"></category></entry><entry><title>Colaboração brasileira em Fóruns de Desenvolvimento Internacional</title><link href="http://excript.com/blog/colaboracao-brasileira-forum-dev-internacional.html" rel="alternate"></link><published>2017-10-20T16:00:00-02:00</published><updated>2017-10-20T16:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-10-20:/blog/colaboracao-brasileira-forum-dev-internacional.html</id><summary type="html">&lt;div class="section" id="baseado-em-fatos-reais"&gt;
+&lt;h2&gt;BASEADO EM FATOS REAIS&lt;/h2&gt;
+&lt;img alt="Mensagem publicada no fórum oficial do projeto Kivy" src="../images/blog/colaboracao-brasileira-forum-dev-internacional.png" /&gt;
+&lt;p&gt;Os brasileiros fazendo sucesso em fóruns internacionais.&lt;/p&gt;
+&lt;p&gt;Na postagem do lançamento da nova versão do Kivy, após a descrição de todas as implementações e mudanças, há mensagens de alguns usuários parabenizando, outros fazendo perguntas e, eis que aparece uma mensagem interessante.&lt;/p&gt;
+&lt;p&gt;A princípio você imagina que …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="baseado-em-fatos-reais"&gt;
+&lt;h2&gt;BASEADO EM FATOS REAIS&lt;/h2&gt;
+&lt;img alt="Mensagem publicada no fórum oficial do projeto Kivy" src="../images/blog/colaboracao-brasileira-forum-dev-internacional.png" /&gt;
+&lt;p&gt;Os brasileiros fazendo sucesso em fóruns internacionais.&lt;/p&gt;
+&lt;p&gt;Na postagem do lançamento da nova versão do Kivy, após a descrição de todas as implementações e mudanças, há mensagens de alguns usuários parabenizando, outros fazendo perguntas e, eis que aparece uma mensagem interessante.&lt;/p&gt;
+&lt;p&gt;A princípio você imagina que algum usuário ao testar a nova versão obteve um erro muito estranho. Você lê a mensagem e nada poderia ser pior:&lt;/p&gt;
+&lt;p&gt;Começa com: &amp;quot;How to solve this:&amp;quot;&lt;/p&gt;
+&lt;p&gt;E termina...&lt;/p&gt;
+&lt;pre class="doctest-block"&gt;
+&amp;gt;&amp;gt;&amp;gt; Permissão negada
+&lt;/pre&gt;
+&lt;p&gt;Nenhum falante de Português tem o dever de entender Inglês, mas quando a mensagem está em Português e você posta num fórum em Inglês, no meio da postagem de um novo lançamento de uma nova versão que há 2 anos não era lançada...&lt;/p&gt;
+&lt;p&gt;Enfim, essa mensagem é um pérola!!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CALMA&lt;/em&gt;, agora vem o melhor:&lt;/p&gt;
+&lt;p&gt;A mensagem foi endereçada aos 2 fóruns oficiais, no caso, para os usuários do Kivy e para os desenvolvedores!&lt;/p&gt;
+&lt;p&gt;Para aqueles que desejam entender a mentalidade dos fóruns internacionais para conseguir boas respostas as suas perguntas e o quanto antes, sugiro um artigo escrito em 2001 &lt;a class="reference external" href="http://www.catb.org/esr/faqs/smart-questions.html"&gt;How To Ask Questions The Smart Way&lt;/a&gt; e que foi traduzido para o Português pela comunidade brasileira. O texto é de uma época em que não havia politicamente correto, portanto, não espere palavras bonitas e enfeitas --- o texto é cru (raw) e direto!&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="python"></category><category term="kivy"></category><category term="forum"></category></entry><entry><title>Alteração no uso da instrução global no Python 3.6</title><link href="http://excript.com/blog/variaveis-local-non-local.html" rel="alternate"></link><published>2017-08-30T04:00:00-03:00</published><updated>2017-08-30T04:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-08-30:/blog/variaveis-local-non-local.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -806,7 +828,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip search &amp;lt;query&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="pip"></category><category term="python"></category><category term="gerenciador de pacotes"></category></entry><entry><title>Diferença entre o operador is e o ==</title><link href="http://excript.com/blog/diferenca-operador-is-equal-python.html" rel="alternate"></link><published>2017-07-31T09:00:00-03:00</published><updated>2017-07-31T09:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-07-31:/blog/diferenca-operador-is-equal-python.html</id><summary type="html">
+</content><category term="pip"></category><category term="python"></category><category term="gerenciador de pacotes"></category><category term="blog"></category></entry><entry><title>Diferença entre o operador is e o ==</title><link href="http://excript.com/blog/diferenca-operador-is-equal-python.html" rel="alternate"></link><published>2017-07-31T09:00:00-03:00</published><updated>2017-07-31T09:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-07-31:/blog/diferenca-operador-is-equal-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -18392,7 +18414,9 @@ print_r($cores4);
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;p&gt;Nessa aula, ao invés de darmos continuidade ao estudo das estruturas de controle, vamos definir uma estrutura para o nosso estudo, no …&lt;/p&gt;</summary><content type="html">
+&lt;div class="section" id="contruindo-o-ambiente"&gt;
+&lt;h2&gt;CONTRUÍNDO O AMBIENTE&lt;/h2&gt;
+&lt;p&gt;Nessa aula, ao invés de darmos continuidade ao estudo das estruturas de controle, vamos definir uma estrutura para o …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -18406,11 +18430,14 @@ print_r($cores4);
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
+&lt;div class="section" id="contruindo-o-ambiente"&gt;
+&lt;h2&gt;CONTRUÍNDO O AMBIENTE&lt;/h2&gt;
 &lt;p&gt;Nessa aula, ao invés de darmos continuidade ao estudo das estruturas de controle, vamos definir uma estrutura para o nosso estudo, no caso, vamos definir o que eu chamaria de ambiente de estudo PHP.&lt;/p&gt;
 &lt;p&gt;O código que nós produziremos será o mais simples possível para que a nossa necessidade fosse atendida.&lt;/p&gt;
 &lt;p&gt;Se, num primeiro momento você pensar que nós avançamos no curso sem estudarmos os conceitos previamente, isso não é verdade. O que nós vamos construir é um simples ambiente para nosso estudo e tão logo perceberemos, que essa é a estrutura mais importante que aprenderemos não próximas 50 aulas.&lt;/p&gt;
 &lt;p&gt;Se você não entender o código, atente-se somente a ideia, até porque, todo o nosso curso, a contar deste ponto, utilizará esta estrutura e assim, vamos estudar e estudar a mesma.&lt;/p&gt;
 &lt;p&gt;Agora, é importante que você desenvolva o código que aqui escreveremos em seu computador e brinque com esse conceito. Como já dito, o que aprenderemos nesse momento será a ideia mais importante das próximas 50 aulas.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
