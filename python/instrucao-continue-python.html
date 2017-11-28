@@ -389,15 +389,16 @@ eXcript            </a>
 <p>Então, nunca é demais repetir que instrução <code>contine</code> interrompe somente o ciclo que está sendo executado fazendo com que o cursor de execução retorne ao cabeçalho da estrutura de repetição para dar início a execução do ciclo seguinte.</p>
 <p>Caso não conheças a instrução <code>break</code> <a class="reference external" href="http://excript.com/python/instrucao-break-python.html">para a interrupção de laços</a>, é interessante que o faça! E também, se <a class="reference external" href="http://excript.com/python/iteracao-python.html">houver dúvidas sobre as estrutruras de repetição, estude a aula</a> em que tratamos sobre as mesmas.</p>
 <p>No código abaixo construimos um simples exemplo com o único propósito de demonstrar a interrupção da execução de um único ciclo com a instruçao <code>continue</code>.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">):</span>
-        <span class="k">continue</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
+x = 0
+while(x &lt;= 10):
+    x+=1
+    if(x % 2):
+        continue
+    print(x)
+</pre>
 <p>No código acima, declaramos a variável <code>x</code> e a inicializamos com o valor 0. Em seguida, implementamos um laço de repetição <a class="reference external" href="http://excript.com/python/while-else-python.html">while loop</a> e definimos como condição para execução do bloco de instrução, que o valor de <code>x</code> seja menor ou igual a 10.</p>
 <p>Na linha seguinte, incrementamos uma unidade em <code>x</code> e em seguida, utilizamos <a class="reference external" href="http://excript.com/python/if-else-python.html">a instrução if</a> <a class="reference external" href="http://excript.com/python/modulo-da-divisao-python.html">definindo que se o módulo de x por 2 for igual a 0</a> a instrução <code>continue</code> será executada, o que ocasionará, a interrupção da execução do ciclo.</p>
 <p>Em decorrência da lógica implementada, a última instrução do ciclo, <code>print(x)</code>, não é executada quando o módulo é igual a 0, até porque, a execução é interrompida com o uso da  instrução <code>continue</code>.</p>
@@ -442,23 +443,24 @@ No sétimo ciclo também houve uma interrupção onde a jornada cancelada, isto 
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="k">print</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;inicio&quot;</span><span class="p">)</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
-        <span class="k">continue</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">):</span>
-        <span class="k">break</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;else&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;fim&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">()</span>
-</pre></div>
+print()
+print(&quot;inicio&quot;)
+i = 0
+while(i&lt;10):
+    i += 1
+    if(i%2==0):
+        continue
+    if(i&gt;5):
+        break
+    print(i)
+else:
+    print(&quot;else&quot;)
+print(&quot;fim&quot;)
+print()
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

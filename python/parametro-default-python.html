@@ -385,11 +385,12 @@ eXcript            </a>
 <h2>PARÂMETROS DEFAULT</h2>
 <p><tt class="docutils literal">Parâmetro default</tt> é uma parâmetro que tem um valor associado na declaração da função, ou seja, o valor é atribuído ao parâmetro dentro do parêntesis. O <tt class="docutils literal">parâmetros default</tt> funciona da mesma forma que a inicialização e declaração de variáveis, isto é, a mesma recebe um valor no momento da sua declaração.</p>
 <p>Por exemplo, vamos implementar uma simples função e definir um único parâmetro default.</p>
-<div class="highlight"><pre><span></span><span class="c1"># a função está sendo definida e o valor 1000 está sendo associado</span>
-<span class="c1"># ao parametro de nome param1</span>
-<span class="k">def</span> <span class="nf">minha_funcao</span><span class="p">(</span><span class="n">param1</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">param1</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+# a função está sendo definida e o valor 1000 está sendo associado
+# ao parametro de nome param1
+def minha_funcao(param1=1000):
+    print(param1)
+</pre>
 <p>Como pode ser visto no código acima, implementamos uma função de nome <code>minha_funcao()</code> e definimos no cabeçalho da mesma [entre parêntesis] um parâmetro de nome <code>param1</code> e associamos a este nome o valor inteiro 1000.</p>
 
     <div class="admonitionblock tip data-line">
@@ -410,37 +411,40 @@ eXcript            </a>
     </div>
 <p>A biblioteca padrão do Python contém centenas de funções que possuem parâmetros com valores associados, uma delas é a função range() já estudada.</p>
 <p>Em aulas anteriores, invocamos, algumas vezes, funções que continham <tt class="docutils literal">parâmetros default</tt>,  por exemplo, a função <code>range()</code>, cuja notação pode ser vista no trecho de código a seguir.</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">pass</span>
-</pre></div>
+<pre class="literal-block">
+def __init__(self, start=None, *args, **kwargs):
+    pass
+</pre>
 <p>A função <code>range()</code> é, na verdade, uma classe, por isso que o nome da função é <code>__init__()</code>, isto é, essa função é a função que é invocada quando uma nova instância está sendo criada.</p>
 <p>O primeiro parâmetro é de nome <code>self</code>, neste momento, temos que saber somente que este parâmetro é comum em todas as funções implementadas dentro de quaisquer classe. Então, não vamos estuda-lo agora, até porque, quando criamos uma instância de <code>range()</code> não é necessário enviar o argumento de nome <code>self</code>.</p>
 <p>O segundo parâmetro de nome <code>start</code> é inicializado com o valor <code>None</code>. Para o Python, <code>None</code> é igual a zero e assim, se a função <code>range()</code> for invocada utilizando somente 2 argumentos, ocorrerá que o parâmetro <code>start</code> será interpretado como sendo zero e então, a lista numérica retornada estará no intervalo fechado, iniciando em zero.</p>
 <p>Os 2 outros parâmetros definidos na função serão estudados na sequência, o nosso objetivo agora, foi somente estudar o parâmetro defaulta da função de inicialização da classe <code>range()</code>.</p>
 <p>No trecho de código a seguir, implementamos uma função que define parâmetros default.</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="n">senha</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span> <span class="s2">&quot;user: &quot;</span> <span class="o">.</span> <span class="n">user</span>
-    <span class="k">print</span><span class="p">(</span> <span class="s2">&quot;senha: &quot;</span> <span class="o">.</span> <span class="n">senha</span>
-</pre></div>
+<pre class="literal-block">
+def login(user=&quot;user&quot;, senha=&quot;123&quot;)
+    print( &quot;user: &quot; . user
+    print( &quot;senha: &quot; . senha
+</pre>
 <p>A função <code>login()</code>, definida no código acima, pode ser invocada sem que seja passado um único argumento, até porque, por padrão, há valores definidos para todos os parâmetros declarados.</p>
 <p>É importante dizer que, se invocarmos uma função sem passarmos os parâmetros que estão definidos, o Python levantará uma exceção, porém, com o uso de <tt class="docutils literal">parâmetros default</tt>, a obrigatoriedade torna-se facultativo.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1"># coding: utf-8</span>
+<pre class="literal-block">
+# coding: utf-8
 
-<span class="c1"># =================</span>
-<span class="c1">#  = eXcript.com =</span>
-<span class="c1"># =================</span>
+# =================
+#  = eXcript.com =
+# =================
 
-<span class="c1"># PARÂMETROS DEFAULT</span>
+# PARÂMETROS DEFAULT
 
-<span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">sistema</span><span class="p">,</span> <span class="n">usuario</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span> <span class="n">senha</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Usuário: &quot;</span><span class="p">,</span> <span class="n">usuario</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Senha: &quot;</span><span class="p">,</span> <span class="n">senha</span><span class="p">)</span>
+def login(sistema, usuario=&quot;root&quot;, senha=&quot;123&quot;):
+    print(&quot;Usuário: &quot;, usuario)
+    print(&quot;Senha: &quot;, senha)
 
-<span class="n">login</span><span class="p">()</span>
-</pre></div>
+login()
+</pre>
 </div>
 <div class="section" id="links-externos">
 <h2>LINKS EXTERNOS</h2>

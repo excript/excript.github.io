@@ -310,43 +310,44 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cm">/*  ==========                 ==========</span>
-<span class="cm">    ========== www.eXcript.com ==========</span>
-<span class="cm">    ==========                 ==========*/</span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+/*  ==========                 ==========
+    ========== www.eXcript.com ==========
+    ==========                 ==========*/
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">;</span>
-    <span class="n">a</span><span class="o">=</span><span class="mi">15</span><span class="p">;</span>
-    <span class="n">b</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
-    <span class="n">c</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+int main()
+{
+    int a,b,c;
+    a=15;
+    b=10;
+    c=5;
 
-    <span class="kt">float</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    float x = 0;
 
-    <span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">/</span> <span class="n">c</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expressao: a * b / c = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    x = a * b / c;
+    printf(&quot;Expressao: a * b / c = %f\n&quot;, x);
 
-    <span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expressao: a / b * c = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    x = a / b * c;
+    printf(&quot;Expressao: a / b * c = %f\n&quot;, x);
 
-    <span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expressao: a + b * c = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    x = a + b * c;
+    printf(&quot;Expressao: a + b * c = %f\n&quot;, x);
 
-    <span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expressao: a * b + c = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    x = a * b + c;
+    printf(&quot;Expressao: a * b + c = %f\n&quot;, x);
 
-    <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expressao: (a * b) + c = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    x = (a * b) + c;
+    printf(&quot;Expressao: (a * b) + c = %f\n&quot;, x);
 
-    <span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expressao: a * (b + c) = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    x = a * (b + c);
+    printf(&quot;Expressao: a * (b + c) = %f\n&quot;, x);
 
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

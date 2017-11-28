@@ -392,76 +392,78 @@ eXcript            </a>
 <div class="section" id="codigo-enviado-por-aluno">
 <h2>CÓDIGO ENVIADO POR ALUNO</h2>
 <p>Nome: Matheus Souza - <a class="reference external" href="https://plus.google.com/b/102371115481264098253/103032760058774924445/posts">https://plus.google.com/b/102371115481264098253/103032760058774924445/posts</a></p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;cstdlib&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="kt">int</span> <span class="n">A</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">short</span> <span class="kt">int</span> <span class="n">B</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">long</span> <span class="kt">int</span> <span class="n">C</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">signed</span> <span class="kt">int</span> <span class="n">D</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">E</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">short</span> <span class="kt">signed</span> <span class="kt">int</span> <span class="n">F</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">long</span> <span class="kt">signed</span> <span class="kt">int</span> <span class="n">G</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">short</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">H</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">long</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">I</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um short int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um long int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um signed int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">D</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um unsigned int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um short signed int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um long signed int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">G</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um short unsigned int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">H</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Um long unsigned int ocupa &quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">I</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Os valores acima significam que o normal ocupa 4B de memória, o short só ocupa 2B e o long ocupa 8B.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+int main(){
+    int A = 0;
+    short int B = 0;
+    long int C = 0;
+    signed int D = 0;
+    unsigned int E = 0;
+    short signed int F = 0;
+    long signed int G = 0;
+    short unsigned int H = 0;
+    long unsigned int I = 0;
+    std::cout &lt;&lt; &quot;\n&quot;;
+    std::cout &lt;&lt; &quot;Um int ocupa &quot; &lt;&lt; sizeof(A) &lt;&lt; &quot;B.\n&quot;;
+    std::cout &lt;&lt; &quot;Um short int ocupa &quot; &lt;&lt; sizeof(B) &lt;&lt; &quot;B.\n&quot;;
+    std::cout &lt;&lt; &quot;Um long int ocupa &quot; &lt;&lt; sizeof(C) &lt;&lt; &quot;B.\n&quot;;
+    std::cout &lt;&lt; &quot;Um signed int ocupa &quot; &lt;&lt; sizeof(D) &lt;&lt; &quot;B.\n&quot;;
+    std::cout &lt;&lt; &quot;Um unsigned int ocupa &quot; &lt;&lt; sizeof(E) &lt;&lt; &quot;B.\n&quot;;
+    std::cout &lt;&lt; &quot;Um short signed int ocupa &quot; &lt;&lt; sizeof(F) &lt;&lt; &quot;B.\n&quot;;
+    std::cout &lt;&lt; &quot;Um long signed int ocupa &quot; &lt;&lt; sizeof(G) &lt;&lt; &quot;B.\n&quot;;
+    std::cout &lt;&lt; &quot;Um short unsigned int ocupa &quot; &lt;&lt; sizeof(H) &lt;&lt; &quot;B.\n&quot;;
+    std::cout &lt;&lt; &quot;Um long unsigned int ocupa &quot; &lt;&lt; sizeof(I) &lt;&lt; &quot;B.\n&quot;;
+    std::cout &lt;&lt; &quot;\n&quot;;
+    std::cout &lt;&lt; &quot;Os valores acima significam que o normal ocupa 4B de memória, o short só ocupa 2B e o long ocupa 8B.\n&quot;;
+    std::cout &lt;&lt; &quot;\n&quot;;
+}
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+/*====================================
+*           eXcript.com
+*          fb.com/eXcript
+* ====================================*/
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+int main() {
 
-    <span class="kt">short</span>  <span class="n">a1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="kt">short</span> <span class="kt">int</span> <span class="n">a2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span><span class="c1">//2 bytes</span>
-    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span><span class="c1">//4 bytes</span>
-    <span class="kt">long</span> <span class="kt">int</span> <span class="n">c1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span><span class="c1">//4 bytes</span>
-    <span class="kt">long</span> <span class="n">c2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span><span class="c1">//4 bytes</span>
+    short  a1 = 10;
+    short int a2 = 10;//2 bytes
+    int b = 10;//4 bytes
+    long int c1 = 10;//4 bytes
+    long c2 = 10;//4 bytes
 
-    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">259</span><span class="p">;</span>
+    unsigned char c = 259;
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    cout &lt;&lt; sizeof(a1) &lt;&lt; endl;
+    cout &lt;&lt; sizeof(a2) &lt;&lt; endl;
+    cout &lt;&lt; sizeof(b) &lt;&lt; endl;
+    cout &lt;&lt; sizeof(c1) &lt;&lt; endl;
+    cout &lt;&lt; sizeof(c2) &lt;&lt; endl;
 
-    <span class="kt">float</span> <span class="n">f1</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-    <span class="kt">long</span> <span class="kt">long</span> <span class="n">f2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-    <span class="kt">long</span> <span class="kt">double</span> <span class="n">f3</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">f1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">f2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">f3</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    float f1 = 2;
+    long long f2 = 2;
+    long double f3 = 2;
+    cout &lt;&lt; sizeof(f1) &lt;&lt; endl;
+    cout &lt;&lt; sizeof(f2) &lt;&lt; endl;
+    cout &lt;&lt; sizeof(f3) &lt;&lt; endl;
 
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    system(&quot;pause&quot;);
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

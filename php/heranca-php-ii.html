@@ -532,30 +532,31 @@ c) ambos construtores serão invocados?</blockquote>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <!-- Como a subclasse implementa suas próprias funcionalidades? -->
-<div class="highlight"><pre><span></span><span class="x">class SuperClasse {</span>
+<pre class="literal-block">
+class SuperClasse {
 
-<span class="x">    public $a = 0;</span>
+    public $a = 0;
 
-<span class="x">    public function super()</span>
-<span class="x">    {</span>
-<span class="x">        echo $a;</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+    public function super()
+    {
+        echo $a;
+    }
+}
 
-<span class="x">class SubClasse extends SuperClasse {</span>
+class SubClasse extends SuperClasse {
 
-<span class="x">    public $a;</span>
+    public $a;
 
-<span class="x">    public function sub()</span>
-<span class="x">    {</span>
-<span class="x">        this-&gt;$a = 10;</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+    public function sub()
+    {
+        this-&gt;$a = 10;
+    }
+}
 
-<span class="x">$sub = new SubClasse();</span>
-<span class="x">$sub-&gt;sub();</span>
-<span class="x">$sub-&gt;super();</span>
-</pre></div>
+$sub = new SubClasse();
+$sub-&gt;sub();
+$sub-&gt;super();
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

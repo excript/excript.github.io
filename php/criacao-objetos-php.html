@@ -550,9 +550,10 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 <h2>DESTRUIÇÃO DE OBJETOS</h2>
 <p>Um objeto será destruido todas as vezes em que não houver mais variáveis contendo sua referência, isto, que esteja referenciando-o. Dessa forma, temos que o PHP desalocará a memória de todos os objetos quando estes não mais tiverem utilidade. Se por acaso tentarmos acessar um objeto que foi destruído, temos que ocorrerá um erro e o Script PHP terá sua execução finalizada, até porque, o objeto não existe mais.</p>
 <p>Porém, não se preocupe, o PHP sabe gerenciar muito bem a memória e também, consegue definir com bastante precisão o momento de remover cada instância da memória. Por isso, salvo em raras exceções, você irá ter problemas com a destruição de objetos que ainda estavam em uso.</p>
-<div class="highlight"><pre><span></span><span class="x">$p1 = new Pessoa();</span>
-<span class="x">$p2 = new Pessoa();</span>
-</pre></div>
+<pre class="literal-block">
+$p1 = new Pessoa();
+$p2 = new Pessoa();
+</pre>
 </div>
 <div class="section" id="garbage-collector">
 <h2>GARBAGE COLLECTOR</h2>
@@ -562,25 +563,26 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#CRIAÇÃO DE OBJETOS/INSTÂNCIAS</span>
+<pre class="literal-block">
+#CRIAÇÃO DE OBJETOS/INSTÂNCIAS
 
-<span class="x">class Classe{</span>
-<span class="x">    public $a = 1;</span>
-<span class="x">    public $b = 2;</span>
-<span class="x">    public $c = 3;</span>
-<span class="x">}</span>
+class Classe{
+    public $a = 1;
+    public $b = 2;
+    public $c = 3;
+}
 
-<span class="x">$objetoA = new Classe();</span>
-<span class="x">$objetoB = new Classe();</span>
-<span class="x">$objetoC = new Classe();</span>
+$objetoA = new Classe();
+$objetoB = new Classe();
+$objetoC = new Classe();
 
-<span class="x">var_dump($objetoA);</span>
-<span class="x">//var_dump($objetoB);</span>
-<span class="x">//var_dump($objetoC);</span>
+var_dump($objetoA);
+//var_dump($objetoB);
+//var_dump($objetoC);
 
-<span class="x">unset($objetoA);</span>
-<span class="x">var_dump($objetoA);</span>
-</pre></div>
+unset($objetoA);
+var_dump($objetoA);
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

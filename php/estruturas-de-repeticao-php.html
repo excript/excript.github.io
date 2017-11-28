@@ -515,34 +515,37 @@ eXcript            </a>
 <div class="section" id="lacos-de-repeticao">
 <h2>LAÇOS DE REPETIÇÃO</h2>
 <p>Para entendermos o que é um laço de repetição, vamos voltar para a primeira aula de tomada de decisão.</p>
-<div class="highlight"><pre><span></span><span class="x">$x = 0;</span>
-<span class="x">if($x &lt;= 10){</span>
-<span class="x">    echo &quot;o valor de x eh &quot; . $x</span>
-<span class="x">}</span>
-</pre></div>
+<pre class="literal-block">
+$x = 0;
+if($x &lt;= 10){
+    echo &quot;o valor de x eh &quot; . $x
+}
+</pre>
 <p>Acima declaramos uma variável e estabelecemos uma condição. Agora, vamos copiar o código, porém, ao invés de utilizarmos a instrução <tt class="docutils literal">if</tt>, vamos alterar para <tt class="docutils literal">while</tt>. Do inglês, <tt class="docutils literal">while</tt> significa <tt class="docutils literal">enquanto</tt>, e na programação, a instrução <tt class="docutils literal">while</tt>, executará o seu bloco de instrução até que a condição definida seja satisfeita.</p>
 <p>Também vamos somar uma unidade a variável <tt class="docutils literal">$x</tt> dentro do bloco de instrução. Agora, vamos comparar ambos os código e estudar as semelhanças.</p>
-<div class="highlight"><pre><span></span><span class="x">$x = 0;</span>
-<span class="x">while($x &lt; 10){</span>
-<span class="x">    echo &quot;o valor de x eh &quot; . $x</span>
-<span class="x">    $x = $x + 1;</span>
-<span class="x">}</span>
-</pre></div>
+<pre class="literal-block">
+$x = 0;
+while($x &lt; 10){
+    echo &quot;o valor de x eh &quot; . $x
+    $x = $x + 1;
+}
+</pre>
 <p>Quando utilizamos a instrução <tt class="docutils literal">if</tt>, estamos verificando uma condição e caso a mesma for verdadeira, o bloco de instrução será executado (uma única vez). Da mesma forma temos com a instrução <tt class="docutils literal">while</tt>, enquanto a condição definida no cabeçalho for verificada, o bloco será executado. Ou seja, o bloco será executado <tt class="docutils literal">enquanto</tt> a condição estabelecida for atendida.</p>
 <p>Nós incrementando uma unidade à variável <tt class="docutils literal">$x</tt> a cada ciclo e também, verificamos o valor da variável no cabeçalho da estrutura, desta forma, conseguimos perceber que em um determinado momento o valor da condição será atendido, até porque, incrementando o valor da variável que utilizamos na expressão que decide se o bloco deve ou não ser executado.</p>
 <p>Por fim, se entendermos a instrução condicional <tt class="docutils literal">if</tt>, conseguimos entender também, a instrução <tt class="docutils literal">while</tt>, haja vista que ambas funcionam da mesma forma e o que diferencia as estruturas, é a quantidade de vezes que o bloco será repetido.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">//ESTRUTURAS DE REPETIÇÃO</span>
+<pre class="literal-block">
+//ESTRUTURAS DE REPETIÇÃO
 
-<span class="x">$x = 10;</span>
-<span class="x">while($x&lt;=20){</span>
-<span class="x">    $x = $x + 1;</span>
-<span class="x">    echo $x . &quot;\n&quot;;</span>
-<span class="x">//    echo &quot;O valor da variável x é menor do que zero.&quot;;</span>
-<span class="x">}</span>
-</pre></div>
+$x = 10;
+while($x&lt;=20){
+    $x = $x + 1;
+    echo $x . &quot;\n&quot;;
+//    echo &quot;O valor da variável x é menor do que zero.&quot;;
+}
+</pre>
 </div>
 
 				</div>

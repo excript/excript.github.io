@@ -430,33 +430,36 @@ eXcript            </a>
     </div>
 <p>Uma função deve receber os valores na ordem em que os parâmetros estão definidos, do contrário, ocorrerá os mais diversos problemas ou então, o Script nem será executado.</p>
 <p>A seguir, escreveremos um simples trecho de código em que uma função será definida.</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-    <span class="k">print</span><span class="p">(</span> <span class="s2">&quot;A soma dos parâmetros é: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+def soma(a, b)
+    x = a + b
+    print( &quot;A soma dos parâmetros é: &quot;, x)
+</pre>
 <p>No código acima, foi definido uma função e nesta há 2 parâmetros declarados. Assim, para invocarmos a  função <cite>soma()</cite>, temos que enviar junto 2 valores, como pode ser visto no código a seguir.</p>
-<div class="highlight"><pre><span></span><span class="n">soma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+soma(10, 20)
+</pre>
 <p>Acima, estamos invocando a função de nome soma e passando 2 valores como parâmetro. O primeiro, é o valor do parâmetro de nome <code>a</code>, enquanto o segundo, é o parâmetro de nome <cite>b</cite>.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1"># coding: utf-8</span>
+<pre class="literal-block">
+# coding: utf-8
 
-<span class="c1"># =================</span>
-<span class="c1">#  = eXcript.com =</span>
-<span class="c1"># =================</span>
+# =================
+#  = eXcript.com =
+# =================
 
-<span class="c1"># PARÂMETROS</span>
+# PARÂMETROS
 
-<span class="k">print</span><span class="p">()</span>
+print()
 
-<span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;O total da soma de x + y é: &quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+def soma(x,y):
+    total = x+y
+    print(&quot;O total da soma de x + y é: &quot;, total)
 
-<span class="n">soma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-</pre></div>
+soma(10, 50)
+</pre>
 </div>
 <div class="section" id="links-externos">
 <h2>LINKS EXTERNOS</h2>

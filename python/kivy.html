@@ -277,8 +277,9 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>O <a class="reference external" href="https://github.com/kivy-garden">Projeto Garden</a> centraliza componentes não oficiais de código-fonte aberto e distribuido sob a licença MIT desenvolvido por terceiros. Pense neste projeto como um centralizador de códigos de diferentes usuários cuja finalidade é distribuir e compartilhar módulos prontos para ser utilizado.</p>
 <p>Todos os pacotes Garden estão armazenados no Github, dentro do projeto Kivy, ou seja, no mesmo local em que baixamos o código fonte da biblioteca Kivy.</p>
 <p>O projeto Garden não está mais sendo entregue junto com o código do framework Kivy, por isso, agora, é necessário instala-lo manualmente. Para isso, vá no Terminal e digite:</p>
-<div class="highlight"><pre><span></span>pip install kivy-garden
-</pre></div>
+<pre class="literal-block">
+pip install kivy-garden
+</pre>
 <p>Vale dizer que todos são incentivados a colaborar com os pacotes existentes ou então, pela criação de novos módulos independentes. Inclusive, existe um sistema de premiação simbólica para aqueles que tenham colaborado.</p>
 <p><a class="reference external" href="https://github.com/kivy-garden">Segue o link do repositório no Github</a>.</p>
 </div>
@@ -308,26 +309,27 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>Este projeto é semelhante ao <a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/">JNI (Java Native Interface)</a> que permite o acesso às classes escritas em Java por outras linguagens.</p>
 <p>Dessa forma, conseguimos por exemplo, acessar a classe <a class="reference external" href="https://developer.android.com/reference/android/content/Intent.html">Intent</a> do Android, ou então, a classe <a class="reference external" href="https://developer.android.com/reference/android/app/Activity.html">Activity</a> e inclusive, conseguimos desenvolver uma aplicação que rode nativamente em cima da API Java do Android.</p>
 <p>A seguir, temos um exemplo, retirado da documentação oficial do PyJNIus em que é feito o acesso a Activity do Android.</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jnius</span> <span class="kn">import</span> <span class="n">cast</span>
-<span class="kn">from</span> <span class="nn">jnius</span> <span class="kn">import</span> <span class="n">autoclass</span>
+<pre class="literal-block">
+from jnius import cast
+from jnius import autoclass
 
-<span class="c1"># import the needed Java class</span>
-<span class="n">PythonActivity</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;org.renpy.android.PythonActivity&#39;</span><span class="p">)</span>
-<span class="n">Intent</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;android.content.Intent&#39;</span><span class="p">)</span>
-<span class="n">Uri</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;android.net.Uri&#39;</span><span class="p">)</span>
+# import the needed Java class
+PythonActivity = autoclass('org.renpy.android.PythonActivity')
+Intent = autoclass('android.content.Intent')
+Uri = autoclass('android.net.Uri')
 
-<span class="c1"># create the intent</span>
-<span class="n">intent</span> <span class="o">=</span> <span class="n">Intent</span><span class="p">()</span>
-<span class="n">intent</span><span class="o">.</span><span class="n">setAction</span><span class="p">(</span><span class="n">Intent</span><span class="o">.</span><span class="n">ACTION_VIEW</span><span class="p">)</span>
-<span class="n">intent</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="n">Uri</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;http://kivy.org&#39;</span><span class="p">))</span>
+# create the intent
+intent = Intent()
+intent.setAction(Intent.ACTION_VIEW)
+intent.setData(Uri.parse('http://kivy.org'))
 
-<span class="c1"># PythonActivity.mActivity is the instance of the current Activity</span>
-<span class="c1"># BUT, startActivity is a method from the Activity class, not from our</span>
-<span class="c1"># PythonActivity.</span>
-<span class="c1"># We need to cast our class into an activity and use it</span>
-<span class="n">currentActivity</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="s1">&#39;android.app.Activity&#39;</span><span class="p">,</span> <span class="n">PythonActivity</span><span class="o">.</span><span class="n">mActivity</span><span class="p">)</span>
-<span class="n">currentActivity</span><span class="o">.</span><span class="n">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">)</span>
-</pre></div>
+# PythonActivity.mActivity is the instance of the current Activity
+# BUT, startActivity is a method from the Activity class, not from our
+# PythonActivity.
+# We need to cast our class into an activity and use it
+currentActivity = cast('android.app.Activity', PythonActivity.mActivity)
+currentActivity.startActivity(intent)
+</pre>
 <p>Observe que estamos utilizando a linguagem Python para trabalhar com classes escritas em Java!</p>
 <p>Assim concluímos que a capacidade de desenvolvimento é ilimitada, até porque, podemos acessar nativamente tudo que a plataforma Android disponibiliza, seja através das classe em C++ pelo acesso via <a class="reference external" href="https://developer.android.com/ndk/index.html">NDK</a>,</p>
 </div>
@@ -343,12 +345,13 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <h2>PROJETO PyObjus</h2>
 <p>O projeto <a class="reference external" href="https://github.com/kivy/pyobjus">PyObjus</a> permite o acesso às classes escritas em <a class="reference external" href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html">Objective-C</a> pelo Python. Desta forma, conseguimos o acesso nativo a toda a API do <a class="reference external" href="https://www.apple.com/ios/">iOS</a> através do código Python.</p>
 <p>A seguir, temos um simples exemplos extraído da documentação oficial da PyObjnus.</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyobjus</span> <span class="kn">import</span> <span class="n">autoclass</span>
+<pre class="literal-block">
+from pyobjus import autoclass
 
-<span class="n">NSString</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;NSString&#39;</span><span class="p">)</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">NSString</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">initWithUTF8String_</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">text</span><span class="o">.</span><span class="n">UTF8String</span><span class="p">()</span> <span class="c1"># --&gt; Hello world</span>
-</pre></div>
+NSString = autoclass('NSString')
+text = NSString.alloc().initWithUTF8String_('Hello world')
+print text.UTF8String() # --&gt; Hello world
+</pre>
 <p>Como podemos ver, é importado a classe NSString e em seguida é armazenado o texto Hello World na mesma. Ou seja, desta forma, estamos trabalhando com a API nativa do iOS utilizando a linguagem Python! Portanto, conseguimos desenvolver aplicações que utilizam toda a API nativa da plataforma utilizando código Python.</p>
 </div>
 <div class="section" id="componentes-widget">
@@ -388,43 +391,46 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>A seguir, temos um exemplo de um simples trecho de código utilizando somente a linguagem Cython.</p>
 <div class="section" id="declaracao-de-variaveis-com-cython">
 <h3>DECLARAÇÃO DE VARIÁVEIS COM CYTHON</h3>
-<div class="highlight"><pre><span></span><span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span><span class="p">,</span> <span class="nf">j</span><span class="p">,</span> <span class="nf">k</span>
-<span class="k">cdef</span> <span class="kt">float</span> <span class="nf">f</span><span class="p">,</span> <span class="kt">g</span>[42], *<span class="nf">h</span>
+<pre class="literal-block">
+cdef int i, j, k
+cdef float f, g[42], *h
 
-<span class="k">cdef</span> <span class="k">struct</span> <span class="nf">Grail</span><span class="p">:</span>
-    <span class="nb">int</span> <span class="n">age</span>
-    <span class="nb">float</span> <span class="n">volume</span>
-</pre></div>
+cdef struct Grail:
+    int age
+    float volume
+</pre>
 </div>
 <div class="section" id="declaracao-de-classe-e-funcao-em-cython">
 <h3>DECLARAÇÃO DE CLASSE E FUNÇÃO EM CYTHON</h3>
-<div class="highlight"><pre><span></span><span class="k">cdef</span> <span class="k">class</span> <span class="nf">A</span><span class="p">:</span>
-    <span class="k">cdef</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s">&quot;A&quot;</span>
-</pre></div>
+<pre class="literal-block">
+cdef class A:
+    cdef foo(self):
+        print &quot;A&quot;
+</pre>
 </div>
 <div class="section" id="alocacao-de-memorica-em-cython">
 <h3>Alocação de memórica em Cython</h3>
-<div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">random</span>
-<span class="k">from</span> <span class="nn">libc.stdlib</span> <span class="k">cimport</span> <span class="n">malloc</span><span class="p">,</span> <span class="n">free</span>
+<pre class="literal-block">
+import random
+from libc.stdlib cimport malloc, free
 
-<span class="k">def</span> <span class="nf">random_noise</span><span class="p">(</span><span class="nb">int</span> <span class="n">number</span><span class="o">=</span><span class="mf">1</span><span class="p">):</span>
-    <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span>
-    <span class="c"># allocate number * sizeof(double) bytes of memory</span>
-    <span class="k">cdef</span> <span class="kt">double</span> *<span class="nf">my_array</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">double</span> <span class="o">*&gt;</span><span class="n">malloc</span><span class="p">(</span><span class="n">number</span> <span class="o">*</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">double</span><span class="p">))</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">my_array</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">MemoryError</span><span class="p">()</span>
+def random_noise(int number=1):
+    cdef int i
+    # allocate number * sizeof(double) bytes of memory
+    cdef double *my_array = &lt;double *&gt;malloc(number * sizeof(double))
+    if not my_array:
+        raise MemoryError()
 
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">ran</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
-            <span class="n">my_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ran</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">)</span>
+    try:
+        ran = random.normalvariate
+        for i in range(number):
+            my_array[i] = ran(0,1)
 
-        <span class="k">return</span> <span class="p">[</span> <span class="n">my_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="p">]</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="c"># return the previously allocated memory to the system</span>
-        <span class="n">free</span><span class="p">(</span><span class="n">my_array</span><span class="p">)</span>
-</pre></div>
+        return [ my_array[i] for i in range(number) ]
+    finally:
+        # return the previously allocated memory to the system
+        free(my_array)
+</pre>
 </div>
 <div class="section" id="o-kivy-e-o-cython">
 <h3>O KIVY E O CYTHON</h3>

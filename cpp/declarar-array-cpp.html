@@ -355,47 +355,50 @@ eXcript            </a>
 <div class="section" id="declaracao">
 <h2>DECLARAÇÃO</h2>
 <p>A declaração de Array se distingue da declaração de variáveis pela utilização de uma par de colchetes após a definição do nome, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">valor</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
-</pre></div>
+<pre class="literal-block">
+int valor[10];
+</pre>
 <p>Acima, nós estamos dizendo que queremos uma variável, do tipo Array de nome valor e que contenha 10 elementos do tipo inteiro. Logo, após a declaração, já podemos acessar os elementos e atribuir valores a estes, isto porque, um Array é uma estrutura de dados incorporada a linguagem C++ e assim, dispensa inicialização.</p>
 <p>Tecnicamente, temos que a definição é a seguinte:</p>
-<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">tipo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">nome</span><span class="o">&gt;</span> <span class="p">[];</span>
-</pre></div>
+<pre class="literal-block">
+&lt;tipo&gt; &lt;nome&gt; [];
+</pre>
 <p>Aqui utilizamos a barra para definir, até porque, nos comentários do YouTube não é permitido a utilização dos símbolos de maior e menor.</p>
 <p>Nós podemos declarar Arrays de qualquer tipo, primitivo ou composto, sendo que com o tipo composto, seremos obrigados a criar uma nova instância e atribuí-la a uma determinada posição.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+/*====================================
+*           eXcript.com
+*          fb.com/eXcript
+* ====================================*/
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+int main() {
 
-    <span class="kt">int</span> <span class="n">nums</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+    int nums[10];
 
-    <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-    <span class="n">nums</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span><span class="p">;</span>
-    <span class="n">nums</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
-    <span class="n">nums</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
-    <span class="n">nums</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
-    <span class="n">nums</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-    <span class="n">nums</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
-    <span class="n">nums</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">nums</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-    <span class="n">nums</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+    nums[0] = 100;
+    nums[1] = 99;
+    nums[2] = 50;
+    nums[3] = 25;
+    nums[4] = 4;
+    nums[5] = 5;
+    nums[6] = 60;
+    nums[7] = 0;
+    nums[8] = -1;
+    nums[9] = 9;
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">nums</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    cout &lt;&lt; nums[5] + nums[9] &lt;&lt; endl;
+    cout &lt;&lt; nums[0];
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

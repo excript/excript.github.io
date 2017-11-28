@@ -505,30 +505,31 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#FUNÇÕES ANÔNIMAS E ARRAYS</span>
+<pre class="literal-block">
+#FUNÇÕES ANÔNIMAS E ARRAYS
 
-<span class="x">#array_map(&lt;f.anonima&gt;, &lt;array&gt;)</span>
+#array_map(&lt;f.anonima&gt;, &lt;array&gt;)
 
-<span class="x">$lista = [1,2,3,4,5];</span>
+$lista = [1,2,3,4,5];
 
-<span class="x">$f = function($x){</span>
-<span class="x">    return $x  * $x;</span>
-<span class="x">};</span>
+$f = function($x){
+    return $x  * $x;
+};
 
-<span class="x">$lista_proc = array_map($f, $lista);</span>
-<span class="x">print_r($lista_proc);</span>
+$lista_proc = array_map($f, $lista);
+print_r($lista_proc);
 
 
-<span class="x">#array_filter(&lt;array&gt;, &lt;f.anonima&gt;)</span>
+#array_filter(&lt;array&gt;, &lt;f.anonima&gt;)
 
-<span class="x">$filtro = function($x){</span>
-<span class="x">    return $x &lt; 3;</span>
-<span class="x">};</span>
+$filtro = function($x){
+    return $x &lt; 3;
+};
 
-<span class="x">$lista_filtro = array_filter($lista, $filtro);</span>
+$lista_filtro = array_filter($lista, $filtro);
 
-<span class="x">print_r($lista_filtro);</span>
-</pre></div>
+print_r($lista_filtro);
+</pre>
 </div>
 
 				</div>

@@ -306,11 +306,12 @@ eXcript            </a>
 <div class="section" id="operacoes-matematicas">
 <h2>OPERAÇÕES MATEMÁTICAS</h2>
 <p>As operações matemáticas funcionam com o uso dos 4 operadores básicos que já conhecemos. Assim, temos que o princípio do funcionamento das operações matemáticas nós já conhecemos. Para a soma, utilizamo o sinal de adição <cite>+</cite>. Para a subtração, o sinal de menos <cite>-</cite>. A multiplicação o asterisco <cite>*</cite>. E a divisão o sinal, a barra <cite>/</cite>.</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">soma</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">subtracao</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">multiplicacao</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="mi">50</span><span class="p">;</span>
-<span class="kt">double</span> <span class="n">divisao</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
-</pre></div>
+<pre class="literal-block">
+int soma = 1 + 10;
+int subtracao = 10 - 1;
+int multiplicacao = 20 * 50;
+double divisao = 10 * 3;
+</pre>
 <p>Acima, temos as 4 operações elementares e que são a base de toda a matemática.</p>
 </div>
 <div class="section" id="explicacao-do-aluno-https-plus-google-com-b-102371115481264098253-102966476758670352426">
@@ -319,45 +320,47 @@ eXcript            </a>
 <p>P: (...) Não entendi quando colocamos a variável <cite>printf()</cite> usamos entre os parenteses o <cite>%i</cite>.</p>
 <p>R: (...) Primeiramente você deve entender que o fato de ele usar %i é porque ele está trabalhando com numero inteiros, se fossem números fracionados usaria <cite>%f</cite>.</p>
 <p>Entendido isso, o motivo pelo qual ele usa o <cite>%i</cite> dentro do parenteses do <cite>printf(&quot;%i&quot;)</cite> , é que se ele está chamando a variável do tipo inteiro para aquela mesmo local onde foi inscrito o &quot;%i&quot; , porém se no inicio do programa houve mais de uma variável do tipo inteiro declaro , você também terá que informa qual das variáveis inteiras você está querendo ali, e para isso você vai escrever denrto do parenteses do <cite>printf()</cite>, porém fora das aspas o nome da variável inteira ex:</p>
-<div class="highlight"><pre><span></span><span class="n">Int</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">;</span>
-<span class="n">num1</span><span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-<span class="n">num2</span><span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+<pre class="literal-block">
+Int num1, num2;
+num1= 10;
+num2= 50;
 
-<span class="n">printf</span> <span class="p">(</span><span class="s">&quot; o valor de num1 e : %i &quot;</span> <span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
-</pre></div>
+printf (&quot; o valor de num1 e : %i &quot; , num1);
+</pre>
 <p>então, o <cite>(&quot;%i &quot;)</cite> chama todos os números inteiros, porém seria como bater na porta de alguém sem chamar a pessoa específica , mas se você chamar pelo nome da pessoa, virá ela pessoalmente te atender.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+//  ==========                 ==========
+//  ========== www.eXcript.com ==========
+//  ==========                 ==========
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+int main(){
 
-    <span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">;</span>
-    <span class="n">num1</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
-    <span class="n">num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+    int num1, num2;
+    num1 = 15;
+    num2 = 20;
 
-    <span class="kt">int</span> <span class="n">soma</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;O resultado da soma e: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">soma</span> <span class="p">);</span>
+    int soma = num1 + num2;
+    printf( &quot;O resultado da soma e: %i\n&quot;, soma );
 
-    <span class="kt">int</span> <span class="n">subtracao</span> <span class="o">=</span> <span class="n">num2</span> <span class="o">-</span> <span class="n">num1</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot; O resultado da subtracao e: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">subtracao</span> <span class="p">);</span>
+    int subtracao = num2 - num1;
+    printf( &quot; O resultado da subtracao e: %i\n&quot;, subtracao );
 
 
-    <span class="kt">int</span> <span class="n">multi</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">*</span> <span class="n">num2</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot; O resultado da multiplicacao: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">multi</span> <span class="p">);</span>
+    int multi = num1 * num2;
+    printf( &quot; O resultado da multiplicacao: %i\n&quot;, multi );
 
-    <span class="kt">int</span> <span class="n">div</span> <span class="o">=</span> <span class="n">num2</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot; O resultado da divisao:  %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">div</span> <span class="p">);</span>
+    int div = num2 / 3;
+    printf( &quot; O resultado da divisao:  %i\n&quot;, div );
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

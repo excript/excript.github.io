@@ -354,28 +354,30 @@ eXcript            </a>
     </div>
 <p>Como utilizar a instrução break em C++? Várias serão as vezes em que estaremos executando um laço de repetição e então, desejaremos encerrar esse laço, até porque, já atingimos nosso objetivo. Nessas situações, precisaremos de uma instrução especifica que faça esse trabalho para nós, até porque, não há nenhuma maneira de interrompermos uma laço senão pelo uso de uma instrução especifica e implementada a nível de interpretador.</p>
 <p>A instrução break pode ser utilizada em qualquer momento, bastando para isso a inclusão da mesma em meio do nosso código, como no exemplo a seguir:</p>
-<div class="highlight"><pre><span></span><span class="k">while</span><span class="p">(</span><span class="n">True</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">break</span><span class="p">;</span>
-</pre></div>
+<pre class="literal-block">
+while(True):
+    if(true):
+        break;
+</pre>
 <p>No código acima, estamos dizendo que no momento em que uma determinada situação for verificada, a instrução <cite>break</cite> deve ser invocada e assim, o laço de repetição onde a mesma está contida, será finalizado e a execução da nossa aplicação continuara na linha seguinte ao laço de repetição.</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+/*====================================
+*           eXcript.com
+*          fb.com/eXcript
+* ====================================*/
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+int main() {
+    system(&quot;pause&quot;);
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

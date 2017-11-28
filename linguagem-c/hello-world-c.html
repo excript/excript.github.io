@@ -308,30 +308,32 @@ eXcript            </a>
 <div class="section" id="programa-hello-world-em-c">
 <h2>PROGRAMA &quot;Hello World&quot; EM C</h2>
 <p>Nessa aula iremos desenvolver o programa inicial, utilizado para demonstrar o básico das linguagens de programação. Em C, basta nós colocarmos a instrução printf dentro da função principal da nossa aplicação (a função main) que o programa Hello World já estará pronto. A seguir, temos o código completo do programa:</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+<pre class="literal-block">
+int main(){
+    printf(&quot;Hello World&quot;);
+    return 0;
+}
+</pre>
 <p>O código acima irá imprimir a mensagem <cite>Hello World</cite> no console e em seguida irá retornar o código 0, informando o término da aplicação.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+//  ==========                 ==========
+//  ========== www.eXcript.com ==========
+//  ==========                 ==========
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="c1">//imprime a mensagem que estive entre aspas duplas</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Ola mundo.&quot;</span><span class="p">);</span>
+int main(){
+    //imprime a mensagem que estive entre aspas duplas
+    printf(&quot;Ola mundo.&quot;);
 
-    <span class="c1">//valor de retorno para a função principal</span>
-    <span class="c1">//indicando que o programa acabou</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    //valor de retorno para a função principal
+    //indicando que o programa acabou
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

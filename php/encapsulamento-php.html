@@ -524,25 +524,26 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x"># ENCAPSULAMENTO</span>
+<pre class="literal-block">
+# ENCAPSULAMENTO
 
-<span class="x">class Pessoa{</span>
+class Pessoa{
 
-<span class="x">    private $nome;</span>
+    private $nome;
 
-<span class="x">    function setNome($nome){</span>
-<span class="x">        $this -&gt; nome = $nome;</span>
-<span class="x">    }</span>
-<span class="x">    function getNome(){</span>
-<span class="x">        return $this -&gt; nome;</span>
-<span class="x">    }</span>
+    function setNome($nome){
+        $this -&gt; nome = $nome;
+    }
+    function getNome(){
+        return $this -&gt; nome;
+    }
 
-<span class="x">}</span>
+}
 
-<span class="x">$p1 = new Pessoa();</span>
-<span class="x">//$p1 -&gt; setNome(&quot;eXcript&quot;);</span>
-<span class="x">$p1 -&gt; nome = &quot;&quot;;</span>
-</pre></div>
+$p1 = new Pessoa();
+//$p1 -&gt; setNome(&quot;eXcript&quot;);
+$p1 -&gt; nome = &quot;&quot;;
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

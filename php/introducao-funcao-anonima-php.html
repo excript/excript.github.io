@@ -512,17 +512,18 @@ eXcript            </a>
 <p>Assim, temos que uma função anônima possui todas as características e, funciona com os mesmo princípios que qualquer função, porém, como o nome sugere, esta não possui um nome - por isso: anônima!</p>
 <p>É comum a utilização de funções anônimas como <tt class="docutils literal">callback</tt>, isto é, passarmos a função anônima como parâmetro e num determinado momento, a função que a recebeu, invoque a função e de continuidade ao processamento.</p>
 <p>Para atribuirmos uma função anonima a uma variável, basta declararmos um bloco e atribuirmos este, diretamente, a uma determinada variável, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="x"># o bloco de instrução a seguir, será atribuido à</span>
-<span class="x"># variável de nome $func e, para executar o código</span>
-<span class="x"># utilizaremos o nome da variável</span>
-<span class="x">$func = function($num){</span>
-<span class="x">    echo &quot;Valor do parâmetro recebido &quot; . $num;</span>
-<span class="x">};</span>
+<pre class="literal-block">
+# o bloco de instrução a seguir, será atribuido à
+# variável de nome $func e, para executar o código
+# utilizaremos o nome da variável
+$func = function($num){
+    echo &quot;Valor do parâmetro recebido &quot; . $num;
+};
 
-<span class="x"># aqui, estamos invocando a função anonima</span>
-<span class="x"># declarada nas linhas acima</span>
-<span class="x">$func(10);</span>
-</pre></div>
+# aqui, estamos invocando a função anonima
+# declarada nas linhas acima
+$func(10);
+</pre>
 <p>No bloco de código acima, definimos uma função anonima e, ainda na definição, atribuimos a sua referência à variável <code>$func</code>. Em seguida, utilizamos a instrução que já estudamos para a definição de funções - <code>function</code>, definimos um parâmetro de nome <code>$num</code> e, por fim, definimos o bloco de instrução da função anonima com uma par de chaves. Feito isso, temos um bloco de instrução como qualquer outra, a única diferença é que podemos retornar valores com o uso da instrução <code>return</code> que, também já foi estudada.</p>
 <p>Funções anônimas são expressões como quaisquer outras (como atribuição de números ou manipulação de string), logo, estas podem ser adicionada a uma variável, atribuida a um array e etc.</p>
 <p>Como prova de que as funções anonimas são expressões, somos obrigados a utilizar um ponto e vírgula após a definição do bloco de instrução, até porque, a mesma não é uma função, mas sim, uma expressão e, como sabemos, toda expressão é finalizada com ponto-e-vírgula.</p>
@@ -530,20 +531,21 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#FUNÇÕES ANÔNIMAS</span>
+<pre class="literal-block">
+#FUNÇÕES ANÔNIMAS
 
 
-<span class="x">$func = function($nome){</span>
-<span class="x">    echo &quot;O nome enviado como parâmetro é: $nome&quot;;</span>
-<span class="x">};</span>
+$func = function($nome){
+    echo &quot;O nome enviado como parâmetro é: $nome&quot;;
+};
 
-<span class="x">function teste($f){</span>
-<span class="x">    $f(&quot;Cláudio&quot;);</span>
-<span class="x">}</span>
+function teste($f){
+    $f(&quot;Cláudio&quot;);
+}
 
-<span class="x">teste($func);</span>
-<span class="x">//$func(&quot;eXcript&quot;);</span>
-</pre></div>
+teste($func);
+//$func(&quot;eXcript&quot;);
+</pre>
 </div>
 
 				</div>

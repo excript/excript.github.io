@@ -511,50 +511,53 @@ eXcript            </a>
 <h2>FUNÇÕES COM RETORNO TIPADOS</h2>
 <p>Função com retorno tipado é toda função que define explicitamente o tipo do valor que será retornado. Dessa maneira o PHP disponibilizou uma maneira de definirmos o tipo do valor que será recebido por uma função, como também, o valor que a mesma retornará.</p>
 <p>A seguir, escrevemos um simples exemplo onde há uma função que define o tipo do valor que será retornado.</p>
-<div class="highlight"><pre><span></span><span class="x">function getArea(int x, int y) : int {</span>
-<span class="x">    return x * y;</span>
-<span class="x">}</span>
-</pre></div>
+<pre class="literal-block">
+function getArea(int x, int y) : int {
+    return x * y;
+}
+</pre>
 <p>No exemplo acima, definimos que o valor de retorno da função getArea() será um número inteiro.</p>
 <p>Dessa forma, conseguimos manter um código mais integro e fazer com que os editores se tornem mais inteligentes, até porque, os mesmos saberão quais os valores que são esperados por parâmetros em alguma funções, como também, conseguem saber o valor que será retornado por outras funções.</p>
 <p>É possível definir que os valores não sejam automaticamente convertidos pelo PHP, ou seja, podemos definir que, caso o valor passado não seja do tipo esperado, uma exceção seja levantada e a execução finalizada.</p>
 <p>Para definir que desejamos que o PHP levante uma exceção caso o valor passado não seja do tipo esperado, temos que, através de um código, especificar que determinado módulo está trabalhando de maneira restrita, isto é, que os valores passados devem ser do tipo esperado. Do contrário, o Script será interrompido.</p>
 <p>A instrução <code>declare(strict_types=1);</code> deve ser colocada no início do arquivo para que o PHP trate o mesmo da forma estrita.</p>
-<div class="highlight"><pre><span></span><span class="x">declare(strict_types=1);//valor de retorno precisa ser do tipo definido</span>
+<pre class="literal-block">
+declare(strict_types=1);//valor de retorno precisa ser do tipo definido
 
-<span class="x">function getArea(int x, int y):int {</span>
-<span class="x">    return x * y;</span>
-<span class="x">}</span>
-</pre></div>
+function getArea(int x, int y):int {
+    return x * y;
+}
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">declare(strict_types=1);</span>
+<pre class="literal-block">
+declare(strict_types=1);
 
-<span class="x">#VALORES DE RETORNO TIPADO</span>
+#VALORES DE RETORNO TIPADO
 
-<span class="x">function cubo(float $num) : float</span>
-<span class="x">{</span>
-<span class="x">    return $num * $num * $num;</span>
-<span class="x">}</span>
+function cubo(float $num) : float
+{
+    return $num * $num * $num;
+}
 
-<span class="x">function teste() : array</span>
-<span class="x">{</span>
-<span class="x">    return [10, &quot;eXcript&quot;, 5.1];</span>
-<span class="x">}</span>
+function teste() : array
+{
+    return [10, &quot;eXcript&quot;, 5.1];
+}
 
-<span class="x">function x() : int</span>
-<span class="x">{</span>
-<span class="x">    return &quot;aa&quot;;</span>
-<span class="x">}</span>
+function x() : int
+{
+    return &quot;aa&quot;;
+}
 
-<span class="x">//echo cubo(10.5);</span>
+//echo cubo(10.5);
 
-<span class="x">//var_dump( teste() );</span>
+//var_dump( teste() );
 
 
-<span class="x">x();</span>
-</pre></div>
+x();
+</pre>
 </div>
 
 				</div>

@@ -383,28 +383,29 @@ eXcript            </a>
 <div class="section" id="iterando-com-a-estrutura-for">
 <h2>ITERANDO COM A ESTRUTURA <tt class="docutils literal">for</tt></h2>
 <p>Em nosso primeiro exemplo, vamos iterar uma <tt class="docutils literal">strings</tt> com um texto qualquer, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Iterando Strings&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<pre class="literal-block">
+&gt;&gt;&gt; s = 'Iterando Strings'
+&gt;&gt;&gt; for c in s:
+    print(c)
 
 
-<span class="n">I</span>
-<span class="n">t</span>
-<span class="n">e</span>
-<span class="n">r</span>
-<span class="n">a</span>
-<span class="n">n</span>
-<span class="n">d</span>
-<span class="n">o</span>
+I
+t
+e
+r
+a
+n
+d
+o
 
-<span class="n">S</span>
-<span class="n">t</span>
-<span class="n">r</span>
-<span class="n">i</span>
-<span class="n">n</span>
-<span class="n">g</span>
-<span class="n">s</span>
-</pre></div>
+S
+t
+r
+i
+n
+g
+s
+</pre>
 <p>Como podemos ver, foram impressos todos os caracteres contidos na <tt class="docutils literal">string</tt>, um após o outro.</p>
 </div>
 <div class="section" id="iterando-com-a-estrutura-while">
@@ -413,38 +414,40 @@ eXcript            </a>
 <p>Quando iterarmos com a instrução <tt class="docutils literal">while</tt> é nossa responsabilidade informar qual o índice do caractere que desejamos imprimir a cada ciclo. Assim, vamos definir uma variável de nome índice e inicializaremos a mesma com o valor 0.</p>
 <p>Agora, temos que incrementar uma unidade a cada ciclo e também, verificarmos se o valor do nosso índice é menor do que a quantidade de caracteres contidos na <tt class="docutils literal">String</tt> que estamos iterando.</p>
 <p>Pra fazer o nosso exemplo um pouco mais interessante, vamos imprimir ao lado esquerdo de cada caractere o valor do seu índice.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Iterando Strings&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="n">indice</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">indice</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="n">indice</span><span class="p">])</span>
-    <span class="n">indice</span><span class="o">+=</span><span class="mi">1</span>
+<pre class="literal-block">
+&gt;&gt;&gt; s = 'Iterando Strings'
+&gt;&gt;&gt; indice = 0
+&gt;&gt;&gt; while indice &lt; len(s):
+    print(indice, s[indice])
+    indice+=1
 
-<span class="mi">0</span> <span class="n">I</span>
-<span class="mi">1</span> <span class="n">t</span>
-<span class="mi">2</span> <span class="n">e</span>
-<span class="mi">3</span> <span class="n">r</span>
-<span class="mi">4</span> <span class="n">a</span>
-<span class="mi">5</span> <span class="n">n</span>
-<span class="mi">6</span> <span class="n">d</span>
-<span class="mi">7</span> <span class="n">o</span>
-<span class="mi">8</span>
-<span class="mi">9</span> <span class="n">S</span>
-<span class="mi">10</span> <span class="n">t</span>
-<span class="mi">11</span> <span class="n">r</span>
-<span class="mi">12</span> <span class="n">i</span>
-<span class="mi">13</span> <span class="n">n</span>
-<span class="mi">14</span> <span class="n">g</span>
-<span class="mi">15</span> <span class="n">s</span>
-</pre></div>
+0 I
+1 t
+2 e
+3 r
+4 a
+5 n
+6 d
+7 o
+8
+9 S
+10 t
+11 r
+12 i
+13 n
+14 g
+15 s
+</pre>
 <p>Como podemos ver, o resultado é o mesmo, porém, a quantidade de linhas utilizadas é muito superior quando se comparada com a instrução <tt class="docutils literal">for loop</tt>.</p>
 </div>
 <div class="section" id="exemplo-3">
 <h2>EXEMPLO 3</h2>
 <p>No nosso terceiro exemplo, vamos manipular os caracteres e o valor dos índices, da mesma maneira que fizemos no segundo exemplo. Assim, vamos imprimir ao lado esquerdo de cada caractere, o seu índice na <tt class="docutils literal">string</tt>. Para isso, vamos trabalhar com a função <tt class="docutils literal">enumerate()</tt> que retorna um dicionário contendo o valor do índice como chave e o caractere como valor.</p>
 <p>Nós já estudamos a função <tt class="docutils literal">enumerate()</tt> em aulas anteriores, então, se você não conhece o funcionamento da mesma, talvez seja interessante assistir a aulas em que estudamos a mesma.</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="s1">&#39;Iterando Strings&#39;</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span> <span class="n">i</span><span class="p">,</span> <span class="n">each</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+for k, v in enumerate('Iterando Strings'):
+    print( i, each)
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

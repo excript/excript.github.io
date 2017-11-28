@@ -502,33 +502,35 @@ eXcript            </a>
 <div class="section" id="retornando-valores">
 <h2>RETORNANDO VALORES</h2>
 <p>Para retornarmos um valor, basta passarmos o mesmo através da palavra-chave <tt class="docutils literal">return</tt>. Após o uso da instrução <tt class="docutils literal">return</tt> a função é finalizada e o valor definido retornado.</p>
-<div class="highlight"><pre><span></span><span class="x">function soma()</span>
-<span class="x">{</span>
-<span class="x">    $num = func_num_args();</span>
-<span class="x">    $args = func_get_args();</span>
+<pre class="literal-block">
+function soma()
+{
+    $num = func_num_args();
+    $args = func_get_args();
 
-<span class="x">    $total = 0;</span>
-<span class="x">    for ($i = 0; $i &lt; $num; $i++)</span>
-<span class="x">        $total += $args[$i];</span>
+    $total = 0;
+    for ($i = 0; $i &lt; $num; $i++)
+        $total += $args[$i];
 
-<span class="x">    return $total;</span>
-<span class="x">}</span>
+    return $total;
+}
 
-<span class="x">soma(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);</span>
-</pre></div>
+soma(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">function media(...$valores){</span>
+<pre class="literal-block">
+function media(...$valores){
 
-<span class="x">    $total = array_sum($valores);</span>
-<span class="x">    $total = $total / count($valores);</span>
-<span class="x">    return $total;</span>
+    $total = array_sum($valores);
+    $total = $total / count($valores);
+    return $total;
 
-<span class="x">}</span>
+}
 
-<span class="x">echo media(5,5,6);</span>
-</pre></div>
+echo media(5,5,6);
+</pre>
 </div>
 
 				</div>

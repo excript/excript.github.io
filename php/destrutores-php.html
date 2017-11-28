@@ -524,28 +524,30 @@ A função <tt class="docutils literal">unset()</tt> desvincula uma instância d
 <p>O coletor de lixo, ou então, o <tt class="docutils literal">Garbage Collector</tt> é uma entidade especializada em remover os dados da memória que não estão mais sendo utilizados.</p>
 <p>A utilização de um coletor de lixo simplifica o trabalho do programador e evitar a grande maioria dos problemas de software, até porque, fazer acesso a uma região de memória que foi desalocada pode ocasionar problemas bizarros e que são muito dificeis de serem depurados.</p>
 <p>Então, pense no coletor de lixo como o agente responsavel em liberar toda e qualquer informação que não esteja mais em uso e principalmente, fazer todo esse trabalho de gerenciamento e averiguação de quais instâncias não estão mais em uso num bloco de instrução.</p>
-<div class="highlight"><pre><span></span><span class="x">unset($r);</span>
-</pre></div>
+<pre class="literal-block">
+unset($r);
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#DESTRUTORES</span>
+<pre class="literal-block">
+#DESTRUTORES
 
-<span class="x">class Pessoa{</span>
+class Pessoa{
 
-<span class="x">    function __construct(){</span>
-<span class="x">        echo &quot;Função construtora invocada.&quot;;</span>
-<span class="x">    }</span>
+    function __construct(){
+        echo &quot;Função construtora invocada.&quot;;
+    }
 
-<span class="x">    function __destruct(){</span>
-<span class="x">        echo &quot;Função destrutora invocada.&quot;;</span>
-<span class="x">    }</span>
+    function __destruct(){
+        echo &quot;Função destrutora invocada.&quot;;
+    }
 
-<span class="x">}</span>
+}
 
-<span class="x">$p1 = new Pessoa;</span>
-<span class="x">unset($p1);</span>
-</pre></div>
+$p1 = new Pessoa;
+unset($p1);
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

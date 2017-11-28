@@ -498,23 +498,24 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<pre class="literal-block">
+&lt;?php
 
-<span class="c1">#====================</span>
-<span class="c1">#  == eXcript.com ==</span>
-<span class="c1">#====================</span>
+#====================
+#  == eXcript.com ==
+#====================
 
 
-<span class="k">function</span> <span class="o">&amp;</span><span class="nf">func</span><span class="p">(){</span>
-    <span class="nv">$a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
-    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>
+function &amp;func(){
+    $a = [1,2,3];
+    print_r($a);
 
-    <span class="k">return</span> <span class="nv">$a</span><span class="p">;</span>
-<span class="p">}</span>
+    return $a;
+}
 
-<span class="nv">$valor</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nx">func</span><span class="p">();</span>
-<span class="nb">print_r</span><span class="p">(</span><span class="nv">$valor</span><span class="p">);</span>
-</pre></div>
+$valor = &amp;func();
+print_r($valor);
+</pre>
 </div>
 
 				</div>

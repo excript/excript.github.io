@@ -309,71 +309,72 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;conio.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;conio.h&gt;
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+//  ==========                 ==========
+//  ========== www.eXcript.com ==========
+//  ==========                 ==========
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">float</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">resultado</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">op</span>  <span class="o">=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+int main()
+{
+    float num1, num2, resultado;
+    char op  = '0';
 
-    <span class="k">do</span><span class="p">{</span>
-        <span class="n">num1</span> <span class="o">=</span> <span class="n">num2</span> <span class="o">=</span> <span class="n">resultado</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    do{
+        num1 = num2 = resultado = 0;
 
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> (1) somar</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; (2) subtrair</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; (3) multiplicar</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; (4) dividir</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot; (0) sair do programa</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        printf(&quot;\n (1) somar\n&quot;);
+        printf(&quot; (2) subtrair\n&quot;);
+        printf(&quot; (3) multiplicar\n&quot;);
+        printf(&quot; (4) dividir\n&quot;);
+        printf(&quot; (0) sair do programa\n&quot;);
 
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Informe a operacao:</span><span class="se">\n</span><span class="s"> &quot;</span> <span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t\t\t\t</span><span class="s">&gt;&gt;&gt; &quot;</span><span class="p">);</span>
+        printf(&quot;\nInforme a operacao:\n &quot; );
+        printf(&quot;\t\t\t\t&gt;&gt;&gt; &quot;);
 
-        <span class="n">op</span> <span class="o">=</span> <span class="n">getche</span><span class="p">();</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        op = getche();
+        printf(&quot;\n&quot;);
 
-        <span class="k">if</span><span class="p">(</span><span class="n">op</span><span class="o">!=</span><span class="sc">&#39;0&#39;</span><span class="p">){</span>
+        if(op!='0'){
 
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Digite o primeiro numero:   </span><span class="se">\t</span><span class="s">&gt;&gt;&gt; &quot;</span><span class="p">);</span>
-            <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">);</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Digite o segundo numero:   </span><span class="se">\t</span><span class="s">&gt;&gt;&gt; &quot;</span><span class="p">);</span>
-            <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">);</span>
+            printf(&quot;Digite o primeiro numero:   \t&gt;&gt;&gt; &quot;);
+            scanf(&quot;%f&quot;, &amp;num1);
+            printf(&quot;Digite o segundo numero:   \t&gt;&gt;&gt; &quot;);
+            scanf(&quot;%f&quot;, &amp;num2);
 
-            <span class="k">if</span><span class="p">(</span><span class="n">op</span><span class="o">==</span><span class="sc">&#39;1&#39;</span><span class="p">){</span><span class="c1">//SOMA</span>
-                <span class="n">resultado</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">;</span>
-            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                <span class="k">if</span><span class="p">(</span><span class="n">op</span> <span class="o">==</span> <span class="sc">&#39;2&#39;</span><span class="p">){</span><span class="c1">//SUBRAÇÃO</span>
-                    <span class="n">resultado</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span><span class="p">;</span>
-                <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                    <span class="k">if</span><span class="p">(</span><span class="n">op</span> <span class="o">==</span> <span class="sc">&#39;3&#39;</span><span class="p">){</span><span class="c1">//MULTIPLICAÇÃO</span>
-                        <span class="n">resultado</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">*</span> <span class="n">num2</span><span class="p">;</span>
-                    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                        <span class="k">if</span><span class="p">(</span><span class="n">op</span> <span class="o">==</span> <span class="sc">&#39;4&#39;</span><span class="p">){</span><span class="c1">//DIVISÃO</span>
-                            <span class="n">resultado</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span><span class="p">;</span>
-                        <span class="p">}</span>
-                    <span class="p">}</span>
+            if(op=='1'){//SOMA
+                resultado = num1 + num2;
+            }else{
+                if(op == '2'){//SUBRAÇÃO
+                    resultado = num1 - num2;
+                }else{
+                    if(op == '3'){//MULTIPLICAÇÃO
+                        resultado = num1 * num2;
+                    }else{
+                        if(op == '4'){//DIVISÃO
+                            resultado = num1 / num2;
+                        }
+                    }
 
-                <span class="p">}</span>
-            <span class="p">}</span>
+                }
+            }
 
-        <span class="p">}</span>
+        }
 
-        <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">O resultado eh: </span><span class="se">\t\t</span><span class="s">&gt;&gt;&gt; %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">resultado</span> <span class="p">);</span>
+        printf( &quot;\nO resultado eh: \t\t&gt;&gt;&gt; %f\n&quot;, resultado );
 
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Pressione uma tecla para realizar um nova operacao: &quot;</span><span class="p">);</span>
-        <span class="n">getch</span><span class="p">();</span>
-        <span class="n">system</span><span class="p">(</span><span class="s">&quot;cls&quot;</span><span class="p">);</span>
+        printf(&quot;\nPressione uma tecla para realizar um nova operacao: &quot;);
+        getch();
+        system(&quot;cls&quot;);
 
-    <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">op</span> <span class="o">!=</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
+    }while(op != '0');
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

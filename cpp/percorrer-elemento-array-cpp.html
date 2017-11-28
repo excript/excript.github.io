@@ -357,43 +357,44 @@ eXcript            </a>
 <p>Já estudamos a iteração, logo, a mesma é que será responsável por executar um mesmo bloco por uma quantidade de vezes e alterar o valor de uma variável. Assim, como o valor de uma variável será incrementado ou decrementado, temos que iremos alterar o índice em que estamos manipulando, logo, percorreremos todos os elementos da estrutura de maneira bastante simples.</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+/*====================================
+*           eXcript.com
+*          fb.com/eXcript
+* ====================================*/
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+int main() {
 
-    <span class="kt">double</span> <span class="n">preco</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">};</span>
+    double preco[10] = {1,2,3};
 
-    <span class="n">preco</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">14.55</span><span class="p">;</span>
-    <span class="n">preco</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">9.68</span><span class="p">;</span>
-    <span class="n">preco</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">;</span>
-    <span class="n">preco</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    preco[0] = 14.55;
+    preco[2] = 9.68;
+    preco[3] = 1.1;
+    preco[7] = 2;
 
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">9</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-<span class="c1">//        preco[i] = 0;</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">preco</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="p">}</span>
+    for(int i = 0; i&lt;=9; i++){
+//        preco[i] = 0;
+        cout &lt;&lt; preco[i] &lt;&lt; endl;
+    }
 
-<span class="c1">//    &gt;14.55</span>
-<span class="c1">//    3.26219e+257</span>
-<span class="c1">//    &gt;9.68</span>
-<span class="c1">//    &gt;1.1</span>
-<span class="c1">//    3.34157e+257</span>
-<span class="c1">//    1.7881e-307</span>
-<span class="c1">//    2.0746e-317</span>
-<span class="c1">//    &gt;2</span>
-<span class="c1">//    6.95314e-308</span>
-<span class="c1">//    -1.24796e+077</span>
+//    &gt;14.55
+//    3.26219e+257
+//    &gt;9.68
+//    &gt;1.1
+//    3.34157e+257
+//    1.7881e-307
+//    2.0746e-317
+//    &gt;2
+//    6.95314e-308
+//    -1.24796e+077
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

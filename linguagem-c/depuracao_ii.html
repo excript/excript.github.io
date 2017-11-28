@@ -309,32 +309,33 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;ctype.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;ctype.h&gt;
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+//  ==========                 ==========
+//  ========== www.eXcript.com ==========
+//  ==========                 ==========
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Digite o numero 1:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+int main()
+{
+    printf(&quot;Digite o numero 1:\n&quot;);
 
-    <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">();</span>
+    char c;
+    c = getchar();
 
-    <span class="k">if</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;1&#39;</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">O caracter digitado esta correto.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">O valor digitado e invalido.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Voce digitou o caracter &gt;%c&lt;.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
-    <span class="p">}</span>
+    if(c == '1')
+    {
+        printf(&quot;\nO caracter digitado esta correto.\n&quot;);
+    }else{
+        printf(&quot;\nO valor digitado e invalido.\n&quot;);
+        printf(&quot;Voce digitou o caracter &gt;%c&lt;.\n&quot;, c);
+    }
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

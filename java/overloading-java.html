@@ -224,27 +224,28 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Sobrecarga</span><span class="o">{</span>
-    <span class="kt">void</span> <span class="nf">imprime</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="kt">void</span> <span class="nf">imprime</span><span class="o">(</span><span class="n">String</span> <span class="n">s1</span><span class="o">,</span> <span class="n">String</span> <span class="n">s2</span><span class="o">){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s1</span><span class="o">+</span><span class="s">&quot; - &quot;</span><span class="o">+</span><span class="n">s2</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="kt">void</span> <span class="nf">imprime</span><span class="o">(</span><span class="n">String</span> <span class="n">s1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i1</span><span class="o">){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s1</span><span class="o">+</span><span class="s">&quot; - &quot;</span><span class="o">+</span><span class="n">i1</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+<pre class="literal-block">
+class Sobrecarga{
+    void imprime(String s){
+        System.out.println(s);
+    }
+    void imprime(String s1, String s2){
+        System.out.println(s1+&quot; - &quot;+s2);
+    }
+    void imprime(String s1, int i1){
+        System.out.println(s1+&quot; - &quot;+i1);
+    }
+}
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">new</span> <span class="n">Sobrecarga</span><span class="o">().</span><span class="na">imprime</span><span class="o">(</span><span class="s">&quot;Um parametro do tipo String&quot;</span><span class="o">);</span>
-        <span class="k">new</span> <span class="n">Sobrecarga</span><span class="o">().</span><span class="na">imprime</span><span class="o">(</span><span class="s">&quot;Primeiro paramero&quot;</span><span class="o">,</span> <span class="s">&quot;Segundo parametro&quot;</span><span class="o">);</span>
-        <span class="k">new</span> <span class="n">Sobrecarga</span><span class="o">().</span><span class="na">imprime</span><span class="o">(</span><span class="s">&quot;A idade é de:&quot;</span><span class="o">,</span> <span class="mi">25</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
+    public static void main(String[] args) {
+        new Sobrecarga().imprime(&quot;Um parametro do tipo String&quot;);
+        new Sobrecarga().imprime(&quot;Primeiro paramero&quot;, &quot;Segundo parametro&quot;);
+        new Sobrecarga().imprime(&quot;A idade é de:&quot;, 25);
+    }
+}
+</pre>
 </div>
 
 				</div>

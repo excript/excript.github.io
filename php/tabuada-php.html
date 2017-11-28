@@ -498,53 +498,54 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
+<pre class="literal-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
 
-<span class="x">&lt;head&gt;</span>
-<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
-<span class="x">    &lt;title&gt;Tabuada - Curso PHP - eXcript&lt;/title&gt;</span>
-<span class="x">&lt;/head&gt;</span>
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Tabuada - Curso PHP - eXcript&lt;/title&gt;
+&lt;/head&gt;
 
-<span class="x">&lt;body&gt;</span>
+&lt;body&gt;
 
-<span class="x">    </span><span class="cp">&lt;?php</span>
+    &lt;?php
 
-    <span class="nv">$tab</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;edTABUADA&quot;</span><span class="p">])){</span>
-        <span class="nv">$tab</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;edTABUADA&quot;</span><span class="p">];</span>
-        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">is_numeric</span><span class="p">(</span><span class="nv">$tab</span><span class="p">)){</span>
-            <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;O valor informado não é um número.&lt;br&gt;&quot;</span><span class="p">;</span>
-        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-    <span class="c1">//            for($num=0; $num&lt;=10; $num++){</span>
-    <span class="c1">//                echo $num . &quot; x &quot; . $tab . &quot; = &quot; . ($num * $tab) . &quot;&lt;br&gt;&quot;;</span>
-    <span class="c1">//            }</span>
+    $tab = 0;
+    if(isset($_POST[&quot;edTABUADA&quot;])){
+        $tab = $_POST[&quot;edTABUADA&quot;];
+        if(!is_numeric($tab)){
+            echo &quot;&lt;br&gt;O valor informado não é um número.&lt;br&gt;&quot;;
+        }else{
+    //            for($num=0; $num&lt;=10; $num++){
+    //                echo $num . &quot; x &quot; . $tab . &quot; = &quot; . ($num * $tab) . &quot;&lt;br&gt;&quot;;
+    //            }
 
-        <span class="c1">//$num x $tab = ($num * $tab)</span>
-        <span class="c1">//0 x 5 = 0</span>
-        <span class="c1">//1 x 5 = 5</span>
+        //$num x $tab = ($num * $tab)
+        //0 x 5 = 0
+        //1 x 5 = 5
 
-        <span class="nv">$num</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-        <span class="k">while</span><span class="p">(</span><span class="nv">$num</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">){</span>
-            <span class="k">echo</span> <span class="nv">$num</span> <span class="o">.</span> <span class="s2">&quot; x &quot;</span> <span class="o">.</span> <span class="nv">$tab</span> <span class="o">.</span> <span class="s2">&quot; = &quot;</span> <span class="o">.</span> <span class="p">(</span><span class="nv">$num</span> <span class="o">*</span> <span class="nv">$tab</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
-            <span class="nv">$num</span><span class="o">++</span><span class="p">;</span>
-        <span class="p">}</span>
+        $num=0;
+        while($num&lt;=10){
+            echo $num . &quot; x &quot; . $tab . &quot; = &quot; . ($num * $tab) . &quot;&lt;br&gt;&quot;;
+            $num++;
+        }
 
-    <span class="p">}</span>
-<span class="p">}</span>
+    }
+}
 
-<span class="cp">?&gt;</span><span class="x"></span>
+?&gt;
 
-<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
-<span class="x">    &lt;input type=&quot;text&quot; name=&quot;edTABUADA&quot; &gt;</span>
-<span class="x">    &lt;input type=&quot;submit&quot;&gt;</span>
-<span class="x">&lt;/form&gt;</span>
+&lt;form method=&quot;post&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;edTABUADA&quot; &gt;
+    &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
 
-<span class="x">&lt;/body&gt;</span>
+&lt;/body&gt;
 
 
-<span class="x">&lt;/html&gt;</span>
-</pre></div>
+&lt;/html&gt;
+</pre>
 </div>
 
 				</div>

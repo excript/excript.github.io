@@ -211,26 +211,27 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Janela</span><span class="o">{</span>
-    <span class="kt">int</span> <span class="n">largura</span><span class="o">,</span> <span class="n">altura</span><span class="o">;</span>
+<pre class="literal-block">
+class Janela{
+    int largura, altura;
 
-    <span class="n">Janela</span><span class="o">(</span><span class="kt">int</span> <span class="n">largura</span><span class="o">,</span> <span class="kt">int</span> <span class="n">altura</span><span class="o">){</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">largura</span> <span class="o">=</span> <span class="n">largura</span><span class="o">;</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">altura</span> <span class="o">=</span> <span class="n">altura</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="n">Janela</span><span class="o">(){</span>
-        <span class="k">this</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;int = &quot;</span><span class="o">+</span><span class="n">largura</span><span class="o">);</span>
-    <span class="o">}</span>
+    Janela(int largura, int altura){
+        this.largura = largura;
+        this.altura = altura;
+    }
+    Janela(){
+        this(100, 100);
+        System.out.println(&quot;int = &quot;+largura);
+    }
 
-    <span class="kt">void</span> <span class="nf">imprimir</span><span class="o">(){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Alutra = &quot;</span><span class="o">+</span><span class="n">altura</span><span class="o">+</span><span class="s">&quot;, a largura = &quot;</span><span class="o">+</span><span class="n">largura</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+    void imprimir(){
+        System.out.println(&quot;Alutra = &quot;+altura+&quot;, a largura = &quot;+largura);
+    }
+}
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String …</span></pre></div></div>
+    public static void main(String …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/palavra-chave-this-java.html">more ...</a>
                 </div>
             </article>
@@ -256,25 +257,26 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Janela</span><span class="o">{</span>
-    <span class="kt">int</span> <span class="n">largura</span><span class="o">,</span> <span class="n">altura</span><span class="o">;</span>
-    <span class="kt">boolean</span> <span class="n">b</span><span class="o">;</span>
-    <span class="kt">float</span> <span class="n">f</span><span class="o">;</span>
-    <span class="kt">double</span> <span class="n">d</span><span class="o">;</span>
+<pre class="literal-block">
+class Janela{
+    int largura, altura;
+    boolean b;
+    float f;
+    double d;
 
-    <span class="n">Janela</span><span class="o">(</span><span class="kt">int</span> <span class="n">l</span><span class="o">,</span> <span class="kt">int</span> <span class="n">a</span><span class="o">){</span>
-        <span class="n">largura</span> <span class="o">=</span> <span class="n">l</span><span class="o">;</span>
-        <span class="n">altura</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="n">Janela</span><span class="o">(){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;int = &quot;</span><span class="o">+</span><span class="n">largura</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;bool = &quot;</span><span class="o">+</span><span class="n">b</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;float =&quot;</span><span class="o">+</span><span class="n">f</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;double =&quot;</span><span class="o">+</span><span class="n">d</span><span class="o">);</span>
+    Janela(int l, int a){
+        largura = l;
+        altura = a;
+    }
+    Janela(){
+        System.out.println(&quot;int = &quot;+largura);
+        System.out.println(&quot;bool = &quot;+b);
+        System.out.println(&quot;float =&quot;+f);
+        System.out.println(&quot;double =&quot;+d);
 
-    <span class="o">}</span>
+    }
 
-    <span class="kt">void …</span></pre></div></div>
+    void …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/inicializar-objetos-java.html">more ...</a>
                 </div>
             </article>
@@ -300,26 +302,27 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Janela</span><span class="o">{</span>
-    <span class="kt">int</span> <span class="n">largura</span><span class="o">,</span> <span class="n">altura</span><span class="o">;</span>
-    <span class="n">Janela</span><span class="o">(</span><span class="kt">int</span> <span class="n">l</span><span class="o">,</span> <span class="kt">int</span> <span class="n">a</span><span class="o">){</span>
-        <span class="n">largura</span> <span class="o">=</span> <span class="n">l</span><span class="o">;</span>
-        <span class="n">altura</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
-    <span class="o">}</span>
+<pre class="literal-block">
+class Janela{
+    int largura, altura;
+    Janela(int l, int a){
+        largura = l;
+        altura = a;
+    }
 
-    <span class="kt">void</span> <span class="nf">imprimir</span><span class="o">(){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Alutra = &quot;</span><span class="o">+</span><span class="n">altura</span><span class="o">+</span><span class="s">&quot;, a largura = &quot;</span><span class="o">+</span><span class="n">largura</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+    void imprimir(){
+        System.out.println(&quot;Alutra = &quot;+altura+&quot;, a largura = &quot;+largura);
+    }
+}
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">Janela</span> <span class="n">j</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Janela</span><span class="o">(</span><span class="mi">250</span><span class="o">,</span> <span class="mi">300</span><span class="o">);</span>
-        <span class="n">j</span><span class="o">.</span><span class="na">imprimir</span><span class="o">();</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
+    public static void main(String[] args) {
+        Janela j = new Janela(250, 300);
+        j.imprimir();
+    }
+}
+</pre>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/construtor-java.html">more ...</a>
@@ -347,23 +350,24 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Fatorial</span><span class="o">{</span>
-    <span class="kt">int</span> <span class="nf">fat</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">1</span><span class="o">)</span><span class="c1">//a nossa condição básica</span>
-            <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">fat</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">)*</span><span class="n">n</span><span class="o">;</span>
-        <span class="k">return</span> <span class="n">r</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+<pre class="literal-block">
+class Fatorial{
+    int fat(int n){
+        if(n&lt;=1)//a nossa condição básica
+            return 1;
+        int r = fat(n-1)*n;
+        return r;
+    }
+}
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    public static void main(String[] args) {
 
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">new</span> <span class="n">Fatorial</span><span class="o">().</span><span class="na">fat</span><span class="o">(</span><span class="mi">6</span><span class="o">));</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
+        System.out.println(new Fatorial().fat(6));
+    }
+}
+</pre>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/recursividade-java.html">more ...</a>
@@ -391,22 +395,23 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Sobrecarga</span><span class="o">{</span>
-    <span class="kt">void</span> <span class="nf">imprime</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="kt">void</span> <span class="nf">imprime</span><span class="o">(</span><span class="n">String</span> <span class="n">s1</span><span class="o">,</span> <span class="n">String</span> <span class="n">s2</span><span class="o">){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s1</span><span class="o">+</span><span class="s">&quot; - &quot;</span><span class="o">+</span><span class="n">s2</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="kt">void</span> <span class="nf">imprime</span><span class="o">(</span><span class="n">String</span> <span class="n">s1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i1</span><span class="o">){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s1</span><span class="o">+</span><span class="s">&quot; - &quot;</span><span class="o">+</span><span class="n">i1</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+<pre class="literal-block">
+class Sobrecarga{
+    void imprime(String s){
+        System.out.println(s);
+    }
+    void imprime(String s1, String s2){
+        System.out.println(s1+&quot; - &quot;+s2);
+    }
+    void imprime(String s1, int i1){
+        System.out.println(s1+&quot; - &quot;+i1);
+    }
+}
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">new</span> <span class="n">Sobrecarga</span><span class="o">().</span><span class="na">imprime …</span></pre></div></div>
+    public static void main(String[] args) {
+        new Sobrecarga().imprime …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/overloading-java.html">more ...</a>
                 </div>
             </article>

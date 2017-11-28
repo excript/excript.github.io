@@ -522,56 +522,59 @@ eXcript            </a>
 <div class="section" id="funcao-func-get-arg">
 <h2>FUNÇÃO <tt class="docutils literal">func_get_arg()</tt></h2>
 <p>A função <tt class="docutils literal">func_get_arg()</tt> retorna o valor referente ao índice passado como parâmetro, ou seja, se passarmos o valor 0, será retornado o valor referente ao elemento vinculado ao índice 0.</p>
-<div class="highlight"><pre><span></span><span class="x">function soma()</span>
-<span class="x">{</span>
-<span class="x">    $a = func_get_arg(0);</span>
-<span class="x">    $b = func_get_arg(1);</span>
+<pre class="literal-block">
+function soma()
+{
+    $a = func_get_arg(0);
+    $b = func_get_arg(1);
 
-<span class="x">    $x = $a + $b;</span>
-<span class="x">    echo &quot;A soma dos parâmetros é: &quot; . $x;</span>
-<span class="x">}</span>
+    $x = $a + $b;
+    echo &quot;A soma dos parâmetros é: &quot; . $x;
+}
 
-<span class="x">soma(1, 2);</span>
-</pre></div>
+soma(1, 2);
+</pre>
 <p>Se executarmos o código acima, será impresso a soma dos 2 primeiros números passados como parâmetro.</p>
 </div>
 <div class="section" id="funcoes-func-get-arg-e-func-num-args">
 <h2>FUNÇÕES <tt class="docutils literal">func_get_arg()</tt> E <tt class="docutils literal">func_num_args()</tt></h2>
 <p>Algumas vezes não saberemos quantos parâmetros que foram enviados, logo, não é uma boa prática testar se existe algum valor definido nas primeiras posições com a função <tt class="docutils literal">func_get_arg()</tt>. Então, temos que o PHP nos fornece 2 outras funções para trabalharmos com a lista de parâmetros que está sendo enviada, são elas <tt class="docutils literal">func_get_arg()</tt> e <tt class="docutils literal">func_num_args()</tt>.</p>
-<div class="highlight"><pre><span></span><span class="x">function soma()</span>
-<span class="x">{</span>
-<span class="x">    $num = func_num_args();</span>
-<span class="x">    $args = func_get_args();</span>
+<pre class="literal-block">
+function soma()
+{
+    $num = func_num_args();
+    $args = func_get_args();
 
-<span class="x">    #imprime os parâmetros enviados</span>
-<span class="x">    $a = func_get_args();</span>
-<span class="x">    foreach ($a as $v) {</span>
-<span class="x">        echo $v;</span>
-<span class="x">    }</span>
+    #imprime os parâmetros enviados
+    $a = func_get_args();
+    foreach ($a as $v) {
+        echo $v;
+    }
 
-<span class="x">    #soma os parâmetros enviados</span>
-<span class="x">    $total = 0;</span>
-<span class="x">    for ($i = 0; $i &lt; $num; $i++)</span>
-<span class="x">        $total += $args[$i];</span>
+    #soma os parâmetros enviados
+    $total = 0;
+    for ($i = 0; $i &lt; $num; $i++)
+        $total += $args[$i];
 
-<span class="x">    echo &quot;A soma dos parâmetros é: &quot; . $total;</span>
+    echo &quot;A soma dos parâmetros é: &quot; . $total;
 
-<span class="x">    soma(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);</span>
-<span class="x">}</span>
-</pre></div>
+    soma(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+}
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">function soma(){</span>
+<pre class="literal-block">
+function soma(){
 
-<span class="x">    $total = func_get_arg(0) + func_get_arg(1);</span>
+    $total = func_get_arg(0) + func_get_arg(1);
 
-<span class="x">    echo $total;</span>
+    echo $total;
 
-<span class="x">}</span>
+}
 
-<span class="x">soma(10, 2);</span>
-</pre></div>
+soma(10, 2);
+</pre>
 </div>
 
 				</div>

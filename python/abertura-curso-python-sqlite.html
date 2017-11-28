@@ -209,55 +209,58 @@ eXcript            </a>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <p>Para que você consiga acompanhar a primeira aula, será necessário a criação de um novo banco de dados, a criação da tabela de nome &quot;estados&quot; e os respectivos registros correspondentes a cada estado da federação brasileira. O código SQL para você executar todas essas tarefas está a seguir:</p>
-<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">estados</span><span class="o">`</span> <span class="p">(</span>
-    <span class="o">`</span><span class="n">id</span><span class="o">`</span>    <span class="nb">INTEGER</span><span class="p">,</span>
-    <span class="o">`</span><span class="n">uf</span><span class="o">`</span>    <span class="nb">TEXT</span><span class="p">,</span>
-    <span class="o">`</span><span class="n">estado</span><span class="o">`</span>        <span class="nb">TEXT</span><span class="p">,</span>
-    <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
-<span class="p">);</span>
+<pre class="literal-block">
+CREATE TABLE `estados` (
+    `id`    INTEGER,
+    `uf`    TEXT,
+    `estado`        TEXT,
+    PRIMARY KEY(id)
+);
 
 
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;AC&quot;</span><span class="p">,</span> <span class="ss">&quot;ACRE&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;AL&quot;</span><span class="p">,</span> <span class="ss">&quot;ALAGOAS&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;AP&quot;</span><span class="p">,</span> <span class="ss">&quot;AMAPÁ&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;AM&quot;</span><span class="p">,</span> <span class="ss">&quot;AMAZONAS&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;BA&quot;</span><span class="p">,</span> <span class="ss">&quot;BAHIA&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;CE&quot;</span><span class="p">,</span> <span class="ss">&quot;CEARÁ&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;DF&quot;</span><span class="p">,</span> <span class="ss">&quot;DISTRITO FEDERAL&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;GO&quot;</span><span class="p">,</span> <span class="ss">&quot;GOIÁS&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;ES&quot;</span><span class="p">,</span> <span class="ss">&quot;ESPÍRITO SANTO&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;MA&quot;</span><span class="p">,</span> <span class="ss">&quot;MARANHÃO&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;MT&quot;</span><span class="p">,</span> <span class="ss">&quot;MATO GROSSO&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;MS&quot;</span><span class="p">,</span> <span class="ss">&quot;MATO GROSSO DO SUL&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;MG&quot;</span><span class="p">,</span> <span class="ss">&quot;MINAS GERAIS&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;PA&quot;</span><span class="p">,</span> <span class="ss">&quot;PARÁ&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;PB&quot;</span><span class="p">,</span> <span class="ss">&quot;PARAIBA&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;PR&quot;</span><span class="p">,</span> <span class="ss">&quot;PARANÁ&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;PE&quot;</span><span class="p">,</span> <span class="ss">&quot;PERNAMBUCO&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;PI&quot;</span><span class="p">,</span> <span class="ss">&quot;PIAUÍ&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;RJ&quot;</span><span class="p">,</span> <span class="ss">&quot;RIO DE JANEIRO&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;RN&quot;</span><span class="p">,</span> <span class="ss">&quot;RIO GRANDE DO NORTE&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;RS&quot;</span><span class="p">,</span> <span class="ss">&quot;RIO GRANDE DO SUL&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;RO&quot;</span><span class="p">,</span> <span class="ss">&quot;RONDÔNIA&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;RR&quot;</span><span class="p">,</span> <span class="ss">&quot;RORAIMA&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;SP&quot;</span><span class="p">,</span> <span class="ss">&quot;SÃO PAULO&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;SC&quot;</span><span class="p">,</span> <span class="ss">&quot;SANTA CATARINA&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;SE&quot;</span><span class="p">,</span> <span class="ss">&quot;SERGIPE&quot;</span><span class="p">);</span>
-<span class="k">insert</span> <span class="k">into</span> <span class="n">estados</span> <span class="p">(</span><span class="n">uf</span><span class="p">,</span> <span class="n">estado</span><span class="p">)</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;TO&quot;</span><span class="p">,</span> <span class="ss">&quot;TOCANTINS&quot;</span><span class="p">);</span>
-</pre></div>
+insert into estados (uf, estado) values(&quot;AC&quot;, &quot;ACRE&quot;);
+insert into estados (uf, estado) values(&quot;AL&quot;, &quot;ALAGOAS&quot;);
+insert into estados (uf, estado) values(&quot;AP&quot;, &quot;AMAPÁ&quot;);
+insert into estados (uf, estado) values(&quot;AM&quot;, &quot;AMAZONAS&quot;);
+insert into estados (uf, estado) values(&quot;BA&quot;, &quot;BAHIA&quot;);
+insert into estados (uf, estado) values(&quot;CE&quot;, &quot;CEARÁ&quot;);
+insert into estados (uf, estado) values(&quot;DF&quot;, &quot;DISTRITO FEDERAL&quot;);
+insert into estados (uf, estado) values(&quot;GO&quot;, &quot;GOIÁS&quot;);
+insert into estados (uf, estado) values(&quot;ES&quot;, &quot;ESPÍRITO SANTO&quot;);
+insert into estados (uf, estado) values(&quot;MA&quot;, &quot;MARANHÃO&quot;);
+insert into estados (uf, estado) values(&quot;MT&quot;, &quot;MATO GROSSO&quot;);
+insert into estados (uf, estado) values(&quot;MS&quot;, &quot;MATO GROSSO DO SUL&quot;);
+insert into estados (uf, estado) values(&quot;MG&quot;, &quot;MINAS GERAIS&quot;);
+insert into estados (uf, estado) values(&quot;PA&quot;, &quot;PARÁ&quot;);
+insert into estados (uf, estado) values(&quot;PB&quot;, &quot;PARAIBA&quot;);
+insert into estados (uf, estado) values(&quot;PR&quot;, &quot;PARANÁ&quot;);
+insert into estados (uf, estado) values(&quot;PE&quot;, &quot;PERNAMBUCO&quot;);
+insert into estados (uf, estado) values(&quot;PI&quot;, &quot;PIAUÍ&quot;);
+insert into estados (uf, estado) values(&quot;RJ&quot;, &quot;RIO DE JANEIRO&quot;);
+insert into estados (uf, estado) values(&quot;RN&quot;, &quot;RIO GRANDE DO NORTE&quot;);
+insert into estados (uf, estado) values(&quot;RS&quot;, &quot;RIO GRANDE DO SUL&quot;);
+insert into estados (uf, estado) values(&quot;RO&quot;, &quot;RONDÔNIA&quot;);
+insert into estados (uf, estado) values(&quot;RR&quot;, &quot;RORAIMA&quot;);
+insert into estados (uf, estado) values(&quot;SP&quot;, &quot;SÃO PAULO&quot;);
+insert into estados (uf, estado) values(&quot;SC&quot;, &quot;SANTA CATARINA&quot;);
+insert into estados (uf, estado) values(&quot;SE&quot;, &quot;SERGIPE&quot;);
+insert into estados (uf, estado) values(&quot;TO&quot;, &quot;TOCANTINS&quot;);
+</pre>
 <div class="section" id="codigo-do-primeira-exemplo">
 <h3>CÓDIGO DO PRIMEIRA EXEMPLO</h3>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;c:/sqlite/aula/bd_estudo.db&quot;</span><span class="p">)</span>
-<span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;select * from estados&#39;</span><span class="p">)</span>
-<span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-</pre></div>
+<pre class="literal-block">
+import sqlite3
+conn = sqlite3.connect(&quot;c:/sqlite/aula/bd_estudo.db&quot;)
+cursor = conn.execute('select * from estados')
+rows = cursor.fetchall()
+</pre>
 </div>
 <div class="section" id="codigo-do-segundo-exemplo">
 <h3>CÓDIGO DO SEGUNDO EXEMPLO</h3>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+for row in rows:
+    print(row)
+</pre>
 </div>
 </div>
 <div class="section" id="links-externos">

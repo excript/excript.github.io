@@ -511,44 +511,45 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x"># SOBREESCRITA DE FUNÇÕES</span>
+<pre class="literal-block">
+# SOBREESCRITA DE FUNÇÕES
 
-<span class="x">class Pessoa{</span>
-<span class="x">    private $nome;</span>
-<span class="x">    private $sobrenome;</span>
+class Pessoa{
+    private $nome;
+    private $sobrenome;
 
-<span class="x">    public function getNome() : string</span>
-<span class="x">    {</span>
-<span class="x">        return $this-&gt;nome;</span>
-<span class="x">    }</span>
-<span class="x">    public function setNome(string $nome)</span>
-<span class="x">    {</span>
-<span class="x">        $this-&gt;nome = $nome;</span>
-<span class="x">    }</span>
-<span class="x">    public function getSobrenome() : string</span>
-<span class="x">    {</span>
-<span class="x">    return $this-&gt;sobrenome;</span>
-<span class="x">    }</span>
-<span class="x">    public function setSobrenome(string $sobrenome)</span>
-<span class="x">    {</span>
-<span class="x">        $this-&gt;sobrenome = $sobrenome;</span>
-<span class="x">    }</span>
+    public function getNome() : string
+    {
+        return $this-&gt;nome;
+    }
+    public function setNome(string $nome)
+    {
+        $this-&gt;nome = $nome;
+    }
+    public function getSobrenome() : string
+    {
+    return $this-&gt;sobrenome;
+    }
+    public function setSobrenome(string $sobrenome)
+    {
+        $this-&gt;sobrenome = $sobrenome;
+    }
 
-<span class="x">    public function getNomeCompleto() : string</span>
-<span class="x">    {</span>
-<span class="x">        return $this-&gt;getNome() . &quot; &quot; . $this-&gt;getSobrenome();</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+    public function getNomeCompleto() : string
+    {
+        return $this-&gt;getNome() . &quot; &quot; . $this-&gt;getSobrenome();
+    }
+}
 
-<span class="x">class PFisica extends Pessoa{</span>
+class PFisica extends Pessoa{
 
-<span class="x">//    public function getNomeCompleto() : string</span>
-<span class="x">//    {</span>
-<span class="x">//        return &quot;PFisica: {$this-&gt;getNome()} {$this-&gt;getSobrenome()}&quot;;</span>
-<span class="x">//    }</span>
+//    public function getNomeCompleto() : string
+//    {
+//        return &quot;PFisica: {$this-&gt;getNome()} {$this-&gt;getSobrenome()}&quot;;
+//    }
 
-<span class="x">}</span>
-</pre></div>
+}
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

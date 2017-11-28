@@ -103,17 +103,18 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#HEREDOC E NOWDOC</span>
+<pre class="literal-block">
+#HEREDOC E NOWDOC
 
-<span class="x"># HEREDOC == &quot;&quot;</span>
-<span class="x">$x = 50;</span>
+# HEREDOC == &quot;&quot;
+$x = 50;
 
-<span class="x">$heredoc =</span>
-<span class="x">&lt;&lt;&lt;TESTE</span>
+$heredoc =
+&lt;&lt;&lt;TESTE
 
-<span class="x">    &lt;div&gt;O valor da variável x é: $x&lt;/div&gt;</span>
+    &lt;div&gt;O valor da variável x é: $x&lt;/div&gt;
 
-<span class="x">TESTE …</span></pre></div></div>
+TESTE …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/string-heredoc-nowdoc-php.html">more ...</a>
                 </div>
             </article>
@@ -140,11 +141,12 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#STRING</span>
+<pre class="literal-block">
+#STRING
 
-<span class="x">$str = &quot;abc&quot;;</span>
+$str = &quot;abc&quot;;
 
-<span class="x">echo …</span></pre></div></div>
+echo …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/introducao-as-string-php.html">more ...</a>
                 </div>
             </article>
@@ -167,23 +169,24 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<pre class="literal-block">
+&lt;?php
 
-<span class="c1">#====================</span>
-<span class="c1">#  == eXcript.com ==</span>
-<span class="c1">#====================</span>
+#====================
+#  == eXcript.com ==
+#====================
 
 
-<span class="k">function</span> <span class="o">&amp;</span><span class="nf">func</span><span class="p">(){</span>
-    <span class="nv">$a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
-    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>
+function &amp;func(){
+    $a = [1,2,3];
+    print_r($a);
 
-    <span class="k">return</span> <span class="nv">$a</span><span class="p">;</span>
-<span class="p">}</span>
+    return $a;
+}
 
-<span class="nv">$valor</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nx">func</span><span class="p">();</span>
-<span class="nb">print_r</span><span class="p">(</span><span class="nv">$valor</span><span class="p">);</span>
-</pre></div>
+$valor = &amp;func();
+print_r($valor);
+</pre>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/parametro-por-referencia-php-ii.html">more ...</a>
@@ -231,15 +234,16 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">function cubo($num){</span>
+<pre class="literal-block">
+function cubo($num){
 
-<span class="x">    $x = ($num * $num * $num);</span>
+    $x = ($num * $num * $num);
 
-<span class="x">    return $x;</span>
-<span class="x">}</span>
+    return $x;
+}
 
-<span class="x">echo cubo(3);</span>
-</pre></div>
+echo cubo(3);
+</pre>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/funcao-variadica-php.html">more ...</a>
@@ -265,9 +269,10 @@ eXcript            </a>
 <div class="section" id="retornando-valores">
 <h2>RETORNANDO VALORES</h2>
 <p>Para retornarmos um valor, basta passarmos o mesmo através da palavra-chave <tt class="docutils literal">return</tt>. Após o uso da instrução <tt class="docutils literal">return</tt> a função é finalizada e o valor definido retornado.</p>
-<div class="highlight"><pre><span></span><span class="x">function soma()</span>
-<span class="x">{</span>
-<span class="x">    $num …</span></pre></div></div>
+<pre class="literal-block">
+function soma()
+{
+    $num …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/retorno-valor-funcao-php.html">more ...</a>
                 </div>
             </article>
@@ -317,10 +322,11 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">function somaTudo(){</span>
+<pre class="literal-block">
+function somaTudo(){
 
-<span class="x">    $lista = func_get_args();</span>
-<span class="x">    $qntd = func_num_args …</span></pre></div></div>
+    $lista = func_get_args();
+    $qntd = func_num_args …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/php/lista-parametro-php-ii.html">more ...</a>
                 </div>
             </article>

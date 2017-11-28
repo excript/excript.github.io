@@ -130,29 +130,30 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Retangulo</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">;</span>
+<pre class="literal-block">
+class Retangulo{
+    public int width, height;
 
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">areaTotal</span><span class="o">(){</span>
-        <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isQuadrado</span><span class="o">(){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">width</span><span class="o">==</span><span class="n">height</span><span class="o">)</span>
-            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+    public int areaTotal(){
+        return width * height;
+    }
+    public boolean isQuadrado(){
+        if(width==height)
+            return true;
+        return false;
+    }
+}
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]){</span>
-        <span class="n">Retangulo</span> <span class="n">r1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Retangulo</span><span class="o">();</span>
-        <span class="n">Retangulo</span> <span class="n">r2</span><span class="o">;</span>
+    public static void main(String args[]){
+        Retangulo r1 = new Retangulo();
+        Retangulo r2;
 
-        <span class="n">r2</span> <span class="o">=</span> <span class="n">r1</span><span class="o">;</span>
-        <span class="n">r1</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">;</span>
+        r2 = r1;
+        r1.width = 1000;
 
-        <span class="kt">int</span> <span class="n">i1 …</span></pre></div></div>
+        int i1 …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/instancia-java.html">more ...</a>
                 </div>
             </article>
@@ -178,31 +179,32 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Retangulo</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">;</span>
+<pre class="literal-block">
+class Retangulo{
+    public int width, height;
 
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">areaTotal</span><span class="o">(){</span>
-        <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isQuadrado</span><span class="o">(){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">width</span><span class="o">==</span><span class="n">height</span><span class="o">)</span>
-            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+    public int areaTotal(){
+        return width * height;
+    }
+    public boolean isQuadrado(){
+        if(width==height)
+            return true;
+        return false;
+    }
+}
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
+    public static void main(String args[]) {
 
-        <span class="n">Retangulo</span> <span class="n">r1</span><span class="o">=</span><span class="kc">null</span><span class="o">;</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">r1</span><span class="o">!=</span><span class="kc">null</span><span class="o">)</span>
-            <span class="n">r1</span><span class="o">.</span><span class="na">isQuadrado</span><span class="o">();</span>
-        <span class="c1">//NullPointerException</span>
-    <span class="o">}</span>
+        Retangulo r1=null;
+        if(r1!=null)
+            r1.isQuadrado();
+        //NullPointerException
+    }
 
-<span class="o">}</span>
-</pre></div>
+}
+</pre>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/retorno-valores-funcoes-java.html">more ...</a>
@@ -230,28 +232,29 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Retangulo</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">;</span>
+<pre class="literal-block">
+class Retangulo{
+    public int width, height;
 
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">areaTotal</span><span class="o">(){</span>
-        <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isQuadrado</span><span class="o">(){</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">width</span><span class="o">==</span><span class="n">height</span><span class="o">)</span>
-            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+    public int areaTotal(){
+        return width * height;
+    }
+    public boolean isQuadrado(){
+        if(width==height)
+            return true;
+        return false;
+    }
+}
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
+    public static void main(String args[]) {
 
-        <span class="n">Retangulo</span> <span class="n">quadrado</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Retangulo</span><span class="o">();</span>
-        <span class="n">quadrado</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
-        <span class="n">quadrado</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="mi">120</span><span class="o">;</span>
+        Retangulo quadrado = new Retangulo();
+        quadrado.width = 100;
+        quadrado.height = 120;
 
-        <span class="n">System …</span></pre></div></div>
+        System …</pre></div>
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/parametro-argumento-funcao-java.html">more ...</a>
                 </div>
             </article>
@@ -277,17 +280,18 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+<pre class="literal-block">
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">metodo</span><span class="o">(){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Impresso atraves do metodo.&quot;</span><span class="o">);</span>
-    <span class="o">}</span>
+    public static void metodo(){
+        System.out.println(&quot;Impresso atraves do metodo.&quot;);
+    }
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
-        <span class="n">metodo</span><span class="o">();</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
+    public static void main(String[] args){
+        metodo();
+    }
+}
+</pre>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/atributo-classe-java.html">more ...</a>
@@ -315,23 +319,24 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Calculo</span><span class="o">{</span>
+<pre class="literal-block">
+class Calculo{
 
-    <span class="kt">void</span> <span class="nf">soma</span><span class="o">(</span><span class="kt">int</span> <span class="n">num1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">num2</span><span class="o">){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+    void soma(int num1, int num2){
+        System.out.println(num1 + num2);
+    }
+}
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]){</span>
+    public static void main(String args[]){
 
-        <span class="n">Calculo</span> <span class="n">cal</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculo</span><span class="o">();</span>
-        <span class="n">cal</span><span class="o">.</span><span class="na">soma</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">25</span><span class="o">);</span>
-    <span class="o">}</span>
+        Calculo cal = new Calculo();
+        cal.soma(5, 25);
+    }
 
-<span class="o">}</span>
-</pre></div>
+}
+</pre>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/funcao-metodo-java.html">more ...</a>
@@ -359,28 +364,29 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="n">main</span><span class="o">.</span><span class="na">java</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+<pre class="literal-block">
+main.java
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    public static void main(String[] args) {
 
-        <span class="n">Mobile</span> <span class="n">mobile</span><span class="o">;</span>
-        <span class="n">mobile</span> <span class="o">=</span> <span class="o">(</span><span class="k">new</span> <span class="n">Mobile</span><span class="o">());</span>
-        <span class="n">mobile</span><span class="o">.</span><span class="na">volume</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
-        <span class="n">mobile</span><span class="o">.</span><span class="na">ligado</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-    <span class="o">}</span>
+        Mobile mobile;
+        mobile = (new Mobile());
+        mobile.volume = 5;
+        mobile.ligado = true;
+    }
 
-<span class="o">}</span>
+}
 
-<span class="n">mobile</span><span class="o">.</span><span class="na">java</span>
-<span class="kd">class</span> <span class="nc">Mobile</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="n">ligado</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">displayLigado</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="n">volume</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+mobile.java
+class Mobile {
+    public boolean ligado;
+    private boolean displayLigado;
+    public int volume = 0;
 
 
-<span class="o">}</span>
-</pre></div>
+}
+</pre>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/classes-java.html">more ...</a>

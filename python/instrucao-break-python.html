@@ -383,30 +383,32 @@ eXcript            </a>
 <h2>A INSTRUÇÃO <code>break</code></h2>
 <p>A instrução <code>break</code> finaliza a iteração e o Script continua a execução normalmente. O objetivo dessa instrução é fornecer a capacidade de forçar a interrupção da iteração.</p>
 <p>A seguir, temos um código simples que utiliza a instrução <code>break</code> pra finalizar a execução do laço de repetição <code>while</code>, quando a condição definida com a instrução <code>if</code> retornar verdadeiro.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">5</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Interrompendo a execução da repetição.&quot;</span><span class="p">)</span>
-        <span class="k">break</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
+x = 0
+while(x&lt;10):
+    x+=1
+    if(x==5):
+        print(&quot;Interrompendo a execução da repetição.&quot;)
+        break
+    print(x)
+</pre>
 <p>No código anterior, definimos a variável <code>x</code> e atribuimos 0 ainda na definição. Em seguida, implementamos o laço de repetição <code>while</code> e definimos que, enquanto o valor de <code>x</code> for menor do que 10, o bloco de instrução será executado. Em seguida, implementamos com a instrução <code>if</code> uma condição que avalia se o valor de <code>x</code> é igual a 5. Se a expressão for igual a <code>True</code>, será impresso uma mensagem no console e a instrução <code>break</code> executada, o que ocasionará, na interrupção da execução do laço de repetição <code>while</code>.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Antes de entrar no laço&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">item</span><span class="o">==</span><span class="mi">6</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;A condição estabelecida retornou true&quot;</span><span class="p">)</span>
-        <span class="k">break</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Depois de ter entrado no laço&quot;</span><span class="p">)</span>
-</pre></div>
+print(&quot;Antes de entrar no laço&quot;)
+for item in range(10):
+    print(item)
+    if(item==6):
+        print(&quot;A condição estabelecida retornou true&quot;)
+        break
+print(&quot;Depois de ter entrado no laço&quot;)
+</pre>
 </div>
 
 				</div>

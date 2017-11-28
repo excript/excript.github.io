@@ -306,34 +306,35 @@ eXcript            </a>
 <p>Há diversas maneiras e centenas de estilos de calculadoras, logo, com a linguagem C, conseguimos desenvolver programas para praticamente todos os estilos existentes. Nesse momento, nosso objetivo é fazer uma simples aplicação a fim de estudar o que aprendemos até este momento. Logo, não espere espere nesse momento o desenvolvimento de nenhuma HP, porém, o exemplo lhe será super útil.</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+//  ==========                 ==========
+//  ========== www.eXcript.com ==========
+//  ==========                 ==========
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">subtracao</span><span class="p">,</span> <span class="n">multi</span><span class="p">,</span> <span class="n">div</span><span class="p">;</span>
+int main()
+{
+    int num1, num2, soma, subtracao, multi, div;
 
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Calculadora 1.0</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Entre os 2 numeros a serem processados: &quot;</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%i%i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">);</span>
+    printf(&quot;Calculadora 1.0\n&quot;);
+    printf(&quot;Entre os 2 numeros a serem processados: &quot;);
+    scanf(&quot;%i%i&quot;, &amp;num1, &amp;num2);
 
-    <span class="n">soma</span>            <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">;</span>
-    <span class="n">subtracao</span>       <span class="o">=</span> <span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span><span class="p">;</span>
-    <span class="n">multi</span>           <span class="o">=</span> <span class="n">num1</span> <span class="o">*</span> <span class="n">num2</span><span class="p">;</span>
-    <span class="n">div</span>             <span class="o">=</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span><span class="p">;</span>
+    soma            = num1 + num2;
+    subtracao       = num1 - num2;
+    multi           = num1 * num2;
+    div             = num1 / num2;
 
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;A soma e: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">soma</span> <span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;A subtracao e: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">subtracao</span> <span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;O produto e: %i </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">multi</span> <span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;A divisão e: %i </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">div</span> <span class="p">);</span>
+    printf( &quot;A soma e: %i\n&quot;, soma );
+    printf( &quot;A subtracao e: %i\n&quot;, subtracao );
+    printf( &quot;O produto e: %i \n&quot;, multi );
+    printf( &quot;A divisão e: %i \n&quot;, div );
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

@@ -228,69 +228,71 @@ eXcript            </a>
     </div>
 <div class="section" id="calculadora">
 <h2>CALCULADORA</h2>
-<div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">d</span><span class="p">;</span>
+<pre class="literal-block">
+double d;
 
-<span class="n">d</span> <span class="p">=</span> <span class="m">12</span> <span class="p">+</span> <span class="m">3</span><span class="p">;</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+d = 12 + 3;
+Console.WriteLine(d);
 
-<span class="n">d</span> <span class="p">=</span> <span class="m">12</span> <span class="p">-</span> <span class="m">3</span><span class="p">;</span><span class="c1">//subtração</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+d = 12 - 3;//subtração
+Console.WriteLine(d);
 
-<span class="n">d</span> <span class="p">=</span> <span class="m">12</span> <span class="p">*</span> <span class="m">3</span><span class="p">;</span><span class="c1">//multiplicação</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+d = 12 * 3;//multiplicação
+Console.WriteLine(d);
 
-<span class="n">d</span> <span class="p">=</span> <span class="m">12</span> <span class="p">/</span> <span class="m">3</span><span class="p">;</span><span class="c1">//divisão</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
-</pre></div>
+d = 12 / 3;//divisão
+Console.WriteLine(d);
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+<pre class="literal-block">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-<span class="k">namespace</span> <span class="nn">Aula</span>
-<span class="p">{</span>
-    <span class="k">class</span> <span class="nc">Program</span>
-    <span class="p">{</span>
-        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="c1">//simples calculadora</span>
+namespace Aula
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //simples calculadora
 
-            <span class="kt">double</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">;</span><span class="c1">//variáveis que irão conter os números digitados</span>
-            <span class="kt">string</span> <span class="n">tmp</span><span class="p">;</span>
+            double num1, num2;//variáveis que irão conter os números digitados
+            string tmp;
 
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Digite um número: &quot;</span><span class="p">);</span>
-            <span class="n">tmp</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-            <span class="n">num1</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
+            Console.WriteLine(&quot;Digite um número: &quot;);
+            tmp = Console.ReadLine();
+            num1 = int.Parse(tmp);
 
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Digite mais um número: &quot;</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-            <span class="n">num2</span> <span class="p">=</span> <span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
+            Console.WriteLine(&quot;Digite mais um número: &quot;);
+            Console.ReadLine();
+            num2 = int.Parse(tmp);
 
-            <span class="kt">double</span> <span class="n">resultado</span><span class="p">;</span>
+            double resultado;
 
-            <span class="c1">//realiza a soma e imprime no console</span>
-            <span class="n">resultado</span> <span class="p">=</span> <span class="n">num1</span> <span class="p">+</span> <span class="n">num2</span><span class="p">;</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Soma: &quot;</span> <span class="p">+</span> <span class="n">resultado</span><span class="p">);</span>
+            //realiza a soma e imprime no console
+            resultado = num1 + num2;
+            Console.WriteLine(&quot;Soma: &quot; + resultado);
 
-            <span class="c1">//realiza a subtração e imprime no console</span>
-            <span class="n">resultado</span> <span class="p">=</span> <span class="n">num1</span> <span class="p">-</span> <span class="n">num2</span><span class="p">;</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Subtração: &quot;</span> <span class="p">+</span> <span class="n">resultado</span><span class="p">);</span>
+            //realiza a subtração e imprime no console
+            resultado = num1 - num2;
+            Console.WriteLine(&quot;Subtração: &quot; + resultado);
 
-            <span class="c1">//realiza a multiplicação e imprime no console</span>
-            <span class="n">resultado</span> <span class="p">=</span> <span class="n">num1</span> <span class="p">*</span> <span class="n">num2</span><span class="p">;</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Multiplicação: &quot;</span> <span class="p">+</span> <span class="n">resultado</span><span class="p">);</span>
+            //realiza a multiplicação e imprime no console
+            resultado = num1 * num2;
+            Console.WriteLine(&quot;Multiplicação: &quot; + resultado);
 
-            <span class="c1">//realiza a divisão e imprime no console</span>
-            <span class="n">resultado</span> <span class="p">=</span> <span class="n">num1</span> <span class="p">/</span> <span class="n">num2</span><span class="p">;</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Divisão: &quot;</span> <span class="p">+</span> <span class="n">resultado</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+            //realiza a divisão e imprime no console
+            resultado = num1 / num2;
+            Console.WriteLine(&quot;Divisão: &quot; + resultado);
+        }
+    }
+}
+</pre>
 </div>
 
 				</div>

@@ -502,13 +502,14 @@ eXcript            </a>
 <h2>ARRAYS MULTIDIMENSIONAIS</h2>
 <p>Array Multidimensional é uma estrutura que tem vinculado um outro Array. Podemos construir estruturas com quantas dimensões forem necessárias, porém, na maior parte das vezes trabalharemos com estruturas que tenham 2 dimensões, ou seja, estruturas que armazenam informações tabulares e que também são chamadas de Tabelas, ou então, Planilhas.</p>
 <p>Estruturas multidimensionais em PHP também são representadas como Matrizes onde temos: Linhas * Colunas.</p>
-<div class="highlight"><pre><span></span><span class="x">$jogo = array</span>
-<span class="x">(</span>
-<span class="x">    array(1, &quot;Zé&quot;, 11),</span>
-<span class="x">    array(2, &quot;José&quot;, 4),</span>
-<span class="x">    array(3, &quot;Zéca&quot;, 22)</span>
-<span class="x">);</span>
-</pre></div>
+<pre class="literal-block">
+$jogo = array
+(
+    array(1, &quot;Zé&quot;, 11),
+    array(2, &quot;José&quot;, 4),
+    array(3, &quot;Zéca&quot;, 22)
+);
+</pre>
 <p>A estrutura do Array acima pode também ser representada seguinte maneira:</p>
 <blockquote>
 <table border="1" class="docutils">
@@ -537,61 +538,64 @@ eXcript            </a>
 </tbody>
 </table>
 </blockquote>
-<div class="highlight"><pre><span></span><span class="x">$jogo = array</span>
-<span class="x">(</span>
-<span class="x">    array(1, &quot;Zé&quot;, 11),</span>
-<span class="x">    array(2, &quot;José&quot;, 4),</span>
-<span class="x">    array(3, &quot;Zéca&quot;, 22)</span>
-<span class="x">);</span>
+<pre class="literal-block">
+$jogo = array
+(
+    array(1, &quot;Zé&quot;, 11),
+    array(2, &quot;José&quot;, 4),
+    array(3, &quot;Zéca&quot;, 22)
+);
 
-<span class="x">for ($linha=0; $linha&lt;3; $linha++) {</span>
-<span class="x">    for ($coluna=0; $coluna&lt;3; $coluna++) {</span>
-<span class="x">        echo $jogo[$linha][$coluna].&quot;  &quot;;</span>
-<span class="x">    }</span>
-<span class="x">    echo &quot;&lt;br/&gt; \n&quot;;</span>
-<span class="x">}</span>
-</pre></div>
+for ($linha=0; $linha&lt;3; $linha++) {
+    for ($coluna=0; $coluna&lt;3; $coluna++) {
+        echo $jogo[$linha][$coluna].&quot;  &quot;;
+    }
+    echo &quot;&lt;br/&gt; \n&quot;;
+}
+</pre>
 </div>
 <div class="section" id="arrays-multidimensionais-contendo-estruturas-de-dados">
 <h2>ARRAYS MULTIDIMENSIONAIS CONTENDO ESTRUTURAS DE DADOS</h2>
 <p>É bastante comum encontrarmos código que possuem Arrays associados a chaves e estes, estão representando estruturas de informações que por exemplo, serão enviadas a um componente. A seguir, temos um código demonstrativo de como essas estruturas aparecerão.</p>
-<div class="highlight"><pre><span></span><span class="x">$x = [</span>
-<span class="x">        &quot;array1&quot; =&gt; [</span>
-<span class="x">            &quot;aaa&quot;=&gt;100,</span>
-<span class="x">            &quot;bbb&quot;=&gt;200,</span>
-<span class="x">            &quot;ccc&quot;=&gt;300</span>
-<span class="x">        ],</span>
-<span class="x">        &quot;array2&quot; =&gt; [</span>
-<span class="x">            &quot;ddd&quot;=&gt;500,</span>
-<span class="x">            &quot;eee&quot;=&gt;600,</span>
-<span class="x">            &quot;fff&quot;=&gt;700</span>
-<span class="x">        ]</span>
-<span class="x">    ];</span>
+<pre class="literal-block">
+$x = [
+        &quot;array1&quot; =&gt; [
+            &quot;aaa&quot;=&gt;100,
+            &quot;bbb&quot;=&gt;200,
+            &quot;ccc&quot;=&gt;300
+        ],
+        &quot;array2&quot; =&gt; [
+            &quot;ddd&quot;=&gt;500,
+            &quot;eee&quot;=&gt;600,
+            &quot;fff&quot;=&gt;700
+        ]
+    ];
 
-<span class="x">echo $x[&quot;array&quot;][&quot;bbb&quot;];</span>
-</pre></div>
+echo $x[&quot;array&quot;][&quot;bbb&quot;];
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#   | ID | NOME | PONTOS |</span>
-<span class="x">#   | 1  | Zé   | 11     |</span>
-<span class="x">#   | 2  | José | 4      |</span>
-<span class="x">#   | 3  | Zéca | 22     |</span>
+<pre class="literal-block">
+#   | ID | NOME | PONTOS |
+#   | 1  | Zé   | 11     |
+#   | 2  | José | 4      |
+#   | 3  | Zéca | 22     |
 
-<span class="x">//$jogo = array(</span>
-<span class="x">//    array(&quot;ID&quot;=&gt;1, &quot;NOME&quot;=&gt;&quot;Zé&quot;,   &quot;PONTOS&quot;=&gt;11),</span>
-<span class="x">//    array(&quot;ID&quot;=&gt;2, &quot;NOME&quot;=&gt;&quot;José&quot;, &quot;PONTOS&quot;=&gt;4),</span>
-<span class="x">//    array(&quot;ID&quot;=&gt;3, &quot;NOME&quot;=&gt;&quot;Zéca&quot;, &quot;PONTOS&quot;=&gt;22)</span>
-<span class="x">//);</span>
-<span class="x">$jogo = [</span>
-<span class="x">            [&quot;ID&quot;=&gt;1, &quot;NOME&quot;=&gt;&quot;Zé&quot;,   &quot;PONTOS&quot;=&gt;11],</span>
-<span class="x">            [&quot;ID&quot;=&gt;2, &quot;NOME&quot;=&gt;&quot;José&quot;, &quot;PONTOS&quot;=&gt;4],</span>
-<span class="x">            [&quot;ID&quot;=&gt;3, &quot;NOME&quot;=&gt;&quot;Zéca&quot;, &quot;PONTOS&quot;=&gt;22]</span>
-<span class="x">        ];</span>
-<span class="x">print_r($jogo);</span>
+//$jogo = array(
+//    array(&quot;ID&quot;=&gt;1, &quot;NOME&quot;=&gt;&quot;Zé&quot;,   &quot;PONTOS&quot;=&gt;11),
+//    array(&quot;ID&quot;=&gt;2, &quot;NOME&quot;=&gt;&quot;José&quot;, &quot;PONTOS&quot;=&gt;4),
+//    array(&quot;ID&quot;=&gt;3, &quot;NOME&quot;=&gt;&quot;Zéca&quot;, &quot;PONTOS&quot;=&gt;22)
+//);
+$jogo = [
+            [&quot;ID&quot;=&gt;1, &quot;NOME&quot;=&gt;&quot;Zé&quot;,   &quot;PONTOS&quot;=&gt;11],
+            [&quot;ID&quot;=&gt;2, &quot;NOME&quot;=&gt;&quot;José&quot;, &quot;PONTOS&quot;=&gt;4],
+            [&quot;ID&quot;=&gt;3, &quot;NOME&quot;=&gt;&quot;Zéca&quot;, &quot;PONTOS&quot;=&gt;22]
+        ];
+print_r($jogo);
 
-<span class="x">echo $jogo[1][&quot;NOME&quot;];</span>
-</pre></div>
+echo $jogo[1][&quot;NOME&quot;];
+</pre>
 </div>
 
 				</div>

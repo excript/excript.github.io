@@ -498,66 +498,73 @@ eXcript            </a>
     </div>
 <div class="section" id="definindo-um-array">
 <h2>DEFININDO UM ARRAY</h2>
-<div class="highlight"><pre><span></span><span class="x">$arr = [1,2,3]</span>
-</pre></div>
+<pre class="literal-block">
+$arr = [1,2,3]
+</pre>
 </div>
 <div class="section" id="incluindo-elementos">
 <h2>INCLUINDO ELEMENTOS</h2>
 <p>Para incluírmos novos elementos podemos utilizar uma das 2 definições a seguir:</p>
-<div class="highlight"><pre><span></span><span class="x">$arr[] = 4;</span>
-</pre></div>
+<pre class="literal-block">
+$arr[] = 4;
+</pre>
 </div>
 <div class="section" id="alterando-os-valores-dos-elementos">
 <h2>ALTERANDO OS VALORES DOS ELEMENTOS</h2>
 <p>Da mesma forma em associamos um valor a uma chave numérica, é possível realizar alterações. Para isto, basta informarmos qual a chave que deve ter o seu valor alterado e então, definir o novo valor.</p>
-<div class="highlight"><pre><span></span><span class="x">$cores[2] = &quot;Preto&quot;;&lt;1&gt;</span>
-</pre></div>
+<pre class="literal-block">
+$cores[2] = &quot;Preto&quot;;&lt;1&gt;
+</pre>
 <p>&lt;1&gt; Estamos dizendo que o elemento de índice igual a 2 deve ter o seu valor alterado para a string &quot;Preto&quot;.</p>
 <p>Para imprimirmos os elementos contidos num Array podemos acessá-los diretamente ou então podemos iterar a coleção.</p>
-<div class="highlight"><pre><span></span><span class="x">echo &quot;As cores são: $cores[0], $cores[1], $cores[2] and $cores[3]&quot;;</span>
-</pre></div>
+<pre class="literal-block">
+echo &quot;As cores são: $cores[0], $cores[1], $cores[2] and $cores[3]&quot;;
+</pre>
 </div>
 <div class="section" id="removendo-elementos">
 <h2>REMOVENDO ELEMENTOS</h2>
 <p>O PHP permite a remoção de qualquer elemento contido num Array, bastando somente passarmos o elemento a ser removido como parâmetro da função <cite>unset()</cite>, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="x">$arr = [&quot;aaa&quot;, &quot;bbb&quot;, &quot;ccc&quot;];</span>
-<span class="x">unset($arr[1]);&lt;1&gt;</span>
-</pre></div>
+<pre class="literal-block">
+$arr = [&quot;aaa&quot;, &quot;bbb&quot;, &quot;ccc&quot;];
+unset($arr[1]);&lt;1&gt;
+</pre>
 <p>&lt;1&gt; Remove o elemento &quot;bbb&quot; do Array.</p>
 <p>Quando removemos um elemento de um Array Indexado, temos que o índice do elemento será removido e a estrutura não será reindexada. Assim, se tivermos um Array que possua 3 elementos e removermos o elemento de índice igual a 1, temos que o Array passará a não possuir elemento vinculado ao índice 1, ou seja, remover um elemento não implicar na reindexação da estrutura.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#Definindo o Array</span>
-<span class="x">$arr = [&quot;zero&quot;, &quot;um&quot;, &quot;dois&quot;, &quot;três&quot;, &quot;quatro&quot;];</span>
+<pre class="literal-block">
+#Definindo o Array
+$arr = [&quot;zero&quot;, &quot;um&quot;, &quot;dois&quot;, &quot;três&quot;, &quot;quatro&quot;];
 
-<span class="x">#Adicionando elementos</span>
-<span class="x">$arr[] = &quot;cinco&quot;;</span>
+#Adicionando elementos
+$arr[] = &quot;cinco&quot;;
 
-<span class="x">#Alterando elementos</span>
-<span class="x">$arr[1] = &quot;ummm&quot;;</span>
-<span class="x">$arr[4] = &quot;quatrro&quot;;</span>
+#Alterando elementos
+$arr[1] = &quot;ummm&quot;;
+$arr[4] = &quot;quatrro&quot;;
 
-<span class="x">#Excluindo elementos</span>
-<span class="x">unset($arr[3]);</span>
+#Excluindo elementos
+unset($arr[3]);
 
-<span class="x">print_r($arr);</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="x">#Definindo o Array</span>
-<span class="x">$lista = [&quot;zero&quot;, &quot;um&quot;, &quot;dois&quot;, &quot;três&quot;, &quot;quatro&quot;];</span>
+print_r($arr);
+</pre>
+<pre class="literal-block">
+#Definindo o Array
+$lista = [&quot;zero&quot;, &quot;um&quot;, &quot;dois&quot;, &quot;três&quot;, &quot;quatro&quot;];
 
-<span class="x">#Adicionando elementos</span>
-<span class="x">$lista[] = &quot;cinco&quot;;</span>
+#Adicionando elementos
+$lista[] = &quot;cinco&quot;;
 
-<span class="x">#Alterando elementos</span>
-<span class="x">$lista[1] = &quot;ummm&quot;;</span>
-<span class="x">$lista[4] = &quot;quatrro&quot;;</span>
+#Alterando elementos
+$lista[1] = &quot;ummm&quot;;
+$lista[4] = &quot;quatrro&quot;;
 
-<span class="x">#Excluindo elementos</span>
-<span class="x">unset($lista[3]);</span>
+#Excluindo elementos
+unset($lista[3]);
 
-<span class="x">print_r($lista);</span>
-</pre></div>
+print_r($lista);
+</pre>
 </div>
 
 				</div>

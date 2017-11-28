@@ -506,24 +506,25 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">function somaTudo(){</span>
+<pre class="literal-block">
+function somaTudo(){
 
-<span class="x">    $lista = func_get_args();</span>
-<span class="x">    $qntd = func_num_args();</span>
-<span class="x">    $total = 0;</span>
+    $lista = func_get_args();
+    $qntd = func_num_args();
+    $total = 0;
 
-<span class="x">//    for($x = 0; $x&lt;$qntd; $x++)</span>
-<span class="x">    foreach($lista as $item)</span>
-<span class="x">    {</span>
-<span class="x">        $total += $item;</span>
-<span class="x">    }</span>
+//    for($x = 0; $x&lt;$qntd; $x++)
+    foreach($lista as $item)
+    {
+        $total += $item;
+    }
 
-<span class="x">    echo &quot;A soma de todos parâmetros é: &quot; . $total;</span>
+    echo &quot;A soma de todos parâmetros é: &quot; . $total;
 
-<span class="x">}</span>
+}
 
-<span class="x">somaTudo(1,2,3,4,5,6);</span>
-</pre></div>
+somaTudo(1,2,3,4,5,6);
+</pre>
 </div>
 
 				</div>

@@ -325,65 +325,66 @@ x--;</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+//  ==========                 ==========
+//  ========== www.eXcript.com ==========
+//  ==========                 ==========
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="cm">/*</span>
-<span class="cm">        1) soma -&gt; +=</span>
-<span class="cm">        2) subtração -&gt; -=</span>
-<span class="cm">        3) multiplicação -&gt; *=</span>
-<span class="cm">        4) divisão -&gt; /=</span>
-<span class="cm">        5) resto (módulo) -&gt; %=</span>
+int main()
+{
+    /*
+        1) soma -&gt; +=
+        2) subtração -&gt; -=
+        3) multiplicação -&gt; *=
+        4) divisão -&gt; /=
+        5) resto (módulo) -&gt; %=
 
-<span class="cm">    */</span>
+    */
 
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span> <span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">++</span><span class="n">i</span> <span class="p">);</span>
-    <span class="n">i</span><span class="o">++</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span> <span class="p">);</span>
+    int i = 1;
+    printf( &quot;%i\n&quot;, i );
+    printf( &quot;%i\n&quot;, ++i );
+    i++;
+    printf( &quot;%i\n&quot;, i );
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;cls&quot;</span><span class="p">);</span>
+    system(&quot;cls&quot;);
 
-    <span class="kt">int</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="n">i2</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">--</span><span class="n">i2</span><span class="p">);</span>
-    <span class="n">i2</span><span class="o">--</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="n">i2</span> <span class="p">);</span>
+    int i2 = 5;
+    printf(&quot;%i&quot;, i2);
+    printf(&quot;%i&quot;, --i2);
+    i2--;
+    printf(&quot;%i&quot;, i2 );
 
-    <span class="cm">/*</span>
-<span class="cm">        1) Incremento\</span>
-<span class="cm">        &gt;Pré ou Pos</span>
-<span class="cm">        2) Decremento/</span>
+    /*
+        1) Incremento\
+        &gt;Pré ou Pos
+        2) Decremento/
 
-<span class="cm">        Pre -&gt; o valor será incrementado/decrementado na instrução</span>
-<span class="cm">                que a variável estiver contida</span>
+        Pre -&gt; o valor será incrementado/decrementado na instrução
+                que a variável estiver contida
 
-<span class="cm">        Pos -&gt; o valor será incrementado/decrementado na próxima</span>
-<span class="cm">                instrução</span>
-
-
-<span class="cm">    */</span>
-
-    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span><span class="c1">//incrementar qntas unidades desejarmos</span>
-    <span class="n">x</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span><span class="c1">//incrementar qntas unidades desejarmos</span>
-    <span class="o">++</span><span class="n">x</span><span class="p">;</span><span class="c1">// op. incremento, só podemos incrementar</span>
-        <span class="c1">// uma unica unidade</span>
-    <span class="n">system</span><span class="p">(</span> <span class="s">&quot;cls &quot;</span><span class="p">);</span>
-
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+        Pos -&gt; o valor será incrementado/decrementado na próxima
+                instrução
 
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    */
+
+    int x = 0;
+    x = x + 10;//incrementar qntas unidades desejarmos
+    x += 10;//incrementar qntas unidades desejarmos
+    ++x;// op. incremento, só podemos incrementar
+        // uma unica unidade
+    system( &quot;cls &quot;);
+
+    printf(&quot;%i&quot;, x);
+
+
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

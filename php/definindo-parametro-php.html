@@ -502,28 +502,31 @@ eXcript            </a>
 </div>
 <div class="section" id="parametros-versus-argumentos">
 <h2>PARÂMETROS versus ARGUMENTOS</h2>
-<div class="highlight"><pre><span></span><span class="x">function soma($a, $b)</span>
-<span class="x">{</span>
-<span class="x">    $x = $a + $b;</span>
-<span class="x">    echo &quot;A soma dos parâmetros é: &quot; . $x;</span>
-<span class="x">}</span>
-</pre></div>
+<pre class="literal-block">
+function soma($a, $b)
+{
+    $x = $a + $b;
+    echo &quot;A soma dos parâmetros é: &quot; . $x;
+}
+</pre>
 <p>Agora, ao invocarmos a função <tt class="docutils literal">soma()</tt> devemos passar 2 valores e então, estes serão somados.</p>
-<div class="highlight"><pre><span></span><span class="x">soma(10, 20);</span>
-</pre></div>
+<pre class="literal-block">
+soma(10, 20);
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">function soma($num1, $num2){</span>
+<pre class="literal-block">
+function soma($num1, $num2){
 
-<span class="x">    $total = $num1 + $num2;</span>
+    $total = $num1 + $num2;
 
-<span class="x">    echo $total;</span>
+    echo $total;
 
-<span class="x">}</span>
+}
 
-<span class="x">soma(10, 20);</span>
-</pre></div>
+soma(10, 20);
+</pre>
 </div>
 
 				</div>

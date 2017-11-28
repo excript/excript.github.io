@@ -104,23 +104,24 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Calculo</span><span class="o">{</span>
+<pre class="literal-block">
+class Calculo{
 
-    <span class="kt">void</span> <span class="nf">soma</span><span class="o">(</span><span class="kt">int</span> <span class="n">num1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">num2</span><span class="o">){</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+    void soma(int num1, int num2){
+        System.out.println(num1 + num2);
+    }
+}
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]){</span>
+    public static void main(String args[]){
 
-        <span class="n">Calculo</span> <span class="n">cal</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculo</span><span class="o">();</span>
-        <span class="n">cal</span><span class="o">.</span><span class="na">soma</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">25</span><span class="o">);</span>
-    <span class="o">}</span>
+        Calculo cal = new Calculo();
+        cal.soma(5, 25);
+    }
 
-<span class="o">}</span>
-</pre></div>
+}
+</pre>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/funcao-metodo-java.html">more ...</a>
@@ -148,28 +149,29 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="n">main</span><span class="o">.</span><span class="na">java</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+<pre class="literal-block">
+main.java
+public class Main {
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    public static void main(String[] args) {
 
-        <span class="n">Mobile</span> <span class="n">mobile</span><span class="o">;</span>
-        <span class="n">mobile</span> <span class="o">=</span> <span class="o">(</span><span class="k">new</span> <span class="n">Mobile</span><span class="o">());</span>
-        <span class="n">mobile</span><span class="o">.</span><span class="na">volume</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
-        <span class="n">mobile</span><span class="o">.</span><span class="na">ligado</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
-    <span class="o">}</span>
+        Mobile mobile;
+        mobile = (new Mobile());
+        mobile.volume = 5;
+        mobile.ligado = true;
+    }
 
-<span class="o">}</span>
+}
 
-<span class="n">mobile</span><span class="o">.</span><span class="na">java</span>
-<span class="kd">class</span> <span class="nc">Mobile</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="n">ligado</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">displayLigado</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="n">volume</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+mobile.java
+class Mobile {
+    public boolean ligado;
+    private boolean displayLigado;
+    public int volume = 0;
 
 
-<span class="o">}</span>
-</pre></div>
+}
+</pre>
 </div>
 
                     <a class="btn btn-default btn-xs" href="http://excript.com/java/classes-java.html">more ...</a>

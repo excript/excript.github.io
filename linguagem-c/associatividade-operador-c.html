@@ -310,42 +310,43 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cm">/*  ==========                 ==========</span>
-<span class="cm">    ========== www.eXcript.com ==========</span>
-<span class="cm">    ==========                 ==========*/</span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+/*  ==========                 ==========
+    ========== www.eXcript.com ==========
+    ==========                 ==========*/
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">const</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+int main()
+{
+    const p = 5;
 
 
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="mi">50</span><span class="p">);</span>
-    <span class="cm">/*</span>
-<span class="cm">        == Associação da esquerda para a direita ==</span>
-<span class="cm">        1) ()</span>
-<span class="cm">        2) *, /, %</span>
-<span class="cm">        3) +, -</span>
-<span class="cm">        4) &lt;, &lt;=, &gt;, &gt;=</span>
-<span class="cm">        5) ==, !=</span>
+    int i = 10 + (10 - 50);
+    /*
+        == Associação da esquerda para a direita ==
+        1) ()
+        2) *, /, %
+        3) +, -
+        4) &lt;, &lt;=, &gt;, &gt;=
+        5) ==, !=
 
-<span class="cm">        == Associação da direita para esquerda ==</span>
-<span class="cm">        1) --, ++</span>
-<span class="cm">        2) =, +=, -+, *=, /=, %=</span>
+        == Associação da direita para esquerda ==
+        1) --, ++
+        2) =, +=, -+, *=, /=, %=
 
-<span class="cm">    */</span>
+    */
 
-    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+    int a, b, c;
 
-    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">));</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+    a = (b = (c = 1));
+    printf(&quot;%i\n&quot;, a);
+    printf(&quot;%i\n&quot;, b);
+    printf(&quot;%i\n&quot;, c);
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

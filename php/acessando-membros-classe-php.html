@@ -506,9 +506,10 @@ eXcript            </a>
 <div class="section" id="o-que-sao-membros-de-classe">
 <h2>O QUE SÃO MEMBROS DE CLASSE</h2>
 <p>Um membro de classe é toda variável ou função definida e implementada pela classe. Assim, temos que todos os atributos e métodos que estiverem definidos numa classe são chamados de &quot;membros de classe&quot;. Para acessarmos os membros de uma classe, temos que utilizar a seguinte nomenclatura:</p>
-<div class="highlight"><pre><span></span><span class="x">referência + nome_membro</span>
-<span class="x">referência -&gt; nome_membro</span>
-</pre></div>
+<pre class="literal-block">
+referência + nome_membro
+referência -&gt; nome_membro
+</pre>
 <p>Temos sempre que pensar no conceito de referência, ou seja, uma variável é somente uma referência a um objeto. Assim, temos que todas as instância que criarmos de uma classe poderão acessar os membros públicos através da definição acima.</p>
 </div>
 <div class="section" id="o-conceito-de-referencia">
@@ -516,12 +517,13 @@ eXcript            </a>
 <p>Referência é para o PHP o que o endereço é para o C++, ou seja, um valor que está apontando para uma região em que há informações armazenadas. O conceito de referência em PHP não é explicito, até porque, não conseguimos obter esse endereço facilmente. Mesmo assim, não é difícil imaginar que <strong>tudo</strong> precisa estar armazenado em algum lugar, logo, a referência é a nomenclatura que utilizamos de forma genérica para dizer que a variável A está ligada a determinada informação.</p>
 <p>É preciso entender que toda variável está armazenada na memória, bem como todo objeto. Entendido isso, é preciso entender que é utilizado uma variável para guardar a região em que determinado objeto está armazenado. Logo, você talvez se pergunte quem armazena o local de memória em que as variáveis estão, e a resposta é: o interpretador, a máquina virtual do PHP.</p>
 <p>Se entendido o conceito de referência, o conceito sobre a variável <tt class="docutils literal">this</tt> fica fácil de ser compreendido, até porque, está é uma variável que é criada para cada novo objeto e, só pode ser utilizada para o acesso de dentro do escopo da classe. Por isso é que dizemos que a pseudo-variável $this <strong>sempre</strong> estará se referindo a classe em que estamos trabalhando.</p>
-<div class="highlight"><pre><span></span><span class="x">//internamente</span>
-<span class="x">$this-&gt;nome_do_membro;</span>
+<pre class="literal-block">
+//internamente
+$this-&gt;nome_do_membro;
 
-<span class="x">//externamente</span>
-<span class="x">$variavel-&gt;nome_do_membro;</span>
-</pre></div>
+//externamente
+$variavel-&gt;nome_do_membro;
+</pre>
 </div>
 <div class="section" id="acessando-membros-de-classe">
 <h2>ACESSANDO MEMBROS DE CLASSE</h2>
@@ -559,45 +561,49 @@ eXcript            </a>
 <li>Qual o membro</li>
 </ol>
 <p>Utilizamos o <tt class="docutils literal">operador de objeto</tt>, comumente chamado de <tt class="docutils literal">operador seta</tt> para acessarmos membros públicos, como temos no exemplo seguinte:</p>
-<div class="highlight"><pre><span></span><span class="x">$objeto_nome -&gt; propriedade_nome;</span>
-</pre></div>
+<pre class="literal-block">
+$objeto_nome -&gt; propriedade_nome;
+</pre>
 <p>O esquema sempre será o mesmo quando formos acessar as funções definidas pelas classes. Inicialmente informamos o objeto, em seguida colocamos o <tt class="docutils literal">operador seta</tt> e por fim, definimos o nome da função [ <strong>funcionalidade</strong> ] que queremos invocar.</p>
-<div class="highlight"><pre><span></span><span class="x">$p1 = new Pessoa(); #criando um objeto de Pessoa e atribuindo a referência à variável $p1</span>
-<span class="x">$p2 = new Pessoa();</span>
-<span class="x">$p1-&gt;nome = &quot;João&quot;; #acessando a variável $nome</span>
-<span class="x">                    # definida pela classe Pessoa e por isso,</span>
-<span class="x">                    # contida na instância $p1</span>
-<span class="x">$p2-&gt;nome = &quot;Maria&quot;;</span>
-</pre></div>
+<pre class="literal-block">
+$p1 = new Pessoa(); #criando um objeto de Pessoa e atribuindo a referência à variável $p1
+$p2 = new Pessoa();
+$p1-&gt;nome = &quot;João&quot;; #acessando a variável $nome
+                    # definida pela classe Pessoa e por isso,
+                    # contida na instância $p1
+$p2-&gt;nome = &quot;Maria&quot;;
+</pre>
 <p>A utilização de objetos para gerar HTML é igual a forma com geramos páginas fazendo uso de variáveis. A diferença é que agora a variável que utilizaremos é, na verdade, um atributo de um objeto e, para extrairmos seu valores, invocaremos uma função que foi definida para este fim.</p>
 <p>No exemplo acima, criamos objetos, definimos seus atributos e por fim, extraímos as informações dos objetos criados. Mesmo que o exemplo feito não tenha qualquer utilidade prática, o conceito envolvido mostra o uso comum de objetos e geração de HTML.</p>
 </div>
 <div class="section" id="inicializando-membros-de-classe">
 <h2>INICIALIZANDO MEMBROS DE CLASSE</h2>
 <p>Muitas propriedades de objetos precisarão ter valores iniciais para que tudo funcione corretamente. Todas as propriedades que precisam definir valores iniciais, precisaram ter seus valores atribuídos em sua declaração.</p>
-<div class="highlight"><pre><span></span><span class="x">class Quadrado</span>
-<span class="x">{</span>
-<span class="x">    public $x = 5, $y = 10;</span>
-<span class="x">}</span>
-</pre></div>
+<pre class="literal-block">
+class Quadrado
+{
+    public $x = 5, $y = 10;
+}
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#ACESSANDO MEMBROS DE CLASSE</span>
+<pre class="literal-block">
+#ACESSANDO MEMBROS DE CLASSE
 
-<span class="x">class Pessoa{</span>
-<span class="x">    public $idade = 0;</span>
-<span class="x">}</span>
+class Pessoa{
+    public $idade = 0;
+}
 
-<span class="x">$p1 = new Pessoa();</span>
-<span class="x">$p2 = new Pessoa();</span>
+$p1 = new Pessoa();
+$p2 = new Pessoa();
 
-<span class="x">$p1 -&gt; idade = 22;</span>
-<span class="x">$p2 -&gt; idade = 15;</span>
+$p1 -&gt; idade = 22;
+$p2 -&gt; idade = 15;
 
-<span class="x">echo $p1 -&gt; idade . &quot;\n&quot;;</span>
-<span class="x">echo $p2 -&gt; idade;</span>
-</pre></div>
+echo $p1 -&gt; idade . &quot;\n&quot;;
+echo $p2 -&gt; idade;
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

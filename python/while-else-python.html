@@ -385,13 +385,14 @@ eXcript            </a>
 <p>O <strong>Laço de Repetição</strong> <code>while</code> repete um bloco de instrução enquanto a condição definida em seu cabeçalho seja verdadeira.</p>
 <p>A estrutura <code>while</code> talvez seja a mais simples para entendermos nesse momento. Devemos entender a mesma como sendo uma variante da Tomada de Decisão, isto é, da instrução <code>if</code>.  Porém, ao contrário de repetir o bloco uma única vez, caso a expressão definida seja verdadeira, o bloco será executado indefinidamente, até que a expressão <strong>se torne</strong> falsa.</p>
 <p>É super importante entender que a expressão <strong>deverá</strong>, obrigatoriamente, deixar de ser verdadeira para que a repetição seja interrompida. Do contrário, a aplicação irá <strong>congelar</strong>, isto é, a aplicação irá travar.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span><span class="p">(</span><span class="n">conta</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="n">conta</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">conta</span><span class="p">)</span>
-</pre></div>
+conta = 0
+while(conta &lt;= 10):
+    conta += 1
+    print(conta)
+</pre>
 <p>No código acima, temos uma variável de nome <code>conta</code> inicializada com o valor 0. Em seguida, utilizamos a instrução <code>while</code> para definir uma <tt class="docutils literal">Estrutura de Repetição</tt> e, a cada ciclo, o bloco na seguida, que contém 2 instruções, será executado. Neste bloco, somamos uma unidade à variável <code>conta</code> e imprimimos o valor da mesma, a cada ciclo, na saida padrão com a função <code>print()</code>.</p>
 </div>
 <div class="section" id="estrutura-else">
@@ -399,19 +400,21 @@ eXcript            </a>
 <p>A linguagem Python define a instrução <code>else</code> como uma estrutura dependente da instrução <code>while</code>, igual estudado na instrução <tt class="docutils literal">if</tt>. Desta forma, em Python, há 3 estruturas em que a instrução <code>else</code> pode ser utilizado para definirmos o bloco de instrução a ser executando quando a condição verificada <strong>deixar de ser verdadeira</strong>.</p>
 <p>No caso, temos a instrução <code>if</code>, instrução <code>while</code> e a instrução <code>for</code> que será estudado na sequência.</p>
 <p>Vamos analisar uma primeira situação.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="n">condicao</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="k">while</span><span class="p">(</span><span class="n">condicao</span><span class="p">):</span><span class="c1">#&lt;1&gt;</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;BLOCO while() e condicao==True&quot;</span><span class="p">)</span><span class="c1">#&lt;2&gt;</span>
-    <span class="n">condicao</span> <span class="o">=</span> <span class="bp">False</span><span class="c1">#&lt;2&gt;</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;BLOCO ELSE e condicao==False&quot;</span><span class="p">)</span>
-</pre></div>
+condicao = True
+while(condicao):#&lt;1&gt;
+    print(&quot;BLOCO while() e condicao==True&quot;)#&lt;2&gt;
+    condicao = False#&lt;2&gt;
+else:
+    print(&quot;BLOCO ELSE e condicao==False&quot;)
+</pre>
 <p>A execução do código acima envia o seguinte resultado pra saida padrão:</p>
-<div class="highlight"><pre><span></span><span class="n">BLOCO</span> <span class="k">while</span><span class="p">()</span> <span class="n">e</span> <span class="n">condicao</span><span class="o">==</span><span class="bp">True</span>
-<span class="n">BLOCO</span> <span class="n">ELSE</span> <span class="n">e</span> <span class="n">condicao</span><span class="o">==</span><span class="bp">False</span>
-</pre></div>
+<pre class="literal-block">
+BLOCO while() e condicao==True
+BLOCO ELSE e condicao==False
+</pre>
 <p>O que podemos concluir é que:
 - <tt class="docutils literal">#&lt;1&gt;</tt>: O bloco verdadeiro da estrutura <code>while</code> foi executado, pois, a lógica é repetir até deixar de ser verdadeiro
 - <tt class="docutils literal">#&lt;2&gt;</tt>: a função print() é executada
@@ -419,30 +422,33 @@ eXcript            </a>
 - <tt class="docutils literal">#&lt;1&gt;</tt>: o cursor de execução volta para o cabeçalho da estrutura <code>while</code>, analisa a condição definida e, como o resultado é igual a <code>False</code> o bloco de instrução <code>else</code> será executado, POIS, igualmente ocorre com a instrução <code>if</code>, o bloco <code>else</code> é executado nas vezes em que a condição NÃO for verdadeira.</p>
 <p>Agora, se por alguma razão a instrução <code>break</code> for invocada, o bloco <code>else</code> não será executado, pois, a lógica estabelecida é que o bloco <code>else</code> só será executado nass vezes em que a condição for <code>False</code> e no caso, isso não aconteceu.</p>
 <p>A seguir, temos o mesmo exemplo, porém agora, a instrução <code>break</code> será invocada.</p>
-<div class="highlight"><pre><span></span><span class="n">condicao</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="k">while</span><span class="p">(</span><span class="n">condicao</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;BLOCO while() e condicao==True&quot;</span><span class="p">)</span>
-    <span class="n">condicao</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="k">break</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;BLOCO ELSE e condicao==False&quot;</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+condicao = True
+while(condicao):
+    print(&quot;BLOCO while() e condicao==True&quot;)
+    condicao = False
+    break
+else:
+    print(&quot;BLOCO ELSE e condicao==False&quot;)
+</pre>
 <p>A execução do código acima envia o seguinte resultado pra saida padrão:</p>
-<div class="highlight"><pre><span></span><span class="n">BLOCO</span> <span class="k">while</span><span class="p">()</span> <span class="n">e</span> <span class="n">condicao</span><span class="o">==</span><span class="bp">True</span>
-</pre></div>
+<pre class="literal-block">
+BLOCO while() e condicao==True
+</pre>
 <p>Ou seja, o bloco <code>True</code> da instrução <code>while</code> foi executado, porém, como a instrução <code>break</code> interrompeu a execução de todo o ciclo, o bloco <code>else</code>, isto é, o bloco que é executado nas vezes em que a condição não é verdadeira não foi executado.</p>
 <p>Assim, o bloco <code>else</code> pode ser executado uma única vez, nos casos em que a expressão definida no cabeçalho da instrução <code>while</code>, deixar de ser verdadeira.</p>
 <p>Àqueles que entenderam a <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">Tomada de Decisão</a>, isto é, a instrução <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">if</a>, deverão ter facilidade em manipular Laços de Repetição <code>while</code>, como também, conseguirão facilmente implementar a instrução <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">while</a> . Isso porque, como já dito, a instrução <code>while</code> funciona da mesma forma que a instrução <code>if</code>, e o que diferencia as mesmas é só e somente só a quantidade de vezes que o <tt class="docutils literal">Bloco de Instrução</tt> será executado.</p>
 <p>A seguir, temos um exemplo semelhante ao que fizemos anteriormente, porém agora, numa situação que acontece na vida real.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span><span class="p">(</span><span class="n">conta</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="n">conta</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Valor da variável conta é: &quot;</span><span class="p">,</span> <span class="n">conta</span><span class="p">)</span>
-</pre></div>
+conta = 0
+while(conta &lt;= 10):
+    conta += 1
+    print(x)
+else:
+    print(&quot;Valor da variável conta é: &quot;, conta)
+</pre>
 <p>No código acima, o <tt class="docutils literal">Bloco de Instrução</tt> para quando a expressão for verdadeira será executado até que o valor da variável <code>conta</code> seja igual a 11. Nesse momento, quando a expressão passar a ser falsa falsa, o <tt class="docutils literal">Bloco da Instrução</tt> <code>else</code> será executado e o <tt class="docutils literal">Laço de Repetição</tt> terá chego ao fim.</p>
 <p>É importante observar que a instrução <code>else</code> funciona da mesma maneira àquela estudada na <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">Tomada de Decisão</a> .</p>
 </div>
@@ -453,17 +459,18 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;while&quot;</span><span class="p">)</span>
-<span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;else&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;fim&quot;</span><span class="p">)</span>
-</pre></div>
+x = 0
+print(&quot;while&quot;)
+while(x&lt;10):
+    print(x)
+    x=x+1;
+else:
+    print(&quot;else&quot;)
+print(&quot;fim&quot;)
+</pre>
 </div>
 
 				</div>

@@ -357,43 +357,45 @@ eXcript            </a>
 <p>Nessa segunda aula de tomada de decisão, iremos estudar a estrutura ELSE, ou seja, a estrutura que contém o bloco da condição False.</p>
 <p>Se todas as verificações podem ser verdadeiras ou falsas, temos que conhecer a forma como declarar o bloco de execução para caso a nossa condição não seja cumprida.</p>
 <p>&quot;Else&quot; é uma palavra do idioma inglês e significa <cite>senão</cite>. Assim, essa é uma estrutura para ser utilizada depois de verificar alguma relação, como no exemplo a seguir:</p>
-<div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">verdadeiro</span><span class="p">){</span>
-  <span class="c1">//bloco de execução para as situações em que</span>
-  <span class="c1">//a condição for verdadeira</span>
-<span class="p">}</span><span class="k">else</span><span class="p">{</span>
-  <span class="c1">//este é o bloco que será executado</span>
-  <span class="c1">//quando a nossa condição não for verdadeira.</span>
-<span class="p">}</span>
-</pre></div>
+<pre class="literal-block">
+if(verdadeiro){
+  //bloco de execução para as situações em que
+  //a condição for verdadeira
+}else{
+  //este é o bloco que será executado
+  //quando a nossa condição não for verdadeira.
+}
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+/*====================================
+*           eXcript.com
+*          fb.com/eXcript
+* ====================================*/
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+int main() {
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Digite um numero qualquer: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">valor</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">valor</span><span class="p">;</span>
+    cout &lt;&lt; &quot;Digite um numero qualquer: &quot; &lt;&lt; endl;
+    int valor = 0;
+    cin &gt;&gt; valor;
 
-    <span class="k">if</span><span class="p">(</span><span class="n">valor</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">){</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O valor digitado eh maior do que 50.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O valor digitado eh menor do que 50.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="p">}</span>
+    if(valor &gt; 50){
+        cout &lt;&lt; &quot;O valor digitado eh maior do que 50.&quot; &lt;&lt; endl;
+    }else{
+        cout &lt;&lt; &quot;O valor digitado eh menor do que 50.&quot; &lt;&lt; endl;
+    }
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    system(&quot;pause&quot;);
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

@@ -308,45 +308,46 @@ eXcript            </a>
 <cite>==</cite> dois sinais de igual é utilizado para verificar a igualdade entre o operando a esquerda com o operando a direita <cite>!=</cite> uma exclamação e um sinal de igual,  significa a diferença, ou seja, o valor lógico a ser retornado irá verificar se o operando a esquerda é diferente do operando a direita do operador lógico diferente.</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+//  ==========                 ==========
+//  ========== www.eXcript.com ==========
+//  ==========                 ==========
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+int main()
+{
+    int i = 10;
 
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Digite um número != de 5: </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span> <span class="p">;</span>
-    <span class="n">scanf</span><span class="p">(</span> <span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span> <span class="p">);</span>
+    printf(&quot;Digite um número != de 5: \n&quot;) ;
+    scanf( &quot;%i&quot;, &amp;i );
 
-    <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">!=</span><span class="mi">5</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">A expressão é:</span><span class="se">\n</span><span class="s"> &quot;</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;TRUE</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">A expressão é:</span><span class="se">\n</span><span class="s"> &quot;</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;FALSE</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-
-
-    <span class="c1">//! é um sinal de negação, igual a expressão NOT</span>
+    if(i!=5)
+    {
+        printf(&quot;\nA expressão é:\n &quot;);
+        printf(&quot;TRUE\n&quot;);
+    }else{
+        printf(&quot;\nA expressão é:\n &quot;);
+        printf(&quot;FALSE\n&quot;);
+    }
 
 
-    <span class="cm">/*</span>
-<span class="cm">    1) positivo -&gt; 1</span>
-<span class="cm">    2) negativa -&gt; 0</span>
-<span class="cm">    */</span>
+    //! é um sinal de negação, igual a expressão NOT
 
-    <span class="c1">//== comparação positiva -&gt; x == y</span>
-    <span class="c1">//!= comparação negativa -&gt; x != y</span>
-    <span class="c1">//      !(x==y)</span>
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    /*
+    1) positivo -&gt; 1
+    2) negativa -&gt; 0
+    */
+
+    //== comparação positiva -&gt; x == y
+    //!= comparação negativa -&gt; x != y
+    //      !(x==y)
+
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

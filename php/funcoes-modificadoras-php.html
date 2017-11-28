@@ -509,46 +509,47 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x"># FUNÇÕES DE ACESSO</span>
+<pre class="literal-block">
+# FUNÇÕES DE ACESSO
 
-<span class="x">class Pessoa{</span>
+class Pessoa{
 
-<span class="x">    private $nome;</span>
-<span class="x">    private $sobrenome;</span>
+    private $nome;
+    private $sobrenome;
 
-<span class="x">    public function getNome() : string</span>
-<span class="x">    {</span>
-<span class="x">        return $this-&gt;nome;</span>
-<span class="x">    }</span>
-<span class="x">    public function setNome(string $nome)</span>
-<span class="x">    {</span>
-<span class="x">        $this-&gt;nome = $nome;</span>
-<span class="x">    }</span>
-<span class="x">    public function getSobrenome() : string</span>
-<span class="x">    {</span>
-<span class="x">        return $this-&gt;sobrenome;</span>
-<span class="x">    }</span>
-<span class="x">    public function setSobrenome(string $sobrenome)</span>
-<span class="x">    {</span>
-<span class="x">        $this-&gt;sobrenome = $sobrenome;</span>
-<span class="x">    }</span>
+    public function getNome() : string
+    {
+        return $this-&gt;nome;
+    }
+    public function setNome(string $nome)
+    {
+        $this-&gt;nome = $nome;
+    }
+    public function getSobrenome() : string
+    {
+        return $this-&gt;sobrenome;
+    }
+    public function setSobrenome(string $sobrenome)
+    {
+        $this-&gt;sobrenome = $sobrenome;
+    }
 
-<span class="x">    public function getNomeCompleto() : string</span>
-<span class="x">    {</span>
-<span class="x">        return $this-&gt;getNome() . &quot; &quot; . $this-&gt;getSobrenome();</span>
-<span class="x">    }</span>
+    public function getNomeCompleto() : string
+    {
+        return $this-&gt;getNome() . &quot; &quot; . $this-&gt;getSobrenome();
+    }
 
-<span class="x">}</span>
+}
 
-<span class="x">$p1 = new Pessoa();</span>
-<span class="x">$p1-&gt;setNome(&quot;eXcript&quot;);</span>
-<span class="x">$p1-&gt;setSobrenome(&quot;Brasil&quot;);</span>
+$p1 = new Pessoa();
+$p1-&gt;setNome(&quot;eXcript&quot;);
+$p1-&gt;setSobrenome(&quot;Brasil&quot;);
 
-<span class="x">//echo $p1-&gt;getNome() . &quot;\n&quot;;</span>
-<span class="x">//echo $p1-&gt;getSobrenome() . &quot;\n&quot;;</span>
+//echo $p1-&gt;getNome() . &quot;\n&quot;;
+//echo $p1-&gt;getSobrenome() . &quot;\n&quot;;
 
-<span class="x">echo $p1-&gt;getNomeCompleto();</span>
-</pre></div>
+echo $p1-&gt;getNomeCompleto();
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

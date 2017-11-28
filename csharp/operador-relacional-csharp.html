@@ -267,11 +267,12 @@ eXcript            </a>
 <blockquote>
 &lt;<tt class="docutils literal">membro a esquerda</tt>&gt; <strong>OPERADOR</strong> &lt;<tt class="docutils literal">membro a direita</tt>&gt;</blockquote>
 <p>A alteração da ordem em que os operandos estão dispostos altera a análise da sua relação, salvo se ambos forem iguais.</p>
-<div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="m">1</span> <span class="p">&gt;</span> <span class="m">2</span> <span class="p">);</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="s">&quot;a&quot;</span> <span class="p">&gt;</span> <span class="s">&quot;b&quot;</span> <span class="p">);</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="m">5</span> <span class="p">&lt;</span> <span class="m">10</span> <span class="p">);</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="m">200</span> <span class="p">==</span> <span class="m">200</span> <span class="p">);</span>
-</pre></div>
+<pre class="literal-block">
+Console.WriteLine( 1 &gt; 2 );
+Console.WriteLine( &quot;a&quot; &gt; &quot;b&quot; );
+Console.WriteLine( 5 &lt; 10 );
+Console.WriteLine( 200 == 200 );
+</pre>
 <p>No código acima, realizamos algumas operações com os operadores relacionais e imprimimos na saída padrão a relação existente. Há 3 possibilidade possíveis: ou o operador a esquerda será maior, menor, ou igual.</p>
 </div>
 <div class="section" id="operadores-relacionais-compostos">
@@ -295,67 +296,69 @@ eXcript            </a>
 </tbody>
 </table>
 <p>Podemos verificar com os <strong>Operadores Relacionais Compostos</strong> se um membro é maior ou menor do que outro. Dessa forma, realizamos 2 operações numa mesma expressão o que acaba por simplificar e muito nossos programas.</p>
-<div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="m">1</span> <span class="p">&gt;=</span> <span class="m">1</span> <span class="p">);</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="s">&quot;x&quot;</span> <span class="p">&gt;</span> <span class="s">&quot;y&quot;</span> <span class="p">);</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="s">&quot;10&quot;</span> <span class="p">&gt;</span> <span class="s">&quot;10&quot;</span> <span class="p">);</span>
-</pre></div>
+<pre class="literal-block">
+Console.WriteLine( 1 &gt;= 1 );
+Console.WriteLine( &quot;x&quot; &gt; &quot;y&quot; );
+Console.WriteLine( &quot;10&quot; &gt; &quot;10&quot; );
+</pre>
 <p>No trecho de código acima, estamos verificando se os membros a esquerda são maiores, menores ou iguais aos membros a sua direita.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+<pre class="literal-block">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-<span class="k">namespace</span> <span class="nn">Aula</span>
-<span class="p">{</span>
-    <span class="k">class</span> <span class="nc">Program</span>
-    <span class="p">{</span>
-        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+namespace Aula
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x, y = 0;
 
-            <span class="c1">//Lendo o primeiro número</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Digite um número: &quot;</span><span class="p">);</span>
-            <span class="kt">string</span> <span class="n">str</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-            <span class="n">x</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+            //Lendo o primeiro número
+            Console.WriteLine(&quot;Digite um número: &quot;);
+            string str = Console.ReadLine();
+            x = Convert.ToInt32(str);
 
-            <span class="c1">//Lendo o segundo número</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Digite outro número: &quot;</span><span class="p">);</span>
-            <span class="n">str</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-            <span class="n">y</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+            //Lendo o segundo número
+            Console.WriteLine(&quot;Digite outro número: &quot;);
+            str = Console.ReadLine();
+            y = Convert.ToInt32(str);
 
-            <span class="kt">bool</span> <span class="n">r</span><span class="p">;</span>
+            bool r;
 
-            <span class="c1">// Operador Relacional Igual</span>
-            <span class="n">r</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span> <span class="p">==</span> <span class="n">y</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;x == y = &quot;</span> <span class="p">+</span> <span class="n">r</span><span class="p">);</span>
+            // Operador Relacional Igual
+            r = (x == y);
+            Console.WriteLine(&quot;x == y = &quot; + r);
 
-            <span class="c1">// Operador Relacional Diferente</span>
-            <span class="n">r</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span> <span class="p">!=</span> <span class="n">y</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;x != y = &quot;</span> <span class="p">+</span> <span class="n">r</span><span class="p">);</span>
+            // Operador Relacional Diferente
+            r = (x != y);
+            Console.WriteLine(&quot;x != y = &quot; + r);
 
-            <span class="c1">// Operador Relacional Maior</span>
-            <span class="n">r</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="n">y</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;x &gt; y = &quot;</span> <span class="p">+</span> <span class="n">r</span><span class="p">);</span>
+            // Operador Relacional Maior
+            r = (x &gt; y);
+            Console.WriteLine(&quot;x &gt; y = &quot; + r);
 
-            <span class="c1">// Operador Relacional Menor</span>
-            <span class="n">r</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="n">y</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;x &lt; y = &quot;</span> <span class="p">+</span> <span class="n">r</span><span class="p">);</span>
+            // Operador Relacional Menor
+            r = (x &lt; y);
+            Console.WriteLine(&quot;x &lt; y = &quot; + r);
 
-            <span class="c1">// Operador Relacional Maior ou Igual</span>
-            <span class="n">r</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;=</span> <span class="n">y</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;x &gt;= y = &quot;</span> <span class="p">+</span> <span class="n">r</span><span class="p">);</span>
+            // Operador Relacional Maior ou Igual
+            r = (x &gt;= y);
+            Console.WriteLine(&quot;x &gt;= y = &quot; + r);
 
-            <span class="c1">// Operador Relacional Menor ou Igual</span>
-            <span class="n">r</span> <span class="p">=</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;=</span> <span class="n">y</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;x &lt;= y = &quot;</span> <span class="p">+</span> <span class="n">r</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+            // Operador Relacional Menor ou Igual
+            r = (x &lt;= y);
+            Console.WriteLine(&quot;x &lt;= y = &quot; + r);
+        }
+    }
+}
+</pre>
 </div>
 
 				</div>

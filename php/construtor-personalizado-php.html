@@ -510,39 +510,41 @@ eXcript            </a>
 <div class="section" id="visibilidade-dos-construtores">
 <h2>VISIBILIDADE DOS CONSTRUTORES</h2>
 <p>Se a visibilidade de um construtor não for definida, assume-se que o mesmo é público. Temos que o funcionamento da visibilidade dos construtores é igual a visibilidade dos métodos.</p>
-<div class="highlight"><pre><span></span><span class="x">$p1 = new Pessoa(&quot;João&quot;);</span>
-</pre></div>
+<pre class="literal-block">
+$p1 = new Pessoa(&quot;João&quot;);
+</pre>
 <p>A utilização de construtores faz com que nossos objetos se tornem mais lógicos e acessíveis.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#CONSTRUTORES PERSONALIZADOS</span>
+<pre class="literal-block">
+#CONSTRUTORES PERSONALIZADOS
 
-<span class="x">class A{</span>
+class A{
 
-<span class="x">}</span>
+}
 
-<span class="x">class Pessoa{</span>
+class Pessoa{
 
-<span class="x">    public $a;</span>
+    public $a;
 
-<span class="x">    public $nome;</span>
-<span class="x">    public $idade = 0;</span>
+    public $nome;
+    public $idade = 0;
 
-<span class="x">    function __construct($nome, $idade){</span>
+    function __construct($nome, $idade){
 
-<span class="x">        $this -&gt; a = new A();</span>
+        $this -&gt; a = new A();
 
-<span class="x">        $this -&gt; nome = $nome;</span>
-<span class="x">        $this -&gt; idade = $idade;</span>
+        $this -&gt; nome = $nome;
+        $this -&gt; idade = $idade;
 
-<span class="x">    }</span>
+    }
 
-<span class="x">}</span>
+}
 
-<span class="x">$p1 = new Pessoa(&quot;eXcript&quot;, 2);</span>
-<span class="x">var_dump($p1);</span>
-</pre></div>
+$p1 = new Pessoa(&quot;eXcript&quot;, 2);
+var_dump($p1);
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

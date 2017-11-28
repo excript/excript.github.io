@@ -380,80 +380,86 @@ eXcript            </a>
 <h2>INTRODUÇÃO AOS OPERADORES <tt class="docutils literal">in</tt> e <tt class="docutils literal">not in</tt></h2>
 <p>O operador <tt class="docutils literal">in</tt> verifica se o operando a sua esquerda, está contido na lista a sua direita, da mesma forma que o operador <tt class="docutils literal">not in</tt> que verifica o contrário.</p>
 <p>Estes, são 2 operadores nativo para verificar se um determinado objeto está contido numa lista. A palavra <tt class="docutils literal">in</tt>, do Inglês, significa, &quot;contido em&quot;. Essa é uma maneira para simplificar a verificação se o elemento X está contido na lista Y.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; 2 in (1, 2, 3, 4, 5)
+</pre>
 <p>No código acima, perguntamos, com uso do operador <tt class="docutils literal">in</tt>, se o número 2 está contido na Tupla definida a direita do operador. No exemplo, definimos a Tupla no mesmo instânte em que estamos fazendo a verificação, porém, poderíamos ter trabalhado com o uso de referência.</p>
 <p>No código a seguir, estamos utilizando o operador <tt class="docutils literal">in</tt> numa tomada de decisão para verificarmos qual bloco de instrução deve ser executado.</p>
-<div class="highlight"><pre><span></span><span class="c1"># x = [1, 2, 3, 4, 5]</span>
-<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<pre class="literal-block">
+# x = [1, 2, 3, 4, 5]
+x = range(1,6)
 
-<span class="k">if</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Contido&quot;</span><span class="p">)</span>
-</pre></div>
+if 2 in x:
+    print(&quot;Contido&quot;)
+</pre>
 <p>No código acima, inicialmente, geramos uma sequência numérica com a função <tt class="docutils literal">range()</tt> e vinculamos a sequência retornada a variável de nome <tt class="docutils literal">x</tt>. Feito isso, com uso da instrução <tt class="docutils literal">if</tt>, verificamos se o elemento 2 está contido na sequência cuja referência é <tt class="docutils literal">x</tt>, caso a expressão seja verdadeira, o bloco seguinte será executado.</p>
 </div>
 <div class="section" id="estudando-algumas-situacoes">
 <h2>ESTUDANDO ALGUMAS SITUAÇÕES</h2>
 <p>Agora, vamos estudar uma maneira de verificarmos se um valor está contido numa lista ou então, se um conjunto de valores estão contidos. Para verificarmos se mais de um valor está contido, temos que utilizar os operadores <tt class="docutils literal">and</tt> e <tt class="docutils literal">or</tt>. Assim, conseguimos montar expressões como: se o <tt class="docutils literal">valor x</tt> e o <tt class="docutils literal">valor y</tt> estiverem contidos, então faça isso. Ou então, podemos utilizar o operador <tt class="docutils literal">or</tt>, logo, temos a seguinte expressão: se <tt class="docutils literal">x</tt> ou <tt class="docutils literal">y</tt> estiverem contidos, então, faça isso.</p>
 <p>Vamos estudar alguns exemplos para melhor entendermos.</p>
-<div class="highlight"><pre><span></span><span class="c1">#1 - True</span>
-<span class="mi">2</span> <span class="ow">and</span> <span class="mi">3</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-<span class="c1">#2 - False</span>
-<span class="mi">2</span> <span class="ow">and</span> <span class="mi">6</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-<span class="c1">#3 - False</span>
-<span class="p">((</span><span class="mi">1</span> <span class="ow">and</span> <span class="mi">6</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">5</span> <span class="ow">and</span> <span class="mi">6</span><span class="p">))</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-<span class="c1">#4 - True</span>
-<span class="p">((</span><span class="mi">1</span> <span class="ow">and</span> <span class="mi">6</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">5</span> <span class="ow">and</span> <span class="mi">6</span><span class="p">))</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-<span class="c1">#5 - False</span>
-<span class="p">(</span><span class="mi">10</span> <span class="ow">or</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-<span class="c1">#6 - True</span>
-<span class="p">(</span><span class="mi">2</span> <span class="ow">or</span> <span class="mi">10</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+#1 - True
+2 and 3 in range(1,6)
+#2 - False
+2 and 6 in range(1,6)
+#3 - False
+((1 and 6) or (5 and 6)) in range(1,6)
+#4 - True
+((1 and 6) or (5 and 6)) in range(1,6)
+#5 - False
+(10 or 2) in range(1,6)
+#6 - True
+(2 or 10) in range(1,6)
+</pre>
 <p>As 4 primeiras expressões são fáceis de entender, porém, as 2 últimas podem resultar um pouco de dúvidas. Isso porque, quando verificamos se o valor 10 ou o valor 2 estão contidos no intervalo de 1 à 5, o valor retornado será Falso. Porém, se invertermos os valores, perguntando se 2 ou 10 estão contidos, o valor lógico retornado será verdadeiro.</p>
 <p>A lógica por detrás dessas 2 expressões, encontra-se na maneira como o Python avalia as expressões. A regra é a seguinte: quando a primeira condição não satisfazer a expressão, interrompe-se a verificação das demais expressões. Logo, como o valor 10 não está contido, temos que a próxima expressão não será avaliada, até porque, a primeira retornou um valor lógico falso. Porém, o contrário é verdadeiro, até porque, a primeira expressão é verdadeira.</p>
 </div>
 <div class="section" id="caso-de-uso-especifico">
 <h2>CASO DE USO ESPECIFICO</h2>
 <p>Vamos analisar agora, uma situação interessante decorrente do do uso do operador <tt class="docutils literal">in</tt> que acabamos de estudar. Ao invés de escrevermos uma expressão que faz 3 comparações ligando-as com o Operador Lógico de conjunção <tt class="docutils literal">and</tt>, escreveremos utilizando o operador <tt class="docutils literal">in</tt>.</p>
-<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="n">c</span> <span class="o">=</span> <span class="mi">66</span>
+<pre class="literal-block">
+a = 10
+b = 25
+c = 66
 
-<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite um número: &quot;</span><span class="p">))</span>
-<span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">a</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="n">b</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="n">c</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Está contido&quot;</span><span class="p">)</span>
-</pre></div>
+x = int(input(&quot;Digite um número: &quot;))
+if(x == a or x == b or x == c):
+    print(&quot;Está contido&quot;)
+</pre>
 <p>No código acima, verificamos se o valor da variável <tt class="docutils literal">x</tt> é igual a variável <tt class="docutils literal">a</tt>, <tt class="docutils literal">b</tt> ou então, <tt class="docutils literal">c</tt>. Essa é uma maneira funcional e lógica, mas há uma forma mais elegante de dizer a mesma coisa.</p>
-<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="n">c</span> <span class="o">=</span> <span class="mi">66</span>
+<pre class="literal-block">
+a = 10
+b = 25
+c = 66
 
-<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite um número: &quot;</span><span class="p">))</span>
- <span class="c1"># if(x == a or x == b or x == c):</span>
-<span class="k">if</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">]):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Está contido.&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não está contido.&quot;</span><span class="p">)</span>
-</pre></div>
+x = int(input(&quot;Digite um número: &quot;))
+ # if(x == a or x == b or x == c):
+if(x in [a,b,c]):
+    print(&quot;Está contido.&quot;)
+else:
+    print(&quot;Não está contido.&quot;)
+</pre>
 <p>O código acima é semelhante ao que fizemos anteriormente, a diferença está, na tomada de decisão. Ao invés de verificarmos 3 condições, para sabermos se o valor de <tt class="docutils literal">x</tt> é igual a algum dos 3 valores pré-definido, perguntamos se o valor de <tt class="docutils literal">x</tt> está contido na lista formada pelos 3 valores possíveis.</p>
 <p>Observe que o retorno em ambas verificações será o mesmo, ainda que a expressão seja totalmente diferente.</p>
 </div>
 <div class="section" id="um-exemplo-mais-elaborado">
 <h2>UM EXEMPLO MAIS ELABORADO</h2>
 <p>Agora, vamos fazer um simples programa que declara uma lista onde cadas elemento é o nome de uma cor. Em seguida, pediremos para o usuário informar o nome de uma cor. Feito isso, guardamos numa variável a cor escolhida pelo usuário e então, verificaremos se a mesma está contida na nossa lista de cores. Caso esteja, imprimiremos uma frase na tela informando que a cor informada é válida, do contrário, imprimiremos uma outra frase, informando que a cor não é válida.</p>
-<div class="highlight"><pre><span></span><span class="n">cores</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;azul&quot;</span><span class="p">,</span><span class="s2">&quot;amarelo&quot;</span><span class="p">,</span><span class="s2">&quot;vermelho&quot;</span><span class="p">,</span><span class="s2">&quot;branco&quot;</span><span class="p">)</span>
+<pre class="literal-block">
+cores = (&quot;azul&quot;,&quot;amarelo&quot;,&quot;vermelho&quot;,&quot;branco&quot;)
 
-<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="n">valor</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite o nome de uma cor ou 0 para sair&quot;</span><span class="p">)</span>
+while True:
+    valor = input(&quot;Digite o nome de uma cor ou 0 para sair&quot;)
 
-    <span class="k">if</span> <span class="n">valor</span> <span class="o">==</span> <span class="s2">&quot;0&quot;</span><span class="p">:</span>
-        <span class="k">break</span>
+    if valor == &quot;0&quot;:
+        break
 
-    <span class="k">if</span> <span class="n">valor</span> <span class="ow">in</span> <span class="n">cores</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Essa cor está contida na lista!&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Essa cor NÃO está contida na lista!&quot;</span><span class="p">)</span>
-</pre></div>
+    if valor in cores:
+        print(&quot;Essa cor está contida na lista!&quot;)
+    else:
+        print(&quot;Essa cor NÃO está contida na lista!&quot;)
+</pre>
 <p>No código acima, inicialmente, declaramos uma Tupla e definimos 4 elementos do tipo <tt class="docutils literal">str</tt>, cada um com o nome de uma cor. Em seguida, criamos um laço de repetição infinito com a instrução <tt class="docutils literal">while</tt>.</p>
 <p>No bloco de código da instrução <tt class="docutils literal">while</tt>, inicialmente, pedimos para o usuário informar o nome de uma cor, em seguida, com uso da instrução <tt class="docutils literal">if</tt>, verificamos se a cor digitada é igual a letra &quot;0&quot;, caso seja, finalizamos o laços de repetição infinito, como também, será finalizado o programa.</p>
 <p>Na sequência, definimos outra Tomada de Decisão Simples, e verificamos se o valor contido na variável <tt class="docutils literal">valor</tt>, que sempre irá conter o valor digitado pelo usuário, é igual a algum valor contido na Tupla <tt class="docutils literal">cores</tt>. Se a expressão for verdadeira, imprimiremos uma mensagem para o usuário, do contrário, imprimiremos outra.</p>

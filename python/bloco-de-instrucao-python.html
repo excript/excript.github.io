@@ -394,17 +394,18 @@ eXcript            </a>
 <div class="section" id="definindo-blocos">
 <h2>DEFININDO BLOCOS</h2>
 <p>Vamos fazer um exemplo utilizando 2 blocos de instrução. O primeiro bloco estará rente a margem esquerda do vídeo, enquanto o segundo, estará 4 espaçamentos da margem.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Nível 0. Este código está rente a margem do vídeo.&quot;</span><span class="p">)</span>
+print(&quot;Nível 0. Este código está rente a margem do vídeo.&quot;)
 
-<span class="n">var</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="k">if</span><span class="p">(</span><span class="n">var</span> <span class="o">==</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Estamos no bloco 1, isto é, a 4 espaçamentos da margem.&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Essa é a segunda linha do bloco &#39;if&#39;. &quot;</span><span class="p">)</span>
+var = 10
+if(var == 10):
+    print(&quot;Estamos no bloco 1, isto é, a 4 espaçamentos da margem.&quot;)
+    print(&quot;Essa é a segunda linha do bloco 'if'. &quot;)
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Agora, voltamos para o bloco principal do programa.&quot;</span><span class="p">)</span>
-</pre></div>
+print(&quot;Agora, voltamos para o bloco principal do programa.&quot;)
+</pre>
 <p>No exemplo acima, utilizamos 2 blocos de instrução. O primeiro bloco, que podemos dizer, o bloco de instrução principal, é a indentação rente a margem esquerda, ou melhor, corresponde as linhas que não possuem indentação.</p>
 <p>O segundo bloco de instrução, é o bloco que está a 4 espaços da margem esquerda e este só será executado nas situações em que a instrução <tt class="docutils literal">if</tt> for verdadeira.</p>
 </div>
@@ -418,48 +419,50 @@ eXcript            </a>
 <p>Os blocos de instrução constroem hierarquias e estas, podem ser reconhecidas visualmente, até porque, níveis hierarquicos diferentes, estarão a distâncias diferentes da margem esquerda do editor.</p>
 <p>Todo bloco é único e será executado plenamente após o cursor iniciar sua execução. Nomes declarados dentro de blocos, serão desalocados da memória quando estes tiverem sua execução finalizada e, todo bloco contido dentro de outro, terá visibilidade restrita a todos os nomes ali definidos.</p>
 <p>A seguir, temos um código que exemplifica o uso de vários blocos de instrução.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="c1">#bloco 1</span>
-<span class="c1">#bloco 1</span>
-<span class="c1">#bloco 1</span>
-    <span class="c1">#bloco 2</span>
-    <span class="c1">#bloco 2</span>
-    <span class="c1">#bloco 2</span>
-        <span class="c1">#bloco 3</span>
-        <span class="c1">#bloco 3</span>
-        <span class="c1">#bloco 3</span>
-        <span class="c1">#bloco 3</span>
-    <span class="c1">#bloco 4</span>
-    <span class="c1">#bloco 4</span>
-    <span class="c1">#bloco 4</span>
-    <span class="c1">#bloco 4</span>
-<span class="c1">#bloco 1</span>
-<span class="c1">#bloco 1</span>
-<span class="c1">#bloco 1</span>
-</pre></div>
+#bloco 1
+#bloco 1
+#bloco 1
+    #bloco 2
+    #bloco 2
+    #bloco 2
+        #bloco 3
+        #bloco 3
+        #bloco 3
+        #bloco 3
+    #bloco 4
+    #bloco 4
+    #bloco 4
+    #bloco 4
+#bloco 1
+#bloco 1
+#bloco 1
+</pre>
 <p>No código acima, utilizamos 3 níveis hierarquicos, porém, utilizamos 4 blocos diferentes, mesmo que hierarquicamente, temos somente 3 níveis.</p>
 <p>O <strong>bloco 2</strong> e o <strong>bloco 4</strong> estão, hierarquicamente, no mesmo nível. Porém, após a execução do <strong>bloco 2</strong>, todos os <strong>nomes</strong> utilizados dentro deste serão desalocados da memória e assim, quando o <strong>bloco 4</strong> for executado, não será possível enxergar nomes utilizados no <strong>bloco 2</strong>!</p>
 <p>Todas as vezes que o cursor de execução do programa retorna um nível da hierarquia, ou seja, volta para o bloco de instrução que contém as instruções que estava sendo executadas, o bloco que estava sendo executado é desalocado, junto a todos os nome ali declarados.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
-<span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Imprime um texto&quot;</span><span class="p">)</span>
+<pre class="literal-block">
+#coding: utf-8
+if(True):
+  print(&quot;Imprime um texto&quot;)
 
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Imprime um texto&quot;</span><span class="p">)</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Imprime um texto&quot;</span><span class="p">)</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Imprime um texto&quot;</span><span class="p">)</span>
+  print(&quot;Imprime um texto&quot;)
+  print(&quot;Imprime um texto&quot;)
+  print(&quot;Imprime um texto&quot;)
 
 
-<span class="k">if</span><span class="p">(</span><span class="bp">False</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Não irá imprimir&quot;</span><span class="p">)</span>
-</pre></div>
+if(False):
+    print(&quot;Não irá imprimir&quot;)
+    print(&quot;Não irá imprimir&quot;)
+    print(&quot;Não irá imprimir&quot;)
+    print(&quot;Não irá imprimir&quot;)
+    print(&quot;Não irá imprimir&quot;)
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

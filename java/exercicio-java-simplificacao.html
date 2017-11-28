@@ -215,47 +215,50 @@ eXcript            </a>
 <p>Reescreva o código a seguir a fim de se utilizar o mínimo de linha possíveis:
 Nota(s):
 Amontoar linhas não soluciona o problema. O código a seguir não é simplificação e sim, confusão:</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Digite um número&quot;</span><span class="o">);</span>
-</pre></div>
+<pre class="literal-block">
+int x = 0; x = System.out.println(&quot;Digite um número&quot;);
+</pre>
 <p>Escreva de forma tal a utilizar somente 4 linhas</p>
-<div class="highlight"><pre><span></span><span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+<pre class="literal-block">
+Scanner in = new Scanner(System.in);
 
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Simplificando expressões para reduzir o número de linhas&quot;</span><span class="o">);</span>
-     <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-     <span class="n">x</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-     <span class="k">if</span><span class="o">(</span><span class="n">x</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="mi">10</span><span class="o">){</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;O número digitado é maior do que 10&quot;</span><span class="o">);</span>
-<span class="o">}</span><span class="k">else</span><span class="o">{</span>
-      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;O número digitado é menor do que 10&quot;</span><span class="o">);</span>
-<span class="o">}</span>
-</pre></div>
+System.out.println(&quot;Simplificando expressões para reduzir o número de linhas&quot;);
+     int x = 0;
+     x = in.nextInt();
+     if(x &amp;gt; 10){
+      System.out.println(&quot;O número digitado é maior do que 10&quot;);
+}else{
+      System.out.println(&quot;O número digitado é menor do que 10&quot;);
+}
+</pre>
 </div>
 <div class="section" id="exercicio-resolvido">
 <h2>EXERCÍCIO RESOLVIDO</h2>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+<pre class="literal-block">
+import java.util.Scanner;
 
-<span class="cm">/**</span>
-<span class="cm"> * ====================================</span>
-<span class="cm"> *           eXcript.com</span>
-<span class="cm"> *          fb.com/eXcript</span>
-<span class="cm"> * ====================================</span>
-<span class="cm"> */</span>
+/**
+ * ====================================
+ *           eXcript.com
+ *          fb.com/eXcript
+ * ====================================
+ */
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">J0110</span> <span class="o">{</span>
+public class J0110 {
 
-    <span class="c1">//Simplificação</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">//Scanner in = new Scanner(System.in);</span>
+    //Simplificação
+    public static void main(String[] args) {
+        //Scanner in = new Scanner(System.in);
 
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Simplificando expressões para reduzir o número de linhas&quot;</span><span class="o">);</span>
-        <span class="c1">//int x = new Scanner(System.in).nextInt();</span>
-        <span class="c1">//String s = (new Scanner(System.in).nextInt() &gt; 10) ? &quot;maior&quot;:&quot;menor&quot;;</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;O número digitado é &quot;</span><span class="o">+</span>
-            <span class="o">((</span><span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">).</span><span class="na">nextInt</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="o">)</span> <span class="o">?</span> <span class="s">&quot;maior&quot;</span><span class="o">:</span><span class="s">&quot;menor&quot;</span><span class="o">)</span> <span class="o">+</span>
-                <span class="s">&quot; do que 10&quot;</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
+        System.out.println(&quot;Simplificando expressões para reduzir o número de linhas&quot;);
+        //int x = new Scanner(System.in).nextInt();
+        //String s = (new Scanner(System.in).nextInt() &gt; 10) ? &quot;maior&quot;:&quot;menor&quot;;
+        System.out.println(&quot;O número digitado é &quot;+
+            ((new Scanner(System.in).nextInt() &gt; 10) ? &quot;maior&quot;:&quot;menor&quot;) +
+                &quot; do que 10&quot;);
+    }
+}
+</pre>
 </div>
 
 				</div>

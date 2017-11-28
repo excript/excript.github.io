@@ -501,15 +501,17 @@ eXcript            </a>
 <p>Arrays associativos são estruturas onde cada elemento é identificado por uma chave única, entao, é indiferente se estamos trabalhando com Arrays Indexados ou Arrays Multidimensionais, ambos serão por definição, estruturas associativas.</p>
 <p>As estruturas Associativas do PHP podem vincular qualquer tipo de informação, seja ela um objeto, uma estrutura binária, um Array Multidimensional ou mesmo uma simples string contendo uma URL.</p>
 <p>Os Arrays podem conter chaves e valores dos mais variados tipos numa mesma estrutura, até porque, não existe Arrays tipados. Todas as estruturas são pode definição heterogeneas.</p>
-<div class="highlight"><pre><span></span><span class="x">$pontos = array(&quot;Zé&quot;=&gt;&quot;11&quot;, &quot;José&quot;=&gt;&quot;4&quot;, &quot;Zéca&quot;=&gt;&quot;22&quot;);</span>
-</pre></div>
+<pre class="literal-block">
+$pontos = array(&quot;Zé&quot;=&gt;&quot;11&quot;, &quot;José&quot;=&gt;&quot;4&quot;, &quot;Zéca&quot;=&gt;&quot;22&quot;);
+</pre>
 <p>No código acima criamos um Array Associativo e vinculamos ao nome de cada participante de um jogo a sua pontuação. Como visto, construimos uma lista vinculando valores inteiros a uma String.</p>
-<div class="highlight"><pre><span></span><span class="x">$pontos = array(&quot;Zé&quot;=&gt;&quot;11&quot;, &quot;José&quot;=&gt;&quot;4&quot;, &quot;Zéca&quot;=&gt;&quot;22&quot;);</span>
+<pre class="literal-block">
+$pontos = array(&quot;Zé&quot;=&gt;&quot;11&quot;, &quot;José&quot;=&gt;&quot;4&quot;, &quot;Zéca&quot;=&gt;&quot;22&quot;);
 
-<span class="x">echo &quot;Pontos do Zé: &quot;.$pontos[&quot;Zé&quot;].&quot;&lt;br/&gt;&quot;;</span>
-<span class="x">echo &quot;Pontos do José: &quot;.$pontos[&quot;José&quot;].&quot;&lt;br/&gt;&quot;;</span>
-<span class="x">echo &quot;Pontos do  Zéca: &quot;.$pontos[&quot;Zéca&quot;].&quot;&lt;br/&gt;&quot;;</span>
-</pre></div>
+echo &quot;Pontos do Zé: &quot;.$pontos[&quot;Zé&quot;].&quot;&lt;br/&gt;&quot;;
+echo &quot;Pontos do José: &quot;.$pontos[&quot;José&quot;].&quot;&lt;br/&gt;&quot;;
+echo &quot;Pontos do  Zéca: &quot;.$pontos[&quot;Zéca&quot;].&quot;&lt;br/&gt;&quot;;
+</pre>
 </div>
 <div class="section" id="alterando-valores-em-estruturas-associativas">
 <h2>ALTERANDO VALORES EM ESTRUTURAS ASSOCIATIVAS</h2>
@@ -519,27 +521,29 @@ eXcript            </a>
 <div class="section" id="listas-associativas-heterogeneas">
 <h2>LISTAS ASSOCIATIVAS HETEROGENEAS</h2>
 <p>Uma lista heterogenea seria algo do gênero:</p>
-<div class="highlight"><pre><span></span><span class="x">$pontos = array(</span>
-<span class="x">    &quot;url&quot;=&gt;&quot;excript.com/&quot;,</span>
-<span class="x">    404=&gt;&quot;excript.com/error/&quot;,</span>
-<span class="x">    301=&gt;&quot;excript.com/error301/&quot;,</span>
-<span class="x">);</span>
-</pre></div>
+<pre class="literal-block">
+$pontos = array(
+    &quot;url&quot;=&gt;&quot;excript.com/&quot;,
+    404=&gt;&quot;excript.com/error/&quot;,
+    301=&gt;&quot;excript.com/error301/&quot;,
+);
+</pre>
 <p>Na estrutura acima vinculamos inicialmente uma String a outra String. Em seguida, definimos 2 outros itens e a estes vinculamos um Inteiro a String.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#ARRAYS ASSOCIATIVOS</span>
+<pre class="literal-block">
+#ARRAYS ASSOCIATIVOS
 
-<span class="x">$pontos = [&quot;Zé&quot;=&gt;11, &quot;José&quot;=&gt;4, &quot;Zéca&quot;=&gt;22];</span>
+$pontos = [&quot;Zé&quot;=&gt;11, &quot;José&quot;=&gt;4, &quot;Zéca&quot;=&gt;22];
 
-<span class="x">echo &quot;Zé: &quot; . $pontos[&quot;Zé&quot;] . &quot;\n&quot;;</span>
-<span class="x">echo &quot;José: &quot; . $pontos[&quot;José&quot;] . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Zéca: &quot; . $pontos[&quot;Zéca&quot;] . &quot;\n&quot;;</span>
+echo &quot;Zé: &quot; . $pontos[&quot;Zé&quot;] . &quot;\n&quot;;
+echo &quot;José: &quot; . $pontos[&quot;José&quot;] . &quot;\n&quot;;
+echo &quot;Zéca: &quot; . $pontos[&quot;Zéca&quot;] . &quot;\n&quot;;
 
-<span class="x">$pontos[&quot;Zéca&quot;] += 1;</span>
-<span class="x">echo $pontos[&quot;Zéca&quot;];</span>
-</pre></div>
+$pontos[&quot;Zéca&quot;] += 1;
+echo $pontos[&quot;Zéca&quot;];
+</pre>
 </div>
 
 				</div>

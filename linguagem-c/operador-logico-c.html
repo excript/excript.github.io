@@ -309,51 +309,52 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;conio.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;conio.h&gt;
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+//  ==========                 ==========
+//  ========== www.eXcript.com ==========
+//  ==========                 ==========
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="c1">//&amp;&amp;</span>
-    <span class="c1">//(true)&amp;&amp;(true)</span>
+int main()
+{
+    //&amp;&amp;
+    //(true)&amp;&amp;(true)
 
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">condicao</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">20</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">);</span>
+    int i = 40;
+    int condicao = (i&gt;20)&amp;&amp;(i&lt;100);
 
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="n">condicao</span> <span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">!</span><span class="n">condicao</span> <span class="p">);</span>
+    printf(&quot;%i&quot;, condicao );
+    printf(&quot;%i&quot;, !condicao );
 
-    <span class="c1">//||</span>
-    <span class="c1">//(true)||(false)   -&gt; 1 ok</span>
-    <span class="c1">//(false)||(true)   -&gt; 1 ok</span>
-    <span class="c1">//(true)||(true)    -&gt; 1 ok</span>
-    <span class="c1">//(false)||(false)  -&gt; 0</span>
+    //||
+    //(true)||(false)   -&gt; 1 ok
+    //(false)||(true)   -&gt; 1 ok
+    //(true)||(true)    -&gt; 1 ok
+    //(false)||(false)  -&gt; 0
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;cls&quot;</span><span class="p">);</span>
+    system(&quot;cls&quot;);
 
-    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">cond</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    int x = 10;
+    int cond = 0;
 
-    <span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">10</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="n">cond</span> <span class="p">);</span>
+    cond = (x==10)||(x&lt;1);
+    printf( &quot;%i&quot;, cond );
 
-    <span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="n">x</span><span class="o">!=</span><span class="mi">1000</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="n">cond</span> <span class="p">);</span>
+    cond = (x==0)||(x!=1000);
+    printf( &quot;%i&quot;, cond );
 
-    <span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">10</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="n">x</span><span class="o">!=</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="n">cond</span> <span class="p">);</span>
+    cond = (x==10)||(x!=0);
+    printf( &quot;%i&quot;, cond );
 
-    <span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">!=</span><span class="mi">10</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="n">cond</span> <span class="p">);</span>
+    cond = (x!=10)||(x==0);
+    printf( &quot;%i&quot;, cond );
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

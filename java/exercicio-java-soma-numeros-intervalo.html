@@ -216,57 +216,58 @@ eXcript            </a>
 </div>
 <div class="section" id="exercicio-resolvido">
 <h2>EXERCÍCIO RESOLVIDO</h2>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+<pre class="literal-block">
+import java.util.Scanner;
 
-<span class="cm">/**</span>
-<span class="cm"> * ====================================</span>
-<span class="cm"> *           eXcript.com</span>
-<span class="cm"> *          fb.com/eXcript</span>
-<span class="cm"> * ====================================</span>
-<span class="cm"> */</span>
+/**
+ * ====================================
+ *           eXcript.com
+ *          fb.com/eXcript
+ * ====================================
+ */
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">J1003</span> <span class="o">{</span>
+public class J1003 {
 
-    <span class="c1">//Soma de todos os números de um intervalo</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">//Criamos uma nova instancia da classe Scanner</span>
-        <span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
-        <span class="c1">//Imprimimos a frase pedindo o inicio do intervalo</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Informe o início do intevalo: &quot;</span><span class="o">);</span>
-        <span class="c1">//Capturamos o inicio do intervalo</span>
-        <span class="kt">int</span> <span class="n">ini</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-        <span class="c1">//Imprimimos a frase pedindo o término do intervalo</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Informe o final do intervalo: &quot;</span><span class="o">);</span>
-        <span class="c1">//Capturamos o término do intervalo</span>
-        <span class="kt">int</span> <span class="n">fim</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+    //Soma de todos os números de um intervalo
+    public static void main(String[] args) {
+        //Criamos uma nova instancia da classe Scanner
+        Scanner in = new Scanner(System.in);
+        //Imprimimos a frase pedindo o inicio do intervalo
+        System.out.println(&quot;Informe o início do intevalo: &quot;);
+        //Capturamos o inicio do intervalo
+        int ini = in.nextInt();
+        //Imprimimos a frase pedindo o término do intervalo
+        System.out.println(&quot;Informe o final do intervalo: &quot;);
+        //Capturamos o término do intervalo
+        int fim = in.nextInt();
 
-        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">ini</span><span class="o">;</span>
-        <span class="kt">int</span> <span class="n">soma</span> <span class="o">=</span> <span class="n">ini</span><span class="o">;</span>
-        <span class="c1">//1..5</span>
-        <span class="k">while</span><span class="o">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">fim</span><span class="o">){</span>
-            <span class="n">i</span><span class="o">++;</span>
-            <span class="n">soma</span><span class="o">+=</span><span class="n">i</span><span class="o">;</span>
-            <span class="c1">//soma = soma + i;</span>
-        <span class="o">}</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">soma</span><span class="o">);</span>
-<span class="cm">/*i    = 1</span>
-<span class="cm">  ini  = 1</span>
-<span class="cm">  soma = 1</span>
-<span class="cm">  fim  = 5</span>
-<span class="cm">     - --- ---</span>
-<span class="cm">  | variável.......|   i    |     soma    | soma + i      | fim   |</span>
-<span class="cm">  | valor inicial..|   1    |       1     |   1  + 1      |  5    |</span>
-<span class="cm">  | expressão......| i=i+1  | soma=soma+i |               |       |</span>
-<span class="cm">  | -- ||-|---|---|</span>
-<span class="cm">  |1 ciclo(i&lt;5)....|  i=1   | soma=1      |   1  + 2 = 3  |    5  |</span>
-<span class="cm">  |2 ciclo(i&lt;5)....|  i=2   | soma=3      |   3  + 3 = 6  |    5  |</span>
-<span class="cm">  |3 ciclo(i&lt;5)....|  i=3   | soma=6      |   6  + 4 = 10 |    5  |</span>
-<span class="cm">  |4 ciclo(i&lt;5)....|  i=4   | soma=10     |   10 + 5 = 15 |    5  |</span>
-<span class="cm">     - --- --- */</span>
+        int i = ini;
+        int soma = ini;
+        //1..5
+        while(i&lt;fim){
+            i++;
+            soma+=i;
+            //soma = soma + i;
+        }
+        System.out.println(soma);
+/*i    = 1
+  ini  = 1
+  soma = 1
+  fim  = 5
+     - --- ---
+  | variável.......|   i    |     soma    | soma + i      | fim   |
+  | valor inicial..|   1    |       1     |   1  + 1      |  5    |
+  | expressão......| i=i+1  | soma=soma+i |               |       |
+  | -- ||-|---|---|
+  |1 ciclo(i&lt;5)....|  i=1   | soma=1      |   1  + 2 = 3  |    5  |
+  |2 ciclo(i&lt;5)....|  i=2   | soma=3      |   3  + 3 = 6  |    5  |
+  |3 ciclo(i&lt;5)....|  i=3   | soma=6      |   6  + 4 = 10 |    5  |
+  |4 ciclo(i&lt;5)....|  i=4   | soma=10     |   10 + 5 = 15 |    5  |
+     - --- --- */
 
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
+    }
+}
+</pre>
 </div>
 
 				</div>

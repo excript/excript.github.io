@@ -498,56 +498,57 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#VERIFICA SE A ESTRUTURA É UMA ARRAY</span>
+<pre class="literal-block">
+#VERIFICA SE A ESTRUTURA É UMA ARRAY
 
-<span class="x">echo &quot;FUNÇÃO: is_array() - &quot; . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = [] - &quot; . is_array( [] ) . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = array() - &quot; . is_array( array() ) . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = [1,2,3] - &quot; . is_array( [1,2,3] ) . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = 1 - &quot; . is_array( 1 ) . &quot;\n&quot;;</span>
-<span class="x">echo  &quot;\n&quot;;</span>
+echo &quot;FUNÇÃO: is_array() - &quot; . &quot;\n&quot;;
+echo &quot;Valor = [] - &quot; . is_array( [] ) . &quot;\n&quot;;
+echo &quot;Valor = array() - &quot; . is_array( array() ) . &quot;\n&quot;;
+echo &quot;Valor = [1,2,3] - &quot; . is_array( [1,2,3] ) . &quot;\n&quot;;
+echo &quot;Valor = 1 - &quot; . is_array( 1 ) . &quot;\n&quot;;
+echo  &quot;\n&quot;;
 
-<span class="x">#RETORNA A QUANTIDADE DE ELEMENTOS</span>
-<span class="x">echo &quot;FUNÇÃO: count() &quot; . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = [1,2,3,4] - &quot; . count( [1,2,3,4] ) . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = range(0,1000) - &quot; . count( range(0,1000) ) . &quot;\n&quot;;</span>
+#RETORNA A QUANTIDADE DE ELEMENTOS
+echo &quot;FUNÇÃO: count() &quot; . &quot;\n&quot;;
+echo &quot;Valor = [1,2,3,4] - &quot; . count( [1,2,3,4] ) . &quot;\n&quot;;
+echo &quot;Valor = range(0,1000) - &quot; . count( range(0,1000) ) . &quot;\n&quot;;
 
-<span class="x">echo &quot;\n&quot;;</span>
-<span class="x">#VERIFICA SE UM ELEMENTO ESTÁ CONTIDO</span>
-<span class="x">echo &quot;FUNÇÃO: in_array(valor, array)&quot; .  &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = in_array(2, [1,2,3,4,5]) - &quot; . in_array(2, [1,2,3,4,5]) . &quot;\n&quot;;</span>
-<span class="x">echo &quot;Valor = in_array(6, [1,2,3,4,5]) - &quot; . in_array(6, [1,2,3,4,5]) . &quot;\n&quot;;</span>
+echo &quot;\n&quot;;
+#VERIFICA SE UM ELEMENTO ESTÁ CONTIDO
+echo &quot;FUNÇÃO: in_array(valor, array)&quot; .  &quot;\n&quot;;
+echo &quot;Valor = in_array(2, [1,2,3,4,5]) - &quot; . in_array(2, [1,2,3,4,5]) . &quot;\n&quot;;
+echo &quot;Valor = in_array(6, [1,2,3,4,5]) - &quot; . in_array(6, [1,2,3,4,5]) . &quot;\n&quot;;
 
-<span class="x">echo &quot;\n&quot;;</span>
+echo &quot;\n&quot;;
 
-<span class="x">#ORDENAÇÃO</span>
-<span class="x">echo &quot;FUNÇÃO: sort()\n&quot;;</span>
-<span class="x">$arr = [&quot;c&quot;, &quot;a&quot;, &quot;b&quot;, &quot;f&quot;];</span>
-<span class="x">sort($arr);</span>
-<span class="x">print_r($arr);</span>
+#ORDENAÇÃO
+echo &quot;FUNÇÃO: sort()\n&quot;;
+$arr = [&quot;c&quot;, &quot;a&quot;, &quot;b&quot;, &quot;f&quot;];
+sort($arr);
+print_r($arr);
 
-<span class="x">#INVERSÃO</span>
-<span class="x">echo &quot;FUNÇÃO: array_reverse\n&quot;;</span>
-<span class="x">$arr = [1, 2, 3, 4];</span>
-<span class="x">$arr = array_reverse($arr);</span>
-<span class="x">print_r($arr);</span>
+#INVERSÃO
+echo &quot;FUNÇÃO: array_reverse\n&quot;;
+$arr = [1, 2, 3, 4];
+$arr = array_reverse($arr);
+print_r($arr);
 
-<span class="x">echo &quot;\n&quot;;</span>
+echo &quot;\n&quot;;
 
-<span class="x">#SOMA</span>
-<span class="x">echo &quot;FUNÇÃO: array_sum()\n&quot;;</span>
-<span class="x">$arr = [1, 2, 3, 4];</span>
-<span class="x">echo &quot;A soma é: &quot; . array_sum($arr);</span>
+#SOMA
+echo &quot;FUNÇÃO: array_sum()\n&quot;;
+$arr = [1, 2, 3, 4];
+echo &quot;A soma é: &quot; . array_sum($arr);
 
-<span class="x">echo &quot;\n&quot;;</span>
-<span class="x">echo &quot;\n&quot;;</span>
-<span class="x">#JUNÇÃO DE ARRAYS</span>
-<span class="x">echo &quot;FUNÇÃO: array_merge()\n&quot;;</span>
-<span class="x">$arr1 = [1, 2];</span>
-<span class="x">$arr2 = [&quot;a&quot;, &quot;b&quot;];</span>
-<span class="x">$x = array_merge($arr1, $arr2);</span>
-<span class="x">print_r($x);</span>
-</pre></div>
+echo &quot;\n&quot;;
+echo &quot;\n&quot;;
+#JUNÇÃO DE ARRAYS
+echo &quot;FUNÇÃO: array_merge()\n&quot;;
+$arr1 = [1, 2];
+$arr2 = [&quot;a&quot;, &quot;b&quot;];
+$x = array_merge($arr1, $arr2);
+print_r($x);
+</pre>
 </div>
 
 				</div>

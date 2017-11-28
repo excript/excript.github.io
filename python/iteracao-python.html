@@ -403,13 +403,14 @@ beltrano
 <div class="section" id="exemplo-utilizando-python">
 <h2>EXEMPLO UTILIZANDO PYTHON</h2>
 <p>No código a seguir, temos um exemplo utilizando a estrutura de repetição <tt class="docutils literal">while</tt>, que numa tradução livre, significa, <tt class="docutils literal">enquanto</tt>.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span><span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-    <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
+num = 0
+while(num &lt; 10):
+    print(num)
+    num += 1
+</pre>
 <p>O código acima, inicialmente declara uma variável de nome <code>num</code> e inicializa-a com o valor literal <code>0</code> . Em seguida, com a instrução <code>while</code> é definido uma Estrutura de Repetição e essa será repetida enquanto a condição definida entre parêntesis, no cabeçalho da estrutura <code>while</code> for verdadeiro.</p>
 <p>É importante observar, que a condição definida no cabeçalho da estrutura <code>while</code> só deixará de ser verdadeira, porque o valor da variável <code>num</code> é incrementado toda vez que o bloco de instrução é executado, do contrário, teríamos um laço de repetição infinito e que faria o nosso programar travar, congelar - entrar em looping!</p>
 </div>
@@ -418,37 +419,39 @@ beltrano
 <p>A forma mais primitiva que as linguagens de programação dispunham para a repetição de um mesmo bloco se dava com o uso das instruções <code>goto</code>, que numa tradução livre significa algo como <tt class="docutils literal">vá para</tt>.</p>
 <p>Algumas linguagens obrigava-nos a definir o número da linha para qual desejamos saltar, outras, permitiam a definição de <code>label</code>, isto é, nomes, para então, com a instrução <code>goto</code>, pularmos para a linha de um respectivo <code>label</code>.</p>
 <p>Desta forma, se desejassemos repetir um mesmo bloco, tínhamos que <strong>pular</strong> para o início do <code>label</code> e assim, repetir as instrução enquanto fosse necessário, por exemplo.</p>
-<div class="highlight"><pre><span></span><span class="n">label</span> <span class="n">REPETIÇÃO</span><span class="p">:</span>
-    <span class="n">linha1</span><span class="p">;</span>
-    <span class="n">linha2</span><span class="p">;</span>
-    <span class="n">linha3</span><span class="p">;</span>
+<pre class="literal-block">
+label REPETIÇÃO:
+    linha1;
+    linha2;
+    linha3;
 
-    <span class="n">SE</span> <span class="p">(</span><span class="n">TRUE</span><span class="p">)</span>
-        <span class="n">goto</span> <span class="n">REPETICAO</span><span class="p">;</span>
-    <span class="n">SENÃO</span>
-        <span class="n">instrucao</span>
-</pre></div>
+    SE (TRUE)
+        goto REPETICAO;
+    SENÃO
+        instrucao
+</pre>
 <p>No código acima, um pouco escrito em Português e outra parte em Inglês, temos como as 3 últimas linhas de código, uma estrutura de seleção, onde uma condição é verificada e, caso a expressão seja verdadeira, o cursos de execução do programa saltará para linha onde o <code>label</code> está declarado. Do contrário, o bloco <code>SENÃO</code> é executado e a execução seguirá normalmente.</p>
 </div>
 <div class="section" id="a-recursividade-como-laco-de-repeticao">
 <h2>A RECURSIVIDADE COMO LAÇO DE REPETIÇÃO</h2>
 <p>Recursividade significa a invocação de uma função por ela mesma, ou seja, é toda função que invoca a si mesma. Essa é uma prática perigosa de trabalho e que pode facilmente travar nossos programas, ou então, estourar a pilha de execução, isto é, podemos obter o famoso erro <tt class="docutils literal">stack overflow error</tt> que, nada mais é do que o limite máximo de vezes que uma função pode chamar a si mesma.</p>
 <p>A seguir, temos um exemplo em Português, onde trabalhamos com o conceito de recursividade.</p>
-<div class="highlight"><pre><span></span><span class="n">func</span> <span class="n">minhaFunção</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+<pre class="literal-block">
+func minhaFunção(val):
 
-    <span class="n">linha</span> <span class="mi">1</span>
-    <span class="n">linha</span> <span class="mi">2</span>
-    <span class="n">linha</span> <span class="mi">3</span>
+    linha 1
+    linha 2
+    linha 3
 
-    <span class="n">val</span> <span class="o">=</span> <span class="n">val</span> <span class="o">+</span> <span class="mi">1</span>
+    val = val + 1
 
-    <span class="n">SE</span><span class="p">(</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">):</span>
-        <span class="n">minhaFunção</span><span class="p">(</span> <span class="n">val</span> <span class="p">)</span>
-    <span class="n">SENÃO</span><span class="p">:</span>
-        <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    SE( val &lt; 10 ):
+        minhaFunção( val )
+    SENÃO:
+        exit(0)
 
-<span class="n">minhaFunção</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
+minhaFunção(0)
+</pre>
 <p>No código acima, definimos uma função de nome <code>minhaFunção()</code> e estamos invocando-a na última linha do código, ou seja, estamos invocando a função após a sua definição.</p>
 <p>A partir do momento que invocamos a função <code>minhaFunção()</code>, estamos também, enviando como argumento um valor literal inteiro igual a <code>0</code> . Esse valor é recebido como parâmetro pelo argumento <code>val</code>. Agora, estando dentro da função, algumas linhas são executadas, e então, a variável <code>val</code> recebe o valor dela mesma, acrescido de 1 unidade.</p>
 <p>Feito isso, uma condição é verificada e, caso o valor da variável <code>val</code> seja menor do que o valor inteiro literal <code>10</code>, o bloco de instrução verdadeiro será executado, e este, contém uma única instrução que invoca a função novamente passando como parâmetro o valor contido na variável <code>val</code>.</p>
@@ -477,17 +480,18 @@ beltrano
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="c1">#=====================================</span>
-<span class="c1">#========== www.eXcript.com ==========</span>
-<span class="c1">#=====================================</span>
+#=====================================
+#========== www.eXcript.com ==========
+#=====================================
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
+x = 0
+while(x&lt;=10):
+    print(x)
+    x += 1
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

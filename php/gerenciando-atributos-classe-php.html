@@ -514,33 +514,34 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#GERENCIANDO PROPRIEDADES</span>
+<pre class="literal-block">
+#GERENCIANDO PROPRIEDADES
 
-<span class="x">class Pessoa{</span>
+class Pessoa{
 
-<span class="x">    public $idade = 0;</span>
+    public $idade = 0;
 
-<span class="x">    public function get_idade(){</span>
-<span class="x">        return $this -&gt; idade;</span>
-<span class="x">    }</span>
+    public function get_idade(){
+        return $this -&gt; idade;
+    }
 
-<span class="x">    public function set_idade($idade){</span>
-<span class="x">        if($idade &gt; 0){</span>
-<span class="x">            $this-&gt;idade = $idade;</span>
-<span class="x">        }else{</span>
-<span class="x">            echo &quot;A idade informada é inválida.&quot;;</span>
-<span class="x">        }</span>
-<span class="x">    }</span>
-<span class="x">//    get - pegar</span>
-<span class="x">//    set - definir, atribuir a, setar</span>
+    public function set_idade($idade){
+        if($idade &gt; 0){
+            $this-&gt;idade = $idade;
+        }else{
+            echo &quot;A idade informada é inválida.&quot;;
+        }
+    }
+//    get - pegar
+//    set - definir, atribuir a, setar
 
-<span class="x">}</span>
+}
 
-<span class="x">$p1 = new Pessoa();</span>
-<span class="x">$p1 -&gt; set_idade(22);</span>
-<span class="x">$p1 -&gt; set_idade(-5);</span>
-<span class="x">echo &quot;A idade é: {$p1-&gt;get_idade()}&quot;;</span>
-</pre></div>
+$p1 = new Pessoa();
+$p1 -&gt; set_idade(22);
+$p1 -&gt; set_idade(-5);
+echo &quot;A idade é: {$p1-&gt;get_idade()}&quot;;
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

@@ -360,41 +360,42 @@ Para isso, dividimos o número por 100 e o resultado será igual a um caso o nú
 Ou seja, essa é mais uma situação onde podemos utilizar essa propriedade matemática.</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+/*====================================
+*           eXcript.com
+*          fb.com/eXcript
+* ====================================*/
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+int main() {
 
-    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">;</span>
-    <span class="n">num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="n">num2</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    int a = 5 / 2;
+    int num1, num2;
+    num1 = 10;
+    num2 = 3;
 
-    <span class="kt">int</span> <span class="n">div</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">resto</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">%</span> <span class="n">num2</span><span class="p">;</span>
+    int div = num1 / num2;
+    int resto = num1 % num2;
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;A divisa de num1 por num2 e igual a: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">div</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;A divisao de num1 por num2 tem resto: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">resto</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    cout &lt;&lt; &quot;A divisa de num1 por num2 e igual a: &quot; &lt;&lt; div &lt;&lt; endl;
+    cout &lt;&lt; &quot;A divisao de num1 por num2 tem resto: &quot; &lt;&lt; resto &lt;&lt; endl;
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O modulo entre 3 e 2 e: &quot;</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O modulo entre 4 e 2 e: &quot;</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O modulo entre 5 e 2 e: &quot;</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O modulo entre 6 e 2 e: &quot;</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    cout &lt;&lt; &quot;O modulo entre 3 e 2 e: &quot; &lt;&lt; 3 % 2 &lt;&lt; endl;
+    cout &lt;&lt; &quot;O modulo entre 4 e 2 e: &quot; &lt;&lt; 4 % 2 &lt;&lt; endl;
+    cout &lt;&lt; &quot;O modulo entre 5 e 2 e: &quot; &lt;&lt; 5 % 2 &lt;&lt; endl;
+    cout &lt;&lt; &quot;O modulo entre 6 e 2 e: &quot; &lt;&lt; 6 % 2 &lt;&lt; endl;
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">10</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">9</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    cout &lt;&lt; 10 % 2 &lt;&lt; endl;
+    cout &lt;&lt; 9 % 2 &lt;&lt; endl;
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    system(&quot;pause&quot;);
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

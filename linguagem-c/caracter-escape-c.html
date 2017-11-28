@@ -339,47 +339,50 @@ eXcript            </a>
 <div class="section" id="estudo-de-caso-pratico">
 <h2>ESTUDO DE CASO PRÁTICO</h2>
 <p>Vamos supor que queiramos imprimir um texto onde uma parte estará numa linha e a outra parte, na linha seguinte. No código a seguir, estamos supondo a situação utilizando um código que possui erro.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Fala,</span>
-<span class="n">galera</span><span class="p">.</span><span class="s">&quot;);</span>
-<span class="p">}</span>
-</pre></div>
+int main() {
+    printf(&quot;Fala,
+galera.&quot;);
+}
+</pre>
 <p>O código acima, simplesmente quebrou a expressão, o que não é permitido pela Linguagem C.</p>
 <p>A solução para o código do exemplo anterior, é a utilização de um <tt class="docutils literal">Caractere de Escape</tt> <tt class="docutils literal">NewLine</tt> representado pela notação <tt class="docutils literal">\n</tt>. Assim, corrigindo o exemplo anterior, teríamos um código em que a primeira parte seria impresso numa linha, enquanto a segunda, na linha seguinte.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Fala, </span><span class="se">\n</span><span class="s">galera.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+int main() {
+    printf(&quot;Fala, \ngalera.&quot;);
+}
+</pre>
 <p>Observe no código acima, que o Caractere de Escape n está junto a palavra <tt class="docutils literal">galera</tt>, porém o mesmo, será interpretado pela compilador e então, uma quebra de linha será adicionada.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+//  ==========                 ==========
+//  ========== www.eXcript.com ==========
+//  ==========                 ==========
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="cm">/*</span>
-<span class="cm">        1) \n -&gt; quebramos uma linha</span>
-<span class="cm">        2) \t -&gt; dar um tab no momento em que estamo imprimindo</span>
-<span class="cm">        3) \\ -&gt; para imprimir uma barra invertida</span>
-<span class="cm">        4) \&quot; -&gt; para imprimir uma aspa duplas</span>
-<span class="cm">        5) \&#39; -&gt; para imprimir uma aspa simples</span>
-<span class="cm">        6) \0 -&gt; aqui finaliza o nosso texto</span>
-<span class="cm">    */</span>
+int main()
+{
+    /*
+        1) \n -&gt; quebramos uma linha
+        2) \t -&gt; dar um tab no momento em que estamo imprimindo
+        3) \\ -&gt; para imprimir uma barra invertida
+        4) \&quot; -&gt; para imprimir uma aspa duplas
+        5) \' -&gt; para imprimir uma aspa simples
+        6) \0 -&gt; aqui finaliza o nosso texto
+    */
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    return 0;
 
-<span class="p">}</span>
-</pre></div>
+}
+</pre>
 <!-- dd https://en.wikipedia.org/wiki/Escape_sequences_in_C -->
 </div>
 

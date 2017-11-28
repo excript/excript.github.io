@@ -386,18 +386,20 @@ eXcript            </a>
 <p>A <tt class="docutils literal">Atribuição de Valores</tt> é a passagem de informação a determinada variável. Toda variável, por sua definição, pode receber valores ou então, pode ter seu valor alterado, como estudado anteriormente nas aulas <a class="reference external" href="http://excript.com/python/variavel-em-python.html">Variáveis em Python</a> e <a class="reference external" href="http://excript.com/python/caracteristicas-das-variaveis-python.html">Características das Variáveis em Python</a> . Nesse primeiro momento, estudaremos a atribuição simples, isto é, a forma comum de atribuição.</p>
 <p>A linguagem Python tem definido que o sinal que conhecemos pelo nome de igual ( <strong>=</strong> ) será o operador de atribuição. Desta forma, iremos construir expressões compostas de 2 partes, ou melhor que estarão em um dos dois lados do operador de atribuição: do lado esquerdo e do lado direito.</p>
 <p>A parte ao lado esquerdo do operador de atribuição <strong>sempre</strong> receberá o valor definido no lado direito do operador. Assim, é uma norma da linguagem que o lado esquerdo possua uma referência que possa ter seu valor alterado, enquanto que do lado direito, haja algum valor a ser atribuido à referência ao lado esquerdo.</p>
-<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">variável</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">operador</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">variável</span><span class="o">&gt;</span>      <span class="o">=</span>     <span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span>
-<span class="n">numero</span>          <span class="o">=</span>     <span class="mi">10</span>
-</pre></div>
+<pre class="literal-block">
+&lt;variável&gt; [operador] &lt;valor&gt;
+&lt;variável&gt;      =     &lt;valor&gt;
+numero          =     10
+</pre>
 <p>No trecho de código acima podemos ver como ocorre a passagem de valores e o uso do operador de atribuição na prática.</p>
 <p>A notação para atribuição de valores define que a variável que receberá o valor estará do lado esquerdo do sinal de atribuição <tt class="docutils literal">=</tt>, enquanto o valor a ser atribuido, estara do lado direito. Assim, <strong>é correto afirmar</strong> que a atribuição de valores sempre seguira o sentido da direita para a esquerda.</p>
 <p>No código a seguir, temos mais um exemplo onde declaramos variáveis e já atribuimos um valor às mesmas.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="n">num</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">txt</span> <span class="o">=</span> <span class="s2">&quot;texto&quot;</span>
-</pre></div>
+num = 10
+txt = &quot;texto&quot;
+</pre>
 <p>No código acima, declaramos 2 variáveis, a primeira de nome <tt class="docutils literal">num</tt> e a segunda de nome <tt class="docutils literal">txt</tt>. Ambas foram declaradas e receberam um valor inicial. O valor inicialmente atribuido irá definir o <tt class="docutils literal">tipo</tt> da variável, de modo a impedir que a mesma receba valores de outro tipo durante toda a execução do Script.</p>
 </div>
 <div class="section" id="atribuicao-simples-a-varias-variaveis">
@@ -406,11 +408,12 @@ eXcript            </a>
 <p>A notação de atribuição simples do Python nos permite atribuir a várias variáveis um mesmo valor numa mesma expressão. Para isso, devemos separar as variáveis que receberam o mesmo valor com vírgulas.</p>
 <p>No geral, as regras da atribuição estudas funcionam da mesma forma.</p>
 <p>No código abaixo, estamos realizando outra atribuição simples, porém, utilizando um notação diferente.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<pre class="literal-block">
+#coding: utf-8
 
-<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span>
-</pre></div>
+a = 1
+b, c = 2
+</pre>
 <p>No código acima, declaramos 3 variáveis. A primeira, chamamos de <tt class="docutils literal">a</tt> e atribuimos o valor 1. A segunda e a terceira, chamamos de <tt class="docutils literal">b</tt> e <tt class="docutils literal">c</tt>, separando-as por vírgula e iniciando-as com o valor igual a 2.</p>
 <p>Podemos iniciar mais de uma variável numa mesma atribuição, ou então, em outras palavras, podemos atribuir valores a várias variáveis ao mesmo tempo e a notação utilizada nessas 2 situações foi a mesma, salvo o uso da vírgula na separação da primeira e da segunda variável que receberão um novo valor.</p>
 </div>

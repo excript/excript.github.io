@@ -387,55 +387,63 @@ Vamos deixar o compilador padrão e então pressionamos o botão <tt class="docu
 <h2>O CÓDIGO</h2>
 <p>Agora, vamos escrever, linha por linha o nosso programa e vamos estudando o que está sendo programado.</p>
 <p>A primeira linha que vamos escrever é para inclui uma biblioteca em nosso programa. Bibliotecas contém Classes, funções, constantes e muitos outros códigos. Todo programa que desenvolvermos iremos utilizar diversas bibliotecas.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-</pre></div>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+</pre>
 <p>No trecho de código acima, estamos incluindo o arquivo <code>&lt;iostream&gt;</code>. A instrução <code>#include</code>, que em Português significa incluir, diz para o C++ importar o arquivo cujo nome está a sua frente. Nesse momento não estudaremos a inclusão de arquivos e bibliotecas, porém, tenha em mente que dessa forma, estaremos utilizando um conjunto de códigos fornecido por padrão pela biblioteca do C++.</p>
 <p>Feito isso, vamos definir um namespace para não precisar a todo momento se referir ao mesmo.</p>
-<div class="highlight"><pre><span></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-</pre></div>
+<pre class="literal-block">
+using namespace std;
+</pre>
 <p>Na linha de código acima, utilizamos a instrução <code>using</code>, que em Português significa utilizar, dizendo ao C++ que iremos fazer uso de um <code>namespace</code> de nome <code>std</code>.</p>
 <p>Um <code>namespace</code> é semelhante ao <tt class="docutils literal">PATH</tt> de arquivo, ou seja, cada arquivo em nossa estrutura de pastas possui uma <tt class="docutils literal">PATH</tt> que o identifica, por exemplo: <tt class="docutils literal"><span class="pre">C:\pasta1\arquivoX.ext</span></tt>, como podemos ver, temos um arquivo de nome <tt class="docutils literal">arquivoX.ext</tt> cujo <tt class="docutils literal">PATH</tt> é <tt class="docutils literal"><span class="pre">C:\pasta1\</span></tt>. O funcionamento do <tt class="docutils literal">PATH</tt> do arquivo é a <code>namespace</code> num código C++. Porém, uma namespace não é necessariamente um caminho para um arquivo, as vezes, o namespace é o caminho mais o nome da classe em C++.</p>
 <p>Revisando. A instrução <code>using</code> diz que iremos utilizar uma <code>namespace</code> de nome <code>std</code>. O nome <code>std</code> vem de standard, que significa em Português, padrão. Ou seja, estamos dizendo que iremos utilizar a classe de nome <code>std</code>.</p>
 <p>Agora, vamos definir o nome da função que <strong>TODO</strong> programa em C++ deve ter. Em outras palavras, temos que toda aplicação escrita em C++ é iniciada pela função de nome <code>main()</code>, como podemos ver no código a seguir:</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
+<pre class="literal-block">
+int main()
+{
 
-<span class="p">}</span>
-</pre></div>
+}
+</pre>
 <p>A palavra <code>int</code> a frente do nome da função principal, diz que a mesma pode retornar um valor do tipo inteiro. Iremos estudar melhor o tipo <code>int</code> nas próximas aulas.</p>
 <p>Após definirmos o nome da função, utilizamos um par de parêntesis. Em seguida, utilizamos o caractere chave de abertura e fechamento.</p>
 <p>Nesse momento, o que talvez seja de maior importancia, é saber que o código do nosso programa deverá estar entre o par de chaves. Todo par de chaves é chamado de <tt class="docutils literal">Bloco de Instrução</tt>, ou seja, um bloco que contém várias instrução dizendo o que deve ser feito.</p>
 <p>Feito isso, vamos escrever a instrução C++ que de fato, imprimirá a frase Ola Mundo no Console.</p>
-<div class="highlight"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Ola Mundo!&quot;</span><span class="p">;</span>
-</pre></div>
+<pre class="literal-block">
+cout &lt;&lt; &quot;Ola Mundo!&quot;;
+</pre>
 <p>Na linha acima, estamos utilizando o objeto <code>cout</code>, que é um acrônimo de <tt class="docutils literal">Console Output</tt>, que em Português significa, saída padrão, em seguida, utilizamos o operador de inserção <code>&lt;&lt;</code> dizendo que o texto a direita deve ser &quot;inserido&quot; no objeto <code>cout</code>. Essa é a forma para escrevermos caracteres na tela.</p>
-<div class="highlight"><pre><span></span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-</pre></div>
+<pre class="literal-block">
+system(&quot;pause&quot;);
+</pre>
 <p>A linha acima diz para a aplicação ter a sua execução pausada. Se não mandarmos a aplicação parar, a mesma imprimiria caracteres na tela, em seguida finalizaria e a janela seria fechado, ou seja, não seria possível ver o que foi impresso no <tt class="docutils literal">Console</tt>.</p>
 <p>Para utilizarmos a instrução acima que manda a aplicação pausar antes de finalizar, será necessário importar a biblioteca de nome <code>stdlib.h</code>. Para isso, vá abaixo da linha <code>#include &lt;iostream&gt;</code> e digite:</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-</pre></div>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
+</pre>
 <p>Agora, estamos importando 2 bibliotecas no nosso programa.</p>
 <p>Por fim, temos:</p>
-<div class="highlight"><pre><span></span><span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
+<pre class="literal-block">
+return 0;
+</pre>
 <p>A última instrução retorna o número zero. Desta forma, estamos finalizando a nossa aplicação e retornado o código 0, dizendo para o SO que a aplicação finalizou normalmente.</p>
 <p>Poderíamos, por exemplo, retornar um número que diz ao sistema operacional que ocorreu um erro e o código do erro é o número retornado pela nossa aplicação. Atualmente, essa funcionalidade entrou em desuso, então, tenha em mente que em 99% das vezes retornaremos o código zero e em seguida a aplicação será finalizada.</p>
 <p>A seguir, temos o código completo da nossa aplicação.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Ola Mundo!&quot;</span><span class="p">;</span>
+int main()
+{
+    cout &lt;&lt; &quot;Ola Mundo!&quot;;
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">)</span>
+    system(&quot;pause&quot;)
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    return 0;
 
-<span class="p">}</span>
-</pre></div>
+}
+</pre>
 <p>Agora, basta executarmos a nossa aplicação. No Code::Blocks, pra você rodar o programa, é necessário pressionar o botão verde, conforme está destacado na imagem a seguir:</p>
 <img alt="Botão Run para executar o programa" src="../images/curso-cpp/codeblocks-run-button.png" />
 <p>A primeira vez em que executarmos nossa aplicação, será perguntado se desejamos construir o nosso programa. Essa é uma mensagem padrão dizendo que os arquivos binários serão gerados e o arquivo executavel gerado.</p>

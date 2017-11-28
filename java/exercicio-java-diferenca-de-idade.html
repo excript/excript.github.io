@@ -213,43 +213,45 @@ eXcript            </a>
 <div class="section" id="exercicio">
 <h2>EXERCÍCIO</h2>
 <p>Escreva um pequeno software que peça a sua idade e a idade da sua mãe. Em seguida, imprima na tela as 3 informações a seguir:</p>
-<div class="highlight"><pre><span></span><span class="n">a</span> <span class="n">sua</span> <span class="n">idade</span>
-<span class="n">a</span> <span class="n">idade</span> <span class="n">da</span> <span class="n">sua</span> <span class="n">mãe</span>
-<span class="n">minha</span> <span class="n">mãe</span> <span class="n">é</span> <span class="o">&lt;</span><span class="n">anos</span><span class="o">&gt;</span> <span class="n">mais</span> <span class="n">velha</span> <span class="k">do</span> <span class="n">que</span> <span class="n">eu</span>
-</pre></div>
+<pre class="literal-block">
+a sua idade
+a idade da sua mãe
+minha mãe é &lt;anos&gt; mais velha do que eu
+</pre>
 <p>Nota(s):
 substitua o texto &lt;anos&gt; pela diferença entre a sua idade e a de sua mãe.</p>
 </div>
 <div class="section" id="exercicio-resolvido">
 <h2>EXERCÍCIO RESOLVIDO</h2>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
-<span class="cm">/**</span>
-<span class="cm"> * ====================================</span>
-<span class="cm"> *           eXcript.com</span>
-<span class="cm"> *          fb.com/eXcript</span>
-<span class="cm"> * ====================================</span>
-<span class="cm"> */</span>
+<pre class="literal-block">
+import java.util.Scanner;
+/**
+ * ====================================
+ *           eXcript.com
+ *          fb.com/eXcript
+ * ====================================
+ */
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">J0100</span> <span class="o">{</span>
+public class J0100 {
 
-    <span class="c1">//Diferença de idade</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    //Diferença de idade
+    public static void main(String[] args) {
 
-        <span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+        Scanner in = new Scanner(System.in);
 
-        <span class="c1">// 1) é obter a idade do nosso do usuário</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Digite a sua idade: &quot;</span><span class="o">);</span>
-        <span class="kt">int</span> <span class="n">idadeUsu</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-        <span class="c1">// 2) é obter a idade da mãe do nosso usuário</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Informe a idade da sua mãe: &quot;</span><span class="o">);</span>
-        <span class="kt">int</span> <span class="n">idadeMae</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-        <span class="c1">// 3) subtrair a idade da mãe pela idade do usuário</span>
-        <span class="kt">int</span> <span class="n">diff</span> <span class="o">=</span> <span class="n">idadeMae</span> <span class="o">-</span> <span class="n">idadeUsu</span><span class="o">;</span>
-        <span class="c1">// 4) é imprimir o texto e substituir a tag &lt;anos&gt;</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&quot;Minha mãe é %d anos mais velha do que eu!&quot;</span><span class="o">,</span> <span class="n">diff</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
+        // 1) é obter a idade do nosso do usuário
+        System.out.println(&quot;Digite a sua idade: &quot;);
+        int idadeUsu = in.nextInt();
+        // 2) é obter a idade da mãe do nosso usuário
+        System.out.println(&quot;Informe a idade da sua mãe: &quot;);
+        int idadeMae = in.nextInt();
+        // 3) subtrair a idade da mãe pela idade do usuário
+        int diff = idadeMae - idadeUsu;
+        // 4) é imprimir o texto e substituir a tag &lt;anos&gt;
+        System.out.printf(&quot;Minha mãe é %d anos mais velha do que eu!&quot;, diff);
+    }
+}
+</pre>
 </div>
 
 				</div>

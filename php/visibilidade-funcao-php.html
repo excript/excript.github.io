@@ -506,43 +506,44 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x"># VISIBILIDADE DAS FUNÇÕES</span>
+<pre class="literal-block">
+# VISIBILIDADE DAS FUNÇÕES
 
-<span class="x">class SuperClasse{</span>
+class SuperClasse{
 
-<span class="x">    public $uuu;</span>
+    public $uuu;
 
-<span class="x">    public function funcPublica(){ echo &quot;funcPublica\n&quot;; }</span>
-<span class="x">    protected function funcProtegida(){ echo &quot;funcProtegida\n&quot;; }</span>
-<span class="x">    private function funcPrivada(){ echo &quot;funcPrivada\n&quot;; }</span>
+    public function funcPublica(){ echo &quot;funcPublica\n&quot;; }
+    protected function funcProtegida(){ echo &quot;funcProtegida\n&quot;; }
+    private function funcPrivada(){ echo &quot;funcPrivada\n&quot;; }
 
-<span class="x">    function super(){</span>
-<span class="x">        $this-&gt;funcPublica();</span>
-<span class="x">        $this-&gt;funcProtegida();</span>
-<span class="x">        $this-&gt;funcPrivada();</span>
-<span class="x">    }</span>
+    function super(){
+        $this-&gt;funcPublica();
+        $this-&gt;funcProtegida();
+        $this-&gt;funcPrivada();
+    }
 
-<span class="x">}</span>
+}
 
-<span class="x">$super = new SuperClasse();</span>
-<span class="x">//$super-&gt;super();</span>
-<span class="x">$super-&gt;funcPublica();</span>
-<span class="x">//$super-&gt;funcProtegida();</span>
-<span class="x">//$super-&gt;funcPrivada();</span>
+$super = new SuperClasse();
+//$super-&gt;super();
+$super-&gt;funcPublica();
+//$super-&gt;funcProtegida();
+//$super-&gt;funcPrivada();
 
-<span class="x">class SubClasse extends SuperClasse{</span>
+class SubClasse extends SuperClasse{
 
-<span class="x">    function __construct(){</span>
+    function __construct(){
 
-<span class="x">        $this-&gt;funcPublica();</span>
-<span class="x">        $this-&gt;funcProtegida();</span>
-<span class="x">//        $this-&gt;funcPrivada();</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+        $this-&gt;funcPublica();
+        $this-&gt;funcProtegida();
+//        $this-&gt;funcPrivada();
+    }
+}
 
-<span class="x">$sub = new SubClasse();</span>
-<span class="x">$sub-&gt;funcPublica();</span>
-</pre></div>
+$sub = new SubClasse();
+$sub-&gt;funcPublica();
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

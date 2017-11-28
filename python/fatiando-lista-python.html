@@ -386,10 +386,11 @@ eXcript            </a>
 <p>Para extrairmos um conjunto de elemento de uma lista, utilizamos inicialmente, a mesma notação utilizada para a obtenção de um único elemento, porém, ao invés de definirmos somente o elemento que desejamos, informaremos agora, o intervalo desejado.</p>
 <p>É importante observar que a notação de fatiamento é uma evolução da notação de obtenção de um único elemento, a diferença está somente na adição de alguns caracteres.</p>
 <p>Para retornarmos uma elemento de uma lista, devemos passar entre colchete, qual o índice do elemento. No fatiamento, adicionaremos 2 informações, o índice do primeiro e do último elemento a ser extraído, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
-<span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; A = ['a', 'b', 'c', 'd', 'e']
+&gt;&gt;&gt; A[2:4]
+['c', 'd', 'e']
+</pre>
 <p>No código acima, definimos uma referência <code>A</code> e atribuimos a esta uma lista contendo 5 elementos. Em seguida, utilizamos a referência seguida por um par de colchetes <code>[]</code> e dentro deste, definimos dois números que foram separados pelo caractere <code>:</code>.</p>
 <p>Então, a notação que devemos utilizar no fatiamento de listas é a seguinte:</p>
 <blockquote>
@@ -404,10 +405,11 @@ referência[ &lt;inicio&gt; : &lt;fim&gt; ]</blockquote>
 referência[ &lt;inicio&gt; : &lt;fim&gt; : &lt;intervalo&gt; ]</blockquote>
 <p>Na notação acima, a única novidade a utilização do sinal de <tt class="docutils literal">:</tt> e a definição do intervalo propriamente dito.</p>
 <p>A seguir, vamos definir uma lista e extrair desta uma lista onde os elementos tenham um intervalo pré-definido.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">X</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; X = [1,2,3,4,5,6,7,8,9,10]
+&gt;&gt;&gt; X[::2]
+[1, 3, 5, 7, 9]
+</pre>
 <p>Observe no código acima que não definimos o intervalo inicial e final, até porque, queríamos trabalhar com todos os elementos definidos em <tt class="docutils literal">X</tt>. Porém, poderíamos ter definido inicialmente o fatiamento e a notação final seria praticamente a mesma.</p>
 </div>
 

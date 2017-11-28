@@ -356,49 +356,51 @@ eXcript            </a>
 <h2>LAÇO DE REPETIÇÃO</h2>
 <p>A instrução <cite>while</cite> funciona de maneira semelhante a instrução <cite>for</cite>. A diferença é que com a instrução <cite>while</cite> nós conseguimos construir laços de repetição indefinidos ou então, laços que sejam executados enquanto uma condição for verdadeira.</p>
 <p>Por exemplo, a seguir, o bloco de instrução será repetido até que a condição definida no cabeçalho da estrutura deixe de ser verdadeiro:</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">x</span><span class="o">++</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+<pre class="literal-block">
+int x = 0;
+while(x != 1000)
+{
+    x++;
+    printf(x);
+}
+</pre>
 <p>Assim, nós temos que a cada laço a variável <cite>x</cite> será incrementada em uma unidade e em seguida, ira imprimir na tela o valor da variável <cite>x</cite>.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+/*====================================
+*           eXcript.com
+*          fb.com/eXcript
+* ====================================*/
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+int main() {
 
-    <span class="c1">//Imprimindo os números de 0 até 99</span>
-    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">while</span><span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">){</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">num</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="c1">//        num = num + 1;</span>
-<span class="c1">//        num += 1;</span>
-        <span class="n">num</span><span class="o">++</span><span class="p">;</span>
-    <span class="p">}</span>
+    //Imprimindo os números de 0 até 99
+    int num = 0;
+    while(num &lt; 100){
+        cout &lt;&lt; num &lt;&lt; endl;
+//        num = num + 1;
+//        num += 1;
+        num++;
+    }
 
-    <span class="c1">//Imprimindo os números de 99 até 0</span>
-    <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-    <span class="k">while</span><span class="p">(</span><span class="n">num2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">num2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-        <span class="n">num2</span><span class="o">--</span><span class="p">;</span>
-    <span class="p">}</span>
+    //Imprimindo os números de 99 até 0
+    int num2 = 100;
+    while(num2 &gt; 0){
+        cout &lt;&lt; num2 &lt;&lt; endl;
+        num2--;
+    }
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    system(&quot;pause&quot;);
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

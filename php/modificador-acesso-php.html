@@ -530,34 +530,35 @@ private. - restring o acesso a classe em que esta contido</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x"># MODIFICADORES DE ACESSO I - public e private</span>
+<pre class="literal-block">
+# MODIFICADORES DE ACESSO I - public e private
 
-<span class="x">class SuperClasse{</span>
-<span class="x">    public $publico = 0;</span>
-<span class="x">    private $privada = 0;</span>
-<span class="x">    protected $protegido = 0;</span>
-<span class="x">    public function super(){</span>
-<span class="x">        echo $this-&gt;publico;</span>
-<span class="x">        echo $this-&gt;privada;</span>
-<span class="x">        echo $this-&gt;protegido;</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+class SuperClasse{
+    public $publico = 0;
+    private $privada = 0;
+    protected $protegido = 0;
+    public function super(){
+        echo $this-&gt;publico;
+        echo $this-&gt;privada;
+        echo $this-&gt;protegido;
+    }
+}
 
-<span class="x">class SubClasse extends SuperClasse{</span>
-<span class="x">    public $publico;</span>
-<span class="x">    private $privada;</span>
-<span class="x">    protected $protegido;</span>
-<span class="x">    public function sub(int $x){</span>
-<span class="x">        $this-&gt;publico = $x;</span>
-<span class="x">        $this-&gt;privada = $x;</span>
-<span class="x">        $this-&gt;protegido = $x;</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+class SubClasse extends SuperClasse{
+    public $publico;
+    private $privada;
+    protected $protegido;
+    public function sub(int $x){
+        $this-&gt;publico = $x;
+        $this-&gt;privada = $x;
+        $this-&gt;protegido = $x;
+    }
+}
 
-<span class="x">$sub = new SubClasse();</span>
-<span class="x">$sub-&gt;sub(1);</span>
-<span class="x">$sub-&gt;super();</span>
-</pre></div>
+$sub = new SubClasse();
+$sub-&gt;sub(1);
+$sub-&gt;super();
+</pre>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

@@ -508,53 +508,57 @@ eXcript            </a>
 <div class="section" id="operador-null-coalesce">
 <h2>OPERADOR NULL COALESCE</h2>
 <p>O operador Null Coalesce é representado pela linguagem PHP com a utilização de dois sinais de interrogação, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="x">&lt; variável &gt; = &lt; valor &gt; ?? &lt; há valor definido? Senão retorna isso &gt;;</span>
-<span class="x">$x = $a ?? 10;</span>
-</pre></div>
+<pre class="literal-block">
+&lt; variável &gt; = &lt; valor &gt; ?? &lt; há valor definido? Senão retorna isso &gt;;
+$x = $a ?? 10;
+</pre>
 <p>Se a variável <code>$a</code> existir, o valor da mesma será definido para <code>$x</code>, do contrário, o número 10 é que será utilizado.</p>
 <p>É comum a necessidade de verificarmos se um determinado valor está condito num Array e então, fazer uso do mesmo. Atualmente, é necessário o uso de uma condição para averiguar que o item existe, ou então, verificar que a variável é diferente de Null, para que somente então, possamos fazer uso da mesma. Até porque, se utilizarmos uma variável que contém Null é será levantado uma exceção e o Script terá sua execução interrompida.</p>
 <p>O operador <tt class="docutils literal">Null Coalesce</tt> veio para agilizar essa constante necessidade de verificação e utilização do valor contido no item ou variável checado.</p>
 <p>A sintaxe do operador Null Coalesce é bastante semelhante a sintaxe do Operador Ternário, porém, com este operador, é verificado se a referência existe ou então, se um elemento esta contido num Array. Caso o valor exista, o mesmo será utilizado, do contrário, iremos definir algum outro valor ou então, alguma outra verificação.</p>
 <p>É interessante observar que o operador Null Coalesce fornece uma estrutura para checagem e utilização, porém, é possível continuarmos trabalhando sem fazer uso do mesmo.</p>
 <p>A seguir utilizamos algumas estruturas e também, a estrutura do operador Null Coalesce.</p>
-<div class="highlight"><pre><span></span><span class="x">#operador ternário</span>
-<span class="x">echo $x ? $x : &quot;&quot;;</span>
+<pre class="literal-block">
+#operador ternário
+echo $x ? $x : &quot;&quot;;
 
-<span class="x">echo $x ?: &quot;&quot;;</span>
+echo $x ?: &quot;&quot;;
 
-<span class="x">#operador Null Coalesce</span>
-<span class="x">echo $x ?? &quot;&quot;;</span>
-<span class="x">echo $x ?? $b ?? &quot;&quot;;</span>
-</pre></div>
+#operador Null Coalesce
+echo $x ?? &quot;&quot;;
+echo $x ?? $b ?? &quot;&quot;;
+</pre>
 <p>No exemplo  seguir, utilizamos o operador Null Coalesce para definir o que será impresso na saída padrão.</p>
-<div class="highlight"><pre><span></span><span class="x">// $a não está definido</span>
-<span class="x">$b = 10;</span>
+<pre class="literal-block">
+// $a não está definido
+$b = 10;
 
-<span class="x">echo $a ?? 2; // saída 2</span>
-<span class="x">echo $a ?? $b ?? 7; // saída 10</span>
-</pre></div>
+echo $a ?? 2; // saída 2
+echo $a ?? $b ?? 7; // saída 10
+</pre>
 <p>No exemplo acima, inicialmente definimos à variável <code>$b</code> o valor 10. Em seguida, mandamos imprimir na saída padrão o valor contido da varável <code>$a</code>, que não foi por nós definida, ou então, algum outro valor.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">$quadrado = function($num){</span>
-<span class="x">    return $num * $num;</span>
-<span class="x">};</span>
-<span class="x">$cubo = function($num) use ($quadrado){</span>
-<span class="x">    return $quadrado($num) * $num;</span>
-<span class="x">};</span>
-<span class="x">$soma = function($num){</span>
-<span class="x">    return $num + $num;</span>
-<span class="x">};</span>
+<pre class="literal-block">
+$quadrado = function($num){
+    return $num * $num;
+};
+$cubo = function($num) use ($quadrado){
+    return $quadrado($num) * $num;
+};
+$soma = function($num){
+    return $num + $num;
+};
 
-<span class="x">function processa_lista($lista, $func){</span>
-<span class="x">    foreach($lista as &amp;$item)</span>
-<span class="x">        $item = $func($item);</span>
-<span class="x">    return $lista;</span>
-<span class="x">}</span>
+function processa_lista($lista, $func){
+    foreach($lista as &amp;$item)
+        $item = $func($item);
+    return $lista;
+}
 
-<span class="x">print_r(processa_lista(range(1, 10), $soma));</span>
-</pre></div>
+print_r(processa_lista(range(1, 10), $soma));
+</pre>
 </div>
 
 				</div>

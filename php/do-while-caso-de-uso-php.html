@@ -498,59 +498,60 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
-<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
+<pre class="literal-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
 
-<span class="x">&lt;head&gt;</span>
-<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
-<span class="x">    &lt;title&gt;Estrutura DO-WHILE - caso de uso - Curso PHP - eXcript&lt;/title&gt;</span>
-<span class="x">&lt;/head&gt;</span>
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Estrutura DO-WHILE - caso de uso - Curso PHP - eXcript&lt;/title&gt;
+&lt;/head&gt;
 
-<span class="x">&lt;body&gt;</span>
+&lt;body&gt;
 
-<span class="x">    </span><span class="cp">&lt;?php</span>
-    <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$_REQUEST</span><span class="p">);</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;dependentes&quot;</span><span class="p">])){</span>
-        <span class="nv">$dependentes</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;dependentes&quot;</span><span class="p">];</span>
-        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">is_numeric</span><span class="p">(</span><span class="nv">$dependentes</span><span class="p">)){</span>
-            <span class="nv">$dependentes</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="k">echo</span> <span class="s2">&quot;não numérico&quot;</span><span class="p">;</span>
-        <span class="p">}</span>
+    &lt;?php
+    var_dump($_REQUEST);
+    if(isset($_POST[&quot;dependentes&quot;])){
+        $dependentes = $_POST[&quot;dependentes&quot;];
+        if(!is_numeric($dependentes)){
+            $dependentes = 1;
+            echo &quot;não numérico&quot;;
+        }
 
-        <span class="nv">$conta</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        $conta = 0;
 
-        <span class="k">echo</span> <span class="s2">&quot;</span>
-<span class="s2">        &lt;table border=&#39;1&#39;&gt;</span>
-<span class="s2">            &lt;tr&gt;</span>
-<span class="s2">                &lt;th&gt;&lt;/th&gt;</span>
-<span class="s2">                &lt;th&gt;Nome&lt;/th&gt;</span>
-<span class="s2">                &lt;th&gt;Nasc&lt;/th&gt;</span>
-<span class="s2">            &lt;/tr&gt;&quot;</span><span class="p">;</span>
+        echo &quot;
+        &lt;table border='1'&gt;
+            &lt;tr&gt;
+                &lt;th&gt;&lt;/th&gt;
+                &lt;th&gt;Nome&lt;/th&gt;
+                &lt;th&gt;Nasc&lt;/th&gt;
+            &lt;/tr&gt;&quot;;
 
-        <span class="k">do</span><span class="p">{</span>
-            <span class="nv">$conta</span> <span class="o">=</span> <span class="nv">$conta</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="k">echo</span> <span class="s2">&quot;</span>
-<span class="s2">            &lt;tr&gt;</span>
-<span class="s2">                &lt;td&gt;Dependente </span><span class="si">$conta</span><span class="s2">&lt;/td&gt;</span>
-<span class="s2">                &lt;td&gt;&lt;input type=&#39;text&#39; name=&#39;nome&#39; &gt;&lt;/td&gt;</span>
-<span class="s2">                &lt;td&gt;&lt;input type=&#39;text&#39; name=&#39;nasc&#39; &gt;&lt;/td&gt;</span>
-<span class="s2">            &lt;/tr&gt;&quot;</span><span class="p">;</span>
+        do{
+            $conta = $conta + 1;
+            echo &quot;
+            &lt;tr&gt;
+                &lt;td&gt;Dependente $conta&lt;/td&gt;
+                &lt;td&gt;&lt;input type='text' name='nome' &gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input type='text' name='nasc' &gt;&lt;/td&gt;
+            &lt;/tr&gt;&quot;;
 
-        <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="nv">$conta</span><span class="o">&lt;</span><span class="nv">$dependentes</span><span class="p">);</span>
+        }while($conta&lt;$dependentes);
 
-        <span class="k">echo</span> <span class="s2">&quot;&lt;/table&gt;&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="cp">?&gt;</span><span class="x"></span>
+        echo &quot;&lt;/table&gt;&quot;;
+    }
+    ?&gt;
 
-<span class="x">    &lt;form method=&quot;post&quot;&gt;</span>
-<span class="x">        &lt;input type=&quot;text&quot; name=&quot;dependentes&quot; &gt;</span>
-<span class="x">        &lt;input type=&quot;submit&quot;&gt;</span>
-<span class="x">    &lt;/form&gt;</span>
+    &lt;form method=&quot;post&quot;&gt;
+        &lt;input type=&quot;text&quot; name=&quot;dependentes&quot; &gt;
+        &lt;input type=&quot;submit&quot;&gt;
+    &lt;/form&gt;
 
-<span class="x">&lt;/body&gt;</span>
+&lt;/body&gt;
 
-<span class="x">&lt;/html&gt;</span>
-</pre></div>
+&lt;/html&gt;
+</pre>
 </div>
 
 				</div>

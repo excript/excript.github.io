@@ -359,8 +359,9 @@ eXcript            </a>
 <h2>ESTRUTURA <tt class="docutils literal">FOR</tt></h2>
 <p>O laço de repetição for é considerado uma estrutura de repetição completa. Isso porque, em seu cabeçalho somos capazes de declarar uma variável, estabelecer uma condição e incrementar ou decrementar valores a uma determinada variável.</p>
 <p>A seguir temos a estrutura for dividida em suas 3 partes:</p>
-<div class="highlight"><pre><span></span><span class="k">for</span><span class="p">([</span><span class="n">variável</span><span class="p">];</span> <span class="p">[</span><span class="n">condição</span><span class="p">];</span> <span class="p">[</span><span class="n">incremento</span><span class="p">])</span>
-</pre></div>
+<pre class="literal-block">
+for([variável]; [condição]; [incremento])
+</pre>
 <p>Cada parte da estrutura for é finalizada com um ponto-e-vírgula, salvo a última parte.</p>
 <dl class="docutils">
 <dt>variável</dt>
@@ -374,66 +375,70 @@ eXcript            </a>
 <div class="section" id="exemplo-1">
 <h2>EXEMPLO 1</h2>
 <p>Vamos implementar um laço de repetição com a estrutura for que imprima os números de 0 até 10 na tela.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="p">}</span>
+int main() {
+    for(int n = 0; n &lt;= 9; n++){
+        cout &lt;&lt; n &lt;&lt; endl;
+    }
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    system(&quot;pause&quot;);
+    return 0;
+}
+</pre>
 <p>No código acima implementamos um estrutura de repetição for e nesta declaramos inicialmente uma variável de nome <tt class="docutils literal">n</tt> e inicializamos a mesma com o valor 0.</p>
 <p>Feito isso, definimos a condição na qual o laço de repetição deve ser executado, no caso, dissemos que <tt class="docutils literal">n &lt;= 9;</tt>. Observe que estamos inicializando a variável em 0, portanto, para imprimirmos os 10 primeiros valores devemos imprimir do 0 até o 9. Se por acaso definissemos o valor 10, iríamos imprimir 11 números, até porque, no intervalo de 0 até 10 há 11 números!</p>
 <p>Por fim, incrementamos uma unidade à variável <tt class="docutils literal">n</tt> com a expressão <tt class="docutils literal">n++</tt>. Ainda não estudamos o operador de incremento e decremento, porém, pense nessa expressão como sendo igual à: <tt class="docutils literal">n = n +1</tt>.</p>
 <p>Vamos fazer mais um exemplo, porém agora, vamos imprimir os números na ordem inversa, ou seja, vamos iniciar em 9 e vamos até 0.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span><span class="o">--</span><span class="p">){</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="p">}</span>
+int main() {
+    for(int n = 9; n &lt;= 0; n--){
+        cout &lt;&lt; n &lt;&lt; endl;
+    }
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    system(&quot;pause&quot;);
+    return 0;
+}
+</pre>
 <p>O código acima é basicamente o mesmo código que fizemos anteriormente, porém agora, ao invés de incrementarmos uma unidade na variável <tt class="docutils literal">n</tt> estamos decrementando. Observe que também tivemos que inicializar a variável <tt class="docutils literal">n</tt> atribuindo o valor 9 e, por fim, definimos a condição (a estrutura central) dizendo que o laço deve ser finalizado quando o valor de <tt class="docutils literal">n &lt;= 0</tt>. Por fim, decrementamos uma unidade a variável <tt class="docutils literal">n</tt> utilizando a expressão <tt class="docutils literal"><span class="pre">n--</span></tt>.</p>
 <p>A seguir, veja a comparação entre o laço for do primeiro e do segundo exemplo:</p>
-<div class="highlight"><pre><span></span><span class="cp">#comparação entre o exemplo de incremento e decremento</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">)</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span><span class="o">--</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+#comparação entre o exemplo de incremento e decremento
+for(int n = 0; n &lt;= 9; n++)
+for(int n = 9; n &lt;= 0; n--)
+</pre>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+/*====================================
+*           eXcript.com
+*          fb.com/eXcript
+* ====================================*/
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O valor de i eh igual: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="p">}</span>
+int main() {
+    for(int i = 0; i &lt;= 10; i++){
+        cout &lt;&lt; &quot;O valor de i eh igual: &quot; &lt;&lt; i &lt;&lt; endl;
+    }
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    system(&quot;pause&quot;);
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

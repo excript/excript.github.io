@@ -307,9 +307,10 @@ eXcript            </a>
 <h2>ENTRADA DE DADOS</h2>
 <p>A entrada de dados em C pode ser feita de diversas maneira. No prompt, é comum a utilização da função <cite>scanf()</cite>. Esta, tem por objetivo, devolver todos os caracteres digitados no prompt e retornar para a variável que nós especificamos. Assim, temos a entrada de dados mais primitiva do C, porém, bastante funcional.</p>
 <p>Por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">valor</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">valor</span><span class="p">);</span>
-</pre></div>
+<pre class="literal-block">
+int valor = 0;
+scanf(&quot;%i&quot;, &amp;valor);
+</pre>
 </div>
 <div class="section" id="a-funcao-scanf">
 <h2>A FUNÇÃO <cite>scanf()</cite></h2>
@@ -323,27 +324,28 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="c1">//  ==========                 ==========</span>
-<span class="c1">//  ========== www.eXcript.com ==========</span>
-<span class="c1">//  ==========                 ==========</span>
+//  ==========                 ==========
+//  ========== www.eXcript.com ==========
+//  ==========                 ==========
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="c1">//scanf(&quot;tipo_de_entrada&quot;, &amp;variavel_que_recebera);</span>
-    <span class="c1">//scanf(&quot;%tipo1%tipo2&quot;, &amp;var1, &amp;var2);</span>
+int main()
+{
+    //scanf(&quot;tipo_de_entrada&quot;, &amp;variavel_que_recebera);
+    //scanf(&quot;%tipo1%tipo2&quot;, &amp;var1, &amp;var2);
 
-    <span class="kt">int</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">;</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Por favor, digite um numero: </span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">);</span>
+    int num1, num2;
+    printf(&quot;Por favor, digite um numero: \n\n&quot;);
+    scanf(&quot;%i&quot;, &amp;num1);
 
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">O numero digitado foi: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+    printf(&quot;\nO numero digitado foi: %i\n&quot;, num1);
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

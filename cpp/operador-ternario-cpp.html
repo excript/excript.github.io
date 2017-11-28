@@ -356,33 +356,35 @@ eXcript            </a>
 <p>O que realmente diferencia a operação ternária da instrução <cite>if</cite> é que a condição ternária não executara um bloco de instrução como ocorre com a estrutura de controle <cite>if</cite>, mas sim, retornara um valor.</p>
 <p>Uma outra diferença é que a operação ternária é uma estrutura compacta, projetada para ser definida numa única linha (inline), enquanto que o projeto da estrutura <cite>if</cite> é para utilizar duas ou mais linhas.</p>
 <p>A seguir, temos a definição da operação ternária:</p>
-<div class="highlight"><pre><span></span><span class="o">|</span><span class="n">variável</span><span class="o">|</span> <span class="o">=</span> <span class="err">`</span><span class="k">if</span><span class="err">`</span><span class="p">(</span><span class="n">condição</span><span class="p">)</span> <span class="o">?</span> <span class="o">&lt;</span><span class="n">valor1</span><span class="o">&gt;</span> <span class="o">:</span> <span class="o">&lt;</span><span class="n">valor2</span><span class="o">&gt;</span><span class="p">;</span>
-</pre></div>
+<pre class="literal-block">
+|variável| = `if`(condição) ? &lt;valor1&gt; : &lt;valor2&gt;;
+</pre>
 <p><cite>if</cite> &lt;variável&gt; é a variável que irá receber um dos dois valores definidos na estrutura da operação ternária.
 &lt;valor1&gt; valor que será retornado caso a condição seja verdadeira
 &lt;valor2&gt; valor que será retornado caso a condição NÃO seja verdadeira</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+int main(){
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Digite um numero: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">i</span><span class="p">;</span>
+    cout &lt;&lt; &quot;Digite um numero: &quot; &lt;&lt; endl;
+    int i = 0;
+    cin &gt;&gt; i;
 
-    <span class="n">string</span> <span class="n">texto</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span> <span class="o">?</span> <span class="s">&quot; menor do que dez &quot;</span> <span class="o">:</span> <span class="s">&quot; maior do que dez &quot;</span><span class="p">;</span>
+    string texto = (i&lt;=10) ? &quot; menor do que dez &quot; : &quot; maior do que dez &quot;;
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O valor digitado anteriormente eh: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">texto</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    cout &lt;&lt; &quot;O valor digitado anteriormente eh: &quot; &lt;&lt; texto &lt;&lt; endl;
 
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    system(&quot;pause&quot;);
+    return 0;
+}
+</pre>
 </div>
 
 				</div>

@@ -379,142 +379,153 @@ eXcript            </a>
 <div class="section" id="funcoes-da-estrutura-dic">
 <h2>FUNÇÕES DA ESTRUTURA <tt class="docutils literal">dic</tt></h2>
 <p>len(x) - semelhante a forma como utilizamos em outras estruturas, para nós conhecermos a quantidade de elementos contidos numa lista, basta nós utilizarmos a função len() e passarmos como parâmetro a lista que desejarmos conhecer o tamanho.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s2">&quot;aaa&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s2">&quot;bbb&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s2">&quot;ccc&quot;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="mi">3</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; x = {1:&quot;aaa&quot;, 2:&quot;bbb&quot;, 3:&quot;ccc&quot;}
+&gt;&gt;&gt; len(x)
+3
+</pre>
 <p>del(x) - Um elemento pode ser removido de uma lista utilizando a função del() e enviando como parâmetro, qual elemento da lista nós desejamos que seja removido.</p>
-<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">:</span><span class="s2">&quot;aaa&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s2">&quot;bbb&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s2">&quot;ccc&quot;</span> <span class="p">}</span>
-<span class="k">del</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s2">&quot;aaa&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s2">&quot;ccc&quot;</span><span class="p">}</span>
-</pre></div>
+<pre class="literal-block">
+x = { 1:&quot;aaa&quot;, 2:&quot;bbb&quot;, 3:&quot;ccc&quot; }
+del(x[1])
+print(x)
+{1:&quot;aaa&quot;, 3:&quot;ccc&quot;}
+</pre>
 </div>
 <div class="section" id="operadores-in-e-not-in">
 <h2>OPERADORES <tt class="docutils literal">in</tt> e <tt class="docutils literal">not in</tt></h2>
 <p>Quando precisarmos saber se uma letras está contida em um conjunto, podemos utilizar o operador &quot;in&quot;, que numa tradução, significa: &quot;em&quot;, &quot;dentro de&quot;, &quot;está em&quot; ou &quot;está contido em&quot;.</p>
 <p>Da mesma forma, nós podemos verificar se um elemento não está contido, utilizando a negação do operador in, que é: &quot;not in&quot;: &quot;não está dentro&quot;, &quot;não pertence ao conjunto de&quot;.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abcdefghij&#39;</span>
-<span class="bp">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;ac&#39;</span> <span class="ow">in</span> <span class="s1">&#39;abcdefghij&#39;</span>
-<span class="bp">False</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; 'a' in 'abcdefghij'
+True
+&gt;&gt;&gt; 'ac' in 'abcdefghij'
+False
+</pre>
 <p>No primeiro exemplo, nós estamos verificando se o caractere &quot;a&quot;, está contido em um grupo de caracteres. No caso, a letra &quot;a&quot;, está contida naquela lista. Já, no segundo exemplo, nós estamos verificando se o conjunto &quot;ac&quot; está contido no conjunto 'abcdefghij', e a resposta foi False, e por quê? Nós temos que os elementos &quot;a&quot; e &quot;c&quot; estão contidos, porém, não estão contidos em sua forma agrupada. Assim, elementos composto só serão iguais ou estarão contidos se os elementos e a ordem destes forem exatamente as mesmas.</p>
 </div>
 <div class="section" id="retornando-elementos-aleatorios">
 <h2>RETORNANDO ELEMENTOS ALEATÓRIOS</h2>
 <p>No exemplo anterior, nós estudamos uma situação onde havia uma lista de contatos que deveriam ser retornados. Numa situação real, o nosso usuário talvez não se importe a ordem para retornar as ligações. Assim, nós podemos utilizar um função semelhante ao <tt class="docutils literal">pop()</tt>, porém, esta não recebe parâmetro e o valor retornado será qualquer um, em qualquer ordem. Em um primeiro momento pode parecer não haver lógica essa função, mas na prática, é muito comum nós termos uma lista de tarefas e iremos resolver sem se importar com a ordem. Nessas situações, utilizar a função <tt class="docutils literal">popitem()</tt> evita o trabalho de utilizar um looping e ao acessarmos um elemento, este será removido imediatamente.</p>
-<div class="highlight"><pre><span></span><span class="n">retornar_ligacao</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Perícles&quot;</span><span class="p">:</span> <span class="mi">30301122</span><span class="p">,</span>
-    <span class="s2">&quot;Menelau&quot;</span><span class="p">:</span> <span class="mi">33547877</span><span class="p">,</span>
-    <span class="s2">&quot;Atreu&quot;</span><span class="p">:</span> <span class="mi">33381245</span><span class="p">,</span>
-    <span class="s2">&quot;Tiestes&quot;</span><span class="p">:</span> <span class="mi">36458899</span>
-<span class="p">}</span>
+<pre class="literal-block">
+retornar_ligacao = {
+    &quot;Perícles&quot;: 30301122,
+    &quot;Menelau&quot;: 33547877,
+    &quot;Atreu&quot;: 33381245,
+    &quot;Tiestes&quot;: 36458899
+}
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">retornar_ligacao</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
-<span class="p">(</span><span class="s1">&#39;Menelau&#39;</span><span class="p">,</span> <span class="mi">33547877</span><span class="p">)</span>
+&gt;&gt;&gt; retornar_ligacao.popitem()
+('Menelau', 33547877)
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">retornar_ligacao</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
-<span class="p">(</span><span class="s1">&#39;Perícles&#39;</span><span class="p">,</span> <span class="mi">30301122</span><span class="p">)</span>
+&gt;&gt;&gt; retornar_ligacao.popitem()
+('Perícles', 30301122)
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">retornar_ligacao</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
-<span class="p">(</span><span class="s1">&#39;Atreu&#39;</span><span class="p">,</span> <span class="mi">33381245</span><span class="p">)</span>
+&gt;&gt;&gt; retornar_ligacao.popitem()
+('Atreu', 33381245)
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">retornar_ligacao</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
-<span class="p">(</span><span class="s1">&#39;Pessoa xyz&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">5254</span><span class="p">)</span>
+&gt;&gt;&gt; retornar_ligacao.popitem()
+('Pessoa xyz', -5254)
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">retornar_ligacao</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
-<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;pyshell#166&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-    <span class="n">retornar_ligacao</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
-<span class="ne">KeyError</span><span class="p">:</span> <span class="s1">&#39;popitem(): dictionary is empty&#39;</span>
-<span class="o">&gt;&gt;&gt;</span>
-</pre></div>
+&gt;&gt;&gt; retornar_ligacao.popitem()
+Traceback (most recent call last):
+  File &quot;&lt;pyshell#166&gt;&quot;, line 1, in &lt;module&gt;
+    retornar_ligacao.popitem()
+KeyError: 'popitem(): dictionary is empty'
+&gt;&gt;&gt;
+</pre>
 </div>
 <div class="section" id="acesso-a-chaves-inexistentes">
 <h2>ACESSO A CHAVES INEXISTENTES</h2>
 <p>É comum nós tentarmos acessar um elemento de um dicionário que já tenha sido removido ou então, um elemento que achávamos que estaria contido. Nessas situações, será levantado uma exceção nos informando que estamos tentando fazer acesso a uma chave que não existe.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;aaa&quot;</span><span class="p">:</span><span class="mi">111</span><span class="p">,</span> <span class="s2">&quot;bbb&quot;</span><span class="p">:</span><span class="mi">222</span><span class="p">,</span> <span class="s2">&quot;ccc&quot;</span><span class="p">:</span><span class="mi">333</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;zzz&quot;</span><span class="p">]</span>
-<span class="n">error</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; a = {&quot;aaa&quot;:111, &quot;bbb&quot;:222, &quot;ccc&quot;:333}
+&gt;&gt;&gt; a[&quot;zzz&quot;]
+error
+</pre>
 <p>A forma mais simples para evitarmos essas situações é utilizando os operadores &quot;in&quot; e &quot;not in&quot;.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;aaa&quot;</span><span class="p">:</span><span class="mi">111</span><span class="p">,</span> <span class="s2">&quot;bbb&quot;</span><span class="p">:</span><span class="mi">222</span><span class="p">,</span> <span class="s2">&quot;ccc&quot;</span><span class="p">:</span><span class="mi">333</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;zzz&quot;</span><span class="p">]</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;zzz&quot;</span><span class="p">])</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; a = {&quot;aaa&quot;:111, &quot;bbb&quot;:222, &quot;ccc&quot;:333}
+&gt;&gt;&gt; if a[&quot;zzz&quot;]
+        print(a[&quot;zzz&quot;])
+</pre>
 </div>
 <div class="section" id="atribuindo-elementos-com-o-mesmo-valor-a-um-outro-dicionario">
 <h2>Atribuindo elementos com o mesmo valor a um outro dicionário</h2>
 <p>Nos momento em que precisarmos atribuir todos os elemento de um dicionário para outro, nós não podemos simplesmente atribuir o dicionário x e dizer que este receber y. Nessa situação, somente a referência seria copiada e não os elementos propriamente.
 Logo, no momento em que fizéssemos acesso a um elemento e alterássemos o seu valor, esta alteração estaria visível em ambas as variáveis, até porque, ambas apontam para uma mesma estrutura. Logo, se desejarmos duplicar os elementos e não somente atribuir a referência, temos a nossa disposição uma função específica.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">:</span><span class="s2">&quot;Máximo&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="s2">&quot;Meio&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s2">&quot;Mínimo&quot;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
-<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Mínimo&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;Máximo&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Meio&#39;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
-<span class="s1">&#39;Máximo&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-<span class="s1">&#39;Meio&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
-<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Mínimo&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;Máximo&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Meio&#39;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;xxxx&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
-<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;xxxx&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;Máximo&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Meio&#39;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
-<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;xxxx&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;Máximo&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Meio&#39;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span>
-<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;xxxx&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;Máximo&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Meio&#39;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;yyyy&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
-<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;yyyy&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;Máximo&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Meio&#39;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
-<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;yyyy&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;Máximo&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Meio&#39;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span>
-<span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;xxxx&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;Máximo&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;Meio&#39;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; a = {10:&quot;Máximo&quot;, 5:&quot;Meio&quot;, 1:&quot;Mínimo&quot;}
+&gt;&gt;&gt; a
+{1: 'Mínimo', 10: 'Máximo', 5: 'Meio'}
+&gt;&gt;&gt; a[10]
+'Máximo'
+&gt;&gt;&gt; a[5]
+'Meio'
+&gt;&gt;&gt; b = a
+&gt;&gt;&gt; b
+{1: 'Mínimo', 10: 'Máximo', 5: 'Meio'}
+&gt;&gt;&gt; a[1] = &quot;xxxx&quot;
+&gt;&gt;&gt; a
+{1: 'xxxx', 10: 'Máximo', 5: 'Meio'}
+&gt;&gt;&gt; b
+{1: 'xxxx', 10: 'Máximo', 5: 'Meio'}
+&gt;&gt;&gt; c = a.copy()
+&gt;&gt;&gt; c
+{1: 'xxxx', 10: 'Máximo', 5: 'Meio'}
+&gt;&gt;&gt; a[1] = &quot;yyyy&quot;
+&gt;&gt;&gt; a
+{1: 'yyyy', 10: 'Máximo', 5: 'Meio'}
+&gt;&gt;&gt; b
+{1: 'yyyy', 10: 'Máximo', 5: 'Meio'}
+&gt;&gt;&gt; c
+{1: 'xxxx', 10: 'Máximo', 5: 'Meio'}
+&gt;&gt;&gt;
+</pre>
 </div>
 <div class="section" id="mesclando-itens-de-2-dicionarios">
 <h2>MESCLANDO ITENS DE 2 DICIONÁRIOS</h2>
 <p>É comum na manipulação de dicionários a necessidade de unir um conjunto de elementos a um outro conjunto. Isso seria a intersecção de conjuntos, ou seja, os elementos de b são copiado para o elemento a. Para isso, nós temos um método de nome update(). A seguir, temos um exemplo onde os elementos do conjunto &quot;b&quot; são copiados para o conjunto &quot;a&quot;.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;aaa&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;bbb&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;ccc&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ddd&quot;</span><span class="p">:</span><span class="mi">40</span><span class="p">,</span> <span class="s2">&quot;eee&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;ddd&quot;</span><span class="p">:</span><span class="mi">60</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="p">{</span><span class="s2">&quot;aaa&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;bbb&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;ccc&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;ddd&quot;</span><span class="p">:</span><span class="mi">40</span><span class="p">,</span> <span class="s2">&quot;eee&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;ddd&quot;</span><span class="p">:</span><span class="mi">60</span><span class="p">}</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; a = {&quot;aaa&quot;:10, &quot;bbb&quot;:20, &quot;ccc&quot;:30}
+&gt;&gt;&gt; b = {&quot;ddd&quot;:40, &quot;eee&quot;:50, &quot;ddd&quot;:60}
+&gt;&gt;&gt; a.update(b)
+&gt;&gt;&gt; print(a)
+{&quot;aaa&quot;:10, &quot;bbb&quot;:20, &quot;ccc&quot;:30, &quot;ddd&quot;:40, &quot;eee&quot;:50, &quot;ddd&quot;:60}
+</pre>
 <p>Vale observar que os elementos de um conjunto não são adicionados a outro conjunto, o que acorre é somente um copia. Logo, as alterações feitas nos elementos conjunto alvo não serão refletidas no conjunto receptor.</p>
 </div>
 <div class="section" id="iterando-dicionarios">
 <h2>ITERANDO DICIONÁRIOS</h2>
 <p>Basicamente, um dicionário pode ser iterado seguindo a estrutura já estudada. O que o diferencia é que ao invés de um valor ser atribuído a uma única variável a cada ciclo, nós agora poderemos fazer uso de duas variáveis e assim, para a primeira será atribuído a chave e para segunda variável será atribuído o valor.</p>
 <p>Nos exemplos a seguir,, estudaremos cada situação:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">dicionario</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;aaa&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;bbb&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;ccc&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">dicionario</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-<span class="n">aaa</span>
-<span class="n">ccc</span>
-<span class="n">bbb</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; dicionario = {&quot;aaa&quot;:10, &quot;bbb&quot;:20, &quot;ccc&quot;:30}
+&gt;&gt;&gt; for e in dicionario:
+    print(e)
+aaa
+ccc
+bbb
+</pre>
 <p>Neste exemplo nós imprimimos todas as chaves do nosso dicionário, porém, como imprimir os valores?</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">dicionario</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<pre class="literal-block">
+&gt;&gt;&gt; for e in dicionario.values():
+        print(e)
 
-<span class="mi">10</span>
-<span class="mi">30</span>
-<span class="mi">20</span>
-</pre></div>
+10
+30
+20
+</pre>
 <p>Quando nós desejarmos iterar e objeter a cada ciclo a lista de chaves, nós podemos utilizar a variável que contém a referência para o dicionário. Agora, se nós desejarmos que o valor seja atribuído a cada ciclo para a variável, nós temos que iterar utilizando a função de nome values() que retorna um objeto do tipo iterator.</p>
 <p>E caso seja necessário retornar cada elemento contendo a chave e o valor?
 Neste caso, utilizamos um looping for e mandamos imprimir ambos os valores, como podemos ver abaixo:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dicionario</span><span class="p">:</span>
-<span class="o">&gt;&gt;&gt;</span>     <span class="n">i</span><span class="p">,</span> <span class="n">dicionario</span><span class="p">[</span><span class="n">e</span><span class="p">]</span>
-<span class="p">(</span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="p">(</span><span class="s1">&#39;ccc&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="p">(</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; for i in dicionario:
+&gt;&gt;&gt;     i, dicionario[e]
+('aaa', 10)
+('ccc', 30)
+('bbb', 20)
+</pre>
 <p>Assim, nós temos que é impresso uma tupla, onde o primeiro elemento é a chave e o segundo o respectivo valor. O valor foi impresso utilizando a variável que contém a referência ao dicionário e passando a chave do elemento que desejamos que seja retornado.</p>
 </div>
 <div class="section" id="convertendo-dicionario-em-lista">
@@ -524,41 +535,47 @@ Neste caso, utilizamos um looping for e mandamos imprimir ambos os valores, como
 <p>A terceira maneira de lista que podemos extrair é uma lista de tuplas. Assim, o valor retornado será uma lista contendo tuplas, onde cada tupla será composta pela chave e pelo valor mapeado respectivamente. Essa é uma maneira bastante eficaz para que possamos rapidamente extrair todas as informações contidas na estrutura dicionário.
 A seguir, temos uma tabela que contém as funções que extraem as informações de um dicionário.</p>
 <p>Funções que retornam listas de dicionários</p>
-<div class="highlight"><pre><span></span><span class="nb">dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-</pre></div>
+<pre class="literal-block">
+dict.keys()
+</pre>
 <p>Retorna a lista de chaves contidas em um dicionário.</p>
-<div class="highlight"><pre><span></span><span class="nb">dict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
-</pre></div>
+<pre class="literal-block">
+dict.values()
+</pre>
 <p>Retorna a lista de valores contidos em um dicionário.</p>
-<div class="highlight"><pre><span></span><span class="nb">dict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-</pre></div>
+<pre class="literal-block">
+dict.items()
+</pre>
 <p>Retorna uma lista de tuplas, onde cada tupla é composta por dois valores: a chave e o valor mapeado respectivamente.</p>
 <p>Exemplos:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">dicionario</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;aaa&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;bbb&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;ccc&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">dicionario</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-<span class="n">dict_keys</span><span class="p">([</span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span> <span class="s1">&#39;bbb&#39;</span><span class="p">,</span> <span class="s1">&#39;ccc&#39;</span><span class="p">])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">dicionario</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-<span class="n">dict_items</span><span class="p">([(</span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ccc&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">dicionario</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
-<span class="n">dict_values</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; dicionario = {&quot;aaa&quot;:10, &quot;bbb&quot;:20, &quot;ccc&quot;:30}
+&gt;&gt;&gt; dicionario.keys()
+dict_keys(['aaa', 'bbb', 'ccc'])
+&gt;&gt;&gt; dicionario.items()
+dict_items([('aaa', 10), ('bbb', 20), ('ccc', 30)])
+&gt;&gt;&gt; dicionario.values()
+dict_values([10, 20, 30])
+</pre>
 <p>Uma outra forma de obter a lista de chaves de um dicionário é através da coerção de tipos. Assim, se dissermos explicitamente para que o interpretador retorne um lista de um dicionário, o mesmo irá retornar a lista de chaves.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="n">dicionario</span><span class="p">)</span>
-<span class="p">[</span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span> <span class="s1">&#39;bbb&#39;</span><span class="p">,</span> <span class="s1">&#39;ccc&#39;</span><span class="p">]</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; list(dicionario)
+['aaa', 'bbb', 'ccc']
+</pre>
 </div>
 <div class="section" id="conversao-lista-para-dicionario">
 <h2>CONVERSÃO - LISTA PARA DICIONÁRIO</h2>
 <p>Existe várias formas para que listas sejam convertidas em dicionários, no entanto, não podemos esquecer que um dicionário é um elemento que contém chave-valor. Não podemos converter uma única lista em um dicionário sem chaves, até seria possível o oposto, porém, não há muita razão para este tipo de abordagem.</p>
 <p>É mais comum convertermos duas listas que contém a mesma quantidade de elementos em um dicionário. Assim, se nós tivermos em uma lista um conjunto de elementos que representem as chaves e noutra um conjunto de elementos que representem os valores, nós podemos converter essas listas em dicionário.</p>
 <p>A função built-in zip do Python retorna uma lista contendo tuplas, onde o primeiro valor é o da primeira lista, e o segundo valor da tupla, corresponde a segunda lista. Assim, com a função zip e a coerção de tipos, conseguimos obter um dicionário através de duas listas. A seguir, nós criamos 2 listas e em seguida, convertemos as listas em uma lista de tuplas e depois, convertemos as listas em um dicionário.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">d1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span><span class="s1">&#39;ccc&#39;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span><span class="s1">&#39;3&#39;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">))</span>
-<span class="p">[(</span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ccc&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">)]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">))</span>
-<span class="p">{</span><span class="s1">&#39;aaa&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;bbb&#39;</span><span class="p">:</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;ccc&#39;</span><span class="p">:</span> <span class="s1">&#39;3&#39;</span><span class="p">}</span>
-</pre></div>
+<pre class="literal-block">
+&gt;&gt;&gt; d1 = ['aaa','bbb','ccc']
+&gt;&gt;&gt; d2 = ['1','2','3']
+&gt;&gt;&gt; list(zip(d1, d2))
+[('aaa', '1'), ('bbb', '2'), ('ccc', '3')]
+&gt;&gt;&gt; dict(zip(d1, d2))
+{'aaa': '1', 'bbb': '2', 'ccc': '3'}
+</pre>
 <p>A função zip faz parte da programação funcional implementada pelo Python. Assim, essa é uma das ferramentas que foram implementadas na linguagem e que trabalham muito bem com o paradigma de orientação a objetos.</p>
 </div>
 <div class="section" id="id1">
@@ -569,36 +586,40 @@ A seguir, temos uma tabela que contém as funções que extraem as informações
 <p>Iterar um dicionário é um pouco diferente do que iterar uma lista ou então uma tupla. Isso porque, em um dicionário, temos que os elementos são compostos por 2 valores: a chave e o valor.</p>
 <p>Assim, temos que decidir de qual maneira queremos atravessar a lista e também, quais os valores que desejamos que sejam retornado a cada iteração.</p>
 <p>Para que possamos estudar a iteração, vamos definir um dicionário onde cada número de telefone está relacionado ao nome de uma pessoa.</p>
-<div class="highlight"><pre><span></span><span class="n">tel</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="mi">30301122</span><span class="p">:</span> <span class="s2">&quot;Perícles&quot;</span><span class="p">,</span>
-    <span class="mi">33547877</span><span class="p">:</span> <span class="s2">&quot;Menelau&quot;</span><span class="p">,</span>
-    <span class="mi">33381245</span><span class="p">:</span> <span class="s2">&quot;Atreu&quot;</span><span class="p">,</span>
-    <span class="mi">36458899</span><span class="p">:</span> <span class="s2">&quot;Tiestes&quot;</span>
-<span class="p">}</span>
-</pre></div>
+<pre class="literal-block">
+tel = {
+    30301122: &quot;Perícles&quot;,
+    33547877: &quot;Menelau&quot;,
+    33381245: &quot;Atreu&quot;,
+    36458899: &quot;Tiestes&quot;
+}
+</pre>
 <p>Agora que temos um dicionário, vamos itera-lo inicialmente, de maneira como se tivéssemos uma lista.</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tel</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<pre class="literal-block">
+for i in tel:
+    print(i)
 
-<span class="n">Perícles</span>
-<span class="n">Tiestes</span>
-<span class="n">Menelau</span>
-<span class="n">Atreu</span>
-</pre></div>
+Perícles
+Tiestes
+Menelau
+Atreu
+</pre>
 <p>Como visto, iterar um dicionário da maneira mais simples e intuitiva faz com que a cada ciclo a variável definido na estrutura <tt class="docutils literal">for</tt> receba uma chave que está associada a um valor.</p>
 <p>A razão pela qual foi atribuido a chave para a variável definida na estrutura <tt class="docutils literal">for</tt> é para que possamos facilmente obter o respectivo valor. No código a seguir, ao invés de imprimirmos a chave, nós a utilizamos para obter o valor relacionado:</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tel</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">tel</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</pre></div>
+<pre class="literal-block">
+for i in tel:
+    print(tel[i])
+</pre>
 <p>Então, essa é a maneira mais simples de iterarmos qualquer dicionários, porém, o Python fornece alguns mecânismos mais sofisticados.</p>
 </div>
 <div class="section" id="utilizando-ferramentas-de-iteracao">
 <h2>UTILIZANDO FERRAMENTAS DE ITERAÇÃO</h2>
 <p>Agora, vamos modificar a forma como estamos iterando para que possamos obter a cada ciclo a chave e o seu valor de maneira mais simples e prática.</p>
 <p>Inicialmente, vamos iterar a estrutura que nos é retoranda pela função <tt class="docutils literal">items()</tt> dos dicionários. Com esta, somos capazes de declararmos 2 variáveis e atribuímos a cada uma a respectiva chave e o seu valor, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">tel</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="s2">&quot; - &quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
-</pre></div>
+<pre class="literal-block">
+for k,v in tel.items():
+    print(k, &quot; - &quot;, v)
+</pre>
 <p>No código acima, declaramos 2 variáveis dentro da estrutura <tt class="docutils literal">for</tt>, no caso, as variáveis <tt class="docutils literal">k</tt> e <tt class="docutils literal">v</tt>, a letra <tt class="docutils literal">k</tt> vem de <tt class="docutils literal">key</tt> e a letra <tt class="docutils literal">v</tt> de <tt class="docutils literal">value</tt>. Assim, temos que tanto a chave como também o valor são atribuido as variáveis a cada ciclo e então, podemos utiliza-las de maneira muito mais simples e prática.</p>
 <p>É importante observar que estamos invocando a função <tt class="docutils literal">items()</tt> definida dentro da <tt class="docutils literal">classe</tt> <tt class="docutils literal">dict</tt>. Do contrário, não seria possível iterarmos e também, o Python acusaria um erro quando tentassemos executar o código.</p>
 </div>

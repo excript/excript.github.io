@@ -232,65 +232,66 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+<pre class="literal-block">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-<span class="k">namespace</span> <span class="nn">Aula</span>
-<span class="p">{</span>
-    <span class="k">class</span> <span class="nc">Program</span>
-    <span class="p">{</span>
-        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="c1">//=========== eXcript.com ===========</span>
-            <span class="c1">//======== NetCoders.com.br  ========</span>
+namespace Aula
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //=========== eXcript.com ===========
+            //======== NetCoders.com.br  ========
 
-            <span class="kt">double</span> <span class="n">nota1</span><span class="p">,</span> <span class="n">nota2</span><span class="p">,</span> <span class="n">nota3</span><span class="p">,</span> <span class="n">nota4</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-            <span class="kt">string</span> <span class="n">frase</span> <span class="p">=</span> <span class="s">&quot;Digite a {0}º nota: &quot;</span><span class="p">;</span>
+            double nota1, nota2, nota3, nota4 = 0;
+            string frase = &quot;Digite a {0}º nota: &quot;;
 
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">frase</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
-            <span class="n">nota1</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToDouble</span><span class="p">(</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">()</span> <span class="p">);</span>
+            Console.WriteLine(frase, 1);
+            nota1 = Convert.ToDouble( Console.ReadLine() );
 
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">frase</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span>
-            <span class="n">nota2</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToDouble</span><span class="p">(</span> <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">()</span> <span class="p">);</span>
+            Console.WriteLine(frase, 2);
+            nota2 = Convert.ToDouble( Console.ReadLine() );
 
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">frase</span><span class="p">,</span> <span class="m">3</span><span class="p">);</span>
-            <span class="n">nota3</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToDouble</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+            Console.WriteLine(frase, 3);
+            nota3 = Convert.ToDouble(Console.ReadLine());
 
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">frase</span><span class="p">,</span> <span class="m">4</span><span class="p">);</span>
-            <span class="n">nota4</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToDouble</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+            Console.WriteLine(frase, 4);
+            nota4 = Convert.ToDouble(Console.ReadLine());
 
-            <span class="kt">double</span> <span class="n">total</span><span class="p">,</span> <span class="n">media</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
-            <span class="n">total</span> <span class="p">=</span> <span class="n">nota1</span> <span class="p">+</span> <span class="n">nota2</span> <span class="p">+</span> <span class="n">nota3</span> <span class="p">+</span> <span class="n">nota4</span><span class="p">;</span>
-            <span class="n">media</span> <span class="p">=</span> <span class="n">total</span> <span class="p">/</span> <span class="m">4</span><span class="p">;</span>
+            double total, media = 0;
+            total = nota1 + nota2 + nota3 + nota4;
+            media = total / 4;
 
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;A média foi: &quot;</span> <span class="p">+</span> <span class="n">media</span><span class="p">);</span>
+            Console.WriteLine(&quot;A média foi: &quot; + media);
 
-            <span class="c1">//Menor do que 4 - reprovado</span>
-            <span class="c1">//Menor do que 7 - exame</span>
-            <span class="c1">//aprovado</span>
+            //Menor do que 4 - reprovado
+            //Menor do que 7 - exame
+            //aprovado
 
-            <span class="k">if</span><span class="p">(</span><span class="n">media</span> <span class="p">&lt;</span> <span class="m">4</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;O aluno está reprovado.&quot;</span><span class="p">);</span>
-            <span class="p">}</span>
-            <span class="k">else</span>
-            <span class="p">{</span>
-                <span class="k">if</span><span class="p">(</span><span class="n">media</span> <span class="p">&lt;</span> <span class="m">7</span><span class="p">)</span>
-                <span class="p">{</span>
-                    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;O aluno está em exame.&quot;</span><span class="p">);</span>
-                <span class="p">}</span>
-                <span class="k">else</span>
-                <span class="p">{</span>
-                    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;O aluno foi aprovado&quot;</span><span class="p">);</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+            if(media &lt; 4)
+            {
+                Console.WriteLine(&quot;O aluno está reprovado.&quot;);
+            }
+            else
+            {
+                if(media &lt; 7)
+                {
+                    Console.WriteLine(&quot;O aluno está em exame.&quot;);
+                }
+                else
+                {
+                    Console.WriteLine(&quot;O aluno foi aprovado&quot;);
+                }
+            }
+        }
+    }
+}
+</pre>
 </div>
 
 				</div>

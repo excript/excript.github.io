@@ -358,37 +358,38 @@ eXcript            </a>
 <p>Sem dúvida, essa é a primeira grande mudança que os programadores acostumados com a linguagem C puderam notar. Agora, podemos adicionar informações na saída padrão, utilizando um único operador. Da mesma forma, conseguimos extrair as últimas informações digitadas pelo usuário utilizando um único operado, o operador de extração.</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<pre class="literal-block">
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
 
-<span class="cm">/*====================================</span>
-<span class="cm">*           eXcript.com</span>
-<span class="cm">*          fb.com/eXcript</span>
-<span class="cm">* ====================================*/</span>
+/*====================================
+*           eXcript.com
+*          fb.com/eXcript
+* ====================================*/
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+using namespace std;
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+int main() {
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Informe um numero: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num1</span><span class="p">;</span>
+    cout &lt;&lt; &quot;Informe um numero: &quot; &lt;&lt; endl;
+    int num1 = 0;
+    cin &gt;&gt; num1;
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Informe outro numero: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num2</span><span class="p">;</span>
+    cout &lt;&lt; &quot;Informe outro numero: &quot; &lt;&lt; endl;
+    int num2 = 0;
+    cin &gt;&gt; num2;
 
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Os numeros digitos foram: &quot;</span>
-            <span class="o">&lt;&lt;</span> <span class="n">num1</span>
-            <span class="o">&lt;&lt;</span> <span class="s">&quot; e &quot;</span>
-            <span class="o">&lt;&lt;</span> <span class="n">num2</span>
-            <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    cout &lt;&lt; &quot;Os numeros digitos foram: &quot;
+            &lt;&lt; num1
+            &lt;&lt; &quot; e &quot;
+            &lt;&lt; num2
+            &lt;&lt; endl;
 
-    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    system(&quot;pause&quot;);
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    return 0;
+}
+</pre>
 </div>
 
 				</div>
