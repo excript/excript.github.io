@@ -22,10 +22,10 @@
 &lt;img alt="Imagem do Google Analytics exibindo spam no campo referente ao idioma do navegador do visitante" src="../images/blog/google-analytics-spam1.png" /&gt;
 &lt;p&gt;Spam, além de ser um ato ilícito, consome banda de internet, espaço de armazenamento, rouba nosso tempo e o retorno paras os spammers é um percentual baixíssimo.&lt;/p&gt;
 &lt;p&gt;O spam é um saco, mas a criatividade de quem vive dessa prática ultrapassa o estado da arte.&lt;/p&gt;
-&lt;p&gt;Nas eleições presidenciais Americanas de 2016, me deparei com uma mensagem política nos relatórios do Google Analytics do site da eXcript. Ao exibir os relatórios do perfil de quem visitou o site da eXcript, no campo &lt;tt class="docutils literal"&gt;Language&lt;/tt&gt; que informa o idioma configura no navegado do visitante, ao invés de aparecer o código abreviado da linguagem era exibido mensagens aleatórias e finalizava com: &lt;em&gt;Vote Trump&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Nas eleições presidenciais Americanas de 2016, me deparei com uma mensagem política nos relatórios do Google Analytics do site da eXcript. Ao exibir os relatórios do perfil de quem visitou o site da eXcript, no campo &lt;tt class="docutils literal"&gt;Language&lt;/tt&gt; que informa o idioma definido nas configurações do navegador do visitante, ao invés de aparecer o código abreviado da linguagem, era exibido mensagens aleatórias e finalizava com: &lt;em&gt;Vote Trump&lt;/em&gt;.&lt;/p&gt;
 &lt;img alt="Outra imagem do Google Analytics exibindo spam e pedindo para votar no Trump" src="../images/blog/google-analytics-spam2.png" /&gt;
 &lt;p&gt;Quando me deparei com essa nova estratégia de spam pensei que haviam ultrapassado o estado de arte em relação a como praticar spam, porém, passado um ano, vejo que estava equivocado!&lt;/p&gt;
-&lt;p&gt;O Paypal, serviço para envio e recebimento de fundos online, possui uma ferramenta para que o cliente possa contestar um valor pago ou transferido a outro usuário e, a brincadeira é a transferência de um valor irrisório, seguido de uma contestação. Essa ação implica numa caixa de mensagem destacada no painel de controle contendo as informações da transação, porém, ao invés de aparecer o nome e a descrição do usuário que fez a transferência, é exibido uma mensagem oferecendo serviço de marketing!&lt;/p&gt;
+&lt;p&gt;O Paypal, serviço para envio e recebimento de fundos online, possui uma ferramenta para que o cliente possa contestar um valor pago ou transferido a outrem e, a &amp;quot;brincadeira&amp;quot; é a transferência de um valor irrisório, seguido de uma contestação. Essa ação implica numa caixa de mensagem destacada no painel de controle contendo as informações da transação, porém, ao invés de aparecer o nome e a descrição do usuário que fez a transferência, é exibido uma mensagem oferecendo serviço de marketing!&lt;/p&gt;
 &lt;p&gt;Ou seja, você envia um valor, pede o ressarcimento e, como o ressarcimento trata-se de algo crítico, o Paypal envia um e-mail notificando o ocorrido e exibe a mensagem em destaque.&lt;/p&gt;
 &lt;img alt="Utilizando o Paypal para enviar spam" src="../images/blog/paypal-spam1.png" /&gt;
 &lt;p&gt;Moral da história: qual é a pessoa que recebe um e-mail notificando o recebimento de uma certa quantia e não acessa o painel de controle para ver quem enviou e qual o valor enviado? E, qual será o usuário que novamente não acessará o painel após receber uma notificação de extorno?&lt;/p&gt;
@@ -312,7 +312,7 @@ do Unix e da Internet. (em inglês)&lt;/p&gt;
 &lt;p&gt;Evelyn Mitchell contribuiu com alguns exemplos de perguntas estúpidas e inspirou a seção “Como responder perguntas de forma útil”.
 Mikhail Ramendik contribuiu com valiosas sugestões de aprimoramento deste guia.&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="python"></category><category term="kivy"></category><category term="forum"></category><category term="blog"></category></entry><entry><title>python.c: o Entry Point do Python</title><link href="http://excript.com/blog/entry-point-python-c.html" rel="alternate"></link><published>2017-08-22T03:00:00-03:00</published><updated>2017-08-22T03:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-08-22:/blog/entry-point-python-c.html</id><summary type="html">&lt;div class="section" id="o-codigo-fonte-do-python"&gt;
+</content><category term="python"></category><category term="orum"></category><category term="blog"></category></entry><entry><title>python.c: o Entry Point do Python</title><link href="http://excript.com/blog/entry-point-python-c.html" rel="alternate"></link><published>2017-08-22T03:00:00-03:00</published><updated>2017-08-22T03:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-08-22:/blog/entry-point-python-c.html</id><summary type="html">&lt;div class="section" id="o-codigo-fonte-do-python"&gt;
 &lt;h2&gt;O CÓDIGO FONTE DO PYTHON&lt;/h2&gt;
 &lt;p&gt;Muitos desenvolvedores trabalham com uma linguagem por anos sem nunca baixar o código-fonte do interpretador ou compilador, mesmo estando disponível a todos. Podemos tanto acessar o código  pelo navegador, ou baixa-lo com alguma ferramenta de versionamento de código como o &lt;a class="reference external" href="https://git-scm.com/"&gt;Git&lt;/a&gt; ou então o Mercurial …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="o-codigo-fonte-do-python"&gt;
 &lt;h2&gt;O CÓDIGO FONTE DO PYTHON&lt;/h2&gt;
@@ -497,101 +497,86 @@ Mikhail Ramendik contribuiu com valiosas sugestões de aprimoramento deste guia.
 &lt;p&gt;Em algumas distribuições Linux que trazem o Python instalado pode acontecer do utilitário pip não ser disponibilizado. No Ubuntu por exemplo, para instalarmos, basta executarmos o seguinte código:&lt;/p&gt;
 &lt;p&gt;Debian/UBUNTU/Linux Mint:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;pre class="literal-block"&gt;
-$ sudo apt-get install python-pip
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install python-pip
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Fedora:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;pre class="literal-block"&gt;
-$ sudo yum install python-pip
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Via yum:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;pre class="literal-block"&gt;
-$ yum install python-pip
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;CentOS&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Primeiro ative o repositório EPEL e em seguida execute no terminal:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-$ sudo yum install python-pip
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo yum install python-pip
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;ArchLinux:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;pre class="literal-block"&gt;
-$ sudo pacman -S python-pip
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo pacman -S python-pip
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="versao"&gt;
 &lt;h2&gt;VERSÃO&lt;/h2&gt;
 &lt;p&gt;Pra descobrirmos a versão do &lt;cite&gt;pip&lt;/cite&gt; instalada em nosso ambiente, devemos executar o comando:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;pre class="literal-block"&gt;
-pip --version
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip --version
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="atualizando-o-pip"&gt;
 &lt;h2&gt;ATUALIZANDO O &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;É importante atualizarmos o utilitário &lt;cite&gt;pip&lt;/cite&gt; antes de utiliza-lo. Para atualizamos o &lt;cite&gt;pip&lt;/cite&gt; utilizamos o próprio &lt;cite&gt;pip&lt;/cite&gt;. Para isso, digite no terminal o código a seguir:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pip install --upgrade pip
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install --upgrade pip
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Feito isso, temos a certeza de estarmos utilizando a última versão do instalador de pacotes oficial do Python o &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="instalando-pacotes-com-o-pip"&gt;
 &lt;h2&gt;INSTALANDO PACOTES COM O &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;A instalação de pacotes com o &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; é relativamente simples e é feito através da linha de comando. Para talarmos um pacote, temos que abrir o terminal e digitar:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pip install algum-nome-de-pacote
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install algum-nome-de-pacote
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Em seguida, o pacote será baixado e instalado junto a instalação do Python em que o &lt;cite&gt;pip&lt;/cite&gt; está contido. Para desinstalar pacotes, utilizamos um comando similar, porém, ao invés de utilizarmos a instrução &lt;tt class="docutils literal"&gt;install&lt;/tt&gt; utilizaremos &lt;tt class="docutils literal"&gt;uninstall&lt;/tt&gt;, por exemplo:&lt;/p&gt;
 &lt;p&gt;Alguma vezes desejaremos instalar um pacote com uma determinada versão, pra isso, fazermos:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pip install algum-nome-de-pacote==0.0
-&lt;/pre&gt;
-&lt;pre class="literal-block"&gt;
-pip uninstall algum-nome-de-pacote
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install algum-nome-de-pacote&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;.0
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip uninstall algum-nome-de-pacote
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="lista-de-pacotes-instalados"&gt;
 &lt;h2&gt;LISTA DE PACOTES INSTALADOS&lt;/h2&gt;
 &lt;p&gt;Para sabermos todos os pacotes instalados, utilizamos a instrução &lt;tt class="docutils literal"&gt;freeze&lt;/tt&gt;:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pip freeze
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip freeze
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exportando-lista-de-pacotes-instalados"&gt;
 &lt;h2&gt;EXPORTANDO LISTA DE PACOTES INSTALADOS&lt;/h2&gt;
 &lt;p&gt;Algumas vezes desejaremos exportar os pacotes instalados num ambiente virtual para por exemplo, fazermos backup ou então, para adicionarmos a documentação de algum Script os pacotes que devem ser instalados.&lt;/p&gt;
 &lt;p&gt;Pra exportarmos todos os nomes para um arquivo, devemos executar o seguinte comando:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pip freeze &amp;gt; requirements.txt
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip freeze &amp;gt; requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Por padrão, arquivos de nome &lt;cite&gt;requirements.txt&lt;/cite&gt; contidos na raiz de um projetos contém a listagem de pacotes que precisa ser instalados.&lt;/p&gt;
 &lt;p&gt;Da mesma forma que conseguimos exportar para um arquivos os pacotes instalados, também conseguimos instalar uma lista de pacotes através de um arquivo, por exemplo:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pip install requirements.txt
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install requirements.txt
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="obtendo-informacoes-do-pacote"&gt;
 &lt;h2&gt;OBTENDO INFORMAÇÕES DO PACOTE&lt;/h2&gt;
 &lt;p&gt;Todo pacote possui um conjunto de metadados que identificam o autor, a empresa, a versão, a licença e várias outras informações. Para ver esses metadados, devemos executar o seguinte comando:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pip show pacote
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip show pacote
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;OBTENDO INFORMAÇÕES DO PACOTE&lt;/h2&gt;
 &lt;p&gt;Para buscarmos por um nome dentro do repositório de código, devemos proceder da seguinte forma:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pip search &amp;lt;query&amp;gt;
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip search &amp;lt;query&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="pip"></category><category term="python"></category><category term="gerenciador de pacotes"></category><category term="blog"></category></entry><entry><title>Diferença entre o operador is e o ==</title><link href="http://excript.com/blog/diferenca-operador-is-equal-python.html" rel="alternate"></link><published>2017-07-31T09:00:00-03:00</published><updated>2017-07-31T09:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2017-07-31:/blog/diferenca-operador-is-equal-python.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;

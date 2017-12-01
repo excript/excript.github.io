@@ -114,61 +114,58 @@
 &lt;/div&gt;
 &lt;div class="section" id="exemplos"&gt;
 &lt;h2&gt;EXEMPLOS&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-//soma
-int soma = 1 + 1;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//soma&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-//subtraçao
-int soma = 1 - 1;
+&lt;span class="c1"&gt;//subtraçao&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-//multiplicação
-int multi = 1 * 1;
+&lt;span class="c1"&gt;//multiplicação&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;*&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-//divisão
-int divi = 1 / 1;
-&lt;/pre&gt;
+&lt;span class="c1"&gt;//divisão&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;divi&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="divisao-por-zero"&gt;
 &lt;h2&gt;DIVISÃO POR ZERO&lt;/h2&gt;
 &lt;p&gt;É importante tomar cuidado com a divisão por zero, até porque, o C# levantará uma exceção se tentarmos dividir qualquer número por zero, veja o exemplo a seguir:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-//soma
-int divi = 20 / 0;
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//soma&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;divi&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;20&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Collections.Generic&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Linq&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Text&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Threading.Tasks&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-namespace Aula
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int soma = 10 + 20;
-            int soma2 = (25 + 25 - 10);
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="m"&gt;20&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma2&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;25&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="m"&gt;25&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            double div = 50 / 10;
+            &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;div&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;50&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            double div2 = 22.0 / 3.0;
+            &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;div2&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;22.0&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt; &lt;span class="m"&gt;3.0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            double div3 = 0.055 * 100;
+            &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;div3&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0.055&lt;/span&gt; &lt;span class="p"&gt;*&lt;/span&gt; &lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            Console.WriteLine(&amp;quot;Soma = &amp;quot; + soma);
-            Console.WriteLine(&amp;quot;Soma2 = &amp;quot; + soma2);
-            Console.WriteLine(&amp;quot;div = &amp;quot; + div);
-            Console.WriteLine(&amp;quot;div2 = &amp;quot; + div2);
-            Console.WriteLine(&amp;quot;div3 = &amp;quot; + div3);
-        }
-    }
-}
-&lt;/pre&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Soma = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Soma2 = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;soma2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;div = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;div&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;div2 = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;div2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;div3 = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;div3&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Estrutura else senão</title><link href="http://excript.com/csharp/estrutura-else-senao-csharp.html" rel="alternate"></link><published>2015-05-18T23:01:00-03:00</published><updated>2015-05-18T23:01:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-05-18:/csharp/estrutura-else-senao-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -186,11 +183,10 @@ namespace Aula
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Collections.Generic&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Linq&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Text …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -206,36 +202,35 @@ using System.Text …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Collections.Generic&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Linq&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Text&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Threading.Tasks&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-namespace Aula
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int num = 0;
-            Console.WriteLine(&amp;quot;Digite um número: &amp;quot;);
-            num = Convert.ToInt32(Console.ReadLine());
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToInt32&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
 
-            if(num &amp;gt; 10)
-            {
-                Console.WriteLine(&amp;quot;O número digitado é maior do que 10.&amp;quot;);
-            }
-            else//senão
-            {
-                Console.WriteLine(&amp;quot;O número digitado é menor do que 10.&amp;quot;);
-            }
+            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O número digitado é maior do que 10.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="c1"&gt;//senão&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O número digitado é menor do que 10.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
 
-        }
-    }
-}
-&lt;/pre&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Tomada de Decisão em C# (Parte II)</title><link href="http://excript.com/csharp/tomada-decisao-csharp-parte2.html" rel="alternate"></link><published>2015-04-13T14:24:00-03:00</published><updated>2015-04-13T14:24:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-04-13:/csharp/tomada-decisao-csharp-parte2.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -253,12 +248,11 @@ namespace Aula
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Collections.Generic&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Linq&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Text&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -274,33 +268,32 @@ using System …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Collections.Generic&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Linq&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Text&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Threading.Tasks&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-namespace Aula
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int num = 0;
-            String texto = &amp;quot;O número digitado é: &amp;quot;;
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;O número digitado é: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            Console.WriteLine(&amp;quot;Digite um número qualquer: &amp;quot;);
-            num = Convert.ToInt32(Console.ReadLine());
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número qualquer: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToInt32&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
 
-            if (num &amp;gt; 0)
-                Console.WriteLine(texto + &amp;quot;positivo&amp;quot;);
-            if (num &amp;lt; 0)
-                Console.WriteLine(texto + &amp;quot;negativo&amp;quot;);
-        }
-    }
-}
-&lt;/pre&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;positivo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;negativo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Tomada de Decisão em C#</title><link href="http://excript.com/csharp/tomada-de-decisao-csharp.html" rel="alternate"></link><published>2015-04-12T16:39:00-03:00</published><updated>2015-04-12T16:39:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-04-12:/csharp/tomada-de-decisao-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -342,13 +335,12 @@ namespace Aula
 &lt;h2&gt;A INSTRUÇÃO &lt;tt class="docutils literal"&gt;if&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;A palavra &lt;tt class="docutils literal"&gt;if&lt;/tt&gt; do Inglês, significa &lt;tt class="docutils literal"&gt;SE&lt;/tt&gt;. Com a estrutura condicional &lt;tt class="docutils literal"&gt;if&lt;/tt&gt; podemos determinar o que deve acontecer caso a expressão verificada for verdadeira, ou então, o que deve acontecer, caso a expressão seja falsa.&lt;/p&gt;
 &lt;p&gt;Por exemplo, vamos verificar uma situação, porém, utilizando a Lingua Portuguêsa:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-SE( verdadeiro ){
-    faça_isso()
-    faça_e_mais_isso()
-    faça_aquilo()
-}
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;verdadeiro&lt;/span&gt; &lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="n"&gt;faça_isso&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;faça_e_mais_isso&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;faça_aquilo&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, estamos verificando se a expressão entre parêntesis é verdadeira. É comum chamarmos a expressão entre parêntesis de &lt;strong&gt;Cabeçalho da Estrutura&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Em seguida, com um par de chaves, definimos o bloco de instrução que será executado, caso o valor lógico da expressão seja verdadeiro.&lt;/p&gt;
 &lt;p&gt;Nesse primeiro momento, temos que entender que na situação em que a expressão definida no cabeçalho da estrutura &lt;tt class="docutils literal"&gt;SE&lt;/tt&gt;, isto é, entre parêntesis, for verdadeira, tudo que estiver nas linhas seguintes, entre chaves, normalmente com a indentação avançada, é que será executado. A instrução &lt;tt class="docutils literal"&gt;faça_isso()&lt;/tt&gt;, é a primeira instrução do &lt;strong&gt;Bloco de Instrução&lt;/strong&gt; que será executado todas as vezes que a expressão definida no cabeçalho da estrutura &lt;tt class="docutils literal"&gt;if&lt;/tt&gt; for verdadeira.&lt;/p&gt;
@@ -357,47 +349,45 @@ SE( verdadeiro ){
 &lt;div class="section" id="um-caso-real-utilizando-a-estrutura-if"&gt;
 &lt;h2&gt;UM CASO REAL UTILIZANDO A ESTRUTURA &lt;tt class="docutils literal"&gt;if&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;Agora, vamos fazer uma exemplo onde verificaremos se o número digitado por um usuário é maior do que zero. Caso seja, o &lt;strong&gt;Bloco de Instrução&lt;/strong&gt; que segue a estrutura será executado.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-Console.WriteLine(&amp;quot;Digite um número: &amp;quot;);
-string str = Console.ReadLine();
-int num = Convert.ToInt32(str);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToInt32&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-if(num &amp;gt; 0){
-    Console.WriteLine(&amp;quot;O número digitado é maior do que &amp;quot;)
-}
-&lt;/pre&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O número digitado é maior do que &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No exemplo acima, utilizamos a função &lt;tt class="docutils literal"&gt;Console.WriteLine&lt;/tt&gt; para imprimirmos uma mensagem na tela, ou seja, no &lt;tt class="docutils literal"&gt;Console&lt;/tt&gt; do usuário. Em seguida, colocamos o &lt;tt class="docutils literal"&gt;Console&lt;/tt&gt; no modo de edição, isto é, fazendo com que seja possível que o usuário digite valores. Após o usuário digitar um número e pressionar a tecla Enter, o valor  será passado para a variável &lt;tt class="docutils literal"&gt;string&lt;/tt&gt; de nome &lt;tt class="docutils literal"&gt;str&lt;/tt&gt;. Em seguida, converteremos de &lt;tt class="docutils literal"&gt;String&lt;/tt&gt; para número e atribuiremos o valor para a variável inteira &lt;tt class="docutils literal"&gt;num&lt;/tt&gt;. Por fim, comparamos o valor da variável &lt;tt class="docutils literal"&gt;num&lt;/tt&gt; e, caso o valor seja maior do que zero, o bloco de instrução verdadeiro será executado, do contrário, nada acontecerá.&lt;/p&gt;
 &lt;p&gt;É importante observar que caso nada seja digitado, ou então, não seja digitado um número, uma exceção será levantada e a execução do nosso programa será interrompido. Isso ocorre porque não estamos tratando os valores digitados pelo nosso usuário.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Collections.Generic&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Linq&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Text&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Threading.Tasks&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-namespace Aula
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int num = 0;
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            Console.WriteLine(&amp;quot;Digite um número: &amp;quot;);
-            String str = Console.ReadLine();
-            num = Convert.ToInt32(str);
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToInt32&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            if (num &amp;gt; 0)
-            {
-                Console.WriteLine(&amp;quot;O número digitado é positivo.&amp;quot;);
-            }
-        }
-    }
-}
-&lt;/pre&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O número digitado é positivo.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Operadores Lógicos em C#</title><link href="http://excript.com/csharp/operador-logico-csharp.html" rel="alternate"></link><published>2015-04-11T20:02:00-03:00</published><updated>2015-04-11T20:02:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-04-11:/csharp/operador-logico-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -545,10 +535,9 @@ namespace Aula
 &lt;h2&gt;O CONECTIVO DE CONJUNÇÃO &lt;tt class="docutils literal"&gt;E&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;O &lt;strong&gt;Conectivo Lógico de Conjunção&lt;/strong&gt; &lt;tt class="docutils literal"&gt;||&lt;/tt&gt; une a expressão a sua esquerda com a expressão a sua direita. Expressões com o uso do &lt;strong&gt;Conectivo de Conjunção&lt;/strong&gt; dão origem a frases em Português, mais ou menos assim: &lt;strong&gt;X&lt;/strong&gt; é verdadeiro e &lt;strong&gt;Y&lt;/strong&gt; é verdadeiro?&lt;/p&gt;
 &lt;p&gt;Nas situações em que &lt;strong&gt;A&lt;/strong&gt; for verdadeiro e &lt;strong&gt;B&lt;/strong&gt; também, o resultado, segundo a tabela lógica, será também verdadeiro.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-int x = 1;
-Console.WriteLine( (x &amp;gt; 0) &amp;amp;&amp;amp; (x &amp;lt; 100) );
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No exemplo acima, temos uma &lt;tt class="docutils literal"&gt;expressão lógica composta&lt;/tt&gt; constituida por 2 expressões lógicas simples e ligadas pelo &lt;tt class="docutils literal"&gt;conectivo de conjunção&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;Primeira expressão simples : (var1 == 0)
 Segunda expressão simples: (var1 == 0)
@@ -556,9 +545,8 @@ Conectivo lógico de conjunção: &lt;strong&gt;&amp;amp;&amp;amp;&lt;/strong&gt
 &lt;p&gt;Para analisarmos uma &lt;tt class="docutils literal"&gt;expressão lógica composta&lt;/tt&gt;, precisamos antes, analisar suas &lt;tt class="docutils literal"&gt;expressões lógicas simples&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;A primeira expressão, está perguntando se o valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é maior do que zero. A variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; está declarada na linha acima e inicializada com o valor 1, por isso, a primeira expressão é verdadeira.&lt;/p&gt;
 &lt;p&gt;A segunda expressão, pergunta se o valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é menor do que 100. O valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é igual a 1 e por isso é menor do que 100. Analisado ambas expressões,acabamos por ter uma nova expressão, como pode ser visto abaixo.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-(True) &amp;amp;&amp;amp; (True)
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, temos a mesma expressão do exemplo anterior, porém, substituirmos as duas &lt;strong&gt;expressões lógicas simples&lt;/strong&gt; pelos seus respectivos &lt;strong&gt;valores lógicos&lt;/strong&gt;, isto é, o valor decorrente da &lt;strong&gt;análise lógica&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;A expressão &lt;tt class="docutils literal"&gt;(True) &amp;amp;&amp;amp; (True)&lt;/tt&gt; se comparada com a &lt;strong&gt;Tabela Lógica de Valores&lt;/strong&gt;, tem-se que o valor decorrente dessa segunda análise, constituida por 2 valores lógicos ligados pelo &lt;strong&gt;conectivo de ligação E&lt;/strong&gt;, será o &lt;strong&gt;valor lógico&lt;/strong&gt; &lt;tt class="docutils literal"&gt;True&lt;/tt&gt;.&lt;/p&gt;
 &lt;/div&gt;
@@ -566,30 +554,27 @@ Conectivo lógico de conjunção: &lt;strong&gt;&amp;amp;&amp;amp;&lt;/strong&gt
 &lt;h2&gt;CONECTIVO ( OU )&lt;/h2&gt;
 &lt;p&gt;O &lt;strong&gt;conectivo lógico de disjunção&lt;/strong&gt; &lt;strong&gt;OU&lt;/strong&gt; liga a expressão a sua esquerda a expressão a sua direita. Expressões com o uso do &lt;strong&gt;conectivo de disjunção&lt;/strong&gt; dão origem a frases em Português, mais ou menos assim: &lt;strong&gt;X&lt;/strong&gt; é verdadeiro ou &lt;strong&gt;Y&lt;/strong&gt; é verdadeiro?&lt;/p&gt;
 &lt;p&gt;O &lt;strong&gt;operador lógico OU&lt;/strong&gt; sempre precisará que uma das 2 &lt;strong&gt;expressões simples&lt;/strong&gt; avaliadas sejam verdadeiras para que avaliação seja verdadeira. No caso onde ambas &lt;strong&gt;expressões simples&lt;/strong&gt; forem verdadeiras, o resultado também será verdadeiro, porém, se ambas expressões forem falsas, o resultado lógico será falso.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-int x = 1;
-(x &amp;gt; 10) || (x &amp;lt; 100)
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;||&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A &lt;strong&gt;expressão lógica composta&lt;/strong&gt; que temos no código acima, será desmembrada como estudado anteriormente, e agora, para que a avaliação seja verdadeira, uma das 2 expressões precisam ser verdadeiras.&lt;/p&gt;
 &lt;p&gt;A primeira expressão verifica se &lt;tt class="docutils literal"&gt;(x &amp;gt; 10)&lt;/tt&gt;. A variável``x`` está declarada na linha acima e inicializada com o valor igual a 1, logo, essa expressão é falsa, até porque, o valor de &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; &lt;strong&gt;não é maior&lt;/strong&gt; do que 10.&lt;/p&gt;
 &lt;p&gt;A segunda expressão &lt;tt class="docutils literal"&gt;(x &amp;lt; 100)&lt;/tt&gt; está perguntando se o valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; &lt;strong&gt;é menor&lt;/strong&gt; do que o número 100. Essa expressão é verdadeira, até porque, o número 1 &lt;strong&gt;é menor&lt;/strong&gt; do que o número 100.&lt;/p&gt;
 &lt;p&gt;No código a seguir, temos a expressão que será originadas a partir do código anterior.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-(False) || (True)
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;||&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Agora, temos que o primeiro &lt;strong&gt;valor lógico&lt;/strong&gt; é falso, enquanto o segundo é verdadeiro. Esses valores estão ligados pelo &lt;strong&gt;conectivo de disjunção&lt;/strong&gt; utilizado para avaliar se uma das expressões é verdadeira. Como o segundo valor lógico é verdadeiro, o valor decorrente dessa &lt;strong&gt;análise lógica&lt;/strong&gt; será verdadeiro.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="expressoes-simples-e-compostas"&gt;
 &lt;h2&gt;EXPRESSÕES SIMPLES E COMPOSTAS&lt;/h2&gt;
 &lt;p&gt;Os &lt;strong&gt;operadores relacionais&lt;/strong&gt; obtém a relação entre os operandos e por isso, podemos chamar esse tipo de expressão como sendo, &lt;strong&gt;expressões simples&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;As &lt;strong&gt;expressões compostas&lt;/strong&gt;, por sua vez, são a união de 2 ou mais expressões simples e ligadas por um &lt;strong&gt;conectivo lógico&lt;/strong&gt;. A seguir, temos um exemplo utilizando o &lt;strong&gt;conectivo lógico de conjunção&lt;/strong&gt; unindo assim, 2 expressões e dando origem a uma nova &lt;strong&gt;expressão lógica&lt;/strong&gt;.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-//  EXEMPLO
-(isso) E (isso)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//  EXEMPLO&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;isso&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;isso&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-// A EXPRESSAO ACIMA ORIGINOU:
-x E y
-&lt;/pre&gt;
+&lt;span class="c1"&gt;// A EXPRESSAO ACIMA ORIGINOU:&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Como podemos ver, em ambos exemplos, estamos unindo 2 membros, mas não estamos perguntando nada. Porém, a frase correta e que é utilizada pela grande maioria das linguagens de programação, senão todas, é a seguinte:&lt;/p&gt;
 &lt;p&gt;&lt;tt class="docutils literal"&gt;&amp;quot;A&amp;quot; é verdadeiro e &amp;quot;B&amp;quot; é verdadeiro&lt;/tt&gt;. Chamamos isso de &lt;tt class="docutils literal"&gt;expressão lógica&lt;/tt&gt; ou melhor, &lt;tt class="docutils literal"&gt;expressão lógica composta&lt;/tt&gt; até porque, a expressão se origina de duas outras expressões.&lt;/p&gt;
 &lt;/div&gt;
@@ -597,67 +582,63 @@ x E y
 &lt;h2&gt;CONSTRUINDO EXPRESSÕES&lt;/h2&gt;
 &lt;p&gt;A linguagem C# possui algumas regras sintáticas para uso dos &lt;strong&gt;Conectivos Lógicos&lt;/strong&gt;.
 Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com parêntesis, por exemplo:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-int num = 0;
-if (num &amp;gt;= 0 &amp;amp;&amp;amp; num &amp;lt;= 10)
-{
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
 
-}
-&lt;/pre&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, no cabeçalho da tomada de decisão, definimos 2 expressões. A primeira &lt;tt class="docutils literal"&gt;num &amp;gt;= 0&lt;/tt&gt; e a segunda &lt;tt class="docutils literal"&gt;num &amp;lt;= 10&lt;/tt&gt;. Devido ao fato que ambas expressões foram ligadas com um &lt;strong&gt;Conectivo Lógico&lt;/strong&gt;, foi necessário envolver a expressão originada com parêntesis.&lt;/p&gt;
 &lt;p&gt;Da mesma forma, não é permitido isolar cada expressão sem não envolver ambas com parêntesis. O código a seguir não compila, até porque, as expressões que estão sendo ligadas pelo operador &lt;tt class="docutils literal"&gt;&amp;amp;&amp;amp;&lt;/tt&gt; não estão agrupadas com parêntesis.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-int num = 0;
-if (num &amp;gt;= 0) &amp;amp;&amp;amp; (num &amp;lt;= 10)
-{
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
 
-}
-&lt;/pre&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O código a seguir, corrige o problema do código acima, isolando cada expressão com parêntesis e delimitando a expressão resultante também.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-int num = 0;
-if ( (num &amp;gt;= 0) &amp;amp;&amp;amp; (num &amp;lt;= 10) )
-{
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
 
-}
-&lt;/pre&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Collections.Generic&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Linq&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Text&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Threading.Tasks&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-namespace Aula
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            //=========== eXcript.com ===========
-            //======== NetCoders.com.br  ========
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;//=========== eXcript.com ===========&lt;/span&gt;
+            &lt;span class="c1"&gt;//======== NetCoders.com.br  ========&lt;/span&gt;
 
-            //CONECTIVOS LÓGICOS
+            &lt;span class="c1"&gt;//CONECTIVOS LÓGICOS&lt;/span&gt;
 
-            int num = 0;
-            Console.WriteLine(&amp;quot;Informe um número no intervalo de 20 à 30.&amp;quot;);
-            num = Convert.ToInt32( Console.ReadLine() );
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Informe um número no intervalo de 20 à 30.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToInt32&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 
-            if(num &amp;gt; 20 &amp;amp;&amp;amp; num &amp;lt; 30)
-            {
-                Console.WriteLine(&amp;quot;O número está no intervalo.&amp;quot;);
-            }
-            else
-            {
-                Console.WriteLine(&amp;quot;Número incorreto!&amp;quot;);
-            }
-        }
-    }
-}
-&lt;/pre&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;20&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="m"&gt;30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O número está no intervalo.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Número incorreto!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Operadores Relacionais do C#</title><link href="http://excript.com/csharp/operador-relacional-csharp.html" rel="alternate"></link><published>2015-04-11T20:02:00-03:00</published><updated>2015-04-11T20:02:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-04-11:/csharp/operador-relacional-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -727,12 +708,11 @@ namespace Aula
 &lt;blockquote&gt;
 &amp;lt;&lt;tt class="docutils literal"&gt;membro a esquerda&lt;/tt&gt;&amp;gt; &lt;strong&gt;OPERADOR&lt;/strong&gt; &amp;lt;&lt;tt class="docutils literal"&gt;membro a direita&lt;/tt&gt;&amp;gt;&lt;/blockquote&gt;
 &lt;p&gt;A alteração da ordem em que os operandos estão dispostos altera a análise da sua relação, salvo se ambos forem iguais.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-Console.WriteLine( 1 &amp;gt; 2 );
-Console.WriteLine( &amp;quot;a&amp;quot; &amp;gt; &amp;quot;b&amp;quot; );
-Console.WriteLine( 5 &amp;lt; 10 );
-Console.WriteLine( 200 == 200 );
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;a&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;b&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="m"&gt;200&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;200&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, realizamos algumas operações com os operadores relacionais e imprimimos na saída padrão a relação existente. Há 3 possibilidade possíveis: ou o operador a esquerda será maior, menor, ou igual.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="operadores-relacionais-compostos"&gt;
@@ -756,69 +736,67 @@ Console.WriteLine( 200 == 200 );
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Podemos verificar com os &lt;strong&gt;Operadores Relacionais Compostos&lt;/strong&gt; se um membro é maior ou menor do que outro. Dessa forma, realizamos 2 operações numa mesma expressão o que acaba por simplificar e muito nossos programas.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-Console.WriteLine( 1 &amp;gt;= 1 );
-Console.WriteLine( &amp;quot;x&amp;quot; &amp;gt; &amp;quot;y&amp;quot; );
-Console.WriteLine( &amp;quot;10&amp;quot; &amp;gt; &amp;quot;10&amp;quot; );
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;x&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;y&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No trecho de código acima, estamos verificando se os membros a esquerda são maiores, menores ou iguais aos membros a sua direita.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Collections.Generic&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Linq&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Text&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Threading.Tasks&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-namespace Aula
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int x, y = 0;
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            //Lendo o primeiro número
-            Console.WriteLine(&amp;quot;Digite um número: &amp;quot;);
-            string str = Console.ReadLine();
-            x = Convert.ToInt32(str);
+            &lt;span class="c1"&gt;//Lendo o primeiro número&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToInt32&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            //Lendo o segundo número
-            Console.WriteLine(&amp;quot;Digite outro número: &amp;quot;);
-            str = Console.ReadLine();
-            y = Convert.ToInt32(str);
+            &lt;span class="c1"&gt;//Lendo o segundo número&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite outro número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;str&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToInt32&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            bool r;
+            &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            // Operador Relacional Igual
-            r = (x == y);
-            Console.WriteLine(&amp;quot;x == y = &amp;quot; + r);
+            &lt;span class="c1"&gt;// Operador Relacional Igual&lt;/span&gt;
+            &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x == y = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            // Operador Relacional Diferente
-            r = (x != y);
-            Console.WriteLine(&amp;quot;x != y = &amp;quot; + r);
+            &lt;span class="c1"&gt;// Operador Relacional Diferente&lt;/span&gt;
+            &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x != y = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            // Operador Relacional Maior
-            r = (x &amp;gt; y);
-            Console.WriteLine(&amp;quot;x &amp;gt; y = &amp;quot; + r);
+            &lt;span class="c1"&gt;// Operador Relacional Maior&lt;/span&gt;
+            &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x &amp;gt; y = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            // Operador Relacional Menor
-            r = (x &amp;lt; y);
-            Console.WriteLine(&amp;quot;x &amp;lt; y = &amp;quot; + r);
+            &lt;span class="c1"&gt;// Operador Relacional Menor&lt;/span&gt;
+            &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x &amp;lt; y = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            // Operador Relacional Maior ou Igual
-            r = (x &amp;gt;= y);
-            Console.WriteLine(&amp;quot;x &amp;gt;= y = &amp;quot; + r);
+            &lt;span class="c1"&gt;// Operador Relacional Maior ou Igual&lt;/span&gt;
+            &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x &amp;gt;= y = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            // Operador Relacional Menor ou Igual
-            r = (x &amp;lt;= y);
-            Console.WriteLine(&amp;quot;x &amp;lt;= y = &amp;quot; + r);
-        }
-    }
-}
-&lt;/pre&gt;
+            &lt;span class="c1"&gt;// Operador Relacional Menor ou Igual&lt;/span&gt;
+            &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x &amp;lt;= y = &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category><category term="operadores"></category><category term="relacional"></category><category term="operadores relacionais"></category></entry><entry><title>Operadores Relacionais do C# (parte 2)</title><link href="http://excript.com/csharp/operadores-relacionais-csharp-parte2.html" rel="alternate"></link><published>2015-04-11T20:02:00-03:00</published><updated>2015-04-11T20:02:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-04-11:/csharp/operadores-relacionais-csharp-parte2.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -840,8 +818,7 @@ namespace Aula
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -861,66 +838,65 @@ using …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Collections.Generic&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Linq&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Text&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Threading.Tasks&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-namespace Aula
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            //=========== eXcript.com ===========
-            //======== NetCoders.com.br  ========
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;//=========== eXcript.com ===========&lt;/span&gt;
+            &lt;span class="c1"&gt;//======== NetCoders.com.br  ========&lt;/span&gt;
 
-            double nota1, nota2, nota3, nota4 = 0;
-            string frase = &amp;quot;Digite a {0}º nota: &amp;quot;;
+            &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;nota1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nota2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nota3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nota4&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;frase&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Digite a {0}º nota: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            Console.WriteLine(frase, 1);
-            nota1 = Convert.ToDouble( Console.ReadLine() );
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;frase&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;nota1&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToDouble&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 
-            Console.WriteLine(frase, 2);
-            nota2 = Convert.ToDouble( Console.ReadLine() );
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;frase&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;nota2&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToDouble&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 
-            Console.WriteLine(frase, 3);
-            nota3 = Convert.ToDouble(Console.ReadLine());
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;frase&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;nota3&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToDouble&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
 
-            Console.WriteLine(frase, 4);
-            nota4 = Convert.ToDouble(Console.ReadLine());
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;frase&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;nota4&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Convert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ToDouble&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
 
-            double total, media = 0;
-            total = nota1 + nota2 + nota3 + nota4;
-            media = total / 4;
+            &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;total&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;media&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nota1&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;nota2&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;nota3&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;nota4&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;media&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            Console.WriteLine(&amp;quot;A média foi: &amp;quot; + media);
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;A média foi: &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;media&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            //Menor do que 4 - reprovado
-            //Menor do que 7 - exame
-            //aprovado
+            &lt;span class="c1"&gt;//Menor do que 4 - reprovado&lt;/span&gt;
+            &lt;span class="c1"&gt;//Menor do que 7 - exame&lt;/span&gt;
+            &lt;span class="c1"&gt;//aprovado&lt;/span&gt;
 
-            if(media &amp;lt; 4)
-            {
-                Console.WriteLine(&amp;quot;O aluno está reprovado.&amp;quot;);
-            }
-            else
-            {
-                if(media &amp;lt; 7)
-                {
-                    Console.WriteLine(&amp;quot;O aluno está em exame.&amp;quot;);
-                }
-                else
-                {
-                    Console.WriteLine(&amp;quot;O aluno foi aprovado&amp;quot;);
-                }
-            }
-        }
-    }
-}
-&lt;/pre&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;media&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O aluno está reprovado.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;media&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O aluno está em exame.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+                &lt;span class="k"&gt;else&lt;/span&gt;
+                &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O aluno foi aprovado&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Definições da Linguagem C#</title><link href="http://excript.com/csharp/definicao-linguagem-csharp.html" rel="alternate"></link><published>2015-04-07T03:15:00-03:00</published><updated>2015-04-07T03:15:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-04-07:/csharp/definicao-linguagem-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -992,35 +968,32 @@ namespace Aula
 &lt;p&gt;Matematicamente, há várias formas para obtermos a parte restante da divisão, porém, como essa é uma funcionalidade que possui bastante uso, foi definido um operador especial para esta operação.&lt;/p&gt;
 &lt;p&gt;Fica definido entao, que o simbolo de porcentagem, &lt;tt class="docutils literal"&gt;%&lt;/tt&gt; é o &lt;strong&gt;Operador Módulo&lt;/strong&gt;. E isso não é características do C#, mas sim, de todas linguagens que derivam do C.&lt;/p&gt;
 &lt;p&gt;Então, do lado esquerdo, colocaremos o número a ser dividido, e ao lado direito, o divisor, como pode ser visto no código a seguir.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-Console.WriteLine(10 % 2); #obtém o módulo da divisão de 10 por 2
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;obtém&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;módulo&lt;/span&gt; &lt;span class="n"&gt;da&lt;/span&gt; &lt;span class="n"&gt;divisão&lt;/span&gt; &lt;span class="n"&gt;de&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt; &lt;span class="n"&gt;por&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, estamos dividindo o número 10 por 2 implicitamente com o uso do Operador Módulo &lt;tt class="docutils literal"&gt;%&lt;/tt&gt;, portanto, o resultado da expressão, será o resto da divisão.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="numeros-pares"&gt;
 &lt;h2&gt;NÚMEROS PARES&lt;/h2&gt;
 &lt;p&gt;Uma das aplicações do módulo da divisão, e para a obtenção de por exemplo, números pares. Isso porque, todo número dividido por 2 que não tenha resto, será por definição, um número par. No código abaixo, implementamos um código que verifica se determinado numero e par.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-num = input(&amp;quot;Digite um número: &amp;quot;)
-if(num % 2 == 0):
-    print(&amp;quot;Número par.&amp;quot;)
-else:
-    print(&amp;quot;Número ímpar&amp;quot;)
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Número par.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Número ímpar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, pedimos que o usuário digite um número. Em seguida, armazenamos esse número na variável de inteira de nome &lt;tt class="docutils literal"&gt;num&lt;/tt&gt;. Feito isso, verificamos se o valor da variável &lt;tt class="docutils literal"&gt;num&lt;/tt&gt; possui resto, ou seja, definimos uma expressão cujo retorno sera o módulo da divisão. Caso o valor retornado seja 0, imprimiremos no Console que o número é par. Do contrário, será impresso que o número é ímpar.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="numeros-cheios-ou-numeros-redondos"&gt;
 &lt;h2&gt;NÚMEROS CHEIOS OU NÚMEROS REDONDOS&lt;/h2&gt;
 &lt;p&gt;Uma outra utilidade simples, porém, importante, é saber se um determinado número é redondo, por exemplo: 100, 200, 500 e etc. Para isso, basta dividirmos o mesmo por 100 e compararmos o módulo com zero, por exemplo:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-#coding: utf-8
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;coding&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;utf&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="m"&gt;8&lt;/span&gt;
 
-num = input(&amp;quot;Digite um número: &amp;quot;)
-if(num % 100 == 0):
-    print(&amp;quot;Número redondo.&amp;quot;)
-else:
-    print(&amp;quot;O número não é redondo&amp;quot;)
-&lt;/pre&gt;
+&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="m"&gt;100&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Número redondo.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O número não é redondo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, pedimos para o usuário digitar um valor e em seguida, verificamos se o módulo da divisão do número informado é igual a zero, caso seja, o número é redondo e inferior a 900.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="consideracoes-finais"&gt;
@@ -1030,25 +1003,24 @@ else:
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-#coding: utf-8
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;coding&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;utf&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="m"&gt;8&lt;/span&gt;
 
-print(3%2)
-print(4%2)
-print(5%2)
-print(7%3.1)
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;%&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;%&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;%&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="p"&gt;%&lt;/span&gt;&lt;span class="m"&gt;3.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-print(900%100==0)
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;900&lt;/span&gt;&lt;span class="p"&gt;%&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="p"&gt;==&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-num1 = float(input(&amp;quot;Digite um número: &amp;quot;))
-num2 = float(input(&amp;quot;Digite outro número: &amp;quot;))
+&lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;num2&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite outro número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 
-divisao = num1 / num2
-resto = num1 % num2
-print()
-print(num1, &amp;quot;divido por&amp;quot;, num2, &amp;quot;é igual a: &amp;quot;, divisao)
-print(&amp;quot;O resto da divisão entre&amp;quot;, num1, &amp;quot;e&amp;quot;, num2, &amp;quot; é igual a:&amp;quot;, resto)
-&lt;/pre&gt;
+&lt;span class="n"&gt;divisao&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;
+&lt;span class="n"&gt;resto&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="p"&gt;%&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;divido por&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;é igual a: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;divisao&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O resto da divisão entre&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;e&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; é igual a:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resto&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category><category term="módulo"></category><category term="operação módulo"></category><category term="módulo da divisão"></category><category term="divisão"></category><category term="número primo"></category></entry><entry><title>Comentários em C#</title><link href="http://excript.com/csharp/comentario-csharp.html" rel="alternate"></link><published>2014-02-27T11:28:00-03:00</published><updated>2014-02-27T11:28:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-27:/csharp/comentario-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -1087,21 +1059,19 @@ print(&amp;quot;O resto da divisão entre&amp;quot;, num1, &amp;quot;e&amp;quot;
 &lt;div class="section" id="a-notacao-inline"&gt;
 &lt;h3&gt;A NOTAÇÃO INLINE&lt;/h3&gt;
 &lt;p&gt;O uso de duas barras &lt;tt class="docutils literal"&gt;//&lt;/tt&gt; define comentários de uma única linha. Tudo que estiver após a marcação, sera ignorado pelo compilardor. Essa notação é comumente utilizada para colocar descrições no final de uma instrução, como podemos ver no código a seguir.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-//o que estiver a frente barra-barra é ignorado
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//o que estiver a frente barra-barra é ignorado&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="notacao-multilines-varias-linhas"&gt;
 &lt;h2&gt;NOTAÇÃO MULTILINES (VÁRIAS LINHAS)&lt;/h2&gt;
 &lt;p&gt;O uso de &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/**/&lt;/span&gt;&lt;/tt&gt; define comentários de várias linhas. Tudo que estiver entre &lt;tt class="docutils literal"&gt;/*&lt;/tt&gt; e o &lt;tt class="docutils literal"&gt;*/&lt;/tt&gt; será ignorado pelo interpretador, indifente de quantas linhas existirem, tudo que estiver delimitado por essa notação, é automaticamente ignorado.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-/*
-    esse aqui
-    é um comentário
-    de várias linhas
-*/
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;    esse aqui&lt;/span&gt;
+&lt;span class="cm"&gt;    é um comentário&lt;/span&gt;
+&lt;span class="cm"&gt;    de várias linhas&lt;/span&gt;
+&lt;span class="cm"&gt;*/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="para-que-utilizamos-comentarios"&gt;
 &lt;h2&gt;PARA QUE UTILIZAMOS COMENTÁRIOS?&lt;/h2&gt;
@@ -1117,22 +1087,21 @@ print(&amp;quot;O resto da divisão entre&amp;quot;, num1, &amp;quot;e&amp;quot;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;p&gt;A seguir, temos o exemplo feito na vídeo aulas sobre a utilização de comentários.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-using System;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-namespace Aula
-{
-    class Program
-    {
-        /**/
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="cm"&gt;/**/&lt;/span&gt;
 
-        static void Main(string[] args)
-        {
-            //Isso aqui é um comentário
-        }
-    }
-}
-&lt;/pre&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;//Isso aqui é um comentário&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Calculadora em C#</title><link href="http://excript.com/csharp/calculadora-csharp.html" rel="alternate"></link><published>2014-02-27T09:29:00-03:00</published><updated>2014-02-27T09:29:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-27:/csharp/calculadora-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -1150,19 +1119,18 @@ namespace Aula
     &lt;/div&gt;
 &lt;div class="section" id="calculadora"&gt;
 &lt;h2&gt;CALCULADORA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-double d;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-d = 12 + 3;
-Console.WriteLine(d);
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-d = 12 - 3;//subtração
-Console.WriteLine(d);
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//subtração&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-d = 12 * 3;//multiplicação
-Console.WriteLine(d);
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt; &lt;span class="p"&gt;*&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//multiplicação&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-d = 12 / 3;//divisão …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//divisão …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1178,71 +1146,69 @@ d = 12 / 3;//divisão …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
     &lt;/div&gt;
 &lt;div class="section" id="calculadora"&gt;
 &lt;h2&gt;CALCULADORA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-double d;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-d = 12 + 3;
-Console.WriteLine(d);
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-d = 12 - 3;//subtração
-Console.WriteLine(d);
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//subtração&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-d = 12 * 3;//multiplicação
-Console.WriteLine(d);
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt; &lt;span class="p"&gt;*&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//multiplicação&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-d = 12 / 3;//divisão
-Console.WriteLine(d);
-&lt;/pre&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//divisão&lt;/span&gt;
+&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Collections.Generic&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Linq&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Text&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Threading.Tasks&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-namespace Aula
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            //simples calculadora
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;//simples calculadora&lt;/span&gt;
 
-            double num1, num2;//variáveis que irão conter os números digitados
-            string tmp;
+            &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//variáveis que irão conter os números digitados&lt;/span&gt;
+            &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            Console.WriteLine(&amp;quot;Digite um número: &amp;quot;);
-            tmp = Console.ReadLine();
-            num1 = int.Parse(tmp);
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;tmp&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            Console.WriteLine(&amp;quot;Digite mais um número: &amp;quot;);
-            Console.ReadLine();
-            num2 = int.Parse(tmp);
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite mais um número: &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="n"&gt;num2&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            double resultado;
+            &lt;span class="kt"&gt;double&lt;/span&gt; &lt;span class="n"&gt;resultado&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-            //realiza a soma e imprime no console
-            resultado = num1 + num2;
-            Console.WriteLine(&amp;quot;Soma: &amp;quot; + resultado);
+            &lt;span class="c1"&gt;//realiza a soma e imprime no console&lt;/span&gt;
+            &lt;span class="n"&gt;resultado&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Soma: &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;resultado&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            //realiza a subtração e imprime no console
-            resultado = num1 - num2;
-            Console.WriteLine(&amp;quot;Subtração: &amp;quot; + resultado);
+            &lt;span class="c1"&gt;//realiza a subtração e imprime no console&lt;/span&gt;
+            &lt;span class="n"&gt;resultado&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Subtração: &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;resultado&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            //realiza a multiplicação e imprime no console
-            resultado = num1 * num2;
-            Console.WriteLine(&amp;quot;Multiplicação: &amp;quot; + resultado);
+            &lt;span class="c1"&gt;//realiza a multiplicação e imprime no console&lt;/span&gt;
+            &lt;span class="n"&gt;resultado&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="p"&gt;*&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Multiplicação: &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;resultado&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-            //realiza a divisão e imprime no console
-            resultado = num1 / num2;
-            Console.WriteLine(&amp;quot;Divisão: &amp;quot; + resultado);
-        }
-    }
-}
-&lt;/pre&gt;
+            &lt;span class="c1"&gt;//realiza a divisão e imprime no console&lt;/span&gt;
+            &lt;span class="n"&gt;resultado&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Divisão: &amp;quot;&lt;/span&gt; &lt;span class="p"&gt;+&lt;/span&gt; &lt;span class="n"&gt;resultado&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Conversão de Dados em C#</title><link href="http://excript.com/csharp/conversao-dados-csharp.html" rel="alternate"></link><published>2014-02-27T06:24:00-03:00</published><updated>2014-02-27T06:24:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-27:/csharp/conversao-dados-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -1277,11 +1243,10 @@ namespace Aula
 &lt;div class="section" id="conversao-numerica"&gt;
 &lt;h2&gt;CONVERSÃO NUMÉRICA&lt;/h2&gt;
 &lt;p&gt;A conversão de dados pela linguagem C- é bastante simples e temos funções definidas para a conversão de um tipo em qualquer outro definido pela linguagem. Assim, basta somente conhecermos os princípios de como ocorre a conversão de dados que em seguida, conseguiremos converter diversas informações.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-String s = &amp;quot;10&amp;quot;;
-int i;
-i = int.Parse(s);
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, nós declaramos 2 variáveis. Uma do tipo String e outra do tipo inteiro. O objetivo, é nós convertermos o número que foi adicionado como um String para a variável &lt;cite&gt;s&lt;/cite&gt; para a nossas variável inteira de nome &lt;cite&gt;i&lt;/cite&gt;.&lt;/p&gt;
 &lt;p&gt;A conversão, ocorre através da função &lt;cite&gt;int.Parse()&lt;/cite&gt;. Assim, temos que o nosso valor que é do tipo String será convertido para o tipo Inteiro.&lt;/p&gt;
 &lt;/div&gt;
@@ -1365,20 +1330,19 @@ i = int.Parse(s);
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-namespace Aula
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine(&amp;quot;Qualquer&amp;quot;);
-        }
-    }
-}
-&lt;/pre&gt;
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Qualquer&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>C# Project</title><link href="http://excript.com/csharp/csharp-project.html" rel="alternate"></link><published>2014-02-27T06:20:00-03:00</published><updated>2014-02-27T06:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-27:/csharp/csharp-project.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -1396,14 +1360,13 @@ namespace Aula
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;//Quais os pacotes que nós vamos utilizar
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//Quais os pacotes que nós vamos utilizar&lt;/span&gt;
 
-namespace Aula//Agrupador de instruções
-{
-    class eXcript//Modelo de um objeto
-    {
-        static void Main(string[] args …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;&lt;span class="c1"&gt;//Agrupador de instruções&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;eXcript&lt;/span&gt;&lt;span class="c1"&gt;//Modelo de um objeto&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1419,26 +1382,25 @@ namespace Aula//Agrupador de instruções
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-using System;//Quais os pacotes que nós vamos utilizar
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//Quais os pacotes que nós vamos utilizar&lt;/span&gt;
 
-namespace Aula//Agrupador de instruções
-{
-    class eXcript//Modelo de um objeto
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine(&amp;quot;eXcript.&amp;quot;);
-        }
-    }
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Aula&lt;/span&gt;&lt;span class="c1"&gt;//Agrupador de instruções&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;eXcript&lt;/span&gt;&lt;span class="c1"&gt;//Modelo de um objeto&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;eXcript.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
 
-    class classe2
-    {
+    &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;classe2&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
 
-    }
+    &lt;span class="p"&gt;}&lt;/span&gt;
 
-}
-&lt;/pre&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="csharp"></category></entry><entry><title>Entrada de Dados em C#</title><link href="http://excript.com/csharp/entrada-de-dados-csharp.html" rel="alternate"></link><published>2014-02-27T06:20:00-03:00</published><updated>2014-02-27T06:20:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-02-27:/csharp/entrada-de-dados-csharp.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -1473,10 +1435,9 @@ namespace Aula//Agrupador de instruções
 &lt;div class="section" id="entrada-de-dados"&gt;
 &lt;h2&gt;ENTRADA DE DADOS&lt;/h2&gt;
 &lt;p&gt;Nós já aprendemos que podemos imprimir dados na tela através da função &lt;cite&gt;WriteLine()&lt;/cite&gt;, agora, vamos estudar como que nós podemos ler o que o nosso usuário digita e armazenar esse valor numa variável. Assim, seremos capazes que receber uma informação e em seguida, processar a mesma, por exemplo:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-String texto;
-texto = Console.ReadLine()
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;texto&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;texto&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ReadLine&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, estamos declarando uma variável que é todo tipo String e de nome &amp;quot;texto&amp;quot; e seguida, através da classe Console, lemos o que o usuário digitou no prompt de comando e atribuímos essa valor para a variável de nome texto.
 Assim, temos que podemos ler o que um usuário digita através da função &lt;cite&gt;ReadLine()&lt;/cite&gt; implementada na classe Console.&lt;/p&gt;
 &lt;/div&gt;

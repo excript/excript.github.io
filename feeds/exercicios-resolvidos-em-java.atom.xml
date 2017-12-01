@@ -32,45 +32,43 @@
 &lt;div class="section" id="exercicio"&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Escreva um pequeno software que peça a sua idade e a idade da sua mãe. Em seguida, imprima na tela as 3 informações a seguir:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-a sua idade
-a idade da sua mãe
-minha mãe é &amp;lt;anos&amp;gt; mais velha do que eu
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;sua&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="n"&gt;da&lt;/span&gt; &lt;span class="n"&gt;sua&lt;/span&gt; &lt;span class="n"&gt;mãe&lt;/span&gt;
+&lt;span class="n"&gt;minha&lt;/span&gt; &lt;span class="n"&gt;mãe&lt;/span&gt; &lt;span class="n"&gt;é&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;anos&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;mais&lt;/span&gt; &lt;span class="n"&gt;velha&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="n"&gt;eu&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Nota(s):
 substitua o texto &amp;lt;anos&amp;gt; pela diferença entre a sua idade e a de sua mãe.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-import java.util.Scanner;
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J0100 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0100&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    //Diferença de idade
-    public static void main(String[] args) {
+    &lt;span class="c1"&gt;//Diferença de idade&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-        Scanner in = new Scanner(System.in);
+        &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
-        // 1) é obter a idade do nosso do usuário
-        System.out.println(&amp;quot;Digite a sua idade: &amp;quot;);
-        int idadeUsu = in.nextInt();
-        // 2) é obter a idade da mãe do nosso usuário
-        System.out.println(&amp;quot;Informe a idade da sua mãe: &amp;quot;);
-        int idadeMae = in.nextInt();
-        // 3) subtrair a idade da mãe pela idade do usuário
-        int diff = idadeMae - idadeUsu;
-        // 4) é imprimir o texto e substituir a tag &amp;lt;anos&amp;gt;
-        System.out.printf(&amp;quot;Minha mãe é %d anos mais velha do que eu!&amp;quot;, diff);
-    }
-}
-&lt;/pre&gt;
+        &lt;span class="c1"&gt;// 1) é obter a idade do nosso do usuário&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite a sua idade: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idadeUsu&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="c1"&gt;// 2) é obter a idade da mãe do nosso usuário&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Informe a idade da sua mãe: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idadeMae&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="c1"&gt;// 3) subtrair a idade da mãe pela idade do usuário&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;diff&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;idadeMae&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;idadeUsu&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="c1"&gt;// 4) é imprimir o texto e substituir a tag &amp;lt;anos&amp;gt;&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;printf&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Minha mãe é %d anos mais velha do que eu!&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Login e Senha (j0101)</title><link href="http://excript.com/java/exercicio-java-login-e-senha.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:/java/exercicio-java-login-e-senha.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -110,39 +108,38 @@ public class J0100 {
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-import java.util.Scanner;
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J0101 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0101&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
 
-    //Login e senha
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        // 1) Informe o seu login
-        System.out.println(&amp;quot;login&amp;gt; &amp;quot;);
-        String login = in.nextLine();
-        // 2) Informe a sua senha
-        System.out.println(&amp;quot;senha&amp;gt; &amp;quot;);
-        String senha = in.nextLine();
-        // 3) Armazenar em variaveis o login e a senha
-        // 4) Verificar se o login e a senha estão corretos
-        // login == &amp;quot;claudio&amp;quot;
-        // Estamos comparando uma instância(objeto) com uma string
-        if(login.equals(&amp;quot;claudio&amp;quot;) &amp;amp;&amp;amp; senha.equals(&amp;quot;123456789-09&amp;quot;)){
-            System.out.printf(&amp;quot;Usuário %s logado com sucesso.&amp;quot;, login);
-        }else{
-            System.out.println(&amp;quot;Login ou senha inválidos!&amp;quot;);
-        }
-    }
-}
-&lt;/pre&gt;
+    &lt;span class="c1"&gt;//Login e senha&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;// 1) Informe o seu login&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;login&amp;gt; &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;login&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextLine&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="c1"&gt;// 2) Informe a sua senha&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;senha&amp;gt; &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;senha&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextLine&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="c1"&gt;// 3) Armazenar em variaveis o login e a senha&lt;/span&gt;
+        &lt;span class="c1"&gt;// 4) Verificar se o login e a senha estão corretos&lt;/span&gt;
+        &lt;span class="c1"&gt;// login == &amp;quot;claudio&amp;quot;&lt;/span&gt;
+        &lt;span class="c1"&gt;// Estamos comparando uma instância(objeto) com uma string&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;equals&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;claudio&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;senha&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;equals&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;123456789-09&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)){&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;printf&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Usuário %s logado com sucesso.&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Login ou senha inválidos!&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Simplificação (j0110)</title><link href="http://excript.com/java/exercicio-java-simplificacao.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:/java/exercicio-java-simplificacao.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -181,50 +178,47 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;p&gt;Reescreva o código a seguir a fim de se utilizar o mínimo de linha possíveis:
 Nota(s):
 Amontoar linhas não soluciona o problema. O código a seguir não é simplificação e sim, confusão:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-int x = 0; x = System.out.println(&amp;quot;Digite um número&amp;quot;);
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Escreva de forma tal a utilizar somente 4 linhas&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-Scanner in = new Scanner(System.in);
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
-System.out.println(&amp;quot;Simplificando expressões para reduzir o número de linhas&amp;quot;);
-     int x = 0;
-     x = in.nextInt();
-     if(x &amp;amp;gt; 10){
-      System.out.println(&amp;quot;O número digitado é maior do que 10&amp;quot;);
-}else{
-      System.out.println(&amp;quot;O número digitado é menor do que 10&amp;quot;);
-}
-&lt;/pre&gt;
+&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Simplificando expressões para reduzir o número de linhas&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+     &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+     &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+     &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
+      &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O número digitado é maior do que 10&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O número digitado é menor do que 10&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-import java.util.Scanner;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J0110 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0110&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    //Simplificação
-    public static void main(String[] args) {
-        //Scanner in = new Scanner(System.in);
+    &lt;span class="c1"&gt;//Simplificação&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;//Scanner in = new Scanner(System.in);&lt;/span&gt;
 
-        System.out.println(&amp;quot;Simplificando expressões para reduzir o número de linhas&amp;quot;);
-        //int x = new Scanner(System.in).nextInt();
-        //String s = (new Scanner(System.in).nextInt() &amp;gt; 10) ? &amp;quot;maior&amp;quot;:&amp;quot;menor&amp;quot;;
-        System.out.println(&amp;quot;O número digitado é &amp;quot;+
-            ((new Scanner(System.in).nextInt() &amp;gt; 10) ? &amp;quot;maior&amp;quot;:&amp;quot;menor&amp;quot;) +
-                &amp;quot; do que 10&amp;quot;);
-    }
-}
-&lt;/pre&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Simplificando expressões para reduzir o número de linhas&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;//int x = new Scanner(System.in).nextInt();&lt;/span&gt;
+        &lt;span class="c1"&gt;//String s = (new Scanner(System.in).nextInt() &amp;gt; 10) ? &amp;quot;maior&amp;quot;:&amp;quot;menor&amp;quot;;&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O número digitado é &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;
+            &lt;span class="o"&gt;((&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;).&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;maior&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;menor&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                &lt;span class="s"&gt;&amp;quot; do que 10&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Soma de 1 à 100 (j1002)</title><link href="http://excript.com/java/exercicio-java-soma-1-100.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:/java/exercicio-java-soma-1-100.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -246,17 +240,16 @@ public class J0110 {
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J1002 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J1002&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    //Soma …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+    &lt;span class="c1"&gt;//Soma …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -276,38 +269,37 @@ public class J1002 {
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J1002 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J1002&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    //Soma de 1 à 100
-    public static void main(String[] args) {
+    &lt;span class="c1"&gt;//Soma de 1 à 100&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-        int soma = 0;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
-        System.out.print(&amp;quot;A soma dos 100 primeiros números é: &amp;quot;);
-        for(int i = 1; i&amp;lt;=100; i++)
-            soma += i;
-            //soma = soma + i
-        System.out.println(soma);
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;A soma dos 100 primeiros números é: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++)&lt;/span&gt;
+            &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+            &lt;span class="c1"&gt;//soma = soma + i&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
-        System.out.print(&amp;quot;A soma utilizando a instrução WHILE: &amp;quot;);
-        int soma2 = 0, i2 = 0;
-        while(i2&amp;lt;=100){
-            soma2+=i2;
-            i2++;
-            //soma2 = soma2 + i2;
-        }
-        System.out.println(soma2);
-    }
-}
-&lt;/pre&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;A soma utilizando a instrução WHILE: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i2&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
+            &lt;span class="n"&gt;soma2&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;i2&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+            &lt;span class="n"&gt;i2&lt;/span&gt;&lt;span class="o"&gt;++;&lt;/span&gt;
+            &lt;span class="c1"&gt;//soma2 = soma2 + i2;&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;soma2&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Soma do Algarismos (recursividade) (j1004c)</title><link href="http://excript.com/java/exercicio-java-soma-algarismos-recursividade-3.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:/java/exercicio-java-soma-algarismos-recursividade-3.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -327,8 +319,7 @@ public class J1002 {
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa (utilizando recursividade) que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.&lt;/p&gt;
 &lt;p&gt;Exemplos:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-1111 = 1+1+1+1 = 4 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -346,46 +337,44 @@ public class J1002 {
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa (utilizando recursividade) que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.&lt;/p&gt;
 &lt;p&gt;Exemplos:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-1111 = 1+1+1+1 = 4
-2090 = 2 + 0 + 9 + 0 = 11
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;2090&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-import java.util.Scanner;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J1004c {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J1004c&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    public static int somaAlgarismosC(int num){
-        //se a variavel num for igual a 10, significa
-        //que nós já somamos todos os algarismos
-        if(num&amp;lt;10)
-            return num;
-        else
-            return somaAlgarismosC(num/10)+num%10;
-    }
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;somaAlgarismosC&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
+        &lt;span class="c1"&gt;//se a variavel num for igual a 10, significa&lt;/span&gt;
+        &lt;span class="c1"&gt;//que nós já somamos todos os algarismos&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;somaAlgarismosC&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;)+&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
 
-    // (Recursividade)
-    // Soma de todos os algarismos
-    public static void main(String[] args) {
+    &lt;span class="c1"&gt;// (Recursividade)&lt;/span&gt;
+    &lt;span class="c1"&gt;// Soma de todos os algarismos&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-        System.out.println(&amp;quot;Digite um número: &amp;quot;);
-        int num = new Scanner(System.in).nextInt();
-        int soma = somaAlgarismosC(num);
-        System.out.println(&amp;quot;A soma dos algarismos é: &amp;quot; + soma);
-    }
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;).&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;somaAlgarismosC&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;A soma dos algarismos é: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
 
-}
-&lt;/pre&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Soma dos Algarismos (j1004)</title><link href="http://excript.com/java/exercicio-java-soma-dos-algarismos.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:/java/exercicio-java-soma-dos-algarismos.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -405,9 +394,8 @@ public class J1004c {
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.&lt;/p&gt;
 &lt;p&gt;Exemplos:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-1111 = 1+1+1+1 = 4
-2090 = 2 + 0 + 9 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;2090&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;9 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -425,50 +413,48 @@ public class J1004c {
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.&lt;/p&gt;
 &lt;p&gt;Exemplos:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-1111 = 1+1+1+1 = 4
-2090 = 2 + 0 + 9 + 0 = 11
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;2090&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-import java.util.Scanner;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J1004 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J1004&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    //Soma de todos os algarismos
-    public static void main(String[] args) {
-        System.out.println(&amp;quot;Informe um número: &amp;quot;);
-        int num = new Scanner(System.in).nextInt();
-        int soma = 0;
-        //123 -&amp;gt; dividirmos por 10, o resultado será 12, e sobra = 3
-        //(123 / 10) = 12 -&amp;gt; (123 % 10) = 3
-        //(12  / 10) = 1  -&amp;gt; (12  % 10) = 2
-        //(1   / 10) = 0  -&amp;gt; (1   % 10) = 1
+    &lt;span class="c1"&gt;//Soma de todos os algarismos&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Informe um número: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;).&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="c1"&gt;//123 -&amp;gt; dividirmos por 10, o resultado será 12, e sobra = 3&lt;/span&gt;
+        &lt;span class="c1"&gt;//(123 / 10) = 12 -&amp;gt; (123 % 10) = 3&lt;/span&gt;
+        &lt;span class="c1"&gt;//(12  / 10) = 1  -&amp;gt; (12  % 10) = 2&lt;/span&gt;
+        &lt;span class="c1"&gt;//(1   / 10) = 0  -&amp;gt; (1   % 10) = 1&lt;/span&gt;
 
-        while(num&amp;gt;0) {
-            // 1) obter o módulo do número digitado
-          //int modulo = num % 10;
-            // 2) incrementar o módulo a nossa variavel soma
-            soma += (num % 10);
-            // 3) dividir o número por 10 e atribuirmos a nossa varial 'num'
-            num /= 10;//num = num / 10;
-            System.out.println(&amp;quot;O valor de soma é: &amp;quot; + soma);
-        }
-        System.out.println();
-        System.out.println(&amp;quot;A soma dos algarismos é: &amp;quot; + soma);
+        &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;// 1) obter o módulo do número digitado&lt;/span&gt;
+          &lt;span class="c1"&gt;//int modulo = num % 10;&lt;/span&gt;
+            &lt;span class="c1"&gt;// 2) incrementar o módulo a nossa variavel soma&lt;/span&gt;
+            &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+            &lt;span class="c1"&gt;// 3) dividir o número por 10 e atribuirmos a nossa varial &amp;#39;num&amp;#39;&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;/=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//num = num / 10;&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O valor de soma é: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;A soma dos algarismos é: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
-    }
-}
-&lt;/pre&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Soma dos números num intervalo (j1003)</title><link href="http://excript.com/java/exercicio-java-soma-numeros-intervalo.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:/java/exercicio-java-soma-numeros-intervalo.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -506,58 +492,57 @@ public class J1004 {
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-import java.util.Scanner;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J1003 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J1003&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    //Soma de todos os números de um intervalo
-    public static void main(String[] args) {
-        //Criamos uma nova instancia da classe Scanner
-        Scanner in = new Scanner(System.in);
-        //Imprimimos a frase pedindo o inicio do intervalo
-        System.out.println(&amp;quot;Informe o início do intevalo: &amp;quot;);
-        //Capturamos o inicio do intervalo
-        int ini = in.nextInt();
-        //Imprimimos a frase pedindo o término do intervalo
-        System.out.println(&amp;quot;Informe o final do intervalo: &amp;quot;);
-        //Capturamos o término do intervalo
-        int fim = in.nextInt();
+    &lt;span class="c1"&gt;//Soma de todos os números de um intervalo&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;//Criamos uma nova instancia da classe Scanner&lt;/span&gt;
+        &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;//Imprimimos a frase pedindo o inicio do intervalo&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Informe o início do intevalo: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;//Capturamos o inicio do intervalo&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;ini&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="c1"&gt;//Imprimimos a frase pedindo o término do intervalo&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Informe o final do intervalo: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;//Capturamos o término do intervalo&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;fim&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
 
-        int i = ini;
-        int soma = ini;
-        //1..5
-        while(i&amp;lt;fim){
-            i++;
-            soma+=i;
-            //soma = soma + i;
-        }
-        System.out.println(soma);
-/*i    = 1
-  ini  = 1
-  soma = 1
-  fim  = 5
-     - --- ---
-  | variável.......|   i    |     soma    | soma + i      | fim   |
-  | valor inicial..|   1    |       1     |   1  + 1      |  5    |
-  | expressão......| i=i+1  | soma=soma+i |               |       |
-  | -- ||-|---|---|
-  |1 ciclo(i&amp;lt;5)....|  i=1   | soma=1      |   1  + 2 = 3  |    5  |
-  |2 ciclo(i&amp;lt;5)....|  i=2   | soma=3      |   3  + 3 = 6  |    5  |
-  |3 ciclo(i&amp;lt;5)....|  i=3   | soma=6      |   6  + 4 = 10 |    5  |
-  |4 ciclo(i&amp;lt;5)....|  i=4   | soma=10     |   10 + 5 = 15 |    5  |
-     - --- --- */
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ini&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ini&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="c1"&gt;//1..5&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;fim&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
+            &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++;&lt;/span&gt;
+            &lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+            &lt;span class="c1"&gt;//soma = soma + i;&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="cm"&gt;/*i    = 1&lt;/span&gt;
+&lt;span class="cm"&gt;  ini  = 1&lt;/span&gt;
+&lt;span class="cm"&gt;  soma = 1&lt;/span&gt;
+&lt;span class="cm"&gt;  fim  = 5&lt;/span&gt;
+&lt;span class="cm"&gt;     - --- ---&lt;/span&gt;
+&lt;span class="cm"&gt;  | variável.......|   i    |     soma    | soma + i      | fim   |&lt;/span&gt;
+&lt;span class="cm"&gt;  | valor inicial..|   1    |       1     |   1  + 1      |  5    |&lt;/span&gt;
+&lt;span class="cm"&gt;  | expressão......| i=i+1  | soma=soma+i |               |       |&lt;/span&gt;
+&lt;span class="cm"&gt;  | -- ||-|---|---|&lt;/span&gt;
+&lt;span class="cm"&gt;  |1 ciclo(i&amp;lt;5)....|  i=1   | soma=1      |   1  + 2 = 3  |    5  |&lt;/span&gt;
+&lt;span class="cm"&gt;  |2 ciclo(i&amp;lt;5)....|  i=2   | soma=3      |   3  + 3 = 6  |    5  |&lt;/span&gt;
+&lt;span class="cm"&gt;  |3 ciclo(i&amp;lt;5)....|  i=3   | soma=6      |   6  + 4 = 10 |    5  |&lt;/span&gt;
+&lt;span class="cm"&gt;  |4 ciclo(i&amp;lt;5)....|  i=4   | soma=10     |   10 + 5 = 15 |    5  |&lt;/span&gt;
+&lt;span class="cm"&gt;     - --- --- */&lt;/span&gt;
 
-    }
-}
-&lt;/pre&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Tabuada ao Avesso (j0111)</title><link href="http://excript.com/java/exercicio-java-tabuada-ao-avesso.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:/java/exercicio-java-tabuada-ao-avesso.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -612,43 +597,42 @@ Exemplo:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-import java.util.Scanner;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J0111 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0111&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    //Tabuada ao avesso
-    public static void main(String[] args) {
+    &lt;span class="c1"&gt;//Tabuada ao avesso&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-        //Pedimos para o usuário informar a tabuada
-        System.out.println(&amp;quot;Digite a tabuada que você deseja: &amp;quot;);
-        //Criamos uma instância da da classe Scanner
-        Scanner in = new Scanner(System.in);
-        //Pegamos o valor digitado pelo usuário
-        int tabuada = in.nextInt();
+        &lt;span class="c1"&gt;//Pedimos para o usuário informar a tabuada&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite a tabuada que você deseja: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;//Criamos uma instância da da classe Scanner&lt;/span&gt;
+        &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;//Pegamos o valor digitado pelo usuário&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;tabuada&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
 
-        for(int i = 10; i &amp;gt;= 1; i--){
-            //Ax X Bx = Cx
-            //Ax -&amp;gt; valor informado pelo usuário
-            //Bx -&amp;gt; valor a ser decrementado
-            //Cx -&amp;gt; cálculo
-            System.out.println(tabuada +
-                                 &amp;quot; x &amp;quot; +
-                                 i +
-                                 &amp;quot; = &amp;quot; +
-                                 (tabuada*i));
-            // Ax X Bx = Cx
-        }
-    }
-}
-&lt;/pre&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;--){&lt;/span&gt;
+            &lt;span class="c1"&gt;//Ax X Bx = Cx&lt;/span&gt;
+            &lt;span class="c1"&gt;//Ax -&amp;gt; valor informado pelo usuário&lt;/span&gt;
+            &lt;span class="c1"&gt;//Bx -&amp;gt; valor a ser decrementado&lt;/span&gt;
+            &lt;span class="c1"&gt;//Cx -&amp;gt; cálculo&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tabuada&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                                 &lt;span class="s"&gt;&amp;quot; x &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                                 &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                                 &lt;span class="s"&gt;&amp;quot; = &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                                 &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tabuada&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
+            &lt;span class="c1"&gt;// Ax X Bx = Cx&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Soma do Algarismos (recursividade) (j1004b)</title><link href="http://excript.com/java/v2_soma_de_todos_algarismos_com_recursividade_j1004b.html" rel="alternate"></link><published>2016-01-01T00:00:00-02:00</published><updated>2016-01-01T00:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-01:/java/v2_soma_de_todos_algarismos_com_recursividade_j1004b.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -668,8 +652,7 @@ public class J0111 {
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa (utilizando recursividade) que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.
 Exemplos:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-1111 = 1+1+1 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -687,46 +670,44 @@ Exemplos:&lt;/p&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa (utilizando recursividade) que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.
 Exemplos:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-1111 = 1+1+1+1 = 4
-2090 = 2 + 0 + 9 + 0 = 11
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;2090&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-import java.util.Scanner;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J1004b {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J1004b&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    public static int somaAlgarismosB(int num, int somaMomentanea){
-        if(num&amp;lt;1)
-            return somaMomentanea;
-        somaMomentanea+=(num%10);
-        return somaAlgarismosB(num/10, somaMomentanea);
-    }
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;somaAlgarismosB&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;somaMomentanea&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;somaMomentanea&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="n"&gt;somaMomentanea&lt;/span&gt;&lt;span class="o"&gt;+=(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;somaAlgarismosB&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;somaMomentanea&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
 
-    // (Recursividade)
-    // Soma de todos os algarismos
-    public static void main(String[] args) {
-        System.out.println(&amp;quot;Digite um número: &amp;quot;);
+    &lt;span class="c1"&gt;// (Recursividade)&lt;/span&gt;
+    &lt;span class="c1"&gt;// Soma de todos os algarismos&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
-        int num = new Scanner(System.in).nextInt();
-        int soma = somaAlgarismosB(num, 0);
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;).&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;somaAlgarismosB&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
-        System.out.println(&amp;quot;O valor da soma dos algarismos é: &amp;quot; + soma);
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O valor da soma dos algarismos é: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
-    }
+    &lt;span class="o"&gt;}&lt;/span&gt;
 
-}
-&lt;/pre&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Lendo e imprimindo texto e números (j0011)</title><link href="http://excript.com/java/exercicio-java-lendo-imprimindo-texto-numeros.html" rel="alternate"></link><published>2014-10-07T17:07:00-03:00</published><updated>2014-10-07T17:07:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-07:/java/exercicio-java-lendo-imprimindo-texto-numeros.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -768,54 +749,51 @@ public class J1004b {
 &lt;p&gt;O usuário &lt;strong&gt;João Moacir Barth Junior&lt;/strong&gt; fez uma correção e um adendo a implementação que fizemos nesta aula. A seguir, há uma explicação do problema por ele observado.&lt;/p&gt;
 &lt;p&gt;O código a seguir executa sem quaisquer erro. Porém, é importante observar a forma como iremos ler números inteiros.&lt;/p&gt;
 &lt;p&gt;Na resolução do exercício lemos um número inteiro utilizando a seguinte linha de código:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-int idade = in.nextInt();
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O código acima funciona e o número digitado no Console pelo usuário é passado para a variável inteira &lt;code&gt;idade&lt;/code&gt;. Porém, &lt;a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#nextLine()"&gt;a instrução nextInt() lê um ou N valores inteiros&lt;/a&gt;, desde que estes estejam separados por espaço. Isso significa que após lermos um número com a função &lt;code&gt;nextInt()&lt;/code&gt; o Cursor continuara na mesma linha e será nossa tarefa posicionar o mesmo na linha abaixo, caso queiramos que ler outros valores pelo Console que o nosso usuário venha a digitar.&lt;/p&gt;
 &lt;p&gt;Pra isso, é necessário invocar a função &lt;code&gt;nextLine()&lt;/code&gt;, do contrário, será levantado uma exceção. A seguir temos o código que deverá ser utilizado para ler números inteiros e em seguida, posicionar o Cursor na linha seguinte.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-int idade = in.nextInt();
-in.nextLine();
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextLine&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-import java.util.Scanner;
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J0011 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0011&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    //Lendo e imprimindo textos e números
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        // 1) pedir pro usuário informar:
-            //1) Nome
-        System.out.println(&amp;quot;Digite o seu nome: &amp;quot;);
-        String nome = in.nextLine();
-            //2) Idade
-            System.out.println(&amp;quot;Informe a sua idade: &amp;quot;);
-            int idade = in.nextInt();
-            //3) Cidade
-            System.out.println(&amp;quot;Informe a sua cidade de nascimento: &amp;quot;);
-            String cidade = in.next();
+    &lt;span class="c1"&gt;//Lendo e imprimindo textos e números&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;// 1) pedir pro usuário informar:&lt;/span&gt;
+            &lt;span class="c1"&gt;//1) Nome&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite o seu nome: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;nome&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextLine&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+            &lt;span class="c1"&gt;//2) Idade&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Informe a sua idade: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+            &lt;span class="c1"&gt;//3) Cidade&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Informe a sua cidade de nascimento: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;cidade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;next&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
 
-        // 2) armazenar as informações do usuário em variáveis
-        // 3) alterar a frase do enunciado
-        // Ola. Meu nome é &amp;lt;nome&amp;gt;, sou natural de &amp;lt;cidade&amp;gt;,
-        //  tenho &amp;lt;idade&amp;gt; anos, e estou aprendendo a programar.
-            System.out.print(&amp;quot;Ola. Meu nome é &amp;quot;+nome);
-            System.out.print(&amp;quot;, sou natural de &amp;quot;+cidade);
-            System.out.print(&amp;quot;, tenho &amp;quot;+idade);
-            System.out.print(&amp;quot; anos, e estou aprendendo a programar.&amp;quot;);
-    }
-}
-&lt;/pre&gt;
+        &lt;span class="c1"&gt;// 2) armazenar as informações do usuário em variáveis&lt;/span&gt;
+        &lt;span class="c1"&gt;// 3) alterar a frase do enunciado&lt;/span&gt;
+        &lt;span class="c1"&gt;// Ola. Meu nome é &amp;lt;nome&amp;gt;, sou natural de &amp;lt;cidade&amp;gt;,&lt;/span&gt;
+        &lt;span class="c1"&gt;//  tenho &amp;lt;idade&amp;gt; anos, e estou aprendendo a programar.&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Ola. Meu nome é &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, sou natural de &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;cidade&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, tenho &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;idade&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot; anos, e estou aprendendo a programar.&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
 &lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
@@ -860,32 +838,31 @@ Link para a &lt;a class="reference external" href="http://docs.oracle.com/javase
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J0001 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0001&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    //Imprimindo textos
-    public static void main(String[] args) {
-        // 1) imprimir o texto &amp;quot;Ola mundo&amp;quot;
-        System.out.println(&amp;quot;Ola mundo&amp;quot;);
+    &lt;span class="c1"&gt;//Imprimindo textos&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// 1) imprimir o texto &amp;quot;Ola mundo&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Ola mundo&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
-        // 2) imprimir o número 522
-        System.out.println(522);
+        &lt;span class="c1"&gt;// 2) imprimir o número 522&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;522&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
-        // 3) imprimir uma linha em branco
-        System.out.println();
+        &lt;span class="c1"&gt;// 3) imprimir uma linha em branco&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
 
-        // 4) imprimir mais um texto
-        System.out.println(&amp;quot;Seja bem-vindo a lista de exercícios resolvidos.&amp;quot;);
-    }
-}
-&lt;/pre&gt;
+        &lt;span class="c1"&gt;// 4) imprimir mais um texto&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Seja bem-vindo a lista de exercícios resolvidos.&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry><entry><title>Exercício de Java - Imprimindo texto e números (j0010)</title><link href="http://excript.com/java/exercicio-java-imprimindo-texto-numero.html" rel="alternate"></link><published>2014-10-07T14:30:00-03:00</published><updated>2014-10-07T14:30:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2014-10-07:/java/exercicio-java-imprimindo-texto-numero.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -923,47 +900,45 @@ public class J0001 {
 &lt;p&gt;Agora, vamos resolver o exercício que pede: Faça um programa que imprima a frase: &amp;quot;Seja bem-vindo ao meu programa!&amp;quot;&lt;/p&gt;
 &lt;p&gt;Em seguida, imprima uma linha em branco e na na sequência, imprima as frases e o resultado da expressões matemáticas.&lt;/p&gt;
 &lt;p&gt;Cada frase e seu resultado devem estar na mesma linha.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-&amp;quot;O produto de 8 por 90 é igual a:&amp;quot;
-&amp;quot;O quociente de 90 por 30 é igual a:&amp;quot;
-&amp;quot;O quadrado de 9 é:&amp;quot;
-&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O produto de 8 por 90 é igual a:&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;O quociente de 90 por 30 é igual a:&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;O quadrado de 9 é:&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Nota(s):
 Em cada expressão matemática, você deve imprimir o resultado de uma expressão na qual o compilador é quem resolveu. Ou seja, é para concatenar a frase sugerida no enunciado com o resultado.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
+&lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
+&lt;span class="cm"&gt; * ====================================&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
 
-public class J0010 {
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0010&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-    //Imprimindo textos e números
-    public static void main(String[] args) {
+    &lt;span class="c1"&gt;//Imprimindo textos e números&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
-//        1) imprimir a frase: &amp;quot;Seja bem-vindo ao meu programa.&amp;quot;
-        System.out.println(&amp;quot;Seja bem-vindo ao meu programa.&amp;quot;);
-//        2) calcular o produto de 8 por 90
-        System.out.print(&amp;quot;O produto de 8 por 90 é: &amp;quot;);
-        System.out.println(8*90);
-//        3) calcular o quociente 90 por 30
-        System.out.println(&amp;quot;O quociente de 90 por 30 é: &amp;quot; + 90/30);
-//        4) calcular o quadrado de 9
-        System.out.print(&amp;quot;O quadrado de 9 é: &amp;quot;);
-        System.out.print(9*9);
-        System.out.print(&amp;quot;\n&amp;quot;);
-        System.out.print(&amp;quot;\n&amp;quot;);
-        System.out.print(&amp;quot;\n&amp;quot;);
-        System.out.print(&amp;quot;\n&amp;quot;);
+&lt;span class="c1"&gt;//        1) imprimir a frase: &amp;quot;Seja bem-vindo ao meu programa.&amp;quot;&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Seja bem-vindo ao meu programa.&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="c1"&gt;//        2) calcular o produto de 8 por 90&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O produto de 8 por 90 é: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;90&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="c1"&gt;//        3) calcular o quociente 90 por 30&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O quociente de 90 por 30 é: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;90&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="c1"&gt;//        4) calcular o quadrado de 9&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O quadrado de 9 é: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;print&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
 
-    }
-}
-&lt;/pre&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="exercício"></category><category term="resolvidos"></category><category term="em"></category><category term="java"></category></entry></feed>
