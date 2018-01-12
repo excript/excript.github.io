@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos o desenvolvimento de uma aplicação que retorna a tabuada desejada ao usuário da nossa aplicação."/>
 
         <meta property="article:published_time" content="13-03-2015" />
+
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
@@ -355,9 +356,8 @@ eXcript            </a>
 <p>Nesta aula, iremos desenvolver um programa que pergunta ao usuário qual a tabuada o mesmo deseja e então, com a utilização de uma laço de repetição <cite>for</cite>, calcula e imprime na tela a tabuada solicitada.</p>
 <p>Esse é um excelente exercício para aprimorarmos a forma como lidamos com os laços de repetição e também, faz com que tenhamos que utilizar técnicas distintas para percorrer os números de 1 até 10.</p>
 <p>No exemplo realizado nesse vídeo, nós inicializamos a variável chamada de <cite>n</cite> da seguinte maneira:</p>
-<pre class="literal-block">
-int n = 0;
-</pre>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
 <p>Quando declaramos que queremos um espaço de memória, ou melhor, quando declaramos uma variável qualquer, o que acontece é que um espaço de memória é reservado e o tamanho desse espaço é o tamanho do tipo da variável. Então, temos que o nome da variável, o nome que utilizamos para fazer uso da mesma é chamado de REFERÊNCIA. Então, temos uma referência para uma determinada região de memória.</p>
 <p>O que acontece, é que as regiões de memória contém valores comumente chamado de lixo - são os lixos de memória. Logo, quando declaramos uma variável, não temos a certeza de que a mesma irá conter, por exemplo o valor 0.</p>
 <p>Fato é que o valor que a variável ira ter na inicialização é impossível de prever!</p>
@@ -367,38 +367,37 @@ Porém, em aplicações maiores, acontece de nós declararmos uma variável e fa
 <p>É obrigatório? Não! Mas trabalhe assim que é muito mais seguro!!!</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;iostream&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-/*====================================
-*           eXcript.com
-*          fb.com/eXcript
-* ====================================*/
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
 
-using namespace std;
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-int main() {
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
-    //1) Perguntar qual a tabuada para o usuario
-    //   e armazenar o valor numa variavel
+    <span class="c1">//1) Perguntar qual a tabuada para o usuario</span>
+    <span class="c1">//   e armazenar o valor numa variavel</span>
 
-    cout &lt;&lt; &quot;Por favor, informe a tabuada que voce deseja: &quot; &lt;&lt; endl;
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Por favor, informe a tabuada que voce deseja: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 
-    int n = 0;
-    cin &gt;&gt; n;
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
 
-    //2) Implementação de um laço de repetição FOR
-    for(int i = 1; i&lt;=10; i++){
-        //3) Imprimir a tabuada na tela
-        cout &lt;&lt; i &lt;&lt; &quot; x &quot; &lt;&lt; n &lt;&lt; &quot; = &quot; &lt;&lt; i*n &lt;&lt; endl;
-    }
+    <span class="c1">//2) Implementação de um laço de repetição FOR</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="c1">//3) Imprimir a tabuada na tela</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; x &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="o">*</span><span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
 
 
-    system(&quot;pause&quot;);
-    return 0;
-}
-</pre>
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

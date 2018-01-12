@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos o conceito de herança segundo a Orientação a Objetos. Em seguida, faremos um exemplo para estudarmos a aplicação do conceito da herança em uma situação real."/>
 
         <meta property="article:published_time" content="11-06-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -518,50 +519,48 @@ eXcript            </a>
 <div class="section" id="a-sintaxe-para-uso-da-heranca">
 <h2>A SINTAXE PARA USO DA HERANÇA</h2>
 <p>Uma classe herdeira, deverá, por definição, utilizar a instrução <cite>extends</cite> e, em seguida, definir a classe que será estendida. O código a seguir faz uma breve demonstração da nomenclatura que deve ser utilizada.</p>
-<pre class="literal-block">
-class Pai()
-{
+<div class="highlight"><pre><span></span><span class="x">class Pai()</span>
+<span class="x">{</span>
 
-}
+<span class="x">}</span>
 
-class Filho extends Pai
-{
-    #a classe filha utiliza a instrução `extends` e em seguida define
-    # o nome da classe que está sendo estendida
-}
-</pre>
+<span class="x">class Filho extends Pai</span>
+<span class="x">{</span>
+<span class="x">    #a classe filha utiliza a instrução `extends` e em seguida define</span>
+<span class="x">    # o nome da classe que está sendo estendida</span>
+<span class="x">}</span>
+</pre></div>
 <p>Como podemos ver no trecho de código acima, a classe <cite>Pai</cite> está sendo estendida pela classe de nome <cite>Filha</cite> e, para isso, utilizou-se a instrução <cite>extends</cite>.</p>
 </div>
 <div class="section" id="como-a-subclasse-utiliza-os-membros-da-super">
 <h2>COMO A SUBCLASSE UTILIZA OS MEMBROS DA SUPER</h2>
 <p>Toda SubClasse poderá acessar os membros da <strong>super</strong> diretamente, como se estes membros tivessem sido declarados em seu corpo. Segundo a teoria da Orientação a Objetos, toda classe herdeira deve ter acesso direto ao membros públicos e protegidos da super.</p>
 <p>Assim, salvo se lermos o código, não será possível saber em qual nível hierarquico que determinado membro foi definido.</p>
-<pre class="literal-block">
-class SuperClasse {
+<div class="highlight"><pre><span></span><span class="x">class SuperClasse {</span>
 
-    public $a = 'variável $a';
+<span class="x">    public $a = &#39;variável $a&#39;;</span>
 
-    public function ola()
-    {
-        echo &quot;SuperClasse-&gt;ola()&quot;;
-    }
-}
+<span class="x">    public function ola()</span>
+<span class="x">    {</span>
+<span class="x">        echo &quot;SuperClasse-&gt;ola()&quot;;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
 
-class SubClasse extends SuperClasse {
+<span class="x">class SubClasse extends SuperClasse {</span>
 
-    #nada será declarado na SubClasse a fim de melhor entendermos
-    # o funcionamento da herança de propriedades e funcionalidades
+<span class="x">    #nada será declarado na SubClasse a fim de melhor entendermos</span>
+<span class="x">    # o funcionamento da herança de propriedades e funcionalidades</span>
 
-}
+<span class="x">}</span>
 
-$super = new SuperClasse();
-$super-&gt;ola();
-$super-&gt;a = 10;
+<span class="x">$super = new SuperClasse();</span>
+<span class="x">$super-&gt;ola();</span>
+<span class="x">$super-&gt;a = 10;</span>
 
-$sub = new SubClasse();
-$sub-&gt;ola();
-$sub-&gt;a = 10;
-</pre>
+<span class="x">$sub = new SubClasse();</span>
+<span class="x">$sub-&gt;ola();</span>
+<span class="x">$sub-&gt;a = 10;</span>
+</pre></div>
 <p><a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html">A visibilidade dos membros de classe será estudada em detalhes em aulas posteriores</a>, porém, desde já tenha em mente que, classes herdeiras só são privadas de acessar os membros definidos como <code>private</code>, isto é, definidos como sendo privado!</p>
 <p>No geral, todo herdeiro <strong>deve possuir acesso</strong> aos demais membros, sejam eles públicos ou protegidos.</p>
 </div>
@@ -580,30 +579,29 @@ Classe-base: sinônimo a SuperClasse</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-# HERANÇA I
+<div class="highlight"><pre><span></span><span class="x"># HERANÇA I</span>
 
-class SuperClasse{
+<span class="x">class SuperClasse{</span>
 
-    public $a = 'variável $a';
+<span class="x">    public $a = &#39;variável $a&#39;;</span>
 
-    public function ini(){
-        echo &quot;SuperClasse-&gt;ini()&quot;;
-    }
-}
+<span class="x">    public function ini(){</span>
+<span class="x">        echo &quot;SuperClasse-&gt;ini()&quot;;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
 
-class SubClasse extends SuperClasse{
+<span class="x">class SubClasse extends SuperClasse{</span>
 
-}
+<span class="x">}</span>
 
-$super = new SuperClasse();
-$super-&gt;ini();
-$super-&gt;a = &quot;&quot;;
+<span class="x">$super = new SuperClasse();</span>
+<span class="x">$super-&gt;ini();</span>
+<span class="x">$super-&gt;a = &quot;&quot;;</span>
 
-$sub = new SubClasse();
-$sub-&gt;ini();
-$sub-&gt;a = &quot;qualquer valor&quot;;
-</pre>
+<span class="x">$sub = new SubClasse();</span>
+<span class="x">$sub-&gt;ini();</span>
+<span class="x">$sub-&gt;a = &quot;qualquer valor&quot;;</span>
+</pre></div>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

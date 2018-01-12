@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos a estrutura de repetição foreach, ou seja, uma definição evoluida da instrução for. Aprenderemos quando e onde devemos utilizar e implementaremos um código onde estudaremos o seu uso na prática."/>
 
         <meta property="article:published_time" content="03-12-2015" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -503,79 +504,77 @@ Essa estrutura, além de melhorar a legibilidade do código, também evita algun
 <p>Com a estrutura <cite>foreach</cite> temos acesso total aos elementos, da mesma forma como teríamos se estivessemos utilizando a estrutura <cite>for</cite> normal.
 Então, temos que o laço percorrerá todos elementos e a cada ciclo será definido o próximo elemento contido na estrutura que está sendo iterada.</p>
 <p>Então, temos que pensar na estrutura <cite>foreach</cite> da seguinte maneira: &quot;a cada elemento do array, execute o bloco definido&quot;.</p>
-<pre class="literal-block">
-$lista = array(
-    0 =&gt; 'par',
-    1 =&gt; 'impar',
-    2 =&gt; 'par',
-    3 =&gt; 'impar',
-    4 =&gt; 'par',
-    5 =&gt; 'impar',
-    6 =&gt; 'par',
-    7 =&gt; 'impar',
-    8 =&gt; 'par',
-    9 =&gt; 'impar',
-    10 =&gt; 'par'
-);
+<div class="highlight"><pre><span></span><span class="x">$lista = array(</span>
+<span class="x">    0 =&gt; &#39;par&#39;,</span>
+<span class="x">    1 =&gt; &#39;impar&#39;,</span>
+<span class="x">    2 =&gt; &#39;par&#39;,</span>
+<span class="x">    3 =&gt; &#39;impar&#39;,</span>
+<span class="x">    4 =&gt; &#39;par&#39;,</span>
+<span class="x">    5 =&gt; &#39;impar&#39;,</span>
+<span class="x">    6 =&gt; &#39;par&#39;,</span>
+<span class="x">    7 =&gt; &#39;impar&#39;,</span>
+<span class="x">    8 =&gt; &#39;par&#39;,</span>
+<span class="x">    9 =&gt; &#39;impar&#39;,</span>
+<span class="x">    10 =&gt; &#39;par&#39;</span>
+<span class="x">);</span>
 
-// Imprime os números de 1 até 10
-foreach( range(0, 10, 2) as $numero ) {
-    print &quot;$numero = $lista[$numero] \n&quot;;
-}
-$arr = range(1, 10);
-foreach($arr as $valor) {
-    echo &quot;$valor\n&quot;;
-}
-$arr = array(1, 2, 3, 17);
-$i = 0;
+<span class="x">// Imprime os números de 1 até 10</span>
+<span class="x">foreach( range(0, 10, 2) as $numero ) {</span>
+<span class="x">    print &quot;$numero = $lista[$numero] \n&quot;;</span>
+<span class="x">}</span>
+<span class="x">$arr = range(1, 10);</span>
+<span class="x">foreach($arr as $valor) {</span>
+<span class="x">    echo &quot;$valor\n&quot;;</span>
+<span class="x">}</span>
+<span class="x">$arr = array(1, 2, 3, 17);</span>
+<span class="x">$i = 0;</span>
 
-foreach ($arr as $valor) {
-    echo &quot;\$arr[$i] =&gt; $valor\n&quot;;
-    $i++;
-}
+<span class="x">foreach ($arr as $valor) {</span>
+<span class="x">    echo &quot;\$arr[$i] =&gt; $valor\n&quot;;</span>
+<span class="x">    $i++;</span>
+<span class="x">}</span>
 
-$lista = array (
-    &quot;um&quot; =&gt; 1,
-    &quot;dois&quot; =&gt; 2,
-    &quot;três&quot; =&gt; 3,
-    &quot;quatro&quot; =&gt; 4
-);
+<span class="x">$lista = array (</span>
+<span class="x">    &quot;um&quot; =&gt; 1,</span>
+<span class="x">    &quot;dois&quot; =&gt; 2,</span>
+<span class="x">    &quot;três&quot; =&gt; 3,</span>
+<span class="x">    &quot;quatro&quot; =&gt; 4</span>
+<span class="x">);</span>
 
-foreach ($lista as $chave =&gt; $valor) {
-    echo &quot;\$lista[$chave] =&gt; $valor.\n&quot;;
-}
+<span class="x">foreach ($lista as $chave =&gt; $valor) {</span>
+<span class="x">    echo &quot;\$lista[$chave] =&gt; $valor.\n&quot;;</span>
+<span class="x">}</span>
 
-$lista = array();
-$lista[0][0] = &quot;a&quot;;
-$lista[0][1] = &quot;b&quot;;
-$lista[1][0] = &quot;c&quot;;
-$lista[1][1] = &quot;d&quot;;
+<span class="x">$lista = array();</span>
+<span class="x">$lista[0][0] = &quot;a&quot;;</span>
+<span class="x">$lista[0][1] = &quot;b&quot;;</span>
+<span class="x">$lista[1][0] = &quot;c&quot;;</span>
+<span class="x">$lista[1][1] = &quot;d&quot;;</span>
 
-foreach ($lista as $val1) {
-    foreach ($val1 as $val2) {
-        echo &quot;$val2\n&quot;;
-    }
-}
-foreach ([1, 2, 3, 4, 5] as $valor){
-    echo &quot;$valor\n&quot;;
-}
-</pre>
+<span class="x">foreach ($lista as $val1) {</span>
+<span class="x">    foreach ($val1 as $val2) {</span>
+<span class="x">        echo &quot;$val2\n&quot;;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+<span class="x">foreach ([1, 2, 3, 4, 5] as $valor){</span>
+<span class="x">    echo &quot;$valor\n&quot;;</span>
+<span class="x">}</span>
+</pre></div>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#ESTRUTURA FOREACH
+<div class="highlight"><pre><span></span><span class="x">#ESTRUTURA FOREACH</span>
 
-$lista = [&quot;Domingo&quot;, &quot;Segunda&quot;, &quot;Terça&quot;, &quot;Quarta&quot;, &quot;Quinta&quot;, &quot;Sexta&quot;, &quot;Sabado&quot;];
+<span class="x">$lista = [&quot;Domingo&quot;, &quot;Segunda&quot;, &quot;Terça&quot;, &quot;Quarta&quot;, &quot;Quinta&quot;, &quot;Sexta&quot;, &quot;Sabado&quot;];</span>
 
-//for($x=0; $x&lt;count($lista); $x++){
-//    echo &quot;$x: $lista[$x]\n&quot;;
-//}
+<span class="x">//for($x=0; $x&lt;count($lista); $x++){</span>
+<span class="x">//    echo &quot;$x: $lista[$x]\n&quot;;</span>
+<span class="x">//}</span>
 
-foreach($lista as $item){
-    echo &quot;$item\n&quot;;
-}
-</pre>
+<span class="x">foreach($lista as $item){</span>
+<span class="x">    echo &quot;$item\n&quot;;</span>
+<span class="x">}</span>
+</pre></div>
 </div>
 
 				</div>

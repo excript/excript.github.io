@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos o que são as Strings chamadas de heredoc e as Strings chamadas de nowdoc. Estudaremos os conceitos dessas definições e a diferença entre ambas implementações."/>
 
         <meta property="article:published_time" content="02-01-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -501,36 +502,35 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#HEREDOC E NOWDOC
+<div class="highlight"><pre><span></span><span class="x">#HEREDOC E NOWDOC</span>
 
-# HEREDOC == &quot;&quot;
-$x = 50;
+<span class="x"># HEREDOC == &quot;&quot;</span>
+<span class="x">$x = 50;</span>
 
-$heredoc =
-&lt;&lt;&lt;TESTE
+<span class="x">$heredoc =</span>
+<span class="x">&lt;&lt;&lt;TESTE</span>
 
-    &lt;div&gt;O valor da variável x é: $x&lt;/div&gt;
+<span class="x">    &lt;div&gt;O valor da variável x é: $x&lt;/div&gt;</span>
 
-TESTE;
+<span class="x">TESTE;</span>
 
-echo $heredoc;
+<span class="x">echo $heredoc;</span>
 
 
-#NOWDOC  == ''
+<span class="x">#NOWDOC  == &#39;&#39;</span>
 
-$nowdoc = &lt;&lt;&lt;'EOT'
+<span class="x">$nowdoc = &lt;&lt;&lt;&#39;EOT&#39;</span>
 
-    class NowDoc{
+<span class="x">    class NowDoc{</span>
 
-        function __construct(){}
+<span class="x">        function __construct(){}</span>
 
-    }
+<span class="x">    }</span>
 
-EOT;
+<span class="x">EOT;</span>
 
-echo $nowdoc;
-</pre>
+<span class="x">echo $nowdoc;</span>
+</pre></div>
 </div>
 
 				</div>

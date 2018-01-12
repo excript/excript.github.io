@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nessa aula implementaremos um código utilizando os conceitos de funções anonimas estudadas nas aulas anteriores."/>
 
         <meta property="article:published_time" content="11-06-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -514,25 +515,24 @@ eXcript            </a>
 <p>Vamos supor uma situação onde existe uma lista de valores e é necessário realizar algum processamento sobre os itens. Pra isso, nós utilizarmos um laço de repetição e a cada item realizarmos uma determinada operação. Essa é uma forma estática de percorrer os elemtnos e realizar um determinado tratamento sobre os mesmos.</p>
 <p>Agora, nós podemos trabalhar de tal maneira onde não será implementado dentro da função o tratamento que sera dado a cada elemento da lista, o que será feito, é a passagem do elemento através de uma função anônima que será recebida como parâmetro. Dessa forma, nós temos que o processamento irá ocorrer externamente e quem irá implementar o mesmo, não precisa conhecer o funcionamento interno da função e nem ter acesso ao seu código.</p>
 <p>Um detalhe das funções anônimas é que a expicação é complexa, enquanto a implementação geralmente é simples.</p>
-<pre class="literal-block">
-$quadrado = function($num){
-    return $num * $num;
-};
-$cubo = function($num) use ($quadrado){
-    return $quadrado($num) * $num;
-};
-$soma = function($num){
-    return $num + $num;
-};
+<div class="highlight"><pre><span></span><span class="x">$quadrado = function($num){</span>
+<span class="x">    return $num * $num;</span>
+<span class="x">};</span>
+<span class="x">$cubo = function($num) use ($quadrado){</span>
+<span class="x">    return $quadrado($num) * $num;</span>
+<span class="x">};</span>
+<span class="x">$soma = function($num){</span>
+<span class="x">    return $num + $num;</span>
+<span class="x">};</span>
 
-function processa_lista($lista, $func){
-    foreach($lista as &amp;$item)
-        $item = $func($item);
-    return $lista;
-}
+<span class="x">function processa_lista($lista, $func){</span>
+<span class="x">    foreach($lista as &amp;$item)</span>
+<span class="x">        $item = $func($item);</span>
+<span class="x">    return $lista;</span>
+<span class="x">}</span>
 
-print_r(processa_lista(range(1, 10), $soma));
-</pre>
+<span class="x">print_r(processa_lista(range(1, 10), $soma));</span>
+</pre></div>
 </div>
 <div class="section" id="funcoes-php-e-funcoes-anonimas">
 <h2>FUNÇÕES PHP E FUNÇÕES ANÔNIMAS</h2>
@@ -544,18 +544,16 @@ print_r(processa_lista(range(1, 10), $soma));
 </div>
 <div class="section" id="definicao">
 <h2>DEFINIÇÃO</h2>
-<pre class="literal-block">
-array array_map(callback $callback, array $arr1)
-</pre>
-<pre class="literal-block">
-$arr = [1, 2, 3, 4, 5];
+<div class="highlight"><pre><span></span><span class="x">array array_map(callback $callback, array $arr1)</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="x">$arr = [1, 2, 3, 4, 5];</span>
 
-$f = function($x) {
-    return $x * $x;
-}
-$var_arr = array_map(f, $arr);
-var_dump($var_arr);
-</pre>
+<span class="x">$f = function($x) {</span>
+<span class="x">    return $x * $x;</span>
+<span class="x">}</span>
+<span class="x">$var_arr = array_map(f, $arr);</span>
+<span class="x">var_dump($var_arr);</span>
+</pre></div>
 </div>
 <div class="section" id="funcao-array-filter">
 <h2>FUNÇÃO <tt class="docutils literal">array_filter()</tt></h2>
@@ -564,62 +562,59 @@ A função anônima, deverá retornar um valor booleano, se o valor for <tt clas
 </div>
 <div class="section" id="id1">
 <h2>DEFINIÇÃO</h2>
-<pre class="literal-block">
-array array_map(array $arr1, callback $callback)
-</pre>
-<pre class="literal-block">
-//$lista = [1,2,3,4,5,6,7,8,9,10];
-$lista = [1,2.21,&quot;&quot;,9,4];
+<div class="highlight"><pre><span></span><span class="x">array array_map(array $arr1, callback $callback)</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="x">//$lista = [1,2,3,4,5,6,7,8,9,10];</span>
+<span class="x">$lista = [1,2.21,&quot;&quot;,9,4];</span>
 
-$f = function ($v) {
-    return is_int($v);
-};
+<span class="x">$f = function ($v) {</span>
+<span class="x">    return is_int($v);</span>
+<span class="x">};</span>
 
-$lista_filtrada = array_filter( $lista, $f );
+<span class="x">$lista_filtrada = array_filter( $lista, $f );</span>
 
-print_r( $lista_filtrada );
-</pre>
+<span class="x">print_r( $lista_filtrada );</span>
+</pre></div>
 <p>Note que estamos definindo a função com sendo um parâmetro de outra e também, é interessante observar que a implementação da função, ocorre no local onde deve ser passado o parâmetro para outra função.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#PRÁTICA - FUNÇÕES ANÔNIMAS
+<div class="highlight"><pre><span></span><span class="x">#PRÁTICA - FUNÇÕES ANÔNIMAS</span>
 
-$quadrado = function($item){
-    return $item * $item;
-};
-$cubo = function($item)use($quadrado){
-    return $quadrado($item) * $item;
-};
-$soma = function($item){
-    return $item + $item;
-};
+<span class="x">$quadrado = function($item){</span>
+<span class="x">    return $item * $item;</span>
+<span class="x">};</span>
+<span class="x">$cubo = function($item)use($quadrado){</span>
+<span class="x">    return $quadrado($item) * $item;</span>
+<span class="x">};</span>
+<span class="x">$soma = function($item){</span>
+<span class="x">    return $item + $item;</span>
+<span class="x">};</span>
 
-function processa_lista($lista, $func){
-    foreach($lista as &amp;$item){
-        $item = $func($item);
-    }
-    return $lista;
-}
+<span class="x">function processa_lista($lista, $func){</span>
+<span class="x">    foreach($lista as &amp;$item){</span>
+<span class="x">        $item = $func($item);</span>
+<span class="x">    }</span>
+<span class="x">    return $lista;</span>
+<span class="x">}</span>
 
-echo &quot;QUADRADO\n&quot;;
-print_r(processa_lista(range(1,10), $quadrado));
+<span class="x">echo &quot;QUADRADO\n&quot;;</span>
+<span class="x">print_r(processa_lista(range(1,10), $quadrado));</span>
 
-echo &quot;\nCUBO\n&quot;;
-print_r(processa_lista(range(1,10), $cubo));
+<span class="x">echo &quot;\nCUBO\n&quot;;</span>
+<span class="x">print_r(processa_lista(range(1,10), $cubo));</span>
 
-echo &quot;\nSOMA\n&quot;;
-print_r(processa_lista(range(1,10), $soma));
+<span class="x">echo &quot;\nSOMA\n&quot;;</span>
+<span class="x">print_r(processa_lista(range(1,10), $soma));</span>
 
 
-//print_r(processa_lista(
-//    range(1,10),
-//    function($item){
-//        return $item - 10;
-//    }
-//));
-</pre>
+<span class="x">//print_r(processa_lista(</span>
+<span class="x">//    range(1,10),</span>
+<span class="x">//    function($item){</span>
+<span class="x">//        return $item - 10;</span>
+<span class="x">//    }</span>
+<span class="x">//));</span>
+</pre></div>
 </div>
 
 				</div>

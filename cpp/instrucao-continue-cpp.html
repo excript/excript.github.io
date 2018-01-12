@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nessa aula estudaremos a instrução continue e o seu uso junto aos laços de repetição. Entenderemos as vantagens com o seu uso e em quais locais das nossas aplicações devemos utilizar a instrução."/>
 
         <meta property="article:published_time" content="06-04-2015" />
+
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
@@ -364,37 +365,36 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;iostream&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-/*====================================
-*           eXcript.com
-*          fb.com/eXcript
-* ====================================*/
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
 
-using namespace std;
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-int main() {
-    int n = 0;
-    while(true){
-        n++;
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="nb">true</span><span class="p">){</span>
+        <span class="n">n</span><span class="o">++</span><span class="p">;</span>
 
-        if(n&gt;=10) {
-            break;
-        }
-        else {
-            if(n==4 or n==6)
-                continue;
-        }
+        <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&gt;=</span><span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">4</span> <span class="n">or</span> <span class="n">n</span><span class="o">==</span><span class="mi">6</span><span class="p">)</span>
+                <span class="k">continue</span><span class="p">;</span>
+        <span class="p">}</span>
 
-        cout &lt;&lt; n &lt;&lt; endl;
-    }
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    system(&quot;pause&quot;);
-    return 0;
-}
-</pre>
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

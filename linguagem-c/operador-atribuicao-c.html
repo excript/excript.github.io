@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos os Operadores de Atribuição Compostos da linguagem C. Aprenderemos como realizar uma operação aritmética e em seguida, atribuir o resultado da operação ao membro a esquerda."/>
 
         <meta property="article:published_time" content="02-03-2014" />
+
             <meta property="article:section" content="curso c" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="curso c" />
@@ -306,52 +307,50 @@ eXcript            </a>
 <div class="section" id="operadores">
 <h2>OPERADORES</h2>
 <p>Já estudamos o operador de atribuição simples, agora, vamos estudar os operadores de atribuição compostos, ou seja, operadores que além de atribuir o valor que está a esquerda da variável ainda realizam uma determinada ação, por exemplo:</p>
-<pre class="literal-block">
-int x = 10;
-x += 5;
-</pre>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span><span class="p">;</span>
+</pre></div>
 <p>No código acima, estamos declarando uma variável de nome <cite>x</cite> e a esta estamos atribuindo o valor <cite>10</cite>. Em seguida, dizemos que a variável <cite>x</cite> deve receber o valor dela mesma, mais <cite>5</cite>. Isso acontece porque estamos dizendo que: <cite>x</cite> é mais igual a <cite>5</cite>. Logo, pega-se o valor que a variável 5 possui e a esta incremente <cite>5</cite> unidades.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-//  ==========                 ==========
-//  ========== www.eXcript.com ==========
-//  ==========                 ==========
+<span class="c1">//  ==========                 ==========</span>
+<span class="c1">//  ========== www.eXcript.com ==========</span>
+<span class="c1">//  ==========                 ==========</span>
 
-int main()
-{
-    int x  = 0;
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span>  <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    while(x &lt; 11){
-        printf(&quot;msg\n&quot;);
-        x += 1;
-    }
+    <span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;msg</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    /*
+    <span class="cm">/*</span>
 
-        1) += -&gt; soma
-        2) -= -&gt; subtração
-        3) *= -&gt; multiplicação
-        4) /= -&gt; divisão
-        5) %= -&gt; resto da divisão
+<span class="cm">        1) += -&gt; soma</span>
+<span class="cm">        2) -= -&gt; subtração</span>
+<span class="cm">        3) *= -&gt; multiplicação</span>
+<span class="cm">        4) /= -&gt; divisão</span>
+<span class="cm">        5) %= -&gt; resto da divisão</span>
 
-    */
+<span class="cm">    */</span>
 
-    int i = 50;
-    printf(&quot;soma: %i\n&quot;, i+=100);
-    printf(&quot;subracao: %i\n&quot;, i-=50);
-    printf(&quot;multiplicacao: %i\n&quot;, i*=3);
-    printf(&quot;divisão: %i\n&quot;, i/=3);
-    printf(&quot;resto: %i\n&quot;, i%=3);
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;soma: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">+=</span><span class="mi">100</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;subracao: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">-=</span><span class="mi">50</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;multiplicacao: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">*=</span><span class="mi">3</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;divisão: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">/=</span><span class="mi">3</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;resto: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">%=</span><span class="mi">3</span><span class="p">);</span>
 
 
-    return 0;
-}
-</pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

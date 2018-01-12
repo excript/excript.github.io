@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos a nomenclatura de variáveis, isto é, quais as regras que a linguagem Python tem definido para definirmos nomes de variáveis"/>
 
         <meta property="article:published_time" content="06-05-2016" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -395,14 +396,13 @@ eXcript            </a>
 <h2>CARACTERES NUMÉRICOS</h2>
 <p>Uma referência pode conter números, desde que este não seja o primeiro caractere. Assim, referências como por exemplo, <cite>9num</cite>, ou então, <cite>1var</cite>, não são permitidos, até porque, o interpretador, não conseguirá distinguir se estamos definindo uma referências ou então, estamos trabalhando com números.</p>
 <p>Então, a utilização de números é permitida só e somente só após o primeiro caractere, como podemos ver nos exemplos a seguir:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-num1 = 1
-caractere = 'x'
-flag = True
-a2b3 = &quot;qualquer texto... &quot;
-</pre>
+<span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">caractere</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span>
+<span class="n">flag</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">a2b3</span> <span class="o">=</span> <span class="s2">&quot;qualquer texto... &quot;</span>
+</pre></div>
 <p>A seguir, temos uma breve lista contendo os caracteres numéricos que não podem ser utilizados, nem na primeira ou segunda posição, por exemplo:</p>
 </div>
 <div class="section" id="palavras-reservadas">
@@ -445,33 +445,30 @@ a2b3 = &quot;qualquer texto... &quot;
 </blockquote>
 <p>Novamente, é importante dizer que caracteres especiais não podem ser utilizados, seja qual for a posição em que estes aparecerem na definição da referência!</p>
 <p>A seguir, temos mais um exemplo dos caracteres que não podem estar na primeira posição de um nome de variável.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-4num = 0
-3 = &quot;informe seu nome&quot;
-2d = 4
-</pre>
+<span class="mi">4</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">3</span> <span class="o">=</span> <span class="s2">&quot;informe seu nome&quot;</span>
+<span class="mi">2</span><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
 <p>As referências utilizadas no código acima são todas invalidas, e a razão, deve-se ao fato das mesmas iniciarem com caracteres numéricos. Como já dito, o primeiro caractere deve, obrigatoriamente, ser um letra.</p>
 <p>Podemos concluir também, que uma variável <strong>JAMAIS</strong> será composta por somente números, haja vista que o primeiro caractere precisa ser uma letra.</p>
 <p>Para definirmos o nome de variáveis, temos que iniciar utilizando um caractere que esteja no intervalo de <cite>a</cite> à <cite>z</cite> ou <cite>A</cite> à <cite>Z</cite>. A única exceção a esta regra é o caractere underline <cite>_</cite>. A seguir, temos alguns nomes de variáveis <strong>válidos</strong>:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-vvar = 5
-_vVar = &quot;&quot;
-__________idade = 19
-</pre>
+<span class="n">vvar</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">_vVar</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">__________idade</span> <span class="o">=</span> <span class="mi">19</span>
+</pre></div>
 </div>
 <div class="section" id="unica-excecao">
 <h2>ÚNICA EXCEÇÃO</h2>
 <p>O único caractere especial, que pode ser utilizado na composição de nomes, e que também pode estar situando em qualquer posição, é o caractere underline <tt class="docutils literal">_</tt>.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-_minhaVar = 55
-____texto = &quot;&quot;
-</pre>
+<span class="n">_minhaVar</span> <span class="o">=</span> <span class="mi">55</span>
+<span class="n">____texto</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
 </div>
 <div class="section" id="macete">
 <h2>MACETE</h2>
@@ -488,30 +485,29 @@ ____texto = &quot;&quot;
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <p>A seguir, temos o código-fonte feito na aula de Python.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-#===================================================
-#=================== eXcript.com ===================
-#========== youtube.com/user/excriptvideo ==========
-#===================================================
+<span class="c1">#===================================================</span>
+<span class="c1">#=================== eXcript.com ===================</span>
+<span class="c1">#========== youtube.com/user/excriptvideo ==========</span>
+<span class="c1">#===================================================</span>
 
-num_int = 5
-num_dec = 7.3
-val_str = &quot;qualquer texto&quot;
+<span class="n">num_int</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">num_dec</span> <span class="o">=</span> <span class="mf">7.3</span>
+<span class="n">val_str</span> <span class="o">=</span> <span class="s2">&quot;qualquer texto&quot;</span>
 
-print(&quot;o valor é:&quot;, num_int)
-print(&quot;o valor é: %i&quot; %num_int)
-print(&quot;o valor é: &quot; + str(num_int))
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;o valor é:&quot;</span><span class="p">,</span> <span class="n">num_int</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;o valor é: </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span><span class="n">num_int</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;o valor é: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_int</span><span class="p">))</span>
 
-print(&quot;Concatendo decimal:&quot;, num_dec)
-print(&quot;Concatendo decimal: %.10f&quot; %num_dec)
-print(&quot;Concatendo decimal: &quot; + str(num_dec))
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo decimal:&quot;</span><span class="p">,</span> <span class="n">num_dec</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo decimal: </span><span class="si">%.10f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="n">num_dec</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo decimal: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_dec</span><span class="p">))</span>
 
-print(&quot;Concatendo strings&quot;, val_str)
-print(&quot;Concatendo strings %s&quot; %val_str)
-print(&quot;Concatendo strings &quot; + val_str)
-</pre>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo strings&quot;</span><span class="p">,</span> <span class="n">val_str</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo strings </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="n">val_str</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Concatendo strings &quot;</span> <span class="o">+</span> <span class="n">val_str</span><span class="p">)</span>
+</pre></div>
 </div>
 
 				</div>

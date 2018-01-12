@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula vamos estudar as funções append(), del() que são, umas principais funções implementadas para manipulação da estrutura list. Faremos alguns exemplos demonstrado o funcionamento das funções bem como, estudaremos algumas situações interessantes."/>
 
         <meta property="article:published_time" content="09-03-2015" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -386,59 +387,54 @@ eXcript            </a>
 <h2>CONCATENAÇÃO DE LISTAS</h2>
 <p>Estudamos que uma lista pode ser de qualquer tipo, até porque, para o Python, tudo são objetos.</p>
 <p>Também estudamos que podemos concatenar 2 pedaços de texto, utilizando o sinal de adição. Agora, sendo um pedaço de texto uma lista de caracteres, nós temos que o sinal de adição faz a concatenação de objetos, e não de caracteres. Logo, se temos 2 listas e desejarmos obter uma terceira que seja a junção, podemos utilizar o sinal de adição, por exemplo:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-A = [1, 2, 3]
-B = ['a', 'b', 'c']
+<span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
 
-C = A + B
-</pre>
+<span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
+</pre></div>
 <p>A referência <code>C</code> contém uma nova lista que foi formada pelos elementos da lista <code>A</code> e os elementos da lista <code>B</code>.</p>
 <p>Do resultado do código anterior, é possível entender, que o operador <code>+</code> funciona diferentemente com objetos de classes distintas.</p>
 <p>É possivel deduzir que objetos numéricos separados pelo sinal de adição, resultam na soma e geram um novo objeto numérico com o valor total.</p>
 <p>Cadeias de caracteres separadas com o sinal de adição, resultam num objeto do tipo <code>str</code> com a junção de ambos textos.</p>
 <p>Agora, acabamos de ver, que o sinal de adição, entre 2 listas, resultam num terceiro objeto lista, que contém, os elementos das listas separadas pelo sinal de adição.</p>
 <p>É importante observar que o sinal de adição concatena 2 listas. Se nós tivermos uma concatenação entre uma lista e um objeto, será levantado uma mensagem de erro, por exemplo:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-lista9 = [1, 2, 3] + 4 #erro de compilação!
-</pre>
+<span class="n">lista9</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="mi">4</span> <span class="c1">#erro de compilação!</span>
+</pre></div>
 <p>Observe, que os elementos de uma lista estão sendo concatenado a um objeto que não é do tipo <code>list()</code>, logo, obteremos uma mensagem de erro.</p>
 <p>No código abaixo, temos o mesmo resultado do código acima, porém, adicionamos a mensagem retornada pelo Python.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-[] + 1
+<span class="p">[]</span> <span class="o">+</span> <span class="mi">1</span>
 
-Traceback (most recent call last):
-  File &quot; pyshell-1 &quot;, line 1, in module
-    [] + 1
-TypeError: can only concatenate list (not &quot;int&quot;) to list
-</pre>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot; pyshell-1 &quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="n">module</span>
+    <span class="p">[]</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">can</span> <span class="n">only</span> <span class="n">concatenate</span> <span class="nb">list</span> <span class="p">(</span><span class="ow">not</span> <span class="s2">&quot;int&quot;</span><span class="p">)</span> <span class="n">to</span> <span class="nb">list</span>
+</pre></div>
 <p>Foi retornado um erro alertando que não é possível a soma de um objeto <code>list()</code> com um objeto numérico.</p>
 </div>
 <div class="section" id="a-funcao-append">
 <h2>A FUNÇÃO <code>append()</code></h2>
 <p>A função <code>append()</code> adiciona o elemento definido como argumento ao fim da lista. A palavra <code>append()</code> do Inglês, significa, adicionar, logo, seu uso em Python, cumpre com o seu significado.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-[].append(&quot;a&quot;)
-</pre>
+<span class="p">[]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
 <p>No código acima, temos um exemplo onde os colchetes <code>[]</code> representam uma lista e na sequência utilizamos a função <code>append()</code> para adicionar um elemento à lista.</p>
 </div>
 <div class="section" id="exclusao-de-elementos">
 <h2>EXCLUSÃO DE ELEMENTOS</h2>
 <p>A função built-in de nome <code>del()</code> remove o elemento passado como argumento da lista onde este está contido. Vale ressaltar que não é preciso adicionar nenhum pacote e nem fazer menção a qualquer referência, até porque, todas as funções built-in estão disponíveis em todo código <tt class="docutils literal">Python</tt>.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-A = [1, 2, 3, 4, 5, 6]
+<span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 
-del[ A[-1] ]
-</pre>
+<span class="k">del</span><span class="p">[</span> <span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
 <p>O código acima, define uma lista com 6 elementos e em seguida, passa como parâmetro da função <code>del()</code> o índice do elemento a ser removido.</p>
 <p>Se observar os elementos contido em na lista <tt class="docutils literal">A</tt> após a execução da função <code>del()</code>, observaremos que o elemento numérico 2 terá sido removido.</p>
 </div>

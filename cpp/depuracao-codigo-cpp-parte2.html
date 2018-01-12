@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula daremos continuidade ao estudo conceitual da depuração, bem como a utilização das ferramentas disponíveis pelas principais IDE do mercado. Também desenvolveremos uma simples aplicação para que possamos com a mesma estudar a depuração."/>
 
         <meta property="article:published_time" content="22-03-2015" />
+
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
@@ -359,49 +360,48 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;iostream&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-/*====================================
-*           eXcript.com
-*          fb.com/eXcript
-* ====================================*/
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
 
-using namespace std;
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-int main() {
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
-    cout &lt;&lt; &quot;Digite um numero entre 1 ate 3.&quot; &lt;&lt; endl;
-    int num = 0;
-    cin &gt;&gt; num;
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Digite um numero entre 1 ate 3.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
 
-    if(num==1){
-        for(int i=0; i&lt;5; i++){
-            cout &lt;&lt; &quot;A variavel da instrucao FOR eh: &quot; &lt;&lt; i &lt;&lt; endl;
-        }
-    }else{
-        if(num==2){
-            int i2 = 0;
-            while(i2&lt;5){
-                i2++;
-                cout &lt;&lt; &quot;O valor da variavel i2 utilizada na instrucao WHILE eh igual: &quot; &lt;&lt; i2 &lt;&lt; endl;
-            }
-        }else{
-            if(num==3){
-                int i3 = 0;
-                do{
-                    i3++;
-                    cout &lt;&lt; &quot;Ovalor da variavel i3 utilizada na instrucao DO-WHILE eh igual: &quot; &lt;&lt; i3 &lt;&lt; endl;
-                }while(i3&lt;5);
-            }
-        }
-    }
+    <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;A variavel da instrucao FOR eh: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="o">==</span><span class="mi">2</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">while</span><span class="p">(</span><span class="n">i2</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">){</span>
+                <span class="n">i2</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O valor da variavel i2 utilizada na instrucao WHILE eh igual: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="o">==</span><span class="mi">3</span><span class="p">){</span>
+                <span class="kt">int</span> <span class="n">i3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="k">do</span><span class="p">{</span>
+                    <span class="n">i3</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Ovalor da variavel i3 utilizada na instrucao DO-WHILE eh igual: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i3</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+                <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">i3</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-    system(&quot;pause&quot;);
-    return 0;
-}
-</pre>
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

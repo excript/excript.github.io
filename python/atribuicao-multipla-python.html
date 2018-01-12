@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos a atribuição múltipla, uma ferramenta da linguagem Python para atribuirmos vários valores a várias variáveis numa única expressão."/>
 
         <meta property="article:published_time" content="01-06-2016" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -388,9 +389,8 @@ eXcript            </a>
 <div class="section" id="atribuicao-multipla">
 <h2>ATRIBUIÇÃO MULTIPLA</h2>
 <p>A atribuição múltipla é a capacidade de atribuir um conjunto de valores a um conjunto de variáveis. Ambos conjuntos precisam, obrigatoriamente, possuir a mesma quantidade de elementos, isto é, a quantidade de variáveis a esquerda deve ter a mesma quantidade de valores a direita, como pode ser visto no código a seguir.</p>
-<pre class="literal-block">
-x, y = 10, 20
-</pre>
+<div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
+</pre></div>
 <p>No código acima, estamos declarando e atribuindo valores a 2 variáveis. A primeira variável de nome <tt class="docutils literal">a</tt>, está sendo atribuido o valor 1, e a segundo variável de nome <tt class="docutils literal">b</tt>, esta sendo atribuido o valor 2.</p>
 <p>A ordem em que as variáveis estão dispostas a esquerda, receberá, na mesma ordem, os respectivos valores a direita.</p>
 <p>Assim, sendo a variável <tt class="docutils literal">a</tt> a primeira, e a variável <tt class="docutils literal">b</tt> a segunda, estas receberam, respectivamente, o primeiro valor, e o segundo valor, respectivamente, definido no lado direito do operador de atribuição.</p>
@@ -417,13 +417,11 @@ x, y = 10, 20
         </table>
     </div>
 <p>No código abaixo, declaramos 3 variáveis e estamos inicializando-as com os números 1, 2 e 3 respectivamente. Como podemos observar, a notação de tupla está sendo utilizada em ambos os lados da atribuição! Assim, podemos dizer que, estamos atribuindo, uma tupla a outra, onde a primeira tupla é composta pelos elementos <tt class="docutils literal">a, b, c</tt> e a segunda tupla, pelos elementos, <tt class="docutils literal">1, 2, 3</tt>.</p>
-<pre class="literal-block">
-a, b, c = 1, 2, 3
-</pre>
+<div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+</pre></div>
 <p>Da mesma forma, temos que a notação a seguir, que torna explicito o uso de tupla, é totalmente válida e funcional.</p>
-<pre class="literal-block">
-(x, y) = (1,2)
-</pre>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
 <p>No código acima, declaramos 2 variáveis, respectivamente, <tt class="docutils literal">x</tt> e <tt class="docutils literal">y</tt> e delimitamo-as por parêntesis, o que diz ao Python que estamos trabalhando com Tuplas. Ainda assim, ambas variáveis, <tt class="docutils literal">a</tt> e <tt class="docutils literal">b</tt> foram declaradas no escopo local e inicializadas com os valores 1 e 2 respectivamente.</p>
 <p>Essa é uma notação ambigua e funcional e que torna toda a linguagem muito mais coesa. Como veremos, há outras situações onde o Python possui ambiguidades funcionais e que são, muito úteis.</p>
 

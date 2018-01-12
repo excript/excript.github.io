@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos o Operador Ternário e aprenderemos como podemos escolher uma dentre 2 opções de forma menos verbosa, utilizando uma notação inline, isto é, uma notação onde toda a expressão será definida numa única linha."/>
 
         <meta property="article:published_time" content="08-05-2016" />
+
             <meta property="article:section" content="curso c" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="c" />
@@ -315,23 +316,21 @@ eXcript            </a>
 <p>O <strong>Operador Ternário</strong> se justifica em situações onde, por exemplo, temos 10 condições a serem verificadas e é necessário em todas, escolher um valor dentre 2 opções. Se, trabalharmos com a instrução <cite>if</cite>, utilizaremos, no mínimo, 40 linhas de código. Porém, com a Operação Ternária, conseguimos o mesmo resultado, utilizando apenas 10 linhas.</p>
 <p>É verdade que a instrução <cite>if</cite> pode ser trabalhada de maneira <cite>inline</cite>, ou seja, escrever toda a expressão numa única linha. Porém, ainda que seja funcional, a leitura é prejudicada e novamente, o <strong>Operador Ternário</strong> se justifica.</p>
 <p>A seguir, temos um exemplo onde inicialmente escolhemos um valor dentre 2 opções com a instrução <cite>if</cite> e em seguida, vamos escrever a mesma expressão, porém, utilizando o <strong>Operador Ternário</strong>.</p>
-<pre class="literal-block">
-int num = (caractere=='a') ?   65   :   66;
-&lt;valor&gt; =        &lt; x &gt;     ? (True) : (False)
-</pre>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;a&#39;</span><span class="p">)</span> <span class="o">?</span>   <span class="mi">65</span>   <span class="o">:</span>   <span class="mi">66</span><span class="p">;</span>
+<span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span> <span class="o">=</span>        <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&gt;</span>     <span class="o">?</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span> <span class="o">:</span> <span class="p">(</span><span class="n">False</span><span class="p">)</span>
+</pre></div>
 <p>Inicialmente, estamos declarando uma variável de nome <cite>num</cite> do tipo <cite>int</cite> e estamos adicionando a mesma o valor resultante da resolução da estrutura do <strong>Operador Ternário</strong>.</p>
 <p>O sinal de interrogação deve ser lido como: &quot;A expressão é verdadeira?&quot;, ou seja, como o sinal denota, de fato estamos questionando o resultado da expressão lógica. Se o <strong>Valor Lógico</strong> for <cite>True</cite> o número 65 será retornado, senão, ou seja, o sinal de dois pontos <cite>:</cite> está substituindo a instrução <cite>else</cite>. Logo, devemos ler &quot;senão&quot;, retorna o segundo valor definido na estrutura da <strong>Operação Ternária</strong>.</p>
 <p>Por fim, temos que ler a expressão da seguinte maneira: O <strong>Valor Lógico</strong> da expressão é verdadeiro? Se sim, retorna o primeiro valor <cite>:</cite> senão, retorna o segundo valor. A seguir, vamos temos dois códigos que estão realizando a mesma tarefa, porém, um está escrito com a instrução <cite>if</cite>, enquanto o segundo, com o <strong>Operador Ternário</strong>.</p>
-<pre class="literal-block">
-//utilizando o Operador Ternário
-int num = (caractere=='a') ? 65 : 66;
+<div class="highlight"><pre><span></span><span class="c1">//utilizando o Operador Ternário</span>
+<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;a&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">65</span> <span class="o">:</span> <span class="mi">66</span><span class="p">;</span>
 
-//utilizando a instrução &quot;if&quot;
-if (caractere=='a')
-    num = 65
-else
-    num = 66;
-</pre>
+<span class="c1">//utilizando a instrução &quot;if&quot;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">caractere</span><span class="o">==</span><span class="sc">&#39;a&#39;</span><span class="p">)</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">65</span>
+<span class="k">else</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">66</span><span class="p">;</span>
+</pre></div>
 <p>Por fim, se você compreendeu o uso da Tomada de Decisão, ou seja, da instrução <cite>if</cite>, conseguirás assimilar rapidamente essa notação. Até porque, a lógica de funcionamento é a mesma, a diferença está no &quot;esquema&quot; de cada estrutura.</p>
 </div>
 <div class="section" id="id1">
@@ -344,50 +343,48 @@ else
 <p>Vamos escrever um código onde é necessário verificar se o número que o usuário informou é menor do que 0. Caso o valor informado seja menor, iremos resetar o valor atribuindo zero para a variável, do contrário, não faremos nada.</p>
 <p>Então, o nosso objetivo é definir 0 caso o valor seja menor do que 0.</p>
 <p>Inicialmente, vamos desenvolver um código utilizando a estrutura de Tomada de Decisão if e em seguida, vamos alterar o nosso código utilizando o Operador Ternário.</p>
-<pre class="literal-block">
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-int main()
-{
-  int num, num2;
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="n">num2</span><span class="p">;</span>
 
-  printf(&quot;Informe um numero: &quot;);
-  scanf(&quot;%d&quot;, &amp;num);
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Informe um numero: &quot;</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
 
-  if(num &lt; 0)
-    num2 =  0;
-  else
-    num2 = num;
+  <span class="k">if</span><span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">num2</span> <span class="o">=</span>  <span class="mi">0</span><span class="p">;</span>
+  <span class="k">else</span>
+    <span class="n">num2</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span>
 
-  printf(&quot;O valor de num2 eh: %d \n\n&quot;, num2);
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;O valor de num2 eh: %d </span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
 
-  return 0;
-}
-</pre>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 <div class="section" id="implementando-com-o-operador-ternario">
 <h2>IMPLEMENTANDO COM O OPERADOR TERNÁRIO</h2>
-<pre class="literal-block">
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-int main (void )
-{
-  int num;
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(</span><span class="kt">void</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
 
-  printf(&quot;Informe um numero: &quot;);
-  scanf(&quot;%d&quot;, &amp;num);
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Informe um numero: &quot;</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
 
-  int num2;
-  num2 = (num &lt; 0) ? 0 : num;
-  //num &gt;= 0 ? num++ : num--;
+  <span class="kt">int</span> <span class="n">num2</span><span class="p">;</span>
+  <span class="n">num2</span> <span class="o">=</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">num</span><span class="p">;</span>
+  <span class="c1">//num &gt;= 0 ? num++ : num--;</span>
 
-  printf(&quot;O valor de num2 e: %d \n\n&quot;, num2);
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;O valor de num2 e: %d </span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
 
-  return 0;
-}
-</pre>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

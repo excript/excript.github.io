@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nessa aula estudaremos a estrutura de seleção múltipla switch. Entenderemos as vantagens de poder definir um conjunto de expressões e o respectivo bloco a ser executado pela expressão verdadeira."/>
 
         <meta property="article:published_time" content="28-02-2014" />
+
             <meta property="article:section" content="curso c" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="curso c" />
@@ -307,88 +308,86 @@ eXcript            </a>
 <h2>SWITCH I</h2>
 <p>A instrução <cite>switch</cite> desempenha um papel semelhante ao da instrução <cite>if</cite>, porém, a mesma possui uma forma mais compacta e assim, acaba sendo muito indicado para as situações em que temos que verificar muitas situações.
 Por exemplo:</p>
-<pre class="literal-block">
-int x = 0;
-x = scanf(&quot;%d&quot;, &amp;x);
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
 
-switch(x){
-    case 1:
-        printf(&quot;um&quot;);
-        break;
-    case2:
-        printf(&quot;dois&quot;);
-        break;
-    default:
-        printf(&quot;opção inválida&quot;);
-}
-</pre>
+<span class="k">switch</span><span class="p">(</span><span class="n">x</span><span class="p">){</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;um&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="nl">case2</span><span class="p">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;dois&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;opção inválida&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
 <p>No exemplo acima, se esta definindo uma condição para diversos valores inteiros. Logo, baseado no valor que o usuário digitar, um bloco de instrução será executado. Assim, temos uma forma mais compacta para avaliarmos uma série de condições.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-//  ==========                 ==========
-//  ========== www.eXcript.com ==========
-//  ==========                 ==========
+<span class="c1">//  ==========                 ==========</span>
+<span class="c1">//  ========== www.eXcript.com ==========</span>
+<span class="c1">//  ==========                 ==========</span>
 
-int main()
-{
-    /*
-    switch( expressão ){
-    case(expressao-cost):
-        break;
-    case(true):
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="cm">/*</span>
+<span class="cm">    switch( expressão ){</span>
+<span class="cm">    case(expressao-cost):</span>
+<span class="cm">        break;</span>
+<span class="cm">    case(true):</span>
 
-    default:
-    //não há necessida de colocarmos um break;
-    }
-    */
+<span class="cm">    default:</span>
+<span class="cm">    //não há necessida de colocarmos um break;</span>
+<span class="cm">    }</span>
+<span class="cm">    */</span>
 
-    printf(&quot;Digite um valor entre 0 e 9&quot;);
-    int i;
-    scanf(&quot;%i&quot;, &amp;i);
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Digite um valor entre 0 e 9&quot;</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">);</span>
 
-    switch(i){
-    case 0:
-        printf(&quot;A opção digitada foi 'zero' &quot;);
-        break;
-    case 1:
-        printf(&quot;A opção digitada foi 'um'&quot;);
-        break;
-    case 2:
-        printf(&quot;A opção digitada foi 'dois'&quot;);
-        break;
-    case 3:
-        printf(&quot;A opção digitada foi 'tres'&quot;);
-        break;
-    case 4:
-        printf(&quot;A opção digitada foi 'quatro'&quot;);
-        break;
-    case 5:
-        printf(&quot;A opção digitada foi 'cinco'&quot;);
-        break;
-    case 6:
-        printf(&quot;A opção digitada foi 'seis'&quot;);
-        break;
-    case 7:
-        printf(&quot;A opção digitada foi 'sete'&quot;);
-        break;
-    case 8:
-        printf(&quot;A opção digitada foi 'oite'&quot;);
-        break;
-    case 9:
-        printf(&quot;A opção digitada foi 'nove'&quot;);
-        break;
-    default:
-        printf(&quot;Opção default.&quot;);
-    }
+    <span class="k">switch</span><span class="p">(</span><span class="n">i</span><span class="p">){</span>
+    <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A opção digitada foi &#39;zero&#39; &quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A opção digitada foi &#39;um&#39;&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A opção digitada foi &#39;dois&#39;&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A opção digitada foi &#39;tres&#39;&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A opção digitada foi &#39;quatro&#39;&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">5</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A opção digitada foi &#39;cinco&#39;&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">6</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A opção digitada foi &#39;seis&#39;&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">7</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A opção digitada foi &#39;sete&#39;&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">8</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A opção digitada foi &#39;oite&#39;&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">9</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A opção digitada foi &#39;nove&#39;&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Opção default.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    return 0;
-}
-</pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

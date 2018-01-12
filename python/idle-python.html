@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos o aplicativo IDLE que é, a forma interativa para utilizarmos o Python e assim, sermos capazes de testar funções, classes e quaisquer classe de qualquer pacote instalado."/>
 
         <meta property="article:published_time" content="02-05-2016" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -396,9 +397,8 @@ eXcript            </a>
 <div class="section" id="ubuntu">
 <h2>UBUNTU</h2>
 <p>Se você estiver utilizando o Ubuntu será necessário instalar o IDLE manualmente. Para isso, abra o terminal e digite:</p>
-<pre class="literal-block">
-sudo apt-get install idle
-</pre>
+<div class="highlight"><pre><span></span>sudo apt-get install idle
+</pre></div>
 </div>
 <div class="section" id="code-complete">
 <h2>CODE COMPLETE</h2>
@@ -418,14 +418,13 @@ sudo apt-get install idle
 <p>Se por exemplo, executarmos a soma entre 2 números inteiros, o resultado será impresso na linha seguinte a operação, como podemos ver na imagem a seguir:</p>
 <img alt="Imagem mostrando a utilização do IDLE como uma simples calculadora" src="../images/curso-de-python/idle-calculadora.png" />
 <p>Como podemos ver na imagem, se mandarmos somar 2 números o resultado é impresso na linha seguinte. O mesmo resultado pode ser obtido, passando a soma como parâmetro pela função <cite>print()</cite>.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-&gt;&gt;&gt; 10 + 10
-20
-&gt;&gt;&gt; print(10 + 10)
-20
-</pre>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span>
+<span class="mi">20</span>
+</pre></div>
 <p>Após o resultado ser apresentado, o cursor é liberado para que seja possível entrar outra instrução.</p>
 </div>
 <div class="section" id="retornando-instrucoes-anteriores">
@@ -449,14 +448,13 @@ Alt + N - para avançar. O 'N' vem de &quot;Next&quot;.</p>
 <div class="section" id="utilizando-o-ultimo-resultado">
 <h2>UTILIZANDO O ÚLTIMO RESULTADO</h2>
 <p>É comum que precisarmos utilizar o último valor que foi retornado pelo IDLE, isto é, vamos supor que nós estejamos fazendo um cálculo, logo, é comum precisarmos do último resultado. Pra isso, podemos utilizar o caractere de underline ( _ ) para assim acessarmos a instância do último valor, por exemplo:</p>
-<pre class="literal-block">
-#realizamos uma simples soma entre 2 valores
-&gt;&gt;&gt; 10 + 10
-20
-#utilizamos o último resultado e somamos mais 10 unidades ao mesmo
-&gt;&gt;&gt; _ + 10
-30
-</pre>
+<div class="highlight"><pre><span></span><span class="c1">#realizamos uma simples soma entre 2 valores</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="mi">20</span>
+<span class="c1">#utilizamos o último resultado e somamos mais 10 unidades ao mesmo</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">_</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="mi">30</span>
+</pre></div>
 <p>Como pode ser visto no código acima, inicialmente realizamos a soma de 2 operandos. Na sequência, utilizamos o caractere de underline para assim somarmos mais 10 unidades ao resultado da primeira expressão.</p>
 </div>
 <div class="section" id="teclas-de-atalho-do-idle">

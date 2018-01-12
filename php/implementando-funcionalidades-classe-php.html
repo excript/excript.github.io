@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula aprenderemos a implementar funcionalidades em nossas classes em PHP, bem como a forma em que devemos estruturas nossas classes."/>
 
         <meta property="article:published_time" content="16-06-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -523,31 +524,29 @@ eXcript            </a>
 <h2>UMA PRIMEIRA NOÇÃO DE ENCAPSULAMENTO</h2>
 <p>Mesmo que não tenhamos estudado o conceito de encapsulamento, podemos observar que, os objetos funcionam como uma cápsula, onde as propriedades são o conteúdo da capsula, enquanto as funções, irão assumir uma de duas opções. a) de uso intero; b) uso externo. As funções internas, deverão ter seus nomes restritos ao escopo da classe, enquanto que as funções de uso externo, deverão ter suas funções decladas como sendo pública e estas, formarão, a interface de comunicação entre o mundo exterior e o conteúdo interno da classe.</p>
 <p>Por fim, só o conceito de manter os dados e as funções num mesmo lugar já é, por definição, uma maneira de encapsulamento, até porque, para acessarmos uma propriedade ou um funcionalidade somos obrigados a especificar a capsula que desejamos manipular.</p>
-<pre class="literal-block">
-class Teste {
-    function imprimeTeste(){
-        echo &quot;teste&quot;
-    }
+<div class="highlight"><pre><span></span><span class="x">class Teste {</span>
+<span class="x">    function imprimeTeste(){</span>
+<span class="x">        echo &quot;teste&quot;</span>
+<span class="x">    }</span>
 
-}
-</pre>
+<span class="x">}</span>
+</pre></div>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#IMPLEMENTANDO FUNÇÕES I
+<div class="highlight"><pre><span></span><span class="x">#IMPLEMENTANDO FUNÇÕES I</span>
 
-class Teste{
+<span class="x">class Teste{</span>
 
-    public function imprimeTeste(){
-        echo &quot;Função imprimeTeste() da classe de nome Teste&quot;;
-    }
+<span class="x">    public function imprimeTeste(){</span>
+<span class="x">        echo &quot;Função imprimeTeste() da classe de nome Teste&quot;;</span>
+<span class="x">    }</span>
 
-}
+<span class="x">}</span>
 
-$t1 = new Teste();
-$t1 -&gt; imprimeTeste();
-</pre>
+<span class="x">$t1 = new Teste();</span>
+<span class="x">$t1 -&gt; imprimeTeste();</span>
+</pre></div>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

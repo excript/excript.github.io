@@ -28,6 +28,7 @@
         <meta property="og:description" content="Nesta aula aprenderemos a instalar a biblioteca Kivy no sistema operacional Ubuntu."/>
 
         <meta property="article:published_time" content="22-11-2016" />
+
             <meta property="article:section" content="blog" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="kivy" />
@@ -364,6 +365,20 @@ sudo apt-get install ffmpeg
 </pre></div>
 <p>Finalizamos a primeira fase da instalação da biblioteca Kivy no Ubuntu.</p>
 <p>Agora vamos iniciar a instalação das bibliotecas do Python propriamente ditas.</p>
+</div>
+<div class="section" id="addendum">
+<h2>ADDENDUM</h2>
+<p>Alguns alunos relataram que o local em que está ocorrendo a instalação do virtualenvwrapper está diferente do local em que normalmente encontravamos-o ou então, do local em que ensinamos aqui mesmo nesse tutorial. Como não posso alterar a localização do arquivo agora pois, para muitas versões do Ubuntu o turial continua correto, estou disponibilizando os locais prováveis em que você encontrará o arquivo.</p>
+<p>Inicialmente, sempre que necessário, podemos localizar arquivos no Linux de forma semelhante ao que temos no script a seguir. Portanto, se ainda assim você fizer a instalação do virtualenvwrapper mas não localiza-lo nos locais aqui sugeridos, utilize essa primeira opção para então localiza-lo.</p>
+<div class="highlight"><pre><span></span>find / -name virtualenvwrapper.sh
+</pre></div>
+<p>No <strong>UBUNTU 12.04 LTS</strong> o arquivo do virtualenvwrapper estará em:</p>
+<div class="highlight"><pre><span></span>/usr/local/bin/virtualenvwrapper.sh
+</pre></div>
+<p>No <strong>UBUNTU 17.04 LTS</strong> o arquivo do virtualenvwrapper estará em:</p>
+<div class="highlight"><pre><span></span>~/.local/bin/virtualenvwrapper.sh
+</pre></div>
+<p>Caso ainda haja divergência ou então você encontre alguma divergência por favor, relate aqui nos comentários para que possamos atualizar o material.</p>
 </div>
 <div class="section" id="instalacao-pacotes-python">
 <h2>2) INSTALAÇÃO PACOTES PYTHON</h2>

@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula aprenderemos o envio de requisições do tipo POST, bem como o seu funcionamento e suas diferenças do tipo de requisição GET."/>
 
         <meta property="article:published_time" content="10-01-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -502,12 +503,11 @@ eXcript            </a>
 <h2>EXEMPLO FEITO EM AULA</h2>
 <p>Este código utiliza também o código da aula anterior.</p>
 <p>Nome do Arquivo: <tt class="docutils literal">metodo_post.php</tt></p>
-<pre class="literal-block">
-//var_dump($_GET);
+<div class="highlight"><pre><span></span><span class="x">//var_dump($_GET);</span>
 
-echo 'Nome: ' . ($_POST['nome'] ?? '') . &quot;&lt;br&gt;&quot;;
-echo 'E-mail: ' . ($_POST['email'] ?? '') . &quot;&lt;br&gt;&quot;;
-</pre>
+<span class="x">echo &#39;Nome: &#39; . ($_POST[&#39;nome&#39;] ?? &#39;&#39;) . &quot;&lt;br&gt;&quot;;</span>
+<span class="x">echo &#39;E-mail: &#39; . ($_POST[&#39;email&#39;] ?? &#39;&#39;) . &quot;&lt;br&gt;&quot;;</span>
+</pre></div>
 </div>
 
 				</div>

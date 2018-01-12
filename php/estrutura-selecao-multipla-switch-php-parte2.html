@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta segunda aula sobre as estruturas de seleção múltipla, implementaremos um código que demonstra os beneficios da instrução switch."/>
 
         <meta property="article:published_time" content="18-11-2015" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -501,87 +502,86 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;pt-br&quot;&gt;
+<div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
 
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Instrução Switch na prática - Curso PHP - eXcript&lt;/title&gt;
-&lt;/head&gt;
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">    &lt;title&gt;Instrução Switch na prática - Curso PHP - eXcript&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
 
-&lt;body&gt;
+<span class="x">&lt;body&gt;</span>
 
-&lt;?php
-    if(isset($_POST[&quot;cbxMES&quot;])){
-        $mes = $_POST[&quot;cbxMES&quot;];
-        switch($mes){
-            case 1:
-                echo &quot;Janeiro&quot;;
-                break;
-            case 2:
-                echo &quot;Fevereiro&quot;;
-                break;
-            case 3:
-                echo &quot;Março&quot;;
-                break;
-            case 4:
-                echo &quot;Abril&quot;;
-                break;
-            case 5:
-                echo &quot;Maio&quot;;
-                break;
-            case 6:
-                echo &quot;Junho&quot;;
-                break;
-            case 7:
-                echo &quot;Julho&quot;;
-                break;
-            case 8:
-                echo &quot;Agosto&quot;;
-                break;
-            case 9:
-                echo &quot;Setembro&quot;;
-                break;
-            case 10:
-                echo &quot;Outubro&quot;;
-                break;
-            case 11:
-                echo &quot;Novembro&quot;;
-                break;
-            case 12:
-                echo &quot;Dezembro&quot;;
-                break;
-        }
-    }
-?&gt;
+<span class="cp">&lt;?php</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;cbxMES&quot;</span><span class="p">])){</span>
+        <span class="nv">$mes</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;cbxMES&quot;</span><span class="p">];</span>
+        <span class="k">switch</span><span class="p">(</span><span class="nv">$mes</span><span class="p">){</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Janeiro&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Fevereiro&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Março&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Abril&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">5</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Maio&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">6</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Junho&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">7</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Julho&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">8</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Agosto&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">9</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Setembro&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">10</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Outubro&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">11</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Novembro&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">12</span><span class="o">:</span>
+                <span class="k">echo</span> <span class="s2">&quot;Dezembro&quot;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
 
-&lt;form method=&quot;post&quot;&gt;
-    &lt;select name=&quot;cbxMES&quot; &gt;
+<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
+<span class="x">    &lt;select name=&quot;cbxMES&quot; &gt;</span>
 
-        &lt;option value=&quot;1&quot;&gt;Janeiro&lt;/option&gt;
-        &lt;option value=&quot;2&quot;&gt;Fevereiro&lt;/option&gt;
-        &lt;option value=&quot;3&quot;&gt;Março&lt;/option&gt;
-        &lt;option value=&quot;4&quot;&gt;Abril&lt;/option&gt;
-        &lt;option value=&quot;5&quot;&gt;Maio&lt;/option&gt;
-        &lt;option value=&quot;6&quot;&gt;Junho&lt;/option&gt;
-        &lt;option value=&quot;7&quot;&gt;Julho&lt;/option&gt;
-        &lt;option value=&quot;8&quot;&gt;Agosto&lt;/option&gt;
-        &lt;option value=&quot;9&quot;&gt;Setembro&lt;/option&gt;
-        &lt;option value=&quot;10&quot;&gt;Outubro&lt;/option&gt;
-        &lt;option value=&quot;11&quot;&gt;Novembro&lt;/option&gt;
-        &lt;option value=&quot;12&quot;&gt;Dezembro&lt;/option&gt;
+<span class="x">        &lt;option value=&quot;1&quot;&gt;Janeiro&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;2&quot;&gt;Fevereiro&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;3&quot;&gt;Março&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;4&quot;&gt;Abril&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;5&quot;&gt;Maio&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;6&quot;&gt;Junho&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;7&quot;&gt;Julho&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;8&quot;&gt;Agosto&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;9&quot;&gt;Setembro&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;10&quot;&gt;Outubro&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;11&quot;&gt;Novembro&lt;/option&gt;</span>
+<span class="x">        &lt;option value=&quot;12&quot;&gt;Dezembro&lt;/option&gt;</span>
 
-    &lt;/select&gt;
+<span class="x">    &lt;/select&gt;</span>
 
-    &lt;input type=&quot;submit&quot;&gt;
-&lt;/form&gt;
+<span class="x">    &lt;input type=&quot;submit&quot;&gt;</span>
+<span class="x">&lt;/form&gt;</span>
 
-&lt;/body&gt;
+<span class="x">&lt;/body&gt;</span>
 
 
-&lt;/html&gt;
-</pre>
+<span class="x">&lt;/html&gt;</span>
+</pre></div>
 </div>
 
 				</div>

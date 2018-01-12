@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula aprenderemos como definir o tipo dos parâmetros de uma função, bem como as vantagens na utilização desse conceito implementado na versão 7 do PHP."/>
 
         <meta property="article:published_time" content="15-06-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -510,34 +511,32 @@ eXcript            </a>
 <h2>FUNÇÕES COM PARÂMETROS TIPADOS</h2>
 <p>Funções com parâmetros tipados é uma forma de evitarmos a checagem do tipo de cada parâmetro recebido. Assim, o interpretador fica com a tarefa de verificar se o valor que está sendo enviado para a função é do tipo esperado.</p>
 <p>A seguir, estamos definindo uma função que recebe 2 parâmetros inteiros.</p>
-<pre class="literal-block">
-function getArea(int x, int y){
-    return x * y;
-}
-</pre>
+<div class="highlight"><pre><span></span><span class="x">function getArea(int x, int y){</span>
+<span class="x">    return x * y;</span>
+<span class="x">}</span>
+</pre></div>
 <p>No exemplo acima, se passarmos por exemplo, um valor do tipo ponto flutuante como parâmetro, o PHP irá converter o mesmo para um inteiro, e o mesmo irá ocorrer se enviarmos um valor do tipo <tt class="docutils literal">String</tt>.</p>
 <p>Porém, podemos declarar no início do nosso código, que caso o valor que seja enviado não  corresponda ao tipo esperado, uma exceção deve ser levantada informando o usuário de que o valor informando possui um tipo diferente do previsto. Dessa forma, o PHP pode se transformar numa linguagem fortemente tipada, ou seja, os valores e os tipos devem ser respeitados.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-declare(strict_types=1);
+<div class="highlight"><pre><span></span><span class="x">declare(strict_types=1);</span>
 
-#FUNÇÕES COM PARÂMETROS TIPADOS
+<span class="x">#FUNÇÕES COM PARÂMETROS TIPADOS</span>
 
-function getArea(int $x, int $y){
+<span class="x">function getArea(int $x, int $y){</span>
 
-    return $x * $y;
-}
+<span class="x">    return $x * $y;</span>
+<span class="x">}</span>
 
-function getSum(int ...$valores){
+<span class="x">function getSum(int ...$valores){</span>
 
-    return array_sum($valores);
-}
+<span class="x">    return array_sum($valores);</span>
+<span class="x">}</span>
 
-echo getArea(10, 5) . &quot;\n&quot;;
-echo getSum(1,2,3,4,5,6,&quot;100&quot;);
-</pre>
+<span class="x">echo getArea(10, 5) . &quot;\n&quot;;</span>
+<span class="x">echo getSum(1,2,3,4,5,6,&quot;100&quot;);</span>
+</pre></div>
 </div>
 
 				</div>

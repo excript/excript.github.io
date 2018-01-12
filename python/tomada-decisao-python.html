@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos a Tomada de Decisão, isto é, a execução de uma bloco de instrução conforme o resultado de uma expressão lógica."/>
 
         <meta property="article:published_time" content="16-05-2016" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -398,14 +399,13 @@ eXcript            </a>
 <h2>A INSTRUÇÃO <tt class="docutils literal">if</tt></h2>
 <p>A palavra <tt class="docutils literal">if</tt>, do Inglês, significa <tt class="docutils literal">SE</tt>. Com a estrutura <tt class="docutils literal">if</tt> podemos determinar o que deve acontecer mediante o valor lógico retornado, isto é, <strong>SE</strong> for verdadeiro [<strong>True</strong>], faça isso, <strong>SE</strong> for falso [<strong>False</strong>], faça aquilo.</p>
 <p>Analisemos o exemplo a seguir em que utilizamos o formato da instrução <tt class="docutils literal">if</tt>, porém, utilizando a Lingua Portuguesa:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-SE( verdadeiro ):
-    faça_isso()
-    faça_e_mais_isso()
-    faça_aquilo()
-</pre>
+<span class="n">SE</span><span class="p">(</span> <span class="n">verdadeiro</span> <span class="p">):</span>
+    <span class="n">faça_isso</span><span class="p">()</span>
+    <span class="n">faça_e_mais_isso</span><span class="p">()</span>
+    <span class="n">faça_aquilo</span><span class="p">()</span>
+</pre></div>
 <p>No código acima, estamos verificando se a expressão entre parêntesis é verdadeira. Em seguida, colocamos o sinal de 2 pontos, dizendo para o Python que ali finaliza o cabeçalho da estrutura <tt class="docutils literal">if</tt>. A linha seguinte é o início do <strong>Bloco de Instrução</strong> e será executado nas situações em que a expressão for verdadeira. Todo bloco de instrução que está subordinado a uma estrutura, estará, obrigatoriamente, indentado um nível a frente da estrutura subordinada.</p>
 <p>Nesse primeiro momento, temos que entender que se a expressão definida no cabeçalho da estrutura <tt class="docutils literal">if</tt> [entre parêntesis], for verdadeira, tudo que estiver nas linhas seguintes e com a indentação avançada será executado. A instrução <tt class="docutils literal">faça_isso()</tt> é a primeira instrução do <strong>bloco de instrução</strong> que é executado todas as vezes que a expressão definida e avaliada no cabeçalho da estrutura <tt class="docutils literal">if</tt> é verdadeira.</p>
 <p>Caso a expressão contida entre parêntesis não seja verdadeiro, na situação acima, nada acontecerá e a execução das linhas seguintes a <tt class="docutils literal">tomada de decisão</tt> e que estão com a indentação avançada, não será executado. Entenda por <strong>linhas seguintes</strong> todas as instruções com o nível de indentação igual ao da instrução <tt class="docutils literal">if</tt>.</p>
@@ -413,13 +413,12 @@ SE( verdadeiro ):
 <div class="section" id="um-caso-real-utilizando-a-estrutura-if">
 <h2>UM CASO REAL UTILIZANDO A ESTRUTURA <tt class="docutils literal">if</tt></h2>
 <p>Agora, vamos fazer uma exemplo onde verificaremos se o número digitado por um usuário é maior do que zero. Caso seja, o bloco de instrução [verdadeiro] a seguir da estrutura será executado.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-num = input(&quot;Digite um número: &quot;)
-if(num &gt; 0):
-    print(&quot;O número digitado é maior do que &quot;)
-</pre>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite um número: &quot;</span><span class="p">)</span>
+<span class="k">if</span><span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;O número digitado é maior do que &quot;</span><span class="p">)</span>
+</pre></div>
 <p>No exemplo acima, utilizamos a função <tt class="docutils literal">input()</tt> para imprimirmos uma mensagem na tela e em seguida colocar o Console no modo de edição, isto é, colocar o Console de tal forma que seja  possível ao nosso usuário digitar e pressionar Enter.</p>
 <p>Após o usuário digitar um valor e pressionar a tecla Enter, o valor digitado é passado para a variável <tt class="docutils literal">num</tt>. Em seguida, o valor contido na variável <tt class="docutils literal">num</tt> é comparada ao número 0. Caso o valor de <tt class="docutils literal">num</tt> seja maior do que zero, o bloco de instrução verdadeiro será executado, do contrário, nada acontecerá.</p>
 <p>É importante observar que caso nada seja digitado, ou então, não seja digitado um número válido, uma exceção é levantada e a execução do programa é interrompida.</p>

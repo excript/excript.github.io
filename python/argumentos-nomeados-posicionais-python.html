@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos o conceito de Parâmetros Nomeados e Parâmetros Posicionais. Estudaremos a diferença entre os conceitos e suas características, bem como quando utilizar cada uma das definição."/>
 
         <meta property="article:published_time" content="15-06-2016" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -405,18 +406,17 @@ eXcript            </a>
         </table>
     </div>
 <p>Considere o trecho de código a seguir:</p>
-<pre class="literal-block">
-def minha_func(a, b, c):
-    print(a, b, c)
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">minha_func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 
-# invocando a função minha_func() passando valores de forma posicional
-minha_func(1, 2, 3)
-# invocando a função minha_func() passando valores de forma chave-valor
-minha_func(a=1, b=2, c=3)
-# invocando a função minha_func() passando valores de forma chave-valor
-# porém, fora de ordem
-minha_func(a=1, c=3, b=2)
-</pre>
+<span class="c1"># invocando a função minha_func() passando valores de forma posicional</span>
+<span class="n">minha_func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="c1"># invocando a função minha_func() passando valores de forma chave-valor</span>
+<span class="n">minha_func</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># invocando a função minha_func() passando valores de forma chave-valor</span>
+<span class="c1"># porém, fora de ordem</span>
+<span class="n">minha_func</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
 <p>No código acima, declaramos uma função de nome <code>minha_func(a, b, c)</code> e definimos 3 parâmetros de nomes, <code>(a, b, c)</code>. Em seguida, invocamos a função <code>minha_func()</code> 2 vezes. Na primeira, passamos 3 valores na ordem em que estes foram definidos, ou seja, <code>1, 2, 3</code> serão, automaticamente definidos, para os parâmetros <tt class="docutils literal">a</tt>, <tt class="docutils literal">b</tt> e <tt class="docutils literal">c</tt> respectivamente. Em seguida, invocamos a função novamente, porém, definimos os parâmetro de maneira nomeada, isto é, a cada parâmetro associamos determinado valor.</p>
 <p>Argumento nomeado é um recurso que permite a passagem de valores pela associação chave-valor e assim, os mesmos não precisaram estar dispostos numa ordem pre-estabelecida, até porque, o Python receberá um dicionário que contém o nome e o valor de cada parâmetro.</p>
 <p>Se analisarmos a forma que passamos valores e as estruturas estudadas, é possível perceber que a passagem de parâmetros posicionais, <cite>nada mais é do que o envio de uma tupla &lt;{filename}../curso-de-python/0052_tuplas-python.rst&gt;</cite>, enquanto que <cite>a passagem de valores nomeados, é o envio de um dicionário &lt;{filename}../curso-de-python/0061_introducao-aos-dicionarios-python.rst&gt;</cite>.</p>
@@ -425,36 +425,34 @@ minha_func(a=1, c=3, b=2)
 <div class="section" id="excecao-a-regra">
 <h2>EXCEÇÃO À REGRA</h2>
 <p>É possível invocar uma função passando os primeiros argumentos de forma posicional e o restante, de forma nomeada. Porém, a regra para trabalhar dessa maneira é: argumentos posicionais, em seguida, argumentos nomeados. Tomemos como exemplo o código a seguir:</p>
-<pre class="literal-block">
-def minha_func2(a, b, c, d):
-    print(a, b, c, d)
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">minha_func2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
 
-minha_func(1, 2, d=4, c=3)
-</pre>
+<span class="n">minha_func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
 <p>No código acima, definimos uma função semelhante a estudada no primeiro exemplo, porém, que contém mais um argumento de nome <tt class="docutils literal">d</tt>. Em seguida, invocamos a função e, para os 2 primeiros argumentos, enviamos valores de maneira posicional. Já, para os 2 argumentos finais, de nomes <tt class="docutils literal">c</tt> e <tt class="docutils literal">d</tt>, passamos valores associando o nome do parâmetro com o respectivo valor.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-# coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1"># coding: utf-8</span>
 
-# =================
-#  = eXcript.com =
-# =================
+<span class="c1"># =================</span>
+<span class="c1">#  = eXcript.com =</span>
+<span class="c1"># =================</span>
 
-# ARGUMENTOS POSICIONAIS E ARGUMENTOS NOMEADOS
+<span class="c1"># ARGUMENTOS POSICIONAIS E ARGUMENTOS NOMEADOS</span>
 
-def dados_pessoais(nome, sobrenome, idade, sexo):
-    print(&quot;Nome: {}\nSobrenome: {}\nIdade: {}\nSexo: {}&quot;
-            .format(nome, sobrenome, idade, sexo))
+<span class="k">def</span> <span class="nf">dados_pessoais</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">sobrenome</span><span class="p">,</span> <span class="n">idade</span><span class="p">,</span> <span class="n">sexo</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Nome: {}</span><span class="se">\n</span><span class="s2">Sobrenome: {}</span><span class="se">\n</span><span class="s2">Idade: {}</span><span class="se">\n</span><span class="s2">Sexo: {}&quot;</span>
+            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">sobrenome</span><span class="p">,</span> <span class="n">idade</span><span class="p">,</span> <span class="n">sexo</span><span class="p">))</span>
 
-dados_pessoais(&quot;Cláudio&quot;, sobrenome=&quot;Rogério&quot;, idade=30, sexo=True)
-# dados_pessoais(idade=30,
-#                 sexo=True,
-#                 sobrenome=&quot;Carvalho&quot;,
-#                 nome=&quot;Cláudio&quot;
-#                 )
-</pre>
+<span class="n">dados_pessoais</span><span class="p">(</span><span class="s2">&quot;Cláudio&quot;</span><span class="p">,</span> <span class="n">sobrenome</span><span class="o">=</span><span class="s2">&quot;Rogério&quot;</span><span class="p">,</span> <span class="n">idade</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">sexo</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c1"># dados_pessoais(idade=30,</span>
+<span class="c1">#                 sexo=True,</span>
+<span class="c1">#                 sobrenome=&quot;Carvalho&quot;,</span>
+<span class="c1">#                 nome=&quot;Cláudio&quot;</span>
+<span class="c1">#                 )</span>
+</pre></div>
 </div>
 <div class="section" id="links-externos">
 <h2>LINKS EXTERNOS</h2>

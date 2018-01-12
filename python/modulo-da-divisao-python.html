@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos o módulo da divisão, ou seja, o operador que permite obter a parte restante de uma divisão."/>
 
         <meta property="article:published_time" content="07-05-2016" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -388,39 +389,36 @@ eXcript            </a>
 <p>O <strong>Módulo da Divisão</strong>, ou então, <strong>Operação Módulo</strong>, é o operador que extraí o resto da divisão. É possível obter o resto da divisão de várias maneiras, porém, a linguagem Python, bem como, a maioria das linguagens de programação, disponibilizam um operador para este fim.</p>
 <p>O sinal de porcentagem <cite>%</cite> é o operador módulo. Ainda que não faça muito sentido, esse pode ser considerado quase que um padrão entre as linguagens de programação.</p>
 <p>Ao lado esquerdo, devemos colocar o número a ser dividido, e ao lado direito, o divisor, por exemplo:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-print(10 % 2) #obtém o módulo da divisão de 10 por 2
-</pre>
+<span class="k">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">#obtém o módulo da divisão de 10 por 2</span>
+</pre></div>
 <p>No código acima, estamos dividindo o número 10 por 2 com uso do operador módulo. O valor retornado é passado como parâmetro para a função <cite>print()</cite> que imprime o módulo da divisão no Console.</p>
 </div>
 <div class="section" id="numeros-pares">
 <h2>NÚMEROS PARES</h2>
 <p>Podemos saber se um número é par com o uso do operador módulo, para isto, basta verificarmos se a divisão possui resto, ou melhor, se o valor retornado é diferente de zero, por exemplo:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-num = input(&quot;Digite um número: &quot;)
-if(num % 2 == 0):
-    print(&quot;Número par.&quot;)
-else:
-    print(&quot;Número ímpar&quot;)
-</pre>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite um número: &quot;</span><span class="p">)</span>
+<span class="k">if</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Número par.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Número ímpar&quot;</span><span class="p">)</span>
+</pre></div>
 <p>No código acima, pedimos para o usuário digitar um número. Em seguida, armazenamos esse número na variável de nome <cite>num</cite>. Feito isso, obtemos o módulo de <cite>num</cite> por 2. Caso o valor retornado seja diferente de 0, a divisão não é inteira, logo o número não é par. Em seguida, imprimimos no Console a frase dizendo se o valor digitado é ou não par.</p>
 </div>
 <div class="section" id="numeros-cheios-ou-numeros-redondos">
 <h2>NÚMEROS CHEIOS OU NÚMEROS REDONDOS</h2>
 <p>Uma outra utilidade simples, porém, interessa, é verificar se um determinado número é redondo, por exemplo: 100, 200, 500 e etc. Para isso, dividirmos o mesmo por 100 e compararmos o módulo com 0, por exemplo:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-num = input(&quot;Digite um número: &quot;)
-if(num % 100 == 0):
-    print(&quot;Número redondo.&quot;)
-else:
-    print(&quot;O número não é redondo&quot;)
-</pre>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite um número: &quot;</span><span class="p">)</span>
+<span class="k">if</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Número redondo.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;O número não é redondo&quot;</span><span class="p">)</span>
+</pre></div>
 <p>No código acima, pedimos para o usuário digitar um valor e em seguida, verificamos se o módulo do número digitado é igual a 0.</p>
 </div>
 <div class="section" id="consideracoes-finais">
@@ -430,25 +428,24 @@ else:
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-print(3%2)
-print(4%2)
-print(5%2)
-print(7%3.1)
+<span class="k">print</span><span class="p">(</span><span class="mi">3</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">4</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">5</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">7</span><span class="o">%</span><span class="mf">3.1</span><span class="p">)</span>
 
-print(900%100==0)
+<span class="k">print</span><span class="p">(</span><span class="mi">900</span><span class="o">%</span><span class="mi">100</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
 
-num1 = float(input(&quot;Digite um número: &quot;))
-num2 = float(input(&quot;Digite outro número: &quot;))
+<span class="n">num1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite um número: &quot;</span><span class="p">))</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite outro número: &quot;</span><span class="p">))</span>
 
-divisao = num1 / num2
-resto = num1 % num2
-print()
-print(num1, &quot;divido por&quot;, num2, &quot;é igual a: &quot;, divisao)
-print(&quot;O resto da divisão entre&quot;, num1, &quot;e&quot;, num2, &quot; é igual a:&quot;, resto)
-</pre>
+<span class="n">divisao</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span>
+<span class="n">resto</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">%</span> <span class="n">num2</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="s2">&quot;divido por&quot;</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="s2">&quot;é igual a: &quot;</span><span class="p">,</span> <span class="n">divisao</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;O resto da divisão entre&quot;</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="n">num2</span><span class="p">,</span> <span class="s2">&quot; é igual a:&quot;</span><span class="p">,</span> <span class="n">resto</span><span class="p">)</span>
+</pre></div>
 </div>
 
 				</div>

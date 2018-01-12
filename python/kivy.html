@@ -28,6 +28,7 @@
         <meta property="og:description" content="Neste artigo será apresentado o projeto que permite o desenvolvimento multiplataforma com Python utilizando o framework Kivy."/>
 
         <meta property="article:published_time" content="24-10-2017" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="python" />
             <meta property="article:tag" content="kivy" />
@@ -157,7 +158,7 @@ eXcript            </a>
 <p>A biblioteca Kivy é um framework para desenvolvimento multiplataforma escrito majoritariamente com a linguagem Python e, com  alguns trechos escritos em Cython (explicaremos melhor a seguir). O framework permite o desenvolvimento de aplicações para os sistema operacional Microsoft Windows, Linux, Mac OSX, Android, iOS, Raspberry utilizando um mesmo código Python.</p>
 <p>O projeto é composto por vários subprojetos, cada um especializado numa determinada tarefa, como por exemplo, a geração de executáveis para determinada plataforma, uma API genérica para o fácil acesso ao hardware em plataformas diferentes, desenvolvimento de games e etc.</p>
 <p>É importante não confundir o projeto Kivy com a biblioteca Kivy. O projeto Kivy, cujo site é <a class="reference external" href="http://kivy.org">http://kivy.org</a> é composto por vários subprojetos, dentre estes, a biblioteca Kivy.</p>
-<p>A eXcript junto a comunidade traduziu a <a class="reference external" href="http://excript.com/python/doc-kivy-ptbr.html">documentação oficial do framework</a> e o mesmo pode ser baixado aqui em nosso site.</p>
+<p>A eXcript, junto a comunidade brasileira, traduziu a <a class="reference external" href="http://excript.com/python/doc-kivy-ptbr.html">documentação oficial do framework</a> e o mesmo pode ser baixado aqui em nosso site.</p>
 </div>
 <div class="section" id="a-biblioteca-kivy">
 <h2>A BIBLIOTECA KIVY</h2>
@@ -228,7 +229,7 @@ OpenGL® ES is a royalty-free, cross-platform API for full-function 2D and 3D gr
     </div>
 </div>
 <div class="section" id="o-python">
-<h2>O Python</h2>
+<h2>O PYTHON</h2>
 <p>A biblioteca inicialmente foi escrita para a versão 2x do <a class="reference external" href="https://blog.kivy.org/2016/01/python-for-android-now-supports-python-3%C2%A0apks/">Python e recentemente (2016) foi publicado o suporte experimental à versão 3x</a> . Ainda que o suporte seja experimental, há casos de sucesso utilizando a versão 3x.</p>
 <p>Mesmo assim, a versão do Python amplamente suportada ainda é a 2x e algumas plataformas, como por exemplo o Mac OSX, ainda não possuem suporte para gerar executáveis utilizando as últimas versões.</p>
 <p>O desenvolvimento utilizando a versão 2x e 3x são iguais, salvo a manipulação de String que, na versão 2x do Python possui um tratamento diferente, ou seja, as cadeias de caracteres não são Unicode por padrão.</p>
@@ -277,9 +278,8 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>O <a class="reference external" href="https://github.com/kivy-garden">Projeto Garden</a> centraliza componentes não oficiais de código-fonte aberto e distribuido sob a licença MIT desenvolvido por terceiros. Pense neste projeto como um centralizador de códigos de diferentes usuários cuja finalidade é distribuir e compartilhar módulos prontos para ser utilizado.</p>
 <p>Todos os pacotes Garden estão armazenados no Github, dentro do projeto Kivy, ou seja, no mesmo local em que baixamos o código fonte da biblioteca Kivy.</p>
 <p>O projeto Garden não está mais sendo entregue junto com o código do framework Kivy, por isso, agora, é necessário instala-lo manualmente. Para isso, vá no Terminal e digite:</p>
-<pre class="literal-block">
-pip install kivy-garden
-</pre>
+<div class="highlight"><pre><span></span>pip install kivy-garden
+</pre></div>
 <p>Vale dizer que todos são incentivados a colaborar com os pacotes existentes ou então, pela criação de novos módulos independentes. Inclusive, existe um sistema de premiação simbólica para aqueles que tenham colaborado.</p>
 <p><a class="reference external" href="https://github.com/kivy-garden">Segue o link do repositório no Github</a>.</p>
 </div>
@@ -309,27 +309,26 @@ pip install kivy-garden
 <p>Este projeto é semelhante ao <a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/">JNI (Java Native Interface)</a> que permite o acesso às classes escritas em Java por outras linguagens.</p>
 <p>Dessa forma, conseguimos por exemplo, acessar a classe <a class="reference external" href="https://developer.android.com/reference/android/content/Intent.html">Intent</a> do Android, ou então, a classe <a class="reference external" href="https://developer.android.com/reference/android/app/Activity.html">Activity</a> e inclusive, conseguimos desenvolver uma aplicação que rode nativamente em cima da API Java do Android.</p>
 <p>A seguir, temos um exemplo, retirado da documentação oficial do PyJNIus em que é feito o acesso a Activity do Android.</p>
-<pre class="literal-block">
-from jnius import cast
-from jnius import autoclass
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jnius</span> <span class="kn">import</span> <span class="n">cast</span>
+<span class="kn">from</span> <span class="nn">jnius</span> <span class="kn">import</span> <span class="n">autoclass</span>
 
-# import the needed Java class
-PythonActivity = autoclass('org.renpy.android.PythonActivity')
-Intent = autoclass('android.content.Intent')
-Uri = autoclass('android.net.Uri')
+<span class="c1"># import the needed Java class</span>
+<span class="n">PythonActivity</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;org.renpy.android.PythonActivity&#39;</span><span class="p">)</span>
+<span class="n">Intent</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;android.content.Intent&#39;</span><span class="p">)</span>
+<span class="n">Uri</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;android.net.Uri&#39;</span><span class="p">)</span>
 
-# create the intent
-intent = Intent()
-intent.setAction(Intent.ACTION_VIEW)
-intent.setData(Uri.parse('http://kivy.org'))
+<span class="c1"># create the intent</span>
+<span class="n">intent</span> <span class="o">=</span> <span class="n">Intent</span><span class="p">()</span>
+<span class="n">intent</span><span class="o">.</span><span class="n">setAction</span><span class="p">(</span><span class="n">Intent</span><span class="o">.</span><span class="n">ACTION_VIEW</span><span class="p">)</span>
+<span class="n">intent</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="n">Uri</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;http://kivy.org&#39;</span><span class="p">))</span>
 
-# PythonActivity.mActivity is the instance of the current Activity
-# BUT, startActivity is a method from the Activity class, not from our
-# PythonActivity.
-# We need to cast our class into an activity and use it
-currentActivity = cast('android.app.Activity', PythonActivity.mActivity)
-currentActivity.startActivity(intent)
-</pre>
+<span class="c1"># PythonActivity.mActivity is the instance of the current Activity</span>
+<span class="c1"># BUT, startActivity is a method from the Activity class, not from our</span>
+<span class="c1"># PythonActivity.</span>
+<span class="c1"># We need to cast our class into an activity and use it</span>
+<span class="n">currentActivity</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="s1">&#39;android.app.Activity&#39;</span><span class="p">,</span> <span class="n">PythonActivity</span><span class="o">.</span><span class="n">mActivity</span><span class="p">)</span>
+<span class="n">currentActivity</span><span class="o">.</span><span class="n">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">)</span>
+</pre></div>
 <p>Observe que estamos utilizando a linguagem Python para trabalhar com classes escritas em Java!</p>
 <p>Assim concluímos que a capacidade de desenvolvimento é ilimitada, até porque, podemos acessar nativamente tudo que a plataforma Android disponibiliza, seja através das classe em C++ pelo acesso via <a class="reference external" href="https://developer.android.com/ndk/index.html">NDK</a>,</p>
 </div>
@@ -345,21 +344,23 @@ currentActivity.startActivity(intent)
 <h2>PROJETO PyObjus</h2>
 <p>O projeto <a class="reference external" href="https://github.com/kivy/pyobjus">PyObjus</a> permite o acesso às classes escritas em <a class="reference external" href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html">Objective-C</a> pelo Python. Desta forma, conseguimos o acesso nativo a toda a API do <a class="reference external" href="https://www.apple.com/ios/">iOS</a> através do código Python.</p>
 <p>A seguir, temos um simples exemplos extraído da documentação oficial da PyObjnus.</p>
-<pre class="literal-block">
-from pyobjus import autoclass
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyobjus</span> <span class="kn">import</span> <span class="n">autoclass</span>
 
-NSString = autoclass('NSString')
-text = NSString.alloc().initWithUTF8String_('Hello world')
-print text.UTF8String() # --&gt; Hello world
-</pre>
+<span class="n">NSString</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;NSString&#39;</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">NSString</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">initWithUTF8String_</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">text</span><span class="o">.</span><span class="n">UTF8String</span><span class="p">()</span> <span class="c1"># --&gt; Hello world</span>
+</pre></div>
 <p>Como podemos ver, é importado a classe NSString e em seguida é armazenado o texto Hello World na mesma. Ou seja, desta forma, estamos trabalhando com a API nativa do iOS utilizando a linguagem Python! Portanto, conseguimos desenvolver aplicações que utilizam toda a API nativa da plataforma utilizando código Python.</p>
 </div>
 <div class="section" id="componentes-widget">
 <h2>COMPONENTES (WIDGET)</h2>
 <p>O framework Kivy contém um conjunto de componentes gráficos para a construção das telas de interação com o usuário. A documentação do Kivy chama os componentes de Widgets, ou seja, um botão é um Widget, um caixa de entrada de texto é um Widget e assim por diante.</p>
 <p>Existe um conjunto de Widgets bastante amplo que vem de fábrica. Os componentes visuais estão em pleno desenvolvimento e portanto, a cada nova versão, muitos recursos são adicionados. Neste momento, se compararmos os recursos da biblioteca Kivy com plataformas comerciais e consagradas tais como o <a class="reference external" href="https://www.embarcadero.com/br/products/rad-studio">Embarcadero Delphi (Rad Studio)</a>, <a class="reference external" href="http://qt-project.org/qt5">Qt5</a> ou <a class="reference external" href="https://www.xamarin.com/">Xamarin</a>, o Kivy fica numa posição bem inferior, porém, isso é uma questão de tempo e de desenvolvimento. A capacidade para que o Kivy disponha de componentes visuais tais como o Xamarin ou então o Embarcadero Delphi é uma questão de tempo!</p>
+<p>O Kivy seguiu o estilo utilizado pelo Sistema Operacional <a class="reference external" href="`https://en.wikipedia.org/wiki/Moblin`">Moblin</a> e, a verdade, é que estetícamente a biblioteca ainda deixa a desejar.</p>
+<p>Aparentemente, a equipe do Kivy dedica seus esforços à construção do núcleo do framework o que é muito bom, pois, a complexidade para melhorar a aparência visual é mínima se comparada com a implementação dos módulos que interagem com os periféricos.</p>
 <p>Há iniciativas de construção de bibliotecas gráficas independentes como por exemplo o <a class="reference external" href="kivyMD.github.io">KivyMD</a>, acrônimo de <tt class="docutils literal">Kivy Material Design</tt>. Essa biblioteca está construída em cima do framework Kivy e entrega um conjunto de componentes ricos em recursos e propriedades utilizando o visual nativo do Android, no caso, o <a class="reference external" href="https://material.io/">Material Design</a>.</p>
 <p>Por fim, é importante lembrar que o foco dos grupo que desenvolve o framework Kivy é, num primeiro momento, fornecer total compatibilidade com as plataformas suportadas. Por essa razão, o foco do desenvolvimento não está direcionado com a aparência dos Widgets e nem na quantidade de recursos que cada componente possui. Ao que tudo indica, o principal objetivo é fazer com que todos os recursos de todas as plataformas funcionem sem quaisquer problema - o que é excelente!</p>
+<img alt="Projeto KivyMD que disponibiliza um conjunto de componetes que possuem a estilização do Material Design da Google e os Widgets incorporão o funcionamento conforme a especificação." src="../images/blog/kivymd.png" />
 </div>
 <div class="section" id="games">
 <h2>GAMES</h2>
@@ -391,46 +392,43 @@ print text.UTF8String() # --&gt; Hello world
 <p>A seguir, temos um exemplo de um simples trecho de código utilizando somente a linguagem Cython.</p>
 <div class="section" id="declaracao-de-variaveis-com-cython">
 <h3>DECLARAÇÃO DE VARIÁVEIS COM CYTHON</h3>
-<pre class="literal-block">
-cdef int i, j, k
-cdef float f, g[42], *h
+<div class="highlight"><pre><span></span><span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span><span class="p">,</span> <span class="nf">j</span><span class="p">,</span> <span class="nf">k</span>
+<span class="k">cdef</span> <span class="kt">float</span> <span class="nf">f</span><span class="p">,</span> <span class="kt">g</span>[42], *<span class="nf">h</span>
 
-cdef struct Grail:
-    int age
-    float volume
-</pre>
+<span class="k">cdef</span> <span class="k">struct</span> <span class="nf">Grail</span><span class="p">:</span>
+    <span class="nb">int</span> <span class="n">age</span>
+    <span class="nb">float</span> <span class="n">volume</span>
+</pre></div>
 </div>
 <div class="section" id="declaracao-de-classe-e-funcao-em-cython">
 <h3>DECLARAÇÃO DE CLASSE E FUNÇÃO EM CYTHON</h3>
-<pre class="literal-block">
-cdef class A:
-    cdef foo(self):
-        print &quot;A&quot;
-</pre>
+<div class="highlight"><pre><span></span><span class="k">cdef</span> <span class="k">class</span> <span class="nf">A</span><span class="p">:</span>
+    <span class="k">cdef</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;A&quot;</span>
+</pre></div>
 </div>
 <div class="section" id="alocacao-de-memorica-em-cython">
-<h3>Alocação de memórica em Cython</h3>
-<pre class="literal-block">
-import random
-from libc.stdlib cimport malloc, free
+<h3>ALOCAÇÃO DE MEMÓRICA EM CYTHON</h3>
+<div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">random</span>
+<span class="k">from</span> <span class="nn">libc.stdlib</span> <span class="k">cimport</span> <span class="n">malloc</span><span class="p">,</span> <span class="n">free</span>
 
-def random_noise(int number=1):
-    cdef int i
-    # allocate number * sizeof(double) bytes of memory
-    cdef double *my_array = &lt;double *&gt;malloc(number * sizeof(double))
-    if not my_array:
-        raise MemoryError()
+<span class="k">def</span> <span class="nf">random_noise</span><span class="p">(</span><span class="nb">int</span> <span class="n">number</span><span class="o">=</span><span class="mf">1</span><span class="p">):</span>
+    <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span>
+    <span class="c"># allocate number * sizeof(double) bytes of memory</span>
+    <span class="k">cdef</span> <span class="kt">double</span> *<span class="nf">my_array</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">double</span> <span class="o">*&gt;</span><span class="n">malloc</span><span class="p">(</span><span class="n">number</span> <span class="o">*</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">double</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">my_array</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">MemoryError</span><span class="p">()</span>
 
-    try:
-        ran = random.normalvariate
-        for i in range(number):
-            my_array[i] = ran(0,1)
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ran</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+            <span class="n">my_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ran</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">)</span>
 
-        return [ my_array[i] for i in range(number) ]
-    finally:
-        # return the previously allocated memory to the system
-        free(my_array)
-</pre>
+        <span class="k">return</span> <span class="p">[</span> <span class="n">my_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="p">]</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="c"># return the previously allocated memory to the system</span>
+        <span class="n">free</span><span class="p">(</span><span class="n">my_array</span><span class="p">)</span>
+</pre></div>
 </div>
 <div class="section" id="o-kivy-e-o-cython">
 <h3>O KIVY E O CYTHON</h3>
@@ -485,11 +483,11 @@ def random_noise(int number=1):
 <p>Gigantes como <a class="reference external" href="http://www.microsoft.com/">Microsoft</a>, <a class="reference external" href="http://www.adobe.com/">Adobe</a> e <a class="reference external" href="http://www.intel.com">Intel</a> possuem suas próprias &quot;gambiarras&quot; e comercializam ferramentas que geram executáveis híbridos da mesma forma, mas de uma maneira diferente que o projeto Kivy o faz!</p>
 <p>A pergunta que devemos responder é: &quot;uma aplicação pra ser realmente nativa, deve gerar um executável através da ferramenta do fabricante e utilizar as bibliotecas por este disponibilizado&quot;?</p>
 </div>
-<div class="section" id="consumo-de-recurso">
-<h3>CONSUMO DE RECURSO</h3>
+<div class="section" id="utilizacao-de-recurso">
+<h3>UTILIZAÇÃO DE RECURSO</h3>
 <p>Aplicações escritas com o framework Kivy utilizam mais recursos do dispositivo e aplicações que precisam ser executadas em background devem realizar testes de consumo de energético antes de iniciar o desenvolvimento.</p>
 <p>A biblioteca Kivy é executada em cima da placa de vídeo com a aceleração de vídeo ligada. Se o código fosse executado em cima do processador do dispositivo, haveria garga-los na renderização e é graças a aceleração de vídeo que há tantas ferramentas de desenvolvimento híbridas.</p>
-<p>Por fim, uma aplicação construída com o Kivy irá consumir maior carga energética e utilizará aproximadamente 40mg de memória RAM. Com relação a memória RAM não há preocupação, até porque, a maior parte dos dispositivos atuais possuem quantidades generosas de memória RAM. Porém, o uso da bateria deve ser considerado e a única forma que você possui pra realmente ter certeza se o seu projeto pode ser construído com o Kivy será através da realização de testes.</p>
+<p>Por fim, uma aplicação construída com o Kivy irá consumir maior carga energética e utilizará aproximadamente 20 mega de memória RAM. Com relação a memória RAM não há preocupação, até porque, a maior parte dos dispositivos atuais possuem quantidades generosas de memória RAM. Porém, o uso da bateria deve ser considerado e a única forma que você possui pra realmente ter certeza se o seu projeto pode ser construído com o Kivy será através da realização de testes.</p>
 </div>
 <div class="section" id="tempo-de-abertura">
 <h3>TEMPO DE ABERTURA</h3>
@@ -512,9 +510,73 @@ def random_noise(int number=1):
 <p>O autor entende por experimental aquilo que não possui um funcionamento estável e previsível e portanto não deveria ser utilizado em projetos comerciais e sérios.</p>
 <p>Inclusive, neste momento, há grandes aplicações escritas em Kivy e que estão funcionando perfeitamente, vide o projeto <a class="reference external" href="https://github.com/ODiogoSilva/TriFusion">TriFusion</a> .</p>
 </div>
-<div class="section" id="visao-geral">
-<h2>VISÃO GERAL</h2>
+<div class="section" id="demais">
+<h2>DEMAIS</h2>
 <p>O blog <a class="reference external" href="http://cadernodelaboratorio.com.br/category/kivy/">Caderno de Laboratório</a> foi o primeiro blog brasileiro a disponiblizar vários tutorias e diversos exemplos sobre como utilizar a biblioteca Kivy. O pessoal continua produzindo mais artigos sobre o Kivy e em Português, por isso, vale a pena conferir!</p>
+</div>
+<div class="section" id="casos-de-sucesso">
+<h2>CASOS DE SUCESSO</h2>
+<p>A seguir temos uma breve lista de alguns projetos que servem para demonstrar o poder ilimitado do framework Kivy.</p>
+<p>RaceCaptureApp
+´´´´´´´´´´´´´´</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">site:</th><td class="field-body"><a class="reference external" href="https://www.autosportlabs.com/tag/race-capture-app/">https://www.autosportlabs.com/tag/race-capture-app/</a></td>
+</tr>
+<tr class="field"><th class="field-name">source:</th><td class="field-body"><a class="reference external" href="https://github.com/autosportlabs/RaceCapture_App">https://github.com/autosportlabs/RaceCapture_App</a></td>
+</tr>
+<tr class="field"><th class="field-name">playstore:</th><td class="field-body"><a class="reference external" href="https://play.google.com/store/apps/details?id=com.autosportlabs.racecapture">https://play.google.com/store/apps/details?id=com.autosportlabs.racecapture</a></td>
+</tr>
+</tbody>
+</table>
+<img alt="Aplicativo RaceCapture mostrando a tela em que as informações são atualizadas em tempo real" src="../images/blog/race-capture-app1.jpg" />
+<img alt="Aplicativo RaceCapture" src="../images/blog/race-capture-app2.jpg" />
+<p>O aplicativo RaceCaptureApp é uma aplicação embarcada que envia os dados dos pilotos em uma corrida e exibindo em uma outra aplicação em tempo real.</p>
+<p>Este aplicativo é amplo, possui dezenas de aperfeiçoamentos, faz uso direto das API dos vários dispositivos e é amplamente utilizado.</p>
+<p><a class="reference external" href="https://github.com/autosportlabs/RaceCapture_App">https://github.com/autosportlabs/RaceCapture_App</a></p>
+<p>Kognitivo
+´´´´´´´´´</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">site:</th><td class="field-body"><a class="reference external" href="http://cheparev.com/kognitivo-challenge-your-brain/">http://cheparev.com/kognitivo-challenge-your-brain/</a></td>
+</tr>
+<tr class="field"><th class="field-name">source:</th><td class="field-body"><a class="reference external" href="https://github.com/eviltnan/kognitivo">https://github.com/eviltnan/kognitivo</a></td>
+</tr>
+<tr class="field"><th class="field-name">playstore:</th><td class="field-body"><a class="reference external" href="https://play.google.com/store/apps/details?id=org.kognitivo.kognitivo">https://play.google.com/store/apps/details?id=org.kognitivo.kognitivo</a></td>
+</tr>
+</tbody>
+</table>
+<img alt="Aplicativo Kognitivo" src="../images/blog/kognitivoapp.png" />
+<p>O Kognitivo é um jogo bastante inteligente e a aplicação na época do seu lançamento trouxe bastante implementações e integrações que nenhuma outra aplicação havia realizado.</p>
+<p>No final do ano de 2017 seu código fonte foi liberado no Github de forma que possamos estudá-lo.</p>
+<p><a class="reference external" href="https://github.com/eviltnan/kognitivo.git">https://github.com/eviltnan/kognitivo.git</a></p>
+<p>TriFusion
+´´´´´´´´´</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">site:</th><td class="field-body"><a class="reference external" href="http://odiogosilva.github.io/TriFusion/">http://odiogosilva.github.io/TriFusion/</a></td>
+</tr>
+<tr class="field"><th class="field-name">source:</th><td class="field-body"><a class="reference external" href="https://github.com/ODiogoSilva/TriFusion">https://github.com/ODiogoSilva/TriFusion</a></td>
+</tr>
+</tbody>
+</table>
+<img alt="Aplicativo Científico TriFusion" src="../images/blog/trifusion.png" />
+<p>Este talvez seja o projeto de código aberto utilizando o Kivy de maior relevância. Segundo a própria descrição do projeto que, mesmo sendo desenvolvido por um instituto de pesquisa Português e o desenvolvedor principal também ser Português, toda a documentação do software está em Inglês.</p>
+<p>A seguir, temos uma tradução adaptada de como o próprio projeto se descreve.</p>
+<p>TriFusion é uma GUI moderna e uma aplicação de linha de comando projetada para facilitar a vida de qualquer pessoa com dados de sequência de proteoma e/ou <strong>alignment sequence data</strong> mais prazerosos. Independentemente da sua experiência em bioinformática, o <tt class="docutils literal">TriFusion</tt> é fácil de usar e oferece uma grande variedade de recursos poderosos para ajudá-lo a lidar com seus dados. Ao mesmo tempo, foi desenvolvido para lidar com a enorme quantidade de dados gerados hoje em dia.</p>
+<p>No site do projeto é possível baixar toda a documentação e possuir instalador para Windows, Linux e Mac.</p>
+<p><a class="reference external" href="http://odiogosilva.github.io/TriFusion/">http://odiogosilva.github.io/TriFusion/</a></p>
+</div>
+<div class="section" id="kivy-3d">
+<h2>KIVY 3D</h2>
+<p>O Kivy possui excelentes recursos para trabalhar com imagens em 3D. Inclusive, existe uma versão especial do voltada somente para essa finalida. Nos links a seguir, você encontra mais informações.</p>
+<img alt="Projeto para construção de aplicações em 3 dimensões" src="../images/blog/kivy3d.gif" />
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

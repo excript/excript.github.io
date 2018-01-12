@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula desenvolveremos uma simples tela de login e senha. Definiremos um login e uma senha padrão e quando o usuário tentar efetuar o login, verificaremos se os valores são identicos aos definidos por padrão."/>
 
         <meta property="article:published_time" content="06-10-2015" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -498,45 +499,44 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;pt-br&quot;&gt;
+<div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
 
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Tela de Login e Senha - Curso PHP - eXcript&lt;/title&gt;
-&lt;/head&gt;
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">    &lt;title&gt;Tela de Login e Senha - Curso PHP - eXcript&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
 
-&lt;body&gt;
+<span class="x">&lt;body&gt;</span>
 
-    &lt;?php
-    //    &quot;eXcript&quot; != &quot;excript&quot;
-    $login = &quot;eXcript&quot;;
-    $senha = &quot;123&quot;;
+<span class="x">    </span><span class="cp">&lt;?php</span>
+    <span class="c1">//    &quot;eXcript&quot; != &quot;excript&quot;</span>
+    <span class="nv">$login</span> <span class="o">=</span> <span class="s2">&quot;eXcript&quot;</span><span class="p">;</span>
+    <span class="nv">$senha</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span><span class="p">;</span>
 
-    if(isset($_POST[&quot;login&quot;])){
-    //        echo $_POST[&quot;login&quot;] . &quot;&lt;br&gt;&quot;;
-    //        echo $_POST[&quot;senha&quot;];
-        if($_POST[&quot;login&quot;] == $login and $_POST[&quot;senha&quot;] == $senha){
-            echo &quot;Login efetuado com sucesso&quot;;
-        }else{
-            echo &quot;Login ou senha inválido&quot;;
-        }
-    }
+    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;login&quot;</span><span class="p">])){</span>
+    <span class="c1">//        echo $_POST[&quot;login&quot;] . &quot;&lt;br&gt;&quot;;</span>
+    <span class="c1">//        echo $_POST[&quot;senha&quot;];</span>
+        <span class="k">if</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;login&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="nv">$login</span> <span class="k">and</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;senha&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="nv">$senha</span><span class="p">){</span>
+            <span class="k">echo</span> <span class="s2">&quot;Login efetuado com sucesso&quot;</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="k">echo</span> <span class="s2">&quot;Login ou senha inválido&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-    ?&gt;
+    <span class="cp">?&gt;</span><span class="x"></span>
 
-    &lt;form method=&quot;post&quot;&gt;
-        &lt;input type=&quot;text&quot; name=&quot;login&quot;&gt;&lt;br&gt;
-        &lt;input type=&quot;password&quot; name=&quot;senha&quot;&gt;
-        &lt;input type=&quot;submit&quot;&gt;
-    &lt;/form&gt;
+<span class="x">    &lt;form method=&quot;post&quot;&gt;</span>
+<span class="x">        &lt;input type=&quot;text&quot; name=&quot;login&quot;&gt;&lt;br&gt;</span>
+<span class="x">        &lt;input type=&quot;password&quot; name=&quot;senha&quot;&gt;</span>
+<span class="x">        &lt;input type=&quot;submit&quot;&gt;</span>
+<span class="x">    &lt;/form&gt;</span>
 
-&lt;/body&gt;
+<span class="x">&lt;/body&gt;</span>
 
 
-&lt;/html&gt;
-</pre>
+<span class="x">&lt;/html&gt;</span>
+</pre></div>
 </div>
 
 				</div>

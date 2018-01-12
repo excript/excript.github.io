@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula aprenderemos a diferença entre a passagem de argumentos por valor e por referência. Também aprenderemos como funciona a passagem por referência e a forma como o PHP manipula os parâmetros."/>
 
         <meta property="article:published_time" content="11-12-2015" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -500,27 +501,25 @@ eXcript            </a>
 <h2>ARGUMENTOS POR REFERÊNCIA</h2>
 <p>Quando definimos uma variável como sendo argumento de uma função, ocorre que o valor contido nessa variável é copiado para a variável-parâmetro da função. Na maior parte das vezes esse tipo de funcionamento é o ideal, porém, se estivermos trabalhando com um Array que contenha por exemplo, 100.000 elementos, teremos uma situação em que ao invocarmos a função todos os itens desse Array serão copiados para a variável-parâmetro.</p>
 <p>A linguagem nos disponibiliza uma forma de passarmos um parâmetro enviando o endereço de uma variável ao invés de passarmos uma cópia do valor de uma variável. Ao passarmos o endereço de uma variável teremos uma situação em que todas as ações que forem feitas nessa variável irão alterar a estrutura original.</p>
-<pre class="literal-block">
-$a = [1,2,3];
-$b = $a;
+<div class="highlight"><pre><span></span><span class="x">$a = [1,2,3];</span>
+<span class="x">$b = $a;</span>
 
-$a[1] = 5;
+<span class="x">$a[1] = 5;</span>
 
-print_r($a);
-print_r($b);
-</pre>
+<span class="x">print_r($a);</span>
+<span class="x">print_r($b);</span>
+</pre></div>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-$a = [1,2,3];
-$b = &amp;$a;
+<div class="highlight"><pre><span></span><span class="x">$a = [1,2,3];</span>
+<span class="x">$b = &amp;$a;</span>
 
-$a[1] = 5;
+<span class="x">$a[1] = 5;</span>
 
-print_r($a);
-print_r($b);
-</pre>
+<span class="x">print_r($a);</span>
+<span class="x">print_r($b);</span>
+</pre></div>
 </div>
 
 				</div>

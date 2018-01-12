@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos os parâmetros e os argumentos de uma função. Como declara-los e como devemos trabalhar com esse conceito."/>
 
         <meta property="article:published_time" content="06-06-2014" />
+
             <meta property="article:section" content="java" />
             <meta property="article:tag" content="java" />
             <meta property="article:tag" content="orientado" />
@@ -224,42 +225,41 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-class Retangulo{
-    public int width, height;
+<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Retangulo</span><span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">width</span><span class="o">,</span> <span class="n">height</span><span class="o">;</span>
 
-    public int areaTotal(){
-        return width * height;
-    }
-    public boolean isQuadrado(){
-        if(width==height)
-            return true;
-        return false;
-    }
-}
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">areaTotal</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isQuadrado</span><span class="o">(){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">width</span><span class="o">==</span><span class="n">height</span><span class="o">)</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 
-public class Main {
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
 
-    public static void main(String args[]) {
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
 
-        Retangulo quadrado = new Retangulo();
-        quadrado.width = 100;
-        quadrado.height = 120;
+        <span class="n">Retangulo</span> <span class="n">quadrado</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Retangulo</span><span class="o">();</span>
+        <span class="n">quadrado</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+        <span class="n">quadrado</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="mi">120</span><span class="o">;</span>
 
-        System.out.println(quadrado.areaTotal());
-        System.out.println(quadrado.isQuadrado());
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">quadrado</span><span class="o">.</span><span class="na">areaTotal</span><span class="o">());</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">quadrado</span><span class="o">.</span><span class="na">isQuadrado</span><span class="o">());</span>
 
-        Retangulo quadrado2 = new Retangulo();
-        quadrado2.width = 100;
-        quadrado2.height = 100;
+        <span class="n">Retangulo</span> <span class="n">quadrado2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Retangulo</span><span class="o">();</span>
+        <span class="n">quadrado2</span><span class="o">.</span><span class="na">width</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+        <span class="n">quadrado2</span><span class="o">.</span><span class="na">height</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
 
-        System.out.println(quadrado2.areaTotal());
-        System.out.println(quadrado2.isQuadrado());
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">quadrado2</span><span class="o">.</span><span class="na">areaTotal</span><span class="o">());</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">quadrado2</span><span class="o">.</span><span class="na">isQuadrado</span><span class="o">());</span>
 
-    }
+    <span class="o">}</span>
 
-}
-</pre>
+<span class="o">}</span>
+</pre></div>
 </div>
 
 				</div>

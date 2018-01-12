@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos a inicialização dos Arrays. Aprenderemos como podemos inicializar todos os elementos com um mesmo valor na declaração e também, como podemos determinar a quantidade de elementos definindo a estrutura diretamente."/>
 
         <meta property="article:published_time" content="31-05-2015" />
+
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
@@ -354,45 +355,42 @@ eXcript            </a>
     </div>
 <p>Um Array é um conjunto de valores dispostos em listas e acessíveis através de um índice numérico positivo. Assim,  temos que cada posição do nosso Array é uma variável do tipo do nosso Array, sendo assim, temos que ter uma forma para inicializar esse conjunto de variáveis.</p>
 <p>O C++ fornece a capacidade de declararmos o conjunto de valores iniciais delimitando-os através de um para de chaves, por exemplo:</p>
-<pre class="literal-block">
-int num[] = {1, 2, 3};
-</pre>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+</pre></div>
 <p>No código acima, nós estamos inicializando um Array de inteiros e estamos definindo o valor para as 3 primeiras posições. Nesse caso, como não informamos a quantidade de elementos que o nosso Array irá ter, o C++ irá assumir que o mesmo possui somente 3 posições, até porque, só foram definidos 3 valores.</p>
 <p>Nós também podemos iniciar um Array de inteiros atribuindo o valor 0 a todos os elementos, por exemplo:</p>
-<pre class="literal-block">
-int num2[5] = {};
-</pre>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num2</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+</pre></div>
 <p>Agora, nos estamos dizendo que queremos uma Array de inteiros e que todas as posições do nosso Array sejam inicializados com o valor igual a <cite>0</cite>;</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;iostream&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
-/*====================================
-*           eXcript.com
-*          fb.com/eXcript
-* ====================================*/
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
 
-using namespace std;
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-int main(){
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
 
-    int nums[3];
-    nums[0] = 900;
-    nums[1] = 1000;
-    nums[2] = 1100;
+    <span class="kt">int</span> <span class="n">nums</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+    <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">900</span><span class="p">;</span>
+    <span class="n">nums</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+    <span class="n">nums</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1100</span><span class="p">;</span>
 
-    int nums2[] = {1, 3, 5, 7, 11, 13, 17};
+    <span class="kt">int</span> <span class="n">nums2</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">};</span>
 
-    cout &lt;&lt; nums2[0] &lt;&lt; endl;
-    cout &lt;&lt; nums2[1] &lt;&lt; endl;
-    cout &lt;&lt; nums2[2] &lt;&lt; endl;
-    cout &lt;&lt; nums2[3] &lt;&lt; endl;
-    cout &lt;&lt; nums2[4] &lt;&lt; endl;
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">nums2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">nums2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">nums2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">nums2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">nums2</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 
-    return 0;
-}
-</pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

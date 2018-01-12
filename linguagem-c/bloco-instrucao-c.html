@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula iniciaremos o estudo acerca dos Blocos de Instrução, isto é, os blocos que contém as os códigos que devem ser executados um após o outro e por essa razão, foram agrupados com o uso de um par de chaves."/>
 
         <meta property="article:published_time" content="11-06-2015" />
+
             <meta property="article:section" content="curso c" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="c" />
@@ -307,14 +308,13 @@ eXcript            </a>
 <p>Podemos pensar em blocos de instruções como &quot;regiões&quot; de um código que foi demarcado utilizando um par de chaves. Assim, todo bloco irá iniciar com a chave de abertura e será finalizado com uma chave de fechamento.</p>
 <p>Então, podemos dizer que o início de um bloco é a primeira instrução após a chave de abertura <cite>{</cite>, da mesma forma, o término será após a chave de fechamento <cite>}</cite>.</p>
 <p>É importante observar que se você tiver um bloco de instrução dentro de um bloco de instrução, o fechamento do bloco mais aninhado não fechara o bloco externo, mas sim, o bloco aninhado, por exemplo:</p>
-<pre class="literal-block">
-inicio(){
+<div class="highlight"><pre><span></span><span class="n">inicio</span><span class="p">(){</span>
 
-  if(true){
-  }
+  <span class="k">if</span><span class="p">(</span><span class="nb">true</span><span class="p">){</span>
+  <span class="p">}</span>
 
-}
-</pre>
+<span class="p">}</span>
+</pre></div>
 <p>Acima nós podemos temos um função de nome inicio().</p>
 <p>Após o nome da função, temos <cite>2</cite> parêntesis, um de abertura e outro de fechamento. Estes parêntesis representam o cabeçalho da função.</p>
 <p>Em seguida, nós temos uma chave de abertura, ou seja, o início do bloco da função main <cite>{</cite>  e no final do nosso código, nós temos um chave de fechamento, ou seja, a chave de delimita o bloco de instrução da função <cite>inicio()</cite>.</p>
@@ -322,39 +322,38 @@ inicio(){
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-/*  ==========                 ==========
-    ========== www.eXcript.com ==========
-    ==========                 ========== */
+<span class="cm">/*  ==========                 ==========</span>
+<span class="cm">    ========== www.eXcript.com ==========</span>
+<span class="cm">    ==========                 ========== */</span>
 
-int main()
-{
-    double num = 10;
-    char c = 's';
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">double</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;s&#39;</span><span class="p">;</span>
 
-    {
-        printf(&quot;Bloco 1\n&quot;);
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bloco 1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 
-        double dinheiro = 3.55;
-        printf(&quot;O valor eh: %f\n&quot;, dinheiro);
-    }
+        <span class="kt">double</span> <span class="n">dinheiro</span> <span class="o">=</span> <span class="mf">3.55</span><span class="p">;</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;O valor eh: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">dinheiro</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    printf(&quot;Informe um numero: \n&quot;);
-    scanf(&quot;%lf&quot;, &amp;num);
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Informe um numero: </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%lf&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
 
-    if(num==50)E:\Claudio\VideoAula\C\0042
-        printf(&quot;Bloco IF\n&quot;);
-    else{
-        printf(&quot;Bloco ELSE\n&quot;);
-        printf(&quot;\n&quot;);
-    }
+    <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="o">==</span><span class="mi">50</span><span class="p">)</span><span class="nl">E</span><span class="p">:</span><span class="err">\</span><span class="n">Claudio</span><span class="err">\</span><span class="n">VideoAula</span><span class="err">\</span><span class="n">C</span><span class="err">\</span><span class="mo">0042</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bloco IF</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bloco ELSE</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    return 0;
-}
-</pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

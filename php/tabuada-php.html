@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula desenvolveremos um Script que retorna a tabuada que foi solicitada pelo usuário. Entenderemos também, a razão pela qual optamos pela estrutura de repetição for na implementação deste código."/>
 
         <meta property="article:published_time" content="23-10-2015" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -498,54 +499,53 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;pt-br&quot;&gt;
+<div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
 
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Tabuada - Curso PHP - eXcript&lt;/title&gt;
-&lt;/head&gt;
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">    &lt;title&gt;Tabuada - Curso PHP - eXcript&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
 
-&lt;body&gt;
+<span class="x">&lt;body&gt;</span>
 
-    &lt;?php
+<span class="x">    </span><span class="cp">&lt;?php</span>
 
-    $tab = 0;
-    if(isset($_POST[&quot;edTABUADA&quot;])){
-        $tab = $_POST[&quot;edTABUADA&quot;];
-        if(!is_numeric($tab)){
-            echo &quot;&lt;br&gt;O valor informado não é um número.&lt;br&gt;&quot;;
-        }else{
-    //            for($num=0; $num&lt;=10; $num++){
-    //                echo $num . &quot; x &quot; . $tab . &quot; = &quot; . ($num * $tab) . &quot;&lt;br&gt;&quot;;
-    //            }
+    <span class="nv">$tab</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;edTABUADA&quot;</span><span class="p">])){</span>
+        <span class="nv">$tab</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;edTABUADA&quot;</span><span class="p">];</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nb">is_numeric</span><span class="p">(</span><span class="nv">$tab</span><span class="p">)){</span>
+            <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;O valor informado não é um número.&lt;br&gt;&quot;</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="c1">//            for($num=0; $num&lt;=10; $num++){</span>
+    <span class="c1">//                echo $num . &quot; x &quot; . $tab . &quot; = &quot; . ($num * $tab) . &quot;&lt;br&gt;&quot;;</span>
+    <span class="c1">//            }</span>
 
-        //$num x $tab = ($num * $tab)
-        //0 x 5 = 0
-        //1 x 5 = 5
+        <span class="c1">//$num x $tab = ($num * $tab)</span>
+        <span class="c1">//0 x 5 = 0</span>
+        <span class="c1">//1 x 5 = 5</span>
 
-        $num=0;
-        while($num&lt;=10){
-            echo $num . &quot; x &quot; . $tab . &quot; = &quot; . ($num * $tab) . &quot;&lt;br&gt;&quot;;
-            $num++;
-        }
+        <span class="nv">$num</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="nv">$num</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">){</span>
+            <span class="k">echo</span> <span class="nv">$num</span> <span class="o">.</span> <span class="s2">&quot; x &quot;</span> <span class="o">.</span> <span class="nv">$tab</span> <span class="o">.</span> <span class="s2">&quot; = &quot;</span> <span class="o">.</span> <span class="p">(</span><span class="nv">$num</span> <span class="o">*</span> <span class="nv">$tab</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
+            <span class="nv">$num</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
 
-    }
-}
+    <span class="p">}</span>
+<span class="p">}</span>
 
-?&gt;
+<span class="cp">?&gt;</span><span class="x"></span>
 
-&lt;form method=&quot;post&quot;&gt;
-    &lt;input type=&quot;text&quot; name=&quot;edTABUADA&quot; &gt;
-    &lt;input type=&quot;submit&quot;&gt;
-&lt;/form&gt;
+<span class="x">&lt;form method=&quot;post&quot;&gt;</span>
+<span class="x">    &lt;input type=&quot;text&quot; name=&quot;edTABUADA&quot; &gt;</span>
+<span class="x">    &lt;input type=&quot;submit&quot;&gt;</span>
+<span class="x">&lt;/form&gt;</span>
 
-&lt;/body&gt;
+<span class="x">&lt;/body&gt;</span>
 
 
-&lt;/html&gt;
-</pre>
+<span class="x">&lt;/html&gt;</span>
+</pre></div>
 </div>
 
 				</div>

@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nessa aula aprofundaremos nosso estudo sobre a relação intima entre a função range() e o laço de repetição for."/>
 
         <meta property="article:published_time" content="17-07-2016" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -383,12 +384,11 @@ eXcript            </a>
 <p>Agora, <a class="reference external" href="http://excript.com/python/for-loop-python.html">vamos fazer um exemplo utilizando a estrutura de repetição for</a> e a <a class="reference external" href="http://excript.com/python/funcao-range-python.html">função built-in do Python que retorna sequências numéricas</a>.</p>
 <p>A estrutura de repetição <tt class="docutils literal">for</tt> executa um ciclo para cada elemento do objeto que está sendo iterado. Nas vezes em que precisamos que determinada variável seja incrementado ou decrementada a cada ciclo, a forma mais simples, é gerando uma lista com a função <code>range()</code>.</p>
 <p>No código a seguir, temos um exemplo onde a variável item recebera um número, iniciando em zero, finalizando em 9 e, a cada ciclo, o número seguinte da sequência é atribuido à variável <code>item</code>.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-for item in range(10):
-    print(item)
-</pre>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
 <p>Se executarmos esse código, teremos algo do tipo:</p>
 <pre class="literal-block">
 0
@@ -404,12 +404,11 @@ for item in range(10):
 </pre>
 <p>Imprimimos os números da sequência numérica que foi gerada com a função <code>range()</code>.</p>
 <p>Poderíamos também, gerar uma lista iniciando em 9 e finalizando em 0. A definição da estrutura <tt class="docutils literal">for loop</tt> se mantém, precisando alterar somente, os parâmetro passados pela função <code>range()</code>, por exemplo:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-for item in range(9, -1, -1):
-    print(item)
-</pre>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
 <p>Para gerarmos a mesma lista numérica, porém, com a ordenação invertida, podemos utilizar a função <code>reverse()</code> que inverte a ordem de objetos iteraveis, ou então, gerar a série numérica invertida.</p>
 <p>Invocamos a função <code>range()</code> e definimos que o parâmetro <code>start</code> seja igual a 9, <code>stop</code> igual a -1, e <code>step</code> igual -1.</p>
 <p>O argumento <code>start</code> não há o que comentar. O parâmetro <code>stop</code> é igual a -1 porque o intervalo é aberto, isto é, o número do extremos não fará parte do grupo, logo, se definimos -1, o último elemento da série será 0. Por fim, definimos o <code>step</code>, ou seja, o passo, intervalo numérico entre cada elemento igual a -1. Dessa forma, o Python inverte a ordenação do objeto iterável.</p>

@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos a entrada de dados numa aplicação e como o Python trata nativamente."/>
 
         <meta property="article:published_time" content="07-05-2016" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -387,18 +388,16 @@ eXcript            </a>
 <p>Uma aplicação pode, a qualquer momento, pedir que o usuário informe uma determinada informação, para isto, basta invocar a função <tt class="docutils literal">input()</tt>.</p>
 <p>A partir da versão 3 do Python, a função <tt class="docutils literal">input()</tt>, tem por objetivo de escrever a String passada como parâmetro e em seguida, ativar o modo de digitação, isto é, colocar o Console de uma determinada forma em que seja possível a digitação (entrada de dados). É importante observar que versões anteriores do Python funcionavam de maneira distinta, e também, que a função <tt class="docutils literal">input()</tt> nas versões 2x era utilizado para outro finalidade!</p>
 <p>A seguir, temos um exemplo onde imprimimos uma frase na tela e em seguida, é aberto para o usuário, a capacidade para digitação de letras e números.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-input(&quot;Escreva entre aspas alguma informação a ser impressa no Console &quot;)
-</pre>
+<span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escreva entre aspas alguma informação a ser impressa no Console &quot;</span><span class="p">)</span>
+</pre></div>
 <p>O código acima, quando executado, irá imprimir o que está entre parêntesis no Console e em seguida, permitira ao usuário a digitação de qualquer tipo de dado alfanumérico. O conjunto de caracteres digitado pelo usuário, será retornado pela função <tt class="docutils literal">input()</tt>. É responsabilidade do programador armazenar esses caracteres numa variável, como fazemos no exemplo a seguir:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-num = input(&quot;Digite um número:&quot;)
-print(num)
-</pre>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite um número:&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</pre></div>
 <p>No exemplo acima, será impresso a frase definida entre aspas e então, o console entrará num modo que permitirá o usuário digitar texto e números. Após o usuário digitar o que desejar e pressionar a tecla Enter, os dados digitados serão retornados pela função <tt class="docutils literal">input()</tt>. No exemplo acima, estamos atribuindo o retorno da função para a variável num, logo, a mesma receberá aquilo que o usuário digitou no Console antes de pressionar a tecla Enter.</p>
 <p>Por fim, imprimimos na tela os caracteres digitados pelo nosso usuário através da função <cite>print()</cite>.</p>
 </div>
@@ -427,15 +426,14 @@ print(num)
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <p>A seguir, temos o exemplo feito na vídeo aulas do Curso de Python da eXcript:</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 
-login = input(&quot;Login:&quot;)
-senha = input(&quot;Senha:&quot;)
+<span class="n">login</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Login:&quot;</span><span class="p">)</span>
+<span class="n">senha</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Senha:&quot;</span><span class="p">)</span>
 
-print(&quot;O usuário informado foi: %s, e a senha digitada foi: %s&quot; %(login, senha))
-</pre>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;O usuário informado foi: </span><span class="si">%s</span><span class="s2">, e a senha digitada foi: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">login</span><span class="p">,</span> <span class="n">senha</span><span class="p">))</span>
+</pre></div>
 </div>
 
 				</div>

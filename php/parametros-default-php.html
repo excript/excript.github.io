@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos o conceito de parâmetros default, bem como seus beneficios e situações em que devemos utiliza-los."/>
 
         <meta property="article:published_time" content="07-12-2015" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -499,26 +500,24 @@ eXcript            </a>
 <div class="section" id="parametros-default">
 <h2>PARÂMETROS DEFAULT</h2>
 <p>Um recurso bastante importante é a definição de valores <tt class="docutils literal">default</tt> para os parâmetros. Assim, caso o usuário não defina um valor de um parâmetro, este já terá um valor por padrão.</p>
-<pre class="literal-block">
-function login($user=&quot;user&quot;, $senha=&quot;123&quot;)
-{
-    echo &quot;user: &quot; . $user;
-    echo &quot;senha: &quot; . $senha;
-}
-</pre>
+<div class="highlight"><pre><span></span><span class="x">function login($user=&quot;user&quot;, $senha=&quot;123&quot;)</span>
+<span class="x">{</span>
+<span class="x">    echo &quot;user: &quot; . $user;</span>
+<span class="x">    echo &quot;senha: &quot; . $senha;</span>
+<span class="x">}</span>
+</pre></div>
 <p>É importante lembrar que se invocarmos uma função sem passarmos os parâmetros que estão definidos, o PHP levantará uma exceção.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-function login($user=&quot;root&quot;, $key=&quot;123&quot;){
-    echo &quot;user = &quot; . $user;
-    echo &quot;key = &quot; . $key;
-}
+<div class="highlight"><pre><span></span><span class="x">function login($user=&quot;root&quot;, $key=&quot;123&quot;){</span>
+<span class="x">    echo &quot;user = &quot; . $user;</span>
+<span class="x">    echo &quot;key = &quot; . $key;</span>
+<span class="x">}</span>
 
-login();
-login(&quot;eXcript&quot;, &quot;123456&quot;);
-</pre>
+<span class="x">login();</span>
+<span class="x">login(&quot;eXcript&quot;, &quot;123456&quot;);</span>
+</pre></div>
 </div>
 
 				</div>

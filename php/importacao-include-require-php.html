@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula aprenderemos a diferença entre as funções include() e require() e estudaremos em quais situações devemos importar bibliotecas PHP com cada uma das funções."/>
 
         <meta property="article:published_time" content="15-06-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -527,22 +528,21 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#IMPORTANDO ARQUIVOS PHP
+<div class="highlight"><pre><span></span><span class="x">#IMPORTANDO ARQUIVOS PHP</span>
 
-include('code.php');
-include_once('code.php');
+<span class="x">include(&#39;code.php&#39;);</span>
+<span class="x">include_once(&#39;code.php&#39;);</span>
 
-require('code.php');
-require_once('code.php');
+<span class="x">require(&#39;code.php&#39;);</span>
+<span class="x">require_once(&#39;code.php&#39;);</span>
 
-echo $teste . &quot;\n&quot;;
-$teste = 5;
+<span class="x">echo $teste . &quot;\n&quot;;</span>
+<span class="x">$teste = 5;</span>
 
-require('code.php');
+<span class="x">require(&#39;code.php&#39;);</span>
 
-echo $teste . &quot;\n&quot;;
-</pre>
+<span class="x">echo $teste . &quot;\n&quot;;</span>
+</pre></div>
 </div>
 
 				</div>

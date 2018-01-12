@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula daremos continuidade ao estuda da herança, a definição de subclasses e as características das classes-filhas."/>
 
         <meta property="article:published_time" content="11-06-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -532,31 +533,30 @@ c) ambos construtores serão invocados?</blockquote>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <!-- Como a subclasse implementa suas próprias funcionalidades? -->
-<pre class="literal-block">
-class SuperClasse {
+<div class="highlight"><pre><span></span><span class="x">class SuperClasse {</span>
 
-    public $a = 0;
+<span class="x">    public $a = 0;</span>
 
-    public function super()
-    {
-        echo $a;
-    }
-}
+<span class="x">    public function super()</span>
+<span class="x">    {</span>
+<span class="x">        echo $a;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
 
-class SubClasse extends SuperClasse {
+<span class="x">class SubClasse extends SuperClasse {</span>
 
-    public $a;
+<span class="x">    public $a;</span>
 
-    public function sub()
-    {
-        this-&gt;$a = 10;
-    }
-}
+<span class="x">    public function sub()</span>
+<span class="x">    {</span>
+<span class="x">        this-&gt;$a = 10;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
 
-$sub = new SubClasse();
-$sub-&gt;sub();
-$sub-&gt;super();
-</pre>
+<span class="x">$sub = new SubClasse();</span>
+<span class="x">$sub-&gt;sub();</span>
+<span class="x">$sub-&gt;super();</span>
+</pre></div>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

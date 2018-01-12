@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula teremos uma introdução sobre as String, e também, faremos alguns exemplos em Python, para iniciarmos nosso estudo sobre a manipulação de cadeia de caracteres."/>
 
         <meta property="article:published_time" content="14-10-2016" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -390,13 +391,12 @@ eXcript            </a>
 <p>Na programação, é comum a manipulação de cadeias de caracteres, isso porque, a maior parte da informação que o ser humano trabalha, está no formato de texto. Assim, processamos caracteres a todo instânte e rapidamente descobrimos, a grande necessidade em tratar e processar textos. E também, rapidamente aprendemos que existem centenas de maneiras para tratarmos e reconhecermos trechos de texto. Por exemplo, toda linguagem de programação precisa ser interpretada e, para isso, deve haver o reconhecimento de diversos nomes, diversas partes. Cada parte, ou melhor, cada segmento de texto reconhecido possuíra significado diferente, algumas vezes serão expressões, noutras, apenas sinais.</p>
 <p>Por essas razões, o entendimento e o domínio da manipulação de caracteres e de conjuntos de caracteres é tão essencial.</p>
 <p>Para o Python, <strong>todo texto</strong> ou <strong>caractere</strong> é um objeto do tipo <tt class="docutils literal">str</tt>. Portanto, se precisarmos utilizar depeterminado texto como sendo um outro tipo de informação, é nossa responsabilidade como programador, transformar, ou melhor, converter do tipo <tt class="docutils literal">str</tt> para o novo tipo. Vamos supor que desejamos que determinada String seja reconhecido pela linguagem como sendo um número, então, precisamos fazer a conversão e essa pode ser feita da seguinte forma:</p>
-<pre class="literal-block">
-texto1 = &quot;10&quot;
-texto2 = &quot;20.2&quot;
+<div class="highlight"><pre><span></span><span class="n">texto1</span> <span class="o">=</span> <span class="s2">&quot;10&quot;</span>
+<span class="n">texto2</span> <span class="o">=</span> <span class="s2">&quot;20.2&quot;</span>
 
-num = int(texto1)
-valor = float(texto2)
-</pre>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">texto1</span><span class="p">)</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">texto2</span><span class="p">)</span>
+</pre></div>
 <p>Já estudamos, que a utilização do sinal de adição <tt class="docutils literal">+</tt> quando utilizado com 2 objetos do tipo String, ao invés de realizar a operação aritmética, fará a juntação do primeira com a segunda parte. Então, quando estivermos lidando com números, desejaremos obter, com o sinal de adição, soma entre 2 valores numéricos. Por isso, sempre precisaremos converter de <tt class="docutils literal">str</tt> para o tipo que desejamos e para que nossas conversões funcionem, muitas vezes, precisaremos saber, se os caracteres são válidos.</p>
 </div>
 <div class="section" id="o-conceito-de-caractere-e-string">
@@ -404,18 +404,16 @@ valor = float(texto2)
 <p>Caractere é a únidade mínima de toda String. Um caractere pode ser numérico, letras do alfabeto ou um caracteres especial.</p>
 <p>É importante observar, que no Python, diferentemente de outras linguagens, nós não temos o tipo Char, ou seja, o tipo caractere. Para o Python, tudo são <tt class="docutils literal">Strings</tt>, indiferente se a mesma contiver 1 ou &quot;n&quot; caracteres.</p>
 <p>No trecho de código a seguir, utilizamos a função <code>type()</code> para saber qual o tipo de alguns objetos, veja os resultados e abra o seu IDLE e faça os testes você também.</p>
-<pre class="literal-block">
-&gt;&gt;&gt; type(&quot;a&quot;)
-&lt;class 'str'&gt;
-&gt;&gt;&gt; type(&quot;abc&quot;)
-&lt;class 'str'&gt;
-</pre>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+</pre></div>
 <p>A seguir, implementamos um código simples onde um texto é vinculado a uma referência. Em seguida, a referência e o valor vinculado são impresso na saída padrão. Observe como utilizamos variáveis que contém caracteres:</p>
-<pre class="literal-block">
-&gt;&gt;&gt; s = &quot;Lista de Caracteres&quot;
-&gt;&gt;&gt; s
-&quot;Lista de Caracteres&quot;
-</pre>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Lista de Caracteres&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span>
+<span class="s2">&quot;Lista de Caracteres&quot;</span>
+</pre></div>
 </div>
 <div class="section" id="terminologias">
 <h2>TERMINOLOGIAS</h2>
@@ -423,53 +421,51 @@ valor = float(texto2)
 <div class="section" id="concatenar">
 <h3>CONCATENAR</h3>
 <p>Concatenar é a junção de 2 cadeias de caracteres e que dá origem a uma nova <tt class="docutils literal">string</tt> que é formada pela junça das 2 partes. A <strong>concatenação</strong>, pode ser a direita ou então a esquerda de outra <tt class="docutils literal">string</tt>. Então por exemplo, a seguir, temos um exemplo em que fazemos alguns tipos de concatenações.</p>
-<pre class="literal-block">
-#concatenção de 2 trechos de texto
-&gt;&gt;&gt; concatenacao = &quot;123&quot; + &quot;456&quot;
-&gt;&gt;&gt; concatenacao
-'123456'
+<div class="highlight"><pre><span></span><span class="c1">#concatenção de 2 trechos de texto</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">concatenacao</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span> <span class="o">+</span> <span class="s2">&quot;456&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">concatenacao</span>
+<span class="s1">&#39;123456&#39;</span>
 
-#declaração da variável `a` que foi associado ao texto `bra`
-&gt;&gt;&gt; a = &quot;bra&quot;
-#declaração da variável `b` que foi associado ao texto `sil`
-&gt;&gt;&gt; b = &quot;sil&quot;
-#ao escrevemos no prompt a + b temos que é impresso a CONCATENAÇÃO
-&gt;&gt;&gt; a + b
-'brasil'
-#agora, concatenamos e o resultado associamos a variável `c`
-&gt;&gt;&gt; c = a + b
-&gt;&gt;&gt; c
-'brasil'
-#agora, podemos dizer que o trecho de texto `bra`
-# foi adicionado a esquerda da variável `b`
-&gt;&gt;&gt; b + a
-'silbra'
+<span class="c1">#declaração da variável `a` que foi associado ao texto `bra`</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;bra&quot;</span>
+<span class="c1">#declaração da variável `b` que foi associado ao texto `sil`</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;sil&quot;</span>
+<span class="c1">#ao escrevemos no prompt a + b temos que é impresso a CONCATENAÇÃO</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="s1">&#39;brasil&#39;</span>
+<span class="c1">#agora, concatenamos e o resultado associamos a variável `c`</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span>
+<span class="s1">&#39;brasil&#39;</span>
+<span class="c1">#agora, podemos dizer que o trecho de texto `bra`</span>
+<span class="c1"># foi adicionado a esquerda da variável `b`</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">+</span> <span class="n">a</span>
+<span class="s1">&#39;silbra&#39;</span>
 
-#agora, podemos dizer que o trecho de texto `sil`
-# foi adicionado a esquerda da variável `a`
-&gt;&gt;&gt; a + b
-'brasil'
-</pre>
+<span class="c1">#agora, podemos dizer que o trecho de texto `sil`</span>
+<span class="c1"># foi adicionado a esquerda da variável `a`</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="s1">&#39;brasil&#39;</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="interpolar">
 <h2>INTERPOLAR</h2>
 <p><strong>Interpolar</strong> é a inserção de um trecho de texto dentro de outro. A <strong>interpolação</strong>, ocorre de várias formas, e, algumas linguagens e bibliotecas, proporcionam maneiras bastante interessantes e diferentes para interpolarmos valores. O Python fornece um conjunto de ferramentas bastante poderosas para esse fim.</p>
-<pre class="literal-block">
-&gt;&gt;&gt; sexo = &quot;masculino&quot;
-&gt;&gt;&gt; nome = &quot;Cláudio&quot;
-&gt;&gt;&gt; interpolar = &quot;Sexo é igual a %s e o nome é igual %s &quot;%(sexo, nome)
-&gt;&gt;&gt; interpolar
-'Sexo é igual a masculino e o nome é igual Cláudio '
-]
-#agora, vamos colocar uma String entre chaves dentro do texto
-#em seguida, com a função format(), vamos associar
-#os nomes definidos entre chaves a texto passando-os
-#como argumentos de função
-&gt;&gt;&gt; interpolar = &quot;Sexo é igual a {SEXO} e o nome é igual {NOME} &quot;.format(SEXO=sexo,NOME=nome)
-&gt;&gt;&gt; interpolar
-'Sexo é igual a masculino e o nome é igual Cláudio '
-</pre>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">sexo</span> <span class="o">=</span> <span class="s2">&quot;masculino&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="s2">&quot;Cláudio&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">interpolar</span> <span class="o">=</span> <span class="s2">&quot;Sexo é igual a </span><span class="si">%s</span><span class="s2"> e o nome é igual </span><span class="si">%s</span><span class="s2"> &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">sexo</span><span class="p">,</span> <span class="n">nome</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">interpolar</span>
+<span class="s1">&#39;Sexo é igual a masculino e o nome é igual Cláudio &#39;</span>
+<span class="p">]</span>
+<span class="c1">#agora, vamos colocar uma String entre chaves dentro do texto</span>
+<span class="c1">#em seguida, com a função format(), vamos associar</span>
+<span class="c1">#os nomes definidos entre chaves a texto passando-os</span>
+<span class="c1">#como argumentos de função</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">interpolar</span> <span class="o">=</span> <span class="s2">&quot;Sexo é igual a {SEXO} e o nome é igual {NOME} &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">SEXO</span><span class="o">=</span><span class="n">sexo</span><span class="p">,</span><span class="n">NOME</span><span class="o">=</span><span class="n">nome</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">interpolar</span>
+<span class="s1">&#39;Sexo é igual a masculino e o nome é igual Cláudio &#39;</span>
+</pre></div>
 </div>
 <div class="section" id="as-string-sao-listas-imutaveis">
 <h2>As <tt class="docutils literal">string</tt> SÃO LISTAS IMUTÁVEIS</h2>

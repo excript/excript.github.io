@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos o que é um formulário Web, como construí-los, quais os tipos para o envio de informações, bem como, o recebimento dos dados pelos Scripts PHP e sua posterior manipulação."/>
 
         <meta property="article:published_time" content="10-01-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -544,29 +545,28 @@ eXcript            </a>
 </ul>
 </dd>
 </dl>
-<pre class="literal-block">
-&lt;form id=&quot;formulario&quot; action=&quot;#&quot; method=&quot;POST&quot;&gt;
-    &lt;fieldset&gt;
+<div class="highlight"><pre><span></span><span class="x">&lt;form id=&quot;formulario&quot; action=&quot;#&quot; method=&quot;POST&quot;&gt;</span>
+<span class="x">    &lt;fieldset&gt;</span>
 
-        &lt;legend&gt;Informações&lt;/legend&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;nome&quot;&gt;Nome: &lt;em class=&quot;required&quot;&gt;(obrigatório)&lt;/em&gt;&lt;/label&gt;
-            &lt;input name=&quot;nome&quot; id=&quot;nome&quot; type=&quot;text&quot; /&gt;
-        &lt;/p&gt;
+<span class="x">        &lt;legend&gt;Informações&lt;/legend&gt;</span>
+<span class="x">        &lt;p&gt;</span>
+<span class="x">            &lt;label for=&quot;nome&quot;&gt;Nome: &lt;em class=&quot;required&quot;&gt;(obrigatório)&lt;/em&gt;&lt;/label&gt;</span>
+<span class="x">            &lt;input name=&quot;nome&quot; id=&quot;nome&quot; type=&quot;text&quot; /&gt;</span>
+<span class="x">        &lt;/p&gt;</span>
 
-        &lt;p&gt;
-            &lt;label for=&quot;email&quot;&gt;Email Address:&lt;/label&gt;
-            &lt;input name=&quot;email&quot; id=&quot;email&quot; type=&quot;text&quot; /&gt;
-        &lt;/p&gt;
+<span class="x">        &lt;p&gt;</span>
+<span class="x">            &lt;label for=&quot;email&quot;&gt;Email Address:&lt;/label&gt;</span>
+<span class="x">            &lt;input name=&quot;email&quot; id=&quot;email&quot; type=&quot;text&quot; /&gt;</span>
+<span class="x">        &lt;/p&gt;</span>
 
-    &lt;/fieldset&gt;
+<span class="x">    &lt;/fieldset&gt;</span>
 
-    &lt;p&gt;
-        &lt;input type=&quot;button&quot; value=&quot;Enviar&quot; id=&quot;enviar&quot;/&gt;
-    &lt;/p&gt;
+<span class="x">    &lt;p&gt;</span>
+<span class="x">        &lt;input type=&quot;button&quot; value=&quot;Enviar&quot; id=&quot;enviar&quot;/&gt;</span>
+<span class="x">    &lt;/p&gt;</span>
 
-&lt;/form&gt;
-</pre>
+<span class="x">&lt;/form&gt;</span>
+</pre></div>
 </div>
 <div class="section" id="recebendo-as-informacoes-do-formulario">
 <h2>RECEBENDO AS INFORMAÇÕES DO FORMULÁRIO</h2>
@@ -576,49 +576,48 @@ eXcript            </a>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
 <p>formulario.php</p>
-<pre class="literal-block">
-&lt;?php
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 
-#FORMULÁRIO HTML
+<span class="c1">#FORMULÁRIO HTML</span>
 
-?&gt;
+<span class="cp">?&gt;</span><span class="x"></span>
 
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;pt-br&quot;&gt;
+<span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
 
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Fomulário HTML - Curso PHP - eXcript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">    &lt;title&gt;Fomulário HTML - Curso PHP - eXcript&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
+<span class="x">&lt;body&gt;</span>
 
-&lt;form action=&quot;metodo_post.php?xget=50&quot; method=&quot;POST&quot;&gt;
+<span class="x">&lt;form action=&quot;metodo_post.php?xget=50&quot; method=&quot;POST&quot;&gt;</span>
 
-    &lt;fieldset&gt;
-        &lt;legend&gt;Formulário HTML&lt;/legend&gt;
+<span class="x">    &lt;fieldset&gt;</span>
+<span class="x">        &lt;legend&gt;Formulário HTML&lt;/legend&gt;</span>
 
-        &lt;p&gt;
-            &lt;label for=&quot;nome&quot;&gt;Nome: &lt;/label&gt;
-            &lt;input type=&quot;text&quot; name=&quot;nome&quot; id=&quot;nome&quot;&gt;
-        &lt;/p&gt;
+<span class="x">        &lt;p&gt;</span>
+<span class="x">            &lt;label for=&quot;nome&quot;&gt;Nome: &lt;/label&gt;</span>
+<span class="x">            &lt;input type=&quot;text&quot; name=&quot;nome&quot; id=&quot;nome&quot;&gt;</span>
+<span class="x">        &lt;/p&gt;</span>
 
-        &lt;p&gt;
-            &lt;label for=&quot;email&quot;&gt;E-mail: &lt;/label&gt;
-            &lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot;&gt;
-        &lt;/p&gt;
+<span class="x">        &lt;p&gt;</span>
+<span class="x">            &lt;label for=&quot;email&quot;&gt;E-mail: &lt;/label&gt;</span>
+<span class="x">            &lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot;&gt;</span>
+<span class="x">        &lt;/p&gt;</span>
 
-    &lt;/fieldset&gt;
+<span class="x">    &lt;/fieldset&gt;</span>
 
-    &lt;p&gt;
-        &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot; id=&quot;enviar&quot;&gt;
-    &lt;/p&gt;
+<span class="x">    &lt;p&gt;</span>
+<span class="x">        &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot; id=&quot;enviar&quot;&gt;</span>
+<span class="x">    &lt;/p&gt;</span>
 
-&lt;/form&gt;
+<span class="x">&lt;/form&gt;</span>
 
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</pre></div>
 <p>metodo_get.php
 .. code-block:: php</p>
 <blockquote>

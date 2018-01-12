@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula de exercícios resolvidos estudaremos como podemos somar todos os algarismos de um número sem utilizar laços de repetição."/>
 
         <meta property="article:published_time" content="01-01-2016" />
+
             <meta property="article:section" content="exercícios resolvidos em java" />
             <meta property="article:tag" content="exercício" />
             <meta property="article:tag" content="resolvidos" />
@@ -214,46 +215,44 @@ eXcript            </a>
 <h2>EXERCÍCIO</h2>
 <p>Faça um programa (utilizando recursividade) que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.
 Exemplos:</p>
-<pre class="literal-block">
-1111 = 1+1+1+1 = 4
-2090 = 2 + 0 + 9 + 0 = 11
-</pre>
+<div class="highlight"><pre><span></span><span class="mi">1111</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="mi">2090</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">0</span> <span class="o">=</span> <span class="mi">11</span>
+</pre></div>
 </div>
 <div class="section" id="exercicio-resolvido">
 <h2>EXERCÍCIO RESOLVIDO</h2>
-<pre class="literal-block">
-import java.util.Scanner;
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
 
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+<span class="cm">/**</span>
+<span class="cm"> * ====================================</span>
+<span class="cm"> *           eXcript.com</span>
+<span class="cm"> *          fb.com/eXcript</span>
+<span class="cm"> * ====================================</span>
+<span class="cm"> */</span>
 
-public class J1004b {
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">J1004b</span> <span class="o">{</span>
 
-    public static int somaAlgarismosB(int num, int somaMomentanea){
-        if(num&lt;1)
-            return somaMomentanea;
-        somaMomentanea+=(num%10);
-        return somaAlgarismosB(num/10, somaMomentanea);
-    }
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">somaAlgarismosB</span><span class="o">(</span><span class="kt">int</span> <span class="n">num</span><span class="o">,</span> <span class="kt">int</span> <span class="n">somaMomentanea</span><span class="o">){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">num</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">)</span>
+            <span class="k">return</span> <span class="n">somaMomentanea</span><span class="o">;</span>
+        <span class="n">somaMomentanea</span><span class="o">+=(</span><span class="n">num</span><span class="o">%</span><span class="mi">10</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">somaAlgarismosB</span><span class="o">(</span><span class="n">num</span><span class="o">/</span><span class="mi">10</span><span class="o">,</span> <span class="n">somaMomentanea</span><span class="o">);</span>
+    <span class="o">}</span>
 
-    // (Recursividade)
-    // Soma de todos os algarismos
-    public static void main(String[] args) {
-        System.out.println(&quot;Digite um número: &quot;);
+    <span class="c1">// (Recursividade)</span>
+    <span class="c1">// Soma de todos os algarismos</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Digite um número: &quot;</span><span class="o">);</span>
 
-        int num = new Scanner(System.in).nextInt();
-        int soma = somaAlgarismosB(num, 0);
+        <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">).</span><span class="na">nextInt</span><span class="o">();</span>
+        <span class="kt">int</span> <span class="n">soma</span> <span class="o">=</span> <span class="n">somaAlgarismosB</span><span class="o">(</span><span class="n">num</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
 
-        System.out.println(&quot;O valor da soma dos algarismos é: &quot; + soma);
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;O valor da soma dos algarismos é: &quot;</span> <span class="o">+</span> <span class="n">soma</span><span class="o">);</span>
 
-    }
+    <span class="o">}</span>
 
-}
-</pre>
+<span class="o">}</span>
+</pre></div>
 </div>
 
 				</div>

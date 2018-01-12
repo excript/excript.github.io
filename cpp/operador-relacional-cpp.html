@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula iniciaremos o estudo dos Operadores Relacionais da Linguagem C++. Inicialmente, estudaremos os operadores simples, para que nas próximas aulas, possamos estudar os operadores relacionais compostos."/>
 
         <meta property="article:published_time" content="20-02-2015" />
+
             <meta property="article:section" content="curso cpp" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="cpp" />
@@ -398,12 +399,11 @@ A alteração da ordem em que os operandos estão dispostos altera a análise da
 </pre>
 <p>Vamos realizar algumas operações na prática para que possamos ver os resultados lógicos que o compilador do C++ enviará para a saída padrão. Digite as seguintes operações, uma após outra e analise o valor enviado para a saída.</p>
 <p>Feito esses exemplos, sinta-se livre para testar o compilador!</p>
-<pre class="literal-block">
-cout &lt;&lt; (5 &gt; 7) &lt;&lt; endl;
-cout &lt;&lt; (5 &lt; 10 ) &lt;&lt; endl;
-cout &lt;&lt; (&quot;a&quot; &gt; &quot;b&quot;) &lt;&lt; endl;
-cout &lt;&lt; (200 == 200 ) &lt;&lt; endl;
-</pre>
+<div class="highlight"><pre><span></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="s">&quot;a&quot;</span> <span class="o">&gt;</span> <span class="s">&quot;b&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">200</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</pre></div>
 </div>
 <div class="section" id="operadores-relacionais-compostos">
 <h2>OPERADORES RELACIONAIS COMPOSTOS</h2>
@@ -427,45 +427,43 @@ cout &lt;&lt; (200 == 200 ) &lt;&lt; endl;
 </tbody>
 </table>
 <p>A seguir, vamos realizar alguns exemplos na prática para estudar os resultados que o compilador enviará para a saída padrão. Digite as seguintes expressões e, obviamente, sinta-se livre para criar as suas próprias!</p>
-<pre class="literal-block">
-cout &lt;&lt; (1 &gt;= 1) &lt;&lt; endl;
-cout &lt;&lt; (&quot;x&quot; &gt; &quot;y&quot;) &lt;&lt; endl;
-cout &lt;&lt; (&quot;10&quot; &gt; &quot;10&quot;) &lt;&lt; endl;
-</pre>
+<div class="highlight"><pre><span></span><span class="n">cout</span> <span class="p">&lt;&lt;</span> <span class="p">(</span><span class="m">1</span> <span class="p">&gt;=</span> <span class="m">1</span><span class="p">)</span> <span class="p">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="p">&lt;&lt;</span> <span class="p">(</span><span class="s">&quot;x&quot;</span> <span class="p">&gt;</span> <span class="s">&quot;y&quot;</span><span class="p">)</span> <span class="p">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="n">cout</span> <span class="p">&lt;&lt;</span> <span class="p">(</span><span class="s">&quot;10&quot;</span> <span class="p">&gt;</span> <span class="s">&quot;10&quot;</span><span class="p">)</span> <span class="p">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</pre></div>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;iostream&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-/*====================================
-*           eXcript.com
-*          fb.com/eXcript
-* ====================================*/
+<span class="cm">/*====================================</span>
+<span class="cm">*           eXcript.com</span>
+<span class="cm">*          fb.com/eXcript</span>
+<span class="cm">* ====================================*/</span>
 
-using namespace std;
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-int main() {
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
-    bool b = true;
-    bool b2 = (1 == 1);
+    <span class="kt">bool</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">b2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">);</span>
 
-    cout &lt;&lt; &quot;O valor contido em 'b' é igual a: &quot; &lt;&lt; b &lt;&lt; endl;
-    cout &lt;&lt; &quot;O valor contido em 'b2' é igual a: &quot; &lt;&lt; b2 &lt;&lt; endl;
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O valor contido em &#39;b&#39; é igual a: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O valor contido em &#39;b2&#39; é igual a: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">b2</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 
-    //True representa o valor 1
-    //False representa o valor 0
+    <span class="c1">//True representa o valor 1</span>
+    <span class="c1">//False representa o valor 0</span>
 
-    bool c = 0;
-    bool c2 = 1;
+    <span class="kt">bool</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">c2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
-    cout &lt;&lt; &quot;O valor e: &quot; &lt;&lt; (c2 == true) &lt;&lt; endl;
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;O valor e: &quot;</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">c2</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 
-    system(&quot;pause&quot;);
-    return 0;
-}
-</pre>
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

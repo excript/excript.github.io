@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos o escopo de variáveis definidas em funções, bem como os vários conceitos envolvidos."/>
 
         <meta property="article:published_time" content="10-12-2015" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -511,51 +512,47 @@ eXcript            </a>
 <div class="section" id="escopo-de-funcao">
 <h2>ESCOPO DE FUNÇÃO</h2>
 <p>O primeiro nível de escopo é o escopo de variáveis. É comum chamarmos o escopo de funções como escopo local, logo, tudo que for declarado dentro de uma função será desalocado no momento em que está finalizar a execução.</p>
-<pre class="literal-block">
-function funcEstudo(){
-    $valor1 = 10;
-    $valor2 = 16;
-    $total = $valor1 + $valor2;
-}
+<div class="highlight"><pre><span></span><span class="x">function funcEstudo(){</span>
+<span class="x">    $valor1 = 10;</span>
+<span class="x">    $valor2 = 16;</span>
+<span class="x">    $total = $valor1 + $valor2;</span>
+<span class="x">}</span>
 
-funcEstudo();
+<span class="x">funcEstudo();</span>
 
-echo $total;
-</pre>
+<span class="x">echo $total;</span>
+</pre></div>
 <p>O código acima se executado, levantará uma exceção dizendo que a variável $total não existe. Então, como regra geral, tudo que acontecer dentro de uma função será finalizado com esta.</p>
-<pre class="literal-block">
-$x = 'Fala'; // global $x
-function funcaoX()
-{
-    global $x;
-    $x .= ' galera!!!';
-    echo $x;
-}
+<div class="highlight"><pre><span></span><span class="x">$x = &#39;Fala&#39;; // global $x</span>
+<span class="x">function funcaoX()</span>
+<span class="x">{</span>
+<span class="x">    global $x;</span>
+<span class="x">    $x .= &#39; galera!!!&#39;;</span>
+<span class="x">    echo $x;</span>
+<span class="x">}</span>
 
-funcaoX();
-</pre>
+<span class="x">funcaoX();</span>
+</pre></div>
 <p>Uma outra forma de acesso a variável <tt class="docutils literal">$x</tt> é utilizando o array <tt class="docutils literal">$GLOBALS</tt>.</p>
-<pre class="literal-block">
-$GLOBALS['x'] .= ' World'; // change global $x
-</pre>
+<div class="highlight"><pre><span></span><span class="x">$GLOBALS[&#39;x&#39;] .= &#39; World&#39;; // change global $x</span>
+</pre></div>
 <p>AS VARIÁVEIS NÃO SÃO DESTRUÍDAS AO TÉRMINO DO BLOCO DE INSTRUÇÃO!!! ALTERAR VÍDEO AULA!!</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-$testando = 10;
-$a = 10;
-$b = 5;
+<div class="highlight"><pre><span></span><span class="x">$testando = 10;</span>
+<span class="x">$a = 10;</span>
+<span class="x">$b = 5;</span>
 
-function estudoEscopo(){
-    echo $GLOBALS[&quot;a&quot;];
-}
+<span class="x">function estudoEscopo(){</span>
+<span class="x">    echo $GLOBALS[&quot;a&quot;];</span>
+<span class="x">}</span>
 
 
-estudoEscopo();
+<span class="x">estudoEscopo();</span>
 
-print_r($GLOBALS);
-</pre>
+<span class="x">print_r($GLOBALS);</span>
+</pre></div>
 </div>
 
 				</div>

@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula daremos continuidade sobre a utilização de funções construtoras e os seus beneficios na construção e implementação de classes."/>
 
         <meta property="article:published_time" content="19-01-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -510,41 +511,39 @@ eXcript            </a>
 <div class="section" id="visibilidade-dos-construtores">
 <h2>VISIBILIDADE DOS CONSTRUTORES</h2>
 <p>Se a visibilidade de um construtor não for definida, assume-se que o mesmo é público. Temos que o funcionamento da visibilidade dos construtores é igual a visibilidade dos métodos.</p>
-<pre class="literal-block">
-$p1 = new Pessoa(&quot;João&quot;);
-</pre>
+<div class="highlight"><pre><span></span><span class="x">$p1 = new Pessoa(&quot;João&quot;);</span>
+</pre></div>
 <p>A utilização de construtores faz com que nossos objetos se tornem mais lógicos e acessíveis.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#CONSTRUTORES PERSONALIZADOS
+<div class="highlight"><pre><span></span><span class="x">#CONSTRUTORES PERSONALIZADOS</span>
 
-class A{
+<span class="x">class A{</span>
 
-}
+<span class="x">}</span>
 
-class Pessoa{
+<span class="x">class Pessoa{</span>
 
-    public $a;
+<span class="x">    public $a;</span>
 
-    public $nome;
-    public $idade = 0;
+<span class="x">    public $nome;</span>
+<span class="x">    public $idade = 0;</span>
 
-    function __construct($nome, $idade){
+<span class="x">    function __construct($nome, $idade){</span>
 
-        $this -&gt; a = new A();
+<span class="x">        $this -&gt; a = new A();</span>
 
-        $this -&gt; nome = $nome;
-        $this -&gt; idade = $idade;
+<span class="x">        $this -&gt; nome = $nome;</span>
+<span class="x">        $this -&gt; idade = $idade;</span>
 
-    }
+<span class="x">    }</span>
 
-}
+<span class="x">}</span>
 
-$p1 = new Pessoa(&quot;eXcript&quot;, 2);
-var_dump($p1);
-</pre>
+<span class="x">$p1 = new Pessoa(&quot;eXcript&quot;, 2);</span>
+<span class="x">var_dump($p1);</span>
+</pre></div>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

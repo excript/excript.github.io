@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula iniciaremos o estudo dos Operadores Relacionais Simples, ou seja, os operadores que nos permitem analisar a relação entre 2 operandos distintos."/>
 
         <meta property="article:published_time" content="26-02-2014" />
+
             <meta property="article:section" content="curso c" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="curso c" />
@@ -319,46 +320,45 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-//  ==========                 ==========
-//  ========== www.eXcript.com ==========
-//  ==========                 ==========
+<span class="c1">//  ==========                 ==========</span>
+<span class="c1">//  ========== www.eXcript.com ==========</span>
+<span class="c1">//  ==========                 ==========</span>
 
-int main()
-{
-    int iJ, iI;
-    iJ = 18;
-    iI = 60;
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">iJ</span><span class="p">,</span> <span class="n">iI</span><span class="p">;</span>
+    <span class="n">iJ</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+    <span class="n">iI</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
 
-    int idade = 0;
+    <span class="kt">int</span> <span class="n">idade</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    printf(&quot;Digite a idade de um pessoa:\n&quot;);
-    scanf( &quot;%i&quot;, &amp;idade );
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Digite a idade de um pessoa:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span> <span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">idade</span> <span class="p">);</span>
 
-    if(idade &lt;= iJ)
-    {
-        printf(&quot;\nA idade informada eh de um jovem.\n&quot;)   ;
-    }else{
-        if(idade &gt;= iI){
-            printf( &quot;\nA idade informada é de uma pessoa idosa.\n&quot; );
-        }else{
-            if( (idade &gt; iJ)&amp;&amp;(idade &lt; iI) ){
-                //se isso for V ou se isso for V
+    <span class="k">if</span><span class="p">(</span><span class="n">idade</span> <span class="o">&lt;=</span> <span class="n">iJ</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">A idade informada eh de um jovem.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>   <span class="p">;</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">idade</span> <span class="o">&gt;=</span> <span class="n">iI</span><span class="p">){</span>
+            <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">A idade informada é de uma pessoa idosa.</span><span class="se">\n</span><span class="s">&quot;</span> <span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="n">idade</span> <span class="o">&gt;</span> <span class="n">iJ</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">idade</span> <span class="o">&lt;</span> <span class="n">iI</span><span class="p">)</span> <span class="p">){</span>
+                <span class="c1">//se isso for V ou se isso for V</span>
 
-                //A meia-idade se caracteriza por qualquer pessoa que tenha
-                //menos de 60 anos e mais de 17
-                printf(&quot;A idade informada é de uma pessoa de meia-idade.&quot;);
-            }
-        }
-    }
+                <span class="c1">//A meia-idade se caracteriza por qualquer pessoa que tenha</span>
+                <span class="c1">//menos de 60 anos e mais de 17</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;A idade informada é de uma pessoa de meia-idade.&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
 
-    return 0;
-}
-</pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos as funções para manipulação e uso de Strings. Aprenderemos como podemos trabalhar com cadeias de caracteres e quais as funcionalidades implementadas que temos a disposição."/>
 
         <meta property="article:published_time" content="18-11-2015" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -500,38 +501,37 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#FUNÇÕES PARA MANIPULAR STRINGS
+<div class="highlight"><pre><span></span><span class="x">#FUNÇÕES PARA MANIPULAR STRINGS</span>
 
-#FUNÇÃO - strlen() - QUANTIDADE DE CARACTES
-$len = strlen('123456abc');
-echo &quot;Quantidade de caracteres: $len \n&quot;;
+<span class="x">#FUNÇÃO - strlen() - QUANTIDADE DE CARACTES</span>
+<span class="x">$len = strlen(&#39;123456abc&#39;);</span>
+<span class="x">echo &quot;Quantidade de caracteres: $len \n&quot;;</span>
 
 
-#FUNÇÃO - substr(&lt;str&gt;, &lt;indice&gt;, &lt;len&gt;) - RETORNA UM PEDAÇO DA STRING
-# aaabbbccc substr(str, 3, 3)
+<span class="x">#FUNÇÃO - substr(&lt;str&gt;, &lt;indice&gt;, &lt;len&gt;) - RETORNA UM PEDAÇO DA STRING</span>
+<span class="x"># aaabbbccc substr(str, 3, 3)</span>
 
-$str = 'aaabbbccc';
-$sub = substr($str, 3, 3);
-echo &quot;A parte retornada é: $sub.\n&quot;;
-$sub = substr($str, 3);
-echo &quot;A parte retornada sem &lt;len&gt; é: $sub.\n&quot;;
+<span class="x">$str = &#39;aaabbbccc&#39;;</span>
+<span class="x">$sub = substr($str, 3, 3);</span>
+<span class="x">echo &quot;A parte retornada é: $sub.\n&quot;;</span>
+<span class="x">$sub = substr($str, 3);</span>
+<span class="x">echo &quot;A parte retornada sem &lt;len&gt; é: $sub.\n&quot;;</span>
 
-#FUNÇÃO - strtoupper(&lt;str&gt;) - CONVERTE PARA LETRAS MAIÚSCULAS
+<span class="x">#FUNÇÃO - strtoupper(&lt;str&gt;) - CONVERTE PARA LETRAS MAIÚSCULAS</span>
 
-$str = 'eXcript';
-$up = strtoupper($str);
-echo &quot;Maiúsculo: $up.\n&quot;;
+<span class="x">$str = &#39;eXcript&#39;;</span>
+<span class="x">$up = strtoupper($str);</span>
+<span class="x">echo &quot;Maiúsculo: $up.\n&quot;;</span>
 
-$low = strtolower($str);
-echo &quot;Minúsculo: $low.\n&quot;;
+<span class="x">$low = strtolower($str);</span>
+<span class="x">echo &quot;Minúsculo: $low.\n&quot;;</span>
 
-#FUNÇÃO - str_replace(&lt;chars&gt;, &lt;novastr&gt;, &lt;str&gt;) - SUBSTITUI PARTE DA STRING
+<span class="x">#FUNÇÃO - str_replace(&lt;chars&gt;, &lt;novastr&gt;, &lt;str&gt;) - SUBSTITUI PARTE DA STRING</span>
 
-$str = 'aaabbbccc';
-$nova = str_replace('bbb', '---', $str);
-echo &quot;Original: $str - Mod: $nova \n&quot;;
-</pre>
+<span class="x">$str = &#39;aaabbbccc&#39;;</span>
+<span class="x">$nova = str_replace(&#39;bbb&#39;, &#39;---&#39;, $str);</span>
+<span class="x">echo &quot;Original: $str - Mod: $nova \n&quot;;</span>
+</pre></div>
 </div>
 
 				</div>

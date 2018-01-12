@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos os modificadores de tipo da linguagem C, bem como a sua utilização e características. Por fim faremos um exemplo utilizando os conceitos estudados."/>
 
         <meta property="article:published_time" content="26-02-2014" />
+
             <meta property="article:section" content="curso c" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="curso c" />
@@ -320,42 +321,41 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
-//  ==========                 ==========
-//  ========== www.eXcript.com ==========
-//  ==========                 ==========
+<span class="c1">//  ==========                 ==========</span>
+<span class="c1">//  ========== www.eXcript.com ==========</span>
+<span class="c1">//  ==========                 ==========</span>
 
-int main()
-{
-    int i = 10;
-    short u;
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="kt">short</span> <span class="n">u</span><span class="p">;</span>
 
-    printf( &quot;%i -&gt; variavel i\n&quot;, sizeof(i) );
-    printf( &quot;%i -&gt; variavel u\n&quot;, sizeof(u) );
-
-
-    /*
-
-        1) char
-        2) int
-        3) float
-        4) double
-        5) void - vazio
-
-        1) signed       -&gt; + e -
-        2) unsigned     -&gt; +
-        3) long         -&gt; aumentar o capacidade de armazentio da nossa variável
-        4) short        -&gt; nos queremos diminuir o tamanho de armazenamento
-
-    */
+    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%i -&gt; variavel i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%i -&gt; variavel u</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="p">);</span>
 
 
-    return 0;
-}
-</pre>
+    <span class="cm">/*</span>
+
+<span class="cm">        1) char</span>
+<span class="cm">        2) int</span>
+<span class="cm">        3) float</span>
+<span class="cm">        4) double</span>
+<span class="cm">        5) void - vazio</span>
+
+<span class="cm">        1) signed       -&gt; + e -</span>
+<span class="cm">        2) unsigned     -&gt; +</span>
+<span class="cm">        3) long         -&gt; aumentar o capacidade de armazentio da nossa variável</span>
+<span class="cm">        4) short        -&gt; nos queremos diminuir o tamanho de armazenamento</span>
+
+<span class="cm">    */</span>
+
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

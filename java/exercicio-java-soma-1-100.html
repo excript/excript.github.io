@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula de exercícios resolvidos implementaremos um laço de repetição que envia para a saída padrão os números num determinado intervalo."/>
 
         <meta property="article:published_time" content="01-01-2016" />
+
             <meta property="article:section" content="exercícios resolvidos em java" />
             <meta property="article:tag" content="exercício" />
             <meta property="article:tag" content="resolvidos" />
@@ -216,38 +217,37 @@ eXcript            </a>
 </div>
 <div class="section" id="exercicio-resolvido">
 <h2>EXERCÍCIO RESOLVIDO</h2>
-<pre class="literal-block">
-/**
- * ====================================
- *           eXcript.com
- *          fb.com/eXcript
- * ====================================
- */
+<div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * ====================================</span>
+<span class="cm"> *           eXcript.com</span>
+<span class="cm"> *          fb.com/eXcript</span>
+<span class="cm"> * ====================================</span>
+<span class="cm"> */</span>
 
-public class J1002 {
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">J1002</span> <span class="o">{</span>
 
-    //Soma de 1 à 100
-    public static void main(String[] args) {
+    <span class="c1">//Soma de 1 à 100</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
-        int soma = 0;
+        <span class="kt">int</span> <span class="n">soma</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 
-        System.out.print(&quot;A soma dos 100 primeiros números é: &quot;);
-        for(int i = 1; i&lt;=100; i++)
-            soma += i;
-            //soma = soma + i
-        System.out.println(soma);
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;A soma dos 100 primeiros números é: &quot;</span><span class="o">);</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">100</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+            <span class="n">soma</span> <span class="o">+=</span> <span class="n">i</span><span class="o">;</span>
+            <span class="c1">//soma = soma + i</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">soma</span><span class="o">);</span>
 
-        System.out.print(&quot;A soma utilizando a instrução WHILE: &quot;);
-        int soma2 = 0, i2 = 0;
-        while(i2&lt;=100){
-            soma2+=i2;
-            i2++;
-            //soma2 = soma2 + i2;
-        }
-        System.out.println(soma2);
-    }
-}
-</pre>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;A soma utilizando a instrução WHILE: &quot;</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">soma2</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">while</span><span class="o">(</span><span class="n">i2</span><span class="o">&lt;=</span><span class="mi">100</span><span class="o">){</span>
+            <span class="n">soma2</span><span class="o">+=</span><span class="n">i2</span><span class="o">;</span>
+            <span class="n">i2</span><span class="o">++;</span>
+            <span class="c1">//soma2 = soma2 + i2;</span>
+        <span class="o">}</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">soma2</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
 </div>
 
 				</div>

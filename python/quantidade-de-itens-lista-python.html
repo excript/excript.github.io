@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula aprenderemos como saber a quantidade de elementos contidos numa lista, ou então, a quantidade de vezes que determinado elemento está contido ou mesmo, se o elemento está ou não contido."/>
 
         <meta property="article:published_time" content="21-05-2015" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -384,63 +385,59 @@ eXcript            </a>
 <div class="section" id="funcao-len">
 <h2>FUNÇÃO <tt class="docutils literal">len()</tt></h2>
 <p>A função built-in <tt class="docutils literal">len()</tt> retorna a quantidade de elementos contidos numa lista, por exemplo:</p>
-<pre class="literal-block">
-&gt;&gt;&gt; len([1,2,3,4])
-4
-</pre>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="mi">4</span>
+</pre></div>
 <p>No código acima, invocamos a função <tt class="docutils literal">len()</tt> passando como parâmetro uma lista contendo 4 elementos. Logo, nos foi retornado, que a quantidade de elementos existentes é igual a 4.</p>
 <p>A função <tt class="docutils literal">len()</tt> retorna a quantidade de elementos de qualquer lista em Python, essa é mais uma função built-in e disponível em qualquer parte dos nossos códigos.</p>
 <p>Se, ao invés de passarmos uma lista, passarmos uma expressão, também será retornado, a quantidade de elemento contidos no fatiamento, por exemplo:</p>
-<pre class="literal-block">
-&gt;&gt;&gt; A = ['a', 'b', 'c', 'd', 'e', 'f']
-&gt;&gt;&gt; len(A)
-6
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="mi">6</span>
 
-&gt;&gt;&gt; A[1:3]
-['b', 'c']
-&gt;&gt;&gt; len(A[1:3])
-2
-</pre>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="mi">2</span>
+</pre></div>
 <p>Então, seja uma lista ou então, somente uma parte da lista, a função <tt class="docutils literal">len()</tt> resolverá a expressão e retornará a quantidade de elementos contidos.</p>
 </div>
 <div class="section" id="funcao-count">
 <h2>FUNÇÃO <tt class="docutils literal">count()</tt></h2>
 <p>A função <tt class="docutils literal">count()</tt> retorna a quantidade de vezes que um mesmo elemento está contido numa lista. Essa é uma excelente maneira que evita a implementação de um <tt class="docutils literal">Laço de Repetição</tt> em busca de elementos iguais.</p>
 <p>No código a seguir, defimos uma lista e em seguida, invocamos a função <tt class="docutils literal">count()</tt>, pergunta assim, quantas vezes um determinado número existe nessa lista.</p>
-<pre class="literal-block">
-#coding: utf-8
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-&gt;&gt;&gt; [1,2,3,4,5].count(1)
-1
-&gt;&gt;&gt; [1,2,3,4,5].count(4)
-1
-&gt;&gt;&gt; [1,2,3,4,5,4].count(4)
-2
-</pre>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="mi">2</span>
+</pre></div>
 <p>Observamos, que quando o número 4 não estava repetido, a função <tt class="docutils literal">count(4)</tt> retornou 1. A partir do momento em que adicionamos mais uma vez o número 4, o valor retornado foi 2.</p>
 <p>A seguir, vamos fazer outro exemplo, porém agora, trabalhando com objetos do tipo texto <tt class="docutils literal">str</tt>.</p>
-<pre class="literal-block">
-&gt;&gt;&gt; A = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;]
-&gt;&gt;&gt; len(A)
-6
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="mi">6</span>
 
-&gt;&gt;&gt; A.count(&quot;x&quot;)
-0
-&gt;&gt;&gt; A.count(&quot;A&quot;)
-0
-&gt;&gt;&gt; A.count(&quot;a&quot;)
-1
-&gt;&gt;&gt; A.count(&quot;b&quot;)
-1
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="mi">1</span>
 
-&gt;&gt;&gt; A += [&quot;a&quot;]
-&gt;&gt;&gt; A
-['a', 'b', 'c', 'd', 'e', 'f', 'a']
-&gt;&gt;&gt; len(A)
-7
-&gt;&gt;&gt; A.count(&quot;a&quot;)
-2
-</pre>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span>
+<span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="mi">7</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="mi">2</span>
+</pre></div>
 <p>Inicialmente, definimos a referência <tt class="docutils literal">A</tt> um lista contendo 6 elementos do tipo <tt class="docutils literal">str</tt>, que nos caso, foram as letras de <tt class="docutils literal">a</tt> até <tt class="docutils literal">f</tt>. Em seguida, passamos a lista <tt class="docutils literal">A</tt> como parâmetro da função <tt class="docutils literal">len()</tt> para que fosse retornado a quantidade de elementos, e como resposta, obtivemos o número 6.
 Feito isso, invocamos a função <tt class="docutils literal">count()</tt> passando como argumento, <tt class="docutils literal">x</tt>, <tt class="docutils literal">A</tt> e <tt class="docutils literal">a</tt>. O elemento <tt class="docutils literal">x</tt> e <tt class="docutils literal">A</tt> maiúsculo não existem em nossa lista, logo, a função <tt class="docutils literal">count()</tt> retornou 0. Porém, quando passamos como parâmetro as letras <tt class="docutils literal">a</tt> e <tt class="docutils literal">b</tt>, nos foi retorna 1, isto é, os objetos do tipo <tt class="docutils literal">str</tt> que contém as letras <tt class="docutils literal">a</tt> e <tt class="docutils literal">b</tt> estão contidos.
 Por fim, incrementamos a lista mais uma vez a letra <tt class="docutils literal">a</tt> e quando invocamos a função <tt class="docutils literal"><span class="pre">count(&quot;a&quot;)</span></tt> nos foi retornado 2, isto é, o elemento do tipo <tt class="docutils literal">str</tt> retornou que há 2 ocorrências.</p>

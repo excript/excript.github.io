@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula implementaremos uma simples aplicação que pedirá ao usuário que digite algumas notas de provas e trabalhos e em seguida, calcularemos a média aritmética das notas digitadas."/>
 
         <meta property="article:published_time" content="26-02-2014" />
+
             <meta property="article:section" content="curso c" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="curso c" />
@@ -309,42 +310,41 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-void main(){
+<div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
 
-    double nota1, nota2, nota3, nota4, media;
-    nota1 = nota2  =  nota3 = nota4 = media = 0; //inicializando as variáveis
+    <span class="kt">double</span> <span class="n">nota1</span><span class="p">,</span> <span class="n">nota2</span><span class="p">,</span> <span class="n">nota3</span><span class="p">,</span> <span class="n">nota4</span><span class="p">,</span> <span class="n">media</span><span class="p">;</span>
+    <span class="n">nota1</span> <span class="o">=</span> <span class="n">nota2</span>  <span class="o">=</span>  <span class="n">nota3</span> <span class="o">=</span> <span class="n">nota4</span> <span class="o">=</span> <span class="n">media</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//inicializando as variáveis</span>
 
-    //agora vamos pedir para o usuário digitar as suas notas
-    printf(&quot;Informe a sua 1 nota&quot;);
-    scanf(&quot;%f&quot;, nota1);
+    <span class="c1">//agora vamos pedir para o usuário digitar as suas notas</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Informe a sua 1 nota&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="n">nota1</span><span class="p">);</span>
 
-    printf(&quot;Informe a sua 2 nota&quot;);
-    scanf(&quot;%f&quot;, nota2);
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Informe a sua 2 nota&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="n">nota2</span><span class="p">);</span>
 
-    printf(&quot;Informe a sua 3 nota&quot;);
-    scanf(&quot;%f&quot;, nota3);
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Informe a sua 3 nota&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="n">nota3</span><span class="p">);</span>
 
-    printf(&quot;Informe a sua 4 nota&quot;);
-    scanf(&quot;%f&quot;, nota4);
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Informe a sua 4 nota&quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="n">nota4</span><span class="p">);</span>
 
-    //por fim, basta somarmos todos as notas e dividirmos por 4
-    media = (nota1 + nota2 + nota3 + nota4) / 4;
+    <span class="c1">//por fim, basta somarmos todos as notas e dividirmos por 4</span>
+    <span class="n">media</span> <span class="o">=</span> <span class="p">(</span><span class="n">nota1</span> <span class="o">+</span> <span class="n">nota2</span> <span class="o">+</span> <span class="n">nota3</span> <span class="o">+</span> <span class="n">nota4</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
 
 
-    //Dessa forma conseguimos calcular a média,
-    //agora, basta somente verificarmos se o valor da média é:
-    // maior, igual ou menor do que 7.
+    <span class="c1">//Dessa forma conseguimos calcular a média,</span>
+    <span class="c1">//agora, basta somente verificarmos se o valor da média é:</span>
+    <span class="c1">// maior, igual ou menor do que 7.</span>
 
-    if(media &amp;gt;= 7){
-        printf(&quot;Você foi aprovado.&quot;);
-    }else{
-        printf(&quot;Você foi reprovado.&quot;);
-    }
+    <span class="k">if</span><span class="p">(</span><span class="n">media</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="mi">7</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Você foi aprovado.&quot;</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Você foi reprovado.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    return 0;
-}
-</pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 <p>No programa acima, calculamos a média do aluno e armazenamos o valor numa variável. Em seguida, verificamos o valor contido nessa variável satisfaz a condição para que um aluno seja aprovado. Se sim, será impresso na tela uma mensagem dizendo que o usuário foi aprovado, do contrário, ira dizer que o usuário não foi aprovado.</p>
 </div>
 

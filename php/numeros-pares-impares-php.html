@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula aprenderemos a analisar se um número é par ou então é impar. Estudaremos as várias maneiras existentes para a obtenção dessa propriedade matemática e escreveremos uma aplicação que pede ao usuário um número e retorna se o mesmo é par ou então ímpar."/>
 
         <meta property="article:published_time" content="06-10-2015" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -498,39 +499,37 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;pt-br&quot;&gt;
+<div class="highlight"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang=&quot;pt-br&quot;&gt;</span>
 
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Número Pares e Ímpares - Curso PHP - eXcript&lt;/title&gt;
-&lt;/head&gt;
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="x">    &lt;title&gt;Número Pares e Ímpares - Curso PHP - eXcript&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
 
-&lt;body&gt;
+<span class="x">&lt;body&gt;</span>
 
-    &lt;?php
-    if(isset($_POST[&quot;num&quot;])){
-        echo $_POST[&quot;num&quot;];
-        echo &quot;&lt;br&gt;&quot;;
+<span class="x">    </span><span class="cp">&lt;?php</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">])){</span>
+        <span class="k">echo</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">];</span>
+        <span class="k">echo</span> <span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">;</span>
 
-        $num = $_POST[&quot;num&quot;];
+        <span class="nv">$num</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">];</span>
 
-        if($num % 2 == 0){
-            echo &quot;O número informado é par&quot;;
-        }else{
-            echo &quot;O número informado é impar&quot;;
-        }
-    }
-    ?&gt;
+        <span class="k">if</span><span class="p">(</span><span class="nv">$num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="k">echo</span> <span class="s2">&quot;O número informado é par&quot;</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="k">echo</span> <span class="s2">&quot;O número informado é impar&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="cp">?&gt;</span><span class="x"></span>
 
-    &lt;form method=&quot;POST&quot;&gt;
-        &lt;input type=&quot;text&quot; name=&quot;num&quot;/&gt;
-        &lt;input type=&quot;submit&quot;&gt;
-    &lt;/form&gt;
+<span class="x">    &lt;form method=&quot;POST&quot;&gt;</span>
+<span class="x">        &lt;input type=&quot;text&quot; name=&quot;num&quot;/&gt;</span>
+<span class="x">        &lt;input type=&quot;submit&quot;&gt;</span>
+<span class="x">    &lt;/form&gt;</span>
 
-&lt;/body&gt;
-
+<span class="x">&lt;/body&gt;</span>
 
 
 
@@ -538,8 +537,9 @@ eXcript            </a>
 
 
 
-&lt;/html&gt;
-</pre>
+
+<span class="x">&lt;/html&gt;</span>
+</pre></div>
 </div>
 
 				</div>

@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos a criação de novos objetos através das classes que definimos em PHP. Aprenderemos as diferenças entre classe, objeto e instâncias, bem como as demais definições envolvidas."/>
 
         <meta property="article:published_time" content="10-06-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -550,10 +551,9 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 <h2>DESTRUIÇÃO DE OBJETOS</h2>
 <p>Um objeto será destruido todas as vezes em que não houver mais variáveis contendo sua referência, isto, que esteja referenciando-o. Dessa forma, temos que o PHP desalocará a memória de todos os objetos quando estes não mais tiverem utilidade. Se por acaso tentarmos acessar um objeto que foi destruído, temos que ocorrerá um erro e o Script PHP terá sua execução finalizada, até porque, o objeto não existe mais.</p>
 <p>Porém, não se preocupe, o PHP sabe gerenciar muito bem a memória e também, consegue definir com bastante precisão o momento de remover cada instância da memória. Por isso, salvo em raras exceções, você irá ter problemas com a destruição de objetos que ainda estavam em uso.</p>
-<pre class="literal-block">
-$p1 = new Pessoa();
-$p2 = new Pessoa();
-</pre>
+<div class="highlight"><pre><span></span><span class="x">$p1 = new Pessoa();</span>
+<span class="x">$p2 = new Pessoa();</span>
+</pre></div>
 </div>
 <div class="section" id="garbage-collector">
 <h2>GARBAGE COLLECTOR</h2>
@@ -563,26 +563,25 @@ $p2 = new Pessoa();
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#CRIAÇÃO DE OBJETOS/INSTÂNCIAS
+<div class="highlight"><pre><span></span><span class="x">#CRIAÇÃO DE OBJETOS/INSTÂNCIAS</span>
 
-class Classe{
-    public $a = 1;
-    public $b = 2;
-    public $c = 3;
-}
+<span class="x">class Classe{</span>
+<span class="x">    public $a = 1;</span>
+<span class="x">    public $b = 2;</span>
+<span class="x">    public $c = 3;</span>
+<span class="x">}</span>
 
-$objetoA = new Classe();
-$objetoB = new Classe();
-$objetoC = new Classe();
+<span class="x">$objetoA = new Classe();</span>
+<span class="x">$objetoB = new Classe();</span>
+<span class="x">$objetoC = new Classe();</span>
 
-var_dump($objetoA);
-//var_dump($objetoB);
-//var_dump($objetoC);
+<span class="x">var_dump($objetoA);</span>
+<span class="x">//var_dump($objetoB);</span>
+<span class="x">//var_dump($objetoC);</span>
 
-unset($objetoA);
-var_dump($objetoA);
-</pre>
+<span class="x">unset($objetoA);</span>
+<span class="x">var_dump($objetoA);</span>
+</pre></div>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

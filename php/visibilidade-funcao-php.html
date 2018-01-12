@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos a visibilidade das funções definidas numa classe e as razões pelas quais devemos restringir o acesso a todos os membros que possuem uso interno a classe."/>
 
         <meta property="article:published_time" content="14-02-2016" />
+
             <meta property="article:section" content="curso php" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="php" />
@@ -506,44 +507,43 @@ eXcript            </a>
     </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-# VISIBILIDADE DAS FUNÇÕES
+<div class="highlight"><pre><span></span><span class="x"># VISIBILIDADE DAS FUNÇÕES</span>
 
-class SuperClasse{
+<span class="x">class SuperClasse{</span>
 
-    public $uuu;
+<span class="x">    public $uuu;</span>
 
-    public function funcPublica(){ echo &quot;funcPublica\n&quot;; }
-    protected function funcProtegida(){ echo &quot;funcProtegida\n&quot;; }
-    private function funcPrivada(){ echo &quot;funcPrivada\n&quot;; }
+<span class="x">    public function funcPublica(){ echo &quot;funcPublica\n&quot;; }</span>
+<span class="x">    protected function funcProtegida(){ echo &quot;funcProtegida\n&quot;; }</span>
+<span class="x">    private function funcPrivada(){ echo &quot;funcPrivada\n&quot;; }</span>
 
-    function super(){
-        $this-&gt;funcPublica();
-        $this-&gt;funcProtegida();
-        $this-&gt;funcPrivada();
-    }
+<span class="x">    function super(){</span>
+<span class="x">        $this-&gt;funcPublica();</span>
+<span class="x">        $this-&gt;funcProtegida();</span>
+<span class="x">        $this-&gt;funcPrivada();</span>
+<span class="x">    }</span>
 
-}
+<span class="x">}</span>
 
-$super = new SuperClasse();
-//$super-&gt;super();
-$super-&gt;funcPublica();
-//$super-&gt;funcProtegida();
-//$super-&gt;funcPrivada();
+<span class="x">$super = new SuperClasse();</span>
+<span class="x">//$super-&gt;super();</span>
+<span class="x">$super-&gt;funcPublica();</span>
+<span class="x">//$super-&gt;funcProtegida();</span>
+<span class="x">//$super-&gt;funcPrivada();</span>
 
-class SubClasse extends SuperClasse{
+<span class="x">class SubClasse extends SuperClasse{</span>
 
-    function __construct(){
+<span class="x">    function __construct(){</span>
 
-        $this-&gt;funcPublica();
-        $this-&gt;funcProtegida();
-//        $this-&gt;funcPrivada();
-    }
-}
+<span class="x">        $this-&gt;funcPublica();</span>
+<span class="x">        $this-&gt;funcProtegida();</span>
+<span class="x">//        $this-&gt;funcPrivada();</span>
+<span class="x">    }</span>
+<span class="x">}</span>
 
-$sub = new SubClasse();
-$sub-&gt;funcPublica();
-</pre>
+<span class="x">$sub = new SubClasse();</span>
+<span class="x">$sub-&gt;funcPublica();</span>
+</pre></div>
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>

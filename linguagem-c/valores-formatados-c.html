@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula aprenderemos a formatar os dados antes de envia-los para o Console. Estudaremos a função printf(), bem como os parâmetros que precisamos definir ao invoca-la."/>
 
         <meta property="article:published_time" content="25-02-2014" />
+
             <meta property="article:section" content="curso c" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="curso c" />
@@ -312,46 +313,45 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<pre class="literal-block">
-#include &lt;stdio.h&gt;
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-//  ==========                 ==========
-//  ========== www.eXcript.com ==========
-//  ==========                 ==========
+<span class="c1">//  ==========                 ==========</span>
+<span class="c1">//  ========== www.eXcript.com ==========</span>
+<span class="c1">//  ==========                 ==========</span>
 
-int main()
-{
-//    printf(&quot;%tipo_de_saida&quot;, valor_a_ser_impresso);
-//    printf(&quot;%tipo1 %tipo2&quot;, var1, var2);
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="c1">//    printf(&quot;%tipo_de_saida&quot;, valor_a_ser_impresso);</span>
+<span class="c1">//    printf(&quot;%tipo1 %tipo2&quot;, var1, var2);</span>
 
-//    int num = 1111;
-//    printf( &quot;%i\n&quot;, num );
+<span class="c1">//    int num = 1111;</span>
+<span class="c1">//    printf( &quot;%i\n&quot;, num );</span>
 
-//    float f = 2.2;
-//    printf( &quot;%f&quot;, f );
+<span class="c1">//    float f = 2.2;</span>
+<span class="c1">//    printf( &quot;%f&quot;, f );</span>
 
-    //integer %i OU %d
-    //float / double %f
-    //char %c
-    //string %s
+    <span class="c1">//integer %i OU %d</span>
+    <span class="c1">//float / double %f</span>
+    <span class="c1">//char %c</span>
+    <span class="c1">//string %s</span>
 
-    //%u módulo de um número
-    //%p endereço de memória
-    //%e OU %E para imprimir número com notação científica
-    //%% para imprimir somente UM sinal de porcentagem
+    <span class="c1">//%u módulo de um número</span>
+    <span class="c1">//%p endereço de memória</span>
+    <span class="c1">//%e OU %E para imprimir número com notação científica</span>
+    <span class="c1">//%% para imprimir somente UM sinal de porcentagem</span>
 
-    int x = 10;
-    printf( &quot;%i\n&quot;, x );
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot;%i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="p">);</span>
 
-    float ff = 4.12;
-    printf(&quot;%f\n&quot;, ff);
+    <span class="kt">float</span> <span class="n">ff</span> <span class="o">=</span> <span class="mf">4.12</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ff</span><span class="p">);</span>
 
-    printf( &quot; %i - %f \n&quot;, x, ff );
+    <span class="n">printf</span><span class="p">(</span> <span class="s">&quot; %i - %f </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">ff</span> <span class="p">);</span>
 
 
-    return 0;
-}
-</pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 
 				</div>

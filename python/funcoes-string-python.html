@@ -27,6 +27,7 @@
         <meta property="og:description" content="Nesta aula estudaremos as funções definidas na classe String do Python e aprenderemos como podemos utilizar essa funões, para realizar uma série de alterações e assim, obter uma nova String que contenha a alteração solicitada."/>
 
         <meta property="article:published_time" content="16-07-2015" />
+
             <meta property="article:section" content="curso de python" />
             <meta property="article:tag" content="curso" />
             <meta property="article:tag" content="python" />
@@ -384,49 +385,45 @@ eXcript            </a>
 <div class="section" id="quantidade-de-caracteres">
 <h2>QUANTIDADE DE CARACTERES</h2>
 <p>A função built-in <tt class="docutils literal">len()</tt> pode ser utilizada para retornar a quantidade de caracteres utilizados numa determinada estrutura.</p>
-<pre class="literal-block">
-&gt;&gt;&gt; s = &quot;Lista de Caracteres&quot;
-&gt;&gt;&gt; len(s)
-19
-</pre>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Lista de Caracteres&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="mi">19</span>
+</pre></div>
 </div>
 <div class="section" id="alteracao-de-string">
 <h2>ALTERAÇÃO DE <tt class="docutils literal">string</tt></h2>
 <p>Como estudado, não é possível alterarmos uma <tt class="docutils literal">string</tt>. Assim, se tentarmos atribuir um novo caractere para determinada posição, será retornado um erro, como pode ser visto no código a seguir.</p>
-<pre class="literal-block">
-&gt;&gt;&gt; s = &quot;Lista de Caracteres&quot;
-&gt;&gt;&gt; s[4]
-'a'
-&gt;&gt;&gt; s[7]
-'e'
-&gt;&gt;&gt; s[5] = &quot;x&quot;
-Traceback (most recent call last):
-  File &quot;&lt;pyshell#121&gt;&quot;, line 1, in &lt;module&gt;
-    s[5] = &quot;x&quot;
-TypeError: 'str' object does not support item assignment
-</pre>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Lista de Caracteres&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="s1">&#39;a&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+<span class="s1">&#39;e&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;x&quot;</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;pyshell#121&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;x&quot;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
+</pre></div>
 <p>Inicialmente, utilizamos a notação para que fosse retornado o caractere de índice igual a 4 e 7. Em seguida, tentamos alterar o caractere de índice igual a 5 e uma excessão foi gerada.</p>
 </div>
 <div class="section" id="funcao-split">
 <h2>FUNÇÃO <tt class="docutils literal">split()</tt></h2>
 <p>A função <tt class="docutils literal">split()</tt> divide um texto todas as vezes que a String passada como argumento for localizada. No código a seguir, definimos uma frase e sem seguida, invocamos a função <tt class="docutils literal">split()</tt>, definindo como argumento, uma String que contém um único espaço em branco.</p>
-<pre class="literal-block">
-&gt;&gt;&gt; s = &quot;Toda string em Python é imutável&quot;
-&gt;&gt;&gt; s.split(&quot; &quot;)
-['Toda', 'string', 'em', 'Python', 'é', 'imutável']
-</pre>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Toda string em Python é imutável&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;Toda&#39;</span><span class="p">,</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;em&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;é&#39;</span><span class="p">,</span> <span class="s1">&#39;imutável&#39;</span><span class="p">]</span>
+</pre></div>
 <p>Como podemos ver, uma lista foi retornada e está contém as palavras como sendo elementos. Se observarmos a String original, veremos que as quebras foram feitas a cada espaço em branco existente.</p>
 </div>
 <div class="section" id="funcao-replace">
 <h2>FUNÇÃO <tt class="docutils literal">replace()</tt></h2>
 <p>A função <tt class="docutils literal">replace()</tt> substitui uma parte do texto por uma outra String. A palavra <tt class="docutils literal">replace()</tt>, do Inglês, siginifca <tt class="docutils literal">substituir</tt> e é isso que a função <tt class="docutils literal">replace()</tt> da classe String do Python faz.</p>
 <p>No código a seguir, iremos definir uma String e em seguida, substituiremos uma parte do texto por outra.</p>
-<pre class="literal-block">
-&gt;&gt;&gt; s = &quot;A função replace aa substitui parte de um texto por outro texto&quot;
-&gt;&gt;&gt; s.replace(&quot;aa&quot;, &quot;123&quot;)
-'A função replace 123 substitui parte de um texto por outro texto'
-&gt;&gt;&gt;
-</pre>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;A função replace aa substitui parte de um texto por outro texto&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;aa&quot;</span><span class="p">,</span> <span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="s1">&#39;A função replace 123 substitui parte de um texto por outro texto&#39;</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
 <p>No código acima, definimos uma String e dentro desta, colocamos uma marcação <tt class="docutils literal">aa</tt>, somente para facilitar o estudo. Em seguida, invocamos a funçao <tt class="docutils literal">replace()</tt>, e dissemos, que queríamos alterar a string <tt class="docutils literal">aa</tt> pelo texto, &quot;123&quot;. Feito isso, uma nova String foi retornada, com a alteração feita.</p>
 <p>Novamente, é importar lembrar, que foi retornado uma nova String, até porque, a String utilizada não pode ser alterada.</p>
 </div>
