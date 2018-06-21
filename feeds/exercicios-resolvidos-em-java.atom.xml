@@ -32,16 +32,16 @@
 &lt;div class="section" id="exercicio"&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Escreva um pequeno software que peça a sua idade e a idade da sua mãe. Em seguida, imprima na tela as 3 informações a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;sua&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt;
-&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="n"&gt;da&lt;/span&gt; &lt;span class="n"&gt;sua&lt;/span&gt; &lt;span class="n"&gt;mãe&lt;/span&gt;
-&lt;span class="n"&gt;minha&lt;/span&gt; &lt;span class="n"&gt;mãe&lt;/span&gt; &lt;span class="n"&gt;é&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;anos&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;mais&lt;/span&gt; &lt;span class="n"&gt;velha&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="n"&gt;eu&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;sua&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="n"&gt;da&lt;/span&gt; &lt;span class="n"&gt;sua&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;ã&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;
+&lt;span class="n"&gt;minha&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="err"&gt;ã&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="err"&gt;é&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;anos&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;mais&lt;/span&gt; &lt;span class="n"&gt;velha&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;que&lt;/span&gt; &lt;span class="n"&gt;eu&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Nota(s):
 substitua o texto &amp;lt;anos&amp;gt; pela diferença entre a sua idade e a de sua mãe.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
 &lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
@@ -52,7 +52,7 @@ substitua o texto &amp;lt;anos&amp;gt; pela diferença entre a sua idade e a de 
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0100&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="c1"&gt;//Diferença de idade&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
         &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
@@ -108,7 +108,7 @@ substitua o texto &amp;lt;anos&amp;gt; pela diferença entre a sua idade e a de 
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
 &lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
@@ -120,7 +120,7 @@ substitua o texto &amp;lt;anos&amp;gt; pela diferença entre a sua idade e a de 
 
 
     &lt;span class="c1"&gt;//Login e senha&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="c1"&gt;// 1) Informe o seu login&lt;/span&gt;
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;login&amp;gt; &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
@@ -178,10 +178,10 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;p&gt;Reescreva o código a seguir a fim de se utilizar o mínimo de linha possíveis:
 Nota(s):
 Amontoar linhas não soluciona o problema. O código a seguir não é simplificação e sim, confusão:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Escreva de forma tal a utilizar somente 4 linhas&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
 &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Simplificando expressões para reduzir o número de linhas&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
      &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -195,7 +195,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
@@ -207,7 +207,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0110&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="c1"&gt;//Simplificação&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;//Scanner in = new Scanner(System.in);&lt;/span&gt;
 
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Simplificando expressões para reduzir o número de linhas&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
@@ -240,7 +240,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
 &lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
 &lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
@@ -269,7 +269,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
 &lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
 &lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
@@ -279,7 +279,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J1002&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="c1"&gt;//Soma de 1 à 100&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
@@ -319,7 +319,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa (utilizando recursividade) que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.&lt;/p&gt;
 &lt;p&gt;Exemplos:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -337,13 +337,13 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa (utilizando recursividade) que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.&lt;/p&gt;
 &lt;p&gt;Exemplos:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;span class="mi"&gt;2090&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
@@ -365,7 +365,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 
     &lt;span class="c1"&gt;// (Recursividade)&lt;/span&gt;
     &lt;span class="c1"&gt;// Soma de todos os algarismos&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;).&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
@@ -394,7 +394,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.&lt;/p&gt;
 &lt;p&gt;Exemplos:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;span class="mi"&gt;2090&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;9 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
@@ -413,13 +413,13 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.&lt;/p&gt;
 &lt;p&gt;Exemplos:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;span class="mi"&gt;2090&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
@@ -431,7 +431,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J1004&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="c1"&gt;//Soma de todos os algarismos&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Informe um número: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;).&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -492,7 +492,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
@@ -504,7 +504,7 @@ Amontoar linhas não soluciona o problema. O código a seguir não é simplifica
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J1003&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="c1"&gt;//Soma de todos os números de um intervalo&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;//Criamos uma nova instancia da classe Scanner&lt;/span&gt;
         &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="c1"&gt;//Imprimimos a frase pedindo o inicio do intervalo&lt;/span&gt;
@@ -597,7 +597,7 @@ Exemplo:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
@@ -609,7 +609,7 @@ Exemplo:&lt;/p&gt;
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0111&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="c1"&gt;//Tabuada ao avesso&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
         &lt;span class="c1"&gt;//Pedimos para o usuário informar a tabuada&lt;/span&gt;
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite a tabuada que você deseja: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
@@ -652,7 +652,7 @@ Exemplo:&lt;/p&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa (utilizando recursividade) que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.
 Exemplos:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -670,13 +670,13 @@ Exemplos:&lt;/p&gt;
 &lt;h2&gt;EXERCÍCIO&lt;/h2&gt;
 &lt;p&gt;Faça um programa (utilizando recursividade) que peça para o usuário digitar um número, em seguida, faça a soma de todos os algarismos do número.
 Exemplos:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mi"&gt;1111&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;span class="mi"&gt;2090&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
@@ -696,7 +696,7 @@ Exemplos:&lt;/p&gt;
 
     &lt;span class="c1"&gt;// (Recursividade)&lt;/span&gt;
     &lt;span class="c1"&gt;// Soma de todos os algarismos&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Digite um número: &amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
         &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;).&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
@@ -749,17 +749,17 @@ Exemplos:&lt;/p&gt;
 &lt;p&gt;O usuário &lt;strong&gt;João Moacir Barth Junior&lt;/strong&gt; fez uma correção e um adendo a implementação que fizemos nesta aula. A seguir, há uma explicação do problema por ele observado.&lt;/p&gt;
 &lt;p&gt;O código a seguir executa sem quaisquer erro. Porém, é importante observar a forma como iremos ler números inteiros.&lt;/p&gt;
 &lt;p&gt;Na resolução do exercício lemos um número inteiro utilizando a seguinte linha de código:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O código acima funciona e o número digitado no Console pelo usuário é passado para a variável inteira &lt;code&gt;idade&lt;/code&gt;. Porém, &lt;a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#nextLine()"&gt;a instrução nextInt() lê um ou N valores inteiros&lt;/a&gt;, desde que estes estejam separados por espaço. Isso significa que após lermos um número com a função &lt;code&gt;nextInt()&lt;/code&gt; o Cursor continuara na mesma linha e será nossa tarefa posicionar o mesmo na linha abaixo, caso queiramos que ler outros valores pelo Console que o nosso usuário venha a digitar.&lt;/p&gt;
 &lt;p&gt;Pra isso, é necessário invocar a função &lt;code&gt;nextLine()&lt;/code&gt;, do contrário, será levantado uma exceção. A seguir temos o código que deverá ser utilizado para ler números inteiros e em seguida, posicionar o Cursor na linha seguinte.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextInt&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
 &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;nextLine&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.Scanner&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
 &lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
@@ -770,7 +770,7 @@ Exemplos:&lt;/p&gt;
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0011&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="c1"&gt;//Lendo e imprimindo textos e números&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="n"&gt;Scanner&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Scanner&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;in&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="c1"&gt;// 1) pedir pro usuário informar:&lt;/span&gt;
             &lt;span class="c1"&gt;//1) Nome&lt;/span&gt;
@@ -838,7 +838,7 @@ Link para a &lt;a class="reference external" href="http://docs.oracle.com/javase
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
 &lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
 &lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
@@ -848,7 +848,7 @@ Link para a &lt;a class="reference external" href="http://docs.oracle.com/javase
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0001&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="c1"&gt;//Imprimindo textos&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;// 1) imprimir o texto &amp;quot;Ola mundo&amp;quot;&lt;/span&gt;
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Ola mundo&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
@@ -900,7 +900,7 @@ Link para a &lt;a class="reference external" href="http://docs.oracle.com/javase
 &lt;p&gt;Agora, vamos resolver o exercício que pede: Faça um programa que imprima a frase: &amp;quot;Seja bem-vindo ao meu programa!&amp;quot;&lt;/p&gt;
 &lt;p&gt;Em seguida, imprima uma linha em branco e na na sequência, imprima as frases e o resultado da expressões matemáticas.&lt;/p&gt;
 &lt;p&gt;Cada frase e seu resultado devem estar na mesma linha.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;O produto de 8 por 90 é igual a:&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="s"&gt;&amp;quot;O produto de 8 por 90 é igual a:&amp;quot;&lt;/span&gt;
 &lt;span class="s"&gt;&amp;quot;O quociente de 90 por 30 é igual a:&amp;quot;&lt;/span&gt;
 &lt;span class="s"&gt;&amp;quot;O quadrado de 9 é:&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -909,7 +909,7 @@ Em cada expressão matemática, você deve imprimir o resultado de uma expressã
 &lt;/div&gt;
 &lt;div class="section" id="exercicio-resolvido"&gt;
 &lt;h2&gt;EXERCÍCIO RESOLVIDO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
 &lt;span class="cm"&gt; * ====================================&lt;/span&gt;
 &lt;span class="cm"&gt; *           eXcript.com&lt;/span&gt;
 &lt;span class="cm"&gt; *          fb.com/eXcript&lt;/span&gt;
@@ -919,7 +919,7 @@ Em cada expressão matemática, você deve imprimir o resultado de uma expressã
 &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;J0010&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="c1"&gt;//Imprimindo textos e números&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
 &lt;span class="c1"&gt;//        1) imprimir a frase: &amp;quot;Seja bem-vindo ao meu programa.&amp;quot;&lt;/span&gt;
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Seja bem-vindo ao meu programa.&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;

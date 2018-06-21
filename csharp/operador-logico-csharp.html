@@ -343,7 +343,7 @@ eXcript            </a>
 <h2>O CONECTIVO DE CONJUNÇÃO <tt class="docutils literal">E</tt></h2>
 <p>O <strong>Conectivo Lógico de Conjunção</strong> <tt class="docutils literal">||</tt> une a expressão a sua esquerda com a expressão a sua direita. Expressões com o uso do <strong>Conectivo de Conjunção</strong> dão origem a frases em Português, mais ou menos assim: <strong>X</strong> é verdadeiro e <strong>Y</strong> é verdadeiro?</p>
 <p>Nas situações em que <strong>A</strong> for verdadeiro e <strong>B</strong> também, o resultado, segundo a tabela lógica, será também verdadeiro.</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span> <span class="p">);</span>
 </pre></div>
 <p>No exemplo acima, temos uma <tt class="docutils literal">expressão lógica composta</tt> constituida por 2 expressões lógicas simples e ligadas pelo <tt class="docutils literal">conectivo de conjunção</tt>.</p>
@@ -353,7 +353,7 @@ Conectivo lógico de conjunção: <strong>&amp;&amp;</strong></p>
 <p>Para analisarmos uma <tt class="docutils literal">expressão lógica composta</tt>, precisamos antes, analisar suas <tt class="docutils literal">expressões lógicas simples</tt>.</p>
 <p>A primeira expressão, está perguntando se o valor da variável <tt class="docutils literal">x</tt> é maior do que zero. A variável <tt class="docutils literal">x</tt> está declarada na linha acima e inicializada com o valor 1, por isso, a primeira expressão é verdadeira.</p>
 <p>A segunda expressão, pergunta se o valor da variável <tt class="docutils literal">x</tt> é menor do que 100. O valor da variável <tt class="docutils literal">x</tt> é igual a 1 e por isso é menor do que 100. Analisado ambas expressões,acabamos por ter uma nova expressão, como pode ser visto abaixo.</p>
-<div class="highlight"><pre><span></span><span class="p">(</span><span class="n">True</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span>
+<div class="highlight"><pre><span class="p">(</span><span class="n">True</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span>
 </pre></div>
 <p>No código acima, temos a mesma expressão do exemplo anterior, porém, substituirmos as duas <strong>expressões lógicas simples</strong> pelos seus respectivos <strong>valores lógicos</strong>, isto é, o valor decorrente da <strong>análise lógica</strong>.</p>
 <p>A expressão <tt class="docutils literal">(True) &amp;&amp; (True)</tt> se comparada com a <strong>Tabela Lógica de Valores</strong>, tem-se que o valor decorrente dessa segunda análise, constituida por 2 valores lógicos ligados pelo <strong>conectivo de ligação E</strong>, será o <strong>valor lógico</strong> <tt class="docutils literal">True</tt>.</p>
@@ -362,14 +362,14 @@ Conectivo lógico de conjunção: <strong>&amp;&amp;</strong></p>
 <h2>CONECTIVO ( OU )</h2>
 <p>O <strong>conectivo lógico de disjunção</strong> <strong>OU</strong> liga a expressão a sua esquerda a expressão a sua direita. Expressões com o uso do <strong>conectivo de disjunção</strong> dão origem a frases em Português, mais ou menos assim: <strong>X</strong> é verdadeiro ou <strong>Y</strong> é verdadeiro?</p>
 <p>O <strong>operador lógico OU</strong> sempre precisará que uma das 2 <strong>expressões simples</strong> avaliadas sejam verdadeiras para que avaliação seja verdadeira. No caso onde ambas <strong>expressões simples</strong> forem verdadeiras, o resultado também será verdadeiro, porém, se ambas expressões forem falsas, o resultado lógico será falso.</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
 <span class="p">(</span><span class="n">x</span> <span class="p">&gt;</span> <span class="m">10</span><span class="p">)</span> <span class="p">||</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;</span> <span class="m">100</span><span class="p">)</span>
 </pre></div>
 <p>A <strong>expressão lógica composta</strong> que temos no código acima, será desmembrada como estudado anteriormente, e agora, para que a avaliação seja verdadeira, uma das 2 expressões precisam ser verdadeiras.</p>
 <p>A primeira expressão verifica se <tt class="docutils literal">(x &gt; 10)</tt>. A variável``x`` está declarada na linha acima e inicializada com o valor igual a 1, logo, essa expressão é falsa, até porque, o valor de <tt class="docutils literal">x</tt> <strong>não é maior</strong> do que 10.</p>
 <p>A segunda expressão <tt class="docutils literal">(x &lt; 100)</tt> está perguntando se o valor da variável <tt class="docutils literal">x</tt> <strong>é menor</strong> do que o número 100. Essa expressão é verdadeira, até porque, o número 1 <strong>é menor</strong> do que o número 100.</p>
 <p>No código a seguir, temos a expressão que será originadas a partir do código anterior.</p>
-<div class="highlight"><pre><span></span><span class="p">(</span><span class="n">False</span><span class="p">)</span> <span class="p">||</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span>
+<div class="highlight"><pre><span class="p">(</span><span class="n">False</span><span class="p">)</span> <span class="p">||</span> <span class="p">(</span><span class="n">True</span><span class="p">)</span>
 </pre></div>
 <p>Agora, temos que o primeiro <strong>valor lógico</strong> é falso, enquanto o segundo é verdadeiro. Esses valores estão ligados pelo <strong>conectivo de disjunção</strong> utilizado para avaliar se uma das expressões é verdadeira. Como o segundo valor lógico é verdadeiro, o valor decorrente dessa <strong>análise lógica</strong> será verdadeiro.</p>
 </div>
@@ -377,7 +377,7 @@ Conectivo lógico de conjunção: <strong>&amp;&amp;</strong></p>
 <h2>EXPRESSÕES SIMPLES E COMPOSTAS</h2>
 <p>Os <strong>operadores relacionais</strong> obtém a relação entre os operandos e por isso, podemos chamar esse tipo de expressão como sendo, <strong>expressões simples</strong>.</p>
 <p>As <strong>expressões compostas</strong>, por sua vez, são a união de 2 ou mais expressões simples e ligadas por um <strong>conectivo lógico</strong>. A seguir, temos um exemplo utilizando o <strong>conectivo lógico de conjunção</strong> unindo assim, 2 expressões e dando origem a uma nova <strong>expressão lógica</strong>.</p>
-<div class="highlight"><pre><span></span><span class="c1">//  EXEMPLO</span>
+<div class="highlight"><pre><span class="c1">//  EXEMPLO</span>
 <span class="p">(</span><span class="n">isso</span><span class="p">)</span> <span class="n">E</span> <span class="p">(</span><span class="n">isso</span><span class="p">)</span>
 
 <span class="c1">// A EXPRESSAO ACIMA ORIGINOU:</span>
@@ -390,7 +390,7 @@ Conectivo lógico de conjunção: <strong>&amp;&amp;</strong></p>
 <h2>CONSTRUINDO EXPRESSÕES</h2>
 <p>A linguagem C# possui algumas regras sintáticas para uso dos <strong>Conectivos Lógicos</strong>.
 Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com parêntesis, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="p">&gt;=</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">num</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">)</span>
 <span class="p">{</span>
 
@@ -398,14 +398,14 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
 </pre></div>
 <p>No código acima, no cabeçalho da tomada de decisão, definimos 2 expressões. A primeira <tt class="docutils literal">num &gt;= 0</tt> e a segunda <tt class="docutils literal">num &lt;= 10</tt>. Devido ao fato que ambas expressões foram ligadas com um <strong>Conectivo Lógico</strong>, foi necessário envolver a expressão originada com parêntesis.</p>
 <p>Da mesma forma, não é permitido isolar cada expressão sem não envolver ambas com parêntesis. O código a seguir não compila, até porque, as expressões que estão sendo ligadas pelo operador <tt class="docutils literal">&amp;&amp;</tt> não estão agrupadas com parêntesis.</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">num</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">)</span>
 <span class="p">{</span>
 
 <span class="p">}</span>
 </pre></div>
 <p>O código a seguir, corrige o problema do código acima, isolando cada expressão com parêntesis e delimitando a expressão resultante também.</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">num</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">)</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">num</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">)</span> <span class="p">)</span>
 <span class="p">{</span>
 
@@ -414,7 +414,7 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>

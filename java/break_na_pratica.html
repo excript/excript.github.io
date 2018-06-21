@@ -353,7 +353,7 @@ eXcript            </a>
 <div class="section" id="instrucao-break-na-pratica">
 <h2>INSTRUÇÃO BREAK NA PRÁTICA</h2>
 <p>Um laços pode ser interrompido a qualquer momento, como estudamos na aula anterior. Porém, há diversas formas em que podemos trabalhar com a instrução <cite>break</cite>, instrução responsável pela interrupção de uma execução. Nessa aula, o nosso objetivo será investigar com exemplos as diferentes maneiras de utilização da instrução &quot;break&quot; dentro das estruturas de repetição.</p>
-<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[])</span> <span class="n">args</span><span class="o">{</span>
+<div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[])</span> <span class="n">args</span><span class="o">{</span>
   <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">!=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
     <span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">==</span><span class="mi">5</span><span class="o">)</span>
       <span class="k">break</span><span class="o">;</span>
@@ -364,7 +364,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0038</span> <span class="o">{</span>
+<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0038</span> <span class="o">{</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
@@ -381,10 +381,10 @@ eXcript            </a>
                     <span class="s">&quot;O valor de i=&quot;</span><span class="o">+</span><span class="n">a</span><span class="o">+</span><span class="s">&quot; o valor de J é: &quot;</span><span class="o">+</span><span class="n">b</span><span class="o">);</span>
         <span class="o">}</span>
 
-<span class="nl">        labelForI:</span>
+        <span class="nl">labelForI:</span>
         <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
 
-<span class="nl">            labelForJ:</span>
+            <span class="nl">labelForJ:</span>
             <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
                 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;O valor de i=&quot;</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="s">&quot; o valor de J é: &quot;</span><span class="o">+</span><span class="n">j</span><span class="o">);</span>
                 <span class="k">if</span><span class="o">(</span><span class="n">j</span><span class="o">==</span><span class="mi">6</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
@@ -392,7 +392,7 @@ eXcript            </a>
             <span class="o">}</span>
 
             <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-            <span class="n">labelWhile</span><span class="o">:</span>
+            <span class="nl">labelWhile:</span>
             <span class="k">while</span><span class="o">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">10</span><span class="o">){</span>
                 <span class="n">x</span><span class="o">++;</span>
                 <span class="k">break</span><span class="o">;</span>

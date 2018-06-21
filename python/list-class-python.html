@@ -155,9 +155,6 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" >Primeira Aula de Python</a></td>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" >Como Instalar o Python no Windows</a></td>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" ></a></td>
-                        </tr><tr>
                             <td><a href="http://excript.com/python/caracteristica-python.html" >Características do Python</a></td>
                             <td><a href="http://excript.com/python/caracteristica-python.html" ></a></td>
                         </tr><tr>
@@ -385,7 +382,7 @@ eXcript            </a>
 <div class="section" id="a-notacao-de-lista">
 <h2>A NOTAÇÃO DE LISTA</h2>
 <p>Todos elementos que estiverem delimitados por um par de colchetes é para o Python uma lista, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
@@ -397,11 +394,11 @@ eXcript            </a>
 <div class="section" id="a-declaracao-explicita">
 <h2>A DECLARAÇÃO EXPLICITA</h2>
 <p>Uma lista pode ser declarada explicitamente, bastando somente, a passagem de argumentos, na inicialização do objeto <tt class="docutils literal">list</tt>. Cada argumento será interpretado como sendo um elemento único e então, será adicionado à estrutura <tt class="docutils literal">list</tt>.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span> <span class="c1">#declaração explicita</span>
+<span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span> <span class="c">#declaração explicita</span>
 
-<span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1">#declaração explicita com mesmo resultado do que o código anterior</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c">#declaração explicita com mesmo resultado do que o código anterior</span>
 </pre></div>
 <p>No código acima, inicialmente, declaramos uma lista que contém 0 elementos e vinculamos a referência <tt class="docutils literal">l</tt> a instância criada.</p>
 <p>Em seguida, estamos declarando uma lista e para isso, utilizamos a classe <tt class="docutils literal">list</tt> e enviando como parâmetro os elementos que devem pertencer a estrutura.</p>
@@ -411,9 +408,9 @@ eXcript            </a>
 <p>Todo elemento contido numa lista é também um objeto. Como estudado, no Python, tudo são objetos. Logo, a lista é um objeto propriamente dito, da mesma forma que, cada elemento contido no objeto Lista, é também um objeto.</p>
 <p>Podemos concluir facilmente, que se tudo são objetos em Python, e todo elemento contido numa lista é também um objeto, temos, que numa lista, podemos trabalhar com elementos cuja definição sejam as mais variadas, isto é, a classe utilizada para a criação do objeto é indiferente, este após criado, pode ser adicionado a qualquer lista.</p>
 <p>No código a seguir, definiremos uma Lista que contém um conjunto de objetos Strings. Observe, que um objeto String é também uma lista, no caso, de caracteres!</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">textos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;valor1&#39;</span><span class="p">,</span> <span class="s1">&#39;textoX&#39;</span><span class="p">,</span> <span class="s1">&#39;str2&#39;</span><span class="p">,</span> <span class="s1">&#39;Digite um texto: &#39;</span><span class="p">]</span>
+<span class="n">textos</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;valor1&#39;</span><span class="p">,</span> <span class="s">&#39;textoX&#39;</span><span class="p">,</span> <span class="s">&#39;str2&#39;</span><span class="p">,</span> <span class="s">&#39;Digite um texto: &#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <div class="section" id="identificacao-dos-elementos">
@@ -426,17 +423,17 @@ eXcript            </a>
 <p>O acesso aos elementos contidos numa lista pode ser feito pelo uso da referência seguida por um par de colchetes e neste, o índice do elemento a ser acessado, por exemplo:</p>
 <p>referência[ &lt;índice&gt; ]</p>
 <p>No código a seguir, vamos definir uma lista, atribui-la a uma referência e então, acessar alguns elementos.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">letras</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]</span>
-<span class="n">letras</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#acessa elemento cujo texto é igual a &quot;a&quot;</span>
-<span class="n">letras</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1">#acessa elemento cujo texto é igual a &quot;c&quot;</span>
+<span class="n">letras</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="s">&#39;d&#39;</span><span class="p">,</span> <span class="s">&#39;e&#39;</span><span class="p">]</span>
+<span class="n">letras</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c">#acessa elemento cujo texto é igual a &quot;a&quot;</span>
+<span class="n">letras</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c">#acessa elemento cujo texto é igual a &quot;c&quot;</span>
 
-<span class="n">letras</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#acessa elemento cujo texto é igual a &quot;e&quot;</span>
+<span class="n">letras</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c">#acessa elemento cujo texto é igual a &quot;e&quot;</span>
 </pre></div>
 <p>No código acima, utilizamos a notação de acesso aos elementos contidos numa lista e assim, obtivemos como resultado do acesso, o retorno de um objeto tipo String contendo a correspondente letra.</p>
 <p>Podemos por exemplo, manipular vários elementos numa única expressão.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">letras</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">letras</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
@@ -444,16 +441,16 @@ eXcript            </a>
 <div class="section" id="listas-e-string">
 <h2>LISTAS E STRING</h2>
 <p>Toda String é por sua definição mais primitiva, uma lista de caracteres. Em Python, podemos inicializar uma lista e como parâmetro, enviar os caracteres que desejamos manipular individualmente como também, definir uma lista onde o conjunto de caracteres formam um único elemento. Por isso, a forma como declaramos cadeias de caracteres em Python, irá definir como esta cadeia será manipulada.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s2">&quot;eXcript&quot;</span><span class="p">)</span>
+<span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s">&quot;eXcript&quot;</span><span class="p">)</span>
 </pre></div>
 <p>Acima, temos que o primeiro elemento da lista é o caractere &quot;e&quot;, o segundo elemento, o caractere &quot;X&quot;, o terceiro elemento, o caractere &quot;c&quot; e assim sucessivamente.</p>
 <p>A VM do Python definiu que cada caractere da String que enviamos como parâmetro na inicialização da lista era um elemento único e por conseguinte, deveria ter acesso individual bastando somente, definir o índice correspondente.</p>
 <p>Se desejarmos inicializar uma lista e a esta atribuirmos um único elemento do tipo String, temos que proceder da seguinte maneira:</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">nova_lista</span> <span class="o">=</span> <span class="n">lista</span><span class="p">((</span><span class="s2">&quot;eXcript&quot;</span><span class="p">))</span>
+<span class="n">nova_lista</span> <span class="o">=</span> <span class="n">lista</span><span class="p">((</span><span class="s">&quot;eXcript&quot;</span><span class="p">))</span>
 </pre></div>
 <p>Logo, nós teremos uma lista que contém um único elemento do tipo String e estará armazenando a palavra eXcript.</p>
 </div>
@@ -461,9 +458,9 @@ eXcript            </a>
 <h2>O TIPO DOS ELEMENTOS</h2>
 <p>Estudamos listas contém só e somente só objetos, dessa forma, cada objeto pode ter sido criado através de uma classe diferente e assim, conter informações das mais diversas.</p>
 <p>No código abaixo, estamos declarando uma variável e adicionando a esta uma lista que contém elementos de vários tipos.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">lista_mista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Testando o Python&quot;</span><span class="p">]</span>
+<span class="n">lista_mista</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;d&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="s">&quot;Testando o Python&quot;</span><span class="p">]</span>
 </pre></div>
 <p>No código acima, definimos inicialmente, uma variável de nome <tt class="docutils literal">lista_mista</tt> e atribuimos a mesma uma lista contendo 7 elementos de tipos diferentes. O primeiro elemento é um caractere, o segundo é um valor lógico, o terceiro é um número e assim por diante.</p>
 <p>Por fim concluimos que listas em Python não definem o tipo de seus elementos, como ocorre com os Array em linguagem como Java, C e C++.

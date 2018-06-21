@@ -153,16 +153,16 @@ eXcript            </a>
 <h2>EXEMPLOS REAIS</h2>
 <p>Vamos estudar as mudanças analisando o que ocorrerá ao tentarmos executar um código antigo que não tenha ainda se adequado ou então, caso não trabalharmos seguindo as novas regras:</p>
 <p>O exemplo a seguir mostra um código legado não adaptado.</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fun</span><span class="p">():</span>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">fun</span><span class="p">():</span>
 
     <span class="n">var</span> <span class="o">=</span> <span class="mi">10</span>
     <span class="k">global</span> <span class="n">var</span>
 </pre></div>
 <p>O código acima, se executado, produzirá a seguinte exceção:</p>
-<div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;main.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">5</span>
+<div class="highlight"><pre>  <span class="n">File</span> <span class="s">&quot;main.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">5</span>
     <span class="k">global</span> <span class="n">var</span>
 
-<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;var&#39;</span> <span class="ow">is</span> <span class="n">assigned</span> <span class="n">to</span> <span class="n">before</span> <span class="k">global</span> <span class="n">declaration</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">name</span> <span class="s">&#39;var&#39;</span> <span class="ow">is</span> <span class="n">assigned</span> <span class="n">to</span> <span class="n">before</span> <span class="k">global</span> <span class="n">declaration</span>
 </pre></div>
 <p>É interessante observar que a exceção será levantada no momento da execução do código --- o que é muito bom! O Python geralmente levanta a exceção quando o Cursor de Execução executa uma expressão problemática. Ainda que nada tenha sido dito, muito provavelmente a execução da aplicação será interrompida ainda no seu lançamento para que os desenvolvedores consigam facilmente identificar e não corram o risco de liberar códigos que não estejam adaptados.</p>
 <p>Por essa razão é que muito provavelmente fora dado um tratamento diferencial --- para que possamos, ainda nos testes, identificar e corrigir. Sem dúvida que o quanto antes o código se mostrar problemático, melhor será nossas vidas como desenvolvedores! Essa é, na minha opinião, a melhor solução --- do contrário, teríamos pacotes e scripts quebrando em todos os lugares.</p>

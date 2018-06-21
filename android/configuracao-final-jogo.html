@@ -209,9 +209,9 @@ eXcript            </a>
         </table>
     </div>
 <p>Acrescentar nop arquivo <tt class="docutils literal">color.xml</tt></p>
-<div class="highlight"><pre><span></span><span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;black&quot;</span><span class="nt">&gt;</span>#0000<span class="nt">&lt;/color&gt;</span>
+<div class="highlight"><pre><span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">&quot;black&quot;</span><span class="nt">&gt;</span>#0000<span class="nt">&lt;/color&gt;</span>
 </pre></div>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
+<div class="highlight"><pre><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">example</span><span class="o">.</span><span class="na">jogo</span><span class="o">;</span>
 
 
 <span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
@@ -248,12 +248,12 @@ eXcript            </a>
 
 
     <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="n">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
         <span class="n">setView</span><span class="o">(</span><span class="n">getLayoutInflater</span><span class="o">().</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">main</span><span class="o">,</span> <span class="kc">null</span><span class="o">));</span>
         <span class="n">setContentView</span><span class="o">(</span> <span class="n">getView</span><span class="o">());</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">clickquadrado</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">){</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">clickquadrado</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">){</span>
 
         <span class="k">if</span><span class="o">(!</span><span class="n">isFim</span><span class="o">()){</span>
 
@@ -340,7 +340,7 @@ eXcript            </a>
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getLastPlay</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">lastPlay</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setLastPlay</span><span class="o">(</span><span class="n">String</span> <span class="n">lastPlay</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setLastPlay</span><span class="o">(</span><span class="n">String</span> <span class="n">lastPlay</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">lastPlay</span> <span class="o">=</span> <span class="n">lastPlay</span><span class="o">;</span>
     <span class="o">}</span>
 

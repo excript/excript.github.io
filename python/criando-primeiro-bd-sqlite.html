@@ -204,18 +204,18 @@ eXcript            </a>
 <p>A seguir, temos as informações do nosso usuário +Renato Cruz.</p>
 <p>Para quem estiver no linux:
 O sqlite sempre trabalha dentro da home do seu usuário que estiver em execução:</p>
-<div class="highlight"><pre><span></span><span class="c1">#Cria o db dentro da pasta do usuario.</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;renato.db&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="c">#Cria o db dentro da pasta do usuario.</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;renato.db&#39;</span><span class="p">)</span>
 
-<span class="c1">#Cria o db dentro da pasta dumps usando o caminho absoluto.</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;/home/suporte/dumps/renato.db&#39;</span><span class="p">)</span>
+<span class="c">#Cria o db dentro da pasta dumps usando o caminho absoluto.</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;/home/suporte/dumps/renato.db&#39;</span><span class="p">)</span>
 
-<span class="c1">#Cria o db dentro da pasta dumps sem o caminho absoluto.</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;dumps/renato.db&#39;</span><span class="p">)</span>
+<span class="c">#Cria o db dentro da pasta dumps sem o caminho absoluto.</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;dumps/renato.db&#39;</span><span class="p">)</span>
 
-<span class="c1">#Para usar o path assim como no video:</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;MinhaPasta/&#39;</span> <span class="p">(</span><span class="n">no</span> <span class="n">meu</span> <span class="n">caso</span> <span class="o">-</span> <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;dumps/&#39;</span> <span class="p">)</span>
-<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s1">&#39;renato.db&#39;</span><span class="p">)</span>
+<span class="c">#Para usar o path assim como no video:</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s">&#39;MinhaPasta/&#39;</span> <span class="p">(</span><span class="n">no</span> <span class="n">meu</span> <span class="n">caso</span> <span class="o">-</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&#39;dumps/&#39;</span> <span class="p">)</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s">&#39;renato.db&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="links-externos">

@@ -472,9 +472,6 @@ eXcript            </a>
                         </tr><tr>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" >Funções Modificadoras em PHP</a></td>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" >Sobrescrita de Funções em PHP</a></td>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" ></a></td>
                         </tr>        </tbody>
             </table>
         
@@ -506,13 +503,13 @@ eXcript            </a>
 <p>Num comparativo performatico, temos que em algumas situações a definição com a instrução <tt class="docutils literal">const</tt> é executado mais rapidamente enquanto em outras situações, o uso da função <tt class="docutils literal">define()</tt> se mostra mais veloz.</p>
 <p>A nomenclatura de constantes é igual a nomenclatura de variáveis e o que irá diferenciar é que as constantes não são precedidas pelo caractere &quot;cifrão&quot;. Ainda que não seja obrigatório, o nome de constantes deve ser composto somente por caracteres maiúsculos. A definição de constantes com caracteres maiúsculo é um padrão que vem de outras linguagens e assim, todo programador entende que uma referência com caracteres maiúsculas trata-se de um valor constante.</p>
 <p>A definição da função <tt class="docutils literal">define()</tt> é a seguinte:</p>
-<div class="highlight"><pre><span></span><span class="x">define(&lt;identificador&gt;, &lt;valor&gt;)</span>
+<div class="highlight"><pre><span class="x">define(&lt;identificador&gt;, &lt;valor&gt;)</span>
 </pre></div>
 </div>
 <div class="section" id="verificando-se-uma-constante-existe">
 <h2>VERIFICANDO SE UMA CONSTANTE EXISTE</h2>
 <p>É comum verificarmos antes de acessarmos uma constante se a mesma está definida, para isso, temos a função <tt class="docutils literal">defined()</tt>.</p>
-<div class="highlight"><pre><span></span><span class="x">if(defined(&quot;TOTAL&quot;))</span>
+<div class="highlight"><pre><span class="x">if(defined(&quot;TOTAL&quot;))</span>
 <span class="x">    echo &quot;Constante declarada.&quot;</span>
 </pre></div>
 </div>
@@ -525,7 +522,7 @@ eXcript            </a>
 <h2>DEFININDO CONSTANTES COM A INSTRUÇÃO <tt class="docutils literal">const</tt></h2>
 <p>Uma outra forma para a declaração de constantes é através do uso da palavra reservada <tt class="docutils literal">const</tt>. É comum a utilização da instrução <tt class="docutils literal">const</tt> na definição de classe ou então, dentro de um namespace. Porém, isso é somente uma convenção, logo, pode-se utilizar a instrução <tt class="docutils literal">const</tt> para definir constantes onde bem entendermos.</p>
 <p>A seguir estamos fazendo uso da instrução <tt class="docutils literal">const</tt> para declararmos uma constante.</p>
-<div class="highlight"><pre><span></span><span class="x">const VALOR = 100;</span>
+<div class="highlight"><pre><span class="x">const VALOR = 100;</span>
 </pre></div>
 </div>
 <div class="section" id="manipulando-variaveis-por-referencia">
@@ -536,7 +533,7 @@ eXcript            </a>
 <h2>CONSTANTES MÁGICAS</h2>
 <p>Chamamos de constantes mágicas a um grupo de constantes que tem por objetivo, retornar informaçõesn sobre a execução atual do código. Assim, temos que com as constantes mágicas, podemos obter por exemplo, o número da linha em que o script está executando, o nome da função, do namespace e outros valores.</p>
 <p>Esse conjunto de funções tem por objetivo principal auxiliar na construção de ferramentas de diagnóstico de erros ou então, para outras tarefas administrativas.</p>
-<div class="highlight"><pre><span></span><span class="x">echo __LINE__ . PHP_EOL; &lt;1&gt;</span>
+<div class="highlight"><pre><span class="x">echo __LINE__ . PHP_EOL; &lt;1&gt;</span>
 <span class="x">echo __FILE__ . PHP_EOL; &lt;2&gt;</span>
 <span class="x">echo __DIR__ . PHP_EOL; &lt;3&gt;</span>
 <span class="x">echo __FUNCTION . PHP_EOL; &lt;4&gt;</span>
@@ -554,7 +551,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">define(&quot;TESTE&quot;, 10);</span>
+<div class="highlight"><pre><span class="x">define(&quot;TESTE&quot;, 10);</span>
 <span class="x">echo TESTE . &quot;\n&quot;;</span>
 
 <span class="x">for($x=0; $x&lt;5; $x++)</span>

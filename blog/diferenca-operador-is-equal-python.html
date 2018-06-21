@@ -151,14 +151,14 @@ eXcript            </a>
 <div class="section" id="o-operadores-is">
 <h2>O OPERADORES <tt class="docutils literal">is</tt></h2>
 <p>O operador <tt class="docutils literal">is</tt> verifica se 2 identificadores (variáveis) apontam para um mesmo objetos. Por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
 <span class="bp">True</span>
 </pre></div>
 <p>No código acima associamos uma lista à variável <tt class="docutils literal">a</tt>. Em seguida, associamos o objeto associado a variável <tt class="docutils literal">a</tt> com a variável <tt class="docutils literal">b</tt>. Por fim utilizamos o operador <tt class="docutils literal">is</tt> para verificar se o identificar <tt class="docutils literal">a</tt> e o identificador <tt class="docutils literal">b</tt> estão associados a um mesmo objeto. Neste caso o resultado é verdadeiro, até porque, tanto a variável <tt class="docutils literal">a</tt> como a variável <tt class="docutils literal">b</tt> estão associadas ao mesmo objeto na memória.</p>
 <p>Agora, continuemos o estudo considerando o código anterior.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="ow">is</span> <span class="n">c</span>
 <span class="bp">False</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="ow">is</span> <span class="n">c</span>
@@ -173,7 +173,7 @@ eXcript            </a>
 <h2>O OPERADOR <tt class="docutils literal">==</tt></h2>
 <p>O operador <tt class="docutils literal">==</tt> irá verificar se o valor contido no membro a esquerda é igual ao valor do membro a sua direita. Para o operador <tt class="docutils literal">==</tt> é indiferente se ambos operandos estão ou não estão associados ao mesmo objeto na memória.</p>
 <p>Continuando o código escrito anteriormente, temos que:</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
 <span class="bp">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">==</span> <span class="n">c</span>
 <span class="bp">True</span>

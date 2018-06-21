@@ -159,9 +159,6 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" >Primeira Aula de Python</a></td>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" >Como Instalar o Python no Windows</a></td>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" ></a></td>
-                        </tr><tr>
                             <td><a href="http://excript.com/python/caracteristica-python.html" >Características do Python</a></td>
                             <td><a href="http://excript.com/python/caracteristica-python.html" ></a></td>
                         </tr><tr>
@@ -391,12 +388,12 @@ eXcript            </a>
 <div class="section" id="a-definicao-da-instrucao-for">
 <h2>A DEFINIÇÃO DA INSTRUÇÃO <code>for</code></h2>
 <p>A estrutura <tt class="docutils literal">for</tt> exige, inicialmente, a definição de uma variável e, em seguida, a lista que será iterada. A seguir, temos o esquema para o uso da instrução <tt class="docutils literal">for</tt>.</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">&lt;</span><span class="n">variável</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">objeto</span> <span class="n">iterável</span><span class="o">&gt;</span><span class="p">:</span>
-    <span class="n">bloco</span> <span class="n">de</span> <span class="n">instrução</span>
+<div class="highlight"><pre><span class="k">for</span> <span class="o">&lt;</span><span class="n">vari</span><span class="err">á</span><span class="n">vel</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">objeto</span> <span class="n">iter</span><span class="err">á</span><span class="n">vel</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="n">bloco</span> <span class="n">de</span> <span class="n">instru</span><span class="err">çã</span><span class="n">o</span>
 </pre></div>
 <p>A variável a ser declarada na primeira parte da estrutura, receberá, a cada ciclo, um elemento contido na lista que está sendo iterada. Ao término, todos elementos terão sido percorridos e, a cada ciclo, o elemento seguinte contido no objeto iterável terá sido passado pela variável definida inicialmente.</p>
 <p>A seguir, faremos um exemplo real e percorreremos uma lista numérica.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
@@ -408,23 +405,23 @@ eXcript            </a>
 <h2>A INSTRUÇÃO <code>else</code></h2>
 <p>A instrução <code>else</code> pode ser utilizado com a instrução <code>for</code> da mesma forma em que estudamos com a instrução <code>while</code>.</p>
 <p>Em vista de que á estrutura <code>for</code> junto com a instrução <code>else</code> possui funcionamento igual ao laço de repetição <code>while</code>, não há necessidade de explicarmos novamento. Veja a aula sobre a estrutura <code>while</code> para maiores informações.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="c1">#utilizando a instrução ELSE</span>
+<span class="c">#utilizando a instrução ELSE</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="c1"># break</span>
+    <span class="c"># break</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;else&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;else&quot;</span><span class="p">)</span>
 
 <span class="mi">1</span>
 <span class="mi">2</span>
 <span class="k">else</span>
 </pre></div>
 <p>Acima, temos que a estrutura <code>for</code> executou todos os ciclos definidos e no final, executou o bloco da instrução <code>else</code>.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="c1">#Implementação sem o uso da instrução ELSE</span>
+<span class="c">#Implementação sem o uso da instrução ELSE</span>
 <span class="n">break_executado</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -433,7 +430,7 @@ eXcript            </a>
         <span class="k">break</span>
 
 <span class="k">if</span><span class="p">(</span><span class="n">break_executado</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;else&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;else&quot;</span><span class="p">)</span>
 
 <span class="mi">1</span>
 </pre></div>
@@ -442,29 +439,29 @@ eXcript            </a>
 <div class="section" id="exemplo-1-imprimindo-todas-as-letras-de-uma-string">
 <h2>EXEMPLO 1: IMPRIMINDO TODAS AS LETRAS DE UMA STRING</h2>
 <p>Uma String é um conjunto de caracteres e assim, podemos iterar qualquer texto, por exemplo.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="k">for</span> <span class="n">letras</span> <span class="ow">in</span> <span class="s1">&#39;eXcript&#39;</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s1">&#39;ciclo: &#39;</span><span class="p">,</span> <span class="n">letras</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">letras</span> <span class="ow">in</span> <span class="s">&#39;eXcript&#39;</span><span class="p">:</span>
+   <span class="k">print</span><span class="p">(</span><span class="s">&#39;ciclo: &#39;</span><span class="p">,</span> <span class="n">letras</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="exemplo-2-imprimindo-todos-os-itens-de-uma-lista">
 <h2>EXEMPLO 2: IMPRIMINDO TODOS OS ITENS DE UMA LISTA</h2>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">linguagens</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span>  <span class="s1">&#39;Lua&#39;</span><span class="p">,</span> <span class="s1">&#39;Cobol&#39;</span><span class="p">,</span> <span class="s1">&#39;Pascal&#39;</span><span class="p">,</span> <span class="s1">&#39;C++&#39;</span><span class="p">]</span>
+<span class="n">linguagens</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;C&#39;</span><span class="p">,</span> <span class="s">&#39;Python&#39;</span><span class="p">,</span>  <span class="s">&#39;Lua&#39;</span><span class="p">,</span> <span class="s">&#39;Cobol&#39;</span><span class="p">,</span> <span class="s">&#39;Pascal&#39;</span><span class="p">,</span> <span class="s">&#39;C++&#39;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">lingua</span> <span class="ow">in</span> <span class="n">linguagens</span><span class="p">:</span>
-   <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Linguagem contida na variável &quot;lingua&quot; neste ciclo: &#39;</span><span class="p">,</span> <span class="n">lingua</span><span class="p">)</span>
+   <span class="k">print</span><span class="p">(</span><span class="s">&#39;Linguagem contida na variável &quot;lingua&quot; neste ciclo: &#39;</span><span class="p">,</span> <span class="n">lingua</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&quot;eXcript&quot;</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s">&quot;eXcript&quot;</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&quot;python&quot;</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s">&quot;python&quot;</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>

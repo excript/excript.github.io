@@ -160,9 +160,6 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" >Primeira Aula de Python</a></td>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" >Como Instalar o Python no Windows</a></td>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" ></a></td>
-                        </tr><tr>
                             <td><a href="http://excript.com/python/caracteristica-python.html" >Características do Python</a></td>
                             <td><a href="http://excript.com/python/caracteristica-python.html" ></a></td>
                         </tr><tr>
@@ -392,7 +389,7 @@ eXcript            </a>
 <div class="section" id="iteracao-de-listas-com-a-instrucao-while">
 <h2>ITERAÇÃO DE LISTAS COM A INSTRUÇÃO <tt class="docutils literal">while</tt></h2>
 <p>No código a seguir, percorreremos todos os elementos contidos numa lista utilizando o laço de repetição <code>while</code>.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
@@ -406,14 +403,14 @@ eXcript            </a>
 <div class="section" id="iteracao-de-listas-com-a-instrucao-for">
 <h2>ITERAÇÃO DE LISTAS COM A INSTRUÇÃO <code>for</code></h2>
 <p>No código a seguir, percorreremos todos os elementos contidos numa lista com a instrução <code>for</code>.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 </pre></div>
 <p>O código acima, poderia também ser feito, definindo a lista na própria estrutura <code>for</code>.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
@@ -423,7 +420,7 @@ eXcript            </a>
 <div class="section" id="realizando-operacoes-com-elementos-da-lista">
 <h2>REALIZANDO OPERAÇÕES COM ELEMENTOS DA LISTA</h2>
 <p>A principal razão para percorremos todos elementos de uma lista é a capacidade de realizar determinada operação sobre cada elemento. Nosso objetivo agora é demonstrar esse recurso e para isso, construiremos um simples código que itera uma lista numérica e multiplica o valor de cada item por 100. Em seguida é impresso na saída padrão o resultado da operação de multiplicação que efetuamos.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
@@ -437,26 +434,26 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="c1">#=====================================</span>
-<span class="c1">#========== www.eXcript.com ==========</span>
-<span class="c1">#=====================================</span>
+<span class="c">#=====================================</span>
+<span class="c">#========== www.eXcript.com ==========</span>
+<span class="c">#=====================================</span>
 
-<span class="c1">#Iterando listas em Python</span>
-<span class="c1">#</span>
-<span class="c1"># O código abaixo não funciona</span>
-<span class="c1"># lista_nums = [100,200,300,400]</span>
-<span class="c1"># for item in lista_nums:</span>
-<span class="c1">#     item += 1000</span>
-<span class="c1"># print(lista_nums)</span>
-<span class="c1">#</span>
-<span class="c1"># lista_nums = [100,200,300,400,500,600,700,800]</span>
-<span class="c1"># for item in range(len(lista_nums)):</span>
-<span class="c1">#     lista_nums[item] += 1000</span>
-<span class="c1"># print(lista_nums)</span>
-<span class="c1">#</span>
-<span class="c1">#função de nome enumerate</span>
+<span class="c">#Iterando listas em Python</span>
+<span class="c">#</span>
+<span class="c"># O código abaixo não funciona</span>
+<span class="c"># lista_nums = [100,200,300,400]</span>
+<span class="c"># for item in lista_nums:</span>
+<span class="c">#     item += 1000</span>
+<span class="c"># print(lista_nums)</span>
+<span class="c">#</span>
+<span class="c"># lista_nums = [100,200,300,400,500,600,700,800]</span>
+<span class="c"># for item in range(len(lista_nums)):</span>
+<span class="c">#     lista_nums[item] += 1000</span>
+<span class="c"># print(lista_nums)</span>
+<span class="c">#</span>
+<span class="c">#função de nome enumerate</span>
 <span class="n">lista_nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">700</span><span class="p">,</span><span class="mi">800</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lista_nums</span><span class="p">):</span>
     <span class="n">lista_nums</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1000</span>

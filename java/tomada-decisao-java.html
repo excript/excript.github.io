@@ -355,17 +355,17 @@ eXcript            </a>
 <p>Tomada de Decisão, ou então, estrutura condicional, é o julgamento de uma condição lógica e a consequente decisão de qual bloco de código que será executado. Ou seja, essa a maneira em que os nossos programas irão tomar decisões baseando-se em condições pré-determinadas.</p>
 <p>Utilizamos a instrução <strong>if</strong>, para verificar se uma condição é ou não verdadeira. Nós temos, que <strong>if</strong> do inglês, significa <strong>se</strong> ou então, <strong>caso</strong>. A instrução <strong>if</strong> é a responsável por decidir que: se for verdadeiro, execute esse bloco de instrução, do contrário não faça nada ou então, execute este outro bloco de instrução.
 A seguir, nós temos a estrutura da instrução <strong>if</strong>:</p>
-<div class="highlight"><pre><span></span><span class="n">se</span><span class="o">(</span> <span class="n">condição</span> <span class="o">){</span>
+<div class="highlight"><pre><span class="n">se</span><span class="o">(</span> <span class="n">condi</span><span class="err">çã</span><span class="n">o</span> <span class="o">){</span>
 
 <span class="o">}</span>
 
-<span class="k">if</span><span class="o">(</span> <span class="n">condição</span> <span class="o">){</span>
+<span class="k">if</span><span class="o">(</span> <span class="n">condi</span><span class="err">çã</span><span class="n">o</span> <span class="o">){</span>
 
 <span class="o">}</span>
 </pre></div>
 <p>Se o valor avaliado é verdadeiro, a execução do programa executara as instruções contidas nas chaves, do contrário, nada acontece.</p>
 <p>Fato é, que com a instrução <strong>if</strong> conseguimos manipular a execução dos nossos código, podendo desviar o fluxo de execução quando uma determinada condição for satisfeita.</p>
-<div class="highlight"><pre><span></span><span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+<div class="highlight"><pre><span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
 
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Digite um número qualquer: &quot;</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
@@ -377,15 +377,15 @@ A seguir, nós temos a estrutura da instrução <strong>if</strong>:</p>
 <p>No exemplo acima, nós pedimos para que o usuário digitasse um número e em seguida nós verificamos se o número digitado é maior do que 50. Caso a avaliação seja positiva, ou seja, caso o valor contido na variável num realmente seja maior do que 50, o bloco de instrução da instrução <strong>if</strong> será executado.</p>
 <p>Assim, nós temos que o funcionamento da instrução <strong>if</strong> se resume a avaliar a expressão contida entre os parêntesis. Se a condição for igual a <strong>true</strong>, ou seja, se o valor retornado for verdadeiro, o bloco de instrução que é definido pelo uso de um par de chaves será executado.</p>
 <p>A leitura correta da instrução <strong>if</strong> é:</p>
-<div class="highlight"><pre><span></span><span class="k">if</span><span class="o">(</span> <span class="n">condição</span> <span class="o">==</span> <span class="kc">true</span><span class="o">)</span>
+<div class="highlight"><pre><span class="k">if</span><span class="o">(</span> <span class="n">condi</span><span class="err">çã</span><span class="n">o</span> <span class="o">==</span> <span class="kc">true</span><span class="o">)</span>
 </pre></div>
 <p>O sinal de igual, seguido de outro sinal de igual, significa que estamos querendo verificar se o valor a esquerda é <strong>igual</strong> ao valor da direita.</p>
-<div class="highlight"><pre><span></span><span class="k">if</span><span class="o">(</span> <span class="mi">1</span><span class="o">&gt;</span><span class="mi">1</span> <span class="o">==</span> <span class="kc">true</span><span class="o">)</span>
+<div class="highlight"><pre><span class="k">if</span><span class="o">(</span> <span class="mi">1</span><span class="o">&gt;</span><span class="mi">1</span> <span class="o">==</span> <span class="kc">true</span><span class="o">)</span>
 </pre></div>
 <p>O exemplo acima deve ser lida da seguinte maneira:
 o número 1 é maior do que o número 1? Sim ou Não? O valor dessa verificação, então será comparado com o membro a direita do sinal que verifica se ambos valores são iguais.</p>
 <p>É muito comum, os programadores omitirem o [ == true ], até porque, a condição <strong>if</strong> sempre ira verificar se o valor é verdadeiro. Ou seja, toda expressão colocada entre os parêntesis esta, implicitamente, sendo comparada a <strong>true</strong>. Como estudaremos, nós podemos inverter esse funcionamento, mas o princípio nunca será alterado. Assim, temos que as duas expressões a seguir estão sendo comparadas com o valor <strong>true</strong> - estão sendo verificadas se são ou não verdadeiras:</p>
-<div class="highlight"><pre><span></span><span class="c1">//o membro a esquerda do sinal de comparação (1&gt;1)</span>
+<div class="highlight"><pre><span class="c1">//o membro a esquerda do sinal de comparação (1&gt;1)</span>
 <span class="c1">//está sendo comparado ao valor a direita do sinal</span>
 <span class="c1">//de igualdade (true).</span>
 <span class="c1">//Podemos dizer que [(1&gt;1) é igual a (true)].</span>
@@ -400,10 +400,10 @@ o número 1 é maior do que o número 1? Sim ou Não? O valor dessa verificaçã
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0010</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 <span class="c1">//        int num;</span>
 <span class="c1">//        num = 11;</span>
 <span class="c1">//</span>

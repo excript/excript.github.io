@@ -233,7 +233,7 @@ eXcript            </a>
 <h2>VERSÃO DO PYTHON</h2>
 <p>Veja qual a versão do Python instalada no seu sistema, pois, quando este manual foi construído o Ubuntu utilizava a versão do Python 3.4, porém, as novas versões do Ubuntu estão vindo com o Python 3.5.</p>
 <p>Para descobrir as versões do Python instaladas, utilize s comandos a seguir:</p>
-<div class="highlight"><pre><span></span>ls /usr/bin <span class="p">|</span> grep python
+<div class="highlight"><pre>ls /usr/bin <span class="p">|</span> grep python
 </pre></div>
 </div>
 <div class="section" id="nome-de-usuario">
@@ -303,21 +303,21 @@ eXcript            </a>
     </div>
 <p>Para instalarmos a biblioteca Kivy na instalação default do Ubuntu, basta adicionarmos o repositório ao nosso sistema, no caso, o PPA (Personal Package Archives), seja para a versão 2x, 3x ou a versão de desenvolvimento.</p>
 <p>Ainda que essa seja a forma mais fácil para construirmos o ambiente de trabalho, é a menos recomendada. Isso porque, se utilizarmos a versão do Python que o SO utiliza e eventualmente corrompemos ou causamormos algum problema, nosso sistema operacional deixará de funcionar corretamente!</p>
-<div class="highlight"><pre><span></span><span class="c1">#adicionando o PPA ao sistema (stable builds)</span>
-$ sudo add-apt-repository ppa:kivy-team/kivy
-<span class="c1">#adicionando o PPA ao sistema (nightly builds)</span>
-$ sudo add-apt-repository ppa:kivy-team/kivy-daily
+<div class="highlight"><pre><span class="c">#adicionando o PPA ao sistema (stable builds)</span>
+<span class="nv">$ </span>sudo add-apt-repository ppa:kivy-team/kivy
+<span class="c">#adicionando o PPA ao sistema (nightly builds)</span>
+<span class="nv">$ </span>sudo add-apt-repository ppa:kivy-team/kivy-daily
 
-<span class="c1">#atualizando o sistema</span>
-$ sudo apt-get update
+<span class="c">#atualizando o sistema</span>
+<span class="nv">$ </span>sudo apt-get update
 
-<span class="c1">#instalando o Kivy no Python 2x</span>
-$ sudo apt-get install python-kivy
-<span class="c1">#instalando o Kivy no Python 3x</span>
-$ sudo apt-get install python3-kivy
+<span class="c">#instalando o Kivy no Python 2x</span>
+<span class="nv">$ </span>sudo apt-get install python-kivy
+<span class="c">#instalando o Kivy no Python 3x</span>
+<span class="nv">$ </span>sudo apt-get install python3-kivy
 
-<span class="c1">#instalando os códigos de exemplo</span>
-$ sudo apt-get install python-kivy-examples
+<span class="c">#instalando os códigos de exemplo</span>
+<span class="nv">$ </span>sudo apt-get install python-kivy-examples
 </pre></div>
 </div>
 <div class="section" id="anaconda-virtualenv-e-ubuntu">
@@ -348,17 +348,17 @@ b) k34</li>
 <h2>1) PACOTES UBUNTU</h2>
 <p>Na página de <a class="reference external" href="https://kivy.org/docs/installation/installation-linux.html">instalação do projeto Kivy contém a lista de pacotes que precisam ser instalados no Ubuntu</a> para que a biblioteca Kivy funcione. Esse material foi criado a partir dessa lista.</p>
 <p>Para facilitar, adicionei numa única linha todos os pacotes necessários, tanto para a versão 2x como 3x do Python. Você pode construir essa lista através da página oficial, porém, preferi lhe entregar tudo pronto pra facilitar nosso trabalho.</p>
-<div class="highlight"><pre><span></span><span class="c1">#atualização do sistema</span>
+<div class="highlight"><pre><span class="c">#atualização do sistema</span>
 sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade
 
-<span class="c1">#pacotes para python 2x e 3x</span>
+<span class="c">#pacotes para python 2x e 3x</span>
 sudo apt-get install -y python-pip python3-pip build-essential git python python3  python-dev python3-dev libsdl2-dev  libsdl2-image-dev  libsdl2-mixer-dev  libsdl2-ttf-dev libportmidi-dev  libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev ffmpeg
 
-<span class="c1">#caso ocorra erro na instalação do ffmpeg</span>
+<span class="c">#caso ocorra erro na instalação do ffmpeg</span>
 sudo apt-get install libav-tools
 
-<span class="c1">#em tese não é necessário executar os comandos abaixo</span>
-<span class="c1">#se o pacote libav-tools foi instalado</span>
+<span class="c">#em tese não é necessário executar os comandos abaixo</span>
+<span class="c">#se o pacote libav-tools foi instalado</span>
 sudo add-apt-repository ppa:mc3man/trusty-media
 sudo apt-get update
 sudo apt-get install ffmpeg
@@ -370,56 +370,56 @@ sudo apt-get install ffmpeg
 <h2>ADDENDUM</h2>
 <p>Alguns alunos relataram que o local em que está ocorrendo a instalação do virtualenvwrapper está diferente do local em que normalmente encontravamos-o ou então, do local em que ensinamos aqui mesmo nesse tutorial. Como não posso alterar a localização do arquivo agora pois, para muitas versões do Ubuntu o turial continua correto, estou disponibilizando os locais prováveis em que você encontrará o arquivo.</p>
 <p>Inicialmente, sempre que necessário, podemos localizar arquivos no Linux de forma semelhante ao que temos no script a seguir. Portanto, se ainda assim você fizer a instalação do virtualenvwrapper mas não localiza-lo nos locais aqui sugeridos, utilize essa primeira opção para então localiza-lo.</p>
-<div class="highlight"><pre><span></span>find / -name virtualenvwrapper.sh
+<div class="highlight"><pre>find / -name virtualenvwrapper.sh
 </pre></div>
 <p>No <strong>UBUNTU 12.04 LTS</strong> o arquivo do virtualenvwrapper estará em:</p>
-<div class="highlight"><pre><span></span>/usr/local/bin/virtualenvwrapper.sh
+<div class="highlight"><pre>/usr/local/bin/virtualenvwrapper.sh
 </pre></div>
 <p>No <strong>UBUNTU 17.04 LTS</strong> o arquivo do virtualenvwrapper estará em:</p>
-<div class="highlight"><pre><span></span>~/.local/bin/virtualenvwrapper.sh
+<div class="highlight"><pre>~/.local/bin/virtualenvwrapper.sh
 </pre></div>
 <p>Caso ainda haja divergência ou então você encontre alguma divergência por favor, relate aqui nos comentários para que possamos atualizar o material.</p>
 </div>
 <div class="section" id="instalacao-pacotes-python">
 <h2>2) INSTALAÇÃO PACOTES PYTHON</h2>
 <p>Para instalar os pacotes Python utilizaremos o gerenciador de pacotes pip.</p>
-<div class="highlight"><pre><span></span><span class="c1"># Instalação/atualização do pip, virtualenv e setuptools</span>
+<div class="highlight"><pre><span class="c"># Instalação/atualização do pip, virtualenv e setuptools</span>
 sudo pip install --upgrade pip virtualenv setuptools
 
-<span class="c1">#instalação do virtualenvwrapper</span>
+<span class="c">#instalação do virtualenvwrapper</span>
 <span class="nv">$sudo</span> pip install virtualenvwrapper
 
-<span class="c1">#adicionar no final do arquivo “~/.bashrc”</span>
+<span class="c">#adicionar no final do arquivo “~/.bashrc”</span>
 
-<span class="c1">#local onde os ambientes serão armazenados</span>
-<span class="nb">export</span> <span class="nv">WORKON_HOME</span><span class="o">=</span>~/.virtualenvs
-<span class="c1">#script de ativação do virtualenvwrapper</span>
+<span class="c">#local onde os ambientes serão armazenados</span>
+<span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span>~/.virtualenvs
+<span class="c">#script de ativação do virtualenvwrapper</span>
 <span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
 
-<span class="c1">#define que não será utilizado os pacotes instalados no python default</span>
-<span class="nb">export</span> <span class="nv">VIRTUALENVWRAPPER_VIRTUALENV_ARGS</span><span class="o">=</span><span class="s1">&#39;--no-site-packages&#39;</span>
-<span class="c1">#define que não é possível utilizar o pip fora de algum ambiente virtual</span>
-<span class="nb">export</span> <span class="nv">PIP_REQUIRE_VIRTUALENV</span><span class="o">=</span><span class="nb">true</span>
+<span class="c">#define que não será utilizado os pacotes instalados no python default</span>
+<span class="nb">export </span><span class="nv">VIRTUALENVWRAPPER_VIRTUALENV_ARGS</span><span class="o">=</span><span class="s1">&#39;--no-site-packages&#39;</span>
+<span class="c">#define que não é possível utilizar o pip fora de algum ambiente virtual</span>
+<span class="nb">export </span><span class="nv">PIP_REQUIRE_VIRTUALENV</span><span class="o">=</span><span class="nb">true</span>
 </pre></div>
 </div>
 <div class="section" id="criacao-dos-ambientes-virtuais">
 <h2>3) CRIAÇÃO DOS AMBIENTES VIRTUAIS</h2>
-<div class="highlight"><pre><span></span><span class="c1"># Criação de um ambiente virtual de nome &quot;k27&quot; com Python 27</span>
+<div class="highlight"><pre><span class="c"># Criação de um ambiente virtual de nome &quot;k27&quot; com Python 27</span>
 mkvirtualenv --no-site-packages -p /usr/bin/python2.7 k27
 
-<span class="c1"># instalação do pacote Cython</span>
-pip install <span class="nv">Cython</span><span class="o">==</span><span class="m">0</span>.23
+<span class="c"># instalação do pacote Cython</span>
+pip install <span class="nv">Cython</span><span class="o">==</span>0.23
 
-<span class="c1"># Instalação da biblioteca Kivy</span>
+<span class="c"># Instalação da biblioteca Kivy</span>
 pip install kivy
 
-<span class="c1"># Criação de um ambiente virtual de nome &quot;k34&quot; com Python34</span>
+<span class="c"># Criação de um ambiente virtual de nome &quot;k34&quot; com Python34</span>
 mkvirtualenv --no-site-packages -p /usr/bin/python3.4 k34
 
-<span class="c1"># instalação do pacote Cython</span>
-pip install <span class="nv">Cython</span><span class="o">==</span><span class="m">0</span>.23
+<span class="c"># instalação do pacote Cython</span>
+pip install <span class="nv">Cython</span><span class="o">==</span>0.23
 
-<span class="c1"># Instalação da biblioteca Kivy</span>
+<span class="c"># Instalação da biblioteca Kivy</span>
 pip install kivy
 </pre></div>
 <p>Para ativar determinado ambiente virtual, utilize o comando abaixo.</p>
@@ -435,7 +435,7 @@ workon k34</blockquote>
 <div class="section" id="confirmando-a-versao-do-kivy">
 <h2>CONFIRMANDO A VERSÃO DO KIVY</h2>
 <p>Após a instalação, podes conferir a versão do Kivy que foi instalada com o seguinte comando:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kivy</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">kivy</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">kivy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>
@@ -443,11 +443,11 @@ workon k34</blockquote>
 <div class="section" id="fedora">
 <h2>FEDORA</h2>
 <p>O <tt class="docutils literal">virtualenvwrapper</tt> está disponivel no proprio repositorio do Fedora.</p>
-<div class="highlight"><pre><span></span>sudo dnf install python-virtualenvwrapper
+<div class="highlight"><pre>sudo dnf install python-virtualenvwrapper
 
 adicionar as duas proximas linhas no ~/.bashrc
-<span class="nb">export</span> <span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
-<span class="nb">source</span> virtualenvwrapper.sh
+<span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
+<span class="nb">source </span>virtualenvwrapper.sh
 </pre></div>
 <p>Essa dica foi fornecida pelo aluno Paulo Guilherme Venancio.</p>
 <p>Dependências do SDL2 no Ubuntu e pacotes correspondente no Fedora (Testado no Fedora 25)

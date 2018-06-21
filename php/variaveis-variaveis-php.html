@@ -472,9 +472,6 @@ eXcript            </a>
                         </tr><tr>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" >Funções Modificadoras em PHP</a></td>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" >Sobrescrita de Funções em PHP</a></td>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" ></a></td>
                         </tr>        </tbody>
             </table>
         
@@ -500,7 +497,7 @@ eXcript            </a>
 <div class="section" id="variaveis-variaveis">
 <h2>VARIÁVEIS VARIÁVEIS</h2>
 <p>Em algumas implementações, é prático a utilização do que chamamos de &quot;variáveis variáveis&quot;, ou seja, variáveis que são criadas e utilizadas dinâmicamente e o seu nome é o valor de outra variável. A seguir, temos a definição de uma variável qualquer:</p>
-<div class="highlight"><pre><span></span><span class="x">$var = &quot;teste&quot;;</span>
+<div class="highlight"><pre><span class="x">$var = &quot;teste&quot;;</span>
 </pre></div>
 <p>O código acima simplesmente vincula a <tt class="docutils literal">string</tt> <tt class="docutils literal">teste</tt> ao nome de variável <tt class="docutils literal">$var</tt>. Para declararmos uma variável variável nós utilizaremos o valor atribuido a variável <tt class="docutils literal">$var</tt> como o nome da nossa próxima variável. Logo, temos que o nome da primeira variável é igual a <tt class="docutils literal">$var</tt> e o nome da nossa segunda variável é <tt class="docutils literal">$$var</tt> ou então, <tt class="docutils literal">$hello</tt>. A ideia de variáveis variáveis é bastante simples: utilizar o valor de uma variável como sendo o nome de outra.</p>
 <ol class="arabic simple">
@@ -508,7 +505,7 @@ eXcript            </a>
 <li>Atribuir um valor a variável</li>
 <li>Utilizar o valor que foi atribuido a variável como uma espécie de chave para atribuir outro valor.</li>
 </ol>
-<div class="highlight"><pre><span></span><span class="x">$varvar = &quot;teste&quot;;</span>
+<div class="highlight"><pre><span class="x">$varvar = &quot;teste&quot;;</span>
 <span class="x">$$varvar = 50;</span>
 
 <span class="x">echo $varvar . &quot;\n&quot;;</span>
@@ -518,7 +515,7 @@ eXcript            </a>
 </div>
 <div class="section" id="gerando-constantes-dinamicamente">
 <h2>GERANDO CONSTANTES DINÂMICAMENTE</h2>
-<div class="highlight"><pre><span></span><span class="x">define(&quot;TESTE&quot;, 10);</span>
+<div class="highlight"><pre><span class="x">define(&quot;TESTE&quot;, 10);</span>
 <span class="x">for($x=0; $x&lt;5; $x++)</span>
 <span class="x">    define(&quot;C&quot;.$x, $x);</span>
 <span class="x">echo TESTE . &quot;\n&quot;;</span>

@@ -48,7 +48,7 @@
 &lt;h2&gt;UMA PRIMEIRA NOÇÃO DE ENCAPSULAMENTO&lt;/h2&gt;
 &lt;p&gt;Mesmo que não tenhamos estudado o conceito de encapsulamento, podemos observar que, os objetos funcionam como uma cápsula, onde as propriedades são o conteúdo da capsula, enquanto as funções, irão assumir uma de duas opções. a) de uso intero; b) uso externo. As funções internas, deverão ter seus nomes restritos ao escopo da classe, enquanto que as funções de uso externo, deverão ter suas funções decladas como sendo pública e estas, formarão, a interface de comunicação entre o mundo exterior e o conteúdo interno da classe.&lt;/p&gt;
 &lt;p&gt;Por fim, só o conceito de manter os dados e as funções num mesmo lugar já é, por definição, uma maneira de encapsulamento, até porque, para acessarmos uma propriedade ou um funcionalidade somos obrigados a especificar a capsula que desejamos manipular.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Teste {&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;class Teste {&lt;/span&gt;
 &lt;span class="x"&gt;    function imprimeTeste(){&lt;/span&gt;
 &lt;span class="x"&gt;        echo &amp;quot;teste&amp;quot;&lt;/span&gt;
 &lt;span class="x"&gt;    }&lt;/span&gt;
@@ -58,7 +58,7 @@
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#IMPLEMENTANDO FUNÇÕES I&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#IMPLEMENTANDO FUNÇÕES I&lt;/span&gt;
 
 &lt;span class="x"&gt;class Teste{&lt;/span&gt;
 
@@ -92,7 +92,7 @@
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -139,7 +139,7 @@
 &lt;p&gt;Pseudo-variável é um nome que será utilizado como se fosse uma variável, porém, que não é verdadeiramente uma variável. Por isso o prefixo &lt;strong&gt;pseudo&lt;/strong&gt;, que significa, falso.&lt;/p&gt;
 &lt;p&gt;Cada classe PHP, possui uma pseudo-variável de nome &lt;code&gt;$this&lt;/code&gt;. Chamamos a mesma de pseudo-variável até porque, a mesma funciona de maneira diferente das demais variáveis e quem a manipula, é a máquina virtual do PHP.&lt;/p&gt;
 &lt;p&gt;O que temos que entender, é que &lt;code&gt;$this&lt;/code&gt; aponta para um objeto na memória, no caso, o objeto em execução, ou melhor, o objeto onde a mesma está contida, ou então, vamos dizer que a mesma aponta para si própria. Cada instância de classe terá a sua própria pseudo-variável &lt;code&gt;$this&lt;/code&gt; e esta, apontará para o endereço de memória onde a variável está sendo utilizada.;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class A{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;class A{&lt;/span&gt;
 
 &lt;span class="x"&gt;    function fun(){&lt;/span&gt;
 &lt;span class="x"&gt;        $this -&amp;gt; fun();&lt;/span&gt;
@@ -155,7 +155,7 @@
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#IMPLEMENTANDO FUNÇÕES&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#IMPLEMENTANDO FUNÇÕES&lt;/span&gt;
 
 &lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 
@@ -192,7 +192,7 @@
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -259,7 +259,7 @@
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#IMPORTANDO ARQUIVOS PHP&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#IMPORTANDO ARQUIVOS PHP&lt;/span&gt;
 
 &lt;span class="x"&gt;include(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
 &lt;span class="x"&gt;include_once(&amp;#39;code.php&amp;#39;);&lt;/span&gt;
@@ -313,7 +313,7 @@
 &lt;h2&gt;FUNÇÕES COM RETORNO TIPADOS&lt;/h2&gt;
 &lt;p&gt;Função com retorno tipado é toda função que define explicitamente o tipo do valor que será retornado. Dessa maneira o PHP disponibilizou uma maneira de definirmos o tipo do valor que será recebido por uma função, como também, o valor que a mesma retornará.&lt;/p&gt;
 &lt;p&gt;A seguir, escrevemos um simples exemplo onde há uma função que define o tipo do valor que será retornado.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function getArea(int x, int y) : int {&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function getArea(int x, int y) : int {&lt;/span&gt;
 &lt;span class="x"&gt;    return x * y;&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -322,7 +322,7 @@
 &lt;p&gt;É possível definir que os valores não sejam automaticamente convertidos pelo PHP, ou seja, podemos definir que, caso o valor passado não seja do tipo esperado, uma exceção seja levantada e a execução finalizada.&lt;/p&gt;
 &lt;p&gt;Para definir que desejamos que o PHP levante uma exceção caso o valor passado não seja do tipo esperado, temos que, através de um código, especificar que determinado módulo está trabalhando de maneira restrita, isto é, que os valores passados devem ser do tipo esperado. Do contrário, o Script será interrompido.&lt;/p&gt;
 &lt;p&gt;A instrução &lt;code&gt;declare(strict_types=1);&lt;/code&gt; deve ser colocada no início do arquivo para que o PHP trate o mesmo da forma estrita.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;declare(strict_types=1);//valor de retorno precisa ser do tipo definido&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;declare(strict_types=1);//valor de retorno precisa ser do tipo definido&lt;/span&gt;
 
 &lt;span class="x"&gt;function getArea(int x, int y):int {&lt;/span&gt;
 &lt;span class="x"&gt;    return x * y;&lt;/span&gt;
@@ -331,7 +331,7 @@
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;declare(strict_types=1);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;declare(strict_types=1);&lt;/span&gt;
 
 &lt;span class="x"&gt;#VALORES DE RETORNO TIPADO&lt;/span&gt;
 
@@ -397,7 +397,7 @@
 &lt;h2&gt;FUNÇÕES COM PARÂMETROS TIPADOS&lt;/h2&gt;
 &lt;p&gt;Funções com parâmetros tipados é uma forma de evitarmos a checagem do tipo de cada parâmetro recebido. Assim, o interpretador fica com a tarefa de verificar se o valor que está sendo enviado para a função é do tipo esperado.&lt;/p&gt;
 &lt;p&gt;A seguir, estamos definindo uma função que recebe 2 parâmetros inteiros.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function getArea(int x, int y){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function getArea(int x, int y){&lt;/span&gt;
 &lt;span class="x"&gt;    return x * y;&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -406,7 +406,7 @@
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;declare(strict_types=1);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;declare(strict_types=1);&lt;/span&gt;
 
 &lt;span class="x"&gt;#FUNÇÕES COM PARÂMETROS TIPADOS&lt;/span&gt;
 
@@ -461,7 +461,7 @@
 &lt;div class="section" id="operador-null-coalesce"&gt;
 &lt;h2&gt;OPERADOR NULL COALESCE&lt;/h2&gt;
 &lt;p&gt;O operador Null Coalesce é representado pela linguagem PHP com a utilização de dois sinais de interrogação, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt; variável &amp;gt; = &amp;lt; valor &amp;gt; ?? &amp;lt; há valor definido? Senão retorna isso &amp;gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt; variável &amp;gt; = &amp;lt; valor &amp;gt; ?? &amp;lt; há valor definido? Senão retorna isso &amp;gt;;&lt;/span&gt;
 &lt;span class="x"&gt;$x = $a ?? 10;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Se a variável &lt;code&gt;$a&lt;/code&gt; existir, o valor da mesma será definido para &lt;code&gt;$x&lt;/code&gt;, do contrário, o número 10 é que será utilizado.&lt;/p&gt;
@@ -470,7 +470,7 @@
 &lt;p&gt;A sintaxe do operador Null Coalesce é bastante semelhante a sintaxe do Operador Ternário, porém, com este operador, é verificado se a referência existe ou então, se um elemento esta contido num Array. Caso o valor exista, o mesmo será utilizado, do contrário, iremos definir algum outro valor ou então, alguma outra verificação.&lt;/p&gt;
 &lt;p&gt;É interessante observar que o operador Null Coalesce fornece uma estrutura para checagem e utilização, porém, é possível continuarmos trabalhando sem fazer uso do mesmo.&lt;/p&gt;
 &lt;p&gt;A seguir utilizamos algumas estruturas e também, a estrutura do operador Null Coalesce.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#operador ternário&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#operador ternário&lt;/span&gt;
 &lt;span class="x"&gt;echo $x ? $x : &amp;quot;&amp;quot;;&lt;/span&gt;
 
 &lt;span class="x"&gt;echo $x ?: &amp;quot;&amp;quot;;&lt;/span&gt;
@@ -480,7 +480,7 @@
 &lt;span class="x"&gt;echo $x ?? $b ?? &amp;quot;&amp;quot;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No exemplo  seguir, utilizamos o operador Null Coalesce para definir o que será impresso na saída padrão.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;// $a não está definido&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;// $a não está definido&lt;/span&gt;
 &lt;span class="x"&gt;$b = 10;&lt;/span&gt;
 
 &lt;span class="x"&gt;echo $a ?? 2; // saída 2&lt;/span&gt;
@@ -490,7 +490,7 @@
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$quadrado = function($num){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$quadrado = function($num){&lt;/span&gt;
 &lt;span class="x"&gt;    return $num * $num;&lt;/span&gt;
 &lt;span class="x"&gt;};&lt;/span&gt;
 &lt;span class="x"&gt;$cubo = function($num) use ($quadrado){&lt;/span&gt;
@@ -543,7 +543,7 @@
 &lt;h2&gt;SPACESHIP OPERATOR&lt;/h2&gt;
 &lt;p&gt;O PHP 7 implementou um operador de nome &lt;tt class="docutils literal"&gt;Spaceship&lt;/tt&gt;. Com este, somos capazes de verificar 3 situações ao mesmo tempo, ou seja, verificamos se o operando a esquerda é menor, igual ou maior do que o operando a direita. O resultado da verificação será um número inteiro no intervalo entre -1 até 1.&lt;/p&gt;
 &lt;p&gt;Caso o valor retornado seja -1, o operando a esquerda é menor do o operando a sua direita. Se o valor retornado for igual a 0, os operandos são iguais. Por fim, se o valor retornado for 1, o operando a esquerda é maior do que o operando a direita do operador.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x &amp;lt;=&amp;gt; $y&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$x &amp;lt;=&amp;gt; $y&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Então, temos que a cada verificação feita utilizando o operador &lt;tt class="docutils literal"&gt;SpaceShift&lt;/tt&gt;, será verificado 3 situações:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -557,13 +557,13 @@
 &lt;div class="section" id="situacoes-menor-ou-igual-maior-ou-igual"&gt;
 &lt;h2&gt;SITUAÇÕES: MENOR OU IGUAL; MAIOR OU IGUAL&lt;/h2&gt;
 &lt;p&gt;Também é possível obter o resultado da expressões &lt;tt class="docutils literal"&gt;menor ou igual&lt;/tt&gt; ou &lt;tt class="docutils literal"&gt;maior ou igual&lt;/tt&gt; com o operador &lt;tt class="docutils literal"&gt;spaceshift&lt;/tt&gt;, neste caso temos que:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x &amp;lt;==&amp;gt; $y&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$x &amp;lt;==&amp;gt; $y&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplos-com-numeros"&gt;
 &lt;h2&gt;EXEMPLOS COM NÚMEROS&lt;/h2&gt;
 &lt;p&gt;A seguir, definimos alguns exemplos utilizando números e, já definimos, como sendo comentário, o valor que será retornado.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;1 &amp;lt;=&amp;gt; 1     // 0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;1 &amp;lt;=&amp;gt; 1     // 0&lt;/span&gt;
 &lt;span class="x"&gt;2 &amp;lt;=&amp;gt; 1     // 1&lt;/span&gt;
 &lt;span class="x"&gt;1 &amp;lt;=&amp;gt; 2     // -1&lt;/span&gt;
 &lt;span class="x"&gt;156 &amp;lt;==&amp;gt; 12 // 1&lt;/span&gt;
@@ -573,7 +573,7 @@
 &lt;div class="section" id="exemplos-com-arrays"&gt;
 &lt;h2&gt;EXEMPLOS COM ARRAYS&lt;/h2&gt;
 &lt;p&gt;Abaixo definimos uma lista de exemplos e novamente, colocamos como sendo comentários o valor que será impresso no console.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;echo [] &amp;lt;=&amp;gt; []; // 0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;echo [] &amp;lt;=&amp;gt; []; // 0&lt;/span&gt;
 &lt;span class="x"&gt;echo [1, 2, 3] &amp;lt;=&amp;gt; [1, 2, 3]; // 0&lt;/span&gt;
 &lt;span class="x"&gt;echo [1, 2, 3] &amp;lt;=&amp;gt; []; // 1&lt;/span&gt;
 &lt;span class="x"&gt;echo [1, 2, 3] &amp;lt;=&amp;gt; [1, 2, 1]; // 1&lt;/span&gt;
@@ -583,14 +583,14 @@
 &lt;div class="section" id="exemplos-com-strings"&gt;
 &lt;h2&gt;EXEMPLOS COM STRINGS&lt;/h2&gt;
 &lt;p&gt;Agora, definimos 3 exemplos utilizando String para estudarmos o funcionamento do operador &lt;code&gt;spaceshift&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;echo &amp;quot;x&amp;quot; &amp;lt;=&amp;gt; &amp;quot;x&amp;quot;; // 0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;echo &amp;quot;x&amp;quot; &amp;lt;=&amp;gt; &amp;quot;x&amp;quot;; // 0&lt;/span&gt;
 &lt;span class="x"&gt;echo &amp;quot;x&amp;quot; &amp;lt;=&amp;gt; &amp;quot;y&amp;quot;; //-1&lt;/span&gt;
 &lt;span class="x"&gt;echo &amp;quot;y&amp;quot; &amp;lt;=&amp;gt; &amp;quot;x&amp;quot;; //1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#SPACESHIFT OPERATOR&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#SPACESHIFT OPERATOR&lt;/span&gt;
 
 &lt;span class="x"&gt;foreach(range(0,9) as $v){&lt;/span&gt;
 
@@ -618,7 +618,7 @@
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS E ARRAYS&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS E ARRAYS&lt;/span&gt;
 
 &lt;span class="x"&gt;#array_map(&amp;lt;f.anonima&amp;gt;, &amp;lt;array&amp;gt;)&lt;/span&gt;
 
@@ -641,7 +641,7 @@
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS E ARRAYS&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS E ARRAYS&lt;/span&gt;
 
 &lt;span class="x"&gt;#array_map(&amp;lt;f.anonima&amp;gt;, &amp;lt;array&amp;gt;)&lt;/span&gt;
 
@@ -707,7 +707,7 @@
 &lt;p&gt;Vamos supor uma situação onde existe uma lista de valores e é necessário realizar algum processamento sobre os itens. Pra isso, nós utilizarmos um laço de repetição e a cada item realizarmos uma determinada operação. Essa é uma forma estática de percorrer os elemtnos e realizar um determinado tratamento sobre os mesmos.&lt;/p&gt;
 &lt;p&gt;Agora, nós podemos trabalhar de tal maneira onde não será implementado dentro da função o tratamento que sera dado a cada elemento da lista, o que será feito, é a passagem do elemento através de uma função anônima que será recebida como parâmetro. Dessa forma, nós temos que o processamento irá ocorrer externamente e quem irá implementar o mesmo, não precisa conhecer o funcionamento interno da função e nem ter acesso ao seu código.&lt;/p&gt;
 &lt;p&gt;Um detalhe das funções anônimas é que a expicação é complexa, enquanto a implementação geralmente é simples.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$quadrado = function($num){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$quadrado = function($num){&lt;/span&gt;
 &lt;span class="x"&gt;    return $num * $num;&lt;/span&gt;
 &lt;span class="x"&gt;};&lt;/span&gt;
 &lt;span class="x"&gt;$cubo = function($num) use ($quadrado){&lt;/span&gt;
@@ -736,9 +736,9 @@
 &lt;/div&gt;
 &lt;div class="section" id="definicao"&gt;
 &lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;array array_map(callback $callback, array $arr1)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;array array_map(callback $callback, array $arr1)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$arr = [1, 2, 3, 4, 5];&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$arr = [1, 2, 3, 4, 5];&lt;/span&gt;
 
 &lt;span class="x"&gt;$f = function($x) {&lt;/span&gt;
 &lt;span class="x"&gt;    return $x * $x;&lt;/span&gt;
@@ -754,9 +754,9 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;/div&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;DEFINIÇÃO&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;array array_map(array $arr1, callback $callback)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;array array_map(array $arr1, callback $callback)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//$lista = [1,2,3,4,5,6,7,8,9,10];&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//$lista = [1,2,3,4,5,6,7,8,9,10];&lt;/span&gt;
 &lt;span class="x"&gt;$lista = [1,2.21,&amp;quot;&amp;quot;,9,4];&lt;/span&gt;
 
 &lt;span class="x"&gt;$f = function ($v) {&lt;/span&gt;
@@ -771,7 +771,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#PRÁTICA - FUNÇÕES ANÔNIMAS&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#PRÁTICA - FUNÇÕES ANÔNIMAS&lt;/span&gt;
 
 &lt;span class="x"&gt;$quadrado = function($item){&lt;/span&gt;
 &lt;span class="x"&gt;    return $item * $item;&lt;/span&gt;
@@ -844,7 +844,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;p&gt;Uma função anônima possui o seu escopo restrito, então, não é possível fazer acesso direto aos membros externos. Em suma, &lt;a class="reference external" href="http://excript.com/php/introducao-as-funcoes-php.html"&gt;o escopo de uma função anônima funciona de maneira análoga a de uma função convencional&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Dessa forma, para acessarmos variáveis externas a função anônima, temos que explicitamente declarar, no cabeçalho da função, que determinadas variáveis devem estar visíveis dentro da função que estamos definindo.&lt;/p&gt;
 &lt;p&gt;Para que seja possível essa manipulação no escopo das variáveis, foi definido a instrução &lt;code&gt;use&lt;/code&gt; que funciona como complemento da declaração das funções anonimas, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = 10;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$x = 10;&lt;/span&gt;
 &lt;span class="x"&gt;$func = function() use ($x) {&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;};&lt;/span&gt;
@@ -859,7 +859,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;p&gt;Funções anonimas funcionam de maneira análoga a qualquer outra função, logo, estas possuem o escopo restrito. Da mesma forma, temos que ao inserirmos variáveis no escopo de uma função, o que estamos de fato fazendo, é declarando uma variável de mesmo nome e inicializando-a com o valor igual a variável externa.&lt;/p&gt;
 &lt;p&gt;Desta forma, se alterarmos o valor das variáveis inseridas no escopo local, o que será alterado, é só e somente só a variável de mesmo nome re-declarada no escopo local da função anonima. Logo, se desejarmos alterar a variável cujo escopo é externo a função, temos de passar a sua referência e não o seu valor. Para isso, basta precedermos o seu nome pelo uso de um &amp;amp; comercial.&lt;/p&gt;
 &lt;p&gt;Vejamos o código a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = 10;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$x = 10;&lt;/span&gt;
 &lt;span class="x"&gt;$y = 10;&lt;/span&gt;
 &lt;span class="x"&gt;$func = function() use ($x, &amp;amp;$y) {&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;O valor de x é: $x&amp;quot;;&lt;/span&gt;
@@ -877,7 +877,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No exemplo acima, podemos facilmente observar que somente a variável externa &lt;code&gt;$y&lt;/code&gt; é que teve o seu valor alterado, isso porque, a referência da mesma foi inserida no escopo local da função anonima.&lt;/p&gt;
 &lt;p&gt;A seguir, implementamos mais um exemplo para avançarmos ainda mais em nosso estudo.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$var1 = 10;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$var1 = 10;&lt;/span&gt;
 &lt;span class="x"&gt;$num = [&amp;quot;um&amp;quot;, &amp;quot;dois&amp;quot;, &amp;quot;três&amp;quot;];&lt;/span&gt;
 &lt;span class="x"&gt;$func = function() use ($var1, &amp;amp;$num) {&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;Variável externa $var1&amp;quot;;&lt;/span&gt;
@@ -888,7 +888,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS - ESCOPO DE NOMES&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS - ESCOPO DE NOMES&lt;/span&gt;
 
 &lt;span class="x"&gt;$num = 100;&lt;/span&gt;
 &lt;span class="x"&gt;$num2 = 100;&lt;/span&gt;
@@ -941,7 +941,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;p&gt;Assim, temos que uma função anônima possui todas as características e, funciona com os mesmo princípios que qualquer função, porém, como o nome sugere, esta não possui um nome - por isso: anônima!&lt;/p&gt;
 &lt;p&gt;É comum a utilização de funções anônimas como &lt;tt class="docutils literal"&gt;callback&lt;/tt&gt;, isto é, passarmos a função anônima como parâmetro e num determinado momento, a função que a recebeu, invoque a função e de continuidade ao processamento.&lt;/p&gt;
 &lt;p&gt;Para atribuirmos uma função anonima a uma variável, basta declararmos um bloco e atribuirmos este, diretamente, a uma determinada variável, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# o bloco de instrução a seguir, será atribuido à&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;# o bloco de instrução a seguir, será atribuido à&lt;/span&gt;
 &lt;span class="x"&gt;# variável de nome $func e, para executar o código&lt;/span&gt;
 &lt;span class="x"&gt;# utilizaremos o nome da variável&lt;/span&gt;
 &lt;span class="x"&gt;$func = function($num){&lt;/span&gt;
@@ -959,7 +959,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#FUNÇÕES ANÔNIMAS&lt;/span&gt;
 
 
 &lt;span class="x"&gt;$func = function($nome){&lt;/span&gt;
@@ -1018,7 +1018,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;div class="section" id="a-sintaxe-para-uso-da-heranca"&gt;
 &lt;h2&gt;A SINTAXE PARA USO DA HERANÇA&lt;/h2&gt;
 &lt;p&gt;Uma classe herdeira, deverá, por definição, utilizar a instrução &lt;cite&gt;extends&lt;/cite&gt; e, em seguida, definir a classe que será estendida. O código a seguir faz uma breve demonstração da nomenclatura que deve ser utilizada.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Pai()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;class Pai()&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 
 &lt;span class="x"&gt;}&lt;/span&gt;
@@ -1035,7 +1035,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for &lt;tt c
 &lt;h2&gt;COMO A SUBCLASSE UTILIZA OS MEMBROS DA SUPER&lt;/h2&gt;
 &lt;p&gt;Toda SubClasse poderá acessar os membros da &lt;strong&gt;super&lt;/strong&gt; diretamente, como se estes membros tivessem sido declarados em seu corpo. Segundo a teoria da Orientação a Objetos, toda classe herdeira deve ter acesso direto ao membros públicos e protegidos da super.&lt;/p&gt;
 &lt;p&gt;Assim, salvo se lermos o código, não será possível saber em qual nível hierarquico que determinado membro foi definido.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class SuperClasse {&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;class SuperClasse {&lt;/span&gt;
 
 &lt;span class="x"&gt;    public $a = &amp;#39;variável $a&amp;#39;;&lt;/span&gt;
 
@@ -1078,7 +1078,7 @@ Classe-base: sinônimo a SuperClasse&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# HERANÇA I&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;# HERANÇA I&lt;/span&gt;
 
 &lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
 
@@ -1122,7 +1122,7 @@ Classe-base: sinônimo a SuperClasse&lt;/p&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -1173,7 +1173,7 @@ Classe-base: sinônimo a SuperClasse&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#GERENCIANDO PROPRIEDADES&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#GERENCIANDO PROPRIEDADES&lt;/span&gt;
 
 &lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 
@@ -1221,7 +1221,7 @@ Classe-base: sinônimo a SuperClasse&lt;/p&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -1290,7 +1290,7 @@ c) ambos construtores serão invocados?&lt;/blockquote&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;!-- Como a subclasse implementa suas próprias funcionalidades? --&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class SuperClasse {&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;class SuperClasse {&lt;/span&gt;
 
 &lt;span class="x"&gt;    public $a = 0;&lt;/span&gt;
 
@@ -1335,7 +1335,7 @@ c) ambos construtores serão invocados?&lt;/blockquote&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -1379,7 +1379,7 @@ c) ambos construtores serão invocados?&lt;/blockquote&gt;
 &lt;div class="section" id="o-que-sao-membros-de-classe"&gt;
 &lt;h2&gt;O QUE SÃO MEMBROS DE CLASSE&lt;/h2&gt;
 &lt;p&gt;Um membro de classe é toda variável ou função definida e implementada pela classe. Assim, temos que todos os atributos e métodos que estiverem definidos numa classe são chamados de &amp;quot;membros de classe&amp;quot;. Para acessarmos os membros de uma classe, temos que utilizar a seguinte nomenclatura:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;referência + nome_membro&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;referência + nome_membro&lt;/span&gt;
 &lt;span class="x"&gt;referência -&amp;gt; nome_membro&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Temos sempre que pensar no conceito de referência, ou seja, uma variável é somente uma referência a um objeto. Assim, temos que todas as instância que criarmos de uma classe poderão acessar os membros públicos através da definição acima.&lt;/p&gt;
@@ -1389,7 +1389,7 @@ c) ambos construtores serão invocados?&lt;/blockquote&gt;
 &lt;p&gt;Referência é para o PHP o que o endereço é para o C++, ou seja, um valor que está apontando para uma região em que há informações armazenadas. O conceito de referência em PHP não é explicito, até porque, não conseguimos obter esse endereço facilmente. Mesmo assim, não é difícil imaginar que &lt;strong&gt;tudo&lt;/strong&gt; precisa estar armazenado em algum lugar, logo, a referência é a nomenclatura que utilizamos de forma genérica para dizer que a variável A está ligada a determinada informação.&lt;/p&gt;
 &lt;p&gt;É preciso entender que toda variável está armazenada na memória, bem como todo objeto. Entendido isso, é preciso entender que é utilizado uma variável para guardar a região em que determinado objeto está armazenado. Logo, você talvez se pergunte quem armazena o local de memória em que as variáveis estão, e a resposta é: o interpretador, a máquina virtual do PHP.&lt;/p&gt;
 &lt;p&gt;Se entendido o conceito de referência, o conceito sobre a variável &lt;tt class="docutils literal"&gt;this&lt;/tt&gt; fica fácil de ser compreendido, até porque, está é uma variável que é criada para cada novo objeto e, só pode ser utilizada para o acesso de dentro do escopo da classe. Por isso é que dizemos que a pseudo-variável $this &lt;strong&gt;sempre&lt;/strong&gt; estará se referindo a classe em que estamos trabalhando.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//internamente&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//internamente&lt;/span&gt;
 &lt;span class="x"&gt;$this-&amp;gt;nome_do_membro;&lt;/span&gt;
 
 &lt;span class="x"&gt;//externamente&lt;/span&gt;
@@ -1432,10 +1432,10 @@ c) ambos construtores serão invocados?&lt;/blockquote&gt;
 &lt;li&gt;Qual o membro&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Utilizamos o &lt;tt class="docutils literal"&gt;operador de objeto&lt;/tt&gt;, comumente chamado de &lt;tt class="docutils literal"&gt;operador seta&lt;/tt&gt; para acessarmos membros públicos, como temos no exemplo seguinte:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$objeto_nome -&amp;gt; propriedade_nome;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$objeto_nome -&amp;gt; propriedade_nome;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O esquema sempre será o mesmo quando formos acessar as funções definidas pelas classes. Inicialmente informamos o objeto, em seguida colocamos o &lt;tt class="docutils literal"&gt;operador seta&lt;/tt&gt; e por fim, definimos o nome da função [ &lt;strong&gt;funcionalidade&lt;/strong&gt; ] que queremos invocar.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$p1 = new Pessoa(); #criando um objeto de Pessoa e atribuindo a referência à variável $p1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$p1 = new Pessoa(); #criando um objeto de Pessoa e atribuindo a referência à variável $p1&lt;/span&gt;
 &lt;span class="x"&gt;$p2 = new Pessoa();&lt;/span&gt;
 &lt;span class="x"&gt;$p1-&amp;gt;nome = &amp;quot;João&amp;quot;; #acessando a variável $nome&lt;/span&gt;
 &lt;span class="x"&gt;                    # definida pela classe Pessoa e por isso,&lt;/span&gt;
@@ -1448,7 +1448,7 @@ c) ambos construtores serão invocados?&lt;/blockquote&gt;
 &lt;div class="section" id="inicializando-membros-de-classe"&gt;
 &lt;h2&gt;INICIALIZANDO MEMBROS DE CLASSE&lt;/h2&gt;
 &lt;p&gt;Muitas propriedades de objetos precisarão ter valores iniciais para que tudo funcione corretamente. Todas as propriedades que precisam definir valores iniciais, precisaram ter seus valores atribuídos em sua declaração.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Quadrado&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;class Quadrado&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 &lt;span class="x"&gt;    public $x = 5, $y = 10;&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
@@ -1456,7 +1456,7 @@ c) ambos construtores serão invocados?&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#ACESSANDO MEMBROS DE CLASSE&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#ACESSANDO MEMBROS DE CLASSE&lt;/span&gt;
 
 &lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 &lt;span class="x"&gt;    public $idade = 0;&lt;/span&gt;
@@ -1492,7 +1492,7 @@ c) ambos construtores serão invocados?&lt;/blockquote&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -1582,7 +1582,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;h2&gt;DESTRUIÇÃO DE OBJETOS&lt;/h2&gt;
 &lt;p&gt;Um objeto será destruido todas as vezes em que não houver mais variáveis contendo sua referência, isto, que esteja referenciando-o. Dessa forma, temos que o PHP desalocará a memória de todos os objetos quando estes não mais tiverem utilidade. Se por acaso tentarmos acessar um objeto que foi destruído, temos que ocorrerá um erro e o Script PHP terá sua execução finalizada, até porque, o objeto não existe mais.&lt;/p&gt;
 &lt;p&gt;Porém, não se preocupe, o PHP sabe gerenciar muito bem a memória e também, consegue definir com bastante precisão o momento de remover cada instância da memória. Por isso, salvo em raras exceções, você irá ter problemas com a destruição de objetos que ainda estavam em uso.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$p1 = new Pessoa();&lt;/span&gt;
 &lt;span class="x"&gt;$p2 = new Pessoa();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -1594,7 +1594,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#CRIAÇÃO DE OBJETOS/INSTÂNCIAS&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#CRIAÇÃO DE OBJETOS/INSTÂNCIAS&lt;/span&gt;
 
 &lt;span class="x"&gt;class Classe{&lt;/span&gt;
 &lt;span class="x"&gt;    public $a = 1;&lt;/span&gt;
@@ -1634,7 +1634,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -1866,7 +1866,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;h2&gt;PRIMEIRA CLASSE&lt;/h2&gt;
 &lt;p&gt;Vamos criar a nossa primeira classe em PHP. Para isso, faremos uso da palavra-chave &lt;tt class="docutils literal"&gt;class&lt;/tt&gt; que, do Inglês, significa classe. Após o uso da instrução &lt;tt class="docutils literal"&gt;class&lt;/tt&gt;, temos que abrir e fechar chaves, definindo assim, o escopo de nomes público da classe.&lt;/p&gt;
 &lt;p&gt;Isso quer dizer que todas as variáveis e funções deverão, obrigatoriamente, serem definidas entre os parêntesis que compreendem o bloco de instrução da classe, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class &amp;lt; nome &amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;class &amp;lt; nome &amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 &lt;span class="x"&gt;    # &amp;lt;bloco de instrução da classe&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
@@ -1882,7 +1882,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;div class="section" id="peculiaridade-na-nomenclatura-de-classe"&gt;
 &lt;h2&gt;PECULIARIDADE NA NOMENCLATURA DE CLASSE&lt;/h2&gt;
 &lt;p&gt;Aprendemos em aulas anteriores que o PHP é uma linguagem Case Sensitive, isto é, referências constituidas por letras maiúsculas e minúsculas são nomes diferentes de e fazem referência a entidades diferentes. Por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$nome_a = 10;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$nome_a = 10;&lt;/span&gt;
 &lt;span class="x"&gt;$nome_A = 20;&lt;/span&gt;
 
 &lt;span class="x"&gt;if ($nome_a == $nome_A)&lt;/span&gt;
@@ -1893,7 +1893,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#PRIMEIRA CLASSE EM PHP&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#PRIMEIRA CLASSE EM PHP&lt;/span&gt;
 
 &lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 
@@ -1920,7 +1920,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -1966,7 +1966,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;p&gt;Estudamos que uma classe é um projeto e que quando executada se tornará num objeto. Assim, ao criarmos uma instância da classe, teremos um objeto construido a partir do código implementado nessa classe. Todo objeto, virtual ou físico, possui por definição do termo &amp;quot;objeto&amp;quot; atributos, ou seja, um objeto físico sempre possui uma cor, um peso, um formato e etc, já, um objeto virtual pode ter esses atributos ou então, qualquer outro.&lt;/p&gt;
 &lt;p&gt;Como estudamos, podemos definir variáveis em quaisquer parte do nosso código e utilizar estas para armazenarmos o que bem entendermos. O conceito por detrás da definição de variáveis dentro do escopo de classe é fazer com que a informação dessa variável esteja relacionada a outras informação de determinado objeto. Por isso a definição de propriedades e por isso a utilização de variáveis.&lt;/p&gt;
 &lt;p&gt;Cada instância terá todas as variáveis definidas em seu projeto, isto é, em sua classe. Logo, a alteração de uma variável na instância A não implica na alteração da variável de mesmo nome na instância B. Ambas instâncias forma criadas de um mesmo projeto, no entanto, são objetos distintos e a unica relação entre ambos é o projeto de sua construção.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Pessoa {&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;class Pessoa {&lt;/span&gt;
 &lt;span class="x"&gt;    var $nome;&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -1986,7 +1986,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 &lt;span class="x"&gt;    public $nome;&lt;/span&gt;
 &lt;span class="x"&gt;    public $idade;&lt;/span&gt;
 
@@ -2016,7 +2016,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -2117,14 +2117,14 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;div class="section" id="lacos-de-repeticao"&gt;
 &lt;h2&gt;LAÇOS DE REPETIÇÃO&lt;/h2&gt;
 &lt;p&gt;Para entendermos o que é um laço de repetição, vamos voltar para a primeira aula de tomada de decisão.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = 0;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$x = 0;&lt;/span&gt;
 &lt;span class="x"&gt;if($x &amp;lt;= 10){&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;o valor de x eh &amp;quot; . $x&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Acima declaramos uma variável e estabelecemos uma condição. Agora, vamos copiar o código, porém, ao invés de utilizarmos a instrução &lt;tt class="docutils literal"&gt;if&lt;/tt&gt;, vamos alterar para &lt;tt class="docutils literal"&gt;while&lt;/tt&gt;. Do inglês, &lt;tt class="docutils literal"&gt;while&lt;/tt&gt; significa &lt;tt class="docutils literal"&gt;enquanto&lt;/tt&gt;, e na programação, a instrução &lt;tt class="docutils literal"&gt;while&lt;/tt&gt;, executará o seu bloco de instrução até que a condição definida seja satisfeita.&lt;/p&gt;
 &lt;p&gt;Também vamos somar uma unidade a variável &lt;tt class="docutils literal"&gt;$x&lt;/tt&gt; dentro do bloco de instrução. Agora, vamos comparar ambos os código e estudar as semelhanças.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = 0;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$x = 0;&lt;/span&gt;
 &lt;span class="x"&gt;while($x &amp;lt; 10){&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;o valor de x eh &amp;quot; . $x&lt;/span&gt;
 &lt;span class="x"&gt;    $x = $x + 1;&lt;/span&gt;
@@ -2136,7 +2136,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//ESTRUTURAS DE REPETIÇÃO&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//ESTRUTURAS DE REPETIÇÃO&lt;/span&gt;
 
 &lt;span class="x"&gt;$x = 10;&lt;/span&gt;
 &lt;span class="x"&gt;while($x&amp;lt;=20){&lt;/span&gt;
@@ -2197,7 +2197,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;div class="section" id="funcao-func-get-arg"&gt;
 &lt;h2&gt;FUNÇÃO &lt;tt class="docutils literal"&gt;func_get_arg()&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;A função &lt;tt class="docutils literal"&gt;func_get_arg()&lt;/tt&gt; retorna o valor referente ao índice passado como parâmetro, ou seja, se passarmos o valor 0, será retornado o valor referente ao elemento vinculado ao índice 0.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function soma()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function soma()&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 &lt;span class="x"&gt;    $a = func_get_arg(0);&lt;/span&gt;
 &lt;span class="x"&gt;    $b = func_get_arg(1);&lt;/span&gt;
@@ -2213,7 +2213,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;div class="section" id="funcoes-func-get-arg-e-func-num-args"&gt;
 &lt;h2&gt;FUNÇÕES &lt;tt class="docutils literal"&gt;func_get_arg()&lt;/tt&gt; E &lt;tt class="docutils literal"&gt;func_num_args()&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;Algumas vezes não saberemos quantos parâmetros que foram enviados, logo, não é uma boa prática testar se existe algum valor definido nas primeiras posições com a função &lt;tt class="docutils literal"&gt;func_get_arg()&lt;/tt&gt;. Então, temos que o PHP nos fornece 2 outras funções para trabalharmos com a lista de parâmetros que está sendo enviada, são elas &lt;tt class="docutils literal"&gt;func_get_arg()&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;func_num_args()&lt;/tt&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function soma()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function soma()&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 &lt;span class="x"&gt;    $num = func_num_args();&lt;/span&gt;
 &lt;span class="x"&gt;    $args = func_get_args();&lt;/span&gt;
@@ -2237,7 +2237,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function soma(){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function soma(){&lt;/span&gt;
 
 &lt;span class="x"&gt;    $total = func_get_arg(0) + func_get_arg(1);&lt;/span&gt;
 
@@ -2274,113 +2274,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
 &lt;p&gt;Link oficial do site da &lt;a class="reference external" href="http://php.net/"&gt;linguagem PHP&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category><category term="curso de php"></category><category term="aula de php"></category><category term="eXcript"></category><category term="blog"></category></entry><entry><title>Sobrescrita de Funções em PHP</title><link href="http://excript.com/php/sobrescrita-funcao-php.html" rel="alternate"></link><published>2016-02-21T10:09:00-03:00</published><updated>2016-02-21T10:09:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-02-21:/php/sobrescrita-funcao-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nessa aula estudaremos a sobrescrita de funções em classes derivadas. Essa é uma das formas de trabalharmos com polimorfismo atribuindo a funções de mesmo nome funcionalidades diferentes e também, é uma excelente maneira para especializarmos funcionalidades nas subclasses.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# SOBREESCRITA DE FUNÇÕES&lt;/span&gt;
-
-&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
-&lt;span class="x"&gt;    private $nome;&lt;/span&gt;
-&lt;span class="x"&gt;    private …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nessa aula estudaremos a sobrescrita de funções em classes derivadas. Essa é uma das formas de trabalharmos com polimorfismo atribuindo a funções de mesmo nome funcionalidades diferentes e também, é uma excelente maneira para especializarmos funcionalidades nas subclasses.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# SOBREESCRITA DE FUNÇÕES&lt;/span&gt;
-
-&lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
-&lt;span class="x"&gt;    private $nome;&lt;/span&gt;
-&lt;span class="x"&gt;    private $sobrenome;&lt;/span&gt;
-
-&lt;span class="x"&gt;    public function getNome() : string&lt;/span&gt;
-&lt;span class="x"&gt;    {&lt;/span&gt;
-&lt;span class="x"&gt;        return $this-&amp;gt;nome;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-&lt;span class="x"&gt;    public function setNome(string $nome)&lt;/span&gt;
-&lt;span class="x"&gt;    {&lt;/span&gt;
-&lt;span class="x"&gt;        $this-&amp;gt;nome = $nome;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-&lt;span class="x"&gt;    public function getSobrenome() : string&lt;/span&gt;
-&lt;span class="x"&gt;    {&lt;/span&gt;
-&lt;span class="x"&gt;    return $this-&amp;gt;sobrenome;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-&lt;span class="x"&gt;    public function setSobrenome(string $sobrenome)&lt;/span&gt;
-&lt;span class="x"&gt;    {&lt;/span&gt;
-&lt;span class="x"&gt;        $this-&amp;gt;sobrenome = $sobrenome;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-
-&lt;span class="x"&gt;    public function getNomeCompleto() : string&lt;/span&gt;
-&lt;span class="x"&gt;    {&lt;/span&gt;
-&lt;span class="x"&gt;        return $this-&amp;gt;getNome() . &amp;quot; &amp;quot; . $this-&amp;gt;getSobrenome();&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;class PFisica extends Pessoa{&lt;/span&gt;
-
-&lt;span class="x"&gt;//    public function getNomeCompleto() : string&lt;/span&gt;
-&lt;span class="x"&gt;//    {&lt;/span&gt;
-&lt;span class="x"&gt;//        return &amp;quot;PFisica: {$this-&amp;gt;getNome()} {$this-&amp;gt;getSobrenome()}&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;//    }&lt;/span&gt;
-
-&lt;span class="x"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="veja-tambem"&gt;
-&lt;h2&gt;VEJA TAMBÉM&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/primeira-classe-php.html"&gt;Aula 91: Primeira Classe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/membro-de-classe-php.html"&gt;Aula 92: Primeira Classe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/criacao-objetos-php.html"&gt;Aula 93: Criação de Objetos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/acessando-membros-classe-php.html"&gt;Aula 94: Acessando Membros de Classe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/implementando-funcionalidades-classe-php.html"&gt;Aula 95: Implementando Funcionalidades na Classe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/pseudo-variavel-this-php.html"&gt;Aula 96: Pseudo variável $this&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/gerenciando-atributos-classe-php.html"&gt;Aula 97: Gerenciando atributos de Classe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/construtor-php.html"&gt;Aula 98: Construtor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/construtor-personalizado-php.html"&gt;Aula 99: Construtores Personalizados&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/destrutores-php.html"&gt;Aula 100: Destrutores&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/encapsulamento-php.html"&gt;Aula 101: Encapsulamento I&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/encapsulamento-php-parte2.html"&gt;Aula 102: Encapsulamento II&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/heranca-php.html"&gt;Aula 103: Herança I&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/heranca-php-ii.html"&gt;Aula 104: Herança II&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="links-externos"&gt;
-&lt;h2&gt;LINKS EXTERNOS&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://php.net/manual/pt_BR/language.oop5.basic.php"&gt;Classes em PHP (pt_BR)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://code.tutsplus.com/pt/tutorials/object-oriented-php-for-beginners--net-12762"&gt;Objetos e Classes (pt_BR)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://en.wikibooks.org/wiki/PHP_Programming/Classes"&gt;PHP Programming: Classe (en)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="oo"></category><category term="orientação a objetos"></category><category term="modificadores"></category><category term="modificador de acesso"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="herança"></category><category term="subclasse"></category><category term="superclasse"></category><category term="polimorfismo"></category></entry><entry><title>Funções Modificadoras em PHP</title><link href="http://excript.com/php/funcoes-modificadoras-php.html" rel="alternate"></link><published>2016-02-18T21:52:00-02:00</published><updated>2016-02-18T21:52:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-02-18:/php/funcoes-modificadoras-php.html</id><summary type="html">
+</content><category term="curso"></category><category term="php"></category><category term="curso de php"></category><category term="aula de php"></category><category term="eXcript"></category><category term="blog"></category></entry><entry><title>Funções Modificadoras em PHP</title><link href="http://excript.com/php/funcoes-modificadoras-php.html" rel="alternate"></link><published>2016-02-18T21:52:00-02:00</published><updated>2016-02-18T21:52:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-02-18:/php/funcoes-modificadoras-php.html</id><summary type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -2396,7 +2290,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# FUNÇÕES DE ACESSO&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;# FUNÇÕES DE ACESSO&lt;/span&gt;
 
 &lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 
@@ -2421,7 +2315,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# FUNÇÕES DE ACESSO&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;# FUNÇÕES DE ACESSO&lt;/span&gt;
 
 &lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 
@@ -2482,7 +2376,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -2509,7 +2403,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# VISIBILIDADE DAS FUNÇÕES&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;# VISIBILIDADE DAS FUNÇÕES&lt;/span&gt;
 
 &lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
 
@@ -2532,7 +2426,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# VISIBILIDADE DAS FUNÇÕES&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;# VISIBILIDADE DAS FUNÇÕES&lt;/span&gt;
 
 &lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
 
@@ -2590,7 +2484,7 @@ Em outras palavras, iremos criar um objeto e ao mesmo tempo atribuir o mesmo (a 
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -2658,7 +2552,7 @@ private. - restring o acesso a classe em que esta contido&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# MODIFICADORES DE ACESSO I - public e private&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;# MODIFICADORES DE ACESSO I - public e private&lt;/span&gt;
 
 &lt;span class="x"&gt;class SuperClasse{&lt;/span&gt;
 &lt;span class="x"&gt;    public $publico = 0;&lt;/span&gt;
@@ -2707,7 +2601,7 @@ private. - restring o acesso a classe em que esta contido&lt;/p&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -2772,7 +2666,7 @@ private. - restring o acesso a classe em que esta contido&lt;/p&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -2835,7 +2729,7 @@ private. - restring o acesso a classe em que esta contido&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# ENCAPSULAMENTO&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;# ENCAPSULAMENTO&lt;/span&gt;
 
 &lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 
@@ -2875,7 +2769,7 @@ private. - restring o acesso a classe em que esta contido&lt;/p&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -2937,12 +2831,12 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;p&gt;O coletor de lixo, ou então, o &lt;tt class="docutils literal"&gt;Garbage Collector&lt;/tt&gt; é uma entidade especializada em remover os dados da memória que não estão mais sendo utilizados.&lt;/p&gt;
 &lt;p&gt;A utilização de um coletor de lixo simplifica o trabalho do programador e evitar a grande maioria dos problemas de software, até porque, fazer acesso a uma região de memória que foi desalocada pode ocasionar problemas bizarros e que são muito dificeis de serem depurados.&lt;/p&gt;
 &lt;p&gt;Então, pense no coletor de lixo como o agente responsavel em liberar toda e qualquer informação que não esteja mais em uso e principalmente, fazer todo esse trabalho de gerenciamento e averiguação de quais instâncias não estão mais em uso num bloco de instrução.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;unset($r);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;unset($r);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#DESTRUTORES&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#DESTRUTORES&lt;/span&gt;
 
 &lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 
@@ -2980,7 +2874,7 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -3029,13 +2923,13 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;div class="section" id="visibilidade-dos-construtores"&gt;
 &lt;h2&gt;VISIBILIDADE DOS CONSTRUTORES&lt;/h2&gt;
 &lt;p&gt;Se a visibilidade de um construtor não for definida, assume-se que o mesmo é público. Temos que o funcionamento da visibilidade dos construtores é igual a visibilidade dos métodos.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$p1 = new Pessoa(&amp;quot;João&amp;quot;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$p1 = new Pessoa(&amp;quot;João&amp;quot;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A utilização de construtores faz com que nossos objetos se tornem mais lógicos e acessíveis.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#CONSTRUTORES PERSONALIZADOS&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#CONSTRUTORES PERSONALIZADOS&lt;/span&gt;
 
 &lt;span class="x"&gt;class A{&lt;/span&gt;
 
@@ -3083,7 +2977,7 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -3145,7 +3039,7 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#CONSTRUTORES&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#CONSTRUTORES&lt;/span&gt;
 
 &lt;span class="x"&gt;class Pessoa{&lt;/span&gt;
 
@@ -3190,7 +3084,7 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/modificador-acesso-php.html"&gt;Aula 105: Modificadores de Acesso&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/visibilidade-funcao-php.html"&gt;Aula 106: Visibilidade das Funções&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/funcoes-modificadoras-php.html"&gt;Aula 107: Funções Modificadoras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://excript.com/php/sobrescrita-funcao-php.html"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="{filename}../curso-php/0108_sobrescrita-funcao-php.rst"&gt;Aula 108: Sobrescrita de Funções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="links-externos"&gt;
@@ -3247,7 +3141,7 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;p&gt;Este código utiliza também o código da aula anterior.&lt;/p&gt;
 &lt;p&gt;Nome do Arquivo: &lt;tt class="docutils literal"&gt;metodo_post.php&lt;/tt&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//var_dump($_GET);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//var_dump($_GET);&lt;/span&gt;
 
 &lt;span class="x"&gt;echo &amp;#39;Nome: &amp;#39; . ($_POST[&amp;#39;nome&amp;#39;] ?? &amp;#39;&amp;#39;) . &amp;quot;&amp;lt;br&amp;gt;&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;echo &amp;#39;E-mail …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
@@ -3268,7 +3162,7 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;p&gt;Este código utiliza também o código da aula anterior.&lt;/p&gt;
 &lt;p&gt;Nome do Arquivo: &lt;tt class="docutils literal"&gt;metodo_post.php&lt;/tt&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//var_dump($_GET);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//var_dump($_GET);&lt;/span&gt;
 
 &lt;span class="x"&gt;echo &amp;#39;Nome: &amp;#39; . ($_POST[&amp;#39;nome&amp;#39;] ?? &amp;#39;&amp;#39;) . &amp;quot;&amp;lt;br&amp;gt;&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;echo &amp;#39;E-mail: &amp;#39; . ($_POST[&amp;#39;email&amp;#39;] ?? &amp;#39;&amp;#39;) . &amp;quot;&amp;lt;br&amp;gt;&amp;quot;;&lt;/span&gt;
@@ -3349,7 +3243,7 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;/ul&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;form id=&amp;quot;formulario&amp;quot; action=&amp;quot;#&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;form id=&amp;quot;formulario&amp;quot; action=&amp;quot;#&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;    &amp;lt;fieldset&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;        &amp;lt;legend&amp;gt;Informações&amp;lt;/legend&amp;gt;&lt;/span&gt;
@@ -3380,7 +3274,7 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
 &lt;p&gt;formulario.php&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class="c1"&gt;#FORMULÁRIO HTML&lt;/span&gt;
 
@@ -3481,7 +3375,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#METODO GET&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#METODO GET&lt;/span&gt;
 
 &lt;span class="x"&gt;var_dump($_GET);&lt;/span&gt;
 
@@ -3543,7 +3437,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#STRING COM ASPA SIMPLES E DUPLA&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#STRING COM ASPA SIMPLES E DUPLA&lt;/span&gt;
 
 &lt;span class="x"&gt;#ASPAS SIMPLES&lt;/span&gt;
 &lt;span class="x"&gt;echo &amp;#39;eX\\\&amp;#39;cript …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
@@ -3562,7 +3456,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#STRING COM ASPA SIMPLES E DUPLA&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#STRING COM ASPA SIMPLES E DUPLA&lt;/span&gt;
 
 &lt;span class="x"&gt;#ASPAS SIMPLES&lt;/span&gt;
 &lt;span class="x"&gt;echo &amp;#39;eX\\\&amp;#39;cript&amp;#39;;# eX\&amp;#39;cript&lt;/span&gt;
@@ -3586,7 +3480,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#STRING DOUBLE-QUOTED&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#STRING DOUBLE-QUOTED&lt;/span&gt;
 
 &lt;span class="x"&gt;#concatenar a + b&lt;/span&gt;
 &lt;span class="x"&gt;#interpolar&lt;/span&gt;
@@ -3609,7 +3503,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#STRING DOUBLE-QUOTED&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#STRING DOUBLE-QUOTED&lt;/span&gt;
 
 &lt;span class="x"&gt;#concatenar a + b&lt;/span&gt;
 &lt;span class="x"&gt;#interpolar&lt;/span&gt;
@@ -3650,7 +3544,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#HEREDOC E NOWDOC&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#HEREDOC E NOWDOC&lt;/span&gt;
 
 &lt;span class="x"&gt;# HEREDOC == &amp;quot;&amp;quot;&lt;/span&gt;
 &lt;span class="x"&gt;$x = 50;&lt;/span&gt;
@@ -3676,7 +3570,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#HEREDOC E NOWDOC&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#HEREDOC E NOWDOC&lt;/span&gt;
 
 &lt;span class="x"&gt;# HEREDOC == &amp;quot;&amp;quot;&lt;/span&gt;
 &lt;span class="x"&gt;$x = 50;&lt;/span&gt;
@@ -3726,7 +3620,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#STRING&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#STRING&lt;/span&gt;
 
 &lt;span class="x"&gt;$str = &amp;quot;abc&amp;quot;;&lt;/span&gt;
 
@@ -3750,7 +3644,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#STRING&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#STRING&lt;/span&gt;
 
 &lt;span class="x"&gt;$str = &amp;quot;abc&amp;quot;;&lt;/span&gt;
 
@@ -3781,7 +3675,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class="c1"&gt;#====================&lt;/span&gt;
 &lt;span class="c1"&gt;#  == eXcript.com ==&lt;/span&gt;
@@ -3815,7 +3709,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class="c1"&gt;#====================&lt;/span&gt;
 &lt;span class="c1"&gt;#  == eXcript.com ==&lt;/span&gt;
@@ -3867,7 +3761,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;h2&gt;ARGUMENTOS POR REFERÊNCIA&lt;/h2&gt;
 &lt;p&gt;Quando definimos uma variável como sendo argumento de uma função, ocorre que o valor contido nessa variável é copiado para a variável-parâmetro da função. Na maior parte das vezes esse tipo de funcionamento é o ideal, porém, se estivermos trabalhando com um Array que contenha por exemplo, 100.000 elementos, teremos uma situação em que ao invocarmos a função todos os itens desse Array serão copiados para a variável-parâmetro.&lt;/p&gt;
 &lt;p&gt;A linguagem nos disponibiliza uma forma de passarmos um parâmetro enviando o endereço de uma variável ao invés de passarmos uma cópia do valor de uma variável. Ao passarmos o endereço de uma variável teremos uma situação em que todas as ações que forem feitas nessa variável irão alterar a estrutura original.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$a = [1,2,3];&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$a = [1,2,3];&lt;/span&gt;
 &lt;span class="x"&gt;$b = $a;&lt;/span&gt;
 
 &lt;span class="x"&gt;$a[1] = 5;&lt;/span&gt;
@@ -3878,7 +3772,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$a = [1,2,3];&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$a = [1,2,3];&lt;/span&gt;
 &lt;span class="x"&gt;$b = &amp;amp;$a;&lt;/span&gt;
 
 &lt;span class="x"&gt;$a[1] = 5;&lt;/span&gt;
@@ -3903,7 +3797,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function cubo($num){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function cubo($num){&lt;/span&gt;
 
 &lt;span class="x"&gt;    $x = ($num * $num * $num);&lt;/span&gt;
 
@@ -3929,7 +3823,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function cubo($num){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function cubo($num){&lt;/span&gt;
 
 &lt;span class="x"&gt;    $x = ($num * $num * $num);&lt;/span&gt;
 
@@ -3956,7 +3850,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;div class="section" id="retornando-valores"&gt;
 &lt;h2&gt;RETORNANDO VALORES&lt;/h2&gt;
 &lt;p&gt;Para retornarmos um valor, basta passarmos o mesmo através da palavra-chave &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;. Após o uso da instrução &lt;tt class="docutils literal"&gt;return&lt;/tt&gt; a função é finalizada e o valor definido retornado.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function soma()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function soma()&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 &lt;span class="x"&gt;    $num …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -3975,7 +3869,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;div class="section" id="retornando-valores"&gt;
 &lt;h2&gt;RETORNANDO VALORES&lt;/h2&gt;
 &lt;p&gt;Para retornarmos um valor, basta passarmos o mesmo através da palavra-chave &lt;tt class="docutils literal"&gt;return&lt;/tt&gt;. Após o uso da instrução &lt;tt class="docutils literal"&gt;return&lt;/tt&gt; a função é finalizada e o valor definido retornado.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function soma()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function soma()&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 &lt;span class="x"&gt;    $num = func_num_args();&lt;/span&gt;
 &lt;span class="x"&gt;    $args = func_get_args();&lt;/span&gt;
@@ -3992,7 +3886,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function media(...$valores){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function media(...$valores){&lt;/span&gt;
 
 &lt;span class="x"&gt;    $total = array_sum($valores);&lt;/span&gt;
 &lt;span class="x"&gt;    $total = $total / count($valores);&lt;/span&gt;
@@ -4048,7 +3942,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;div class="section" id="escopo-de-funcao"&gt;
 &lt;h2&gt;ESCOPO DE FUNÇÃO&lt;/h2&gt;
 &lt;p&gt;O primeiro nível de escopo é o escopo de variáveis. É comum chamarmos o escopo de funções como escopo local, logo, tudo que for declarado dentro de uma função será desalocado no momento em que está finalizar a execução.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function funcEstudo(){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function funcEstudo(){&lt;/span&gt;
 &lt;span class="x"&gt;    $valor1 = 10;&lt;/span&gt;
 &lt;span class="x"&gt;    $valor2 = 16;&lt;/span&gt;
 &lt;span class="x"&gt;    $total = $valor1 + $valor2;&lt;/span&gt;
@@ -4059,7 +3953,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;span class="x"&gt;echo $total;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O código acima se executado, levantará uma exceção dizendo que a variável $total não existe. Então, como regra geral, tudo que acontecer dentro de uma função será finalizado com esta.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = &amp;#39;Fala&amp;#39;; // global $x&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$x = &amp;#39;Fala&amp;#39;; // global $x&lt;/span&gt;
 &lt;span class="x"&gt;function funcaoX()&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 &lt;span class="x"&gt;    global $x;&lt;/span&gt;
@@ -4070,13 +3964,13 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;span class="x"&gt;funcaoX();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Uma outra forma de acesso a variável &lt;tt class="docutils literal"&gt;$x&lt;/tt&gt; é utilizando o array &lt;tt class="docutils literal"&gt;$GLOBALS&lt;/tt&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$GLOBALS[&amp;#39;x&amp;#39;] .= &amp;#39; World&amp;#39;; // change global $x&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$GLOBALS[&amp;#39;x&amp;#39;] .= &amp;#39; World&amp;#39;; // change global $x&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;AS VARIÁVEIS NÃO SÃO DESTRUÍDAS AO TÉRMINO DO BLOCO DE INSTRUÇÃO!!! ALTERAR VÍDEO AULA!!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$testando = 10;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$testando = 10;&lt;/span&gt;
 &lt;span class="x"&gt;$a = 10;&lt;/span&gt;
 &lt;span class="x"&gt;$b = 5;&lt;/span&gt;
 
@@ -4110,7 +4004,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function somaTudo(){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function somaTudo(){&lt;/span&gt;
 
 &lt;span class="x"&gt;    $lista = func_get_args();&lt;/span&gt;
 &lt;span class="x"&gt;    $qntd = func_num_args …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
@@ -4133,7 +4027,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function somaTudo(){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function somaTudo(){&lt;/span&gt;
 
 &lt;span class="x"&gt;    $lista = func_get_args();&lt;/span&gt;
 &lt;span class="x"&gt;    $qntd = func_num_args();&lt;/span&gt;
@@ -4185,7 +4079,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;div class="section" id="parametros-default"&gt;
 &lt;h2&gt;PARÂMETROS DEFAULT&lt;/h2&gt;
 &lt;p&gt;Um recurso bastante importante é a definição de valores &lt;tt class="docutils literal"&gt;default&lt;/tt&gt; para os parâmetros. Assim, caso o usuário não defina um valor de um parâmetro, este já terá um valor por padrão.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function login($user=&amp;quot;user&amp;quot;, $senha=&amp;quot;123&amp;quot;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function login($user=&amp;quot;user&amp;quot;, $senha=&amp;quot;123&amp;quot;)&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;user: &amp;quot; . $user;&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;senha: &amp;quot; . $senha;&lt;/span&gt;
@@ -4195,7 +4089,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function login($user=&amp;quot;root&amp;quot;, $key=&amp;quot;123&amp;quot;){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function login($user=&amp;quot;root&amp;quot;, $key=&amp;quot;123&amp;quot;){&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;user = &amp;quot; . $user;&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;key = &amp;quot; . $key;&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
@@ -4240,19 +4134,19 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="parametros-versus-argumentos"&gt;
 &lt;h2&gt;PARÂMETROS versus ARGUMENTOS&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function soma($a, $b)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function soma($a, $b)&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 &lt;span class="x"&gt;    $x = $a + $b;&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;A soma dos parâmetros é: &amp;quot; . $x;&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Agora, ao invocarmos a função &lt;tt class="docutils literal"&gt;soma()&lt;/tt&gt; devemos passar 2 valores e então, estes serão somados.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;soma(10, 20);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;soma(10, 20);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function soma($num1, $num2){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function soma($num1, $num2){&lt;/span&gt;
 
 &lt;span class="x"&gt;    $total = $num1 + $num2;&lt;/span&gt;
 
@@ -4300,7 +4194,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;p&gt;Para declararmos uma função utilizamos a palavra reservada &lt;tt class="docutils literal"&gt;function&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;A nomenclatura das funções segue as mesmas regras de nomenclatura das variáveis.&lt;/p&gt;
 &lt;p&gt;É uma boa prática que o nome da função seja composta pela primeira letra de cada palavra em maiúscula, salvo a primeira palavra.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function minhaFunc()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function minhaFunc()&lt;/span&gt;
 &lt;span class="x"&gt;{&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;Fala galera!!&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
@@ -4309,13 +4203,13 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;div class="section" id="invocando-funcoes"&gt;
 &lt;h2&gt;INVOCANDO FUNÇÕES&lt;/h2&gt;
 &lt;p&gt;Durante o nosso estudo, trabalhamos com várias funções, logo, não há muito segredo sobre como invocar uma função.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;minhaFunc();&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;minhaFunc();&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Toda vez que invocarmos uma função devemos abrir e fechar parentêsis após o nome da mesma, indiferente se houver parâmetros a serem enviados ou não.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#FUNÇÕES&lt;/span&gt;
 
 &lt;span class="x"&gt;function minhaFunc(){&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;Fala galera!&amp;quot;;&lt;/span&gt;
@@ -4340,7 +4234,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#VERIFICA SE A ESTRUTURA É UMA ARRAY&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#VERIFICA SE A ESTRUTURA É UMA ARRAY&lt;/span&gt;
 
 &lt;span class="x"&gt;echo &amp;quot;FUNÇÃO: is_array() - &amp;quot; . &amp;quot;\n&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;echo &amp;quot;Valor = [] - &amp;quot; . is_array( [] ) . &amp;quot;\n&amp;quot;;&lt;/span&gt;
@@ -4361,7 +4255,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#VERIFICA SE A ESTRUTURA É UMA ARRAY&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#VERIFICA SE A ESTRUTURA É UMA ARRAY&lt;/span&gt;
 
 &lt;span class="x"&gt;echo &amp;quot;FUNÇÃO: is_array() - &amp;quot; . &amp;quot;\n&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;echo &amp;quot;Valor = [] - &amp;quot; . is_array( [] ) . &amp;quot;\n&amp;quot;;&lt;/span&gt;
@@ -4446,7 +4340,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;h2&gt;ARRAYS MULTIDIMENSIONAIS&lt;/h2&gt;
 &lt;p&gt;Array Multidimensional é uma estrutura que tem vinculado um outro Array. Podemos construir estruturas com quantas dimensões forem necessárias, porém, na maior parte das vezes trabalharemos com estruturas que tenham 2 dimensões, ou seja, estruturas que armazenam informações tabulares e que também são chamadas de Tabelas, ou então, Planilhas.&lt;/p&gt;
 &lt;p&gt;Estruturas multidimensionais em PHP também são representadas como Matrizes onde temos: Linhas * Colunas.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$jogo = array&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$jogo = array&lt;/span&gt;
 &lt;span class="x"&gt;(&lt;/span&gt;
 &lt;span class="x"&gt;    array(1, &amp;quot;Zé&amp;quot;, 11),&lt;/span&gt;
 &lt;span class="x"&gt;    array(2, &amp;quot;José&amp;quot;, 4),&lt;/span&gt;
@@ -4481,7 +4375,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$jogo = array&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$jogo = array&lt;/span&gt;
 &lt;span class="x"&gt;(&lt;/span&gt;
 &lt;span class="x"&gt;    array(1, &amp;quot;Zé&amp;quot;, 11),&lt;/span&gt;
 &lt;span class="x"&gt;    array(2, &amp;quot;José&amp;quot;, 4),&lt;/span&gt;
@@ -4499,7 +4393,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;div class="section" id="arrays-multidimensionais-contendo-estruturas-de-dados"&gt;
 &lt;h2&gt;ARRAYS MULTIDIMENSIONAIS CONTENDO ESTRUTURAS DE DADOS&lt;/h2&gt;
 &lt;p&gt;É bastante comum encontrarmos código que possuem Arrays associados a chaves e estes, estão representando estruturas de informações que por exemplo, serão enviadas a um componente. A seguir, temos um código demonstrativo de como essas estruturas aparecerão.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = [&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$x = [&lt;/span&gt;
 &lt;span class="x"&gt;        &amp;quot;array1&amp;quot; =&amp;gt; [&lt;/span&gt;
 &lt;span class="x"&gt;            &amp;quot;aaa&amp;quot;=&amp;gt;100,&lt;/span&gt;
 &lt;span class="x"&gt;            &amp;quot;bbb&amp;quot;=&amp;gt;200,&lt;/span&gt;
@@ -4517,7 +4411,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#   | ID | NOME | PONTOS |&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#   | ID | NOME | PONTOS |&lt;/span&gt;
 &lt;span class="x"&gt;#   | 1  | Zé   | 11     |&lt;/span&gt;
 &lt;span class="x"&gt;#   | 2  | José | 4      |&lt;/span&gt;
 &lt;span class="x"&gt;#   | 3  | Zéca | 22     |&lt;/span&gt;
@@ -4572,10 +4466,10 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;p&gt;Arrays associativos são estruturas onde cada elemento é identificado por uma chave única, entao, é indiferente se estamos trabalhando com Arrays Indexados ou Arrays Multidimensionais, ambos serão por definição, estruturas associativas.&lt;/p&gt;
 &lt;p&gt;As estruturas Associativas do PHP podem vincular qualquer tipo de informação, seja ela um objeto, uma estrutura binária, um Array Multidimensional ou mesmo uma simples string contendo uma URL.&lt;/p&gt;
 &lt;p&gt;Os Arrays podem conter chaves e valores dos mais variados tipos numa mesma estrutura, até porque, não existe Arrays tipados. Todas as estruturas são pode definição heterogeneas.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$pontos = array(&amp;quot;Zé&amp;quot;=&amp;gt;&amp;quot;11&amp;quot;, &amp;quot;José&amp;quot;=&amp;gt;&amp;quot;4&amp;quot;, &amp;quot;Zéca&amp;quot;=&amp;gt;&amp;quot;22&amp;quot;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$pontos = array(&amp;quot;Zé&amp;quot;=&amp;gt;&amp;quot;11&amp;quot;, &amp;quot;José&amp;quot;=&amp;gt;&amp;quot;4&amp;quot;, &amp;quot;Zéca&amp;quot;=&amp;gt;&amp;quot;22&amp;quot;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima criamos um Array Associativo e vinculamos ao nome de cada participante de um jogo a sua pontuação. Como visto, construimos uma lista vinculando valores inteiros a uma String.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$pontos = array(&amp;quot;Zé&amp;quot;=&amp;gt;&amp;quot;11&amp;quot;, &amp;quot;José&amp;quot;=&amp;gt;&amp;quot;4&amp;quot;, &amp;quot;Zéca&amp;quot;=&amp;gt;&amp;quot;22&amp;quot;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$pontos = array(&amp;quot;Zé&amp;quot;=&amp;gt;&amp;quot;11&amp;quot;, &amp;quot;José&amp;quot;=&amp;gt;&amp;quot;4&amp;quot;, &amp;quot;Zéca&amp;quot;=&amp;gt;&amp;quot;22&amp;quot;);&lt;/span&gt;
 
 &lt;span class="x"&gt;echo &amp;quot;Pontos do Zé: &amp;quot;.$pontos[&amp;quot;Zé&amp;quot;].&amp;quot;&amp;lt;br/&amp;gt;&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;echo &amp;quot;Pontos do José: &amp;quot;.$pontos[&amp;quot;José&amp;quot;].&amp;quot;&amp;lt;br/&amp;gt;&amp;quot;;&lt;/span&gt;
@@ -4590,7 +4484,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;div class="section" id="listas-associativas-heterogeneas"&gt;
 &lt;h2&gt;LISTAS ASSOCIATIVAS HETEROGENEAS&lt;/h2&gt;
 &lt;p&gt;Uma lista heterogenea seria algo do gênero:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$pontos = array(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$pontos = array(&lt;/span&gt;
 &lt;span class="x"&gt;    &amp;quot;url&amp;quot;=&amp;gt;&amp;quot;excript.com/&amp;quot;,&lt;/span&gt;
 &lt;span class="x"&gt;    404=&amp;gt;&amp;quot;excript.com/error/&amp;quot;,&lt;/span&gt;
 &lt;span class="x"&gt;    301=&amp;gt;&amp;quot;excript.com/error301/&amp;quot;,&lt;/span&gt;
@@ -4600,7 +4494,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#ARRAYS ASSOCIATIVOS&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#ARRAYS ASSOCIATIVOS&lt;/span&gt;
 
 &lt;span class="x"&gt;$pontos = [&amp;quot;Zé&amp;quot;=&amp;gt;11, &amp;quot;José&amp;quot;=&amp;gt;4, &amp;quot;Zéca&amp;quot;=&amp;gt;22];&lt;/span&gt;
 
@@ -4652,7 +4546,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#ITERAÇÃO E ALTERAÇÃO DOS VALORES&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#ITERAÇÃO E ALTERAÇÃO DOS VALORES&lt;/span&gt;
 
 &lt;span class="x"&gt;$nums = range(0, 10);&lt;/span&gt;
 &lt;span class="x"&gt;//print_r($nums);&lt;/span&gt;
@@ -4701,7 +4595,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#ESTRUTURA FOREACH II&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#ESTRUTURA FOREACH II&lt;/span&gt;
 
 &lt;span class="x"&gt;$lista = [&amp;quot;Domingo&amp;quot;, &amp;quot;Segunda&amp;quot;, &amp;quot;Terça&amp;quot;, &amp;quot;Quarta&amp;quot;, &amp;quot;Quinta&amp;quot;, &amp;quot;Sexta&amp;quot;, &amp;quot;Sabado&amp;quot;];&lt;/span&gt;
 
@@ -4747,7 +4641,7 @@ Essa estrutura, além de melhorar a legibilidade do código, também evita algun
 &lt;p&gt;Com a estrutura &lt;cite&gt;foreach&lt;/cite&gt; temos acesso total aos elementos, da mesma forma como teríamos se estivessemos utilizando a estrutura &lt;cite&gt;for&lt;/cite&gt; normal.
 Então, temos que o laço percorrerá todos elementos e a cada ciclo será definido o próximo elemento contido na estrutura que está sendo iterada.&lt;/p&gt;
 &lt;p&gt;Então, temos que pensar na estrutura &lt;cite&gt;foreach&lt;/cite&gt; da seguinte maneira: &amp;quot;a cada elemento do array, execute o bloco definido&amp;quot;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$lista = array(&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$lista = array(&lt;/span&gt;
 &lt;span class="x"&gt;    0 =&amp;gt; &amp;#39;par&amp;#39;,&lt;/span&gt;
 &lt;span class="x"&gt;    1 =&amp;gt; &amp;#39;impar&amp;#39;,&lt;/span&gt;
 &lt;span class="x"&gt;    2 =&amp;gt; &amp;#39;par&amp;#39;,&lt;/span&gt;
@@ -4806,7 +4700,7 @@ Então, temos que o laço percorrerá todos elementos e a cada ciclo será defin
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#ESTRUTURA FOREACH&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#ESTRUTURA FOREACH&lt;/span&gt;
 
 &lt;span class="x"&gt;$lista = [&amp;quot;Domingo&amp;quot;, &amp;quot;Segunda&amp;quot;, &amp;quot;Terça&amp;quot;, &amp;quot;Quarta&amp;quot;, &amp;quot;Quinta&amp;quot;, &amp;quot;Sexta&amp;quot;, &amp;quot;Sabado&amp;quot;];&lt;/span&gt;
 
@@ -4856,7 +4750,7 @@ Até porque, nós temos uma variável contadadora, a quantidade de …&lt;/p&gt;
 Até porque, nós temos uma variável contadadora, a quantidade de elementos contido na estrutura e a cada ciclo, a variável contadora é incrementada fazendo com que o nosso laço percorra todos os elementos do nosso Array.
 Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos suscetíveis a erros.&lt;/p&gt;
 &lt;p&gt;A melhor maneira para iterarmos uma coleção de elementos é pela estrutura ..foreach.., ou seja, uma estrutura de repetição ..for.. especializada em percorrer todos elementos de uma estrutura ..Array...&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$lista = [&amp;quot;Domingo&amp;quot;, &amp;quot;Segunda&amp;quot;, &amp;quot;Terça&amp;quot;, &amp;quot;Quarta&amp;quot;, &amp;quot;Quinta&amp;quot;, &amp;quot;Sexta&amp;quot;, &amp;quot;Sabado&amp;quot;];&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$lista = [&amp;quot;Domingo&amp;quot;, &amp;quot;Segunda&amp;quot;, &amp;quot;Terça&amp;quot;, &amp;quot;Quarta&amp;quot;, &amp;quot;Quinta&amp;quot;, &amp;quot;Sexta&amp;quot;, &amp;quot;Sabado&amp;quot;];&lt;/span&gt;
 &lt;span class="x"&gt;for($x=0; $x&amp;lt;count($lista); $x++){&lt;/span&gt;
 &lt;span class="x"&gt;    echo $lista[$x] . &amp;quot;\n&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;}&lt;/span&gt;
@@ -4865,7 +4759,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;div class="section" id="quantidade-de-elementos-num-array"&gt;
 &lt;h2&gt;QUANTIDADE DE ELEMENTOS NUM ARRAY&lt;/h2&gt;
 &lt;p&gt;Para sabermos quantos itens estão contidos num Array, temos a disposição a função ..count()... Basta invocarmos a função passando como parâmetro o Array que desejamos conhecer a quantidade de elementos para que seja retornado o montante.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$arr = [&amp;quot;aaa&amp;quot;, &amp;quot;bbb&amp;quot;, &amp;quot;ccc&amp;quot;];&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$arr = [&amp;quot;aaa&amp;quot;, &amp;quot;bbb&amp;quot;, &amp;quot;ccc&amp;quot;];&lt;/span&gt;
 &lt;span class="x"&gt;echo count($arr);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -4875,7 +4769,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#ITERANDO ARRAYS&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#ITERANDO ARRAYS&lt;/span&gt;
 
 &lt;span class="x"&gt;$lista = [&amp;quot;Domingo&amp;quot;, &amp;quot;Segunda&amp;quot;, &amp;quot;Terça&amp;quot;, &amp;quot;Quarta&amp;quot;, &amp;quot;Quinta&amp;quot;, &amp;quot;Sexta&amp;quot;, &amp;quot;Sabado&amp;quot;];&lt;/span&gt;
 &lt;span class="x"&gt;$qnt = count($lista);&lt;/span&gt;
@@ -4922,12 +4816,12 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = range(11, 1, 4);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$x = range(11, 1, 4);&lt;/span&gt;
 
 &lt;span class="x"&gt;$y = range(&amp;quot;a&amp;quot;, &amp;quot;z&amp;quot;, 2);&lt;/span&gt;
 &lt;span class="x"&gt;print_r($y);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$x = range(11, 1, 4);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$x = range(11, 1, 4);&lt;/span&gt;
 
 &lt;span class="x"&gt;$y = range(&amp;quot;a&amp;quot;, &amp;quot;z&amp;quot;, 2);&lt;/span&gt;
 &lt;span class="x"&gt;print_r($y);&lt;/span&gt;
@@ -4949,13 +4843,13 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="definindo-um-array"&gt;
 &lt;h2&gt;DEFININDO UM ARRAY&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$arr = [1,2,3]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$arr = [1,2,3]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="incluindo-elementos"&gt;
 &lt;h2&gt;INCLUINDO ELEMENTOS&lt;/h2&gt;
 &lt;p&gt;Para incluírmos novos elementos podemos utilizar uma das 2 definições a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$arr[] = 4;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$arr[] = 4;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="alterando-os-valores-dos-elementos"&gt;
@@ -4975,29 +4869,29 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="definindo-um-array"&gt;
 &lt;h2&gt;DEFININDO UM ARRAY&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$arr = [1,2,3]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$arr = [1,2,3]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="incluindo-elementos"&gt;
 &lt;h2&gt;INCLUINDO ELEMENTOS&lt;/h2&gt;
 &lt;p&gt;Para incluírmos novos elementos podemos utilizar uma das 2 definições a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$arr[] = 4;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$arr[] = 4;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="alterando-os-valores-dos-elementos"&gt;
 &lt;h2&gt;ALTERANDO OS VALORES DOS ELEMENTOS&lt;/h2&gt;
 &lt;p&gt;Da mesma forma em associamos um valor a uma chave numérica, é possível realizar alterações. Para isto, basta informarmos qual a chave que deve ter o seu valor alterado e então, definir o novo valor.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$cores[2] = &amp;quot;Preto&amp;quot;;&amp;lt;1&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$cores[2] = &amp;quot;Preto&amp;quot;;&amp;lt;1&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&amp;lt;1&amp;gt; Estamos dizendo que o elemento de índice igual a 2 deve ter o seu valor alterado para a string &amp;quot;Preto&amp;quot;.&lt;/p&gt;
 &lt;p&gt;Para imprimirmos os elementos contidos num Array podemos acessá-los diretamente ou então podemos iterar a coleção.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;echo &amp;quot;As cores são: $cores[0], $cores[1], $cores[2] and $cores[3]&amp;quot;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;echo &amp;quot;As cores são: $cores[0], $cores[1], $cores[2] and $cores[3]&amp;quot;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="removendo-elementos"&gt;
 &lt;h2&gt;REMOVENDO ELEMENTOS&lt;/h2&gt;
 &lt;p&gt;O PHP permite a remoção de qualquer elemento contido num Array, bastando somente passarmos o elemento a ser removido como parâmetro da função &lt;cite&gt;unset()&lt;/cite&gt;, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$arr = [&amp;quot;aaa&amp;quot;, &amp;quot;bbb&amp;quot;, &amp;quot;ccc&amp;quot;];&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$arr = [&amp;quot;aaa&amp;quot;, &amp;quot;bbb&amp;quot;, &amp;quot;ccc&amp;quot;];&lt;/span&gt;
 &lt;span class="x"&gt;unset($arr[1]);&amp;lt;1&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&amp;lt;1&amp;gt; Remove o elemento &amp;quot;bbb&amp;quot; do Array.&lt;/p&gt;
@@ -5005,7 +4899,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#Definindo o Array&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#Definindo o Array&lt;/span&gt;
 &lt;span class="x"&gt;$arr = [&amp;quot;zero&amp;quot;, &amp;quot;um&amp;quot;, &amp;quot;dois&amp;quot;, &amp;quot;três&amp;quot;, &amp;quot;quatro&amp;quot;];&lt;/span&gt;
 
 &lt;span class="x"&gt;#Adicionando elementos&lt;/span&gt;
@@ -5020,7 +4914,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 
 &lt;span class="x"&gt;print_r($arr);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#Definindo o Array&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#Definindo o Array&lt;/span&gt;
 &lt;span class="x"&gt;$lista = [&amp;quot;zero&amp;quot;, &amp;quot;um&amp;quot;, &amp;quot;dois&amp;quot;, &amp;quot;três&amp;quot;, &amp;quot;quatro&amp;quot;];&lt;/span&gt;
 
 &lt;span class="x"&gt;#Adicionando elementos&lt;/span&gt;
@@ -5071,24 +4965,24 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;p&gt;A primeira forma de manipulação do tipo Array do PHP que estudaremos é o tipo indexado, ou seja, a estrutura que associa uma número inteiro não negativo a um valor, onde o primeiro elemento é igual a zero.&lt;/p&gt;
 &lt;p&gt;Há 4 maneiras para criarmos e adicionarmos elementos a uma estrutura Arrays.&lt;/p&gt;
 &lt;p&gt;A primeira, é utilizando o nome do tipo e adicionando os elementos como sendo parâmetros.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$cores = array(&amp;quot;Azul&amp;quot;, &amp;quot;Amarelo&amp;quot;, &amp;quot;Verde&amp;quot;, &amp;quot;Branco&amp;quot;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$cores = array(&amp;quot;Azul&amp;quot;, &amp;quot;Amarelo&amp;quot;, &amp;quot;Verde&amp;quot;, &amp;quot;Branco&amp;quot;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A segunda maneira, é vinculando o elemento a chave numérica propriamente dita.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$cores[0] = &amp;quot;Azul&amp;quot;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$cores[0] = &amp;quot;Azul&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;$cores[1] = &amp;quot;Amarelo&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;$cores[2] = &amp;quot;Verde&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;$cores[3] = &amp;quot;Branco&amp;quot;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A terceira forma é adicionado os elementos sem informar o índice.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$cores[] = &amp;quot;Azul&amp;quot;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$cores[] = &amp;quot;Azul&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;$cores[] = &amp;quot;Amarelo&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;$cores[] = &amp;quot;Verde&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;$cores[] = &amp;quot;Branco&amp;quot;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A quarta forma é utilizando os colchetes.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$cores = [&amp;quot;Azul&amp;quot;,&amp;quot;Amarelo&amp;quot;,&amp;quot;Verde&amp;quot;,&amp;quot;Branco&amp;quot;];&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$cores = [&amp;quot;Azul&amp;quot;,&amp;quot;Amarelo&amp;quot;,&amp;quot;Verde&amp;quot;,&amp;quot;Branco&amp;quot;];&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//Primeira definição de Array Indexado&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//Primeira definição de Array Indexado&lt;/span&gt;
 &lt;span class="x"&gt;$cores = array(&amp;quot;Azul&amp;quot;, &amp;quot;Amarelo&amp;quot;, &amp;quot;Verde&amp;quot;, &amp;quot;Branco&amp;quot;);&lt;/span&gt;
 
 &lt;span class="x"&gt;//Segunda definição de Array Indexado&lt;/span&gt;
@@ -5108,7 +5002,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;span class="x"&gt;$cores4 = [&amp;quot;Azul&amp;quot;, &amp;quot;Amarelo&amp;quot;, &amp;quot;Verde&amp;quot;, &amp;quot;Branco&amp;quot;];&lt;/span&gt;
 &lt;span class="x"&gt;print_r($cores4);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//Primeira definição de Array Indexado&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//Primeira definição de Array Indexado&lt;/span&gt;
 &lt;span class="x"&gt;$cores = array(&amp;quot;Azul&amp;quot;, &amp;quot;Amarelo&amp;quot;, &amp;quot;Verde&amp;quot;, &amp;quot;Branco&amp;quot;);&lt;/span&gt;
 &lt;span class="x"&gt;//print_r($cores);&lt;/span&gt;
 
@@ -5175,7 +5069,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$a = array(1,2,3);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$a = array(1,2,3);&lt;/span&gt;
 
 &lt;span class="x"&gt;print_r($a);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -5241,7 +5135,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;div class="section" id="variaveis-variaveis"&gt;
 &lt;h2&gt;VARIÁVEIS VARIÁVEIS&lt;/h2&gt;
 &lt;p&gt;Em algumas implementações, é prático a utilização do que chamamos de &amp;quot;variáveis variáveis&amp;quot;, ou seja, variáveis que são criadas e utilizadas dinâmicamente e o seu nome é o valor de outra variável. A seguir, temos a definição de uma variável qualquer:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$var = &amp;quot;teste&amp;quot;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$var = &amp;quot;teste&amp;quot;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O código acima simplesmente vincula a &lt;tt class="docutils literal"&gt;string&lt;/tt&gt; &lt;tt class="docutils literal"&gt;teste&lt;/tt&gt; ao nome de variável &lt;tt class="docutils literal"&gt;$var&lt;/tt&gt;. Para declararmos uma variável variável nós utilizaremos o valor atribuido a variável &lt;tt class="docutils literal"&gt;$var&lt;/tt&gt; como o nome da nossa próxima variável. Logo, temos que o nome da primeira variável é igual a &lt;tt class="docutils literal"&gt;$var&lt;/tt&gt; e o nome da nossa segunda variável é &lt;tt class="docutils literal"&gt;$$var&lt;/tt&gt; ou então, &lt;tt class="docutils literal"&gt;$hello&lt;/tt&gt;. A ideia de variáveis variáveis é bastante simples: utilizar o valor de uma variável como sendo o nome de outra.&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
@@ -5249,7 +5143,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;li&gt;Atribuir um valor a variável&lt;/li&gt;
 &lt;li&gt;Utilizar o valor que foi atribuido a variável como uma espécie de chave para atribuir outro valor.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$varvar = &amp;quot;teste&amp;quot;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$varvar = &amp;quot;teste&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;$$varvar = 50;&lt;/span&gt;
 
 &lt;span class="x"&gt;echo $varvar . &amp;quot;\n&amp;quot;;&lt;/span&gt;
@@ -5259,7 +5153,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;/div&gt;
 &lt;div class="section" id="gerando-constantes-dinamicamente"&gt;
 &lt;h2&gt;GERANDO CONSTANTES DINÂMICAMENTE&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;define(&amp;quot;TESTE&amp;quot;, 10);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;define(&amp;quot;TESTE&amp;quot;, 10);&lt;/span&gt;
 &lt;span class="x"&gt;for($x=0; $x&amp;lt;5; $x++)&lt;/span&gt;
 &lt;span class="x"&gt;    define(&amp;quot;C&amp;quot;.$x, $x);&lt;/span&gt;
 &lt;span class="x"&gt;echo TESTE . &amp;quot;\n&amp;quot;;&lt;/span&gt;
@@ -5309,13 +5203,13 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;p&gt;Num comparativo performatico, temos que em algumas situações a definição com a instrução &lt;tt class="docutils literal"&gt;const&lt;/tt&gt; é executado mais rapidamente enquanto em outras situações, o uso da função &lt;tt class="docutils literal"&gt;define()&lt;/tt&gt; se mostra mais veloz.&lt;/p&gt;
 &lt;p&gt;A nomenclatura de constantes é igual a nomenclatura de variáveis e o que irá diferenciar é que as constantes não são precedidas pelo caractere &amp;quot;cifrão&amp;quot;. Ainda que não seja obrigatório, o nome de constantes deve ser composto somente por caracteres maiúsculos. A definição de constantes com caracteres maiúsculo é um padrão que vem de outras linguagens e assim, todo programador entende que uma referência com caracteres maiúsculas trata-se de um valor constante.&lt;/p&gt;
 &lt;p&gt;A definição da função &lt;tt class="docutils literal"&gt;define()&lt;/tt&gt; é a seguinte:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;define(&amp;lt;identificador&amp;gt;, &amp;lt;valor&amp;gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;define(&amp;lt;identificador&amp;gt;, &amp;lt;valor&amp;gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="verificando-se-uma-constante-existe"&gt;
 &lt;h2&gt;VERIFICANDO SE UMA CONSTANTE EXISTE&lt;/h2&gt;
 &lt;p&gt;É comum verificarmos antes de acessarmos uma constante se a mesma está definida, para isso, temos a função &lt;tt class="docutils literal"&gt;defined()&lt;/tt&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;if(defined(&amp;quot;TOTAL&amp;quot;))&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;if(defined(&amp;quot;TOTAL&amp;quot;))&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;Constante declarada.&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -5328,7 +5222,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;h2&gt;DEFININDO CONSTANTES COM A INSTRUÇÃO &lt;tt class="docutils literal"&gt;const&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;Uma outra forma para a declaração de constantes é através do uso da palavra reservada &lt;tt class="docutils literal"&gt;const&lt;/tt&gt;. É comum a utilização da instrução &lt;tt class="docutils literal"&gt;const&lt;/tt&gt; na definição de classe ou então, dentro de um namespace. Porém, isso é somente uma convenção, logo, pode-se utilizar a instrução &lt;tt class="docutils literal"&gt;const&lt;/tt&gt; para definir constantes onde bem entendermos.&lt;/p&gt;
 &lt;p&gt;A seguir estamos fazendo uso da instrução &lt;tt class="docutils literal"&gt;const&lt;/tt&gt; para declararmos uma constante.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;const VALOR = 100;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;const VALOR = 100;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="manipulando-variaveis-por-referencia"&gt;
@@ -5339,7 +5233,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;h2&gt;CONSTANTES MÁGICAS&lt;/h2&gt;
 &lt;p&gt;Chamamos de constantes mágicas a um grupo de constantes que tem por objetivo, retornar informaçõesn sobre a execução atual do código. Assim, temos que com as constantes mágicas, podemos obter por exemplo, o número da linha em que o script está executando, o nome da função, do namespace e outros valores.&lt;/p&gt;
 &lt;p&gt;Esse conjunto de funções tem por objetivo principal auxiliar na construção de ferramentas de diagnóstico de erros ou então, para outras tarefas administrativas.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;echo __LINE__ . PHP_EOL; &amp;lt;1&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;echo __LINE__ . PHP_EOL; &amp;lt;1&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;echo __FILE__ . PHP_EOL; &amp;lt;2&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;echo __DIR__ . PHP_EOL; &amp;lt;3&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;echo __FUNCTION . PHP_EOL; &amp;lt;4&amp;gt;&lt;/span&gt;
@@ -5357,7 +5251,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;define(&amp;quot;TESTE&amp;quot;, 10);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;define(&amp;quot;TESTE&amp;quot;, 10);&lt;/span&gt;
 &lt;span class="x"&gt;echo TESTE . &amp;quot;\n&amp;quot;;&lt;/span&gt;
 
 &lt;span class="x"&gt;for($x=0; $x&amp;lt;5; $x++)&lt;/span&gt;
@@ -5386,7 +5280,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#INSTRUÇÃO SWITCH&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#INSTRUÇÃO SWITCH&lt;/span&gt;
 
 &lt;span class="x"&gt;$num = 1;&lt;/span&gt;
 
@@ -5411,7 +5305,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#INSTRUÇÃO SWITCH&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#INSTRUÇÃO SWITCH&lt;/span&gt;
 
 &lt;span class="x"&gt;$num = 1;&lt;/span&gt;
 
@@ -5445,7 +5339,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -5473,7 +5367,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -5570,7 +5464,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES PARA MANIPULAR STRINGS&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#FUNÇÕES PARA MANIPULAR STRINGS&lt;/span&gt;
 
 &lt;span class="x"&gt;#FUNÇÃO - strlen() - QUANTIDADE DE CARACTES&lt;/span&gt;
 &lt;span class="x"&gt;$len = strlen(&amp;#39;123456abc&amp;#39;);&lt;/span&gt;
@@ -5590,7 +5484,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;#FUNÇÕES PARA MANIPULAR STRINGS&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;#FUNÇÕES PARA MANIPULAR STRINGS&lt;/span&gt;
 
 &lt;span class="x"&gt;#FUNÇÃO - strlen() - QUANTIDADE DE CARACTES&lt;/span&gt;
 &lt;span class="x"&gt;$len = strlen(&amp;#39;123456abc&amp;#39;);&lt;/span&gt;
@@ -5638,7 +5532,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;a&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;a&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><content type="html">
@@ -5657,7 +5551,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;a&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;a&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="php"></category></entry><entry><title>Operação Ternária em PHP</title><link href="http://excript.com/php/operacao-ternaria-php.html" rel="alternate"></link><published>2015-11-09T22:42:00-02:00</published><updated>2015-11-09T22:42:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-09:/php/operacao-ternaria-php.html</id><summary type="html">
@@ -5676,7 +5570,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//OPERAÇÃO TERNÁRIA&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//OPERAÇÃO TERNÁRIA&lt;/span&gt;
 
 &lt;span class="x"&gt;$opcao = False;&lt;/span&gt;
 
@@ -5701,7 +5595,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//OPERAÇÃO TERNÁRIA&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//OPERAÇÃO TERNÁRIA&lt;/span&gt;
 
 &lt;span class="x"&gt;$opcao = False;&lt;/span&gt;
 
@@ -5726,7 +5620,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//INSTRUÇÃO CONTINUE&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//INSTRUÇÃO CONTINUE&lt;/span&gt;
 
 &lt;span class="x"&gt;//NÚMEROS PARES DE 0 ATÉ 100&lt;/span&gt;
 
@@ -5749,7 +5643,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//INSTRUÇÃO CONTINUE&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//INSTRUÇÃO CONTINUE&lt;/span&gt;
 
 &lt;span class="x"&gt;//NÚMEROS PARES DE 0 ATÉ 100&lt;/span&gt;
 
@@ -5780,7 +5674,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//INSTRUÇÃO BREAK&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//INSTRUÇÃO BREAK&lt;/span&gt;
 
 &lt;span class="x"&gt;$i = 0;&lt;/span&gt;
 
@@ -5811,7 +5705,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//INSTRUÇÃO BREAK&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//INSTRUÇÃO BREAK&lt;/span&gt;
 
 &lt;span class="x"&gt;$i = 0;&lt;/span&gt;
 
@@ -5842,7 +5736,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -5864,7 +5758,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -5928,7 +5822,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//ESTRUTURA DE REPETIÇÃO FOR II&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//ESTRUTURA DE REPETIÇÃO FOR II&lt;/span&gt;
 
 &lt;span class="x"&gt;//INCREMENTO&lt;/span&gt;
 &lt;span class="x"&gt;for($x=0; $x&amp;lt;10; $x++){&lt;/span&gt;
@@ -5953,7 +5847,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//ESTRUTURA DE REPETIÇÃO FOR II&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//ESTRUTURA DE REPETIÇÃO FOR II&lt;/span&gt;
 
 &lt;span class="x"&gt;//INCREMENTO&lt;/span&gt;
 &lt;span class="x"&gt;for($x=0; $x&amp;lt;10; $x++){&lt;/span&gt;
@@ -6010,7 +5904,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//Operadores de Atribuição Compostos&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//Operadores de Atribuição Compostos&lt;/span&gt;
 
 &lt;span class="x"&gt;$num = 10;&lt;/span&gt;
 &lt;span class="x"&gt;while($num &amp;gt; 0){&lt;/span&gt;
@@ -6035,7 +5929,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//Operadores de Atribuição Compostos&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//Operadores de Atribuição Compostos&lt;/span&gt;
 
 &lt;span class="x"&gt;$num = 10;&lt;/span&gt;
 &lt;span class="x"&gt;while($num &amp;gt; 0){&lt;/span&gt;
@@ -6088,7 +5982,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;a&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;a&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </summary><content type="html">
@@ -6107,7 +6001,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;a&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;a&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="php"></category><category term="operador"></category><category term="operador de atribuição"></category><category term="operador de comparação"></category><category term="operador identico"></category></entry><entry><title>Script em Looping em PHP</title><link href="http://excript.com/php/script-looping-php.html" rel="alternate"></link><published>2015-10-11T19:24:00-03:00</published><updated>2015-10-11T19:24:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-11:/php/script-looping-php.html</id><summary type="html">
@@ -6126,7 +6020,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$num = 0;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$num = 0;&lt;/span&gt;
 
 &lt;span class="x"&gt;while($num &amp;lt; 100){&lt;/span&gt;
 &lt;span class="x"&gt;    $num = $num - 1;&lt;/span&gt;
@@ -6150,7 +6044,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$num = 0;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$num = 0;&lt;/span&gt;
 
 &lt;span class="x"&gt;while($num &amp;lt; 100){&lt;/span&gt;
 &lt;span class="x"&gt;    $num = $num - 1;&lt;/span&gt;
@@ -6174,7 +6068,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -6205,7 +6099,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -6275,7 +6169,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$conta = 11;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$conta = 11;&lt;/span&gt;
 &lt;span class="x"&gt;do{&lt;/span&gt;
 &lt;span class="x"&gt;    $conta = $conta + 1;&lt;/span&gt;
 &lt;span class="x"&gt;    echo $conta . &amp;quot;\n&amp;quot;;&lt;/span&gt;
@@ -6298,7 +6192,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$conta = 11;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$conta = 11;&lt;/span&gt;
 &lt;span class="x"&gt;do{&lt;/span&gt;
 &lt;span class="x"&gt;    $conta = $conta + 1;&lt;/span&gt;
 &lt;span class="x"&gt;    echo $conta . &amp;quot;\n&amp;quot;;&lt;/span&gt;
@@ -6321,7 +6215,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//ESTRUTURA DE REPETIÇÃO WHILE&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//ESTRUTURA DE REPETIÇÃO WHILE&lt;/span&gt;
 
 &lt;span class="x"&gt;//$num = 100;&lt;/span&gt;
 &lt;span class="x"&gt;//while($num &amp;gt; 0){&lt;/span&gt;
@@ -6341,7 +6235,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//ESTRUTURA DE REPETIÇÃO WHILE&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//ESTRUTURA DE REPETIÇÃO WHILE&lt;/span&gt;
 
 &lt;span class="x"&gt;//$num = 100;&lt;/span&gt;
 &lt;span class="x"&gt;//while($num &amp;gt; 0){&lt;/span&gt;
@@ -6372,7 +6266,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -6393,7 +6287,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -6445,7 +6339,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -6461,7 +6355,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -6519,7 +6413,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$num = 50;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$num = 50;&lt;/span&gt;
 
 &lt;span class="x"&gt;if(($num &amp;gt; 10)&amp;amp;&amp;amp;($num &amp;lt; 100)){&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;eh verdadeiro&amp;quot;;&lt;/span&gt;
@@ -6544,7 +6438,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$num = 50;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$num = 50;&lt;/span&gt;
 
 &lt;span class="x"&gt;if(($num &amp;gt; 10)&amp;amp;&amp;amp;($num &amp;lt; 100)){&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;eh verdadeiro&amp;quot;;&lt;/span&gt;
@@ -6589,7 +6483,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;/*&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;/*&lt;/span&gt;
 &lt;span class="x"&gt; * 1) APRESENTAR OS SLIDES&lt;/span&gt;
 &lt;span class="x"&gt; * 2) ESTUDAR ALGUMAS …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
@@ -6607,7 +6501,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;/*&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;/*&lt;/span&gt;
 &lt;span class="x"&gt; * 1) APRESENTAR OS SLIDES&lt;/span&gt;
 &lt;span class="x"&gt; * 2) ESTUDAR ALGUMAS CONDI��ES&lt;/span&gt;
 &lt;span class="x"&gt; * */&lt;/span&gt;
@@ -6674,7 +6568,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//aprofundando o estudo dos operadores relacionais&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//aprofundando o estudo dos operadores relacionais&lt;/span&gt;
 
 &lt;span class="x"&gt;echo &amp;quot;igualdade\n&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;var_dump(10==10);&lt;/span&gt;
@@ -6694,7 +6588,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//aprofundando o estudo dos operadores relacionais&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;//aprofundando o estudo dos operadores relacionais&lt;/span&gt;
 
 &lt;span class="x"&gt;echo &amp;quot;igualdade\n&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;var_dump(10==10);&lt;/span&gt;
@@ -6741,7 +6635,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -6762,7 +6656,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="x"&gt;&amp;lt;html lang=&amp;quot;pt-br&amp;quot;&amp;gt;&lt;/span&gt;
 
 &lt;span class="x"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -6841,26 +6735,26 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pt-br&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;html&lt;/span&gt; &lt;span class="na"&gt;lang=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pt-br&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;charset=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
 
     &lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="cp"&gt;        if(isset($_POST[&amp;#39;valor1&amp;#39;]))&lt;/span&gt;
 &lt;span class="cp"&gt;            echo $_POST[&amp;#39;valor1&amp;#39;];&lt;/span&gt;
 &lt;span class="cp"&gt;    ?&amp;gt;&lt;/span&gt;
 
-    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;form&lt;/span&gt; &lt;span class="na"&gt;method&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;input&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;valor1&amp;quot;&lt;/span&gt;  &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;input&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;form&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;form&lt;/span&gt; &lt;span class="na"&gt;method=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;post&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;valor1&amp;quot;&lt;/span&gt;  &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
 
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="php"></category></entry><entry><title>Tomada de Decisão - Estrutura else</title><link href="http://excript.com/php/tomada-decisao-estrutura-else.html" rel="alternate"></link><published>2015-10-06T11:48:00-03:00</published><updated>2015-10-06T11:48:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-06:/php/tomada-decisao-estrutura-else.html</id><summary type="html">
@@ -6879,7 +6773,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$idade = 50;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$idade = 50;&lt;/span&gt;
 
 &lt;span class="x"&gt;if($idade &amp;gt;= 18){&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;A idade é de uma pessoal de maior.&amp;quot;;&lt;/span&gt;
@@ -6904,7 +6798,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$idade = 50;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$idade = 50;&lt;/span&gt;
 
 &lt;span class="x"&gt;if($idade &amp;gt;= 18){&lt;/span&gt;
 &lt;span class="x"&gt;    echo &amp;quot;A idade é de uma pessoal de maior.&amp;quot;;&lt;/span&gt;
@@ -6929,7 +6823,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$num1 = 9;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$num1 = 9;&lt;/span&gt;
 &lt;span class="x"&gt;$num2 = 2;&lt;/span&gt;
 &lt;span class="x"&gt;$res = $num1 / $num2;&lt;/span&gt;
 &lt;span class="x"&gt;$resto = $num1 % $num2;&lt;/span&gt;
@@ -6950,7 +6844,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$num1 = 9;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$num1 = 9;&lt;/span&gt;
 &lt;span class="x"&gt;$num2 = 2;&lt;/span&gt;
 &lt;span class="x"&gt;$res = $num1 / $num2;&lt;/span&gt;
 &lt;span class="x"&gt;$resto = $num1 % $num2;&lt;/span&gt;
@@ -7001,7 +6895,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 //Booleans � todo tipo de infoma��o l�gica, ou seja, True ou False. Internamente, o tipo booleano � um inteiro, onde o valor True � representado pelo n�mero 1 e o valor False pelo n�mero 0. --&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$str = &amp;quot;eXcript&amp;quot;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$str = &amp;quot;eXcript&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;echo gettype($str);&lt;/span&gt;
 
 &lt;span class="x"&gt;echo &amp;quot;\n&amp;quot;;&lt;/span&gt;
@@ -7044,7 +6938,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 //Booleans � todo tipo de infoma��o l�gica, ou seja, True ou False. Internamente, o tipo booleano � um inteiro, onde o valor True � representado pelo n�mero 1 e o valor False pelo n�mero 0. --&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$str = &amp;quot;eXcript&amp;quot;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$str = &amp;quot;eXcript&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;echo gettype($str);&lt;/span&gt;
 
 &lt;span class="x"&gt;echo &amp;quot;\n&amp;quot;;&lt;/span&gt;
@@ -7104,7 +6998,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;p&gt;A &lt;strong&gt;Tomada de Decisão&lt;/strong&gt;, ou então, &lt;strong&gt;Estrutura Condicional&lt;/strong&gt;, é o julgamento de uma expressão lógica e a consequente decisão de qual bloco de código que deve ser executado. Essa é a maneira em que os nossos programas tomam decisões, no caos, sempre baseando-se em condições pré-determinadas.&lt;/p&gt;
 &lt;p&gt;Utilizamos a instrução &lt;strong&gt;if&lt;/strong&gt;, para verificar se uma condição é ou não verdadeira. Nós temos que &lt;strong&gt;if&lt;/strong&gt; do inglês, significa &lt;strong&gt;SE&lt;/strong&gt; ou então, &lt;strong&gt;CASO&lt;/strong&gt;. A instrução &lt;strong&gt;if&lt;/strong&gt; é a responsável por decidir que: se for verdadeiro, execute esse bloco de instrução, do contrário, não faça nada ou então, execute este outro bloco de instrução.&lt;/p&gt;
 &lt;p&gt;A seguir, nós temos a estrutura da instrução &lt;strong&gt;if&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;se( condição ){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;se( condição ){&lt;/span&gt;
 
 &lt;span class="x"&gt;}&lt;/span&gt;
 
@@ -7116,10 +7010,10 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;p&gt;Fato é, que com a instrução &lt;strong&gt;if&lt;/strong&gt; conseguimos manipular a execução dos nossos código, podendo desviar o fluxo de execução quando uma determinada condição for satisfeita.&lt;/p&gt;
 &lt;p&gt;Podemos dizer que o funcionamento da instrução &lt;strong&gt;if&lt;/strong&gt; se resume a avaliar a expressão contida entre os parêntesis. Se a condição for igual a &lt;strong&gt;True&lt;/strong&gt;, ou seja, se o valor avaliado for verdadeiro, o bloco de instrução que está definido pelo uso de um par de chaves será executado.&lt;/p&gt;
 &lt;p&gt;A leitura correta da instrução &lt;strong&gt;if&lt;/strong&gt; é:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;if( condição == true)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;if( condição == true)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O sinal de igual, seguido de outro sinal de igual, significa que estamos querendo verificar se o valor a esquerda é &lt;strong&gt;igual&lt;/strong&gt; ao valor da direita.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;if( 1&amp;gt;1 == true)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;if( 1&amp;gt;1 == true)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O exemplo acima deve ser lido da seguinte maneira:&lt;/p&gt;
 &lt;p&gt;SE o número 1 for maior do que o número 1, então execute o bloco definido a seguir.&lt;/p&gt;
@@ -7127,7 +7021,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class="nv"&gt;$x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -7152,7 +7046,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class="nv"&gt;$num1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="nv"&gt;$num2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -7177,7 +7071,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
     &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class="nv"&gt;$num1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="nv"&gt;$num2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -7250,7 +7144,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;p&gt;Todo valor, quando está sendo manipulado por um programa, estará contido numa variável. Assim, as variáveis são projetadas para manipularem valores.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;a&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;a&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 </content><category term="curso"></category><category term="php"></category></entry><entry><title>Variáveis em PHP</title><link href="http://excript.com/php/variavel-php.html" rel="alternate"></link><published>2015-04-15T21:55:00-03:00</published><updated>2015-04-15T21:55:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-04-15:/php/variavel-php.html</id><summary type="html">
@@ -7314,7 +7208,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$valor = &amp;quot;minha variavel&amp;quot;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;$valor = &amp;quot;minha variavel&amp;quot;;&lt;/span&gt;
 &lt;span class="x"&gt;echo $valor;&lt;/span&gt;
 
 &lt;span class="x"&gt;$num = 10;&lt;/span&gt;
@@ -7360,7 +7254,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;div class="section" id="indentacao"&gt;
 &lt;h2&gt;INDENTAÇÃO&lt;/h2&gt;
 &lt;p&gt;Indentaçao é o espaçamento da margem até determinada instrução. Um código indentado é um código que está contido numa estrutura hierárquica, onde cada nível se diferencia do outro pela quantidade de espaçamento da margem até a instrução, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
   &lt;span class="nv"&gt;$variavel1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
   &lt;span class="nv"&gt;$variavel2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
   &lt;span class="p"&gt;{&lt;/span&gt;
@@ -7372,7 +7266,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;p&gt;Acima temos um código onde declaramos e inicializamos 4 variáveis. As duas primeiras, ou seja, onde temos as marcações 1 e 2, contém um único espaçamento da margem até o primeiro caractere. Já, as duas últimas 3 e 4,  contém quatro caracteres, contando da margem até a declaração da variável.&lt;/p&gt;
 &lt;p&gt;Então, nós temos que as duas últimas declarações estão um nível a frente, logo, entende-se que estás estão contidas em um outro bloco de instruções.&lt;/p&gt;
 &lt;p&gt;Em PHP, não há a obrigatoriedade de manter o código indentado, porém, essa é uma boa prática de programação e assim, devemos adotar esse padrão. Do contrário, veja como é muito mais dificil de entender um código que não possui indentação:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="nv"&gt;$variavel1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nv"&gt;$variavel2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;;{&lt;/span&gt;&lt;span class="nv"&gt;$num1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nv"&gt;$num2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="nv"&gt;$variavel1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nv"&gt;$variavel2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;;{&lt;/span&gt;&lt;span class="nv"&gt;$num1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nv"&gt;$num2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O código acima funciona sem qualquer problema, até porque, cada instrução está sendo finalizando com um ponto e vírgula. Porém, como pode-se perceber, a legibilidade do código é muito mais complicada.&lt;/p&gt;
 &lt;p&gt;Temos que o primeiro e o segundo código apresentado desempenham a mesma função, porém, se tratando de legibilidade, o segundo código é muito mais dificil de ser interpretado por humanos e isso se deve pela única razão de o mesmo não estar devidamente indentado.&lt;/p&gt;
@@ -7426,20 +7320,20 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;div class="section" id="duas-barras"&gt;
 &lt;h2&gt;DUAS BARRAS - &lt;cite&gt;//&lt;/cite&gt;&lt;/h2&gt;
 &lt;p&gt;A primeira forma e a mais comum, é utilizando os caracteres &lt;cite&gt;//&lt;/cite&gt;. Essa é uma notação herdada do C e assim, a mais difundida dentre os programadores.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;// tudo o que estiver a frente não será interpretado&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;// tudo o que estiver a frente não será interpretado&lt;/span&gt;
 &lt;span class="x"&gt;// echo “não irá imprimir”;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="caractere-cerquilha"&gt;
 &lt;h2&gt;CARACTERE CERQUILHA - &lt;cite&gt;#&lt;/cite&gt;&lt;/h2&gt;
 &lt;p&gt;Outra forma, é a notação utilizando o caractere cerquilha, comumente chamado de Jogo da Velha. Essa é uma outra maneira de informarmos que uma única linha não deve ser interpretada, pelo interpretador.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;# qualquer caractere nessa linha será ignorado&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;# qualquer caractere nessa linha será ignorado&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="definicao-de-bloco-de-comentario"&gt;
 &lt;h2&gt;DEFINIÇÃO DE BLOCO DE COMENTÁRIO -  &lt;cite&gt;/*&lt;/cite&gt; ... &lt;cite&gt;*/&lt;/cite&gt;&lt;/h2&gt;
 &lt;p&gt;Por fim, temos a notação que proporciona a demarcação de um conjunto de linhas como sendo comentário. Logo, conseguimos rapdiamente demarcar toda uma região a fim de informar ao interpretador que estas linhas não devem ser interpretadas.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;/*&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;/*&lt;/span&gt;
 &lt;span class="x"&gt;Todos os caracteres contidos entre os caracteres /* e */ não será interpretado.&lt;/span&gt;
 
 &lt;span class="x"&gt;Então, podemos colocar a quantidade de texto que bem entendermos e este pode estar disposto em quantas linhas forem necessárias.&lt;/span&gt;
@@ -7519,7 +7413,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Ola, essa frase foi escrita através da função echo&amp;lt;br&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Essa é outra linha impressa com instrução echo.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -7565,7 +7459,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;p&gt;Logo, nós demarcamos o bloco indicando ao interpretador onde inicia as instruções PHP.&lt;/p&gt;
 &lt;p&gt;É interessante observar que a abertura da TAG PHP é obrigatória, porém, o seu fechamento não é. Isso foi uma particularidade implementada para que não ocorra do programar, quando distraído, coloque código fora do bloco de código PHP.&lt;/p&gt;
 &lt;p&gt;Dessa forma, foi estabelecido que somos obrigados a abrir a TAG PHP, porém, o fechamento é facultativo e irá variar de cada código e de cada programador.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Ola, sejam bem-vindos!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -7643,7 +7537,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;h2&gt;O CÓDIGO&lt;/h2&gt;
 &lt;p&gt;Como fazer o Hello World em PHP? Nessa aula iremos escrever nosso primeiro script em PHP, o famoso Hello World. Ainda que não tenhamos estudado os diversos conceitos para a realização desse programa, sem dúvida, não há maneira melhor para conseguirmos ter uma primeira impressão de como é um código em PHP.&lt;/p&gt;
 &lt;p&gt;A seguir, você tem o código que pasta colocar em qualquer arquivo com extensão .php e executar através de um browser um servidor que contenha o arquivo por você programado, que já será impresso na tela do navegador a frase &amp;quot;Hello World&amp;quot;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;echo &amp;quot;Hello World&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;echo &amp;quot;Hello World&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;PS: no exemplo acima não foi colocado as tags PHP devido a uma restrição do YouTube.&lt;/p&gt;
 &lt;/div&gt;

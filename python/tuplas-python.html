@@ -155,9 +155,6 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" >Primeira Aula de Python</a></td>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" >Como Instalar o Python no Windows</a></td>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" ></a></td>
-                        </tr><tr>
                             <td><a href="http://excript.com/python/caracteristica-python.html" >Características do Python</a></td>
                             <td><a href="http://excript.com/python/caracteristica-python.html" ></a></td>
                         </tr><tr>
@@ -387,18 +384,18 @@ eXcript            </a>
 É um equívoco pensar nas tuplas como listas constantes. As listas são destinadas a serem sequências homogêneas, enquanto que os Tuplas são estruturas de dados heterogêneas.
 Phillip J. Eby</blockquote>
 <p>Em outras palavras, ele disse que em uma lista, as informações, geralmente são de um mesmo tipo, por exemplo, uma lista de e-mails. Enquanto que numa tupla, os elementos são de tipos distintos, por exemplo, uma Tupla que contém o dia, o dia da semana, o mês e o ano.</p>
-<div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;10&quot;</span><span class="p">,</span> <span class="s2">&quot;segunda-feita&quot;</span><span class="p">,</span> <span class="s2">&quot;Fevereiro&quot;</span><span class="p">,</span> <span class="mi">2022</span><span class="p">]</span>
+<div class="highlight"><pre><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;10&quot;</span><span class="p">,</span> <span class="s">&quot;segunda-feita&quot;</span><span class="p">,</span> <span class="s">&quot;Fevereiro&quot;</span><span class="p">,</span> <span class="mi">2022</span><span class="p">]</span>
 </pre></div>
 <p>O que estudamos até o momento a respeito de listas, pode ser utilizado para manipular e controlar Tuplas, salvo a alteração da lista ou de seus elementos.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="s">&quot;y&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span>
-<span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="s">&quot;y&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="s2">&quot;x&quot;</span>
+<span class="s">&quot;x&quot;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="s2">&quot;c&quot;</span>
+<span class="s">&quot;c&quot;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
-<span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="p">(</span><span class="s">&#39;y&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 </pre></div>
 <ol class="arabic simple">
 <li>Uma Tupla é definida da mesma forma que uma lista, o que as diferencias, são os caracteres que as delimitam. Uma Lista, tem seus elementos delimitados por colchetes, enquanto que a Tupla, tem seus elementos delimitados por parêntesis.</li>
@@ -411,15 +408,15 @@ Phillip J. Eby</blockquote>
 <p>É comum diferenciarmos a lista da tupla pelo seus caracteres delimitadores. Por exemplo, os elementos de uma lista são delimitados por colchetes, enquanto que os elementos de uma tupla por parêntesis.</p>
 <p>Distinguir as estruturas pelo seus caracteres delimitadores não é um erro, porém, na documentação oficial do Python consta que uma tupla é declarada pela utilização do operador vírgula, e que é utilizado para separar os elementos.</p>
 <p>A única exceção é na declaração de tuplas vazias. No código a seguir iremos declarar algumas tuplas e adicionaremos comentários em cima de cada declaração.</p>
-<div class="highlight"><pre><span></span><span class="c1">#tupla declarada sem o uso de parentesis</span>
+<div class="highlight"><pre><span class="c">#tupla declarada sem o uso de parentesis</span>
 <span class="n">t1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
-<span class="c1">#tupla declarada com o uso de parentesis</span>
+<span class="c">#tupla declarada com o uso de parentesis</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-<span class="c1">#tupla com um único elemento</span>
+<span class="c">#tupla com um único elemento</span>
 <span class="n">t3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
 
-<span class="c1">#tupla vazia</span>
+<span class="c">#tupla vazia</span>
 <span class="n">t4</span> <span class="o">=</span> <span class="p">()</span>
 </pre></div>
 <p>Inicialmente declaramos as variáveis <code>t1</code> e <code>t2</code> e associamos a cada uma tupla contendo 3 elementos. Ambas declarações são identicas e possuem um mesmo resultado.</p>
@@ -433,20 +430,20 @@ Observe que é a vírgula que é realmente define uma tupla, não os parênteses
 <div class="section" id="o-tiplo-tuple">
 <h2>O TIPLO <code>tuple</code></h2>
 <p>No código a seguir, vamos obter o tipo reconhecido pelo Python.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">tuple</span><span class="s1">&#39;&gt;</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">tuple</span><span class="s">&#39;&gt;</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">tuple</span><span class="s1">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">tuple</span><span class="s">&#39;&gt;</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">tuple</span><span class="s1">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">tuple</span><span class="s">&#39;&gt;</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">tuple</span><span class="s1">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">tuple</span><span class="s">&#39;&gt;</span>
 </pre></div>
 <p>No código acima, definimos algumas estruturas e logo em seguida, verificamos o tipo reconhecido pelo Python, como podemos ver, em todos os casos, a estrutura reconhecida foi sendo a Tupla.</p>
 </div>
@@ -460,26 +457,26 @@ Observe que é a vírgula que é realmente define uma tupla, não os parênteses
 <p>Uma Tupla é uma estrutura que contém nenhum ou vários elementos. Os elementos de uma Tupla devem ser separados por vírgulas e podem ser delimitados por parêntesis. Uma sequência qualquer, onde os elementos estão separados por vírgula é reconhecido pela linguagem como sendo um tupla, mesmo que os elementos não estejam delimitados por parentesis.</p>
 <p>As tuplas são declaradas de maneira bastante semelhante as Listas, onde os elementos são separados pelo uso de vírgulas e ambas as estruturas são delimitadas por uma simbologia e esta acaba por definir a estrutura.</p>
 <p>No código abaixo, definiremos uma Tupla contendo alguns dias da semana.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">dias_da_semana</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;domingo&quot;</span><span class="p">,</span> <span class="s2">&quot;segunda&quot;</span><span class="p">,</span> <span class="s2">&quot;terça&quot;</span><span class="p">,</span> <span class="s2">&quot;quarta&quot;</span><span class="p">,</span> <span class="p">)</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">dias_da_semana</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;domingo&quot;</span><span class="p">,</span> <span class="s">&quot;segunda&quot;</span><span class="p">,</span> <span class="s">&quot;terça&quot;</span><span class="p">,</span> <span class="s">&quot;quarta&quot;</span><span class="p">,</span> <span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">dias_da_semana</span>
-<span class="p">(</span><span class="s2">&quot;domingo&quot;</span><span class="p">,</span> <span class="s2">&quot;segunda&quot;</span><span class="p">,</span> <span class="s2">&quot;terça&quot;</span><span class="p">,</span> <span class="s2">&quot;quarta&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="s">&quot;domingo&quot;</span><span class="p">,</span> <span class="s">&quot;segunda&quot;</span><span class="p">,</span> <span class="s">&quot;terça&quot;</span><span class="p">,</span> <span class="s">&quot;quarta&quot;</span><span class="p">)</span>
 </pre></div>
 <p>Podemos rapidamente perceber a enorme semelhança entre a definições de Listas e Tuplas.</p>
 <p>É possível declarar as Tuplas de maneira implícita e explicita, como temos no código a seguir:</p>
-<div class="highlight"><pre><span></span><span class="c1">#declaração explicita</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">t1</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="c">#declaração explicita</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t1</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t1</span>
-<span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">)</span>
 
-<span class="c1">#declaração implicita</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">t2</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="c">#declaração implicita</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t2</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t2</span>
-<span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">)</span>
 
-<span class="c1">#declaração implicita igual a declaração anterior</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">t3</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span>
+<span class="c">#declaração implicita igual a declaração anterior</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t3</span> <span class="o">=</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">t3</span>
-<span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">)</span>
 </pre></div>
 <p>No código acima, declaramos inicialmente uma Tupla com uso da notação explicita, isto é, passamos um String como parâmetro na inicialização da estrutura <cite>tuple</cite>. Em seguida, implementamos 2 códigos que possuem o mesmo resultado, utilizando assim, as 2 notação de <cite>tuple</cite> implicitadas da linguagem Python.</p>
 </div>

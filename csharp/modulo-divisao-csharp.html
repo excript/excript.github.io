@@ -238,14 +238,14 @@ eXcript            </a>
 <p>Matematicamente, há várias formas para obtermos a parte restante da divisão, porém, como essa é uma funcionalidade que possui bastante uso, foi definido um operador especial para esta operação.</p>
 <p>Fica definido entao, que o simbolo de porcentagem, <tt class="docutils literal">%</tt> é o <strong>Operador Módulo</strong>. E isso não é características do C#, mas sim, de todas linguagens que derivam do C.</p>
 <p>Então, do lado esquerdo, colocaremos o número a ser dividido, e ao lado direito, o divisor, como pode ser visto no código a seguir.</p>
-<div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="m">10</span> <span class="p">%</span> <span class="m">2</span><span class="p">);</span> <span class="err">#</span><span class="n">obtém</span> <span class="n">o</span> <span class="n">módulo</span> <span class="n">da</span> <span class="n">divisão</span> <span class="n">de</span> <span class="m">10</span> <span class="n">por</span> <span class="m">2</span>
+<div class="highlight"><pre><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="m">10</span> <span class="p">%</span> <span class="m">2</span><span class="p">);</span> <span class="err">#</span><span class="n">obtém</span> <span class="n">o</span> <span class="n">módulo</span> <span class="n">da</span> <span class="n">divisão</span> <span class="n">de</span> <span class="m">10</span> <span class="n">por</span> <span class="m">2</span>
 </pre></div>
 <p>No código acima, estamos dividindo o número 10 por 2 implicitamente com o uso do Operador Módulo <tt class="docutils literal">%</tt>, portanto, o resultado da expressão, será o resto da divisão.</p>
 </div>
 <div class="section" id="numeros-pares">
 <h2>NÚMEROS PARES</h2>
 <p>Uma das aplicações do módulo da divisão, e para a obtenção de por exemplo, números pares. Isso porque, todo número dividido por 2 que não tenha resto, será por definição, um número par. No código abaixo, implementamos um código que verifica se determinado numero e par.</p>
-<div class="highlight"><pre><span></span><span class="n">num</span> <span class="p">=</span> <span class="n">input</span><span class="p">(</span><span class="s">&quot;Digite um número: &quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">num</span> <span class="p">=</span> <span class="n">input</span><span class="p">(</span><span class="s">&quot;Digite um número: &quot;</span><span class="p">)</span>
 <span class="k">if</span><span class="p">(</span><span class="n">num</span> <span class="p">%</span> <span class="m">2</span> <span class="p">==</span> <span class="m">0</span><span class="p">):</span>
     <span class="n">print</span><span class="p">(</span><span class="s">&quot;Número par.&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -256,7 +256,7 @@ eXcript            </a>
 <div class="section" id="numeros-cheios-ou-numeros-redondos">
 <h2>NÚMEROS CHEIOS OU NÚMEROS REDONDOS</h2>
 <p>Uma outra utilidade simples, porém, importante, é saber se um determinado número é redondo, por exemplo: 100, 200, 500 e etc. Para isso, basta dividirmos o mesmo por 100 e compararmos o módulo com zero, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
+<div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
 
 <span class="n">num</span> <span class="p">=</span> <span class="n">input</span><span class="p">(</span><span class="s">&quot;Digite um número: &quot;</span><span class="p">)</span>
 <span class="k">if</span><span class="p">(</span><span class="n">num</span> <span class="p">%</span> <span class="m">100</span> <span class="p">==</span> <span class="m">0</span><span class="p">):</span>
@@ -273,7 +273,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
+<div class="highlight"><pre><span class="err">#</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="p">-</span><span class="m">8</span>
 
 <span class="n">print</span><span class="p">(</span><span class="m">3</span><span class="p">%</span><span class="m">2</span><span class="p">)</span>
 <span class="n">print</span><span class="p">(</span><span class="m">4</span><span class="p">%</span><span class="m">2</span><span class="p">)</span>

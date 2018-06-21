@@ -159,9 +159,6 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" >Primeira Aula de Python</a></td>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" >Como Instalar o Python no Windows</a></td>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" ></a></td>
-                        </tr><tr>
                             <td><a href="http://excript.com/python/caracteristica-python.html" >Características do Python</a></td>
                             <td><a href="http://excript.com/python/caracteristica-python.html" ></a></td>
                         </tr><tr>
@@ -385,13 +382,13 @@ eXcript            </a>
 <h2>INTRODUÇÃO</h2>
 <p>Para entendermos como o Python estabelece a relação entre 2 caracteres, precisamos entender alguns conceitos sobre o princípio da computação. Então, nessa aula, iremos estudar alguns conceitos que não estão relacionados diretamente a linguagem Python, e sim, a computação propriamente dita.</p>
 <p>A seguir, temos um código de &quot;degustação&quot;, onde as expressões serão o resultado da relação entre 2 caracteres.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;A&quot;</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;A&quot;</span> <span class="o">==</span> <span class="s">&quot;A&quot;</span>
 <span class="bp">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;b&quot;</span> <span class="o">==</span> <span class="s2">&quot;b&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;b&quot;</span> <span class="o">==</span> <span class="s">&quot;b&quot;</span>
 <span class="bp">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;a&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;c&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;a&quot;</span> <span class="o">&gt;</span> <span class="s">&quot;c&quot;</span>
 <span class="bp">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;C&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;a&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;C&quot;</span> <span class="o">&gt;</span> <span class="s">&quot;a&quot;</span>
 <span class="bp">False</span>
 </pre></div>
 </div>
@@ -404,149 +401,149 @@ eXcript            </a>
 <p><a class="reference external" href="https://docs.python.org/3/howto/unicode.html">Veja neste link uma explicação da relação do Python com o sistema UNICODE</a> .</p>
 <p>Por exemplo, a letra <tt class="docutils literal">A</tt> maiúscula recebe o código 65, a letra <tt class="docutils literal">B</tt> o código 66 e assim por diante. A letra <tt class="docutils literal">a</tt> minúscula, recebe o código 97, e a letra <tt class="docutils literal">b</tt> minúscula o código 98 e assim por diante.</p>
 <p>Esses valores serão utilizados, por exemplo, quando comparamos 2 <tt class="docutils literal">String</tt> distintas. Por exemplo, se digitar a seguinte expressão, qual o valor lógico retornado?</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;a&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;X&quot;</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="s">&quot;a&quot;</span> <span class="o">&gt;</span> <span class="s">&quot;X&quot;</span>
 <span class="bp">True</span>
 </pre></div>
 <p>Temos que o valor lógico retornado será <tt class="docutils literal">True</tt>, até porque, o código ASCII do caractere <tt class="docutils literal">a</tt> minúsculo (65) é maior do que o caractere <tt class="docutils literal">X</tt> maiúsculo.</p>
 <p>O Python disponibiliza 2 funções que são bastante uteis quando estamos trabalhando com o sistema ASCII. A primeira é a função <a class="reference external" href="https://docs.python.org/3/library/functions.html#ord">ord()</a> , que recebe uma letra como parâmetro e retorna o código ASCII da mesma. A segunda função, é a <a class="reference external" href="https://docs.python.org/3/library/functions.html#chr">chr()</a> , onde passamos o código ASCII e nos é retornado a respectiva letra.</p>
 <p>A seguir, temos 2 exemplos utilizando as funções builtin do Python <a class="reference external" href="https://docs.python.org/3/library/functions.html#ord">ord()</a> e <a class="reference external" href="https://docs.python.org/3/library/functions.html#chr">chr()</a>.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span>
 <span class="mi">97</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">97</span><span class="p">)</span>
-<span class="s1">&#39;a&#39;</span>
+<span class="s">&#39;a&#39;</span>
 </pre></div>
 <p>No exemplo acima, inicialmente, confirmamos que o código ASCII da letra <cite>a</cite> minúscula é 97. Em seguida, passamos o código 97 como argumento da função <cite>chr()</cite> e, como resposta, tivemos o caractere <cite>a</cite>.</p>
 </div>
 <div class="section" id="exemplo-imprimindo-a-tabela-ascii">
 <h2>EXEMPLO - IMPRIMINDO A TABELA ASCII</h2>
 <p>A seguir, temos um exemplo em que é impresso, na saída padrão, o código ASCII e a respectiva letra dos 122 primeiros caracteres.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">123</span><span class="p">):</span>
-    <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; - &quot;</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">123</span><span class="p">):</span>
+    <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; - &quot;</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
 
-<span class="s1">&#39;0 - </span><span class="se">\x00</span><span class="s1">&#39;</span>
-<span class="s1">&#39;1 - </span><span class="se">\x01</span><span class="s1">&#39;</span>
-<span class="s1">&#39;2 - </span><span class="se">\x02</span><span class="s1">&#39;</span>
-<span class="s1">&#39;3 - </span><span class="se">\x03</span><span class="s1">&#39;</span>
-<span class="s1">&#39;4 - </span><span class="se">\x04</span><span class="s1">&#39;</span>
-<span class="s1">&#39;5 - </span><span class="se">\x05</span><span class="s1">&#39;</span>
-<span class="s1">&#39;6 - </span><span class="se">\x06</span><span class="s1">&#39;</span>
-<span class="s1">&#39;7 - </span><span class="se">\x07</span><span class="s1">&#39;</span>
-<span class="s1">&#39;8 - </span><span class="se">\x08</span><span class="s1">&#39;</span>
-<span class="s1">&#39;9 - </span><span class="se">\t</span><span class="s1">&#39;</span>
-<span class="s1">&#39;10 - </span><span class="se">\n</span><span class="s1">&#39;</span>
-<span class="s1">&#39;11 - </span><span class="se">\x0b</span><span class="s1">&#39;</span>
-<span class="s1">&#39;12 - </span><span class="se">\x0c</span><span class="s1">&#39;</span>
-<span class="s1">&#39;13 - </span><span class="se">\r</span><span class="s1">&#39;</span>
-<span class="s1">&#39;14 - </span><span class="se">\x0e</span><span class="s1">&#39;</span>
-<span class="s1">&#39;15 - </span><span class="se">\x0f</span><span class="s1">&#39;</span>
-<span class="s1">&#39;16 - </span><span class="se">\x10</span><span class="s1">&#39;</span>
-<span class="s1">&#39;17 - </span><span class="se">\x11</span><span class="s1">&#39;</span>
-<span class="s1">&#39;18 - </span><span class="se">\x12</span><span class="s1">&#39;</span>
-<span class="s1">&#39;19 - </span><span class="se">\x13</span><span class="s1">&#39;</span>
-<span class="s1">&#39;20 - </span><span class="se">\x14</span><span class="s1">&#39;</span>
-<span class="s1">&#39;21 - </span><span class="se">\x15</span><span class="s1">&#39;</span>
-<span class="s1">&#39;22 - </span><span class="se">\x16</span><span class="s1">&#39;</span>
-<span class="s1">&#39;23 - </span><span class="se">\x17</span><span class="s1">&#39;</span>
-<span class="s1">&#39;24 - </span><span class="se">\x18</span><span class="s1">&#39;</span>
-<span class="s1">&#39;25 - </span><span class="se">\x19</span><span class="s1">&#39;</span>
-<span class="s1">&#39;26 - </span><span class="se">\x1a</span><span class="s1">&#39;</span>
-<span class="s1">&#39;27 - </span><span class="se">\x1b</span><span class="s1">&#39;</span>
-<span class="s1">&#39;28 - </span><span class="se">\x1c</span><span class="s1">&#39;</span>
-<span class="s1">&#39;29 - </span><span class="se">\x1d</span><span class="s1">&#39;</span>
-<span class="s1">&#39;30 - </span><span class="se">\x1e</span><span class="s1">&#39;</span>
-<span class="s1">&#39;31 - </span><span class="se">\x1f</span><span class="s1">&#39;</span>
-<span class="s1">&#39;32 -  &#39;</span>
-<span class="s1">&#39;33 - !&#39;</span>
-<span class="s1">&#39;34 - &quot;&#39;</span>
-<span class="s1">&#39;35 - #&#39;</span>
-<span class="s1">&#39;36 - $&#39;</span>
-<span class="s1">&#39;37 - %&#39;</span>
-<span class="s1">&#39;38 - &amp;&#39;</span>
-<span class="s2">&quot;39 - &#39;&quot;</span>
-<span class="s1">&#39;40 - (&#39;</span>
-<span class="s1">&#39;41 - )&#39;</span>
-<span class="s1">&#39;42 - *&#39;</span>
-<span class="s1">&#39;43 - +&#39;</span>
-<span class="s1">&#39;44 - ,&#39;</span>
-<span class="s1">&#39;45 - -&#39;</span>
-<span class="s1">&#39;46 - .&#39;</span>
-<span class="s1">&#39;47 - /&#39;</span>
-<span class="s1">&#39;48 - 0&#39;</span>
-<span class="s1">&#39;49 - 1&#39;</span>
-<span class="s1">&#39;50 - 2&#39;</span>
-<span class="s1">&#39;51 - 3&#39;</span>
-<span class="s1">&#39;52 - 4&#39;</span>
-<span class="s1">&#39;53 - 5&#39;</span>
-<span class="s1">&#39;54 - 6&#39;</span>
-<span class="s1">&#39;55 - 7&#39;</span>
-<span class="s1">&#39;56 - 8&#39;</span>
-<span class="s1">&#39;57 - 9&#39;</span>
-<span class="s1">&#39;58 - :&#39;</span>
-<span class="s1">&#39;59 - ;&#39;</span>
-<span class="s1">&#39;60 - &lt;&#39;</span>
-<span class="s1">&#39;61 - =&#39;</span>
-<span class="s1">&#39;62 - &gt;&#39;</span>
-<span class="s1">&#39;63 - ?&#39;</span>
-<span class="s1">&#39;64 - @&#39;</span>
-<span class="s1">&#39;65 - A&#39;</span>
-<span class="s1">&#39;66 - B&#39;</span>
-<span class="s1">&#39;67 - C&#39;</span>
-<span class="s1">&#39;68 - D&#39;</span>
-<span class="s1">&#39;69 - E&#39;</span>
-<span class="s1">&#39;70 - F&#39;</span>
-<span class="s1">&#39;71 - G&#39;</span>
-<span class="s1">&#39;72 - H&#39;</span>
-<span class="s1">&#39;73 - I&#39;</span>
-<span class="s1">&#39;74 - J&#39;</span>
-<span class="s1">&#39;75 - K&#39;</span>
-<span class="s1">&#39;76 - L&#39;</span>
-<span class="s1">&#39;77 - M&#39;</span>
-<span class="s1">&#39;78 - N&#39;</span>
-<span class="s1">&#39;79 - O&#39;</span>
-<span class="s1">&#39;80 - P&#39;</span>
-<span class="s1">&#39;81 - Q&#39;</span>
-<span class="s1">&#39;82 - R&#39;</span>
-<span class="s1">&#39;83 - S&#39;</span>
-<span class="s1">&#39;84 - T&#39;</span>
-<span class="s1">&#39;85 - U&#39;</span>
-<span class="s1">&#39;86 - V&#39;</span>
-<span class="s1">&#39;87 - W&#39;</span>
-<span class="s1">&#39;88 - X&#39;</span>
-<span class="s1">&#39;89 - Y&#39;</span>
-<span class="s1">&#39;90 - Z&#39;</span>
-<span class="s1">&#39;91 - [&#39;</span>
-<span class="s1">&#39;92 - </span><span class="se">\\</span><span class="s1">&#39;</span>
-<span class="s1">&#39;93 - ]&#39;</span>
-<span class="s1">&#39;94 - ^&#39;</span>
-<span class="s1">&#39;95 - _&#39;</span>
-<span class="s1">&#39;96 - `&#39;</span>
-<span class="s1">&#39;97 - a&#39;</span>
-<span class="s1">&#39;98 - b&#39;</span>
-<span class="s1">&#39;99 - c&#39;</span>
-<span class="s1">&#39;100 - d&#39;</span>
-<span class="s1">&#39;101 - e&#39;</span>
-<span class="s1">&#39;102 - f&#39;</span>
-<span class="s1">&#39;103 - g&#39;</span>
-<span class="s1">&#39;104 - h&#39;</span>
-<span class="s1">&#39;105 - i&#39;</span>
-<span class="s1">&#39;106 - j&#39;</span>
-<span class="s1">&#39;107 - k&#39;</span>
-<span class="s1">&#39;108 - l&#39;</span>
-<span class="s1">&#39;109 - m&#39;</span>
-<span class="s1">&#39;110 - n&#39;</span>
-<span class="s1">&#39;111 - o&#39;</span>
-<span class="s1">&#39;112 - p&#39;</span>
-<span class="s1">&#39;113 - q&#39;</span>
-<span class="s1">&#39;114 - r&#39;</span>
-<span class="s1">&#39;115 - s&#39;</span>
-<span class="s1">&#39;116 - t&#39;</span>
-<span class="s1">&#39;117 - u&#39;</span>
-<span class="s1">&#39;118 - v&#39;</span>
-<span class="s1">&#39;119 - w&#39;</span>
-<span class="s1">&#39;120 - x&#39;</span>
-<span class="s1">&#39;121 - y&#39;</span>
-<span class="s1">&#39;122 - z&#39;</span>
+<span class="s">&#39;0 - </span><span class="se">\x00</span><span class="s">&#39;</span>
+<span class="s">&#39;1 - </span><span class="se">\x01</span><span class="s">&#39;</span>
+<span class="s">&#39;2 - </span><span class="se">\x02</span><span class="s">&#39;</span>
+<span class="s">&#39;3 - </span><span class="se">\x03</span><span class="s">&#39;</span>
+<span class="s">&#39;4 - </span><span class="se">\x04</span><span class="s">&#39;</span>
+<span class="s">&#39;5 - </span><span class="se">\x05</span><span class="s">&#39;</span>
+<span class="s">&#39;6 - </span><span class="se">\x06</span><span class="s">&#39;</span>
+<span class="s">&#39;7 - </span><span class="se">\x07</span><span class="s">&#39;</span>
+<span class="s">&#39;8 - </span><span class="se">\x08</span><span class="s">&#39;</span>
+<span class="s">&#39;9 - </span><span class="se">\t</span><span class="s">&#39;</span>
+<span class="s">&#39;10 - </span><span class="se">\n</span><span class="s">&#39;</span>
+<span class="s">&#39;11 - </span><span class="se">\x0b</span><span class="s">&#39;</span>
+<span class="s">&#39;12 - </span><span class="se">\x0c</span><span class="s">&#39;</span>
+<span class="s">&#39;13 - </span><span class="se">\r</span><span class="s">&#39;</span>
+<span class="s">&#39;14 - </span><span class="se">\x0e</span><span class="s">&#39;</span>
+<span class="s">&#39;15 - </span><span class="se">\x0f</span><span class="s">&#39;</span>
+<span class="s">&#39;16 - </span><span class="se">\x10</span><span class="s">&#39;</span>
+<span class="s">&#39;17 - </span><span class="se">\x11</span><span class="s">&#39;</span>
+<span class="s">&#39;18 - </span><span class="se">\x12</span><span class="s">&#39;</span>
+<span class="s">&#39;19 - </span><span class="se">\x13</span><span class="s">&#39;</span>
+<span class="s">&#39;20 - </span><span class="se">\x14</span><span class="s">&#39;</span>
+<span class="s">&#39;21 - </span><span class="se">\x15</span><span class="s">&#39;</span>
+<span class="s">&#39;22 - </span><span class="se">\x16</span><span class="s">&#39;</span>
+<span class="s">&#39;23 - </span><span class="se">\x17</span><span class="s">&#39;</span>
+<span class="s">&#39;24 - </span><span class="se">\x18</span><span class="s">&#39;</span>
+<span class="s">&#39;25 - </span><span class="se">\x19</span><span class="s">&#39;</span>
+<span class="s">&#39;26 - </span><span class="se">\x1a</span><span class="s">&#39;</span>
+<span class="s">&#39;27 - </span><span class="se">\x1b</span><span class="s">&#39;</span>
+<span class="s">&#39;28 - </span><span class="se">\x1c</span><span class="s">&#39;</span>
+<span class="s">&#39;29 - </span><span class="se">\x1d</span><span class="s">&#39;</span>
+<span class="s">&#39;30 - </span><span class="se">\x1e</span><span class="s">&#39;</span>
+<span class="s">&#39;31 - </span><span class="se">\x1f</span><span class="s">&#39;</span>
+<span class="s">&#39;32 -  &#39;</span>
+<span class="s">&#39;33 - !&#39;</span>
+<span class="s">&#39;34 - &quot;&#39;</span>
+<span class="s">&#39;35 - #&#39;</span>
+<span class="s">&#39;36 - $&#39;</span>
+<span class="s">&#39;37 - %&#39;</span>
+<span class="s">&#39;38 - &amp;&#39;</span>
+<span class="s">&quot;39 - &#39;&quot;</span>
+<span class="s">&#39;40 - (&#39;</span>
+<span class="s">&#39;41 - )&#39;</span>
+<span class="s">&#39;42 - *&#39;</span>
+<span class="s">&#39;43 - +&#39;</span>
+<span class="s">&#39;44 - ,&#39;</span>
+<span class="s">&#39;45 - -&#39;</span>
+<span class="s">&#39;46 - .&#39;</span>
+<span class="s">&#39;47 - /&#39;</span>
+<span class="s">&#39;48 - 0&#39;</span>
+<span class="s">&#39;49 - 1&#39;</span>
+<span class="s">&#39;50 - 2&#39;</span>
+<span class="s">&#39;51 - 3&#39;</span>
+<span class="s">&#39;52 - 4&#39;</span>
+<span class="s">&#39;53 - 5&#39;</span>
+<span class="s">&#39;54 - 6&#39;</span>
+<span class="s">&#39;55 - 7&#39;</span>
+<span class="s">&#39;56 - 8&#39;</span>
+<span class="s">&#39;57 - 9&#39;</span>
+<span class="s">&#39;58 - :&#39;</span>
+<span class="s">&#39;59 - ;&#39;</span>
+<span class="s">&#39;60 - &lt;&#39;</span>
+<span class="s">&#39;61 - =&#39;</span>
+<span class="s">&#39;62 - &gt;&#39;</span>
+<span class="s">&#39;63 - ?&#39;</span>
+<span class="s">&#39;64 - @&#39;</span>
+<span class="s">&#39;65 - A&#39;</span>
+<span class="s">&#39;66 - B&#39;</span>
+<span class="s">&#39;67 - C&#39;</span>
+<span class="s">&#39;68 - D&#39;</span>
+<span class="s">&#39;69 - E&#39;</span>
+<span class="s">&#39;70 - F&#39;</span>
+<span class="s">&#39;71 - G&#39;</span>
+<span class="s">&#39;72 - H&#39;</span>
+<span class="s">&#39;73 - I&#39;</span>
+<span class="s">&#39;74 - J&#39;</span>
+<span class="s">&#39;75 - K&#39;</span>
+<span class="s">&#39;76 - L&#39;</span>
+<span class="s">&#39;77 - M&#39;</span>
+<span class="s">&#39;78 - N&#39;</span>
+<span class="s">&#39;79 - O&#39;</span>
+<span class="s">&#39;80 - P&#39;</span>
+<span class="s">&#39;81 - Q&#39;</span>
+<span class="s">&#39;82 - R&#39;</span>
+<span class="s">&#39;83 - S&#39;</span>
+<span class="s">&#39;84 - T&#39;</span>
+<span class="s">&#39;85 - U&#39;</span>
+<span class="s">&#39;86 - V&#39;</span>
+<span class="s">&#39;87 - W&#39;</span>
+<span class="s">&#39;88 - X&#39;</span>
+<span class="s">&#39;89 - Y&#39;</span>
+<span class="s">&#39;90 - Z&#39;</span>
+<span class="s">&#39;91 - [&#39;</span>
+<span class="s">&#39;92 - </span><span class="se">\\</span><span class="s">&#39;</span>
+<span class="s">&#39;93 - ]&#39;</span>
+<span class="s">&#39;94 - ^&#39;</span>
+<span class="s">&#39;95 - _&#39;</span>
+<span class="s">&#39;96 - `&#39;</span>
+<span class="s">&#39;97 - a&#39;</span>
+<span class="s">&#39;98 - b&#39;</span>
+<span class="s">&#39;99 - c&#39;</span>
+<span class="s">&#39;100 - d&#39;</span>
+<span class="s">&#39;101 - e&#39;</span>
+<span class="s">&#39;102 - f&#39;</span>
+<span class="s">&#39;103 - g&#39;</span>
+<span class="s">&#39;104 - h&#39;</span>
+<span class="s">&#39;105 - i&#39;</span>
+<span class="s">&#39;106 - j&#39;</span>
+<span class="s">&#39;107 - k&#39;</span>
+<span class="s">&#39;108 - l&#39;</span>
+<span class="s">&#39;109 - m&#39;</span>
+<span class="s">&#39;110 - n&#39;</span>
+<span class="s">&#39;111 - o&#39;</span>
+<span class="s">&#39;112 - p&#39;</span>
+<span class="s">&#39;113 - q&#39;</span>
+<span class="s">&#39;114 - r&#39;</span>
+<span class="s">&#39;115 - s&#39;</span>
+<span class="s">&#39;116 - t&#39;</span>
+<span class="s">&#39;117 - u&#39;</span>
+<span class="s">&#39;118 - v&#39;</span>
+<span class="s">&#39;119 - w&#39;</span>
+<span class="s">&#39;120 - x&#39;</span>
+<span class="s">&#39;121 - y&#39;</span>
+<span class="s">&#39;122 - z&#39;</span>
 </pre></div>
 </div>
 <div class="section" id="caracteres-de-escape">
@@ -592,7 +589,7 @@ eXcript            </a>
 <div class="section" id="estudo-de-caso-pratico">
 <h2>ESTUDO DE CASO PRÁTICO</h2>
 <p>Vamos supor que queiramos imprimir um texto onde uma parte estará numa linha e a outra parte, na linha seguinte. No código a seguir, estamos supondo a situação utilizando um código que possui erro.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Fala,</span>
@@ -601,7 +598,7 @@ eXcript            </a>
 </pre></div>
 <p>O código acima, simplesmente quebrou a expressão, o que não é permitido pela Linguagem C.</p>
 <p>A solução para o código do exemplo anterior, é a utilização de um <tt class="docutils literal">Caractere de Escape</tt> <tt class="docutils literal">NewLine</tt> representado pela notação <tt class="docutils literal">\n</tt>. Assim, corrigindo o exemplo anterior, teríamos um código em que a primeira parte seria impresso numa linha, enquanto a segunda, na linha seguinte.</p>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Fala, </span><span class="se">\n</span><span class="s">galera.&quot;</span><span class="p">);</span>

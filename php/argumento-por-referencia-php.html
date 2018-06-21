@@ -472,9 +472,6 @@ eXcript            </a>
                         </tr><tr>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" >Funções Modificadoras em PHP</a></td>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" >Sobrescrita de Funções em PHP</a></td>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" ></a></td>
                         </tr>        </tbody>
             </table>
         
@@ -501,7 +498,7 @@ eXcript            </a>
 <h2>ARGUMENTOS POR REFERÊNCIA</h2>
 <p>Quando definimos uma variável como sendo argumento de uma função, ocorre que o valor contido nessa variável é copiado para a variável-parâmetro da função. Na maior parte das vezes esse tipo de funcionamento é o ideal, porém, se estivermos trabalhando com um Array que contenha por exemplo, 100.000 elementos, teremos uma situação em que ao invocarmos a função todos os itens desse Array serão copiados para a variável-parâmetro.</p>
 <p>A linguagem nos disponibiliza uma forma de passarmos um parâmetro enviando o endereço de uma variável ao invés de passarmos uma cópia do valor de uma variável. Ao passarmos o endereço de uma variável teremos uma situação em que todas as ações que forem feitas nessa variável irão alterar a estrutura original.</p>
-<div class="highlight"><pre><span></span><span class="x">$a = [1,2,3];</span>
+<div class="highlight"><pre><span class="x">$a = [1,2,3];</span>
 <span class="x">$b = $a;</span>
 
 <span class="x">$a[1] = 5;</span>
@@ -512,7 +509,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">$a = [1,2,3];</span>
+<div class="highlight"><pre><span class="x">$a = [1,2,3];</span>
 <span class="x">$b = &amp;$a;</span>
 
 <span class="x">$a[1] = 5;</span>

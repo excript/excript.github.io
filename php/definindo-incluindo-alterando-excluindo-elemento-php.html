@@ -472,9 +472,6 @@ eXcript            </a>
                         </tr><tr>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" >Funções Modificadoras em PHP</a></td>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" >Sobrescrita de Funções em PHP</a></td>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" ></a></td>
                         </tr>        </tbody>
             </table>
         
@@ -499,29 +496,29 @@ eXcript            </a>
     </div>
 <div class="section" id="definindo-um-array">
 <h2>DEFININDO UM ARRAY</h2>
-<div class="highlight"><pre><span></span><span class="x">$arr = [1,2,3]</span>
+<div class="highlight"><pre><span class="x">$arr = [1,2,3]</span>
 </pre></div>
 </div>
 <div class="section" id="incluindo-elementos">
 <h2>INCLUINDO ELEMENTOS</h2>
 <p>Para incluírmos novos elementos podemos utilizar uma das 2 definições a seguir:</p>
-<div class="highlight"><pre><span></span><span class="x">$arr[] = 4;</span>
+<div class="highlight"><pre><span class="x">$arr[] = 4;</span>
 </pre></div>
 </div>
 <div class="section" id="alterando-os-valores-dos-elementos">
 <h2>ALTERANDO OS VALORES DOS ELEMENTOS</h2>
 <p>Da mesma forma em associamos um valor a uma chave numérica, é possível realizar alterações. Para isto, basta informarmos qual a chave que deve ter o seu valor alterado e então, definir o novo valor.</p>
-<div class="highlight"><pre><span></span><span class="x">$cores[2] = &quot;Preto&quot;;&lt;1&gt;</span>
+<div class="highlight"><pre><span class="x">$cores[2] = &quot;Preto&quot;;&lt;1&gt;</span>
 </pre></div>
 <p>&lt;1&gt; Estamos dizendo que o elemento de índice igual a 2 deve ter o seu valor alterado para a string &quot;Preto&quot;.</p>
 <p>Para imprimirmos os elementos contidos num Array podemos acessá-los diretamente ou então podemos iterar a coleção.</p>
-<div class="highlight"><pre><span></span><span class="x">echo &quot;As cores são: $cores[0], $cores[1], $cores[2] and $cores[3]&quot;;</span>
+<div class="highlight"><pre><span class="x">echo &quot;As cores são: $cores[0], $cores[1], $cores[2] and $cores[3]&quot;;</span>
 </pre></div>
 </div>
 <div class="section" id="removendo-elementos">
 <h2>REMOVENDO ELEMENTOS</h2>
 <p>O PHP permite a remoção de qualquer elemento contido num Array, bastando somente passarmos o elemento a ser removido como parâmetro da função <cite>unset()</cite>, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="x">$arr = [&quot;aaa&quot;, &quot;bbb&quot;, &quot;ccc&quot;];</span>
+<div class="highlight"><pre><span class="x">$arr = [&quot;aaa&quot;, &quot;bbb&quot;, &quot;ccc&quot;];</span>
 <span class="x">unset($arr[1]);&lt;1&gt;</span>
 </pre></div>
 <p>&lt;1&gt; Remove o elemento &quot;bbb&quot; do Array.</p>
@@ -529,7 +526,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">#Definindo o Array</span>
+<div class="highlight"><pre><span class="x">#Definindo o Array</span>
 <span class="x">$arr = [&quot;zero&quot;, &quot;um&quot;, &quot;dois&quot;, &quot;três&quot;, &quot;quatro&quot;];</span>
 
 <span class="x">#Adicionando elementos</span>
@@ -544,7 +541,7 @@ eXcript            </a>
 
 <span class="x">print_r($arr);</span>
 </pre></div>
-<div class="highlight"><pre><span></span><span class="x">#Definindo o Array</span>
+<div class="highlight"><pre><span class="x">#Definindo o Array</span>
 <span class="x">$lista = [&quot;zero&quot;, &quot;um&quot;, &quot;dois&quot;, &quot;três&quot;, &quot;quatro&quot;];</span>
 
 <span class="x">#Adicionando elementos</span>

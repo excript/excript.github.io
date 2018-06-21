@@ -308,7 +308,7 @@ eXcript            </a>
 <p>Podemos pensar em blocos de instruções como &quot;regiões&quot; de um código que foi demarcado utilizando um par de chaves. Assim, todo bloco irá iniciar com a chave de abertura e será finalizado com uma chave de fechamento.</p>
 <p>Então, podemos dizer que o início de um bloco é a primeira instrução após a chave de abertura <cite>{</cite>, da mesma forma, o término será após a chave de fechamento <cite>}</cite>.</p>
 <p>É importante observar que se você tiver um bloco de instrução dentro de um bloco de instrução, o fechamento do bloco mais aninhado não fechara o bloco externo, mas sim, o bloco aninhado, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="n">inicio</span><span class="p">(){</span>
+<div class="highlight"><pre><span class="n">inicio</span><span class="p">(){</span>
 
   <span class="k">if</span><span class="p">(</span><span class="nb">true</span><span class="p">){</span>
   <span class="p">}</span>
@@ -322,8 +322,8 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
 
 <span class="cm">/*  ==========                 ==========</span>
 <span class="cm">    ========== www.eXcript.com ==========</span>
@@ -344,7 +344,7 @@ eXcript            </a>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Informe um numero: </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%lf&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">);</span>
 
-    <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="o">==</span><span class="mi">50</span><span class="p">)</span><span class="nl">E</span><span class="p">:</span><span class="err">\</span><span class="n">Claudio</span><span class="err">\</span><span class="n">VideoAula</span><span class="err">\</span><span class="n">C</span><span class="err">\</span><span class="mo">0042</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="o">==</span><span class="mi">50</span><span class="p">)</span><span class="n">E</span><span class="o">:</span><span class="err">\</span><span class="n">Claudio</span><span class="err">\</span><span class="n">VideoAula</span><span class="err">\</span><span class="n">C</span><span class="err">\</span><span class="mo">0042</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bloco IF</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
     <span class="k">else</span><span class="p">{</span>
         <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bloco ELSE</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>

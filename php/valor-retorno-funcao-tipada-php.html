@@ -479,9 +479,6 @@ eXcript            </a>
                         </tr><tr>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" >Funções Modificadoras em PHP</a></td>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" >Sobrescrita de Funções em PHP</a></td>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" ></a></td>
                         </tr>        </tbody>
             </table>
         
@@ -512,7 +509,7 @@ eXcript            </a>
 <h2>FUNÇÕES COM RETORNO TIPADOS</h2>
 <p>Função com retorno tipado é toda função que define explicitamente o tipo do valor que será retornado. Dessa maneira o PHP disponibilizou uma maneira de definirmos o tipo do valor que será recebido por uma função, como também, o valor que a mesma retornará.</p>
 <p>A seguir, escrevemos um simples exemplo onde há uma função que define o tipo do valor que será retornado.</p>
-<div class="highlight"><pre><span></span><span class="x">function getArea(int x, int y) : int {</span>
+<div class="highlight"><pre><span class="x">function getArea(int x, int y) : int {</span>
 <span class="x">    return x * y;</span>
 <span class="x">}</span>
 </pre></div>
@@ -521,7 +518,7 @@ eXcript            </a>
 <p>É possível definir que os valores não sejam automaticamente convertidos pelo PHP, ou seja, podemos definir que, caso o valor passado não seja do tipo esperado, uma exceção seja levantada e a execução finalizada.</p>
 <p>Para definir que desejamos que o PHP levante uma exceção caso o valor passado não seja do tipo esperado, temos que, através de um código, especificar que determinado módulo está trabalhando de maneira restrita, isto é, que os valores passados devem ser do tipo esperado. Do contrário, o Script será interrompido.</p>
 <p>A instrução <code>declare(strict_types=1);</code> deve ser colocada no início do arquivo para que o PHP trate o mesmo da forma estrita.</p>
-<div class="highlight"><pre><span></span><span class="x">declare(strict_types=1);//valor de retorno precisa ser do tipo definido</span>
+<div class="highlight"><pre><span class="x">declare(strict_types=1);//valor de retorno precisa ser do tipo definido</span>
 
 <span class="x">function getArea(int x, int y):int {</span>
 <span class="x">    return x * y;</span>
@@ -530,7 +527,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">declare(strict_types=1);</span>
+<div class="highlight"><pre><span class="x">declare(strict_types=1);</span>
 
 <span class="x">#VALORES DE RETORNO TIPADO</span>
 

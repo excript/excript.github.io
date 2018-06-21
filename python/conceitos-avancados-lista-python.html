@@ -155,9 +155,6 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" >Primeira Aula de Python</a></td>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" >Como Instalar o Python no Windows</a></td>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" ></a></td>
-                        </tr><tr>
                             <td><a href="http://excript.com/python/caracteristica-python.html" >Características do Python</a></td>
                             <td><a href="http://excript.com/python/caracteristica-python.html" ></a></td>
                         </tr><tr>
@@ -380,26 +377,26 @@ eXcript            </a>
 <div class="section" id="lista-de-objetos">
 <h2>LISTA DE OBJETOS</h2>
 <p>Estudamos nas aulas anteriores como definir uma lista em Python utilizando a notação implicita e explicita. Para recordamos ambos conceitos, analisemos o trecho de código a seguir.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="c1">#declaração implicita de lista</span>
-<span class="n">lista2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="c1">#declaração explicita de lista</span>
+<span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="s">&#39;a&#39;</span><span class="p">]</span> <span class="c">#declaração implicita de lista</span>
+<span class="n">lista2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="c">#declaração explicita de lista</span>
 </pre></div>
 <p>Observe como definimos os elementos que foi atribuido para a referência <tt class="docutils literal">lista2</tt>, isto é, enviamos 3 objetos numéricos e utilizamos 2 parenteis. O primeiro parêntesis é onde declaramos os parâmetros iniciais que podem ser enviados na definição de uma nova lista. O segundo parêntesis, é para dizer ao Python, que todos os 3 elementos devem ser adicionado a lista que estamos criando. Se o segundo parêntesis fosse omitido, estaríamos dizendo que cada objeto numérico é um parâmetro na inicialização de um objeto <tt class="docutils literal">list</tt>.</p>
 <p>Se é possível definir qualquer objeto como sendo um elemento de uma lista, podemos declarar listas que contém elementos que também são lista, como no código a seguir.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">l</span> <span class="o">=</span> <span class="p">[[],</span> <span class="p">[],</span> <span class="p">[]]</span>
 </pre></div>
 <p>Inicialmente, definimos uma lista de nome &quot;l&quot; e a esta atribuímos uma lista que contém 3 elementos do tipo lista, ou seja, temos lista contido dentro de outra lista.</p>
 <p>Para que seja mais fácil o nosso estudo, vamos definir uma outra lista que contém listas internamente, porém agora, vamos atribuir itens para  a lista interna, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">lista</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="p">]</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">],</span> <span class="p">]</span>
 </pre></div>
 <p>Acima, nós definimos uma lista, de nome &quot;lista&quot; que contém dois elementos do tipo <code>list</code>. O primeiro elemento que é do tipo lista, nós temos 3 outros elementos definidos. Assim, temos que a referência &quot;lista5&quot; contém um elemento que é uma lista que contém outros 3 elementos.</p>
 <p>Para nós acessarmos elementos contidos em listas, temos que utilizar uma notação especifica onde definimos o índice do elemento a ser acessado, como podemos ver no código seguinte.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
@@ -408,7 +405,7 @@ eXcript            </a>
 <div class="section" id="listas-contidas-em-listas">
 <h2>LISTAS CONTIDAS EM LISTAS</h2>
 <p>O acesso a elementos a listas contidas em outras, faz-se através da concatenação de pares de colchetes. Logo, quando mais aninhado tiver a lista, maior a concatenação de colchetes necessária. É importante destacar que cada par de colchete representa uma lista.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
@@ -421,11 +418,11 @@ eXcript            </a>
 <p>Por isso, hoje, é indiferente se o conceito é certo ou errado, até porque assim está definido e não crie esperanças de algum dia vê-lo alterado! Isso seria o maior caos para os sistemas legados.</p>
 <p>Um padrão não usual é se referir ao último elemento da lista com índice igual a -1. Esse conceito é bastante lógico às listas onde o primeiro elemento possui índice 0. Assim, se imaginarmos uma lista como sendo um círculo fechado e o primeiro elemento é igual a 0, nada mais justo do que atribuir ao último elemento índice igual a -1.</p>
 <p>E também, todos que já manipularam listas de forma primitiva, sabem que os elementos mais acessados na grande maioria das funcionalidades que devem ser implementas, manipulam o primeiro e o último elemento.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#acesso ao primeiro elemento</span>
+<span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c">#acesso ao primeiro elemento</span>
 
-<span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#acesso ao último elemento</span>
+<span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c">#acesso ao último elemento</span>
 </pre></div>
 </div>
 

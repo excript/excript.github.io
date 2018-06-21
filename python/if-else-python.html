@@ -160,9 +160,6 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" >Primeira Aula de Python</a></td>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" >Como Instalar o Python no Windows</a></td>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" ></a></td>
-                        </tr><tr>
                             <td><a href="http://excript.com/python/caracteristica-python.html" >Características do Python</a></td>
                             <td><a href="http://excript.com/python/caracteristica-python.html" ></a></td>
                         </tr><tr>
@@ -401,12 +398,12 @@ eXcript            </a>
 <div class="section" id="a-estrutura-else">
 <h2>A ESTRUTURA <tt class="docutils literal">else</tt></h2>
 <p>A instrução <tt class="docutils literal">else</tt> é uma instrução dependente, isto é, uma instrução que não pode ser utilizada sozinha. A seguir, temos um exemplo, utilizando a instrução <tt class="docutils literal">if</tt> junto a instrução <tt class="docutils literal">else</tt>, porém, com as instruções traduzidas para o Português.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">SE</span><span class="p">(</span> <span class="n">verdadeiro</span> <span class="p">)</span>
-    <span class="n">faça_isso</span><span class="p">()</span>
-<span class="n">SENÃO</span>
-    <span class="n">faça_aquilo</span><span class="p">()</span>
+    <span class="n">fa</span><span class="err">ç</span><span class="n">a_isso</span><span class="p">()</span>
+<span class="n">SEN</span><span class="err">Ã</span><span class="n">O</span>
+    <span class="n">fa</span><span class="err">ç</span><span class="n">a_aquilo</span><span class="p">()</span>
 </pre></div>
 <p>No código acima, estamos verificando uma condição e, caso o resultado seja verdadeiro, o bloco de instrução na linha seguinte a instrução <tt class="docutils literal">SE</tt> é executado. Senão, caso o valor da expressão definida no cabeçalho da instrução <tt class="docutils literal">if</tt> não seja verdadeiro, o bloco de instrução definido na linha seguinte a instrução <tt class="docutils literal">SENÃO</tt> é o que executado.</p>
 </div>
@@ -414,27 +411,27 @@ eXcript            </a>
 <h2>UM EXEMPLO PRÁTICO</h2>
 <p>Agora, vamos fazer um exemplo para estudarmos a utilização da estrutura de decisão <tt class="docutils literal">if</tt> junto a instrução <tt class="docutils literal">else</tt>.</p>
 <p>O exemplo que faremos pedirá para o usuário digitar um número par. Em em seguida, com uso da instrução <tt class="docutils literal">if</tt>, verificaremos se o número digitado realmente é ou não é par. Caso seja, imprimiremos na tela a frase &quot;O número digitado é par.&quot; do contrário, imprimiremos, &quot;O número digitado é ímpar.&quot;</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite um número par: &quot;</span><span class="p">))</span>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">&quot;Digite um número par: &quot;</span><span class="p">))</span>
 <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;O número digitado é par.&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;O número digitado é par.&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;O número digitado é ímpar.&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;O número digitado é ímpar.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="n">acao</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite &#39;1&#39; para sim e digite &#39;2&#39; para não: &quot;</span><span class="p">))</span>
+<span class="n">acao</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">&quot;Digite &#39;1&#39; para sim e digite &#39;2&#39; para não: &quot;</span><span class="p">))</span>
 <span class="k">if</span><span class="p">(</span><span class="n">acao</span><span class="o">==</span><span class="mi">1</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Você disse que sim!&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Você disse que sim!&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">if</span><span class="p">(</span><span class="n">acao</span><span class="o">==</span><span class="mi">2</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Você disse que não!&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Você disse que não!&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;O número digitado não é &#39;1&#39; e nem &#39;2&#39;!!!&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;O número digitado não é &#39;1&#39; e nem &#39;2&#39;!!!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="links-externos">

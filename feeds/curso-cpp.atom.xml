@@ -33,7 +33,7 @@
 &lt;h2&gt;ESTRUTURA &lt;tt class="docutils literal"&gt;FOR&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;O laço de repetição for é considerado uma estrutura de repetição completa. Isso porque, em seu cabeçalho somos capazes de declarar uma variável, estabelecer uma condição e incrementar ou decrementar valores a uma determinada variável.&lt;/p&gt;
 &lt;p&gt;A seguir temos a estrutura for dividida em suas 3 partes:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;variável&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;condição&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;incremento&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;vari&lt;/span&gt;&lt;span class="err"&gt;á&lt;/span&gt;&lt;span class="n"&gt;vel&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;condi&lt;/span&gt;&lt;span class="err"&gt;çã&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;incremento&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Cada parte da estrutura for é finalizada com um ponto-e-vírgula, salvo a última parte.&lt;/p&gt;
 &lt;dl class="docutils"&gt;
@@ -48,8 +48,8 @@
 &lt;div class="section" id="exemplo-1"&gt;
 &lt;h2&gt;EXEMPLO 1&lt;/h2&gt;
 &lt;p&gt;Vamos implementar um laço de repetição com a estrutura for que imprima os números de 0 até 10 na tela.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -66,8 +66,8 @@
 &lt;p&gt;Feito isso, definimos a condição na qual o laço de repetição deve ser executado, no caso, dissemos que &lt;tt class="docutils literal"&gt;n &amp;lt;= 9;&lt;/tt&gt;. Observe que estamos inicializando a variável em 0, portanto, para imprimirmos os 10 primeiros valores devemos imprimir do 0 até o 9. Se por acaso definissemos o valor 10, iríamos imprimir 11 números, até porque, no intervalo de 0 até 10 há 11 números!&lt;/p&gt;
 &lt;p&gt;Por fim, incrementamos uma unidade à variável &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; com a expressão &lt;tt class="docutils literal"&gt;n++&lt;/tt&gt;. Ainda não estudamos o operador de incremento e decremento, porém, pense nessa expressão como sendo igual à: &lt;tt class="docutils literal"&gt;n = n +1&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;Vamos fazer mais um exemplo, porém agora, vamos imprimir os números na ordem inversa, ou seja, vamos iniciar em 9 e vamos até 0.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -82,15 +82,15 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O código acima é basicamente o mesmo código que fizemos anteriormente, porém agora, ao invés de incrementarmos uma unidade na variável &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; estamos decrementando. Observe que também tivemos que inicializar a variável &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; atribuindo o valor 9 e, por fim, definimos a condição (a estrutura central) dizendo que o laço deve ser finalizado quando o valor de &lt;tt class="docutils literal"&gt;n &amp;lt;= 0&lt;/tt&gt;. Por fim, decrementamos uma unidade a variável &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; utilizando a expressão &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;n--&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;A seguir, veja a comparação entre o laço for do primeiro e do segundo exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#comparação entre o exemplo de incremento e decremento&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#comparação entre o exemplo de incremento e decremento&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -170,17 +170,17 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
 &lt;h2&gt;O CÓDIGO&lt;/h2&gt;
 &lt;p&gt;Agora, vamos escrever, linha por linha o nosso programa e vamos estudando o que está sendo programado.&lt;/p&gt;
 &lt;p&gt;A primeira linha que vamos escrever é para inclui uma biblioteca em nosso programa. Bibliotecas contém Classes, funções, constantes e muitos outros códigos. Todo programa que desenvolvermos iremos utilizar diversas bibliotecas.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No trecho de código acima, estamos incluindo o arquivo &lt;code&gt;&amp;lt;iostream&amp;gt;&lt;/code&gt;. A instrução &lt;code&gt;#include&lt;/code&gt;, que em Português significa incluir, diz para o C++ importar o arquivo cujo nome está a sua frente. Nesse momento não estudaremos a inclusão de arquivos e bibliotecas, porém, tenha em mente que dessa forma, estaremos utilizando um conjunto de códigos fornecido por padrão pela biblioteca do C++.&lt;/p&gt;
 &lt;p&gt;Feito isso, vamos definir um namespace para não precisar a todo momento se referir ao mesmo.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Na linha de código acima, utilizamos a instrução &lt;code&gt;using&lt;/code&gt;, que em Português significa utilizar, dizendo ao C++ que iremos fazer uso de um &lt;code&gt;namespace&lt;/code&gt; de nome &lt;code&gt;std&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Um &lt;code&gt;namespace&lt;/code&gt; é semelhante ao &lt;tt class="docutils literal"&gt;PATH&lt;/tt&gt; de arquivo, ou seja, cada arquivo em nossa estrutura de pastas possui uma &lt;tt class="docutils literal"&gt;PATH&lt;/tt&gt; que o identifica, por exemplo: &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;C:\pasta1\arquivoX.ext&lt;/span&gt;&lt;/tt&gt;, como podemos ver, temos um arquivo de nome &lt;tt class="docutils literal"&gt;arquivoX.ext&lt;/tt&gt; cujo &lt;tt class="docutils literal"&gt;PATH&lt;/tt&gt; é &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;C:\pasta1\&lt;/span&gt;&lt;/tt&gt;. O funcionamento do &lt;tt class="docutils literal"&gt;PATH&lt;/tt&gt; do arquivo é a &lt;code&gt;namespace&lt;/code&gt; num código C++. Porém, uma namespace não é necessariamente um caminho para um arquivo, as vezes, o namespace é o caminho mais o nome da classe em C++.&lt;/p&gt;
 &lt;p&gt;Revisando. A instrução &lt;code&gt;using&lt;/code&gt; diz que iremos utilizar uma &lt;code&gt;namespace&lt;/code&gt; de nome &lt;code&gt;std&lt;/code&gt;. O nome &lt;code&gt;std&lt;/code&gt; vem de standard, que significa em Português, padrão. Ou seja, estamos dizendo que iremos utilizar a classe de nome &lt;code&gt;std&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Agora, vamos definir o nome da função que &lt;strong&gt;TODO&lt;/strong&gt; programa em C++ deve ter. Em outras palavras, temos que toda aplicação escrita em C++ é iniciada pela função de nome &lt;code&gt;main()&lt;/code&gt;, como podemos ver no código a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
 
 &lt;span class="p"&gt;}&lt;/span&gt;
@@ -189,25 +189,25 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
 &lt;p&gt;Após definirmos o nome da função, utilizamos um par de parêntesis. Em seguida, utilizamos o caractere chave de abertura e fechamento.&lt;/p&gt;
 &lt;p&gt;Nesse momento, o que talvez seja de maior importancia, é saber que o código do nosso programa deverá estar entre o par de chaves. Todo par de chaves é chamado de &lt;tt class="docutils literal"&gt;Bloco de Instrução&lt;/tt&gt;, ou seja, um bloco que contém várias instrução dizendo o que deve ser feito.&lt;/p&gt;
 &lt;p&gt;Feito isso, vamos escrever a instrução C++ que de fato, imprimirá a frase Ola Mundo no Console.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Ola Mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Ola Mundo!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Na linha acima, estamos utilizando o objeto &lt;code&gt;cout&lt;/code&gt;, que é um acrônimo de &lt;tt class="docutils literal"&gt;Console Output&lt;/tt&gt;, que em Português significa, saída padrão, em seguida, utilizamos o operador de inserção &lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt; dizendo que o texto a direita deve ser &amp;quot;inserido&amp;quot; no objeto &lt;code&gt;cout&lt;/code&gt;. Essa é a forma para escrevermos caracteres na tela.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pause&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pause&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A linha acima diz para a aplicação ter a sua execução pausada. Se não mandarmos a aplicação parar, a mesma imprimiria caracteres na tela, em seguida finalizaria e a janela seria fechado, ou seja, não seria possível ver o que foi impresso no &lt;tt class="docutils literal"&gt;Console&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;Para utilizarmos a instrução acima que manda a aplicação pausar antes de finalizar, será necessário importar a biblioteca de nome &lt;code&gt;stdlib.h&lt;/code&gt;. Para isso, vá abaixo da linha &lt;code&gt;#include &amp;lt;iostream&amp;gt;&lt;/code&gt; e digite:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Agora, estamos importando 2 bibliotecas no nosso programa.&lt;/p&gt;
 &lt;p&gt;Por fim, temos:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A última instrução retorna o número zero. Desta forma, estamos finalizando a nossa aplicação e retornado o código 0, dizendo para o SO que a aplicação finalizou normalmente.&lt;/p&gt;
 &lt;p&gt;Poderíamos, por exemplo, retornar um número que diz ao sistema operacional que ocorreu um erro e o código do erro é o número retornado pela nossa aplicação. Atualmente, essa funcionalidade entrou em desuso, então, tenha em mente que em 99% das vezes retornaremos o código zero e em seguida a aplicação será finalizada.&lt;/p&gt;
 &lt;p&gt;A seguir, temos o código completo da nossa aplicação.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
@@ -266,7 +266,7 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
 &lt;div class="section" id="comentarios-inline"&gt;
 &lt;h2&gt;COMENTÁRIOS &lt;tt class="docutils literal"&gt;inline&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;Para adicionarmos um comentário após determinada instrução, basta utilizarmos duas barras e em seguida, estamos livres para escrevermos o que desejarmos, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; estudo &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//escreva o que desejares após as barras&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; estudo &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//escreva o que desejares após as barras&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Como podemos ver no exemplo acima, após a finalização da instrução com o uso de ponto e vírgula, adicionamos 2 barras &lt;tt class="docutils literal"&gt;//&lt;/tt&gt; e então, escrevemos um texto. Se mandassemos, por exemplo, compilar o código, veríamos que nenhuma mensagem de erro seria exibida.&lt;/p&gt;
 &lt;/div&gt;
@@ -274,7 +274,7 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
 &lt;h2&gt;COMENTÁRIOS &lt;tt class="docutils literal"&gt;multiline&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;Da mesma forma que podemos marcar que após determinada posição o compilador deve ignorar os caracteres, podemos definir que, um bloco de código, isto é, um conjunto de linhas, sejam ignoradas pelo compilador.&lt;/p&gt;
 &lt;p&gt;Para isso, utilizamos uma notação de abertura de bloco e finalização. A abertura é feita com os caracteres &lt;tt class="docutils literal"&gt;/*&lt;/tt&gt; barra asterisco e a finalização, com &lt;tt class="docutils literal"&gt;*/&lt;/tt&gt; asterisco barra. Esta notação permite-nos definir um trecho inline como sendo comentário ou então, todo um arquivo de código.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
 
 &lt;span class="cm"&gt;    bloco de comentários&lt;/span&gt;
 
@@ -283,7 +283,7 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -356,7 +356,7 @@ Vamos deixar o compilador padrão e então pressionamos o botão &lt;tt class="d
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -442,7 +442,7 @@ Não existe linguagem melhor do que a outra, o que existe são linguagens que po
 &lt;div class="section" id="porque-atribuir-zero-na-declaracao-de-variaveis-inteiras"&gt;
 &lt;h3&gt;PORQUE ATRIBUIR ZERO NA DECLARAÇÃO DE VARIÁVEIS INTEIRAS?&lt;/h3&gt;
 &lt;p&gt;Muitos alunos questionam a razão pela qual atribuímos o valor zero na declaração de variáveis inteiras, por exemplo, vamos escrever um simples trecho de código para exemplificar melhor.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;var&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -642,7 +642,7 @@ Não existe linguagem melhor do que a outra, o que existe são linguagens que po
 &lt;p&gt;Estudamos, em aulas passadas, o manuseio de estruturas com uma ou mais dimensões, agora, vamos praticar um pouco para que consigamos entender na prática, como funciona a manipulação dessas estruturas. Nesse momento, estudaremos um exemplo que faz uso de um Array que possui mais de uma dimensão, logo, trabalharemos com um Array bidimensional, ou seja, um Array que contém 2 dimensões.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -702,7 +702,7 @@ Não existe linguagem melhor do que a outra, o que existe são linguagens que po
 &lt;p&gt;Logo, conclui-se que a complexidade no manuseio de estruturas multidimensionais encontra-se no entendimento de como essas estruturas funcionam e na eventual imaginação de como estamos acessando os elementos. Salvo isso, a escrita e recuperação de valores é tão simples como numa estrutura que contém uma única dimensão.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -753,7 +753,7 @@ Não existe linguagem melhor do que a outra, o que existe são linguagens que po
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -820,7 +820,7 @@ Não existe linguagem melhor do que a outra, o que existe são linguagens que po
 &lt;p&gt;Já estudamos a iteração, logo, a mesma é que será responsável por executar um mesmo bloco por uma quantidade de vezes e alterar o valor de uma variável. Assim, como o valor de uma variável será incrementado ou decrementado, temos que iremos alterar o índice em que estamos manipulando, logo, percorreremos todos os elementos da estrutura de maneira bastante simples.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -888,16 +888,16 @@ Não existe linguagem melhor do que a outra, o que existe são linguagens que po
     &lt;/div&gt;
 &lt;p&gt;Um Array é um conjunto de valores dispostos em listas e acessíveis através de um índice numérico positivo. Assim,  temos que cada posição do nosso Array é uma variável do tipo do nosso Array, sendo assim, temos que ter uma forma para inicializar esse conjunto de variáveis.&lt;/p&gt;
 &lt;p&gt;O C++ fornece a capacidade de declararmos o conjunto de valores iniciais delimitando-os através de um para de chaves, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, nós estamos inicializando um Array de inteiros e estamos definindo o valor para as 3 primeiras posições. Nesse caso, como não informamos a quantidade de elementos que o nosso Array irá ter, o C++ irá assumir que o mesmo possui somente 3 posições, até porque, só foram definidos 3 valores.&lt;/p&gt;
 &lt;p&gt;Nós também podemos iniciar um Array de inteiros atribuindo o valor 0 a todos os elementos, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{};&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{};&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Agora, nos estamos dizendo que queremos uma Array de inteiros e que todas as posições do nosso Array sejam inicializados com o valor igual a &lt;cite&gt;0&lt;/cite&gt;;&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -966,7 +966,7 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -997,7 +997,7 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
 &lt;div class="section" id="declaracao"&gt;
 &lt;h2&gt;DECLARAÇÃO&lt;/h2&gt;
 &lt;p&gt;A declaração de Array se distingue da declaração de variáveis pela utilização de uma par de colchetes após a definição do nome, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -1014,18 +1014,18 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
 &lt;div class="section" id="declaracao"&gt;
 &lt;h2&gt;DECLARAÇÃO&lt;/h2&gt;
 &lt;p&gt;A declaração de Array se distingue da declaração de variáveis pela utilização de uma par de colchetes após a definição do nome, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Acima, nós estamos dizendo que queremos uma variável, do tipo Array de nome valor e que contenha 10 elementos do tipo inteiro. Logo, após a declaração, já podemos acessar os elementos e atribuir valores a estes, isto porque, um Array é uma estrutura de dados incorporada a linguagem C++ e assim, dispensa inicialização.&lt;/p&gt;
 &lt;p&gt;Tecnicamente, temos que a definição é a seguinte:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;tipo&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[];&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;tipo&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;nome&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[];&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Aqui utilizamos a barra para definir, até porque, nos comentários do YouTube não é permitido a utilização dos símbolos de maior e menor.&lt;/p&gt;
 &lt;p&gt;Nós podemos declarar Arrays de qualquer tipo, primitivo ou composto, sendo que com o tipo composto, seremos obrigados a criar uma nova instância e atribuí-la a uma determinada posição.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1093,7 +1093,7 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
 - Inicializando um Array e atribuindo zero a todos os elemetos &lt;cite&gt;int lista[10] = {};&lt;/cite&gt;&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1148,8 +1148,8 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
 &lt;p&gt;A associatividade de operadores é a forma como o C++ resolve as operações matemática na ausência de parêntesis, ou seja, quando nós não colocarmos parêntesis indicando quem deve ser resolvido primeiro num expressão, o compilador, resolverá as nossas expressões começando a resolver tudo da esquerda para a direita.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1217,8 +1217,8 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1286,8 +1286,8 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1346,15 +1346,15 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
         &lt;/table&gt;
     &lt;/div&gt;
 &lt;p&gt;Nessa segunda aula a respeito da instrução &lt;cite&gt;break&lt;/cite&gt;, iremos desenvolver juntos um exemplo onde uma laço de repetição é executado até que uma determinada condição seja verificada e então, a instrução break é invocada. Como já estudamos, o princípio é bastante simples, basta invocarmos a instrução &lt;cite&gt;break&lt;/cite&gt; que o laço de repetição que estiver sendo executado será finalizado, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//se a condição for verdadeira&lt;/span&gt;
         &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="c1"&gt;//o looping while é interrompido&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;É importante observar, que a instrução &lt;cite&gt;break&lt;/cite&gt; pode ser utilizada com qualquer laço de repetição, ou seja, podemos utilizá-la com a instrução &lt;cite&gt;for&lt;/cite&gt;, &lt;cite&gt;while&lt;/cite&gt; e &lt;cite&gt;do-while&lt;/cite&gt;. A instrução 'break' ira se comportar da mesma maneira, indiferente do tipo de laço de repetição que esteja sendo executado.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1410,15 +1410,15 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
     &lt;/div&gt;
 &lt;p&gt;Como utilizar a instrução break em C++? Várias serão as vezes em que estaremos executando um laço de repetição e então, desejaremos encerrar esse laço, até porque, já atingimos nosso objetivo. Nessas situações, precisaremos de uma instrução especifica que faça esse trabalho para nós, até porque, não há nenhuma maneira de interrompermos uma laço senão pelo uso de uma instrução especifica e implementada a nível de interpretador.&lt;/p&gt;
 &lt;p&gt;A instrução break pode ser utilizada em qualquer momento, bastando para isso a inclusão da mesma em meio do nosso código, como no exemplo a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, estamos dizendo que no momento em que uma determinada situação for verificada, a instrução &lt;cite&gt;break&lt;/cite&gt; deve ser invocada e assim, o laço de repetição onde a mesma está contida, será finalizado e a execução da nossa aplicação continuara na linha seguinte ao laço de repetição.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1463,14 +1463,14 @@ Inicialmente, temos que um Array pode ser chamado de diversas maneiras, por exem
     &lt;/div&gt;
 &lt;p&gt;Na aula anterior estudamos com utilizar a condição ternária. Nessa segunda aula estudaremos algumas peculiaridades e truques que podemos utilizar junto a condição ternária. Para isso, faremos um exemplo em que a condição ternária substituira a estrutura de seleção múltipla &lt;cite&gt;switch&lt;/cite&gt;. Esse será somente um exemplo para que consigamos entender e visualizar as diversas maneiras que podemos utilizar uma mesma estrutura e obter códigos mais legíveis e otimizados.
 A seguir, temos um exemplo de utilização da condição ternária:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No exemplo acima, declaramos uma variável do tipo inteiro e de nome 'num'. Em seguida, verificamos uma condição, utilizamos o sinal de interrogação e então definimos que: o valor 10 será retornado caso a nossa condição seja verdadeira, senão, o valor 20 será retornado.&lt;/p&gt;
 &lt;p&gt;Essa é sem dúvida uma excelente forma para decidirmos entre uma opção de dois valores.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1580,15 +1580,15 @@ A seguir, temos um exemplo de utilização da condição ternária:&lt;/p&gt;
 &lt;p&gt;O que realmente diferencia a operação ternária da instrução &lt;cite&gt;if&lt;/cite&gt; é que a condição ternária não executara um bloco de instrução como ocorre com a estrutura de controle &lt;cite&gt;if&lt;/cite&gt;, mas sim, retornara um valor.&lt;/p&gt;
 &lt;p&gt;Uma outra diferença é que a operação ternária é uma estrutura compacta, projetada para ser definida numa única linha (inline), enquanto que o projeto da estrutura &lt;cite&gt;if&lt;/cite&gt; é para utilizar duas ou mais linhas.&lt;/p&gt;
 &lt;p&gt;A seguir, temos a definição da operação ternária:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;variável&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;condição&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;valor1&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;valor2&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;vari&lt;/span&gt;&lt;span class="err"&gt;á&lt;/span&gt;&lt;span class="n"&gt;vel&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;condi&lt;/span&gt;&lt;span class="err"&gt;çã&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;valor1&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;valor2&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;cite&gt;if&lt;/cite&gt; &amp;lt;variável&amp;gt; é a variável que irá receber um dos dois valores definidos na estrutura da operação ternária.
 &amp;lt;valor1&amp;gt; valor que será retornado caso a condição seja verdadeira
 &amp;lt;valor2&amp;gt; valor que será retornado caso a condição NÃO seja verdadeira&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -1640,8 +1640,8 @@ A seguir, temos um exemplo de utilização da condição ternária:&lt;/p&gt;
 &lt;p&gt;Também será desenvolvido algumas aplicações para o estudo de outras situações que se não bem compreendidas, podem vir a causar problemas no futuro.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1702,9 +1702,9 @@ A seguir, temos um exemplo de utilização da condição ternária:&lt;/p&gt;
 &lt;p&gt;É importante frisar, que a estrutura bloco de instrução é de fácil compreensão, porém, existem situações onde devemos estar atentos, até porque, os blocos de instruções possuem particularidades e funcionam diferentemente em determinadas situações.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1776,8 +1776,8 @@ A seguir, temos um exemplo de utilização da condição ternária:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1873,8 +1873,8 @@ A seguir, temos um exemplo de utilização da condição ternária:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -1961,8 +1961,8 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -2173,8 +2173,8 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -2190,27 +2190,27 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
     &lt;span class="n"&gt;cin&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
     &lt;span class="k"&gt;switch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;:
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Voce digitou a letra &amp;#39;a&amp;#39; ou &amp;#39;A&amp;#39; &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;:
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;B&amp;#39;&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Voce digitou a letra &amp;#39;b&amp;#39; ou &amp;#39;B&amp;#39; &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;D&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;e&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;E&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;:
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;C&amp;#39;&lt;/span&gt;:
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;:
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;D&amp;#39;&lt;/span&gt;:
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;e&amp;#39;&lt;/span&gt;:
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;E&amp;#39;&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Voce digitou a letra &amp;#39;c&amp;#39; ou &amp;#39;C&amp;#39;, ou &amp;#39;d&amp;#39; ou &amp;#39;D&amp;#39;, ou &amp;#39;e&amp;#39; ou &amp;#39;E&amp;#39; &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;f&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;f&amp;#39;&lt;/span&gt;:
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;F&amp;#39;&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Voce digitou a letra &amp;#39;f&amp;#39; ou &amp;#39;F&amp;#39; &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nl"&gt;default:&lt;/span&gt;
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Voce nao digitou uma letra valida!&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 
@@ -2253,8 +2253,8 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
 &lt;p&gt;Então, todas as vezes que tiver que testar uma, duas ou três condições, melhor é utilizarmos a estrutura de seleção simples, o nosso amigo &amp;quot;if&amp;quot;. Porém, quando forem muitas as escolhas, é melhor optarmos pela estrutura de seleção switch, até porque, a mesma confere melhor legibilidade e torna os nossos programas mais simples de serem lidos.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -2271,43 +2271,43 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
     &lt;span class="n"&gt;cin&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
     &lt;span class="k"&gt;switch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Janeiro&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Fevereiro&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Marco&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Abril&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Maio&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Junho&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Julho&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Agosto&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Setembro&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Outubro&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Novembro&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;:
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Dezembro&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="nl"&gt;default:&lt;/span&gt;
             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;O valor digitado nao corresponde a um mes do ano!&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 
@@ -2351,7 +2351,7 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
 &lt;h2&gt;ESTRUTURA DE REPETIÇÃO &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;do-while&lt;/span&gt;&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;A instrução &lt;cite&gt;do-while&lt;/cite&gt; é uma outra forma de nós repetirmos um bloco de instrução por um determinado período de tempo. Se compararmos a instrução &lt;cite&gt;while&lt;/cite&gt; com a instrução &lt;cite&gt;do-while&lt;/cite&gt;, veremos que a diferença entre essas estruturas e a sua forma de execução está no fato de que com a instrução &lt;cite&gt;do-while&lt;/cite&gt; o bloco sempre será executado por no mínimo uma vez. Enquanto que com a instrução &lt;cite&gt;while&lt;/cite&gt;, o bloco dessa instrução só será executado se e somente se a condição for atendida.&lt;/p&gt;
 &lt;p&gt;Por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="c1"&gt;// código&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -2363,8 +2363,8 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -2427,8 +2427,8 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
 &lt;p&gt;Como estudamos, o código PHP é executado na maior parte das vezes em um servidor, logo, nós temos uma situação onde o servidor web finalizara o nosso script, até porque, o mesmo nunca finaliza a sua execução. Assim, nós temos que nenhuma informação será retornada para quem solicitou e então, dizemos que ocorreu um erro em nossa aplicação.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -2486,7 +2486,7 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
 &lt;h2&gt;LAÇO DE REPETIÇÃO&lt;/h2&gt;
 &lt;p&gt;A instrução &lt;cite&gt;while&lt;/cite&gt; funciona de maneira semelhante a instrução &lt;cite&gt;for&lt;/cite&gt;. A diferença é que com a instrução &lt;cite&gt;while&lt;/cite&gt; nós conseguimos construir laços de repetição indefinidos ou então, laços que sejam executados enquanto uma condição for verdadeira.&lt;/p&gt;
 &lt;p&gt;Por exemplo, a seguir, o bloco de instrução será repetido até que a condição definida no cabeçalho da estrutura deixe de ser verdadeiro:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -2497,8 +2497,8 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -2561,7 +2561,7 @@ Nas aulas que se seguem, iremos depurar o código que desenvolveremos nessa aula
 &lt;p&gt;Nesta aula, iremos desenvolver um programa que pergunta ao usuário qual a tabuada o mesmo deseja e então, com a utilização de uma laço de repetição &lt;cite&gt;for&lt;/cite&gt;, calcula e imprime na tela a tabuada solicitada.&lt;/p&gt;
 &lt;p&gt;Esse é um excelente exercício para aprimorarmos a forma como lidamos com os laços de repetição e também, faz com que tenhamos que utilizar técnicas distintas para percorrer os números de 1 até 10.&lt;/p&gt;
 &lt;p&gt;No exemplo realizado nesse vídeo, nós inicializamos a variável chamada de &lt;cite&gt;n&lt;/cite&gt; da seguinte maneira:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Quando declaramos que queremos um espaço de memória, ou melhor, quando declaramos uma variável qualquer, o que acontece é que um espaço de memória é reservado e o tamanho desse espaço é o tamanho do tipo da variável. Então, temos que o nome da variável, o nome que utilizamos para fazer uso da mesma é chamado de REFERÊNCIA. Então, temos uma referência para uma determinada região de memória.&lt;/p&gt;
 &lt;p&gt;O que acontece, é que as regiões de memória contém valores comumente chamado de lixo - são os lixos de memória. Logo, quando declaramos uma variável, não temos a certeza de que a mesma irá conter, por exemplo o valor 0.&lt;/p&gt;
@@ -2572,8 +2572,8 @@ Porém, em aplicações maiores, acontece de nós declararmos uma variável e fa
 &lt;p&gt;É obrigatório? Não! Mas trabalhe assim que é muito mais seguro!!!&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -2665,8 +2665,8 @@ variavel --;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -2751,8 +2751,8 @@ variavel --;&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -2799,8 +2799,8 @@ variavel --;&lt;/blockquote&gt;
 &lt;p&gt;Nós temos um único operador de atribuição simples, porém, nós também temos disponível os operadores de atribuição compostos que podem ser utilizados para além de atribuir um valor, também fazer uma operação no mesmo momento.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -2968,7 +2968,7 @@ variavel --;&lt;/blockquote&gt;
 &lt;h2&gt;O CONECTIVO DE CONJUNÇÃO &lt;tt class="docutils literal"&gt;E&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;O &lt;strong&gt;Conectivo Lógico de Conjunção&lt;/strong&gt; &lt;tt class="docutils literal"&gt;||&lt;/tt&gt; une a expressão a sua esquerda com a expressão a sua direita. Expressões com o uso do &lt;strong&gt;Conectivo de Conjunção&lt;/strong&gt; dão origem a frases em Português, mais ou menos assim: &lt;strong&gt;X&lt;/strong&gt; é verdadeiro e &lt;strong&gt;Y&lt;/strong&gt; é verdadeiro?&lt;/p&gt;
 &lt;p&gt;Nas situações em que &lt;strong&gt;A&lt;/strong&gt; for verdadeiro e &lt;strong&gt;B&lt;/strong&gt; também, o resultado, segundo a tabela lógica, será também verdadeiro.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No exemplo acima, temos uma &lt;tt class="docutils literal"&gt;expressão lógica composta&lt;/tt&gt; constituida por 2 expressões lógicas simples e ligadas pelo &lt;tt class="docutils literal"&gt;conectivo de conjunção&lt;/tt&gt;.&lt;/p&gt;
@@ -2978,7 +2978,7 @@ Conectivo lógico de conjunção: &lt;strong&gt;&amp;amp;&amp;amp;&lt;/strong&gt
 &lt;p&gt;Para analisarmos uma &lt;tt class="docutils literal"&gt;expressão lógica composta&lt;/tt&gt;, precisamos antes, analisar suas &lt;tt class="docutils literal"&gt;expressões lógicas simples&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;A primeira expressão, está perguntando se o valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é maior do que zero. A variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; está declarada na linha acima e inicializada com o valor 1, por isso, a primeira expressão é verdadeira.&lt;/p&gt;
 &lt;p&gt;A segunda expressão, pergunta se o valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é menor do que 100. O valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; é igual a 1 e por isso é menor do que 100. Analisado ambas expressões,acabamos por ter uma nova expressão, como pode ser visto abaixo.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, temos a mesma expressão do exemplo anterior, porém, substituirmos as duas &lt;strong&gt;expressões lógicas simples&lt;/strong&gt; pelos seus respectivos &lt;strong&gt;valores lógicos&lt;/strong&gt;, isto é, o valor decorrente da &lt;strong&gt;análise lógica&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;A expressão &lt;tt class="docutils literal"&gt;(True) &amp;amp;&amp;amp; (True)&lt;/tt&gt; se comparada com a &lt;strong&gt;Tabela Lógica de Valores&lt;/strong&gt;, tem-se que o valor decorrente dessa segunda análise, constituida por 2 valores lógicos ligados pelo &lt;strong&gt;conectivo de ligação E&lt;/strong&gt;, será o &lt;strong&gt;valor lógico&lt;/strong&gt; &lt;tt class="docutils literal"&gt;True&lt;/tt&gt;.&lt;/p&gt;
@@ -2987,14 +2987,14 @@ Conectivo lógico de conjunção: &lt;strong&gt;&amp;amp;&amp;amp;&lt;/strong&gt
 &lt;h2&gt;CONECTIVO ( OU )&lt;/h2&gt;
 &lt;p&gt;O &lt;strong&gt;conectivo lógico de disjunção&lt;/strong&gt; &lt;strong&gt;OU&lt;/strong&gt; liga a expressão a sua esquerda a expressão a sua direita. Expressões com o uso do &lt;strong&gt;conectivo de disjunção&lt;/strong&gt; dão origem a frases em Português, mais ou menos assim: &lt;strong&gt;X&lt;/strong&gt; é verdadeiro ou &lt;strong&gt;Y&lt;/strong&gt; é verdadeiro?&lt;/p&gt;
 &lt;p&gt;O &lt;strong&gt;operador lógico OU&lt;/strong&gt; sempre precisará que uma das 2 &lt;strong&gt;expressões simples&lt;/strong&gt; avaliadas sejam verdadeiras para que avaliação seja verdadeira. No caso onde ambas &lt;strong&gt;expressões simples&lt;/strong&gt; forem verdadeiras, o resultado também será verdadeiro, porém, se ambas expressões forem falsas, o resultado lógico será falso.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A &lt;strong&gt;expressão lógica composta&lt;/strong&gt; que temos no código acima, será desmembrada como estudado anteriormente, e agora, para que a avaliação seja verdadeira, uma das 2 expressões precisam ser verdadeiras.&lt;/p&gt;
 &lt;p&gt;A primeira expressão verifica se &lt;tt class="docutils literal"&gt;(x &amp;gt; 10)&lt;/tt&gt;. A variável``x`` está declarada na linha acima e inicializada com o valor igual a 1, logo, essa expressão é falsa, até porque, o valor de &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; &lt;strong&gt;não é maior&lt;/strong&gt; do que 10.&lt;/p&gt;
 &lt;p&gt;A segunda expressão &lt;tt class="docutils literal"&gt;(x &amp;lt; 100)&lt;/tt&gt; está perguntando se o valor da variável &lt;tt class="docutils literal"&gt;x&lt;/tt&gt; &lt;strong&gt;é menor&lt;/strong&gt; do que o número 100. Essa expressão é verdadeira, até porque, o número 1 &lt;strong&gt;é menor&lt;/strong&gt; do que o número 100.&lt;/p&gt;
 &lt;p&gt;No código a seguir, temos a expressão que será originadas a partir do código anterior.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Agora, temos que o primeiro &lt;strong&gt;valor lógico&lt;/strong&gt; é falso, enquanto o segundo é verdadeiro. Esses valores estão ligados pelo &lt;strong&gt;conectivo de disjunção&lt;/strong&gt; utilizado para avaliar se uma das expressões é verdadeira. Como o segundo valor lógico é verdadeiro, o valor decorrente dessa &lt;strong&gt;análise lógica&lt;/strong&gt; será verdadeiro.&lt;/p&gt;
 &lt;/div&gt;
@@ -3002,7 +3002,7 @@ Conectivo lógico de conjunção: &lt;strong&gt;&amp;amp;&amp;amp;&lt;/strong&gt
 &lt;h2&gt;EXPRESSÕES SIMPLES E COMPOSTAS&lt;/h2&gt;
 &lt;p&gt;Os &lt;strong&gt;operadores relacionais&lt;/strong&gt; obtém a relação entre os operandos e por isso, podemos chamar esse tipo de expressão como sendo, &lt;strong&gt;expressões simples&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;As &lt;strong&gt;expressões compostas&lt;/strong&gt;, por sua vez, são a união de 2 ou mais expressões simples e ligadas por um &lt;strong&gt;conectivo lógico&lt;/strong&gt;. A seguir, temos um exemplo utilizando o &lt;strong&gt;conectivo lógico de conjunção&lt;/strong&gt; unindo assim, 2 expressões e dando origem a uma nova &lt;strong&gt;expressão lógica&lt;/strong&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//  EXEMPLO&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//  EXEMPLO&lt;/span&gt;
 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;isso&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;isso&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="c1"&gt;// A EXPRESSAO ACIMA ORIGINOU:&lt;/span&gt;
@@ -3015,7 +3015,7 @@ Conectivo lógico de conjunção: &lt;strong&gt;&amp;amp;&amp;amp;&lt;/strong&gt
 &lt;h2&gt;CONSTRUINDO EXPRESSÕES&lt;/h2&gt;
 &lt;p&gt;A linguagem C# possui algumas regras sintáticas para uso dos &lt;strong&gt;Conectivos Lógicos&lt;/strong&gt;.
 Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com parêntesis, por exemplo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
 
@@ -3023,14 +3023,14 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, no cabeçalho da tomada de decisão, definimos 2 expressões. A primeira &lt;tt class="docutils literal"&gt;num &amp;gt;= 0&lt;/tt&gt; e a segunda &lt;tt class="docutils literal"&gt;num &amp;lt;= 10&lt;/tt&gt;. Devido ao fato que ambas expressões foram ligadas com um &lt;strong&gt;Conectivo Lógico&lt;/strong&gt;, foi necessário envolver a expressão originada com parêntesis.&lt;/p&gt;
 &lt;p&gt;Da mesma forma, não é permitido isolar cada expressão sem não envolver ambas com parêntesis. O código a seguir não compila, até porque, as expressões que estão sendo ligadas pelo operador &lt;tt class="docutils literal"&gt;&amp;amp;&amp;amp;&lt;/tt&gt; não estão agrupadas com parêntesis.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
 
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O código a seguir, corrige o problema do código acima, isolando cada expressão com parêntesis e delimitando a expressão resultante também.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
 
@@ -3039,8 +3039,8 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -3143,7 +3143,7 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
 &lt;p&gt;Nessa segunda aula de tomada de decisão, iremos estudar a estrutura ELSE, ou seja, a estrutura que contém o bloco da condição False.&lt;/p&gt;
 &lt;p&gt;Se todas as verificações podem ser verdadeiras ou falsas, temos que conhecer a forma como declarar o bloco de execução para caso a nossa condição não seja cumprida.&lt;/p&gt;
 &lt;p&gt;&amp;quot;Else&amp;quot; é uma palavra do idioma inglês e significa &lt;cite&gt;senão&lt;/cite&gt;. Assim, essa é uma estrutura para ser utilizada depois de verificar alguma relação, como no exemplo a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;verdadeiro&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;verdadeiro&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
   &lt;span class="c1"&gt;//bloco de execução para as situações em que&lt;/span&gt;
   &lt;span class="c1"&gt;//a condição for verdadeira&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
@@ -3154,8 +3154,8 @@ Quando ligamos 2 ou mais expressões, devemos envolver todas as expressões com 
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -3226,10 +3226,10 @@ Imagem demonstrando a utilização da estrutura condiciona if com a linguagem C+
 &lt;h2&gt;A INSTRUÇÃO &lt;tt class="docutils literal"&gt;if&lt;/tt&gt;&lt;/h2&gt;
 &lt;p&gt;Do inglês, a palavra &lt;tt class="docutils literal"&gt;if&lt;/tt&gt; significa &lt;tt class="docutils literal"&gt;SE&lt;/tt&gt;. Com a estrutura condicional &lt;tt class="docutils literal"&gt;if&lt;/tt&gt; podemos determinar o que deve acontecer caso a expressão verificada for verdadeira, ou então, o que deve acontecer, caso a expressão seja falsa.&lt;/p&gt;
 &lt;p&gt;Analise o exemplo a seguir. Vamos verificar uma situação, porém, utilizando a Lingua Portuguesa:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;){&lt;/span&gt;
-    &lt;span class="n"&gt;faça_isso&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="n"&gt;faça_e_mais_isso&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="n"&gt;faça_aquilo&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="n"&gt;fa&lt;/span&gt;&lt;span class="err"&gt;ç&lt;/span&gt;&lt;span class="n"&gt;a_isso&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;fa&lt;/span&gt;&lt;span class="err"&gt;ç&lt;/span&gt;&lt;span class="n"&gt;a_e_mais_isso&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;fa&lt;/span&gt;&lt;span class="err"&gt;ç&lt;/span&gt;&lt;span class="n"&gt;a_aquilo&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;No código acima, inicialmente verificamos uma condição que sempre será verdadeira, pois, 1 sempre será igual a 1.&lt;/p&gt;
@@ -3252,8 +3252,8 @@ Imagem demonstrando a utilização da estrutura condiciona if com a linguagem C+
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -3355,7 +3355,7 @@ A alteração da ordem em que os operandos estão dispostos altera a análise da
 &lt;/pre&gt;
 &lt;p&gt;Vamos realizar algumas operações na prática para que possamos ver os resultados lógicos que o compilador do C++ enviará para a saída padrão. Digite as seguintes operações, uma após outra e analise o valor enviado para a saída.&lt;/p&gt;
 &lt;p&gt;Feito esses exemplos, sinta-se livre para testar o compilador!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;a&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -3383,15 +3383,15 @@ A alteração da ordem em que os operandos estão dispostos altera a análise da
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;A seguir, vamos realizar alguns exemplos na prática para estudar os resultados que o compilador enviará para a saída padrão. Digite as seguintes expressões e, obviamente, sinta-se livre para criar as suas próprias!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -3457,8 +3457,8 @@ Para isso, dividimos o número por 100 e o resultado será igual a um caso o nú
 Ou seja, essa é mais uma situação onde podemos utilizar essa propriedade matemática.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -3503,8 +3503,8 @@ Ou seja, essa é mais uma situação onde podemos utilizar essa propriedade mate
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -3620,7 +3620,7 @@ Ou seja, essa é mais uma situação onde podemos utilizar essa propriedade mate
 &lt;/div&gt;
 &lt;div class="section" id="exemplos"&gt;
 &lt;h2&gt;EXEMPLOS&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//soma&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;//soma&lt;/span&gt;
 &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;soma&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="c1"&gt;//subtraçao&lt;/span&gt;
@@ -3639,8 +3639,8 @@ Tome cuidado para não realizar divisões por zero, pois, a o C++ levantará uma
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -3732,9 +3732,9 @@ Tome cuidado para não realizar divisões por zero, pois, a o C++ levantará uma
 &lt;div class="section" id="codigo-enviado-por-aluno"&gt;
 &lt;h2&gt;CÓDIGO ENVIADO POR ALUNO&lt;/h2&gt;
 &lt;p&gt;Nome: Matheus Souza - &lt;a class="reference external" href="https://plus.google.com/b/102371115481264098253/103032760058774924445/posts"&gt;https://plus.google.com/b/102371115481264098253/103032760058774924445/posts&lt;/a&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;cstdlib&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;cstdio&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;cstdlib&amp;gt;&lt;/span&gt;
 
 &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
     &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -3764,8 +3764,8 @@ Tome cuidado para não realizar divisões por zero, pois, a o C++ levantará uma
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -3837,8 +3837,8 @@ Tome cuidado para não realizar divisões por zero, pois, a o C++ levantará uma
 &lt;p&gt;Sem dúvida, essa é a primeira grande mudança que os programadores acostumados com a linguagem C puderam notar. Agora, podemos adicionar informações na saída padrão, utilizando um único operador. Da mesma forma, conseguimos extrair as últimas informações digitadas pelo usuário utilizando um único operado, o operador de extração.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -3920,9 +3920,9 @@ Tome cuidado para não realizar divisões por zero, pois, a o C++ levantará uma
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iomanip&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;iomanip&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -3987,8 +3987,8 @@ Agora tornou-se muito mais prático enviar e receber informações, como também
 Se você já possui alguma experiência com programação, sabes que a maior parte do trabalho se dá no envio e recebimento de informações. Por essa razão, o C++ inovou com esses operadores, para tornar o que já era bom melhor.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -4034,19 +4034,19 @@ Se você já possui alguma experiência com programação, sabes que a maior par
                 &lt;span class="p"&gt;}&lt;/span&gt;
                 &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;menuInterno&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
                     &lt;span class="k"&gt;switch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;menuInterno&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-                        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;:
                             &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
                             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-                        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;:
                             &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
                             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-                        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;:
                             &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;*=&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
                             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-                        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;:
                             &lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;/=&lt;/span&gt; &lt;span class="n"&gt;valor&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
                             &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-                        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;:
                             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\t\t&lt;/span&gt;&lt;span class="s"&gt;=========================&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
                             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\t\t&lt;/span&gt;&lt;span class="s"&gt;Valor total&amp;gt; &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;total&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot; &amp;lt;&amp;lt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
                             &lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\t\t&lt;/span&gt;&lt;span class="s"&gt;=========================&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -4158,15 +4158,15 @@ Se você já possui alguma experiência com programação, sabes que a maior par
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;sizeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;variável&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="n"&gt;tamanhoDe&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;variável&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;sizeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;vari&lt;/span&gt;&lt;span class="err"&gt;á&lt;/span&gt;&lt;span class="n"&gt;vel&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;tamanhoDe&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;vari&lt;/span&gt;&lt;span class="err"&gt;á&lt;/span&gt;&lt;span class="n"&gt;vel&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Como podemos ver no exemplo acima, basta escrevermos o nome do operador e passar como parâmetro o nome da variável que a linguagem C++ retornará o seu tamanho.&lt;/p&gt;
 &lt;p&gt;No demais, não há nenhum segredo ou implicação no uso deste operador.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;
@@ -4235,7 +4235,7 @@ Se você já possui alguma experiência com programação, sabes que a maior par
 &lt;p&gt;Qual a importância em saber que uma variável sempre possuirá um valor, ainda que seja lixo? O entendimento dessa situação previne a declaração de uma variável sem inicializá-la. Até porque, se não atribuirmos um valor a variável e então utilizarmos a mesma com sujeira para fazer um cálculo, ocorre que nós iremos ter um resultado inesperado e isso pode vir a ser gravíssimo.&lt;/p&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -4305,7 +4305,7 @@ Pode-se dizer que agora aprenderemos um dos assuntos mais importante de qualquer
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -4361,7 +4361,7 @@ Pode-se dizer que agora aprenderemos um dos assuntos mais importante de qualquer
 &lt;p&gt;Uma referência pode ser composta por letras e números, desde que a mesma não inicie com um dos 10 algarismos númericos. Ou seja, podemos utilizar quaisquer número na composição do nome da variável, desde que este não esteja o primeiro caractere, como por exemplo: &lt;cite&gt;9num&lt;/cite&gt;, ou então, &lt;cite&gt;1var&lt;/cite&gt;.&lt;/p&gt;
 &lt;p&gt;Se precedermos o nome com números ocorrerá uma situação em que o compilador não conseguirá distinguir se estamos trabalhando com um número, como por exemplo, um número complexo, ou então, se este nome é de fato uma variável.&lt;/p&gt;
 &lt;p&gt;Assim, temos que a utilização de números é permitida, porém, somente após o primeiro caractere, como podemos ver nos exemplos a seguir:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;caractere&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;flag&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -4403,14 +4403,14 @@ Pode-se dizer que agora aprenderemos um dos assuntos mais importante de qualquer
 &lt;/blockquote&gt;
 &lt;p&gt;Novamente, é importante dizer que caracteres especiais não podem ser utilizados, seja qual for a posição em que estes aparecerem na definição da referência!&lt;/p&gt;
 &lt;p&gt;A seguir, temos mais um exemplo dos caracteres que não podem estar na primeira posição de um nome de variável.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//ERRO&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//ERRO&lt;/span&gt;
 &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;informe seu nome&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//ERRO&lt;/span&gt;
 &lt;span class="kt"&gt;float&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="c1"&gt;//ERRO&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;As referências utilizadas no código acima são &lt;strong&gt;TODAS&lt;/strong&gt; invalidas, e a razão, deve-se ao fato destas iniciarem com caracteres numéricos. Como já dito, o primeiro caractere deve, &lt;strong&gt;obrigatoriamente&lt;/strong&gt;, ser um letra do alfabeto.&lt;/p&gt;
 &lt;p&gt;Podemos concluir também que uma variável &lt;strong&gt;jamais&lt;/strong&gt; será composta por somente números, haja vista que o primeiro caractere precisa ser uma letra.&lt;/p&gt;
 &lt;p&gt;Para definirmos o nome de variáveis, temos que iniciar utilizando um caractere que esteja no intervalo de &lt;cite&gt;a&lt;/cite&gt; à &lt;cite&gt;z&lt;/cite&gt; ou &lt;cite&gt;A&lt;/cite&gt; à &lt;cite&gt;Z&lt;/cite&gt; e a única exceção a esta regra é o caractere underline &lt;cite&gt;_&lt;/cite&gt;. A seguir, temos alguns nomes de variáveis &lt;strong&gt;válidos&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i8nt&lt;/span&gt; &lt;span class="n"&gt;vvar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i8nt&lt;/span&gt; &lt;span class="n"&gt;vvar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;_vVar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;__________idade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -4423,7 +4423,7 @@ Pode-se dizer que agora aprenderemos um dos assuntos mais importante de qualquer
 &lt;div class="section" id="a-excecao-a-regra"&gt;
 &lt;h2&gt;A EXCEÇÃO A REGRA&lt;/h2&gt;
 &lt;p&gt;Como já foi dito, porém, para formalizar a regra temos que o único caractere especial, que pode ser utilizado na composição de nomes, e que também pode estar situando em qualquer posição, é o caractere underline &lt;tt class="docutils literal"&gt;_&lt;/tt&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;_minhaVar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;55&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;_minhaVar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;55&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="macetezinho"&gt;
@@ -4441,7 +4441,7 @@ Pode-se dizer que agora aprenderemos um dos assuntos mais importante de qualquer
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
 
 &lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -4630,8 +4630,8 @@ Um programa em C pode ser facilmente migrado para C++, até porque, o seu códig
 &lt;/div&gt;
 &lt;div class="section" id="exemplo-feito-em-aula"&gt;
 &lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include &amp;lt;iostream&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;
 
 &lt;span class="cm"&gt;/*====================================&lt;/span&gt;
 &lt;span class="cm"&gt;*           eXcript.com&lt;/span&gt;

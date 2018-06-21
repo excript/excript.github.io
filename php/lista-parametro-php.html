@@ -477,9 +477,6 @@ eXcript            </a>
                         </tr><tr>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" >Funções Modificadoras em PHP</a></td>
                             <td><a href="http://excript.com/php/funcoes-modificadoras-php.html" ></a></td>
-                        </tr><tr>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" >Sobrescrita de Funções em PHP</a></td>
-                            <td><a href="http://excript.com/php/sobrescrita-funcao-php.html" ></a></td>
                         </tr>        </tbody>
             </table>
         
@@ -523,7 +520,7 @@ eXcript            </a>
 <div class="section" id="funcao-func-get-arg">
 <h2>FUNÇÃO <tt class="docutils literal">func_get_arg()</tt></h2>
 <p>A função <tt class="docutils literal">func_get_arg()</tt> retorna o valor referente ao índice passado como parâmetro, ou seja, se passarmos o valor 0, será retornado o valor referente ao elemento vinculado ao índice 0.</p>
-<div class="highlight"><pre><span></span><span class="x">function soma()</span>
+<div class="highlight"><pre><span class="x">function soma()</span>
 <span class="x">{</span>
 <span class="x">    $a = func_get_arg(0);</span>
 <span class="x">    $b = func_get_arg(1);</span>
@@ -539,7 +536,7 @@ eXcript            </a>
 <div class="section" id="funcoes-func-get-arg-e-func-num-args">
 <h2>FUNÇÕES <tt class="docutils literal">func_get_arg()</tt> E <tt class="docutils literal">func_num_args()</tt></h2>
 <p>Algumas vezes não saberemos quantos parâmetros que foram enviados, logo, não é uma boa prática testar se existe algum valor definido nas primeiras posições com a função <tt class="docutils literal">func_get_arg()</tt>. Então, temos que o PHP nos fornece 2 outras funções para trabalharmos com a lista de parâmetros que está sendo enviada, são elas <tt class="docutils literal">func_get_arg()</tt> e <tt class="docutils literal">func_num_args()</tt>.</p>
-<div class="highlight"><pre><span></span><span class="x">function soma()</span>
+<div class="highlight"><pre><span class="x">function soma()</span>
 <span class="x">{</span>
 <span class="x">    $num = func_num_args();</span>
 <span class="x">    $args = func_get_args();</span>
@@ -563,7 +560,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="x">function soma(){</span>
+<div class="highlight"><pre><span class="x">function soma(){</span>
 
 <span class="x">    $total = func_get_arg(0) + func_get_arg(1);</span>
 

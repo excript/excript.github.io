@@ -210,10 +210,10 @@ eXcript            </a>
         </table>
     </div>
 <p>Acrescentado no arquivo XML</p>
-<div class="highlight"><pre><span></span>andoid:onclick=&quot;clickQuadrado&quot;
+<div class="highlight"><pre>andoid:onclick=&quot;clickQuadrado&quot;
 </pre></div>
 <p>Acrescentado no arquivo <tt class="docutils literal">main.java</tt></p>
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">com.example.jogo</span><span class="o">;</span>
+<div class="highlight"><pre><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">example</span><span class="o">.</span><span class="na">jogo</span><span class="o">;</span>
 
 
 <span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
@@ -235,12 +235,12 @@ eXcript            </a>
 
 
 <span class="nd">@Override</span>
-    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="n">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
         <span class="n">setView</span><span class="o">(</span><span class="n">getLayoutInflater</span><span class="o">().</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">main</span><span class="o">,</span> <span class="kc">null</span><span class="o">));</span>
         <span class="n">setContentView</span><span class="o">(</span> <span class="n">getView</span><span class="o">());</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">clickquadrado</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">){</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">clickquadrado</span><span class="o">(</span><span class="n">View</span> <span class="n">v</span><span class="o">){</span>
 
         <span class="k">if</span><span class="o">(</span><span class="n">lastPlay</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">XIS</span><span class="o">)){</span>
             <span class="o">((</span><span class="n">Button</span><span class="o">)</span><span class="n">v</span><span class="o">).</span><span class="na">setText</span><span class="o">(</span> <span class="n">BOLA</span> <span class="o">);</span>
@@ -258,10 +258,10 @@ eXcript            </a>
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getLastPlay</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">lastPlay</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setLastPlay</span><span class="o">(</span><span class="n">String</span> <span class="n">lastPlay</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="n">setLastPlay</span><span class="o">(</span><span class="n">String</span> <span class="n">lastPlay</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">this</span><span class="o">.</span><span class="na">lastPlay</span> <span class="o">=</span> <span class="n">lastPlay</span><span class="o">;</span>
     <span class="o">}</span>
-    <span class="kd">public</span> <span class="n">Button</span> <span class="nf">getQuadrado</span><span class="o">(</span><span class="kt">int</span> <span class="n">tagNum</span><span class="o">){</span>
+    <span class="kd">public</span> <span class="n">Button</span> <span class="n">getQuadrado</span><span class="o">(</span><span class="kt">int</span> <span class="n">tagNum</span><span class="o">){</span>
         <span class="k">return</span> <span class="o">(</span><span class="n">Button</span><span class="o">)</span><span class="n">getView</span><span class="o">().</span><span class="na">findViewWithTag</span><span class="o">(</span><span class="s">&quot;QUADRADO&quot;</span><span class="o">+</span><span class="n">tagNum</span><span class="o">);</span>
     <span class="o">}</span>
 

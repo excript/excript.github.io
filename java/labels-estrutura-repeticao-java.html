@@ -354,9 +354,9 @@ eXcript            </a>
 <p>Se em um determinado momento verificarmos que não mais precisamos executar o looping que está executando o nosso looping, como poderemos interromper a execução do laços externos ao que estamos contido?</p>
 <p>É sempre importante lembrar que a instrução <cite>break</cite> ou então a instrução <cite>continue</cite> interrompem o laço de repetição do bloco onde estão contidas, porém, se quisermos interromper não somente o laço onde estamos contidos mas também, o laço que contém o laço em que estamos, como resolver esse problema?</p>
 <p>Para essas situações, podemos utilizar os <cite>labels</cite> para que assim, possamos dar nome a cada estrutura de controle e também, para podermos manipulá-las quando precisarmos. Essa é a função dos <cite>labels</cite>, atribuir nomes às estruturas fornecendo uma maneira de manipularmos as mesmas quando necessário, como no exemplo a seguir:</p>
-<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
   <span class="c1">//podemos nos referir a estrutura &quot;if&quot; através do &quot;label&quot; que a contém</span>
-  <span class="n">label1</span><span class="o">:{</span>
+  <span class="nl">label1:</span><span class="o">{</span>
     <span class="k">if</span><span class="o">(</span><span class="mi">1</span><span class="o">==</span><span class="mi">1</span><span class="o">){</span>
     <span class="o">}</span>
    <span class="o">}</span>
@@ -372,21 +372,21 @@ eXcript            </a>
 <p>A utilização dos labels não é amplamente utilizada, porém, o seu poder está além de uma simples demonstração. Todas as vezes em que precisarmos ter um controle sob determinada estrutura, essa é a única maneira em que podemos fazer.</p>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0039</span> <span class="o">{</span>
+<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0039</span> <span class="o">{</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">label1</span><span class="o">:</span>
+        <span class="nl">label1:</span>
         <span class="o">{</span>
-            <span class="n">labelIF</span><span class="o">:</span>
+            <span class="nl">labelIF:</span>
             <span class="k">if</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
                 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;instrução if&quot;</span><span class="o">);</span>
 
                 <span class="k">break</span> <span class="n">labelIF</span><span class="o">;</span>
                 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;label 1 ini&quot;</span><span class="o">);</span>
-                <span class="n">label2</span><span class="o">:</span>
+                <span class="nl">label2:</span>
                 <span class="o">{</span>
                     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;label 2 ini&quot;</span><span class="o">);</span>
-                    <span class="n">label3</span><span class="o">:</span>
+                    <span class="nl">label3:</span>
                     <span class="o">{</span>
                         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;label 3 ini&quot;</span><span class="o">);</span>
                         <span class="k">if</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span>

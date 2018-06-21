@@ -360,7 +360,7 @@ eXcript            </a>
 <p>Nós podemos dizer que um <tt class="docutils literal">bug</tt> em um programa é o resultado da não verificação de um determinado estado. Quando nosso programa não está preparado para um situação, a execução deste será aleatória e muito provavelmente será exibido uma mensagem de erro. Porém, há diversos erros em que nenhuma mensagem é apresentada, como por exemplo, um usuário informar que seu nome é um número com caracteres especiais.</p>
 <p>Se o nosso programa não verificar todos os caracteres digitados, o nosso programa terá um erro e este não levantara nenhuma mensagem de erro, e isso irá causar uma série de informações inválidas no cadastro. Logo, pela falta de uma verificação, acabamos com uma base de dados que contém informações erradas. Esse é um outro grupo de erro e geralmente, quando percebemos, há muita informação desconexa e essas deveram ser corrigidas.</p>
 <p>Agora vamos fazer um programa para praticarmos tudo que já estudamos:</p>
-<div class="highlight"><pre><span></span><span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+<div class="highlight"><pre><span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
 
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Digite &#39;1&#39; para sim e digite &#39;0&#39; para não: &quot;</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">acao</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
@@ -385,13 +385,13 @@ Em seguida, escrevemos uma mensagem para o usuário pedindo para que o mesmo dig
 <p>A instrução <tt class="docutils literal">else</tt> é utilizada para definir o bloco de instrução que deve ser executado quando a condição não for satisfeita.</p>
 <p>A palavra <tt class="docutils literal">else</tt> significa em português <tt class="docutils literal">senão</tt>, logo, como o nome sugere, é a instrução que irá conter o que dever ser feito se quando a expressão verificada for igual a <tt class="docutils literal">false</tt>.</p>
 <p>A seguir temos um exemplo mostrando a utilização da instrução <tt class="docutils literal">else</tt>:</p>
-<div class="highlight"><pre><span></span><span class="k">if</span><span class="o">(</span><span class="kc">false</span><span class="o">){</span>
+<div class="highlight"><pre><span class="k">if</span><span class="o">(</span><span class="kc">false</span><span class="o">){</span>
 <span class="o">}</span><span class="k">else</span><span class="o">{</span>
     <span class="c1">//bloco que será executado quando a condição não for satisfeita</span>
 <span class="o">}</span>
 </pre></div>
 <p>É uma pratica comum a verificação de uma outra condição dentro do bloco <strong>else</strong>, por exemplo:</p>
-<div class="highlight"><pre><span></span><span class="k">if</span><span class="o">(</span><span class="kc">false</span><span class="o">){</span>
+<div class="highlight"><pre><span class="k">if</span><span class="o">(</span><span class="kc">false</span><span class="o">){</span>
 <span class="o">}</span><span class="k">else</span><span class="o">{</span>
     <span class="k">if</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
         <span class="c1">//este bloco será executado se a instrução for verdadeira</span>
@@ -402,8 +402,8 @@ Em seguida, escrevemos uma mensagem para o usuário pedindo para que o mesmo dig
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0011</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Aula0011</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">//igual</span>
         <span class="c1">//diferente</span>
 

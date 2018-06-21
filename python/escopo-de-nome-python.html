@@ -157,9 +157,6 @@ eXcript            </a>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" >Primeira Aula de Python</a></td>
                             <td><a href="http://excript.com/python/primeira-aula-python.html" ></a></td>
                         </tr><tr>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" >Como Instalar o Python no Windows</a></td>
-                            <td><a href="http://excript.com/python/como-instalar-o-python-windows.html" ></a></td>
-                        </tr><tr>
                             <td><a href="http://excript.com/python/caracteristica-python.html" >Características do Python</a></td>
                             <td><a href="http://excript.com/python/caracteristica-python.html" ></a></td>
                         </tr><tr>
@@ -384,7 +381,7 @@ eXcript            </a>
 <p>O <strong>Escopo de Nome</strong> tem a função de classificar quais nome de variáveis, funções, classes estão acessíveis em cada <strong>bloco de instrução</strong>. O escopo, também é responsável por inutilizar variáveis declaradas e que não serão mais utilizadas, podendo assim, serem removidas da memória pela Máquina Virtual do Python.</p>
 <p>Temos que enxergar o escopo de nomes como mini-programas, onde todas as variáveis declaradas são globais e restritas ao seu bloco. Um bloco de código que possua outros blocos de códigos, definirá um escopo de nomes para cada novo bloco definido e restringira os nomes ali definidos.</p>
 <p>A seguir, temos um código bastante simples e que o Python não executa, isso porque, colocamos funções em blocos de instrução diferentes sem utilizarmos para isso, alguma estrutura que permitisse a utilização de diversos blocos.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="k">print</span><span class="p">()</span>
     <span class="k">print</span><span class="p">()</span>
@@ -392,7 +389,7 @@ eXcript            </a>
 </pre></div>
 <p>Cada instrução <tt class="docutils literal">print()</tt> foi utilizada num bloco de instrução novo, e por isso, possui seu escopo restrito. Se tivéssemos declarações de variáveis em cada bloco de instrução, estes seriam liberados quando o cursor de execução retornasse ao nível hierarquico anterior.</p>
 <p>A seguir, temos outro código para demonstração que também não será executado, porém, que nos ajudará a entender melhor o escopo de nomes.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
@@ -403,22 +400,22 @@ eXcript            </a>
 <span class="n">f</span> <span class="o">=</span> <span class="mi">6</span>
 </pre></div>
 <p>No código acima, declaramos várias variáveis em blocos de instrução diferentes. Caso o código compilasse sem problema, temos que todas as variáveis declaradas em escopos hierarquicamente a frente, seriam desalocadas quando o cursor de execução voltasse ao nível anterior. Assim, temos que todo escopo consegue enxergar os nomes declarados no bloco onde está contido, porém o contrário não é verdadeiro.</p>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
     <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
         <span class="n">c</span> <span class="o">=</span> <span class="mi">30</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="c1">#erro a variável c já foi liberada pelo Garbage Collector da VM do Python</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="c">#erro a variável c já foi liberada pelo Garbage Collector da VM do Python</span>
 </pre></div>
 <p>No exemplo acima, caso fosse possível executar, haveria um erro na soma de <tt class="docutils literal">b + c</tt>, isso porque, a variável <tt class="docutils literal">c</tt> foi desalocada quando o cursor de execução voltou para o segundo nível hierarquico.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
+<div class="highlight"><pre><span class="c">#coding: utf-8</span>
 
-<span class="c1">#=====================================</span>
-<span class="c1">#========== www.eXcript.com ==========</span>
-<span class="c1">#=====================================</span>
+<span class="c">#=====================================</span>
+<span class="c">#========== www.eXcript.com ==========</span>
+<span class="c">#=====================================</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="mi">25</span>
 <span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
