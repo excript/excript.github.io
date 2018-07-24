@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+
+
+<html lang="pt-br"  xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head>
+    <title>Biblioteca Kivy - eXcript</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="Vi7WdSsBR9oK2RjK_6E8OrtAfzA_mVlNrhlDjt7LXZ0" />
+	<!--<link href="https://plus.google.com/" rel="publisher">	-->
+
+
+
+<link rel="canonical" href="http://excript.com/python/kivy.html">
+
+        <meta name="author" content="Cláudio Rogério Carvalho Filho" />
+        <meta name="keywords" content="python,kivy,android,ios,kivy design,opengl,blog" />
+    <meta name="description" content="Neste artigo será apresentado o projeto que permite o desenvolvimento multiplataforma com Python utilizando o framework Kivy." />
+
+        <meta property="og:site_name" content="eXcript" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Biblioteca Kivy"/>
+        <meta property="og:url" content="http://excript.com/python/kivy.html"/>
+
+        <meta property="og:description" content="Neste artigo será apresentado o projeto que permite o desenvolvimento multiplataforma com Python utilizando o framework Kivy."/>
+
+        <meta property="article:published_time" content="21-06-2018" />
+
+            <meta property="article:section" content="curso de python" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="kivy" />
+            <meta property="article:tag" content="android" />
+            <meta property="article:tag" content="ios" />
+            <meta property="article:tag" content="kivy design" />
+            <meta property="article:tag" content="opengl" />
+            <meta property="article:tag" content="blog" />
+            <meta property="article:author" content="Cláudio Rogério Carvalho Filho" />
+            <meta property="og:image"  content="http://excript.com/images/logo-excript.png"/>
+
+
+    <link rel="stylesheet" href="http://excript.com/theme/css/asciidoctor-default.css" type="text/css"/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://excript.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://excript.com/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://excript.com/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://excript.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://excript.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="eXcript ATOM Feed"/>
+
+        <link href="http://excript.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="eXcript RSS Feed"/>
+
+
+        <link href="http://excript.com/feeds/curso-de-python.atom.xml" type="application/atom+xml" rel="alternate"
+              title="eXcript curso de python ATOM Feed"/>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://excript.com/" class="navbar-brand">
+eXcript            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="http://excript.com/tag/blog.html">blog</a></li>
+                    <li><a href="http://excript.com/cursos.html">cursos</a></li>
+                    <li><a href="http://excript.com/pages/about.html">quem somos</a></li>
+                    <li><a href="http://doe.excript.com/">DOE</a></li>
+                    <li><a href="http://excript.com/pages/contato.html">contato</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://excript.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container container-content">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://excript.com/python/kivy.html"
+                       rel="bookmark"
+                       title="Permalink to Biblioteca Kivy">
+                        BIBLIOTECA KIVY
+                    </a>
+                </h1>
+
+            </header>
+            <div class="entry-content">
+
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+
+        <span class="label label-default"></span>
+        <span class="published">
+            <time datetime="2018-06-21T08:00:00-03:00"> Publicado em 21-06-2018</time>
+        </span>
+
+
+
+	            <span class="label label-default"></span>
+	            por <a href="http://excript.com/author/claudio-rogerio-carvalho-filho.html">Cláudio Rogério Carvalho Filho</a>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+
+
+	<div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a data-toggle="tab" href="#artigo">ARTIGO</a></li>
+		</ul>
+
+		<div class="tab-content">
+
+			<div class="tab-pane active" id="artigo">
+				<div class="row">
+					
+    <div class="admonitionblock note data-line" style="margin-top: 1.50em">
+        <table style="margin: 0">
+            <tbody>
+                <tr>
+                    <td class="content" style="border-left: 0">
+                        <div class="paragraph data-line">
+                            <p> Neste artigo será apresentado o projeto que permite o desenvolvimento multiplataforma com Python utilizando o framework Kivy.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="section" id="introducao">
+<h2>INTRODUÇÃO</h2>
+<img alt="Logo oficial do projeto Kivy" src="../images/blog/kivy-logo.png" />
+<p>A biblioteca Kivy é um framework para desenvolvimento multiplataforma escrito majoritariamente com a linguagem Python e, com  alguns trechos escritos em Cython (explicaremos melhor a seguir). O framework permite o desenvolvimento de aplicações para os sistema operacional Microsoft Windows, Linux, Mac OSX, Android, iOS e Raspberry utilizando um mesmo código Python.</p>
+<p>O projeto é composto por vários subprojetos, cada um especializado numa determinada tarefa, como por exemplo, a geração de executáveis para determinada plataforma, uma API genérica para o fácil acesso ao hardware em plataformas diferentes, desenvolvimento de games e etc.</p>
+<p>É importante não confundir o projeto Kivy com a biblioteca Kivy. O projeto Kivy, cujo site é <a class="reference external" href="http://kivy.org">http://kivy.org</a> é composto por vários subprojetos, dentre estes, a biblioteca Kivy.</p>
+<p>A eXcript, junto a comunidade brasileira, traduziu a <a class="reference external" href="http://excript.com/python/doc-kivy-ptbr.html">documentação oficial do framework</a> e o mesmo pode ser baixado aqui em nosso site.</p>
+</div>
+<div class="section" id="a-biblioteca-kivy">
+<h2>A BIBLIOTECA KIVY</h2>
+<p>Uma aplicação desenvolvida com a <a class="reference external" href="https://github.com/kivy/kivy/">biblioteca Kivy</a> será executada diretamente em cima da biblioteca gráfica <tt class="docutils literal">OpenGL</tt> que normalmente é executado em cima da placa gráfica. O OpenGL possui suporte nativo para as principais plataformas, e, estando o Kivy desenvolvido em cima do mesmo, toda plataforma que oferece suporte ao OpenGL poderá executar uma aplicação escrita com o framework Kivy.</p>
+<p>Em outras palavras, todo o código será executado em cima dos processadores da placa de vídeo, e é por essa razão que em muitos casos, é possível que aplicações Kivy tenham performance igual, ou então superior a aplicações nativas!</p>
+<p>Como o OpenGL é multiplataforma, o projeto Kivy, construído em cima dessa camada, pode ser executado em qualquer dispositivo que suporte a biblioteca e, como praticamente todos dispositivos oferecem suporte devido a sua amplitude, a quantidade e a complexidade de trabalhar com o hardware e aplicações gráficas, aplicações Kivy são compatíveis com uma grande quantidade de dispositivos.</p>
+</div>
+<div class="section" id="opengl-2-0">
+<h2>OpenGL 2.0</h2>
+<p><tt class="docutils literal">OpenGL</tt> é uma API de desenvolvimento de aplicações gráficas e, ao mesmo tempo, o nome de uma linguagem de programação semelhante ao C++. A palavra OpenGL é um acrônimo de <cite>Open Graphics Library`</cite>, que, numa tradução livre teríamos <tt class="docutils literal">Biblioteca Gráfica Aberta</tt>. O seu uso permite o fácil desenvolvimento de aplicações gráficas, inclusive com ambientes 3D pondendo ser executado em praticamente todos sistemas operacionais e nos principais dispositivos. A biblioteca é amplamente utilizada na construção de jogos, ferramentas 3D ou qualquer aplicação que faça uso intensivo do hardware gráfico.</p>
+<blockquote>
+OpenGL é um conjunto de padrões de processamento de alto desempenho de gráficos 2D e 3D na unidade de processamento (GPU) para vários aplicativos. O OpenGL permite a renderização rápida de visualizações (modo Rascunho rápido).
+<a class="reference external" href="https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html">https://helpx.adobe.com/br/after-effects/using/rendering-opengl.html</a></blockquote>
+<p>A construção da biblioteca OpenGL era definir um padrão entre os desenvolvedores de hardware e os desenvolvedores de software, de forma a permitir a evolução contínua do hardware sem entrar em conflito com o software. Dessa forma, a API OpenGL faz o &quot;meio de campo&quot; entre o programador que utiliza as funções da API e os mais variados hardwares de vídeo. Então, nós programadores de linguagens de alto nível (alto nível pois estamos longe do hardware) não precisamos nos preocupar se a placa de vídeo é <a class="reference external" href="https://www.intel.com.br/">Intel</a>, <a class="reference external" href="http://www.nvidia.com/">NVidia</a> ou Xingling, pois a compatibilidade é trabalho da equipe que desenvolve e implementa a API.</p>
+<p>O núcleo do OpenGL é conhecido como &quot;rendering pipeline&quot; ou dutos de renderização. Podemos utilizar a biblioteca tanto para desenhos vetoriais, definidos por vértices, ou mapas de bits, desenhos construídos pixel-a-pixel.</p>
+<p>Os desenvolvedores de hardware conseguem criar extensões, inovando e diferenciando seus produtos, sem a necessidade de alterar a biblioteca e as atualizações, raramente obrigam os usuários da API OpenGL a alterarem os seus códigos.</p>
+<p>As extensões fornecem aos desenvolvedores de aplicativos os novos recursos de renderização e permite ir além das características especificadas na norma oficial do OpenGL (o padrão). Extensões da OpenGL mantém a API atual com as últimas inovações em hardware gráfico e algoritmos de processamento.</p>
+<p>Por fim, a biblioteca OpenGL é vastamente utilizada, seja por navegadores, seja por sistemas operacionais ou Engines de Games. Na foto abaixo, temos um sistema utilizado em automóveis brasileiros de nome LGE sendo utilizado como biblioteca gráfica.</p>
+<img alt="Sistema operacional LGE como item de fábrica em carros da Renault brasileiros. O sistema é comumente chamado de Media Nav." src="../images/blog/sistema-operacional-lge.jpg" />
+<p>Tirei a foto no carro do meu amigo Daniel Mello quando esperavamos a pizza ficar pronta. O sistema operacional a princípio parece ser proprietário e é desenvolvido pela LG, porém, o código fonte está disponível segundo a documentação oficial, porém, não encontrei onde. No Brasil o sistema vem sendo chamado de Media Nav.</p>
+</div>
+<div class="section" id="opengl-opengl-es-2-2-e-desktop-gl">
+<h2>OpenGL, OpenGL ES 2.2 e Desktop GL</h2>
+<p>O framework Kivy está construido <a class="reference external" href="https://www.opengl.org/">sob a API OpenGL ES 2.0</a> e possui muito do seu código-fonte escrito com a linguagem OpenGL que possui sintaxe identica a linguagem C. Os módulos de integração com a API OpenGL podem ser considerados o núcleo da biblioteca Kivy e também, o código mais complexo a ser estudado.</p>
+<blockquote>
+OpenGL® ES is a royalty-free, cross-platform API for full-function 2D and 3D graphics on embedded systems - including consoles, phones, appliances and vehicles. It consists of well-defined subsets of desktop OpenGL, creating a flexible and powerful low-level interface between software and graphics acceleration. OpenGL ES includes profiles for floating-point and fixed-point systems and the EGL™ specification for portably binding to native windowing systems. OpenGL ES 1.X is for fixed function hardware and offers acceleration, image quality and performance. OpenGL ES 2.X enables full programmable 3D graphics. OpenGL SC is tuned for the safety critical market.
+<a class="reference external" href="https://www.khronos.org/opengles/">https://www.khronos.org/opengles/</a></blockquote>
+<p>Atualmente há vários subsets (versões derivadas) da biblioteca OpenGL. Por padrão (convenção), os principais Sistemas Operacionais voltados a dispositivos móveis utilizam a biblioteca OpenGL ES 2.0. Portanto, é comum falarmos que o projeto Kivy está construido sob a arquitetura OpenGL, porém, a biblioteca utiliza de fato uma versão derivada de OpenGL ES 2.0 e que é um acrônimo de <tt class="docutils literal">OpenGL for Embedded Systems</tt> que numa tradução livre seria:</p>
+<p>A seguir, temos os acrônimos seguido de seus nomes completos:</p>
+<pre class="literal-block">
+- OpenGL: Open Graphic Library
+- OpenGL ES: OpenGL for Embedded Systems
+- Desktop GL: Desktop Graphic Library
+</pre>
+<p>É comum nos referirmos ao OpenGL ES 2.0 como GLES2 e ao Desktop GL como OpenGL 2.0 minimum, então temos que:</p>
+<pre class="literal-block">
+- GLES2 = OpenGL ES 2.0
+- Desktop GL = OpenGL 2.0 minimum)
+</pre>
+<p>GLES2 é um subset de OpenGL 2.0, com alguns poucos simbolos diferentes. O Kivy <em>utiliza somente instrução instrução GLES2</em> que é compatível com GL.</p>
+<blockquote>
+<ul class="simple">
+<li>On Desktop (Win/Linux/OSX), a compilação é feita com <tt class="docutils literal">Desktop GL</tt> (salvo se os cabeçalhos do <tt class="docutils literal">GLES2</tt> forem encontrados). Utilizamos <tt class="docutils literal">PyGame</tt> e <tt class="docutils literal">SDL</tt> somente para inicializar uma janela em sistemas Desktop como <tt class="docutils literal">Mac</tt> e <tt class="docutils literal">Windows</tt>, isso porque, o <tt class="docutils literal">Kivy</tt> possui a sua própria Engine gráfica.</li>
+<li>No Android, temos o Java bootstrap que inicializa o contexto da janela/<tt class="docutils literal">GLES2</tt>.</li>
+<li>No <tt class="docutils literal">iOS</tt>, utilizamos o <tt class="docutils literal">SDL 2.0</tt>, que suporta o contexto do <tt class="docutils literal">iOS</tt> e do <tt class="docutils literal">GLES2</tt>.</li>
+</ul>
+</blockquote>
+<p>O Kivy não utiliza funções gráficas do sistema operacional hospedeiro, logo, os componentes/Widgets são desenhados do zero e portanto, aplicações Kivy, terão o mesmo visual em todas as plataformas. Essa é a parte boa. A parte ruim é que se desejarmos que o nosso App utilize o leiaute do sistema operacional hospedeiro, teremos que desenvolver por conta própria.</p>
+<p>Existe versões em desenvolvimento que implementam o padrão gráfico do <a class="reference external" href="https://kivymd.github.io/">Material Design</a>, e muito provavelmente, alguém já está desenvolvendo uma versão que utilize os padrões do iOS. Porém, é importante saber que esses são projetos de terceiros, por isso, não há suporte oficial.</p>
+<p>É importante dizer que a biblioteca Kivy utiliza a API <tt class="docutils literal">OpenGL ES 2.0</tt>, porém, está não é a última versão disponibilizada pela fabricante.</p>
+<p><a class="reference external" href="https://www.opengl.org/sdk/docs/">Para consultar a documentação do projeto OpenGL utilize este link</a>.</p>
+
+    <div class="admonitionblock note data-line">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="icon">
+                        <i class="fa icon-note" title="Nota!"></i>
+                    </td>
+                    <td class="content">
+                        <div class="paragraph data-line">
+                            <p>A biblioteca Kivy é multiplataforma devido principalmente a biblioteca OpenGL.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="section" id="o-python">
+<h2>O PYTHON</h2>
+<p>A biblioteca inicialmente foi escrita para a versão 2x do <a class="reference external" href="https://blog.kivy.org/2016/01/python-for-android-now-supports-python-3%C2%A0apks/">Python e recentemente (2016) foi publicado o suporte experimental à versão 3x</a> . Ainda que o suporte seja experimental, há casos de sucesso utilizando a versão 3x.</p>
+<p>Mesmo assim, a versão do Python amplamente suportada ainda é a 2x e algumas plataformas, como por exemplo o Mac OSX, ainda não possuem suporte para gerar executáveis utilizando as últimas versões.</p>
+<p>O desenvolvimento utilizando a versão 2x e 3x são iguais, salvo a manipulação de String que, na versão 2x do Python possui um tratamento diferente, ou seja, as cadeias de caracteres não são Unicode por padrão.</p>
+<p>Projetos escritos com a versão 3x do Python podem ser convertidos para a versão 2x utilizando utilitários como por exemplo o <a class="reference external" href="https://docs.python.org/2/library/2to3.html">2to3</a> que, mesmo não sendo perfeito, resolve a maioria dos problemas de conversão.</p>
+<p>Por fim, é importante dizer que o buildozer, projeto que gera executáveis para as mais diversas plataformas pode ser baixado junto com uma versão do Lubuntu para as versões 2x, ou seja, a forma mais utilizada na geração de executáveis ainda é a versão 2x.</p>
+</div>
+<div class="section" id="a-linguagem-kivy-ou-entao-a-kvlang">
+<h2>A LINGUAGEM KIVY OU ENTÃO A kvlang</h2>
+<p>O projeto Kivy desenvolveu uma linguagem especializada e semelhante a linguagem Python para a construção de interfaces gráficas. O objetivo é facilitar a adição e remoção de Widgets (componentes visuais) ao mesmo tempo que separa o código utilizado para construção gráfica (View) do código Python, ou a lógica de negócios.</p>
+<p>Num primeiro momento é impossível não pensarmos se realmente existe a necessidade de criar mais uma linguagem sendo que já existem tantas. Talvez somente na prática é que conseguimos perceber o quão útil foi o estabelecimento dessa nova linguagem que de fato não passa de uma linguagem de marcação, haja vista que somente pequenas expressões podem ser utilizadas.</p>
+<p>Abaixo temos um trecho de código utilizando a kvlang e em seguida a tela que iremos obter quando executarmos.</p>
+<div class="highlight"><pre><span class="n">FloatLayout</span><span class="p">:</span>
+    <span class="n">TextInput</span><span class="p">:</span>
+        <span class="n">text</span><span class="p">:</span> <span class="s">&quot;eXcript&quot;</span>
+        <span class="n">height</span><span class="p">:</span> <span class="s">&quot;30px&quot;</span>
+        <span class="n">width</span><span class="p">:</span> <span class="mi">350</span>
+        <span class="n">top</span><span class="p">:</span> <span class="mi">100</span>
+        <span class="n">size_hint</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
+        <span class="n">pos_hint</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;center_x&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,}</span>
+    <span class="n">Button</span><span class="p">:</span>
+        <span class="n">text</span><span class="p">:</span> <span class="s">&quot;Confirmar&quot;</span>
+        <span class="n">height</span><span class="p">:</span> <span class="mi">30</span>
+        <span class="n">top</span><span class="p">:</span> <span class="mi">60</span>
+        <span class="n">size_hint</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
+        <span class="n">pos_hint</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;center_x&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,}</span>
+</pre></div>
+<img alt="Tela construida com o framework Kivy contendo um TextEdit e um Botão" src="../images/blog/kivy-exemplo-textinput-button.png" />
+</div>
+<div class="section" id="a-ide-kivy-design">
+<h2>A IDE Kivy Design</h2>
+<img alt="Imagem do editor Kivy Design" src="../images/blog/kivy-design.png" />
+<p>Kivy Design é um projeto de construção de uma IDE RAD para desenvolvimento de aplicações gráficas com Python utilizando a biblioteca kivy. A proposta é a construção do sonho de todos programadores: um ambiente de  completo, estável, para a construção de aplicações, seja para o Prompt de Comando, seja para aplicações gráfica para Desktop, Mobile e Web.</p>
+<p>O projeto Kivy Design objetiva fazer jus a todo o trabalho e esforço empreendido na construção da biblioteca Kivy e fornecer um ambiente para a construção de aplicações gráfica que tenha tanta qualidade como a biblioteca Kivy.</p>
+<p>A IDE vem sendo desenvolvido, obviamente, com o framework Kivy, então, talvez este venha a ser a primeira IDE RAD (Rapid Application Development) multiplataforma e multidispositivo do mundo. O mais legal é que temos a oportunidade de participar do desenvolvimento da IDE e assim, trabalhar para construir uma ferramenta que seja como sempre desejamos que ela fosse.</p>
+<p>Uma das razões do código do Kivy Design ser tão simples é que tudo ainda está no começo, por isso tanta simplicidade. E, essa é a parte boa, ou seja, temos a oportunidade de acompanhar o crescimento do código e ir assimilando naturalmente e participando da construção de um grande software!</p>
+<div class="section" id="estado-do-projeto-kivy-design">
+<h3>ESTADO DO PROJETO Kivy Design</h3>
+<p>Neste momento, ainda que seja possível executar o projeto Kivy Design, não é recomendável sua utilização, até porque, o mesmo está caindo (travando) a todo momento.</p>
+<p>Caso queiras se divertir, toda vez que Kivy Design travar, é impresso o local em que ocorreu o problema, logo, poder ir até lá e tentar corrigir.
+O interessante é que a maior parte das vezes em que o Kivy Design trava, o problema não está em seu código, mas sim, no código da biblioteca Kivy.</p>
+<p>Falando de maneira geral, o framework Kivy não faz um forte tratamento e verificação quando novos valores são atribuido para propriedades de um Widget. Se a propriedade estiver esperando uma Tupla e for enviado um dicionário, ocorre um erro na biblioteca, o que acaba por derrubar toda a IDE. A princípio, e, pelo que entendi, os desenvolvedores não tem interesse de fazer esse tipo de tratamento por questões de performance.</p>
+</div>
+</div>
+<div class="section" id="projeto-garden">
+<h2>PROJETO garden</h2>
+<p>O <a class="reference external" href="https://github.com/kivy-garden">Projeto Garden</a> centraliza componentes não oficiais de código-fonte aberto e distribuido sob a licença MIT desenvolvido por terceiros. Pense neste projeto como um centralizador de códigos de diferentes usuários cuja finalidade é distribuir e compartilhar módulos prontos para ser utilizado.</p>
+<p>Todos os pacotes Garden estão armazenados no Github, dentro do projeto Kivy, ou seja, no mesmo local em que baixamos o código fonte da biblioteca Kivy.</p>
+<p>O projeto Garden não está mais sendo entregue junto com o código do framework Kivy, por isso, agora, é necessário instala-lo manualmente. Para isso, vá no Terminal e digite:</p>
+<div class="highlight"><pre>pip install kivy-garden
+</pre></div>
+<p>Vale dizer que todos são incentivados a colaborar com os pacotes existentes ou então, pela criação de novos módulos independentes. Inclusive, existe um sistema de premiação simbólica para aqueles que tenham colaborado.</p>
+<p><a class="reference external" href="https://github.com/kivy-garden">Segue o link do repositório no Github</a>.</p>
+</div>
+<div class="section" id="projeto-buildozer">
+<h2>PROJETO Buildozer</h2>
+<p>O <a class="reference external" href="https://github.com/kivy/buildozer">projeto Buildozer é uma ferramenta para facilitar a geração de App para as várias plataformas suportadas pelo projeto Kivy</a> .</p>
+<p>O objetivo deste projeto, segundo a própria documentação oficial, é, através de um arquivo de nome &quot;buildozer.spec&quot; que contém uma lista de parâmetros que devemos definir, como por exemplo, título, ícone, módulos de terceiros (pacotes Python) e etc, gerar executáveis para as plataformas suportadas pelo projeto. Assim, definimos num único local as configurações do nosso App e em seguida, geramos um executável para a plataforma desejada.</p>
+<p>É importante dizer que o projeto Buildozer não implementa como o App será gerado, o que o mesmo faz, é servir como uma aplicação comum que analisará as informações e passará ao projeto especializado na geração.</p>
+<p>Então, não devemos pensar no Buildozer como um mega projeto que gera executáveis para várias plataformas, o seu principal objetivo é ler os valores definidos no arquivos &quot;buildozer.spec&quot; e envia-las ao projeto <cite>python-for-android</cite> ou ao projeto <cite>kivy-ios</cite>.</p>
+<p>O suporte a outras plataformas está previsto, porém, não existe qualquer informação adicional publicada, muito menos data prevista.</p>
+</div>
+<div class="section" id="projeto-python-for-android">
+<h2>PROJETO python-for-android</h2>
+<p>O projeto <cite>python-for-android</cite> é um subprojeto do projeto Kivy e seu objetivo é gerar executáveis para a plataforma Android.</p>
+<p>Este projeto utiliza várias linguagens de programação, como por exemplo, C, C++, Cython, Python e Java. O C e o C++ são utilizados para trabalhar nativamente com a API do Android, o <a class="reference external" href="https://developer.android.com/ndk/index.html">Android NDK</a> . O Cython faz a conversão do código Python para código C nativo e o código Java é utilizado para acessar a API nativa do Android.</p>
+<p>O App para a plataforma Android é gerada através de um projeto construído com o <a class="reference external" href="https://developer.android.com/studio/index.html">AndroidStudio</a> onde uma parte é nativa, ou seja, escrita com C e C++, outra parte utiliza a linguagem Java, outra parte utiliza o projeto <a class="reference external" href="https://github.com/kivy/PyJNIus">PyJNIus</a> e claro, tudo isso está integrado com a linguagem Python.</p>
+<p>Por essa razão, é correto dizer que o App gerado para a plataforma Android é nativo, até porque, o mesmo é construído através de um projeto nativo fornecido pela empresa desenvolvedora (a Google).</p>
+<p>O código Python por nós escrito é compilado com o <a class="reference external" href="http://http://cython.org/">Cython</a>, ou seja, um projeto que converte código Python para código C nativo, portanto, não é possível a terceiros ler, entender ou robar nossa implementação (facilmente).</p>
+<p>Dentro do App gerado (*.apk) contém uma VM do Python modificada, ou seja, todo aplicativo gerado com o Python-for-Android irá contér uma versão do Python modificada, por isso, é possível enviar código Python que será interpretado no dispositivo ou então, o que é o padrão, enviar o código compilado em C otimizado para processadores ARM.</p>
+<p>É incorreto dizer que aplicações escritas com a biblioteca Kivy são lentas ou então, que possuem baixa performance! Até porque, o Cython é um projeto amplamente respeitado por sua capacidade em converter código Python para código C puro altamente performático. E também, toda a parte gráfica é executada em cima da placa de vídeo, o que podemos facilmente deduzir, que a performance, algumas vezes, será superior ao código executado pelo processador na geração da parte gráfica.</p>
+<p>Talvez, o lado negativo é o tamanho do App que neste momento está ficando em torno de 44 megas, o que é grande se comparado ao tamanho de um App desenvolvido com Java, porém, pequeno, se comparado a capacidade de armazenamento e processamento dos dispositivos móveis atuais.</p>
+<p>Por fim, temos que TODA a API escrita em Java pode ser facilmente acessada via Python através do projeto <a class="reference external" href="https://github.com/kivy/PyJNIus">PyJNIus</a> que será explicado em seguida.</p>
+</div>
+<div class="section" id="projeto-pyjnius">
+<h2>PROJETO PyJNIus</h2>
+<p>O projeto PyJNIus permite acessar a API nativa do Android disponibilizada em classes escritas em Java e que por detrás utiliza a linguagem C++. O PyJNIus acessa as classes em Java, portanto, podemos criar uma class Java e &quot;mapea-la&quot; com o projeto PyJNIus para ser utilizada com a linguagem Python.</p>
+<p>Este projeto é semelhante ao <a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/">JNI (Java Native Interface)</a> que permite o acesso às classes escritas em Java por outras linguagens.</p>
+<p>Dessa forma, conseguimos por exemplo, acessar a classe <a class="reference external" href="https://developer.android.com/reference/android/content/Intent.html">Intent</a> do Android, ou então, a classe <a class="reference external" href="https://developer.android.com/reference/android/app/Activity.html">Activity</a> e inclusive, conseguimos desenvolver uma aplicação que rode nativamente em cima da API Java do Android.</p>
+<p>A seguir, temos um exemplo, retirado da documentação oficial do PyJNIus em que é feito o acesso a Activity do Android.</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">jnius</span> <span class="kn">import</span> <span class="n">cast</span>
+<span class="kn">from</span> <span class="nn">jnius</span> <span class="kn">import</span> <span class="n">autoclass</span>
+
+<span class="c"># import the needed Java class</span>
+<span class="n">PythonActivity</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s">&#39;org.renpy.android.PythonActivity&#39;</span><span class="p">)</span>
+<span class="n">Intent</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s">&#39;android.content.Intent&#39;</span><span class="p">)</span>
+<span class="n">Uri</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s">&#39;android.net.Uri&#39;</span><span class="p">)</span>
+
+<span class="c"># create the intent</span>
+<span class="n">intent</span> <span class="o">=</span> <span class="n">Intent</span><span class="p">()</span>
+<span class="n">intent</span><span class="o">.</span><span class="n">setAction</span><span class="p">(</span><span class="n">Intent</span><span class="o">.</span><span class="n">ACTION_VIEW</span><span class="p">)</span>
+<span class="n">intent</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="n">Uri</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s">&#39;http://kivy.org&#39;</span><span class="p">))</span>
+
+<span class="c"># PythonActivity.mActivity is the instance of the current Activity</span>
+<span class="c"># BUT, startActivity is a method from the Activity class, not from our</span>
+<span class="c"># PythonActivity.</span>
+<span class="c"># We need to cast our class into an activity and use it</span>
+<span class="n">currentActivity</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="s">&#39;android.app.Activity&#39;</span><span class="p">,</span> <span class="n">PythonActivity</span><span class="o">.</span><span class="n">mActivity</span><span class="p">)</span>
+<span class="n">currentActivity</span><span class="o">.</span><span class="n">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">)</span>
+</pre></div>
+<p>Observe que estamos utilizando a linguagem Python para trabalhar com classes escritas em Java!</p>
+<p>Assim concluímos que a capacidade de desenvolvimento é ilimitada, até porque, podemos acessar nativamente tudo que a plataforma Android disponibiliza, seja através das classe em C++ pelo acesso via <a class="reference external" href="https://developer.android.com/ndk/index.html">NDK</a>,</p>
+</div>
+<div class="section" id="projeto-kivy-for-ios">
+<h2>PROJETO kivy-for-iOS</h2>
+<p>O projeto <a class="reference external" href="https://github.com/kivy/kivy-ios">Kivy for iOS</a> é semelhante ao projeto Python for Android a diferença é o suporte à plataforma <a class="reference external" href="https://www.apple.com/ios/">iOS</a>.</p>
+<p>O App gerado para iOS é feito através de um projeto desenvolvido com o <a class="reference external" href="https://developer.apple.com/xcode/">Xcode</a>, portanto, no final, teremos uma aplicação nativa, da mesma forma que temos com o Android.</p>
+<p>Internamente, o executável gerado também carregará uma versão otimizada o Python e por isso, é possível executar código Python no dispositivo em que a nossa aplicação estiver sendo executada. Normalmente, o nosso código será compilado com o <a class="reference external" href="http://http://cython.org/">Cython</a> o que impedirá terceiros de ler e entender nossos códigos (facilmente), até porque, será gerado código C nativo.</p>
+<p>O suporte a plataforma iOS não acompanha a plataforma Android, ou seja, uma aplicação híbrida construída com Python e Kivy conseguirá acessar melhor a API do Android do que do iOS (por enquanto).</p>
+<p>Como dito anteriormente, não há suporte ao Python 3x para iOS, portanto, temos que converter nosso código escrito com Python 3x para 2x manualmente ou então, utilizando ferramentas como <a class="reference external" href="https://docs.python.org/2/library/2to3.html">2to3</a> disponibilizada oficialmente pelo projeto Python.</p>
+</div>
+<div class="section" id="projeto-pyobjus">
+<h2>PROJETO PyObjus</h2>
+<p>O projeto <a class="reference external" href="https://github.com/kivy/pyobjus">PyObjus</a> permite o acesso às classes escritas em <a class="reference external" href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html">Objective-C</a> pelo Python. Desta forma, conseguimos o acesso nativo a toda a API do <a class="reference external" href="https://www.apple.com/ios/">iOS</a> através do código Python.</p>
+<p>A seguir, temos um simples exemplos extraído da documentação oficial da PyObjnus.</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyobjus</span> <span class="kn">import</span> <span class="n">autoclass</span>
+
+<span class="n">NSString</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s">&#39;NSString&#39;</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">NSString</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">initWithUTF8String_</span><span class="p">(</span><span class="s">&#39;Hello world&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">UTF8String</span><span class="p">())</span>
+</pre></div>
+<p>Como podemos ver, é importado a classe NSString e em seguida é armazenado o texto Hello World na mesma. Ou seja, desta forma, estamos trabalhando com a API nativa do iOS utilizando a linguagem Python! Portanto, conseguimos desenvolver aplicações que utilizam toda a API nativa da plataforma utilizando código Python.</p>
+</div>
+<div class="section" id="componentes-widget">
+<h2>COMPONENTES (WIDGET)</h2>
+<p>O framework Kivy contém um conjunto de componentes gráficos para a construção das telas de interação com o usuário. A documentação do Kivy chama os componentes de Widgets, ou seja, um botão é um Widget, um caixa de entrada de texto é um Widget e assim por diante.</p>
+<p>Existe um conjunto de Widgets bastante amplo que vem de fábrica. Os componentes visuais estão em pleno desenvolvimento e portanto, a cada nova versão, muitos recursos são adicionados. Neste momento, se compararmos os recursos da biblioteca Kivy com plataformas comerciais e consagradas tais como o <a class="reference external" href="https://www.embarcadero.com/br/products/rad-studio">Embarcadero Delphi (Rad Studio)</a>, <a class="reference external" href="http://qt-project.org/qt5">Qt5</a> ou <a class="reference external" href="https://www.xamarin.com/">Xamarin</a>, o Kivy fica numa posição bem inferior, porém, isso é uma questão de tempo e de desenvolvimento. A capacidade para que o Kivy disponha de componentes visuais tais como o Xamarin ou então o Embarcadero Delphi é uma questão de tempo!</p>
+<p>O Kivy seguiu o estilo utilizado pelo Sistema Operacional <a class="reference external" href="`https://en.wikipedia.org/wiki/Moblin`">Moblin</a> e, a verdade, é que estetícamente a biblioteca ainda deixa a desejar.</p>
+<p>Aparentemente, a equipe do Kivy dedica seus esforços à construção do núcleo do framework o que é muito bom, pois, a complexidade para melhorar a aparência visual é mínima se comparada com a implementação dos módulos que interagem com os periféricos.</p>
+<p>Há iniciativas de construção de bibliotecas gráficas independentes como por exemplo o <a class="reference external" href="kivyMD.github.io">KivyMD</a>, acrônimo de <tt class="docutils literal">Kivy Material Design</tt>. Essa biblioteca está construída em cima do framework Kivy e entrega um conjunto de componentes ricos em recursos e propriedades utilizando o visual nativo do Android, no caso, o <a class="reference external" href="https://material.io/">Material Design</a>.</p>
+<p>Por fim, é importante lembrar que o foco dos grupo que desenvolve o framework Kivy é, num primeiro momento, fornecer total compatibilidade com as plataformas suportadas. Por essa razão, o foco do desenvolvimento não está direcionado com a aparência dos Widgets e nem na quantidade de recursos que cada componente possui. Ao que tudo indica, o principal objetivo é fazer com que todos os recursos de todas as plataformas funcionem sem quaisquer problema - o que é excelente!</p>
+<img alt="Projeto KivyMD que disponibiliza um conjunto de componetes que possuem a estilização do Material Design da Google e os Widgets incorporão o funcionamento conforme a especificação." src="../images/blog/kivymd.png" />
+</div>
+<div class="section" id="games">
+<h2>GAMES</h2>
+<p>O framework Kivy, como já dito várias vezes, foi desenhado para ser executado sob a placa gráfica e inclusive, no modo de aceleração gráfica. A biblioteca entrega um módulo para a construção gráfica bastante completo estando assim, uma camada acima da API OpenGL.</p>
+<p>O módulo gráfico que fornece as classes e funções para o desenho vetorial 2D pode ser utilizado com a linguagem Kivy, o que nos permite por exemplo, declarar um círculo e definir a propriedade raio. Ou seja, criamos imagens vetoriais facilmente e com uma linguagem de marcação, semelhante ao que temos com o formato de <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag">imagem SVG (Scalable Vector Graphics)</a>.</p>
+<p>O suporte a renderização de imagem é excelente e, tendo como aliado bibliotecas gráficas como <cite>OpenCV (Open Source Computer Vision Library)</cite> é possível tratar imagem sendo o limite a imaginação.</p>
+</div>
+<div class="section" id="audio-e-video">
+<h2>ÁUDIO E VÍDEO</h2>
+<p>O suporte a áudio e a vídeo são implementações estáveis e bastante testadas. Há inclusive player musicais construidos só com as bibliotecas nativas do Python. Inclusive, há suporte a Stream, tanto de áudio como de vídeo.</p>
+<p>Um exemplo interessante é o Widget Image que renderiza imagens no Path local ou remoto, abstraindo todo o donwload e abertura dos desenvolvedores finais.</p>
+</div>
+<div class="section" id="projeto-kivent">
+<h2>PROJETO KivEnt</h2>
+<p>O projeto <a class="reference external" href="http://kivent.org/">KivEnt</a> é um subprojeto do projeto Kivy voltado para o desenvolvimento de games e aplicações gráficas interativas em tempo real.</p>
+<p>Esse é uma projeto que vem sendo desenvolvido, principalmente, por outro grupo de desenvolvedores, porém, é um repositório do projeto Kivy.</p>
+<p>Toda a biblioteca vem sendo construida com a linguagem Python e os módulos que normalmente são responsáveis pelos gargalos, utilizam a linguagem Cython, conseguindo assim, performance semelhante ao que temos com a linguagem C.</p>
+<p>O núcleo do KivEnt é a biblioteca Kivy, ou seja, a parte principal da Engine não possui dependencias.</p>
+<p>Alguns módulos em especifico utilizam a biblioteca <a class="reference external" href="https://chipmunk-physics.net/">Chipmunk2D</a> que é um uma simples, leve e rápida plataforma para corpos 2D rígido e que facilita a implementação da matemática, ou seja, a física do game.</p>
+<p>Sendo o Chipmunk2D escrito em C, há uma versão em Cython disponibilizando um bind fácil e rápido para utilização com Python. A plataforma está disponibilizada com a licença MIT.</p>
+</div>
+<div class="section" id="a-magica-do-cython">
+<h2>A MÁGICA DO CYTHON</h2>
+<p>Cython é um superconjunto da linguagem Python e seu objetivo é a conversão de código Python para código C (nativo). Cython é o nome de uma linguagem e também, o nome do compilador. A linguagem Cython estende a linguagem Python utilizando a mesma sintaxe, porém, trazendo um conjunto de instruções que otimizam a conversão para código C, aumentando a performance em alguma situações em dezenas, centenas e até, acredite, milhares de vezes! O principal objetivo da linguagem Cython é a otimização de trechos especificos que requerem alta performance sem quebrar a compatibilidade. Como o código Python nativo é reconhecido pelo compilador Cython, é possível a conversão de módulos ou mesmo funções sem perder a compatibilidade.</p>
+<p>O Cython fornece suporte a versão 2x e 3x do Python, ou seja, conseguimos facilmente transformar as estruturas simplificadas do Python para código C nativo e sendo capaz de otimizar trechos especificos através de um processo muito semelhante a refatoração de código. A refatoração neste caso deve ser entendida como a alteração de instruções, tipagem de variáveis e parâmetros e etc.</p>
+<p>Após converter o código de Python para C, o resultado é enviado para o GCC e o mesmo produz o executável compatível com a plataforma em que estiver sendo utilizada, pela simples compilação de código C, de forma semelhante e com performance que chega muito próxima a um código que foi de fato escrito nativamente em C.</p>
+<p>Como principais características, podemos citar que a linguagem Cython utiliza tipagem estática e dinâmica, e, como sabemos, quando mais tipado for, mais otimizado a execução será.</p>
+<p>Por fim, conseguiremos em algumas situações uma melhora na performance de até 5000 vezes! Inclusive, na página do projeto é possível encontrar várias ferramentas e códigos para que possamos mensurar em nosso computador.</p>
+<p>A seguir, temos um exemplo de um simples trecho de código utilizando somente a linguagem Cython.</p>
+<div class="section" id="declaracao-de-variaveis-com-cython">
+<h3>DECLARAÇÃO DE VARIÁVEIS COM CYTHON</h3>
+<div class="highlight"><pre><span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span><span class="p">,</span> <span class="nf">j</span><span class="p">,</span> <span class="nf">k</span>
+<span class="k">cdef</span> <span class="kt">float</span> <span class="nf">f</span><span class="p">,</span> <span class="kt">g</span>[42], *<span class="nf">h</span>
+
+<span class="k">cdef</span> <span class="k">struct</span> <span class="nf">Grail</span><span class="p">:</span>
+    <span class="nb">int</span> <span class="n">age</span>
+    <span class="nb">float</span> <span class="n">volume</span>
+</pre></div>
+</div>
+<div class="section" id="declaracao-de-classe-e-funcao-em-cython">
+<h3>DECLARAÇÃO DE CLASSE E FUNÇÃO EM CYTHON</h3>
+<div class="highlight"><pre><span class="k">cdef</span> <span class="k">class</span> <span class="nf">A</span><span class="p">:</span>
+    <span class="k">cdef</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s">&quot;A&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="alocacao-de-memorica-em-cython">
+<h3>ALOCAÇÃO DE MEMÓRICA EM CYTHON</h3>
+<div class="highlight"><pre><span class="k">import</span> <span class="nn">random</span>
+<span class="k">from</span> <span class="nn">libc.stdlib</span> <span class="k">cimport</span> <span class="n">malloc</span><span class="p">,</span> <span class="n">free</span>
+
+<span class="k">def</span> <span class="nf">random_noise</span><span class="p">(</span><span class="nb">int</span> <span class="n">number</span><span class="o">=</span><span class="mf">1</span><span class="p">):</span>
+    <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span>
+    <span class="c"># allocate number * sizeof(double) bytes of memory</span>
+    <span class="k">cdef</span> <span class="kt">double</span> *<span class="nf">my_array</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">double</span> <span class="o">*&gt;</span><span class="n">malloc</span><span class="p">(</span><span class="n">number</span> <span class="o">*</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">double</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">my_array</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">MemoryError</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ran</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">normalvariate</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+            <span class="n">my_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ran</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">[</span> <span class="n">my_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="p">]</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="c"># return the previously allocated memory to the system</span>
+        <span class="n">free</span><span class="p">(</span><span class="n">my_array</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="o-kivy-e-o-cython">
+<h3>O KIVY E O CYTHON</h3>
+<p>A biblioteca Kivy está debruçada sobre o Cython e todo código que escrevemos será compilado para código C. Os principais módulos da biblioteca estão escritos com Cython e utilizando tipagem estática com a finalidade e obter máxima performance.</p>
+<p>Porém, a maior parte da biblioteca não possui qualquer otimização, até porque, o objetivo é utilizar a linguagem Python. Por isso, podemos melhorar a performance das aplicações construídas com Kivy, bastando somente, converter as principais estruturas da biblioteca Kivy para código Cython.</p>
+<p>Converter código Python para Cython com a finalidade de obter uma melhor performance é uma atividade relativamente simples e pouco sujeito a erros, é uma solução para aqueles momento em que realmente precisamos de muita performance e, acredito que num futuro breve, várias partes da biblioteca serão convertidas a cada nova versão se houver empresas interessas em obter uma excelente performance.</p>
+<p>Essa é mais uma das vantagens de trabalhar com a biblioteca Kivy! Temos a capacidade de melhorar a performance facilmente da nossa aplicação, o que normalmente não acontece com outras bibliotecas.</p>
+</div>
+</div>
+<div class="section" id="codigo-fonte">
+<h2>CÓDIGO-FONTE</h2>
+<p>Uma das principais dúvidas em relação ao uso da biblioteca Kivy é o acesso e eventual roubo do código-fonte da nossa aplicação por terceiros. A resposta a essa dúvida é: o código Python ou o bytecode gerado (código otimizado) não precisa ser distribuído junto com a sua aplicação, pois o projeto Kivy disponibiliza ferramentas que geram executáveis nativo - código binários e otimizado para cada plataforma. Resumidamente, temos que o Python foi concebido como sendo uma linguagem interpretada, ou seja, todo computador capaz de rodar um Script Python, precisa antes instalar o interpretador. Um interpretador, como o nome sugere, é um programa nativo, especializado no reconhecimento de código Python, é executado em segundo plano (background), inicializado junto com o sistema operacional, por padrão fica inativo esperando o recebimento de código. Essa é a forma tradicional de execução de programas ou Scripts Python.</p>
+<p>Comumente dizemos que o interpretador do Python executado código Python, mas isso não é verdade. Por padrão, o código Python é transformado numa estrutura hierarquica otimizada chamada de bytecode. A geração de bytecode é realizada na primeira execução do Script e armazenada numa pasta que será criada no mesmo diretório em que o arquivo que contém código Python está armazenado.</p>
+<p>A metodologia de gerar bytecode com a finalidade de otimização e armazena-lo num arquivo no mesmo diretório é um padrão utilizado por diversos interpretadores de outras linguagens. Ainda que essa prática melhore significativamente o desempenho, fica muito distante se comparado com a execução de código nativo.</p>
+<p>Como dito, as aplicações Kivy são executadas pelos processadores de aceleração gráfica e portanto, é preciso converter todos os nossos códigos para o &quot;idioma&quot; do mundo gráfico.</p>
+<p>É importante dizer que o fato do código Python ser interpretado se deve a uma opção de projeto e não de uma imposição inerente a tecnologia ou a linguagem! Simplesmente, num primeiro momento, optou-se por interpretar, ao invés de gerar um executável. Portanto, conforme a linguagem foi sendo desenvolvida e sua sintaxe criada, o pessoal do projeto foi desenvolvendo com a C uma aplicação capaz de interpretar as instruções e a sintaxe da linguagem.</p>
+<p>O tempo passou, a linguagem se popularizou, e surgiram propostas de, ao invés de interpretar o código, porque não transformar o mesmo em executáveis?</p>
+<p>Ao desenvolvermos com Kivy, temos que o nosso código é interpretado durante o desenvolvimento, porém, quando formos distribuir a nossa aplicação, por exemplo, para a plataforma Android, o código Python que escrevemos e código  Python/Cython do framework Kivy serão transformados em código C puro!</p>
+<p>Concluído a conversão, o código C produzido poderá ser compilado por qualqauer compilador C de sua preferência.</p>
+<p>Por fim e reafirmando o que já foi dito, a biblioteca Kivy possui ferramentas para que o código seja ocultado naturalmente.</p>
+</div>
+<div class="section" id="livros-publicados">
+<h2>LIVROS PUBLICADOS</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://shop.oreilly.com/product/0636920032595.do">*Creating Apps in Kivy - Mobile with Python* (Dusty Phillips) (2014) (O'Reilly Media)</a></li>
+<li><a class="reference external" href="https://www.packtpub.com/application-development/kivy-blueprints">*Kivy Blueprints* (Mark Vasilkov) (2015) (PacktPub)</a></li>
+<li><a class="reference external" href="https://www.packtpub.com/application-development/kivy-cookbook">*Kivy Cookbook* (Hugo Solis) (2015) (PacktPub)</a></li>
+<li><a class="reference external" href="https://www.packtpub.com/application-development/kivy-interactive-applications-python">*Kivy: Interactive Applications in Python* (Roberto Ulloa) (2013) (PacktPub)</a></li>
+<li><a class="reference external" href="https://www.packtpub.com/application-development/kivy-%E2%80%93-interactive-applications-and-games-python-second-edition">*Kivy - Interactive Applications and Games in Python* (Second Edition) (Roberto Ulloa) (2015) (PacktPub)</a></li>
+</ul>
+</div>
+<div class="section" id="pontos-negativos">
+<h2>PONTOS NEGATIVOS</h2>
+<p>Há inúmeros pontos negativos no framework Kivy e o objetivo da eXcript não é em momento algum mascara-los ou então, promover cegamente determinada tecnologia. A seguir, pretendemos discutir e sempre mostrar os 2 lados da discussão.</p>
+<div class="section" id="o-que-significa-aplicacao-nativa">
+<h3>O QUE SIGNIFICA APLICAÇÃO NATIVA?</h3>
+<p>Executáveis gerados com ferramentas do projeto Kivy realmente são aplicações nativas, até porque, o sistema operacional para o qual o executável foi gerado executa o arquivo sem a necessidade de qualquer outro aplicativo.</p>
+<p>Talvez seja importante nos perguntarmos o que é uma aplicação nativa e quais seriam as características que essas aplicações deveriam ter para serem assim classificadas.</p>
+<p>Uma aplicação pode ser considerada nativa somente porque seu executável é reconhecido pelo SO hospedeiro?</p>
+<p>Uma aplicação para ser considerada nativa, deve utilizar as bibliotecas e recursos do SO hospedeiro?</p>
+</div>
+<div class="section" id="quao-nativo-sao-os-executaveis-gerados-pelo-projeto-kivy">
+<h3>QUÃO NATIVO SÃO OS EXECUTÁVEIS GERADOS PELO PROJETO KIVY?</h3>
+<p>Visando o desenvolvimento de aplicações multiplataforma, a biblioteca Kivy <strong>NÃO</strong> utiliza a maior parte das bibliotecas fornecidas pelo SO hospedeiro. Até porque, cada plataforma disponibiliza uma interface de acesso diferente e assim, o projeto Kivy precisaria conhecer e se adaptar a cada SO a fim de utilizar suas bibliotecas.</p>
+<p>Utilizar as bibliotecas nativas de cada plataforma, normalmente é, a melhor forma de construção de aplicações para a mesma. Ou seja, a melhor forma de criarmos aplicações para o SO Microsoft Windows é utilizando, por exemplo, suas bibliotecas gráficas, o seu sistema de arquivo, as suas caixas de diálogo nativas e etc.</p>
+<p>O projeto Kivy raramente utiliza as ferramentas disponibilizadas pela plataforma hospedeira! Em cada executável gerado pelas ferramentas do projeto Kivy, é adicionado TODAS AS ferramentas que a aplicação precisará ou possa vir a precisar. Isso é comumente chamado de &quot;reinvenção da roda&quot;, até porque, pra que refazer o que já está pronto? Pra que tornar o executável mais &quot;pesado&quot; adicionando implementações que podem ser acessadas diretamente na plataforma?</p>
+<p>Na minha opinião, este é o maior problema do projeto Kivy, até porque, podemos dizer que estamos utilizando uma gambiarra! Pois, ao invés dos nossos programas funcionarem como o fabricante do Sistema Operacional determinou, estamos fazendo tudo ao nosso modo e da nossa maneira.</p>
+<p>MAS CALMA AI! <strong>TODO DESENVOLVIMENTO</strong> híbrido é por <strong>natureza, definição e implementação</strong> uma gambiarra. Portanto, o Kivy é somente mais uma gambiarra, tecnologias como <a class="reference external" href="https://www.xamarin.com/">Xamrian</a>, <a class="reference external" href="https://www.sencha.com/products/touch/">Sencha Touch</a>, <a class="reference external" href="https://phonegap.com/">Phonegap</a>, <a class="reference external" href="https://software.intel.com/en-us/intel-xdk/documentation">Intel XDK</a> e tantas outras opções...</p>
+<p>Podemos dizer que a melhor forma de usar um produto é seguindo as normas do fabricante, como também, utilizar as ferramentas por ele disponibilizado. Ainda que essa ideia não possa ser considerado um regra, na maior parte dos caso é. As ferramentas produzidas pelo fabricante foram feitas pelas mesmas pessoas ou por uma equipe próxima ao engenheiros responsáveis da plataforma e estes são, sem qualquer duvida, especialistas no funcionamento da tecnologia.</p>
+<p>Portanto, isso é uma verdade que não podemos ignorar! A melhor maneira de construir aplicações para uma plataforma é utilizando as ferramentas nativas ou seguindo as especificações e diretrizes oficiais do fabricante.</p>
+<p>Então, quando dizemos que é gerado um executável nativo, estamos realmente falando a verdade, porém, de nativo há somente a tela inicial, pois o restante, trata-se de simulação e emulação.</p>
+<p>Gigantes como <a class="reference external" href="http://www.microsoft.com/">Microsoft</a>, <a class="reference external" href="http://www.adobe.com/">Adobe</a> e <a class="reference external" href="http://www.intel.com">Intel</a> possuem suas próprias &quot;gambiarras&quot; e comercializam ferramentas que geram executáveis híbridos da mesma forma, mas de uma maneira diferente que o projeto Kivy o faz!</p>
+<p>A pergunta que devemos responder é: &quot;uma aplicação pra ser realmente nativa, deve gerar um executável através da ferramenta do fabricante e utilizar as bibliotecas por este disponibilizado&quot;?</p>
+</div>
+<div class="section" id="utilizacao-de-recurso">
+<h3>UTILIZAÇÃO DE RECURSO</h3>
+<p>Aplicações escritas com o framework Kivy utilizam mais recursos do dispositivo e aplicações que precisam ser executadas em background devem realizar testes de consumo de energético antes de iniciar o desenvolvimento.</p>
+<p>A biblioteca Kivy é executada em cima da placa de vídeo com a aceleração de vídeo ligada. Se o código fosse executado em cima do processador do dispositivo, haveria garga-los na renderização e é graças a aceleração de vídeo que há tantas ferramentas de desenvolvimento híbridas.</p>
+<p>Por fim, uma aplicação construída com o Kivy irá consumir maior carga energética e utilizará aproximadamente 20 mega de memória RAM. Com relação a memória RAM não há preocupação, até porque, a maior parte dos dispositivos atuais possuem quantidades generosas de memória RAM. Porém, o uso da bateria deve ser considerado e a única forma que você possui pra realmente ter certeza se o seu projeto pode ser construído com o Kivy será através da realização de testes.</p>
+</div>
+<div class="section" id="tempo-de-abertura">
+<h3>TEMPO DE ABERTURA</h3>
+<p>Aplicações Kivy possuem um tempo de carregamento maior quando comparado a aplicações nativas. A razão pelo tempo adicional se deve ao carregamento de bibliotecas e a inicialização de uma Máquina Virtual Python, ou seja, uma versão compacta do interpretador do Python.</p>
+<p>O tempo de abertura da aplicação tende a desaparecer com o tempo em vista da evolução do hardware</p>
+</div>
+<div class="section" id="widgets-nativos">
+<h3>WIDGETS NATIVOS</h3>
+<p>A biblioteca Kivy, ao contrário de outras biblioteca gráficas, não disponibiliza um conjunto de Widgets amplo e robusto para a construção de telas que permitam a entrada de dados pelo usuário.</p>
+<p>O foco da equipe é disponibilizar um framework que possas ser executado em várias plataformas nativamente e uma interface para acesso ao hardware simples e padronizada. Por isso, num primeiro momento, alguns usuários podem se decepcionar ao conhecer o catalogo de componentes.</p>
+<p>Há alguns projetos paralelos como o KivyMD que estão construindo mega pacotes de componentes seguindo um esquema de cores e estilos como por exemplo, o Material Design da Google.</p>
+<p>Portanto, a pequena quantidade de Widgets e a sua simplicidade não são um problema, mesmo assim, num primeiro momento, muitos usuários acabam frustrados com a pequena gama de opções.</p>
+</div>
+</div>
+<div class="section" id="veja-tambem">
+<h2>VEJA TAMBÉM</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://excript.com/python/instalacao-kivy-mac.html">Instalação do Kivy no Mac OSX</a></li>
+<li><a class="reference external" href="http://excript.com/python/instalacao-kivy-ubuntu.html">Instalação do Kivy no Ubuntu</a></li>
+</ul>
+</div>
+<div class="section" id="links-externos">
+<h2>LINKS EXTERNOS</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://excript.com/python/doc-kivy-ptbr.html">Documentação Oficial do Kivy em Português</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://www.python.org">Linguagem Python</a></li>
+<li><a class="reference external" href="https://www.java.com/">Linguagem Java</a></li>
+<li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html">Linguagem Objective-C</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://www.android.com/">Sistema Operacional Android</a></li>
+<li><a class="reference external" href="https://www.apple.com/ios/">Sistema Operacional iOS</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://kivy.org/">Site do projeto Kivy (en)</a></li>
+<li><a class="reference external" href="https://github.com/kivy/">Repositório no Github do projeto Kivy (en)</a></li>
+<li><a class="reference external" href="https://github.com/kivy/kivy/">Código-Fonte da biblioteca Kivy (en)</a></li>
+<li><a class="reference external" href="https://www.opengl.org/">OpenGL (en)</a></li>
+<li><a class="reference external" href="https://kivymd.github.io/">Projeto KivyMD: Kivy Material Design (en)</a></li>
+<li><a class="reference external" href="https://developer.android.com/ndk/index.html">Android NDK (en)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/kivy/buildozer">Repositório Buildozer</a></li>
+<li><a class="reference external" href="https://github.com/kivy/plyer">Repositório Plyer</a></li>
+<li><a class="reference external" href="https://github.com/kivy/PyJNIus">Repositório PyJNIus</a></li>
+<li><a class="reference external" href="https://github.com/kivy/pyobjus">Repositório PyObjus</a></li>
+<li><a class="reference external" href="https://github.com/kivy/python-for-android">Repositório Python for Android</a></li>
+<li><a class="reference external" href="https://github.com/kivy/kivy-ios">Repositório Kivy for iOS</a></li>
+<li><a class="reference external" href="https://github.com/kivy/audiostream">Repositório Audiostream</a></li>
+<li><a class="reference external" href="https://github.com/kivy/kivy-designer">Repositório Kivy Designer</a></li>
+<li><a class="reference external" href="https://github.com/kivy/kivent">Repositório KivEnt</a></li>
+<li><a class="reference external" href="https://github.com/kivy-garden">Repositório Garden</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm (en)</a></li>
+<li><a class="reference external" href="https://developer.android.com/studio/index.html">AndroidStudio (en)</a></li>
+<li><a class="reference external" href="https://developer.apple.com/xcode/">Xcode (en)</a></li>
+<li><a class="reference external" href="http://cython.org/">Cython (en)</a></li>
+<li><a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/">JNI (Java Native Interface) (en)</a></li>
+<li><a class="reference external" href="https://docs.python.org/2/library/2to3.html">2to3: Conversor de código escrito em Python2x para Python3x (en)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://khronos.org/">khronos</a></li>
+<li><a class="reference external" href="https://jp.khronos.org/webgl/">WebGL</a></li>
+<li><a class="reference external" href="https://www.khronos.org/webgl/wiki/WebGL_and_OpenGL">Wiki do WebGL e OpenGL ES 2.0</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://www.ft.unicamp.br/~magic/opengl/index2006.html">Introdução à computação gráfica com OpenGL - Marco Antonio G. Carvalho</a></li>
+<li><a class="reference external" href="http://www.inf.pucrs.br/~pinho/CG/Aulas/OpenGL/OpenGL.html">Computação Gráfica - Biblioteca Gráfica OpenGL - Márcio Sarroglia Pinho</a></li>
+<li><a class="reference external" href="http://www.inf.pucrs.br/~manssour/OpenGL/Tutorial.html">Introdução à OpenGL - Isabel Harb Manssour</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag">SVG - Scalable Vector Graphics</a></li>
+<li><a class="reference external" href="http://opencv.org/">OpenCV (Open Source Computer Vision Library)</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://chipmunk-physics.net/">Chipmunk2D</a></li>
+<li><a class="reference external" href="https://cymunk.readthedocs.io/en/latest/">Cymunk</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="http://www.microsoft.com/">Microsoft</a></li>
+<li><a class="reference external" href="http://www.adobe.com/">Adobe</a></li>
+<li><a class="reference external" href="http://www.intel.com">Intel</a></li>
+</ul>
+<ul class="simple">
+<li><a class="reference external" href="https://www.xamarin.com/">Xamarin</a></li>
+<li><a class="reference external" href="https://www.sencha.com/products/touch/">Sencha Touch</a></li>
+<li><a class="reference external" href="https://phonegap.com/">Phonegap</a></li>
+<li><a class="reference external" href="https://software.intel.com/en-us/intel-xdk/documentation">Intel XDK</a></li>
+</ul>
+</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+<br>
+<br>
+<span class="label label-default"></span>
+Tags
+	<a href="http://excript.com/tag/python.html">python</a>, 	<a href="http://excript.com/tag/kivy.html">kivy</a>, 	<a href="http://excript.com/tag/android.html">android</a>, 	<a href="http://excript.com/tag/ios.html">ios</a>, 	<a href="http://excript.com/tag/kivy-design.html">kivy design</a>, 	<a href="http://excript.com/tag/opengl.html">opengl</a>, 	<a href="http://excript.com/tag/blog.html">blog</a>            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comentários</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'python/kivy';
+                var disqus_url = 'http://excript.com/python/kivy.html';
+
+            var disqus_config = function () {
+                this.language = "pt";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Por favor, ative o JavaScript para visualizar os comentários <a href="http://disqus.com/?ref_noscript"> disponibilizado por Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+	    <li class="li-sidebar">
+			<div class="fb-page" data-href="https://www.facebook.com/excript/" data-width="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/excript/"><a href="https://www.facebook.com/excript/">eXcript</a></blockquote></div></div>
+	    </li>
+
+	    <li class="li-sidebar">
+			<script src="https://apis.google.com/js/platform.js"></script>
+
+			<script>
+			  function onYtEvent(payload) {
+			    if (payload.eventType == 'subscribe') {
+			      // Add code to handle subscribe event.
+			    } else if (payload.eventType == 'unsubscribe') {
+			      // Add code to handle unsubscribe event.
+			    }
+			    if (window.console) { // for debugging only
+			      window.console.log('YT event: ', payload);
+			    }
+			  }
+			</script>
+
+			<div class="g-ytsubscribe" data-channel="excriptvideo" data-layout="full" data-count="default" data-onytevent="onYtEvent"></div>
+	    </li>
+
+	    <li class="li-sidebar">
+
+		    <!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+			<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'pt-BR'}
+			</script>
+
+			<!-- Posicione esta tag onde você deseja que o widget apareça. -->
+			<div class="g-page" data-width="200" data-href="//plus.google.com/u/0/102371115481264098253" data-rel="publisher"></div>
+
+	    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+	<div class="container">
+		
+
+		<div class="row">
+			<p class="site-info text-center">
+
+			</p><div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h5>eXcript</h5>
+						<p>
+							A eXcript é um projeto de produção audiovisual de conteúdo técnico com foco no autodidatismo.
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h5>CURSOS</h5>
+						<ul>
+							<li><a href="http://excript.com/curso-de-python.html">PYTHON</a></li>
+							<li><a href="http://excript.com/curso-de-java.html">JAVA</a></li>
+							<li><a href="http://excript.com/curso-php.html">PHP</a></li>
+							<li><a href="http://excript.com/curso-cpp.html">C++</a></li>
+							<li><a href="http://excript.com/curso-c.html">C</a></li>
+							<li><a href="http://excript.com/curso-de-android.html">ANDROID</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h5>SOCIAL</h5>
+						<ul>
+							<li><a href="http://plus.google.com/+excriptvideo">GOOGLE+</a></li>
+							<li><a href="http://www.facebook.com/excript">FACEBOOK</a></li>
+							<li><a href="http://twitter.com/eXcriptBrasil">TWITTER</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<p></p>
+		</div>
+	</div>
+</footer>
+<script src="http://excript.com/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://excript.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://excript.com/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'excript'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-72583776-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1684671528414521";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>
