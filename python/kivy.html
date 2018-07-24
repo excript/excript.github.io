@@ -348,7 +348,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 
 <span class="n">NSString</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s">&#39;NSString&#39;</span><span class="p">)</span>
 <span class="n">text</span> <span class="o">=</span> <span class="n">NSString</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">initWithUTF8String_</span><span class="p">(</span><span class="s">&#39;Hello world&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">UTF8String</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">text</span><span class="o">.</span><span class="n">UTF8String</span><span class="p">())</span>
 </pre></div>
 <p>Como podemos ver, é importado a classe NSString e em seguida é armazenado o texto Hello World na mesma. Ou seja, desta forma, estamos trabalhando com a API nativa do iOS utilizando a linguagem Python! Portanto, conseguimos desenvolver aplicações que utilizam toda a API nativa da plataforma utilizando código Python.</p>
 </div>
@@ -501,6 +501,82 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>Há alguns projetos paralelos como o KivyMD que estão construindo mega pacotes de componentes seguindo um esquema de cores e estilos como por exemplo, o Material Design da Google.</p>
 <p>Portanto, a pequena quantidade de Widgets e a sua simplicidade não são um problema, mesmo assim, num primeiro momento, muitos usuários acabam frustrados com a pequena gama de opções.</p>
 </div>
+</div>
+<div class="section" id="o-kivy-e-um-projeto-experimental">
+<h2>O KIVY É UM PROJETO EXPERIMENTAL?</h2>
+<p>É comum que algumas pessoas sugiram que o framework Kivy seja um trabalho experimental ou então, um projeto que ainda está no início e ninguém sabe exatamente o seu futuro.</p>
+<p>O Kivy não pode mais ser considerado um projeto experimental! Nesse momento, a única coisa que o projeto não possui é uma grande empresa por detrás financiando-o (ainda).</p>
+<p>Na atual conjuntura, softwares desenvolvidos com o framework Kivy rodam em todas as plataformas que possuem suporte e nenhum problema de ordem maior vem sendo relatado. Obviamente que ainda existe muito a ser feito, principalmente em relação a compatibilidade entre todas as plataformas igualmente. No entanto, o desenvolvimento é contínuo e estável e, para ter certeza disso, basta analisar a <a class="reference external" href="https://github.com/kivy/kivy/commits/master">lista de Commits do projeto no Github</a> e analisar a quantidade de problemas relatados.</p>
+<p>O autor entende por experimental aquilo que não possui um funcionamento estável e previsível e portanto não deveria ser utilizado em projetos comerciais e sérios.</p>
+<p>Inclusive, neste momento, há grandes aplicações escritas em Kivy e que estão funcionando perfeitamente, vide o projeto <a class="reference external" href="https://github.com/ODiogoSilva/TriFusion">TriFusion</a> .</p>
+</div>
+<div class="section" id="demais">
+<h2>DEMAIS</h2>
+<p>O blog <a class="reference external" href="http://cadernodelaboratorio.com.br/category/kivy/">Caderno de Laboratório</a> foi o primeiro blog brasileiro a disponiblizar vários tutorias e diversos exemplos sobre como utilizar a biblioteca Kivy. O pessoal continua produzindo mais artigos sobre o Kivy e em Português, por isso, vale a pena conferir!</p>
+</div>
+<div class="section" id="casos-de-sucesso">
+<h2>CASOS DE SUCESSO</h2>
+<p>A seguir temos uma breve lista de alguns projetos que servem para demonstrar o poder ilimitado do framework Kivy.</p>
+<p>RaceCaptureApp
+´´´´´´´´´´´´´´</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">site:</th><td class="field-body"><a class="reference external" href="https://www.autosportlabs.com/tag/race-capture-app/">https://www.autosportlabs.com/tag/race-capture-app/</a></td>
+</tr>
+<tr class="field"><th class="field-name">source:</th><td class="field-body"><a class="reference external" href="https://github.com/autosportlabs/RaceCapture_App">https://github.com/autosportlabs/RaceCapture_App</a></td>
+</tr>
+<tr class="field"><th class="field-name">playstore:</th><td class="field-body"><a class="reference external" href="https://play.google.com/store/apps/details?id=com.autosportlabs.racecapture">https://play.google.com/store/apps/details?id=com.autosportlabs.racecapture</a></td>
+</tr>
+</tbody>
+</table>
+<img alt="Aplicativo RaceCapture mostrando a tela em que as informações são atualizadas em tempo real" src="../images/blog/race-capture-app1.jpg" />
+<img alt="Aplicativo RaceCapture" src="../images/blog/race-capture-app2.jpg" />
+<p>O aplicativo RaceCaptureApp é uma aplicação embarcada que envia os dados dos pilotos em uma corrida e exibindo em uma outra aplicação em tempo real.</p>
+<p>Este aplicativo é amplo, possui dezenas de aperfeiçoamentos, faz uso direto das API dos vários dispositivos e é amplamente utilizado.</p>
+<p><a class="reference external" href="https://github.com/autosportlabs/RaceCapture_App">https://github.com/autosportlabs/RaceCapture_App</a></p>
+<p>Kognitivo
+´´´´´´´´´</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">site:</th><td class="field-body"><a class="reference external" href="http://cheparev.com/kognitivo-challenge-your-brain/">http://cheparev.com/kognitivo-challenge-your-brain/</a></td>
+</tr>
+<tr class="field"><th class="field-name">source:</th><td class="field-body"><a class="reference external" href="https://github.com/eviltnan/kognitivo">https://github.com/eviltnan/kognitivo</a></td>
+</tr>
+<tr class="field"><th class="field-name">playstore:</th><td class="field-body"><a class="reference external" href="https://play.google.com/store/apps/details?id=org.kognitivo.kognitivo">https://play.google.com/store/apps/details?id=org.kognitivo.kognitivo</a></td>
+</tr>
+</tbody>
+</table>
+<img alt="Aplicativo Kognitivo" src="../images/blog/kognitivoapp.png" />
+<p>O Kognitivo é um jogo bastante inteligente e a aplicação na época do seu lançamento trouxe bastante implementações e integrações que nenhuma outra aplicação havia realizado.</p>
+<p>No final do ano de 2017 seu código fonte foi liberado no Github de forma que possamos estudá-lo.</p>
+<p><a class="reference external" href="https://github.com/eviltnan/kognitivo.git">https://github.com/eviltnan/kognitivo.git</a></p>
+<p>TriFusion
+´´´´´´´´´</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">site:</th><td class="field-body"><a class="reference external" href="http://odiogosilva.github.io/TriFusion/">http://odiogosilva.github.io/TriFusion/</a></td>
+</tr>
+<tr class="field"><th class="field-name">source:</th><td class="field-body"><a class="reference external" href="https://github.com/ODiogoSilva/TriFusion">https://github.com/ODiogoSilva/TriFusion</a></td>
+</tr>
+</tbody>
+</table>
+<img alt="Aplicativo Científico TriFusion" src="../images/blog/trifusion.png" />
+<p>Este talvez seja o projeto de código aberto utilizando o Kivy de maior relevância. Segundo a própria descrição do projeto que, mesmo sendo desenvolvido por um instituto de pesquisa Português e o desenvolvedor principal também ser Português, toda a documentação do software está em Inglês.</p>
+<p>A seguir, temos uma tradução adaptada de como o próprio projeto se descreve.</p>
+<p>TriFusion é uma GUI moderna e uma aplicação de linha de comando projetada para facilitar a vida de qualquer pessoa com dados de sequência de proteoma e/ou <strong>alignment sequence data</strong> mais prazerosos. Independentemente da sua experiência em bioinformática, o <tt class="docutils literal">TriFusion</tt> é fácil de usar e oferece uma grande variedade de recursos poderosos para ajudá-lo a lidar com seus dados. Ao mesmo tempo, foi desenvolvido para lidar com a enorme quantidade de dados gerados hoje em dia.</p>
+<p>No site do projeto é possível baixar toda a documentação e possuir instalador para Windows, Linux e Mac.</p>
+<p><a class="reference external" href="http://odiogosilva.github.io/TriFusion/">http://odiogosilva.github.io/TriFusion/</a></p>
+</div>
+<div class="section" id="kivy-3d">
+<h2>KIVY 3D</h2>
+<p>O Kivy possui excelentes recursos para trabalhar com imagens em 3D. Inclusive, existe uma versão especializada e destinada somente para essa finalida. Nos links a seguir, você encontra mais informações.</p>
+<img alt="Projeto para construção de aplicações em 3 dimensões" src="../images/blog/kivy3d.gif" />
 </div>
 <div class="section" id="veja-tambem">
 <h2>VEJA TAMBÉM</h2>
