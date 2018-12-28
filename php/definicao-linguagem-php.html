@@ -508,7 +508,7 @@ eXcript            </a>
 <div class="section" id="indentacao">
 <h2>INDENTAÇÃO</h2>
 <p>Indentaçao é o espaçamento da margem até determinada instrução. Um código indentado é um código que está contido numa estrutura hierárquica, onde cada nível se diferencia do outro pela quantidade de espaçamento da margem até a instrução, por exemplo:</p>
-<div class="highlight"><pre><span class="cp">&lt;?php</span>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
   <span class="nv">$variavel1</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span>
   <span class="nv">$variavel2</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span>
   <span class="p">{</span>
@@ -520,7 +520,7 @@ eXcript            </a>
 <p>Acima temos um código onde declaramos e inicializamos 4 variáveis. As duas primeiras, ou seja, onde temos as marcações 1 e 2, contém um único espaçamento da margem até o primeiro caractere. Já, as duas últimas 3 e 4,  contém quatro caracteres, contando da margem até a declaração da variável.</p>
 <p>Então, nós temos que as duas últimas declarações estão um nível a frente, logo, entende-se que estás estão contidas em um outro bloco de instruções.</p>
 <p>Em PHP, não há a obrigatoriedade de manter o código indentado, porém, essa é uma boa prática de programação e assim, devemos adotar esse padrão. Do contrário, veja como é muito mais dificil de entender um código que não possui indentação:</p>
-<div class="highlight"><pre><span class="cp">&lt;?php</span> <span class="nv">$variavel1</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span><span class="nv">$variavel2</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;{</span><span class="nv">$num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span><span class="nv">$num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;}</span><span class="cp">?&gt;</span><span class="x"></span>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span> <span class="nv">$variavel1</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span><span class="nv">$variavel2</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;{</span><span class="nv">$num1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span><span class="nv">$num2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;}</span><span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
 <p>O código acima funciona sem qualquer problema, até porque, cada instrução está sendo finalizando com um ponto e vírgula. Porém, como pode-se perceber, a legibilidade do código é muito mais complicada.</p>
 <p>Temos que o primeiro e o segundo código apresentado desempenham a mesma função, porém, se tratando de legibilidade, o segundo código é muito mais dificil de ser interpretado por humanos e isso se deve pela única razão de o mesmo não estar devidamente indentado.</p>

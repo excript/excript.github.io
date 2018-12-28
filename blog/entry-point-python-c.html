@@ -144,7 +144,7 @@ eXcript            </a>
 <p>O interpretador do Python, por padrão, é escrito em C. No entanto, nem todos os módulos nativos são desenvolvidos somente com a linguagem C e também, até porque, nem todos os módulos contidos numa instalação padrão foram escritos pela equipe de desenvolvedores do Python.</p>
 <p>Por exemplo, o SQLite está contido por padrão em todas versões do Python, o mesmo utiliza somente código C, porém, o seu desenvolvimento é feito por outro grupo de desenvolvedores.</p>
 <p>O código a seguir é o ponto inicial do interpretador do Python, ou seja, é por essa função que o interpretador inicia a execução.</p>
-<div class="highlight"><pre><span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">wchar_t</span> <span class="o">**</span><span class="n">argv_copy</span><span class="p">;</span>
     <span class="cm">/* We need a second copy, as Python might modify the first one. */</span>

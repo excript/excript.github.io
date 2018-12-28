@@ -440,13 +440,13 @@ eXcript            </a>
 </tbody>
 </table>
 <p>Para obtermos a relação entre 2 membros, temos que utilizar a seguinte estrutura:</p>
-<div class="highlight"><pre><span class="o">&lt;</span><span class="n">membro</span> <span class="n">a</span> <span class="n">esquerda</span><span class="o">&gt;</span> <span class="n">OPERADOR</span> <span class="o">&lt;</span><span class="n">membro</span> <span class="n">a</span> <span class="n">direita</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">membro</span> <span class="n">a</span> <span class="n">esquerda</span><span class="o">&gt;</span> <span class="n">OPERADOR</span> <span class="o">&lt;</span><span class="n">membro</span> <span class="n">a</span> <span class="n">direita</span><span class="o">&gt;</span>
 </pre></div>
 <p>É importante observar que a inversão dos membros ocasiona na inversão do resultado da expressão, isto é, se o membro que estiver a esquerda for para a direita e vice-e-versa, a relação entre eles será o contrário.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="k">print</span><span class="p">(</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="p">)</span>
-<span class="k">print</span><span class="p">(</span> <span class="s">&quot;a&quot;</span> <span class="o">&gt;</span> <span class="s">&quot;b&quot;</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span> <span class="s2">&quot;a&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;b&quot;</span> <span class="p">)</span>
 <span class="k">print</span><span class="p">(</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">)</span>
 <span class="k">print</span> <span class="p">(</span><span class="mi">200</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">)</span>
 </pre></div>
@@ -458,9 +458,9 @@ eXcript            </a>
 <h3>PRIMEIRA RELAÇÃO</h3>
 <p>A primeira relação interessante, não é bem uma relação, mas sim, uma maneira de verificarmos se uma expressão é ou não verdadeira. Temos que ter em mente que o Python, SEMPRE verifica se determinada expressão é verdadeira e por consequência disso, podemos omitir a comparação com <cite>True</cite>.</p>
 <p>Por exemplo, se quisermos saber se 2 membros são iguais, não precisamos compará-los a True, veja a expressão a seguir:</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="k">print</span><span class="p">(</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span><span class="c">#essa expressão equivale a expressão seguinte</span>
+<span class="k">print</span><span class="p">(</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span><span class="c1">#essa expressão equivale a expressão seguinte</span>
 <span class="k">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span> <span class="p">)</span>
 </pre></div>
 <p>Na primeira operação, estamos verificando se o número 1 é igual a ele mesmo, logo, será impresso no Console, <cite>True</cite> ou <cite>False</cite>. Em seguida, repetimos a linha anterior, porém, comparamos o resultado da expressão <cite>1 == 1</cite> com o valor <cite>True</cite>. Ainda que não haja problema na forma que trabalhamos na segundo operação, estamos sendo redundantes, haja vista que <strong>toda expressão</strong> será automaticamente comparada a <cite>True</cite> e por isso, podemos omitir essa comparação.</p>
@@ -468,7 +468,7 @@ eXcript            </a>
 <div class="section" id="segunda-relacao">
 <h3>SEGUNDA RELAÇÃO</h3>
 <p>Uma expressão é verdadeira quando o resultado da expressão for igual a <cite>True</cite> ou então, igual a número inteiro <cite>1</cite>. Logo, temos que as expressões no bloco de código a seguir, estão, realizando a mesma comparação:</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="k">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">)</span>
 <span class="k">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span> <span class="p">)</span>
@@ -483,31 +483,31 @@ eXcript            </a>
 <div class="section" id="terceira-relacao">
 <h3>TERCEIRA RELAÇÃO</h3>
 <p>Se verificarmos uma expressão composta por uma String, temos que o valor retornado será <cite>True</cite>, caso a mesma contenha 1 ou mais caracteres, do contrário, o valor retornado será <cite>False</cite>.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;O valor de x é igual a vazio&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;O valor de x é igual a vazio&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;A variável &#39;x&#39; contém caracteres &quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;A variável &#39;x&#39; contém caracteres &quot;</span><span class="p">)</span>
 </pre></div>
 <p>No código acima, declaramos a variável de nome <cite>x</cite> e em seguida utilizamos a variável &quot;x&quot; isoladamente numa tomada de decisão. Caso a variável <cite>x</cite> contenha um ou mais caracteres, o bloco de código da estrutura <cite>if</cite> será executado. Do contrário, o bloco da estrutura <cite>else</cite> será executado.</p>
 </div>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="c">#=================================</span>
-<span class="c">#========== eXcript.com ==========</span>
-<span class="c">#=================================</span>
+<span class="c1">#=================================</span>
+<span class="c1">#========== eXcript.com ==========</span>
+<span class="c1">#=================================</span>
 <span class="n">a</span><span class="o">=</span><span class="mi">5</span>
 <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">5</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="k">elif</span><span class="p">(</span><span class="s">&quot;dd&quot;</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="k">elif</span><span class="p">(</span><span class="s2">&quot;dd&quot;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="section" id="veja-tambem">

@@ -153,28 +153,28 @@ eXcript            </a>
 <p>Em algumas distribuições Linux que trazem o Python instalado pode acontecer do utilitário pip não ser disponibilizado. No Ubuntu por exemplo, para instalarmos, basta executarmos o seguinte código:</p>
 <p>Debian/UBUNTU/Linux Mint:</p>
 <blockquote>
-<div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install python-pip
+<div class="highlight"><pre><span></span>$ sudo apt-get install python-pip
 </pre></div>
 </blockquote>
 <p>Fedora:</p>
 <blockquote>
-<div class="highlight"><pre><span class="nv">$ </span>sudo yum install python-pip
+<div class="highlight"><pre><span></span>$ sudo yum install python-pip
 </pre></div>
 </blockquote>
 <p>Via yum:</p>
 <blockquote>
-<div class="highlight"><pre><span class="nv">$ </span>yum install python-pip
+<div class="highlight"><pre><span></span>$ yum install python-pip
 </pre></div>
 </blockquote>
 <p>CentOS</p>
 <blockquote>
 <p>Primeiro ative o repositório EPEL e em seguida execute no terminal:</p>
-<div class="highlight"><pre><span class="nv">$ </span>sudo yum install python-pip
+<div class="highlight"><pre><span></span>$ sudo yum install python-pip
 </pre></div>
 </blockquote>
 <p>ArchLinux:</p>
 <blockquote>
-<div class="highlight"><pre><span class="nv">$ </span>sudo pacman -S python-pip
+<div class="highlight"><pre><span></span>$ sudo pacman -S python-pip
 </pre></div>
 </blockquote>
 </div>
@@ -182,56 +182,56 @@ eXcript            </a>
 <h2>VERSÃO</h2>
 <p>Pra descobrirmos a versão do <cite>pip</cite> instalada em nosso ambiente, devemos executar o comando:</p>
 <blockquote>
-<div class="highlight"><pre>pip --version
+<div class="highlight"><pre><span></span>pip --version
 </pre></div>
 </blockquote>
 </div>
 <div class="section" id="atualizando-o-pip">
 <h2>ATUALIZANDO O <tt class="docutils literal">pip</tt></h2>
 <p>É importante atualizarmos o utilitário <cite>pip</cite> antes de utiliza-lo. Para atualizamos o <cite>pip</cite> utilizamos o próprio <cite>pip</cite>. Para isso, digite no terminal o código a seguir:</p>
-<div class="highlight"><pre>pip install --upgrade pip
+<div class="highlight"><pre><span></span>pip install --upgrade pip
 </pre></div>
 <p>Feito isso, temos a certeza de estarmos utilizando a última versão do instalador de pacotes oficial do Python o <tt class="docutils literal">pip</tt>.</p>
 </div>
 <div class="section" id="instalando-pacotes-com-o-pip">
 <h2>INSTALANDO PACOTES COM O <tt class="docutils literal">pip</tt></h2>
 <p>A instalação de pacotes com o <tt class="docutils literal">pip</tt> é relativamente simples e é feito através da linha de comando. Para talarmos um pacote, temos que abrir o terminal e digitar:</p>
-<div class="highlight"><pre>pip install algum-nome-de-pacote
+<div class="highlight"><pre><span></span>pip install algum-nome-de-pacote
 </pre></div>
 <p>Em seguida, o pacote será baixado e instalado junto a instalação do Python em que o <cite>pip</cite> está contido. Para desinstalar pacotes, utilizamos um comando similar, porém, ao invés de utilizarmos a instrução <tt class="docutils literal">install</tt> utilizaremos <tt class="docutils literal">uninstall</tt>, por exemplo:</p>
 <p>Alguma vezes desejaremos instalar um pacote com uma determinada versão, pra isso, fazermos:</p>
-<div class="highlight"><pre>pip install algum-nome-de-pacote<span class="o">==</span>0.0
+<div class="highlight"><pre><span></span>pip install algum-nome-de-pacote<span class="o">==</span><span class="m">0</span>.0
 </pre></div>
-<div class="highlight"><pre>pip uninstall algum-nome-de-pacote
+<div class="highlight"><pre><span></span>pip uninstall algum-nome-de-pacote
 </pre></div>
 </div>
 <div class="section" id="lista-de-pacotes-instalados">
 <h2>LISTA DE PACOTES INSTALADOS</h2>
 <p>Para sabermos todos os pacotes instalados, utilizamos a instrução <tt class="docutils literal">freeze</tt>:</p>
-<div class="highlight"><pre>pip freeze
+<div class="highlight"><pre><span></span>pip freeze
 </pre></div>
 </div>
 <div class="section" id="exportando-lista-de-pacotes-instalados">
 <h2>EXPORTANDO LISTA DE PACOTES INSTALADOS</h2>
 <p>Algumas vezes desejaremos exportar os pacotes instalados num ambiente virtual para por exemplo, fazermos backup ou então, para adicionarmos a documentação de algum Script os pacotes que devem ser instalados.</p>
 <p>Pra exportarmos todos os nomes para um arquivo, devemos executar o seguinte comando:</p>
-<div class="highlight"><pre>pip freeze &gt; requirements.txt
+<div class="highlight"><pre><span></span>pip freeze &gt; requirements.txt
 </pre></div>
 <p>Por padrão, arquivos de nome <cite>requirements.txt</cite> contidos na raiz de um projetos contém a listagem de pacotes que precisa ser instalados.</p>
 <p>Da mesma forma que conseguimos exportar para um arquivos os pacotes instalados, também conseguimos instalar uma lista de pacotes através de um arquivo, por exemplo:</p>
-<div class="highlight"><pre>pip install requirements.txt
+<div class="highlight"><pre><span></span>pip install requirements.txt
 </pre></div>
 </div>
 <div class="section" id="obtendo-informacoes-do-pacote">
 <h2>OBTENDO INFORMAÇÕES DO PACOTE</h2>
 <p>Todo pacote possui um conjunto de metadados que identificam o autor, a empresa, a versão, a licença e várias outras informações. Para ver esses metadados, devemos executar o seguinte comando:</p>
-<div class="highlight"><pre>pip show pacote
+<div class="highlight"><pre><span></span>pip show pacote
 </pre></div>
 </div>
 <div class="section" id="id2">
 <h2>OBTENDO INFORMAÇÕES DO PACOTE</h2>
 <p>Para buscarmos por um nome dentro do repositório de código, devemos proceder da seguinte forma:</p>
-<div class="highlight"><pre>pip search &lt;query&gt;
+<div class="highlight"><pre><span></span>pip search &lt;query&gt;
 </pre></div>
 </div>
 

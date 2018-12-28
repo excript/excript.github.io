@@ -512,7 +512,7 @@ eXcript            </a>
 <div class="section" id="escopo-de-funcao">
 <h2>ESCOPO DE FUNÇÃO</h2>
 <p>O primeiro nível de escopo é o escopo de variáveis. É comum chamarmos o escopo de funções como escopo local, logo, tudo que for declarado dentro de uma função será desalocado no momento em que está finalizar a execução.</p>
-<div class="highlight"><pre><span class="x">function funcEstudo(){</span>
+<div class="highlight"><pre><span></span><span class="x">function funcEstudo(){</span>
 <span class="x">    $valor1 = 10;</span>
 <span class="x">    $valor2 = 16;</span>
 <span class="x">    $total = $valor1 + $valor2;</span>
@@ -523,7 +523,7 @@ eXcript            </a>
 <span class="x">echo $total;</span>
 </pre></div>
 <p>O código acima se executado, levantará uma exceção dizendo que a variável $total não existe. Então, como regra geral, tudo que acontecer dentro de uma função será finalizado com esta.</p>
-<div class="highlight"><pre><span class="x">$x = &#39;Fala&#39;; // global $x</span>
+<div class="highlight"><pre><span></span><span class="x">$x = &#39;Fala&#39;; // global $x</span>
 <span class="x">function funcaoX()</span>
 <span class="x">{</span>
 <span class="x">    global $x;</span>
@@ -534,13 +534,13 @@ eXcript            </a>
 <span class="x">funcaoX();</span>
 </pre></div>
 <p>Uma outra forma de acesso a variável <tt class="docutils literal">$x</tt> é utilizando o array <tt class="docutils literal">$GLOBALS</tt>.</p>
-<div class="highlight"><pre><span class="x">$GLOBALS[&#39;x&#39;] .= &#39; World&#39;; // change global $x</span>
+<div class="highlight"><pre><span></span><span class="x">$GLOBALS[&#39;x&#39;] .= &#39; World&#39;; // change global $x</span>
 </pre></div>
 <p>AS VARIÁVEIS NÃO SÃO DESTRUÍDAS AO TÉRMINO DO BLOCO DE INSTRUÇÃO!!! ALTERAR VÍDEO AULA!!</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">$testando = 10;</span>
+<div class="highlight"><pre><span></span><span class="x">$testando = 10;</span>
 <span class="x">$a = 10;</span>
 <span class="x">$b = 5;</span>
 

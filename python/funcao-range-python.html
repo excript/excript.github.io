@@ -390,10 +390,10 @@ eXcript            </a>
 <div class="section" id="definicao-da-funcao-range">
 <h2>DEFINIÇÃO DA FUNÇÃO <code>range()</code></h2>
 <p>A seguir, temos a <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#func-range">definição da função  range() encontrada na documentação oficial do Python</a>:</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="nb">range</span><span class="p">(</span> <span class="n">stop</span> <span class="p">)</span> <span class="c">#primeira definição ou definição simplificada</span>
-<span class="nb">range</span><span class="p">(</span> <span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">stop</span><span class="p">[,</span> <span class="n">step</span><span class="p">]</span> <span class="p">)</span> <span class="c">#segunda definição ou definição completa</span>
+<span class="nb">range</span><span class="p">(</span> <span class="n">stop</span> <span class="p">)</span> <span class="c1">#primeira definição ou definição simplificada</span>
+<span class="nb">range</span><span class="p">(</span> <span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">stop</span><span class="p">[,</span> <span class="n">step</span><span class="p">]</span> <span class="p">)</span> <span class="c1">#segunda definição ou definição completa</span>
 </pre></div>
 <p>A função <code>range()</code> exige a definição do último elemento da sequência numérica. Por padrão, o parâmetro <tt class="docutils literal">start</tt> será igual a 0 e o <tt class="docutils literal">step</tt> igual a 1.</p>
 </div>
@@ -428,7 +428,7 @@ eXcript            </a>
 <div class="section" id="voltando-ao-python">
 <h2>VOLTANDO AO PYTHON</h2>
 <p>Agora que já relembramos alguns conceitos da matemática, vamos rever a notação da função <code>range()</code>:</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="nb">range</span><span class="p">(</span> <span class="n">stop</span> <span class="p">)</span>
 <span class="nb">range</span><span class="p">(</span> <span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">stop</span><span class="p">[,</span> <span class="n">step</span><span class="p">]</span> <span class="p">)</span>
@@ -442,7 +442,7 @@ eXcript            </a>
 <p>É importante observar que na versão 3x do Python será retornado, pela função <code>range()</code>, um objeto iterável, e não uma lista contendo os elementos propriamente dito. Por essa razão, iremos forçar a conversão do objeto iterável para o objeto <tt class="docutils literal">list</tt>.</p>
 <p>DEFINIÇÃO: <tt class="docutils literal">range( stop[ )</tt>
 DEFINIÇÃO MATEMÁTICA: <tt class="docutils literal">[0,5[</tt></p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
@@ -462,7 +462,7 @@ DEFINIÇÃO MATEMÁTICA: <tt class="docutils literal">[0,5[</tt></p>
 </ul>
 <p>Vamos gerar uma lista que contenha 4 objetos numéricos e que o primeiro seja igual a 2 e o último igual a 5.</p>
 <p>Novamente, iremos converter o objeto iterável retornado pela função <code>range()</code> para o tipo <code>list</code>, para que o mesmo, tenha seus elementos impressos na saída padrão.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="o">&gt;&gt;&gt;</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -475,7 +475,7 @@ DEFINIÇÃO MATEMÁTICA: <tt class="docutils literal">[0,5[</tt></p>
 <p>Agora, se nós gerarmos uma lista entre 0 e 10, porém, definirmos o passo como sendo igual a 2, a seguinte lista será retornada: <tt class="docutils literal">[0, 2, 4, 6, 8]</tt>.</p>
 <p>Em ambos os casos os estamos trabalhando com uma sequência numérica num mesmo intervalo, porém, no primeiro exemplo o intervalo entre os elementos é igual a 1 unidade, enquanto que no segundo exemplo, o espaço entre os elementos é de 2 unidades.</p>
 <p>No código a seguir, vamos gerar uma lista no intervalo 2 à 10 e o <code>step</code> será igual a 2 unidades.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
@@ -489,35 +489,35 @@ DEFINIÇÃO MATEMÁTICA: <tt class="docutils literal">[0,5[</tt></p>
 <div class="section" id="exemplos-da-documentacao-oficial-do-python">
 <h2>EXEMPLOS DA DOCUMENTAÇÃO OFICIAL DO PYTHON</h2>
 <p>Os exemplos a seguir, foram extraídos da documentação oficial do Python e demonstram situação interessantes com o uso da função <code>range()</code>. Vale a pena o estudo de cada situação detalhadamente.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="c">#gerando uma sequência de 0 à 9</span>
+<span class="c1">#gerando uma sequência de 0 à 9</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 
-<span class="c">#gerando uma sequência de 1 à 11</span>
+<span class="c1">#gerando uma sequência de 1 à 11</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 
-<span class="c">#gerando uma sequência de 0 à 30 com step=5</span>
+<span class="c1">#gerando uma sequência de 0 à 30 com step=5</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
 
-<span class="c">#gerando uma sequência os 5 primeiros números da tabuada de 3</span>
+<span class="c1">#gerando uma sequência os 5 primeiros números da tabuada de 3</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 
-<span class="c">#gerando uma sequência numérica negativa</span>
+<span class="c1">#gerando uma sequência numérica negativa</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">]</span>
 
-<span class="c">#gerando uma sequência numérica vazia</span>
+<span class="c1">#gerando uma sequência numérica vazia</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 <span class="p">[]</span>
 
-<span class="c">#gerando uma sequência numérica vazia,</span>
-<span class="c">#onde o interval inicial é maior do que o final</span>
-<span class="c">#por essa razão, há lista é nula</span>
+<span class="c1">#gerando uma sequência numérica vazia,</span>
+<span class="c1">#onde o interval inicial é maior do que o final</span>
+<span class="c1">#por essa razão, há lista é nula</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 <span class="p">[]</span>
 </pre></div>

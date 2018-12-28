@@ -406,15 +406,15 @@ eXcript            </a>
         </table>
     </div>
 <p>Considere o trecho de código a seguir:</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">minha_func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">minha_func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 
-<span class="c"># invocando a função minha_func() passando valores de forma posicional</span>
+<span class="c1"># invocando a função minha_func() passando valores de forma posicional</span>
 <span class="n">minha_func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="c"># invocando a função minha_func() passando valores de forma chave-valor</span>
+<span class="c1"># invocando a função minha_func() passando valores de forma chave-valor</span>
 <span class="n">minha_func</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="c"># invocando a função minha_func() passando valores de forma chave-valor</span>
-<span class="c"># porém, fora de ordem</span>
+<span class="c1"># invocando a função minha_func() passando valores de forma chave-valor</span>
+<span class="c1"># porém, fora de ordem</span>
 <span class="n">minha_func</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 <p>No código acima, declaramos uma função de nome <code>minha_func(a, b, c)</code> e definimos 3 parâmetros de nomes, <code>(a, b, c)</code>. Em seguida, invocamos a função <code>minha_func()</code> 2 vezes. Na primeira, passamos 3 valores na ordem em que estes foram definidos, ou seja, <code>1, 2, 3</code> serão, automaticamente definidos, para os parâmetros <tt class="docutils literal">a</tt>, <tt class="docutils literal">b</tt> e <tt class="docutils literal">c</tt> respectivamente. Em seguida, invocamos a função novamente, porém, definimos os parâmetro de maneira nomeada, isto é, a cada parâmetro associamos determinado valor.</p>
@@ -425,7 +425,7 @@ eXcript            </a>
 <div class="section" id="excecao-a-regra">
 <h2>EXCEÇÃO À REGRA</h2>
 <p>É possível invocar uma função passando os primeiros argumentos de forma posicional e o restante, de forma nomeada. Porém, a regra para trabalhar dessa maneira é: argumentos posicionais, em seguida, argumentos nomeados. Tomemos como exemplo o código a seguir:</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">minha_func2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">minha_func2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
 
 <span class="n">minha_func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -434,24 +434,24 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="c"># coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1"># coding: utf-8</span>
 
-<span class="c"># =================</span>
-<span class="c">#  = eXcript.com =</span>
-<span class="c"># =================</span>
+<span class="c1"># =================</span>
+<span class="c1">#  = eXcript.com =</span>
+<span class="c1"># =================</span>
 
-<span class="c"># ARGUMENTOS POSICIONAIS E ARGUMENTOS NOMEADOS</span>
+<span class="c1"># ARGUMENTOS POSICIONAIS E ARGUMENTOS NOMEADOS</span>
 
 <span class="k">def</span> <span class="nf">dados_pessoais</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">sobrenome</span><span class="p">,</span> <span class="n">idade</span><span class="p">,</span> <span class="n">sexo</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Nome: {}</span><span class="se">\n</span><span class="s">Sobrenome: {}</span><span class="se">\n</span><span class="s">Idade: {}</span><span class="se">\n</span><span class="s">Sexo: {}&quot;</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Nome: {}</span><span class="se">\n</span><span class="s2">Sobrenome: {}</span><span class="se">\n</span><span class="s2">Idade: {}</span><span class="se">\n</span><span class="s2">Sexo: {}&quot;</span>
             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">sobrenome</span><span class="p">,</span> <span class="n">idade</span><span class="p">,</span> <span class="n">sexo</span><span class="p">))</span>
 
-<span class="n">dados_pessoais</span><span class="p">(</span><span class="s">&quot;Cláudio&quot;</span><span class="p">,</span> <span class="n">sobrenome</span><span class="o">=</span><span class="s">&quot;Rogério&quot;</span><span class="p">,</span> <span class="n">idade</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">sexo</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="c"># dados_pessoais(idade=30,</span>
-<span class="c">#                 sexo=True,</span>
-<span class="c">#                 sobrenome=&quot;Carvalho&quot;,</span>
-<span class="c">#                 nome=&quot;Cláudio&quot;</span>
-<span class="c">#                 )</span>
+<span class="n">dados_pessoais</span><span class="p">(</span><span class="s2">&quot;Cláudio&quot;</span><span class="p">,</span> <span class="n">sobrenome</span><span class="o">=</span><span class="s2">&quot;Rogério&quot;</span><span class="p">,</span> <span class="n">idade</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">sexo</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c1"># dados_pessoais(idade=30,</span>
+<span class="c1">#                 sexo=True,</span>
+<span class="c1">#                 sobrenome=&quot;Carvalho&quot;,</span>
+<span class="c1">#                 nome=&quot;Cláudio&quot;</span>
+<span class="c1">#                 )</span>
 </pre></div>
 </div>
 <div class="section" id="links-externos">

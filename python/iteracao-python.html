@@ -404,7 +404,7 @@ beltrano
 <div class="section" id="exemplo-utilizando-python">
 <h2>EXEMPLO UTILIZANDO PYTHON</h2>
 <p>No código a seguir, temos um exemplo utilizando a estrutura de repetição <tt class="docutils literal">while</tt>, que numa tradução livre, significa, <tt class="docutils literal">enquanto</tt>.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
 <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span><span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
@@ -419,14 +419,14 @@ beltrano
 <p>A forma mais primitiva que as linguagens de programação dispunham para a repetição de um mesmo bloco se dava com o uso das instruções <code>goto</code>, que numa tradução livre significa algo como <tt class="docutils literal">vá para</tt>.</p>
 <p>Algumas linguagens obrigava-nos a definir o número da linha para qual desejamos saltar, outras, permitiam a definição de <code>label</code>, isto é, nomes, para então, com a instrução <code>goto</code>, pularmos para a linha de um respectivo <code>label</code>.</p>
 <p>Desta forma, se desejassemos repetir um mesmo bloco, tínhamos que <strong>pular</strong> para o início do <code>label</code> e assim, repetir as instrução enquanto fosse necessário, por exemplo.</p>
-<div class="highlight"><pre><span class="n">label</span> <span class="n">REPETI</span><span class="err">ÇÃ</span><span class="n">O</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><span class="n">label</span> <span class="n">REPETIÇÃO</span><span class="p">:</span>
     <span class="n">linha1</span><span class="p">;</span>
     <span class="n">linha2</span><span class="p">;</span>
     <span class="n">linha3</span><span class="p">;</span>
 
     <span class="n">SE</span> <span class="p">(</span><span class="n">TRUE</span><span class="p">)</span>
         <span class="n">goto</span> <span class="n">REPETICAO</span><span class="p">;</span>
-    <span class="n">SEN</span><span class="err">Ã</span><span class="n">O</span>
+    <span class="n">SENÃO</span>
         <span class="n">instrucao</span>
 </pre></div>
 <p>No código acima, um pouco escrito em Português e outra parte em Inglês, temos como as 3 últimas linhas de código, uma estrutura de seleção, onde uma condição é verificada e, caso a expressão seja verdadeira, o cursos de execução do programa saltará para linha onde o <code>label</code> está declarado. Do contrário, o bloco <code>SENÃO</code> é executado e a execução seguirá normalmente.</p>
@@ -435,7 +435,7 @@ beltrano
 <h2>A RECURSIVIDADE COMO LAÇO DE REPETIÇÃO</h2>
 <p>Recursividade significa a invocação de uma função por ela mesma, ou seja, é toda função que invoca a si mesma. Essa é uma prática perigosa de trabalho e que pode facilmente travar nossos programas, ou então, estourar a pilha de execução, isto é, podemos obter o famoso erro <tt class="docutils literal">stack overflow error</tt> que, nada mais é do que o limite máximo de vezes que uma função pode chamar a si mesma.</p>
 <p>A seguir, temos um exemplo em Português, onde trabalhamos com o conceito de recursividade.</p>
-<div class="highlight"><pre><span class="n">func</span> <span class="n">minhaFun</span><span class="err">çã</span><span class="n">o</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="n">func</span> <span class="n">minhaFunção</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
 
     <span class="n">linha</span> <span class="mi">1</span>
     <span class="n">linha</span> <span class="mi">2</span>
@@ -444,11 +444,11 @@ beltrano
     <span class="n">val</span> <span class="o">=</span> <span class="n">val</span> <span class="o">+</span> <span class="mi">1</span>
 
     <span class="n">SE</span><span class="p">(</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">):</span>
-        <span class="n">minhaFun</span><span class="err">çã</span><span class="n">o</span><span class="p">(</span> <span class="n">val</span> <span class="p">)</span>
-    <span class="n">SEN</span><span class="err">Ã</span><span class="n">O</span><span class="p">:</span>
+        <span class="n">minhaFunção</span><span class="p">(</span> <span class="n">val</span> <span class="p">)</span>
+    <span class="n">SENÃO</span><span class="p">:</span>
         <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="n">minhaFun</span><span class="err">çã</span><span class="n">o</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">minhaFunção</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 <p>No código acima, definimos uma função de nome <code>minhaFunção()</code> e estamos invocando-a na última linha do código, ou seja, estamos invocando a função após a sua definição.</p>
 <p>A partir do momento que invocamos a função <code>minhaFunção()</code>, estamos também, enviando como argumento um valor literal inteiro igual a <code>0</code> . Esse valor é recebido como parâmetro pelo argumento <code>val</code>. Agora, estando dentro da função, algumas linhas são executadas, e então, a variável <code>val</code> recebe o valor dela mesma, acrescido de 1 unidade.</p>
@@ -478,11 +478,11 @@ beltrano
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="c">#=====================================</span>
-<span class="c">#========== www.eXcript.com ==========</span>
-<span class="c">#=====================================</span>
+<span class="c1">#=====================================</span>
+<span class="c1">#========== www.eXcript.com ==========</span>
+<span class="c1">#=====================================</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">):</span>

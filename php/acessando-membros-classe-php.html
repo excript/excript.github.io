@@ -507,7 +507,7 @@ eXcript            </a>
 <div class="section" id="o-que-sao-membros-de-classe">
 <h2>O QUE SÃO MEMBROS DE CLASSE</h2>
 <p>Um membro de classe é toda variável ou função definida e implementada pela classe. Assim, temos que todos os atributos e métodos que estiverem definidos numa classe são chamados de &quot;membros de classe&quot;. Para acessarmos os membros de uma classe, temos que utilizar a seguinte nomenclatura:</p>
-<div class="highlight"><pre><span class="x">referência + nome_membro</span>
+<div class="highlight"><pre><span></span><span class="x">referência + nome_membro</span>
 <span class="x">referência -&gt; nome_membro</span>
 </pre></div>
 <p>Temos sempre que pensar no conceito de referência, ou seja, uma variável é somente uma referência a um objeto. Assim, temos que todas as instância que criarmos de uma classe poderão acessar os membros públicos através da definição acima.</p>
@@ -517,7 +517,7 @@ eXcript            </a>
 <p>Referência é para o PHP o que o endereço é para o C++, ou seja, um valor que está apontando para uma região em que há informações armazenadas. O conceito de referência em PHP não é explicito, até porque, não conseguimos obter esse endereço facilmente. Mesmo assim, não é difícil imaginar que <strong>tudo</strong> precisa estar armazenado em algum lugar, logo, a referência é a nomenclatura que utilizamos de forma genérica para dizer que a variável A está ligada a determinada informação.</p>
 <p>É preciso entender que toda variável está armazenada na memória, bem como todo objeto. Entendido isso, é preciso entender que é utilizado uma variável para guardar a região em que determinado objeto está armazenado. Logo, você talvez se pergunte quem armazena o local de memória em que as variáveis estão, e a resposta é: o interpretador, a máquina virtual do PHP.</p>
 <p>Se entendido o conceito de referência, o conceito sobre a variável <tt class="docutils literal">this</tt> fica fácil de ser compreendido, até porque, está é uma variável que é criada para cada novo objeto e, só pode ser utilizada para o acesso de dentro do escopo da classe. Por isso é que dizemos que a pseudo-variável $this <strong>sempre</strong> estará se referindo a classe em que estamos trabalhando.</p>
-<div class="highlight"><pre><span class="x">//internamente</span>
+<div class="highlight"><pre><span></span><span class="x">//internamente</span>
 <span class="x">$this-&gt;nome_do_membro;</span>
 
 <span class="x">//externamente</span>
@@ -560,10 +560,10 @@ eXcript            </a>
 <li>Qual o membro</li>
 </ol>
 <p>Utilizamos o <tt class="docutils literal">operador de objeto</tt>, comumente chamado de <tt class="docutils literal">operador seta</tt> para acessarmos membros públicos, como temos no exemplo seguinte:</p>
-<div class="highlight"><pre><span class="x">$objeto_nome -&gt; propriedade_nome;</span>
+<div class="highlight"><pre><span></span><span class="x">$objeto_nome -&gt; propriedade_nome;</span>
 </pre></div>
 <p>O esquema sempre será o mesmo quando formos acessar as funções definidas pelas classes. Inicialmente informamos o objeto, em seguida colocamos o <tt class="docutils literal">operador seta</tt> e por fim, definimos o nome da função [ <strong>funcionalidade</strong> ] que queremos invocar.</p>
-<div class="highlight"><pre><span class="x">$p1 = new Pessoa(); #criando um objeto de Pessoa e atribuindo a referência à variável $p1</span>
+<div class="highlight"><pre><span></span><span class="x">$p1 = new Pessoa(); #criando um objeto de Pessoa e atribuindo a referência à variável $p1</span>
 <span class="x">$p2 = new Pessoa();</span>
 <span class="x">$p1-&gt;nome = &quot;João&quot;; #acessando a variável $nome</span>
 <span class="x">                    # definida pela classe Pessoa e por isso,</span>
@@ -576,7 +576,7 @@ eXcript            </a>
 <div class="section" id="inicializando-membros-de-classe">
 <h2>INICIALIZANDO MEMBROS DE CLASSE</h2>
 <p>Muitas propriedades de objetos precisarão ter valores iniciais para que tudo funcione corretamente. Todas as propriedades que precisam definir valores iniciais, precisaram ter seus valores atribuídos em sua declaração.</p>
-<div class="highlight"><pre><span class="x">class Quadrado</span>
+<div class="highlight"><pre><span></span><span class="x">class Quadrado</span>
 <span class="x">{</span>
 <span class="x">    public $x = 5, $y = 10;</span>
 <span class="x">}</span>
@@ -584,7 +584,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#ACESSANDO MEMBROS DE CLASSE</span>
+<div class="highlight"><pre><span></span><span class="x">#ACESSANDO MEMBROS DE CLASSE</span>
 
 <span class="x">class Pessoa{</span>
 <span class="x">    public $idade = 0;</span>

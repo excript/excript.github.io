@@ -508,7 +508,7 @@ eXcript            </a>
 <p>Pseudo-variável é um nome que será utilizado como se fosse uma variável, porém, que não é verdadeiramente uma variável. Por isso o prefixo <strong>pseudo</strong>, que significa, falso.</p>
 <p>Cada classe PHP, possui uma pseudo-variável de nome <code>$this</code>. Chamamos a mesma de pseudo-variável até porque, a mesma funciona de maneira diferente das demais variáveis e quem a manipula, é a máquina virtual do PHP.</p>
 <p>O que temos que entender, é que <code>$this</code> aponta para um objeto na memória, no caso, o objeto em execução, ou melhor, o objeto onde a mesma está contida, ou então, vamos dizer que a mesma aponta para si própria. Cada instância de classe terá a sua própria pseudo-variável <code>$this</code> e esta, apontará para o endereço de memória onde a variável está sendo utilizada.;</p>
-<div class="highlight"><pre><span class="x">class A{</span>
+<div class="highlight"><pre><span></span><span class="x">class A{</span>
 
 <span class="x">    function fun(){</span>
 <span class="x">        $this -&gt; fun();</span>
@@ -524,7 +524,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#IMPLEMENTANDO FUNÇÕES</span>
+<div class="highlight"><pre><span></span><span class="x">#IMPLEMENTANDO FUNÇÕES</span>
 
 <span class="x">class Pessoa{</span>
 

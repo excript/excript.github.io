@@ -515,7 +515,7 @@ eXcript            </a>
 <p>Vamos supor uma situação onde existe uma lista de valores e é necessário realizar algum processamento sobre os itens. Pra isso, nós utilizarmos um laço de repetição e a cada item realizarmos uma determinada operação. Essa é uma forma estática de percorrer os elemtnos e realizar um determinado tratamento sobre os mesmos.</p>
 <p>Agora, nós podemos trabalhar de tal maneira onde não será implementado dentro da função o tratamento que sera dado a cada elemento da lista, o que será feito, é a passagem do elemento através de uma função anônima que será recebida como parâmetro. Dessa forma, nós temos que o processamento irá ocorrer externamente e quem irá implementar o mesmo, não precisa conhecer o funcionamento interno da função e nem ter acesso ao seu código.</p>
 <p>Um detalhe das funções anônimas é que a expicação é complexa, enquanto a implementação geralmente é simples.</p>
-<div class="highlight"><pre><span class="x">$quadrado = function($num){</span>
+<div class="highlight"><pre><span></span><span class="x">$quadrado = function($num){</span>
 <span class="x">    return $num * $num;</span>
 <span class="x">};</span>
 <span class="x">$cubo = function($num) use ($quadrado){</span>
@@ -544,9 +544,9 @@ eXcript            </a>
 </div>
 <div class="section" id="definicao">
 <h2>DEFINIÇÃO</h2>
-<div class="highlight"><pre><span class="x">array array_map(callback $callback, array $arr1)</span>
+<div class="highlight"><pre><span></span><span class="x">array array_map(callback $callback, array $arr1)</span>
 </pre></div>
-<div class="highlight"><pre><span class="x">$arr = [1, 2, 3, 4, 5];</span>
+<div class="highlight"><pre><span></span><span class="x">$arr = [1, 2, 3, 4, 5];</span>
 
 <span class="x">$f = function($x) {</span>
 <span class="x">    return $x * $x;</span>
@@ -562,9 +562,9 @@ A função anônima, deverá retornar um valor booleano, se o valor for <tt clas
 </div>
 <div class="section" id="id1">
 <h2>DEFINIÇÃO</h2>
-<div class="highlight"><pre><span class="x">array array_map(array $arr1, callback $callback)</span>
+<div class="highlight"><pre><span></span><span class="x">array array_map(array $arr1, callback $callback)</span>
 </pre></div>
-<div class="highlight"><pre><span class="x">//$lista = [1,2,3,4,5,6,7,8,9,10];</span>
+<div class="highlight"><pre><span></span><span class="x">//$lista = [1,2,3,4,5,6,7,8,9,10];</span>
 <span class="x">$lista = [1,2.21,&quot;&quot;,9,4];</span>
 
 <span class="x">$f = function ($v) {</span>
@@ -579,7 +579,7 @@ A função anônima, deverá retornar um valor booleano, se o valor for <tt clas
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#PRÁTICA - FUNÇÕES ANÔNIMAS</span>
+<div class="highlight"><pre><span></span><span class="x">#PRÁTICA - FUNÇÕES ANÔNIMAS</span>
 
 <span class="x">$quadrado = function($item){</span>
 <span class="x">    return $item * $item;</span>

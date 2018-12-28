@@ -221,17 +221,17 @@ eXcript            </a>
 <p>O usuário <strong>João Moacir Barth Junior</strong> fez uma correção e um adendo a implementação que fizemos nesta aula. A seguir, há uma explicação do problema por ele observado.</p>
 <p>O código a seguir executa sem quaisquer erro. Porém, é importante observar a forma como iremos ler números inteiros.</p>
 <p>Na resolução do exercício lemos um número inteiro utilizando a seguinte linha de código:</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="n">idade</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">idade</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 </pre></div>
 <p>O código acima funciona e o número digitado no Console pelo usuário é passado para a variável inteira <code>idade</code>. Porém, <a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#nextLine()">a instrução nextInt() lê um ou N valores inteiros</a>, desde que estes estejam separados por espaço. Isso significa que após lermos um número com a função <code>nextInt()</code> o Cursor continuara na mesma linha e será nossa tarefa posicionar o mesmo na linha abaixo, caso queiramos que ler outros valores pelo Console que o nosso usuário venha a digitar.</p>
 <p>Pra isso, é necessário invocar a função <code>nextLine()</code>, do contrário, será levantado uma exceção. A seguir temos o código que deverá ser utilizado para ler números inteiros e em seguida, posicionar o Cursor na linha seguinte.</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="n">idade</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">idade</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 <span class="n">in</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
 </pre></div>
 </div>
 <div class="section" id="exercicio-resolvido">
 <h2>EXERCÍCIO RESOLVIDO</h2>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
 <span class="cm">/**</span>
 <span class="cm"> * ====================================</span>
 <span class="cm"> *           eXcript.com</span>
@@ -242,7 +242,7 @@ eXcript            </a>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">J0011</span> <span class="o">{</span>
 
     <span class="c1">//Lendo e imprimindo textos e números</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="n">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
         <span class="c1">// 1) pedir pro usuário informar:</span>
             <span class="c1">//1) Nome</span>

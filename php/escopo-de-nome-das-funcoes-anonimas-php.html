@@ -512,7 +512,7 @@ eXcript            </a>
 <p>Uma função anônima possui o seu escopo restrito, então, não é possível fazer acesso direto aos membros externos. Em suma, <a class="reference external" href="http://excript.com/php/introducao-as-funcoes-php.html">o escopo de uma função anônima funciona de maneira análoga a de uma função convencional</a>.</p>
 <p>Dessa forma, para acessarmos variáveis externas a função anônima, temos que explicitamente declarar, no cabeçalho da função, que determinadas variáveis devem estar visíveis dentro da função que estamos definindo.</p>
 <p>Para que seja possível essa manipulação no escopo das variáveis, foi definido a instrução <code>use</code> que funciona como complemento da declaração das funções anonimas, por exemplo:</p>
-<div class="highlight"><pre><span class="x">$x = 10;</span>
+<div class="highlight"><pre><span></span><span class="x">$x = 10;</span>
 <span class="x">$func = function() use ($x) {</span>
 <span class="x">    echo &quot;O valor de x é: $x&quot;;</span>
 <span class="x">};</span>
@@ -527,7 +527,7 @@ eXcript            </a>
 <p>Funções anonimas funcionam de maneira análoga a qualquer outra função, logo, estas possuem o escopo restrito. Da mesma forma, temos que ao inserirmos variáveis no escopo de uma função, o que estamos de fato fazendo, é declarando uma variável de mesmo nome e inicializando-a com o valor igual a variável externa.</p>
 <p>Desta forma, se alterarmos o valor das variáveis inseridas no escopo local, o que será alterado, é só e somente só a variável de mesmo nome re-declarada no escopo local da função anonima. Logo, se desejarmos alterar a variável cujo escopo é externo a função, temos de passar a sua referência e não o seu valor. Para isso, basta precedermos o seu nome pelo uso de um &amp; comercial.</p>
 <p>Vejamos o código a seguir:</p>
-<div class="highlight"><pre><span class="x">$x = 10;</span>
+<div class="highlight"><pre><span></span><span class="x">$x = 10;</span>
 <span class="x">$y = 10;</span>
 <span class="x">$func = function() use ($x, &amp;$y) {</span>
 <span class="x">    echo &quot;O valor de x é: $x&quot;;</span>
@@ -545,7 +545,7 @@ eXcript            </a>
 </pre></div>
 <p>No exemplo acima, podemos facilmente observar que somente a variável externa <code>$y</code> é que teve o seu valor alterado, isso porque, a referência da mesma foi inserida no escopo local da função anonima.</p>
 <p>A seguir, implementamos mais um exemplo para avançarmos ainda mais em nosso estudo.</p>
-<div class="highlight"><pre><span class="x">$var1 = 10;</span>
+<div class="highlight"><pre><span></span><span class="x">$var1 = 10;</span>
 <span class="x">$num = [&quot;um&quot;, &quot;dois&quot;, &quot;três&quot;];</span>
 <span class="x">$func = function() use ($var1, &amp;$num) {</span>
 <span class="x">    echo &quot;Variável externa $var1&quot;;</span>
@@ -556,7 +556,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#FUNÇÕES ANÔNIMAS - ESCOPO DE NOMES</span>
+<div class="highlight"><pre><span></span><span class="x">#FUNÇÕES ANÔNIMAS - ESCOPO DE NOMES</span>
 
 <span class="x">$num = 100;</span>
 <span class="x">$num2 = 100;</span>

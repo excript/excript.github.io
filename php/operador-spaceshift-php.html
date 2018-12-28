@@ -505,7 +505,7 @@ eXcript            </a>
 <h2>SPACESHIP OPERATOR</h2>
 <p>O PHP 7 implementou um operador de nome <tt class="docutils literal">Spaceship</tt>. Com este, somos capazes de verificar 3 situações ao mesmo tempo, ou seja, verificamos se o operando a esquerda é menor, igual ou maior do que o operando a direita. O resultado da verificação será um número inteiro no intervalo entre -1 até 1.</p>
 <p>Caso o valor retornado seja -1, o operando a esquerda é menor do o operando a sua direita. Se o valor retornado for igual a 0, os operandos são iguais. Por fim, se o valor retornado for 1, o operando a esquerda é maior do que o operando a direita do operador.</p>
-<div class="highlight"><pre><span class="x">$x &lt;=&gt; $y</span>
+<div class="highlight"><pre><span></span><span class="x">$x &lt;=&gt; $y</span>
 </pre></div>
 <p>Então, temos que a cada verificação feita utilizando o operador <tt class="docutils literal">SpaceShift</tt>, será verificado 3 situações:</p>
 <blockquote>
@@ -519,13 +519,13 @@ eXcript            </a>
 <div class="section" id="situacoes-menor-ou-igual-maior-ou-igual">
 <h2>SITUAÇÕES: MENOR OU IGUAL; MAIOR OU IGUAL</h2>
 <p>Também é possível obter o resultado da expressões <tt class="docutils literal">menor ou igual</tt> ou <tt class="docutils literal">maior ou igual</tt> com o operador <tt class="docutils literal">spaceshift</tt>, neste caso temos que:</p>
-<div class="highlight"><pre><span class="x">$x &lt;==&gt; $y</span>
+<div class="highlight"><pre><span></span><span class="x">$x &lt;==&gt; $y</span>
 </pre></div>
 </div>
 <div class="section" id="exemplos-com-numeros">
 <h2>EXEMPLOS COM NÚMEROS</h2>
 <p>A seguir, definimos alguns exemplos utilizando números e, já definimos, como sendo comentário, o valor que será retornado.</p>
-<div class="highlight"><pre><span class="x">1 &lt;=&gt; 1     // 0</span>
+<div class="highlight"><pre><span></span><span class="x">1 &lt;=&gt; 1     // 0</span>
 <span class="x">2 &lt;=&gt; 1     // 1</span>
 <span class="x">1 &lt;=&gt; 2     // -1</span>
 <span class="x">156 &lt;==&gt; 12 // 1</span>
@@ -535,7 +535,7 @@ eXcript            </a>
 <div class="section" id="exemplos-com-arrays">
 <h2>EXEMPLOS COM ARRAYS</h2>
 <p>Abaixo definimos uma lista de exemplos e novamente, colocamos como sendo comentários o valor que será impresso no console.</p>
-<div class="highlight"><pre><span class="x">echo [] &lt;=&gt; []; // 0</span>
+<div class="highlight"><pre><span></span><span class="x">echo [] &lt;=&gt; []; // 0</span>
 <span class="x">echo [1, 2, 3] &lt;=&gt; [1, 2, 3]; // 0</span>
 <span class="x">echo [1, 2, 3] &lt;=&gt; []; // 1</span>
 <span class="x">echo [1, 2, 3] &lt;=&gt; [1, 2, 1]; // 1</span>
@@ -545,14 +545,14 @@ eXcript            </a>
 <div class="section" id="exemplos-com-strings">
 <h2>EXEMPLOS COM STRINGS</h2>
 <p>Agora, definimos 3 exemplos utilizando String para estudarmos o funcionamento do operador <code>spaceshift</code>.</p>
-<div class="highlight"><pre><span class="x">echo &quot;x&quot; &lt;=&gt; &quot;x&quot;; // 0</span>
+<div class="highlight"><pre><span></span><span class="x">echo &quot;x&quot; &lt;=&gt; &quot;x&quot;; // 0</span>
 <span class="x">echo &quot;x&quot; &lt;=&gt; &quot;y&quot;; //-1</span>
 <span class="x">echo &quot;y&quot; &lt;=&gt; &quot;x&quot;; //1</span>
 </pre></div>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">#SPACESHIFT OPERATOR</span>
+<div class="highlight"><pre><span></span><span class="x">#SPACESHIFT OPERATOR</span>
 
 <span class="x">foreach(range(0,9) as $v){</span>
 

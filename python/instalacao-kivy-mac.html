@@ -240,19 +240,19 @@ eXcript            </a>
 <div class="section" id="instalando-o-anaconda-no-mac-osx">
 <h2>INSTALANDO O ANACONDA NO MAC OSX</h2>
 <p>Se você não souber qual a sua versão do sistema operacional Mac, utilize o comando abaixo.</p>
-<div class="highlight"><pre><span class="c">#retorna a versão do MacOS</span>
+<div class="highlight"><pre><span></span><span class="c1">#retorna a versão do MacOS</span>
 sw_vers
 </pre></div>
 <div class="section" id="instalacao-do-gerenciador-brew">
 <h3>1) Instalação do gerenciador brew</h3>
 <p>Segundo a <a class="reference external" href="http://brew.sh/">documentação do utilitário brew encontrado na página oficial</a>, para fazermos a instalação, devemos abrir o terminal e executar o seguinte comando.</p>
-<div class="highlight"><pre>/usr/bin/ruby -e <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span>
+<div class="highlight"><pre><span></span>/usr/bin/ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 <div class="section" id="instalacao-das-dependencias">
 <h3>2) Instalação das dependencias</h3>
 <p>Os pacotes a seguir são necessários tanto pra versão 2x como 3x.</p>
-<div class="highlight"><pre><span class="c">#não utilizar SUDO</span>
+<div class="highlight"><pre><span></span><span class="c1">#não utilizar SUDO</span>
 brew install sdl sdl_image sdl_mixer sdl_ttf smpeg portmidi
 </pre></div>
 </div>
@@ -264,46 +264,46 @@ brew install sdl sdl_image sdl_mixer sdl_ttf smpeg portmidi
 <div class="section" id="criacao-e-instalacao-dos-ambientes-virtuais-e-da-biblioteca-kivy">
 <h3>4) Criação e instalação dos ambientes virtuais e da biblioteca kivy</h3>
 <p>Agora, iremos criar 2 ambientes virtuais de nome k27 e k35 e instalaremos o framework kivy em cada ambiente. É importante dizer que iremos instalar ambas versões devido ao fato de que em alguma situações, o projeto Kivy fornece suporte somente a versão 2.7.</p>
-<div class="highlight"><pre><span class="c">#criação do ambiente k27</span>
-conda create -p k27 <span class="nv">python</span><span class="o">=</span>2.7
+<div class="highlight"><pre><span></span><span class="c1">#criação do ambiente k27</span>
+conda create -p k27 <span class="nv">python</span><span class="o">=</span><span class="m">2</span>.7
 
-<span class="c">#instalar pygame</span>
+<span class="c1">#instalar pygame</span>
 pip install pygame
 
-<span class="c">#biblioteca gráfica</span>
+<span class="c1">#biblioteca gráfica</span>
 conda install pillow
 
 
-<span class="c">#biblioteca que compila código Python</span>
-conda install <span class="nv">cython</span><span class="o">=</span>0.23
+<span class="c1">#biblioteca que compila código Python</span>
+conda install <span class="nv">cython</span><span class="o">=</span><span class="m">0</span>.23
 
 
-<span class="c">#instalação da biblioteca Kivy</span>
-<span class="nv">$ USE_OSX_FRAMEWORKS</span><span class="o">=</span>0 pip install -I --no-cache-dir --no-binary all kivy
+<span class="c1">#instalação da biblioteca Kivy</span>
+$ <span class="nv">USE_OSX_FRAMEWORKS</span><span class="o">=</span><span class="m">0</span> pip install -I --no-cache-dir --no-binary all kivy
 
 
 
-<span class="c">#criação do ambiente k35</span>
-conda create -p k35 <span class="nv">python</span><span class="o">=</span>3.5
+<span class="c1">#criação do ambiente k35</span>
+conda create -p k35 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.5
 
-<span class="c">#instalar pygame</span>
+<span class="c1">#instalar pygame</span>
 pip install pygame
 
-<span class="c">#biblioteca gráfica</span>
+<span class="c1">#biblioteca gráfica</span>
 conda install pillow
 
-<span class="c">#biblioteca que compila código Python</span>
-conda install <span class="nv">cython</span><span class="o">=</span>0.23
+<span class="c1">#biblioteca que compila código Python</span>
+conda install <span class="nv">cython</span><span class="o">=</span><span class="m">0</span>.23
 
-<span class="c">#instalação da biblioteca Kivy</span>
-<span class="nv">$ USE_OSX_FRAMEWORKS</span><span class="o">=</span>0 pip install -I --no-cache-dir --no-binary all kivy
+<span class="c1">#instalação da biblioteca Kivy</span>
+$ <span class="nv">USE_OSX_FRAMEWORKS</span><span class="o">=</span><span class="m">0</span> pip install -I --no-cache-dir --no-binary all kivy
 </pre></div>
 </div>
 </div>
 <div class="section" id="confirmando-a-versao-do-kivy">
 <h2>CONFIRMANDO A VERSÃO DO KIVY</h2>
 <p>Após a instalação, podes conferir a versão do Kivy que foi instalada com o seguinte comando:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">kivy</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kivy</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">kivy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </pre></div>

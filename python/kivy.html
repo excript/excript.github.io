@@ -241,20 +241,20 @@ OpenGL® ES is a royalty-free, cross-platform API for full-function 2D and 3D gr
 <p>O projeto Kivy desenvolveu uma linguagem especializada e semelhante a linguagem Python para a construção de interfaces gráficas. O objetivo é facilitar a adição e remoção de Widgets (componentes visuais) ao mesmo tempo que separa o código utilizado para construção gráfica (View) do código Python, ou a lógica de negócios.</p>
 <p>Num primeiro momento é impossível não pensarmos se realmente existe a necessidade de criar mais uma linguagem sendo que já existem tantas. Talvez somente na prática é que conseguimos perceber o quão útil foi o estabelecimento dessa nova linguagem que de fato não passa de uma linguagem de marcação, haja vista que somente pequenas expressões podem ser utilizadas.</p>
 <p>Abaixo temos um trecho de código utilizando a kvlang e em seguida a tela que iremos obter quando executarmos.</p>
-<div class="highlight"><pre><span class="n">FloatLayout</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><span class="n">FloatLayout</span><span class="p">:</span>
     <span class="n">TextInput</span><span class="p">:</span>
-        <span class="n">text</span><span class="p">:</span> <span class="s">&quot;eXcript&quot;</span>
-        <span class="n">height</span><span class="p">:</span> <span class="s">&quot;30px&quot;</span>
+        <span class="n">text</span><span class="p">:</span> <span class="s2">&quot;eXcript&quot;</span>
+        <span class="n">height</span><span class="p">:</span> <span class="s2">&quot;30px&quot;</span>
         <span class="n">width</span><span class="p">:</span> <span class="mi">350</span>
         <span class="n">top</span><span class="p">:</span> <span class="mi">100</span>
         <span class="n">size_hint</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
-        <span class="n">pos_hint</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;center_x&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,}</span>
+        <span class="n">pos_hint</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;center_x&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,}</span>
     <span class="n">Button</span><span class="p">:</span>
-        <span class="n">text</span><span class="p">:</span> <span class="s">&quot;Confirmar&quot;</span>
+        <span class="n">text</span><span class="p">:</span> <span class="s2">&quot;Confirmar&quot;</span>
         <span class="n">height</span><span class="p">:</span> <span class="mi">30</span>
         <span class="n">top</span><span class="p">:</span> <span class="mi">60</span>
         <span class="n">size_hint</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
-        <span class="n">pos_hint</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;center_x&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,}</span>
+        <span class="n">pos_hint</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;center_x&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,}</span>
 </pre></div>
 <img alt="Tela construida com o framework Kivy contendo um TextEdit e um Botão" src="../images/blog/kivy-exemplo-textinput-button.png" />
 </div>
@@ -278,7 +278,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>O <a class="reference external" href="https://github.com/kivy-garden">Projeto Garden</a> centraliza componentes não oficiais de código-fonte aberto e distribuido sob a licença MIT desenvolvido por terceiros. Pense neste projeto como um centralizador de códigos de diferentes usuários cuja finalidade é distribuir e compartilhar módulos prontos para ser utilizado.</p>
 <p>Todos os pacotes Garden estão armazenados no Github, dentro do projeto Kivy, ou seja, no mesmo local em que baixamos o código fonte da biblioteca Kivy.</p>
 <p>O projeto Garden não está mais sendo entregue junto com o código do framework Kivy, por isso, agora, é necessário instala-lo manualmente. Para isso, vá no Terminal e digite:</p>
-<div class="highlight"><pre>pip install kivy-garden
+<div class="highlight"><pre><span></span>pip install kivy-garden
 </pre></div>
 <p>Vale dizer que todos são incentivados a colaborar com os pacotes existentes ou então, pela criação de novos módulos independentes. Inclusive, existe um sistema de premiação simbólica para aqueles que tenham colaborado.</p>
 <p><a class="reference external" href="https://github.com/kivy-garden">Segue o link do repositório no Github</a>.</p>
@@ -309,24 +309,24 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>Este projeto é semelhante ao <a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jni/">JNI (Java Native Interface)</a> que permite o acesso às classes escritas em Java por outras linguagens.</p>
 <p>Dessa forma, conseguimos por exemplo, acessar a classe <a class="reference external" href="https://developer.android.com/reference/android/content/Intent.html">Intent</a> do Android, ou então, a classe <a class="reference external" href="https://developer.android.com/reference/android/app/Activity.html">Activity</a> e inclusive, conseguimos desenvolver uma aplicação que rode nativamente em cima da API Java do Android.</p>
 <p>A seguir, temos um exemplo, retirado da documentação oficial do PyJNIus em que é feito o acesso a Activity do Android.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">jnius</span> <span class="kn">import</span> <span class="n">cast</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jnius</span> <span class="kn">import</span> <span class="n">cast</span>
 <span class="kn">from</span> <span class="nn">jnius</span> <span class="kn">import</span> <span class="n">autoclass</span>
 
-<span class="c"># import the needed Java class</span>
-<span class="n">PythonActivity</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s">&#39;org.renpy.android.PythonActivity&#39;</span><span class="p">)</span>
-<span class="n">Intent</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s">&#39;android.content.Intent&#39;</span><span class="p">)</span>
-<span class="n">Uri</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s">&#39;android.net.Uri&#39;</span><span class="p">)</span>
+<span class="c1"># import the needed Java class</span>
+<span class="n">PythonActivity</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;org.renpy.android.PythonActivity&#39;</span><span class="p">)</span>
+<span class="n">Intent</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;android.content.Intent&#39;</span><span class="p">)</span>
+<span class="n">Uri</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;android.net.Uri&#39;</span><span class="p">)</span>
 
-<span class="c"># create the intent</span>
+<span class="c1"># create the intent</span>
 <span class="n">intent</span> <span class="o">=</span> <span class="n">Intent</span><span class="p">()</span>
 <span class="n">intent</span><span class="o">.</span><span class="n">setAction</span><span class="p">(</span><span class="n">Intent</span><span class="o">.</span><span class="n">ACTION_VIEW</span><span class="p">)</span>
-<span class="n">intent</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="n">Uri</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s">&#39;http://kivy.org&#39;</span><span class="p">))</span>
+<span class="n">intent</span><span class="o">.</span><span class="n">setData</span><span class="p">(</span><span class="n">Uri</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;http://kivy.org&#39;</span><span class="p">))</span>
 
-<span class="c"># PythonActivity.mActivity is the instance of the current Activity</span>
-<span class="c"># BUT, startActivity is a method from the Activity class, not from our</span>
-<span class="c"># PythonActivity.</span>
-<span class="c"># We need to cast our class into an activity and use it</span>
-<span class="n">currentActivity</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="s">&#39;android.app.Activity&#39;</span><span class="p">,</span> <span class="n">PythonActivity</span><span class="o">.</span><span class="n">mActivity</span><span class="p">)</span>
+<span class="c1"># PythonActivity.mActivity is the instance of the current Activity</span>
+<span class="c1"># BUT, startActivity is a method from the Activity class, not from our</span>
+<span class="c1"># PythonActivity.</span>
+<span class="c1"># We need to cast our class into an activity and use it</span>
+<span class="n">currentActivity</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="s1">&#39;android.app.Activity&#39;</span><span class="p">,</span> <span class="n">PythonActivity</span><span class="o">.</span><span class="n">mActivity</span><span class="p">)</span>
 <span class="n">currentActivity</span><span class="o">.</span><span class="n">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">)</span>
 </pre></div>
 <p>Observe que estamos utilizando a linguagem Python para trabalhar com classes escritas em Java!</p>
@@ -344,10 +344,10 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <h2>PROJETO PyObjus</h2>
 <p>O projeto <a class="reference external" href="https://github.com/kivy/pyobjus">PyObjus</a> permite o acesso às classes escritas em <a class="reference external" href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html">Objective-C</a> pelo Python. Desta forma, conseguimos o acesso nativo a toda a API do <a class="reference external" href="https://www.apple.com/ios/">iOS</a> através do código Python.</p>
 <p>A seguir, temos um simples exemplos extraído da documentação oficial da PyObjnus.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyobjus</span> <span class="kn">import</span> <span class="n">autoclass</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyobjus</span> <span class="kn">import</span> <span class="n">autoclass</span>
 
-<span class="n">NSString</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s">&#39;NSString&#39;</span><span class="p">)</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">NSString</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">initWithUTF8String_</span><span class="p">(</span><span class="s">&#39;Hello world&#39;</span><span class="p">)</span>
+<span class="n">NSString</span> <span class="o">=</span> <span class="n">autoclass</span><span class="p">(</span><span class="s1">&#39;NSString&#39;</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">NSString</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">initWithUTF8String_</span><span class="p">(</span><span class="s1">&#39;Hello world&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span> <span class="n">text</span><span class="o">.</span><span class="n">UTF8String</span><span class="p">())</span>
 </pre></div>
 <p>Como podemos ver, é importado a classe NSString e em seguida é armazenado o texto Hello World na mesma. Ou seja, desta forma, estamos trabalhando com a API nativa do iOS utilizando a linguagem Python! Portanto, conseguimos desenvolver aplicações que utilizam toda a API nativa da plataforma utilizando código Python.</p>
@@ -392,7 +392,7 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 <p>A seguir, temos um exemplo de um simples trecho de código utilizando somente a linguagem Cython.</p>
 <div class="section" id="declaracao-de-variaveis-com-cython">
 <h3>DECLARAÇÃO DE VARIÁVEIS COM CYTHON</h3>
-<div class="highlight"><pre><span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span><span class="p">,</span> <span class="nf">j</span><span class="p">,</span> <span class="nf">k</span>
+<div class="highlight"><pre><span></span><span class="k">cdef</span> <span class="kt">int</span> <span class="nf">i</span><span class="p">,</span> <span class="nf">j</span><span class="p">,</span> <span class="nf">k</span>
 <span class="k">cdef</span> <span class="kt">float</span> <span class="nf">f</span><span class="p">,</span> <span class="kt">g</span>[42], *<span class="nf">h</span>
 
 <span class="k">cdef</span> <span class="k">struct</span> <span class="nf">Grail</span><span class="p">:</span>
@@ -402,14 +402,14 @@ O interessante é que a maior parte das vezes em que o Kivy Design trava, o prob
 </div>
 <div class="section" id="declaracao-de-classe-e-funcao-em-cython">
 <h3>DECLARAÇÃO DE CLASSE E FUNÇÃO EM CYTHON</h3>
-<div class="highlight"><pre><span class="k">cdef</span> <span class="k">class</span> <span class="nf">A</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><span class="k">cdef</span> <span class="k">class</span> <span class="nf">A</span><span class="p">:</span>
     <span class="k">cdef</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">print</span> <span class="s">&quot;A&quot;</span>
 </pre></div>
 </div>
 <div class="section" id="alocacao-de-memorica-em-cython">
 <h3>ALOCAÇÃO DE MEMÓRICA EM CYTHON</h3>
-<div class="highlight"><pre><span class="k">import</span> <span class="nn">random</span>
+<div class="highlight"><pre><span></span><span class="k">import</span> <span class="nn">random</span>
 <span class="k">from</span> <span class="nn">libc.stdlib</span> <span class="k">cimport</span> <span class="n">malloc</span><span class="p">,</span> <span class="n">free</span>
 
 <span class="k">def</span> <span class="nf">random_noise</span><span class="p">(</span><span class="nb">int</span> <span class="n">number</span><span class="o">=</span><span class="mf">1</span><span class="p">):</span>

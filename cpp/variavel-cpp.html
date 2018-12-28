@@ -371,7 +371,7 @@ eXcript            </a>
 <p>Uma referência pode ser composta por letras e números, desde que a mesma não inicie com um dos 10 algarismos númericos. Ou seja, podemos utilizar quaisquer número na composição do nome da variável, desde que este não esteja o primeiro caractere, como por exemplo: <cite>9num</cite>, ou então, <cite>1var</cite>.</p>
 <p>Se precedermos o nome com números ocorrerá uma situação em que o compilador não conseguirá distinguir se estamos trabalhando com um número, como por exemplo, um número complexo, ou então, se este nome é de fato uma variável.</p>
 <p>Assim, temos que a utilização de números é permitida, porém, somente após o primeiro caractere, como podemos ver nos exemplos a seguir:</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kt">char</span> <span class="n">caractere</span> <span class="o">=</span> <span class="sc">&#39;x&#39;</span><span class="p">;</span>
 <span class="n">boolean</span> <span class="n">flag</span> <span class="o">=</span> <span class="n">True</span><span class="p">;</span>
 </pre></div>
@@ -413,14 +413,14 @@ eXcript            </a>
 </blockquote>
 <p>Novamente, é importante dizer que caracteres especiais não podem ser utilizados, seja qual for a posição em que estes aparecerem na definição da referência!</p>
 <p>A seguir, temos mais um exemplo dos caracteres que não podem estar na primeira posição de um nome de variável.</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="mi">4</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//ERRO</span>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="mi">4</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//ERRO</span>
 <span class="n">String</span> <span class="mi">3</span> <span class="o">=</span> <span class="s">&quot;informe seu nome&quot;</span><span class="p">;</span> <span class="c1">//ERRO</span>
 <span class="kt">float</span> <span class="mi">2</span><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1">//ERRO</span>
 </pre></div>
 <p>As referências utilizadas no código acima são <strong>TODAS</strong> invalidas, e a razão, deve-se ao fato destas iniciarem com caracteres numéricos. Como já dito, o primeiro caractere deve, <strong>obrigatoriamente</strong>, ser um letra do alfabeto.</p>
 <p>Podemos concluir também que uma variável <strong>jamais</strong> será composta por somente números, haja vista que o primeiro caractere precisa ser uma letra.</p>
 <p>Para definirmos o nome de variáveis, temos que iniciar utilizando um caractere que esteja no intervalo de <cite>a</cite> à <cite>z</cite> ou <cite>A</cite> à <cite>Z</cite> e a única exceção a esta regra é o caractere underline <cite>_</cite>. A seguir, temos alguns nomes de variáveis <strong>válidos</strong>:</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="n">i8nt</span> <span class="n">vvar</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">i8nt</span> <span class="n">vvar</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 <span class="n">String</span> <span class="n">_vVar</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">__________idade</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
 </pre></div>
@@ -433,7 +433,7 @@ eXcript            </a>
 <div class="section" id="a-excecao-a-regra">
 <h2>A EXCEÇÃO A REGRA</h2>
 <p>Como já foi dito, porém, para formalizar a regra temos que o único caractere especial, que pode ser utilizado na composição de nomes, e que também pode estar situando em qualquer posição, é o caractere underline <tt class="docutils literal">_</tt>.</p>
-<div class="highlight"><pre><span class="kt">int</span> <span class="n">_minhaVar</span> <span class="o">=</span> <span class="mi">55</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">_minhaVar</span> <span class="o">=</span> <span class="mi">55</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="section" id="macetezinho">
@@ -451,7 +451,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="cp">#include &lt;iostream&gt;</span>
+<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 

@@ -509,7 +509,7 @@ eXcript            </a>
 <div class="section" id="operador-null-coalesce">
 <h2>OPERADOR NULL COALESCE</h2>
 <p>O operador Null Coalesce é representado pela linguagem PHP com a utilização de dois sinais de interrogação, por exemplo:</p>
-<div class="highlight"><pre><span class="x">&lt; variável &gt; = &lt; valor &gt; ?? &lt; há valor definido? Senão retorna isso &gt;;</span>
+<div class="highlight"><pre><span></span><span class="x">&lt; variável &gt; = &lt; valor &gt; ?? &lt; há valor definido? Senão retorna isso &gt;;</span>
 <span class="x">$x = $a ?? 10;</span>
 </pre></div>
 <p>Se a variável <code>$a</code> existir, o valor da mesma será definido para <code>$x</code>, do contrário, o número 10 é que será utilizado.</p>
@@ -518,7 +518,7 @@ eXcript            </a>
 <p>A sintaxe do operador Null Coalesce é bastante semelhante a sintaxe do Operador Ternário, porém, com este operador, é verificado se a referência existe ou então, se um elemento esta contido num Array. Caso o valor exista, o mesmo será utilizado, do contrário, iremos definir algum outro valor ou então, alguma outra verificação.</p>
 <p>É interessante observar que o operador Null Coalesce fornece uma estrutura para checagem e utilização, porém, é possível continuarmos trabalhando sem fazer uso do mesmo.</p>
 <p>A seguir utilizamos algumas estruturas e também, a estrutura do operador Null Coalesce.</p>
-<div class="highlight"><pre><span class="x">#operador ternário</span>
+<div class="highlight"><pre><span></span><span class="x">#operador ternário</span>
 <span class="x">echo $x ? $x : &quot;&quot;;</span>
 
 <span class="x">echo $x ?: &quot;&quot;;</span>
@@ -528,7 +528,7 @@ eXcript            </a>
 <span class="x">echo $x ?? $b ?? &quot;&quot;;</span>
 </pre></div>
 <p>No exemplo  seguir, utilizamos o operador Null Coalesce para definir o que será impresso na saída padrão.</p>
-<div class="highlight"><pre><span class="x">// $a não está definido</span>
+<div class="highlight"><pre><span></span><span class="x">// $a não está definido</span>
 <span class="x">$b = 10;</span>
 
 <span class="x">echo $a ?? 2; // saída 2</span>
@@ -538,7 +538,7 @@ eXcript            </a>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="x">$quadrado = function($num){</span>
+<div class="highlight"><pre><span></span><span class="x">$quadrado = function($num){</span>
 <span class="x">    return $num * $num;</span>
 <span class="x">};</span>
 <span class="x">$cubo = function($num) use ($quadrado){</span>

@@ -385,42 +385,42 @@ eXcript            </a>
 <h2>ATRIBUIÇÃO CONDICIONAL</h2>
 <p>A atribuição condicional é a atribuição de um valor mediante o resultado de uma expressão. Em suma, a atribuição condicional funciona da mesma maneira que o uso da estrutura condicional <tt class="docutils literal">if</tt>-<tt class="docutils literal">else</tt>, onde o primeiro valor definido será atribuido, caso a condição seja verdadeira, do contrário, o segundo valor é que será atribuido.</p>
 <p>A seguir, temos um exemplo onde atribuimos um valor para a variável <tt class="docutils literal">valor</tt> mediante o uso da <a class="reference external" href="http://excript.com/python/tomada-decisao-python.html">estrutura de seleção if</a>.</p>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="n">valor</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
-    <span class="n">valor</span> <span class="o">=</span> <span class="s">&quot;Valor atribuido caso a condição seja verdadeira&quot;</span>
+    <span class="n">valor</span> <span class="o">=</span> <span class="s2">&quot;Valor atribuido caso a condição seja verdadeira&quot;</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">valor</span> <span class="o">=</span> <span class="s">&quot;Valor atribuido caso a condição seja falso&quot;</span>
+    <span class="n">valor</span> <span class="o">=</span> <span class="s2">&quot;Valor atribuido caso a condição seja falso&quot;</span>
 </pre></div>
 <p>Nas situações em que o valor for verdadeiro, o primeiro bloco de instrução é executado, do contrário o segundo bloco será.</p>
 <p>Essa estrutura <a class="reference external" href="http://excript.com/python/if-else-python.html">não lhe deve causar confusão, até porque, já estudamos a mesma e aprendemos que o bloco que será executado, dependerá, do valor contido na condição que está no cabeçalho da estrutura condicional if</a> .</p>
 <p>A atribuição condicional, funciona da mesma maneira que o código que acabamos de ver, porém, ao invés de ter um bloco de instrução explicitamente definido, somente o valor deve ser exposto, como podemos ver no código abaixo.</p>
-<div class="highlight"><pre><span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span> <span class="k">else</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">valor</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span> <span class="k">else</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">&gt;</span>
 </pre></div>
 <p>O esquema acima diz que a variável de nome <tt class="docutils literal">&lt;valor&gt;</tt> deve receber o valor contido em <tt class="docutils literal">&lt; x &gt;</tt> caso a expressão <tt class="docutils literal">if(True)</tt> for verdadeira. Do contrário, temos o código <tt class="docutils literal">else &lt; y &gt;</tt> é quem definirá o valor a ser atribuido à variável <tt class="docutils literal">&lt;valor&gt;</tt>.</p>
 <p>A seguir, temos o esquema marcado como comentário e na linha seguinte, um exemplo real de uma atribuição condicional.</p>
-<div class="highlight"><pre><span class="c">#&lt;valor&gt; = &lt; x &gt; if(True) else &lt; y &gt;</span>
+<div class="highlight"><pre><span></span><span class="c1">#&lt;valor&gt; = &lt; x &gt; if(True) else &lt; y &gt;</span>
    <span class="n">x</span>     <span class="o">=</span> <span class="mi">10</span>    <span class="k">if</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span> <span class="k">else</span>   <span class="mi">20</span>
 </pre></div>
 <p>O estudo da atribuição condicional não deve causar espanto a todos que entenderam o correto funcionamento da estrutura condicional <tt class="docutils literal">if</tt>, até porque, o funcionamento é basicamente o mesmo, e a diferença está, na forma <tt class="docutils literal">inline</tt> como a estrutura agora estudada é utilizada.</p>
 </div>
 <div class="section" id="exemplo-feito-em-aula">
 <h2>EXEMPLO FEITO EM AULA</h2>
-<div class="highlight"><pre><span class="c">#coding: utf-8</span>
+<div class="highlight"><pre><span></span><span class="c1">#coding: utf-8</span>
 
-<span class="c">#=====================================</span>
-<span class="c">#========== www.eXcript.com ==========</span>
-<span class="c">#=====================================</span>
+<span class="c1">#=====================================</span>
+<span class="c1">#========== www.eXcript.com ==========</span>
+<span class="c1">#=====================================</span>
 
-<span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">&quot;Digite um número: &quot;</span><span class="p">))</span>
+<span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite um número: &quot;</span><span class="p">))</span>
 <span class="k">if</span><span class="p">(</span><span class="n">num1</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;par&quot;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;par&quot;</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;ímpar&quot;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;ímpar&quot;</span>
 
-<span class="n">s</span> <span class="o">=</span> <span class="s">&quot;par&quot;</span> <span class="k">if</span> <span class="n">num1</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s">&quot;ímpar&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;O número digitado é &quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;par&quot;</span> <span class="k">if</span> <span class="n">num1</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;ímpar&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;O número digitado é &quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 
