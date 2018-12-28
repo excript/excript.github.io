@@ -317,7 +317,7 @@ eXcript            </a>
         <span class="n">rect</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">winfo_width</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">winfo_height</span><span class="p">()]</span>
         <span class="n">window_info</span><span class="o">.</span><span class="n">SetAsChild</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_window_handle</span><span class="p">(),</span> <span class="n">rect</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">browser</span> <span class="o">=</span> <span class="n">cef</span><span class="o">.</span><span class="n">CreateBrowserSync</span><span class="p">(</span><span class="n">window_info</span><span class="p">,</span>
-                                             <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://www.google.com/&quot;</span><span class="p">)</span>
+                                             <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://www.eXcript.com/&quot;</span><span class="p">)</span>
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">browser</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">browser</span><span class="o">.</span><span class="n">SetClientHandler</span><span class="p">(</span><span class="n">LoadHandler</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">browser</span><span class="o">.</span><span class="n">SetClientHandler</span><span class="p">(</span><span class="n">FocusHandler</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
@@ -541,6 +541,11 @@ eXcript            </a>
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </pre></div>
+<p>Observe que a maior parte do código de exemplo acima está fazendo uso do framework Tkinter! Por isso, caso você tenha dificuldade em entender o funcionamento, talvez seja importante estudar um pouco mais sobre a criação de interfaces gráficas nativas com o Python.</p>
+</div>
+<div class="section" id="geracao-de-pdf">
+<h2>GERAÇÃO DE PDF</h2>
+<p>Ao trabalharmos dessa forma somos capazes de criar toda a interface gráfica utilizando HTML e CSS. Isso nos permite uma infinidade de outras opções como a exportação do documento para o formato PDF.</p>
 </div>
 <div class="section" id="links-externos">
 <h2>LINKS EXTERNOS</h2>
