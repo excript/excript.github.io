@@ -3196,21 +3196,7 @@ A função &lt;tt class="docutils literal"&gt;unset()&lt;/tt&gt; desvincula uma 
 &lt;li&gt;&lt;a class="reference external" href="https://en.wikibooks.org/wiki/PHP_Programming/Classes"&gt;PHP Programming: Classe (en)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="construtor"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="blog"></category></entry><entry><title>Variáveis superglobais do PHP</title><link href="http://excript.com/php/variavel-superglobal-php.html" rel="alternate"></link><published>2016-01-10T17:08:00-02:00</published><updated>2016-01-10T17:08:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-10:/php/variavel-superglobal-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a implementação e uso de variáveis que possuem escopo global, bem como a sua utilização em escopos restritos, como o escopo de funções.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-</summary><content type="html">
+</content><category term="curso"></category><category term="php"></category><category term="programação orientada a objetos"></category><category term="poo"></category><category term="construtor"></category><category term="classe"></category><category term="objeto"></category><category term="instância"></category><category term="blog"></category></entry><entry><title>Variáveis superglobais do PHP</title><link href="http://excript.com/php/variavel-superglobal-php.html" rel="alternate"></link><published>2016-01-10T17:08:00-02:00</published><updated>2016-01-10T17:08:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2016-01-10:/php/variavel-superglobal-php.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -3760,41 +3746,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;span class="x"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category><category term="string"></category><category term="caractere"></category></entry><entry><title>Parâmetros por Referência em PHP II</title><link href="http://excript.com/php/parametro-por-referencia-php-ii.html" rel="alternate"></link><published>2015-12-12T12:19:00-02:00</published><updated>2015-12-12T12:19:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-12-12:/php/parametro-por-referencia-php-ii.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta segunda aula sobre a passagem de parâmetros por referência, implementaremos um código para estudarmos as vantagens e as principais diferenças nesse tipo de abordagem.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-
-&lt;span class="c1"&gt;#====================&lt;/span&gt;
-&lt;span class="c1"&gt;#  == eXcript.com ==&lt;/span&gt;
-&lt;span class="c1"&gt;#====================&lt;/span&gt;
-
-
-&lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
-    &lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
-    &lt;span class="nb"&gt;print_r&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$a&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nv"&gt;$a&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="nv"&gt;$valor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;func&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;span class="nb"&gt;print_r&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$valor&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><content type="html">
+</content><category term="curso"></category><category term="php"></category><category term="string"></category><category term="caractere"></category></entry><entry><title>Parâmetros por Referência em PHP II</title><link href="http://excript.com/php/parametro-por-referencia-php-ii.html" rel="alternate"></link><published>2015-12-12T12:19:00-02:00</published><updated>2015-12-12T12:19:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-12-12:/php/parametro-por-referencia-php-ii.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -3882,33 +3834,7 @@ echo 'E-mail: ' . ($_GET['email'] ?? '') . &amp;quot;&amp;lt;br&amp;gt;&amp;quot
 &lt;span class="x"&gt;print_r($b);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category></entry><entry><title>Funções variádicas em PHP</title><link href="http://excript.com/php/funcao-variadica-php.html" rel="alternate"></link><published>2015-12-10T18:11:00-02:00</published><updated>2015-12-10T18:11:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-12-10:/php/funcao-variadica-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula aprenderemos o que são funções variádicas, como implementa-las e as diversas situações em que devemos fazer uso desse conceito.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;function cubo($num){&lt;/span&gt;
-
-&lt;span class="x"&gt;    $x = ($num * $num * $num);&lt;/span&gt;
-
-&lt;span class="x"&gt;    return $x;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-
-&lt;span class="x"&gt;echo cubo(3);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><content type="html">
+</content><category term="curso"></category><category term="php"></category></entry><entry><title>Funções variádicas em PHP</title><link href="http://excript.com/php/funcao-variadica-php.html" rel="alternate"></link><published>2015-12-10T18:11:00-02:00</published><updated>2015-12-10T18:11:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-12-10:/php/funcao-variadica-php.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -5175,21 +5101,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;span class="x"&gt;print_r($a);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category></entry><entry><title>Precedência e Associatividade de Operadores em PHP</title><link href="http://excript.com/php/precedencia-associatividade-operadores.html" rel="alternate"></link><published>2015-11-30T23:52:00-02:00</published><updated>2015-11-30T23:52:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-30:/php/precedencia-associatividade-operadores.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a precedência de operadores da linguagem PHP. Aprenderemos qual a ordem em que uma expressão que faz uso de vários operadores será analisada e resolvida.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-</summary><content type="html">
+</content><category term="curso"></category><category term="php"></category></entry><entry><title>Precedência e Associatividade de Operadores em PHP</title><link href="http://excript.com/php/precedencia-associatividade-operadores.html" rel="alternate"></link><published>2015-11-30T23:52:00-02:00</published><updated>2015-11-30T23:52:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-30:/php/precedencia-associatividade-operadores.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -5617,7 +5529,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;span class="x"&gt;echo &amp;quot;Original: $str - Mod: $nova \n&amp;quot;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category><category term="string"></category><category term="função"></category></entry><entry><title>Operação Ternária em PHP (parte II)</title><link href="http://excript.com/php/operacao-ternaria-php-parte2.html" rel="alternate"></link><published>2015-11-09T22:44:00-02:00</published><updated>2015-11-09T22:44:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-09:/php/operacao-ternaria-php-parte2.html</id><summary type="html">
+</content><category term="curso"></category><category term="php"></category><category term="string"></category><category term="função"></category></entry><entry><title>Operação Ternária em PHP (parte II)</title><link href="http://excript.com/php/operacao-ternaria-php-parte2.html" rel="alternate"></link><published>2015-11-09T22:44:00-02:00</published><updated>2015-11-09T22:44:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-09:/php/operacao-ternaria-php-parte2.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -5636,51 +5548,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;a&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><content type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta segunda aula sobre a operação ternária, desenvolveremos um exemplo onde aprenderemos uma forma de utilizar essa estrutura para substituir a estrutura de seleção múltipla switch.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;a&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category></entry><entry><title>Operação Ternária em PHP</title><link href="http://excript.com/php/operacao-ternaria-php.html" rel="alternate"></link><published>2015-11-09T22:42:00-02:00</published><updated>2015-11-09T22:42:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-09:/php/operacao-ternaria-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a operação ternária, também chamada de Operador Ternário. Aprenderemos quando devemos utilizar essa definição, quais as suas características e quais beneficios em sua utilização.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//OPERAÇÃO TERNÁRIA&lt;/span&gt;
-
-&lt;span class="x"&gt;$opcao = False;&lt;/span&gt;
-
-&lt;span class="x"&gt;$str = ($opcao) ? &amp;quot;true&amp;quot; : &amp;quot;false&amp;quot;;&lt;/span&gt;
-
-&lt;span class="x"&gt;echo $str;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><content type="html">
+</content><category term="curso"></category><category term="php"></category></entry><entry><title>Operação Ternária em PHP</title><link href="http://excript.com/php/operacao-ternaria-php.html" rel="alternate"></link><published>2015-11-09T22:42:00-02:00</published><updated>2015-11-09T22:42:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-09:/php/operacao-ternaria-php.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -5759,38 +5627,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;span class="x"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category></entry><entry><title>Instrução break em PHP</title><link href="http://excript.com/php/instrucao-break-php.html" rel="alternate"></link><published>2015-11-07T09:43:00-02:00</published><updated>2015-11-07T09:43:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-07:/php/instrucao-break-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a instrução break, isto é, a instrução que finaliza um laço de repetição ou então, finaliza a execução de uma função.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//INSTRUÇÃO BREAK&lt;/span&gt;
-
-&lt;span class="x"&gt;$i = 0;&lt;/span&gt;
-
-&lt;span class="x"&gt;while(true){&lt;/span&gt;
-
-&lt;span class="x"&gt;    $i++;&lt;/span&gt;
-&lt;span class="x"&gt;    if($i==50){&lt;/span&gt;
-&lt;span class="x"&gt;        break;&lt;/span&gt;
-&lt;span class="x"&gt;    }&lt;/span&gt;
-
-&lt;span class="x"&gt;    echo $i . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><content type="html">
+</content><category term="curso"></category><category term="php"></category></entry><entry><title>Instrução break em PHP</title><link href="http://excript.com/php/instrucao-break-php.html" rel="alternate"></link><published>2015-11-07T09:43:00-02:00</published><updated>2015-11-07T09:43:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-11-07:/php/instrucao-break-php.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -5961,7 +5798,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;span class="x"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category></entry><entry><title>Estrutura de Repetição for do PHP</title><link href="http://excript.com/php/estrutura-repeticao-for-php.html" rel="alternate"></link><published>2015-10-20T17:05:00-02:00</published><updated>2015-10-20T17:05:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-20:/php/estrutura-repeticao-for-php.html</id><summary type="html">
+</content><category term="curso"></category><category term="php"></category></entry><entry><title>Estrutura de Repetição for do PHP</title><link href="http://excript.com/php/estrutura-repeticao-for-php.html" rel="alternate"></link><published>2015-10-20T17:05:00-02:00</published><updated>2015-10-20T17:05:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-20:/php/estrutura-repeticao-for-php.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -5975,21 +5812,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><content type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a estrutura de repetição for. Aprenderemos em quais situações devemos utilizar essa instrução, quais as suas características, vantagens e benefícios que a fazem a estrutura de repetição mais utilizada.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category></entry><entry><title>Operadores de Incremento e Decremento em PHP</title><link href="http://excript.com/php/operador-incremento-decremento-php.html" rel="alternate"></link><published>2015-10-15T02:58:00-03:00</published><updated>2015-10-15T02:58:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-15:/php/operador-incremento-decremento-php.html</id><summary type="html">
+</content><category term="curso"></category><category term="php"></category></entry><entry><title>Operadores de Incremento e Decremento em PHP</title><link href="http://excript.com/php/operador-incremento-decremento-php.html" rel="alternate"></link><published>2015-10-15T02:58:00-03:00</published><updated>2015-10-15T02:58:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-15:/php/operador-incremento-decremento-php.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -6014,32 +5837,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;span class="x"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><content type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a utilização e os beneficios dos operadores de incremento e decremento. Também estudaremos o pré-incremento, pós-incremento, pré-decremento e pós-decremento.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;//Operadores de Atribuição Compostos&lt;/span&gt;
-
-&lt;span class="x"&gt;$num = 10;&lt;/span&gt;
-&lt;span class="x"&gt;while($num &amp;gt; 0){&lt;/span&gt;
-&lt;span class="x"&gt;    $num -= 1;//$num = $num - 10;&lt;/span&gt;
-&lt;span class="x"&gt;    echo $num . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category><category term="operador"></category><category term="operador de incremento"></category><category term="operador de decremento"></category><category term="pré-incremento"></category><category term="pós-incremento"></category><category term="pré-decremento"></category><category term="pós-decremento"></category></entry><entry><title>Operadores de Atribuição Compostos em PHP</title><link href="http://excript.com/php/operador-atribuicao-composto-php.html" rel="alternate"></link><published>2015-10-14T19:08:00-03:00</published><updated>2015-10-14T19:08:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-14:/php/operador-atribuicao-composto-php.html</id><summary type="html">
+</content><category term="curso"></category><category term="php"></category><category term="operador"></category><category term="operador de incremento"></category><category term="operador de decremento"></category><category term="pré-incremento"></category><category term="pós-incremento"></category><category term="pré-decremento"></category><category term="pós-decremento"></category></entry><entry><title>Operadores de Atribuição Compostos em PHP</title><link href="http://excript.com/php/operador-atribuicao-composto-php.html" rel="alternate"></link><published>2015-10-14T19:08:00-03:00</published><updated>2015-10-14T19:08:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-14:/php/operador-atribuicao-composto-php.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -6053,21 +5851,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
             &lt;/tbody&gt;
         &lt;/table&gt;
     &lt;/div&gt;
-</summary><content type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o conjunto de operados de atribuição compostos, isto é, os operadores que são formados pela junção do operador de atribuição e um operador aritmético.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category></entry><entry><title>Atribuição vs Comparação vs Identico em PHP</title><link href="http://excript.com/php/atribuicao-vs-comparacao-vs-identico-php.html" rel="alternate"></link><published>2015-10-14T16:54:00-03:00</published><updated>2015-10-14T16:54:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-14:/php/atribuicao-vs-comparacao-vs-identico-php.html</id><summary type="html">
+</content><category term="curso"></category><category term="php"></category></entry><entry><title>Atribuição vs Comparação vs Identico em PHP</title><link href="http://excript.com/php/atribuicao-vs-comparacao-vs-identico-php.html" rel="alternate"></link><published>2015-10-14T16:54:00-03:00</published><updated>2015-10-14T16:54:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-14:/php/atribuicao-vs-comparacao-vs-identico-php.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -6086,50 +5870,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;a&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</summary><content type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a diferença entre o operador de atribuição, o operador de comparação e o operador de identico.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;a&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category><category term="operador"></category><category term="operador de atribuição"></category><category term="operador de comparação"></category><category term="operador identico"></category></entry><entry><title>Script em Looping em PHP</title><link href="http://excript.com/php/script-looping-php.html" rel="alternate"></link><published>2015-10-11T19:24:00-03:00</published><updated>2015-10-11T19:24:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-11:/php/script-looping-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos o que é um Script em looping, quais as características que levam um Script a travar e quais as boas práticas para evitarmos esse problema.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$num = 0;&lt;/span&gt;
-
-&lt;span class="x"&gt;while($num &amp;lt; 100){&lt;/span&gt;
-&lt;span class="x"&gt;    $num = $num - 1;&lt;/span&gt;
-&lt;span class="x"&gt;    echo $num . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><content type="html">
+</content><category term="curso"></category><category term="php"></category><category term="operador"></category><category term="operador de atribuição"></category><category term="operador de comparação"></category><category term="operador identico"></category></entry><entry><title>Script em Looping em PHP</title><link href="http://excript.com/php/script-looping-php.html" rel="alternate"></link><published>2015-10-11T19:24:00-03:00</published><updated>2015-10-11T19:24:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-11:/php/script-looping-php.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -6254,30 +5995,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;span class="x"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category></entry><entry><title>Introdução do-while em PHP</title><link href="http://excript.com/php/introducao-do-while-php.html" rel="alternate"></link><published>2015-10-09T15:08:00-03:00</published><updated>2015-10-09T15:08:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-09:/php/introducao-do-while-php.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta aula estudaremos a estrutura de repetição do-while, isto é, faça-enquanto. Aprenderemos quando utilizar essa instrução e quais as beneficios que a mesma proporciona.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$conta = 11;&lt;/span&gt;
-&lt;span class="x"&gt;do{&lt;/span&gt;
-&lt;span class="x"&gt;    $conta = $conta + 1;&lt;/span&gt;
-&lt;span class="x"&gt;    echo $conta . &amp;quot;\n&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;}while($conta &amp;lt; 10);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><content type="html">
+</content><category term="curso"></category><category term="php"></category></entry><entry><title>Introdução do-while em PHP</title><link href="http://excript.com/php/introducao-do-while-php.html" rel="alternate"></link><published>2015-10-09T15:08:00-03:00</published><updated>2015-10-09T15:08:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-09:/php/introducao-do-while-php.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;
@@ -6858,32 +6576,7 @@ Essa é uma maneira bastante eficaz, porém, há formas mais práticas e menos s
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-</content><category term="curso"></category><category term="php"></category></entry><entry><title>Tomada de Decisão - Estrutura else</title><link href="http://excript.com/php/tomada-decisao-estrutura-else.html" rel="alternate"></link><published>2015-10-06T11:48:00-03:00</published><updated>2015-10-06T11:48:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-06:/php/tomada-decisao-estrutura-else.html</id><summary type="html">
-    &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
-        &lt;table style="margin: 0"&gt;
-            &lt;tbody&gt;
-                &lt;tr&gt;
-                    &lt;td class="content" style="border-left: 0"&gt;
-                        &lt;div class="paragraph data-line"&gt;
-                            &lt;p&gt; Nesta segunda aula sobre a Tomada de Decisão, estudaremos a instrução else utilizada junto com a instrução if.&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-&lt;div class="section" id="exemplo-feito-em-aula"&gt;
-&lt;h2&gt;EXEMPLO FEITO EM AULA&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;$idade = 50;&lt;/span&gt;
-
-&lt;span class="x"&gt;if($idade &amp;gt;= 18){&lt;/span&gt;
-&lt;span class="x"&gt;    echo &amp;quot;A idade é de uma pessoal de maior.&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;}else{&lt;/span&gt;
-&lt;span class="x"&gt;    echo &amp;quot;A idade informada é de uma pessoal de menor.&amp;quot;;&lt;/span&gt;
-&lt;span class="x"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</summary><content type="html">
+</content><category term="curso"></category><category term="php"></category></entry><entry><title>Tomada de Decisão - Estrutura else</title><link href="http://excript.com/php/tomada-decisao-estrutura-else.html" rel="alternate"></link><published>2015-10-06T11:48:00-03:00</published><updated>2015-10-06T11:48:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2015-10-06:/php/tomada-decisao-estrutura-else.html</id><content type="html">
     &lt;div class="admonitionblock note data-line" style="margin-top: 1.50em"&gt;
         &lt;table style="margin: 0"&gt;
             &lt;tbody&gt;

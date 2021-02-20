@@ -1,5 +1,309 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - blog</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/blog.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2018-12-28T01:00:00-02:00</updated><entry><title>Manipulando o Chrome Através do Python</title><link href="http://excript.com/blog/python-chrome-tkinter.html" rel="alternate"></link><published>2018-12-28T01:00:00-02:00</published><updated>2018-12-28T01:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2018-12-28:/blog/python-chrome-tkinter.html</id><summary type="html">&lt;div class="section" id="introducao"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>eXcript - blog</title><link href="http://excript.com/" rel="alternate"></link><link href="http://feeds.excript.com/feeds/blog.atom.xml" rel="self"></link><id>http://excript.com/</id><updated>2019-06-25T16:00:00-03:00</updated><entry><title>CRIANDO O SPEC DO BUILDOZER</title><link href="http://excript.com/blog/criando-o-spec-do-buildozer.html" rel="alternate"></link><published>2019-06-25T16:00:00-03:00</published><updated>2019-06-25T16:00:00-03:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2019-06-25:/blog/criando-o-spec-do-buildozer.html</id><summary type="html">&lt;div class="section" id="buildozer"&gt;
+&lt;h2&gt;BUILDOZER&lt;/h2&gt;
+&lt;p&gt;O &lt;a class="reference external" href="https://buildozer.readthedocs.io/en/latest/"&gt;Buildozer&lt;/a&gt; é a ferramenta oficial
+desenvolvida pela mesma equipe que desenvolve o framework Kivy para o
+empacotamento de aplicações móveis desenvolvidas com o Python. Seu objetivo é automatizar
+o processo de compilação, bem como, baixar todos os pré-requisitos necessários
+para realizar o empacotamento como por exemplo o &lt;a class="reference external" href="https://python-for-android.readthedocs.io/en/latest/"&gt;python-for-android …&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="buildozer"&gt;
+&lt;h2&gt;BUILDOZER&lt;/h2&gt;
+&lt;p&gt;O &lt;a class="reference external" href="https://buildozer.readthedocs.io/en/latest/"&gt;Buildozer&lt;/a&gt; é a ferramenta oficial
+desenvolvida pela mesma equipe que desenvolve o framework Kivy para o
+empacotamento de aplicações móveis desenvolvidas com o Python. Seu objetivo é automatizar
+o processo de compilação, bem como, baixar todos os pré-requisitos necessários
+para realizar o empacotamento como por exemplo o &lt;a class="reference external" href="https://python-for-android.readthedocs.io/en/latest/"&gt;python-for-android&lt;/a&gt;, Android SDK, NDK etc.&lt;/p&gt;
+&lt;p&gt;Na execução do Buildozer devemos passar uma grande quantidade de parâmetros sendo que
+o mínimo seriam uns 10 valores. Com o objetivo de facilitar a execução do Buildozer
+foi determinado que o mesmo quando executado procurará por um arquivo de nome
+&lt;tt class="docutils literal"&gt;buildozer.spec&lt;/tt&gt; na pasta em que está sendo realizado o empacotamento. O uso desse arquivo
+de especificações facilita a execução do Buildozer pela linha de comando pois não se
+faz necessário digitar uma grande quandidade de informações, haja vista que os
+parâmetros que seriam passado pelo terminal estão definidos num arquivo externo.&lt;/p&gt;
+&lt;p&gt;Por padrão, o Buildozer disponibiliza um modelo de um arquivo &lt;tt class="docutils literal"&gt;buildozer.spec&lt;/tt&gt; onde
+existe uma breve documentação sobre os vários parâmetros que podemos utilizar.&lt;/p&gt;
+&lt;p&gt;Pra facilitar o estudo e a geração de executáveis, traduzi a documentação referente
+ao que cada parâmetro significa e adicionei em alguns casos um pouco mais de
+informação.&lt;/p&gt;
+&lt;p&gt;A seguir, temos o arquivo buildozer.spec fornecido por padrão pela ferramenta buildozer
+com todas as descrições traduzidas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="uma-traducao-literal-do-spec-padrao"&gt;
+&lt;h2&gt;UMA TRADUÇÃO LITERAL DO SPEC PADRÃO&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Titulo da aplicação&lt;/span&gt;
+&lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ClientesApp&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Nome do Pacote&lt;/span&gt;
+&lt;span class="n"&gt;package&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;clientesapp&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Domínio do Pacote (necessário para empacotamento no Android/iOS)&lt;/span&gt;
+&lt;span class="n"&gt;package&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;domain&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;excript&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) diretório que contém o arquivo de código fonte main.py&lt;/span&gt;
+&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Arquivos que devem ser incluso no empacotamento (deixe vazio para incluir todos os arquivos)&lt;/span&gt;
+&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;include_exts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;py&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;jpg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;kv&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;atlas&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Lista de inclusões usando a combinação de padrões&lt;/span&gt;
+&lt;span class="c1"&gt;#source.include_patterns = assets/*,images/*.png&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) # (list) Arquivos que devem ser excluídos  (se vazio, nada será excluído)&lt;/span&gt;
+&lt;span class="c1"&gt;#source.exclude_exts = spec&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Lista de diretórios a serem excluidos (se vazio, nada será excluído)&lt;/span&gt;
+&lt;span class="c1"&gt;#source.exclude_dirs = tests, bin&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Lista de exclusões usando a combinação de padrões&lt;/span&gt;
+&lt;span class="c1"&gt;#source.exclude_patterns = license,images/*/*.jpg&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Versão da Aplicação (metódo 1)&lt;/span&gt;
+&lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Versão da Aplicação (metódo 2)&lt;/span&gt;
+&lt;span class="c1"&gt;# version.regex = __version__ = [&amp;#39;&amp;quot;](.*)[&amp;#39;&amp;quot;]&lt;/span&gt;
+&lt;span class="c1"&gt;# version.filename = %(source.dir)s/main.py&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Pacotes Python utilizados pela nossa aplicação&lt;/span&gt;
+&lt;span class="c1"&gt;# comma seperated e.g. requirements = sqlite3,kivy&lt;/span&gt;
+&lt;span class="n"&gt;requirements&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;kivy&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Pastas dos fontes personalizadas requeridos&lt;/span&gt;
+&lt;span class="c1"&gt;# Define a fonte personalizada para quaisquer requisitos contendo receita&lt;/span&gt;
+&lt;span class="c1"&gt;# requirements.source.kivy = ../../kivy&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Pacotes do Garden utilizados pela nossa aplicação&lt;/span&gt;
+&lt;span class="c1"&gt;#garden_requirements =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Imagem utilizada na tela de abertura (recomendado utilizar uma imagem de 512x512)&lt;/span&gt;
+&lt;span class="c1"&gt;#presplash.filename = %(source.dir)s/data/presplash.png&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Ícone da Aplicação&lt;/span&gt;
+&lt;span class="c1"&gt;#icon.filename = %(source.dir)s/data/icon.png&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Orientaçao Suportada pela nossa aplicação (Opções: landscape, portrait ou all)&lt;/span&gt;
+&lt;span class="n"&gt;orientation&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Declaração da lista de serviços utilizados&lt;/span&gt;
+&lt;span class="c1"&gt;#services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY&lt;/span&gt;
+
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Especificações do OSX&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# author = © Copyright Info&lt;/span&gt;
+
+&lt;span class="c1"&gt;# altere a versão principal do Python usada pelo aplicativo&lt;/span&gt;
+&lt;span class="n"&gt;osx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;python_version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Versão do Kivy utilizada&lt;/span&gt;
+&lt;span class="n"&gt;osx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;kivy_version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.10&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Especificações do Android&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (bool) Indique se o aplicativo deve ser executado em tela cheia&lt;/span&gt;
+&lt;span class="c1"&gt;# ou não fullscreen = 0&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (string) Cor de fundo da tela de abertura Presplash&lt;/span&gt;
+&lt;span class="c1"&gt;# (para as nova ferramenta de ferramentas Android)&lt;/span&gt;
+&lt;span class="c1"&gt;# Os formatos suportados são: #RRGGBB #AARRGGBB ou um dos seguintes nomes:&lt;/span&gt;
+&lt;span class="c1"&gt;# red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,&lt;/span&gt;
+&lt;span class="c1"&gt;# darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,&lt;/span&gt;
+&lt;span class="c1"&gt;# olive, purple, silver, teal.&lt;/span&gt;
+&lt;span class="c1"&gt;#android.presplash_color = #FFFFFF&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Permissões&lt;/span&gt;
+&lt;span class="c1"&gt;#android.permissions = INTERNET&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (int) API do Android que será utilizada&lt;/span&gt;
+&lt;span class="c1"&gt;#android.api = 19&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (int) API Mínima do Android necessária&lt;/span&gt;
+&lt;span class="c1"&gt;#android.minapi = 9&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (int) Versão do SDK do Android utilizado&lt;/span&gt;
+&lt;span class="c1"&gt;#android.sdk = 20&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Versão do NDK do Android utilizado&lt;/span&gt;
+&lt;span class="c1"&gt;#android.ndk = 9c&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (bool) Utilize --private data storage (True) ou --dir public storage (False)&lt;/span&gt;
+&lt;span class="c1"&gt;#android.private_storage = True&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Diretório NDK do Android (se vazio, o mesmo será baixado automaticamente)&lt;/span&gt;
+&lt;span class="c1"&gt;#android.ndk_path =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Diretório do SDK do Android (se vazio, o mesmo será baixado automaticamente)&lt;/span&gt;
+&lt;span class="c1"&gt;#android.sdk_path =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) diretório do ANT (se vazio, o mesmo será baixado automaticamente)&lt;/span&gt;
+&lt;span class="c1"&gt;#android.ant_path =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (bool) If True, then skip trying to update the Android sdk&lt;/span&gt;
+&lt;span class="c1"&gt;# This can be useful to avoid excess Internet downloads or save time&lt;/span&gt;
+&lt;span class="c1"&gt;# when an update is due and you just want to test/build your package&lt;/span&gt;
+&lt;span class="c1"&gt;# (bool) Se True, tenta ignorar a atualizar do SDK do Android&lt;/span&gt;
+&lt;span class="c1"&gt;# Essa opção pode ser útil qunado quisermos evitar downloads excessivos&lt;/span&gt;
+&lt;span class="c1"&gt;# da internet e poupar tempo&lt;/span&gt;
+&lt;span class="c1"&gt;# quando uma atualização é necessária só desejamos testar/construir o pacote&lt;/span&gt;
+&lt;span class="c1"&gt;# android.skip_update = False&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Ponto de Entrada do Android,&lt;/span&gt;
+&lt;span class="c1"&gt;# Para aplicativo baseado no Kivy o padrão já está definido&lt;/span&gt;
+&lt;span class="c1"&gt;#android.entrypoint = org.renpy.android.PythonActivity&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Padrão para whitelist de todo o projeto&lt;/span&gt;
+&lt;span class="c1"&gt;#android.whitelist =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Caminho de um arquivo personalizado da whitelist&lt;/span&gt;
+&lt;span class="c1"&gt;#android.whitelist_src =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Caminho de um arquivo personalizado da blacklist&lt;/span&gt;
+&lt;span class="c1"&gt;#android.blacklist_src =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Lista de arquivos .jar do Java que devem ser adicionado para que o&lt;/span&gt;
+&lt;span class="c1"&gt;# pyjnius possa acessar as classes necessárias. Não adicione jars que você&lt;/span&gt;
+&lt;span class="c1"&gt;# não precisa, pois os jars extras podem tornar o processo de construção&lt;/span&gt;
+&lt;span class="c1"&gt;# mais lento. É permitido a combinação de caracteres curingas, por exemplo:&lt;/span&gt;
+&lt;span class="c1"&gt;# OUYA-ODK/libs/*.jar&lt;/span&gt;
+&lt;span class="c1"&gt;#android.add_jars = foo.jar,bar.jar,path/to/more/*.jar&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Lista de arquivos Java que devem ser adicionados ao projeto Android&lt;/span&gt;
+&lt;span class="c1"&gt;# pode ser arquivos Java ou um diretorio que contenha os arquivos&lt;/span&gt;
+&lt;span class="c1"&gt;#android.add_src =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Android AAR archives to add (currently works only with sdl2_gradle&lt;/span&gt;
+&lt;span class="c1"&gt;# (list) Arquivos AAR do Android AAR que devem ser adicionados&lt;/span&gt;
+&lt;span class="c1"&gt;#(atualmente funciona apenas com o sdl2_gradle bootstrap)&lt;/span&gt;
+&lt;span class="c1"&gt;#android.add_aars =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Dependências Gradle pra ser adicionado (atualmente funciona apenas&lt;/span&gt;
+&lt;span class="c1"&gt;# com o sdl2_gradle bootstrap)&lt;/span&gt;
+&lt;span class="c1"&gt;#android.gradle_dependencies =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) branch do python-for-android que deve ser utilizado, o padrão é master&lt;/span&gt;
+&lt;span class="c1"&gt;#p4a.branch = stable&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Categoria do Console OUYA. Deverá ser uma das opções: GAME ou APP&lt;/span&gt;
+&lt;span class="c1"&gt;# Se este espaço ficar em branco, o suporte OUYA não será ativado&lt;/span&gt;
+&lt;span class="c1"&gt;#android.ouya.category = GAME&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Nome do arquivo do ícone do Console OUYA. Deve ser uma imagem PNG de 732x412.&lt;/span&gt;
+&lt;span class="c1"&gt;#android.ouya.icon.filename = %(source.dir)s/data/ouya_icon.png&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Arquivo XML par ser incluiso como um &amp;quot;intent filter&amp;quot; na tag &amp;lt;activity&amp;gt;&lt;/span&gt;
+&lt;span class="c1"&gt;#android.manifest.intent_filters =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Bibliotecas complementares do Android a serem copiadas para libs/armeabi&lt;/span&gt;
+&lt;span class="c1"&gt;#android.add_libs_armeabi = libs/android/*.so&lt;/span&gt;
+&lt;span class="c1"&gt;#android.add_libs_armeabi_v7a = libs/android-v7/*.so&lt;/span&gt;
+&lt;span class="c1"&gt;#android.add_libs_x86 = libs/android-x86/*.so&lt;/span&gt;
+&lt;span class="c1"&gt;#android.add_libs_mips = libs/android-mips/*.so&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (bool) Indique se a tela deve continuar&lt;/span&gt;
+&lt;span class="c1"&gt;# Não esqueça de adicionar a permissão WAKE_LOCK caso definas isso como True&lt;/span&gt;
+&lt;span class="c1"&gt;#android.wakelock = False&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Metadados da aplicação Android pra ser definido (formati key=value)&lt;/span&gt;
+&lt;span class="c1"&gt;#android.meta_data =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (list) Projeto da biblioteca do Android para adicionar&lt;/span&gt;
+&lt;span class="c1"&gt;# (será adicionado nas propriedades project.properties automaticamente).&lt;/span&gt;
+&lt;span class="c1"&gt;#android.library_references =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Android logcat filters to use&lt;/span&gt;
+&lt;span class="c1"&gt;# (str) Filtros pra ser utilizado pelo logcat do Android&lt;/span&gt;
+&lt;span class="c1"&gt;#android.logcat_filters = *:S python:D&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (bool) Copie a biblioteca ao invés de fazer um libpymodules.so&lt;/span&gt;
+&lt;span class="c1"&gt;#android.copy_libs = 1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) The Android arch a se construido, escolhas uma opção:&lt;/span&gt;
+&lt;span class="c1"&gt;# armeabi-v7a, arm64-v8a, x86&lt;/span&gt;
+&lt;span class="n"&gt;android&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;armeabi&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;v7a&lt;/span&gt;
+
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Específico para o Python for Android (p4a)&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) python-for-android git clone directory (se vazio, será&lt;/span&gt;
+&lt;span class="c1"&gt;# automaticamente clonado desde o github)&lt;/span&gt;
+&lt;span class="c1"&gt;#p4a.source_dir =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) O diretório no qual o python-for-android deve procurar as&lt;/span&gt;
+&lt;span class="c1"&gt;# suas receitas de compilação (se houver)&lt;/span&gt;
+&lt;span class="c1"&gt;#p4a.local_recipes =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Nome do arquivo de Hook do p4a&lt;/span&gt;
+&lt;span class="c1"&gt;#p4a.hook =&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Bootstrap pra ser utilizado pelas compilações do Android&lt;/span&gt;
+&lt;span class="c1"&gt;# p4a.bootstrap = sdl2&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Especifico para o iOS&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Caminho para a pasta personalizada do kivy-ios&lt;/span&gt;
+&lt;span class="c1"&gt;#ios.kivy_ios_dir = ../kivy-ios&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Nome do certificado a ser usado para assinar a versão de depuração&lt;/span&gt;
+&lt;span class="c1"&gt;# Obtém uma lista de identidades disponíveis: buildozer ios list_identities&lt;/span&gt;
+&lt;span class="c1"&gt;#ios.codesign.debug = &amp;quot;iPhone Developer: &amp;lt;lastname&amp;gt; &amp;lt;firstname&amp;gt; (&amp;lt;hexstring&amp;gt;)&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Nome do certificado a ser usado para assinar o release version&lt;/span&gt;
+&lt;span class="c1"&gt;#ios.codesign.release = %(ios.codesign.debug)s&lt;/span&gt;
+
+
+
+
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;buildozer&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;##################################################################&lt;/span&gt;
+&lt;span class="c1"&gt;##################################################################&lt;/span&gt;
+&lt;span class="c1"&gt;##################################################################&lt;/span&gt;
+&lt;span class="c1"&gt;#                    MUITO IMPORTANTE&lt;/span&gt;
+&lt;span class="c1"&gt;##################################################################&lt;/span&gt;
+&lt;span class="c1"&gt;##################################################################&lt;/span&gt;
+&lt;span class="c1"&gt;##################################################################&lt;/span&gt;
+&lt;span class="c1"&gt;# Quando houver problemas na geração do executável será necessário&lt;/span&gt;
+&lt;span class="c1"&gt;# alterar o log, ou seja, as mensagens que são enviadas para a saída&lt;/span&gt;
+&lt;span class="c1"&gt;# padrão enquanto o executável está sendo gerado.&lt;/span&gt;
+&lt;span class="c1"&gt;# Todas as vezes que você precisar pedir ajuda, terás que copiar as&lt;/span&gt;
+&lt;span class="c1"&gt;# informações que foram enviadas para a saída padrão e colar no fórum&lt;/span&gt;
+&lt;span class="c1"&gt;# pois, somente assiim será possível entender onde está ocorrendo o&lt;/span&gt;
+&lt;span class="c1"&gt;# erro na geração do seu executável.&lt;/span&gt;
+&lt;span class="c1"&gt;#####################################################################&lt;/span&gt;
+&lt;span class="c1"&gt;# Por padrão o LOG vem definido como 1, quando você tiver problemas&lt;/span&gt;
+&lt;span class="c1"&gt;# defina aqui neste arquivo o LOG como sendo igual a 2 para que as&lt;/span&gt;
+&lt;span class="c1"&gt;# informações de depuração sejam enviadas para a saída padrão&lt;/span&gt;
+&lt;span class="c1"&gt;#####################################################################&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (int) Log level&lt;/span&gt;
+&lt;span class="c1"&gt;# 0 = error only (é impresso somente o erro)&lt;/span&gt;
+&lt;span class="c1"&gt;# 1 = info (informações)&lt;/span&gt;
+&lt;span class="c1"&gt;# 2 = debug (depuração, PARA OS MOMENTOS em que ocorrem problemas)&lt;/span&gt;
+&lt;span class="c1"&gt;# (com a saída dos comandos)&lt;/span&gt;
+&lt;span class="n"&gt;log_level&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (int) Exibir um aviso se buildozer estiver sendo executado&lt;/span&gt;
+&lt;span class="c1"&gt;# como root (0 = False, 1 = True)&lt;/span&gt;
+&lt;span class="n"&gt;warn_on_root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Caminho para construir o armazenamento de artefatos,&lt;/span&gt;
+&lt;span class="c1"&gt;# arquivo absoluto ou relativo ao spec&lt;/span&gt;
+&lt;span class="n"&gt;build_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;estudoapp&lt;/span&gt;
+
+&lt;span class="c1"&gt;# (str) Caminho onde será armazenamento o executável (isto é, .apk, .ipa)&lt;/span&gt;
+&lt;span class="c1"&gt;# bin_dir = ./bin&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="python"></category><category term="kivy"></category><category term="buildozer"></category><category term="blog"></category></entry><entry><title>Manipulando o Chrome Através do Python</title><link href="http://excript.com/blog/python-chrome-tkinter.html" rel="alternate"></link><published>2018-12-28T01:00:00-02:00</published><updated>2018-12-28T01:00:00-02:00</updated><author><name>Cláudio Rogério Carvalho Filho</name></author><id>tag:excript.com,2018-12-28:/blog/python-chrome-tkinter.html</id><summary type="html">&lt;div class="section" id="introducao"&gt;
 &lt;h2&gt;INTRODUÇÃO&lt;/h2&gt;
 &lt;p&gt;Várias são as formas de manipularmos um navegador Web através do Python. Talvez a maneira mais desconhecida seja a manipulação através da criação de um janela e a posterior adição do espaço que é renderizado na exibição de cada página.&lt;/p&gt;
 &lt;p&gt;É totalmente possível importarmos o navegador utilizando o framework …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="introducao"&gt;
